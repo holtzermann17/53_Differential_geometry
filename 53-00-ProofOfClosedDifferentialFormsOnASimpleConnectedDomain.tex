@@ -1,0 +1,106 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfClosedDifferentialFormsOnASimpleConnectedDomain}
+\pmcreated{2013-03-22 13:32:49}
+\pmmodified{2013-03-22 13:32:49}
+\pmowner{paolini}{1187}
+\pmmodifier{paolini}{1187}
+\pmtitle{proof of closed differential forms on a simple connected domain}
+\pmrecord{9}{34147}
+\pmprivacy{1}
+\pmauthor{paolini}{1187}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53-00}
+\pmrelated{SubstitutionNotation}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need 
+
+% define commands here
+\begin{document}
+\begin{proof}[lemma 1]
+Let $\gamma_0$ and $\gamma_1$ be two regular homotopic curves in $D$ with 
+the same end-points.
+Let $\sigma\colon[0,1]\times[0,1]\to D$ be the homotopy between $\gamma_0$ and $\gamma_1$ i.e.
+\[
+  \sigma(0,t) = \gamma_0(t),\qquad
+  \sigma(1,t) = \gamma_1(t).
+\]
+
+Notice that we may (and shall) suppose that $\sigma$ is regular too. In fact $\sigma([0,1]\times[0,1])$ is a compact subset of $D$. Being $D$ open this compact set has positive distance from the boundary $\partial D$. So we could
+regularize $\sigma$ by mollification leaving its image in $D$.
+
+Let $\omega(x,y) = a(x,y)\, dx + b(x,y)\, dy$ be our closed differential form and let $\sigma(s,t) = (x(s,t),y(s,t))$.
+Define 
+\[
+  F(s) = \int_0^1 a(x(s,t),y(s,t)) x_t(s,t) + b(x(s,t),y(s,t)) y_t (s,t) \, dt;
+\]
+we only have to prove that $F(1)=F(0)$.
+
+We have
+\[
+  F'(s) = \frac{d}{ds}\int_0^1 a x_t + b y_t\, dt
+\]\[
+  = \int_0^1 a_x x_s x_t + a_y y_s x_t + a x_{ts} + b_x x_s y_t + 
+     b_y y_s y_t + b y_{ts}\, dt.
+\]
+Notice now that being $a_y=b_x$ we have
+\[
+  \frac{d}{dt}\left[ a x_s + b y_s  \right]
+  = a_x x_t x_s + a_y y_t x_s + a x_{st} + 
+    b_x x_t y_s + b_y y_t y_s + b y_{st}
+\]\[
+  = a_x x_s x_t + b_x x_s y_t + a x_{ts} +
+    a_y y_s x_t + b_y y_s y_t + b y_{ts}
+\]
+hence
+\[
+ F'(s) = \int_0^1 \frac{d}{dt}\left[ a x_s + b y_s\right]\, dt
+       = \left[ a x_s + b y_s\right]_0^1.
+\]
+
+Notice, however, that $\sigma(s,0)$ and $\sigma(s,1)$ are constant hence $x_s=0$ and $y_s=0$  for $t=0,1$. So $F'(s)=0$ for all $s$ and $F(1)=F(0)$.
+\end{proof}
+
+\begin{proof}[Lemma 2]
+Let us fix a point $(x_0,y_0)\in D$ and define a function $F\colon D\to \mathbb R$ by letting $F(x,y)$ be the integral of $\omega$ on any curve joining $(x_0,y_0)$ with $(x,y)$. The hypothesis assures that $F$ is well defined.
+Let $\omega = a(x,y)\, dx + b(x,y)\, dy$. We only have to prove that $\partial F / \partial x = a$ and $\partial F/\partial y=b$.
+
+Let $(x,y)\in D$ and suppose that $h\in \mathbb R$ is so small that for all $t\in [0,h]$ also $(x+t,y)\in D$. Consider the increment $F(x+h,y)-F(x,y)$.
+From the definition of $F$ we know that $F(x+h,y)$ is equal to the integral of $\omega$ on a curve which starts from $(x_0,y_0)$ goes to $(x,y)$ and then goes to $(x+h,y)$ along the straight segment $(x+t,y)$ with $t\in [0,h]$.
+So we understand that
+\[
+  F(x+h,y)-F(x,y) = \int_0^h a(x+t,y)dt.
+\]
+
+For the integral mean value theorem we know that the last integral is equal to $ha(x+\xi,y)$ for some $\xi \in [0,h]$ and hence letting $h\to 0$ we have
+\[
+  \frac{F(x+h,y)-F(x,y)}{h} = a(x+\xi,y) \to a(x,y)\quad h\to 0
+\]
+that is $\partial F(x,y)/\partial x = a(x,y)$. With a similar argument (exchange $x$ with $y$) we prove that also $\partial F/\partial y = b(x,y)$.
+\end{proof}
+
+\begin{proof}[Theorem]
+Just notice that if $D$ is simply connected, then any two curves in $D$ with the same end points are homotopic. Hence we can apply Lemma~1 and then Lemma~2 to obtain the desired result.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

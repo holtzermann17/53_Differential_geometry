@@ -1,0 +1,89 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LieDerivativeforVectorFields}
+\pmcreated{2013-03-22 14:09:59}
+\pmmodified{2013-03-22 14:09:59}
+\pmowner{matte}{1858}
+\pmmodifier{matte}{1858}
+\pmtitle{Lie derivative (for vector fields)}
+\pmrecord{9}{35590}
+\pmprivacy{1}
+\pmauthor{matte}{1858}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53-00}
+\pmdefines{Lie derivative}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+\newtheorem{thm}{Theorem}
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+
+\newcommand*{\norm}[1]{\lVert #1 \rVert}
+\newcommand*{\abs}[1]{| #1 |}
+\begin{document}
+\newcommand{\cbra}[1]{\left( #1 \right)}
+\newcommand{\qbra}[1]{\left[ #1 \right]}
+\newcommand{\gbra}[1]{\left\{ #1 \right\}}
+\newcommand{\abra}[1]{\left\langle #1 \right\rangle}
+
+
+
+\newcommand{\TTT}{\mathcal{T}}
+\newcommand{\UUU}{\mathcal{U}}
+\newcommand{\VVV}{\mathcal{V}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\LLL}{\mathcal{L}}
+
+Let $M$ be a smooth manifold, and $X,Y\in\TTT(M)$ smooth vector fields
+on $M$. Let $\Theta:\UUU\rightarrow M$  be the flow  of $X$, where
+$\UUU\subseteq \R\times M$ is an open neighborhood of
+$\gbra{0}\times M$. We make use of the following notation:
+$$\UUU^p=\gbra{t\in\R\,|\,(t,p)\in\UUU},\ \ \forall p\in M,$$
+$$\UUU_t=\gbra{p\in M\,|\,(t,p)\in\UUU},\ \ \forall t\in\R,$$ and we introduce the
+auxiliary maps $\theta_t:\UUU_t\rightarrow M$ and
+$\theta^p:\UUU^p\rightarrow M$ defined as
+$$\Theta(t,p)=\theta_t(p)=\theta^p(t),\ \ \forall (t,p)\in\UUU.$$
+
+
+The \emph{Lie derivative} of $Y$ along $X$ is the vector field
+$\LLL_XY\in\TTT(M)$ defined by
+$$(\LLL_XY)_p=\left.      \frac{d}{dt}     \cbra{         d(\theta_{-t})_{\theta_t(p)}  (Y_{\theta_t(p)})     }     \right|_{t=0}
+=\lim_{t\rightarrow0}\frac{d(\theta_{-t})_{\theta_t(p)}
+(Y_{\theta_t(p)}) - Y_p}{t},\ \ \forall p\in M,$$
+where $d(\theta_{-t})_{\theta_t(p)}\in\mathrm{Hom}(T_{\theta_{t}(p)}M,T_pM)$ if the push-forward of $\theta_{-t}$, i.e. 
+$$d(\theta_{-t})_{\theta_t(p)}(v)(f)=v(f\circ\theta_{-t}),\ \ \ \forall v\in T_{\theta_{-t}(p)}M,\ f\in C^\infty(p).$$
+
+The following result is not immediate at all.
+\begin{thm}
+$\LLL_XY=[X,Y]$, where $[X,Y]=XY-YX$ is the Lie bracket of $X$ and
+$Y$.
+\end{thm}
+
+%%%%%
+%%%%%
+\end{document}

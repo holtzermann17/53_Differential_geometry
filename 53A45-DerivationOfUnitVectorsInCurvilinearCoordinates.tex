@@ -1,0 +1,61 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DerivationOfUnitVectorsInCurvilinearCoordinates}
+\pmcreated{2013-03-22 17:02:05}
+\pmmodified{2013-03-22 17:02:05}
+\pmowner{swapnizzle}{13346}
+\pmmodifier{swapnizzle}{13346}
+\pmtitle{derivation of unit vectors in curvilinear coordinates}
+\pmrecord{10}{39321}
+\pmprivacy{1}
+\pmauthor{swapnizzle}{13346}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53A45}
+%\pmkeywords{unit vectors}
+%\pmkeywords{orthonormal curvilinear coordinate system}
+%\pmkeywords{basis vectors}
+%\pmkeywords{general coordinate system}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{array}
+\usepackage[mathcal]{eucal}
+\usepackage{xy}
+
+\begin{document}
+Let $(u,v,w)$ be any non-Cartesian coordinate system such that
+\begin{eqnarray}
+&& x = x(u,v,w), \quad y = y(u,v,w), \quad z = z(u,v,w) 
+\end{eqnarray}
+
+We can combine the above three equations into a single vector equation that gives the position vector $\vec{r}$ of any point $P=(x,y,z)$ in space as a function of the coordinates $u,v,w$:
+\begin{eqnarray*}
+&& \vec{r} = x(u,v,w)\hat{i} + y(u,v,w)\hat{j} + z(u,v,w)\hat{k}
+\end{eqnarray*}
+
+If we held $u$ fixed s.t. $u=u_0$ then the position vector becomes the parametric equation of the surface (called the coordinate surface) $u=u_0$ where $v,w$ play the role of parameters. Furthermore, if we held both $u$ and $v$ fixed s.t $u=u_0$ and $v=v_0$, then the position vector becomes the parametric equation of the curve (called the coordinate curve) formed by the intersection of the surfaces $u=u_0$ and $v=v_0$, in which $w$ acts as a parameter along the curve.
+
+Now, how do we find the tangent vectors? Well, what is the meaning of a tangent vector? A tangent vector is a vector which is tangent to a coordinate curve formed by the intersection of the two coodinate surfaces. In other words, it is a vector which indicates the direction in which one of the coordinates, say $u$, increases while the other two coordinates (i.e. $v$ and $w$) are held fixed. Sound familiar? Yes, of course, partial derivatives! A partial derivative with respect to $u$ would take the derivative of the position vector $\vec{r}$ along the coordinate curve formed by the intesection of the surfaces $v=v_0$ and $w=w_0$ and hence return you a tangent vector along that curve! Hence, by taking the partial derivative of $\vec{r}$ one by one with respect to all three coordinates, we would get all the three tangent vectors which are tangent to their respective coordinate curves. Thus, we arrive at the following three tangent vectors:
+\begin{eqnarray*}
+&& \vec{e}_u = \frac{\partial \vec{r}}{\partial u} \qquad \vec{e}_v = \frac{\partial\vec{r}}{\partial v} \qquad \vec{e}_w = \frac{\partial\vec{r}}{\partial w}
+\end{eqnarray*}
+However, these are only tangent vectors. Most often we are interested in unit tangent vectors (a.k.a. standard basis vectors for $\mathbb{R}^3$). So we divide them by their respective lengths. Therefore,
+\begin{eqnarray}
+&& \hat{e}_u = \frac{\frac{\partial \vec{r}}{\partial u}}{\Big|\frac{\partial \vec{r}}{\partial u}\Big|}  \qquad \hat{e}_v = \frac{\frac{\partial\vec{r}}{\partial v}}{\Big|\frac{\partial\vec{r}}{\partial v}\Big|} \qquad \hat{e}_w = \frac{\frac{\partial\vec{r}}{\partial w}}{\Big|\frac{\partial\vec{r}}{\partial w}\Big|}
+\end{eqnarray}
+But this is very cumbersome to write, so we instead write them as
+\begin{eqnarray*}
+&& \hat{e}_u = \frac{\vec{e}_u}{h_u}, \quad \hat{e}_v = \frac{\vec{e}_v}{h_v}, \quad \hat{e}_w = \frac{\vec{e}_w}{h_w}
+\end{eqnarray*}
+where 
+\begin{eqnarray*}
+&& h_u = |\vec{e}_u| = \Big|\frac{\partial\vec{r}}{\partial u}\Big| = \Big|\frac{\partial x}{\partial u}\hat{i} + \frac{\partial y}{\partial u}\hat{j} + \frac{\partial z}{\partial u}\hat{k} \Big| = \sqrt{ {\Big(\frac{\partial x}{\partial u}\Big)}^2 + {\Big(\frac{\partial y}{\partial u}\Big)}^2 + {\Big(\frac{\partial z}{\partial u}\Big)}^2 }
+\end{eqnarray*}
+and, similarly, $h_v = |\vec{e}_v|, h_w = |\vec{e}_w|$ where $h_u,h_v,h_w$ are known as scale factors (or metric coefficients).
+\end{document}
+%%%%%
+%%%%%
+\end{document}

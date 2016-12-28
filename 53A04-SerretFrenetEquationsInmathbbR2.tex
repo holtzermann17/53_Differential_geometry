@@ -1,0 +1,127 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SerretFrenetEquationsInmathbbR2}
+\pmcreated{2013-03-22 15:16:57}
+\pmmodified{2013-03-22 15:16:57}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{Serret-Frenet equations in $\mathbb{R}^2$}
+\pmrecord{8}{37072}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53A04}
+\pmrelated{SerretFrenetFormulas}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+
+ \usepackage{bbm}
+ \newcommand{\Z}{\mathbbmss{Z}}
+ \newcommand{\C}{\mathbbmss{C}}
+ \newcommand{\F}{\mathbbmss{F}}
+ \newcommand{\R}{\mathbbmss{R}}
+ \newcommand{\Q}{\mathbbmss{Q}}
+
+
+
+\newcommand*{\norm}[1]{\lVert #1 \rVert}
+\newcommand*{\abs}[1]{| #1 |}
+
+
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+
+\newcommand{\bT}[0]{\mathbf{T}}
+\newcommand{\bN}[0]{\mathbf{N}}
+\begin{document}
+Given a plane curve, we may associate to each point on the curve an
+orthonormal basis consisting of the unit normal tangent vector and
+the unit normal.  In general, different points will have different 
+bases associated to them, so we may ask how the basis depends upon
+the choice of point.  The Serret-Frenet equations answer this
+question by relating the rte of change of the basis vectors to
+the curvature of the curve.
+
+Suppose $I$ is an open interval and $c\colon I \to \R^2$ is a twice
+continuously differentiable curve such that $\Vert c'\Vert = 1$. 
+Let us then
+define the \emph{tangent vecto{r}} and \emph{normal vecto{r}} as
+\begin{eqnarray*}
+   \bT &=& c', \\
+   \bN &=& J \cdot \bT,
+\end{eqnarray*}
+where $J=\begin{pmatrix} 0 & -1 \\ 1 & 0 \end{pmatrix}$ is the 
+rotational matrix that rotates the plane $90$ degrees counterclockwise.
+
+\subsubsection*{Curvature}
+Differentiating $\langle c',c'\rangle=1$ yields 
+  $\langle \bT',\bT\rangle=0$, 
+   so $\bT'$ is in the orthogonal complement of $\bT$,
+  which is $1$-dimensional. Since $J\cdot \bT$ is also in 
+    the orthogonal complement, 
+  it follows that there exists a function $\kappa\colon I \to \R$ such that 
+  $$
+     \bT'=\kappa J \cdot \bT.
+  $$
+Furthermore, $\kappa$ is uniquely determined by this equation. 
+We define this unique $\kappa$ to 
+   be the \emph{curvatur{e}} of $c$. Explicitly,
+$$
+   \kappa = \langle \bT',J \cdot \bT \rangle.
+$$
+
+\subsubsection*{Serret-Frenet equations}
+By the definition of curvature 
+\begin{eqnarray*}
+  \bT'&=& \kappa J\cdot \bT 
+      = \kappa \bN
+\end{eqnarray*}
+and so
+\begin{eqnarray*}
+  \bN'&=& J\cdot \bT' 
+      = \kappa J \bN 
+      = -\kappa \bT 
+\end{eqnarray*}
+since $J^2=-\operatorname{I}$. These are the \emph{Serret-Frenet}
+equations
+\begin{eqnarray*}
+   \begin{pmatrix} \bT \\ \bN\end{pmatrix}' = 
+   \begin{pmatrix} 0 & \kappa \\ -\kappa & 0 \end{pmatrix}
+\begin{pmatrix} \bT \\ \bN\end{pmatrix}.
+\end{eqnarray*}
+%%%%%
+%%%%%
+\end{document}

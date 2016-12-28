@@ -1,0 +1,55 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GeodesicTriangle}
+\pmcreated{2013-03-22 17:11:31}
+\pmmodified{2013-03-22 17:11:31}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{geodesic triangle}
+\pmrecord{7}{39510}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53C22}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{pstricks}
+\usepackage{psfrag}
+\usepackage{graphicx}
+\usepackage{amsthm}
+%%\usepackage{xypic}
+
+\begin{document}
+Let $M$ be a differentiable manifold (at least two times differentiable) and $A,B,C \in M$ (not necessarily distinct).  Let $x_1,x_2,x_3\in [0,\infty)$.  Let $\gamma_1 \colon [0,x_1] \to M$, $\gamma_2 \colon [0,x_2] \to M$, and $\gamma_3 \colon [0,x_3] \to M$ be geodesics such that all of the following hold:
+
+\begin{itemize}
+\item $\gamma_1(0)=A$;
+\item $\gamma_1(x_1)=B$;
+\item $\gamma_2(0)=A$;
+\item $\gamma_2(x_2)=C$;
+\item $\gamma_3(0)=B$;
+\item $\gamma_3(x_3)=C$.
+\end{itemize}
+
+Then the figure determined by $\gamma_1$, $\gamma_2$, and $\gamma_3$ is a \emph{geodesic triangle}.
+
+Note that a geodesic triangle need not be a triangle.  For example, in $\mathbb{R}^2$, if $A=(0,0)$, $B=(1,2)$, and $C=(3,6)$, then the geodesic triangle determined by $A$, $B$, and $C$ is $\{(x,2x): x\in[0,3]\}$, which is not a triangle.
+
+\begin{center}
+\begin{pspicture}(-1,0)(3,6)
+\rput[a](3,6){.}
+\psline(0,0)(3,6)
+\psdots(0,0)(1,2)(3,6)
+\rput[r](-0.2,0){$A$}
+\rput[r](0.8,2){$B$}
+\rput[r](2.8,6){$C$}
+\end{pspicture}
+\end{center}
+
+\PMlinkescapetext{This entry is not yet complete, as a} \PMlinkname{geodesic metric space}{GeodesicMetricSpace} \PMlinkescapetext{has not yet been defined on PlanetMath.  If the words ``geodesic metric space'' are clickable in the previous sentence, please let me know right away.  Thanks.}
+%%%%%
+%%%%%
+\end{document}

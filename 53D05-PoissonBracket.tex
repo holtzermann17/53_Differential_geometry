@@ -1,0 +1,61 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PoissonBracket}
+\pmcreated{2013-03-22 14:46:04}
+\pmmodified{2013-03-22 14:46:04}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{Poisson bracket}
+\pmrecord{11}{36412}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53D05}
+\pmrelated{Quantization}
+\pmrelated{CanonicalQuantization}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $M$ be a symplectic manifold with symplectic form $\Omega$.  The \emph{Poisson bracket} is a bilinear operation on the set of differentiable functions on $M$.  In terms of local Darboux coordinates $p_1, \ldots, p_n, q_1, \ldots, q_n$, the Poisson bracket of two functions is defined as follows:
+ $$[f,g] = \sum_{i=1}^n {\partial f \over \partial q_i} {\partial g \over \partial p_i} - {\partial f \over \partial p_i} {\partial g \over \partial q_i}$$
+It can be shown that the value of $[f,g]$ does not depend on the choice of Darboux coordinates.  Therefore, the Poisson bracket is a well-defined operation on the symplectic manifold.  Also, some authors use a different sign convention --- what they call $[f,g]$ is what would be referred to as $-[f,g]$ here.
+
+The Poisson bracket can be defined without reference to a special coordinate system as follows:
+ $$[f,g] = \Omega^{-1} (df, dg) = \sum_{i=1}^{2n} \Omega^{ij} {\partial f \over \partial x_i} {\partial g \over \partial x_j}$$
+Here $\Omega^{-1}$ is the inverse of the symplectic form, and its components in an arbitrary coordinate system are denoted $\Omega^{ij}$.
+
+The Poisson bracket sastisfies several important algebraic identities.  It is antisymmetric:
+ $$[f,g] = -[g,f]$$
+It is a derivation:
+ $$[fg,h] = f[g,h] + g[f,h]$$
+It satisfies Jacobi's identitity:
+ $$[f,[g,h]] + [g,[h,f]] + [h,[f,g]] = 0$$
+
+The Hamilton equations can be expressed elegantly in terms of the Poisson bracket.  If $X$ is a smooth function on $M$, we can describe the time-evolution of $X$ by the equation
+ $${dX \over dt} = [X,H]$$
+If $X$ is a smooth function on $\mathbb{R} \times M$, we can describe the time-evolution of $X$ by the more general equation
+ $${dX \over dt} = {\partial X \over \partial t} - [X,H]$$
+%%%%%
+%%%%%
+\end{document}

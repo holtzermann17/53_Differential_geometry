@@ -1,0 +1,181 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PropertiesOfEllipse}
+\pmcreated{2013-03-22 18:53:43}
+\pmmodified{2013-03-22 18:53:43}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{properties of ellipse}
+\pmrecord{18}{41742}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53A04}
+\pmclassification{msc}{51N20}
+\pmclassification{msc}{51-00}
+\pmrelated{HeronsPrinciple}
+\pmrelated{Conic}
+\pmrelated{PerimeterOfEllipse}
+\pmrelated{PlanarArea}
+\pmrelated{KeplersFirstLaw}
+\pmrelated{PropertiesOfParabola}
+\pmrelated{Hyperbola2}
+\pmrelated{AreaOfPlaneRegion}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+\usepackage{mathrsfs}
+\usepackage{pstricks}
+\usepackage{pst-plot}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+
+ \usepackage{bbm}
+ \newcommand{\Z}{\mathbbmss{Z}}
+ \newcommand{\C}{\mathbbmss{C}}
+ \newcommand{\F}{\mathbbmss{F}}
+ \newcommand{\R}{\mathbbmss{R}}
+ \newcommand{\Q}{\mathbbmss{Q}}
+
+
+
+\newcommand*{\norm}[1]{\lVert #1 \rVert}
+\newcommand*{\abs}[1]{| #1 |}
+
+
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+\begin{document}
+The ellipse is defined as the locus of the points $P$ of the plane such that the distances of $P$ from two fixed points (the foci) have a constant sum ($2a$).\, The ellipse gets the simplest equation, when the foci are on a coordinate axis equally distant ($= c < a$) from the origin.\, So, if the foci are\, $(\pm c,\,0)$,\, the equation of the ellipse may be written first
+\begin{align}
+\sqrt{(x\!-\!c)^2\!+\!y^2}+\sqrt{(x\!+\!c)^2\!+\!y^2} \;=\; 2a.
+\end{align}
+After two squarings it is simplified to
+\begin{align}
+(a^2\!-\!c^2)x^2\!+\!a^2y^2 \,=\, a^2(a^2\!-\!c^2).
+\end{align}
+Denoting\, $a^2\!-\!c^2 := b^2$ (where\, $b > 0$) the equation of the ellipse attains the form
+\begin{align}
+\frac{x^2}{a^2}+\frac{y^2}{b^2} \;=\; 1.
+\end{align}
+From the equation one sees that\, $x = \pm a$\, give the rightmost and the leftmost points of the ellipse (on the $x$-axis); the segment between them is the major axis, with length $2a$.\, Similarly,\, $y = \pm b$\, give the highest and the lowest points (on the $y$-axis); the segment between them is the minor axis, with length $2b$.\, The distance between a focus and an end point of the minor axis is $a$ (see the yellow triangle).\\
+
+\begin{center}
+\begin{pspicture}(-4.7,-3.5)(4.7,3.5)
+\psaxes[Dx=9,Dy=9]{->}(0,0)(-4.2,-3.4)(4.5,3.2)
+\rput(-4.7,-3.5){.}
+\rput(4.7,3.5){.}
+\rput[b](4.63,0.1){$x$}
+\rput[r](0.15,3.5){$y$}
+\psellipse[linecolor=blue](0,0)(3.5,2)
+\psdots[linecolor=red](-2.87,0)(2.87,0)
+\psdot[linecolor=blue](2,1.61)
+\psline(2,1.61)(1.3,0)
+\rput(1.3,-0.25){$N$}
+\rput(2.75, 1.85){$P = (x,\,y)$}
+\pspolygon[linecolor=yellow](-2.87,0)(0,-2)(0,0)
+\psline[linecolor=red](-2.87,0)(2,1.61)(2.87,0)
+\rput(3.6,-0.2){$a$}
+\rput(-3.78,-0.22){$-a$}
+\rput(2.87,-0.23){$c$}
+\rput(-3,-0.23){$-c$}
+\rput(0.15,2.2){$b$}
+\rput(2.7,0.8){$r_1$}
+\rput(-1,0.8){$r_2$}
+\rput(-1.2,-0.2){$c$}
+\rput(-0.2,-1){$b$}
+\rput(-1.6,-1.1){$a$}
+\end{pspicture}
+\end{center}
+
+The eccentricity $\varepsilon$ is the ratio of the ``focal length'' $2c$ and the major axis $2a$.\, The focal radii $r_1$ and $r_2$ satisfy
+$$r_1^2 = (c-x)^2+y^2, \quad r_2^2 = (-c-x)^2+y^2,$$
+whence the subtraction yields
+$$r_2^2\!-\!r_1^2 \;=\; 4cx.$$
+This gives, since\, $r_2\!+\!r_1 = 2a$,\, that 
+$$r_2\!-\!r_1 \;=\; 2\varepsilon x,$$
+and the both last equations imply the expressions
+\begin{align}
+r_1 \;=\; a\!-\!\varepsilon x, \quad r_2 \;=\; a\!+\!\varepsilon x
+\end{align}
+
+By the entry conjugate diameters of ellipse, the slope of the tangent of the ellipse in the point \,$(x_0,\,y_0)$\, is
+\begin{align}
+m_t \;=\; -\frac{b^2x_0}{a^2y_0}.
+\end{align}
+This result is easily obtained also by implicit differentiation of (3):
+$$\frac{2x}{a^2}+\frac{2yy'}{b^2} \;=\; 0$$
+Substituting here\, $x = x_0$,\; $y = y_0$\, and solving\, $m_t = y'$,\, one gets (5).
+Then we can write the equation of the normal line of the ellipse (3) in\, $(x_0,\,y_0)$:
+$$y-y_0 \;=\; \frac{a^2y_0}{b^2x_0}(x-x_0)$$
+The normal cuts the $x$-axis in the point $N$ with
+$$x \;=\; \frac{a^2-b^2}{a^2}x_0 \;=\; \frac{c^2}{a^2}x_0 \;=\; \varepsilon^2x_0.$$
+Thus the distances of $N$ from the foci are by (4) equal to
+$$d_1 \;=\; c-\varepsilon^2x_0 = a\varepsilon-\varepsilon^2x_0 = \varepsilon(a-\varepsilon x_0) = \varepsilon r_1,$$
+$$d_2 \;=\; c+\varepsilon^2x_0 = a\varepsilon+\varepsilon^2x_0 = \varepsilon(a+\varepsilon x_0) = \varepsilon r_2.$$
+Consequently,\, $d_1\!:\!d_2 \,=\, r_1\!:\!r_2$,\, which means by the bisectors theorem that the normal is the angle bisector of the angle between $r_1$ and $r_2$.\\
+
+Accordingly, we have derived the
+
+\textbf{Theorem 1.}\, The normal of ellipse bisects the angle between the focal radii.\, This may also be stated so that the tangent of the ellipse forms equal angles with both focal radii.\\
+
+\textbf{Corollary.}\, If the circumference of an ellipse reflects the light rays meeting it, then the rays emanating from one of the foci meet after the reflection in the other focus.\\
+
+One can prove also the
+
+\textbf{Theorem 2.}\, The locus of the intersection point of a normal of an ellipse and the line through a focus and perpendicular to the normal is the circumscribed circle of the ellipse.
+
+\begin{center}
+\begin{pspicture}(-4.7,-4)(4.7,4)
+\psaxes[Dx=9,Dy=9]{->}(0,0)(-4.2,-3.7)(4.5,3.8)
+\rput(-4.7,-4){.}
+\rput(4.7,4){.}
+\rput[b](4.63,0.1){$x$}
+\rput[r](0.15,4){$y$}
+\psellipse[linecolor=blue](0,0)(3.5,2)
+\pscircle(0,0){3.5}
+\psdots[linecolor=red](-2.87,0)(2.87,0)
+\psdot[linecolor=blue](1.5,1.81)
+\psline(0.3,2.15)(3.8,1.2)
+\psline(2.87,0)(3.2,1.42)
+\psdot[linecolor=green](3.2,1.42)
+\psline(1.5,1.81)(0.9,-0.41)
+\rput(3.62,-0.2){$a$}
+\rput(2.87,-0.25){$c$}
+\rput(-3,-0.25){$-c$}
+\rput(-0.15,2.18){$b$}
+\end{pspicture}
+\end{center}
+
+%%%%%
+%%%%%
+\end{document}

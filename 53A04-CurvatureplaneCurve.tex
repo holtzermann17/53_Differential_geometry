@@ -1,0 +1,107 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CurvatureplaneCurve}
+\pmcreated{2013-03-22 15:31:19}
+\pmmodified{2013-03-22 15:31:19}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{curvature (plane curve)}
+\pmrecord{15}{37393}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53A04}
+\pmrelated{CurvatureDeterminesTheCurve}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\section{Basic Intuition}
+
+The \emph{curvature} of a plane curve is a quantity which measures the amount by which the curve differs from being a straight line.  It measures the rate at which the direction of a tangent to the curve changes.
+
+\section{Arclength Parameterization}
+
+The simplest way to introduce the curvature is by first parameterizing the curve with respect to arclength.  Suppose that $s$ denotes arclength and that the curve is specified by two functions $f$ and $g$ of this parameter.  In other words, a typical point of the curve is $(f(s), g(s))$, where $s$ must lie in some specified range.  Recall that the condition that $s$ be the arclength is that $(f')^2 + (g')^2 = 1$.
+
+Let $\theta$ denote the angle which the tangent vector makes with the $x$ axis.  Because of the arclength condition mentioned above, we have
+ \begin{eqnarray*}
+ f' (s) &=& \cos \theta \cr
+ g' (s) &=& \sin \theta .
+ \end{eqnarray*}
+The curvature is simply the derivative of this angle with respect to arclength:
+ \[ \kappa = \frac{d \theta}{d s} \]
+
+It is convenient to re-express the curvature in terms of $f$ and $g$.  To do this, we differentiate the previous equation:
+ \begin{eqnarray*} f'' &=& \frac{d}{ds} \cos \theta = - \sin \theta \frac{d \theta}{ds} = - \kappa  \sin \theta \cr
+ g'' &=& \frac{d}{ds} \sin \theta =  \cos \theta \frac{d \theta}{ds} =  \kappa  \cos \theta \end{eqnarray*}
+By eliminating $\theta$, we obtain the following formulae for the curvature:
+\begin{eqnarray*} 
+ \kappa &=& -f'' / g' \cr
+ \kappa &=& g'' / f' 
+\end{eqnarray*}
+Because of the condition $(f')^2 + (g')^2 = 1$, both $f'$ and $g'$ cannot simultaneously be zero, so at least one of the above formulae must be valid at any point on the curve.
+
+At first, it may seem odd that we have obtained two different formulae for the same quantity.  The reason for this is simple.  Differentiating the arclength condition
+ \[ (f')^2 + (g')^2 = 1 \]
+gives
+ \[ f'' f' + g'' g' = 0 \]
+or, dividing out,
+ \[ g'' / f' = - f'' / g' .\]
+which explains why the two formulae for the curvature must agree.  In fact, one can easily derive several other formulae for the curvature by using this identity.  
+
+\section{Rotation-Invariant Formula}
+
+For instance, one might want to obtain a formula which is explicitly invariant under rotation.  Consider the following determinant:
+ \[ \left| \begin{matrix} f' & g' \cr f'' & g'' \end{matrix} \right| = f' g'' - f'' g' \]
+On the one hand, this is clearly invariant under rotation.  On the other hand, we have
+ \[ f' g'' - f'' g' = \kappa (f')^2 + \kappa (g')^2 = \kappa \left( (f')^2 + (g')^2 \right) = \kappa ,\]
+hence we have the explicitly rotation-invariant formula
+ \[ \kappa = \left| \begin{matrix} f' & g' \cr f'' & g'' \end{matrix} \right| \]
+
+\section{Arbitrary Parameterization}
+
+Typically, when one is given a curve, it is not specified in terms of a parameterization by arclength.  Since reparameterizing a curve by arclength is not always easy, it is useful to have a formula for curvature which is invariant under reparameterization since one could use such a formula with any parameterization.  Such a formula can be obtained by a slight modification of the rotation-invariant formula given above.
+
+To obtain this formula, first let us inquire into how the determinant transforms under change of parameterization.  If we apply a change of parameter $\sigma = \phi (s)$ then, by the chain rule,
+ \[ \frac{df}{ds} = \frac{df}{d \sigma} \frac{d \sigma}{ds} = \phi'(s) \frac{df}{d \sigma} \]
+ \[ \frac{dg}{ds} = \phi'(s) \frac{dg}{d \sigma} \]
+ \[ \frac{d^2 f}{ds^2} = \frac{d}{ds} \left( \phi'(s) \frac{df}{d \sigma} \right) = \phi''(s) \frac{df}{d\sigma} + \phi'(s) \frac{d\sigma}{ds} \frac{d^2 f}{d \sigma^2} = \phi''(s) \frac{df}{d \sigma} + \left( \phi'(s) \right)^2 \frac{d^2 f}{d \sigma^2}\]
+  \[ \frac{d^2 g}{ds^2} = \phi''(s) \frac{dg}{d \sigma} + \left( \phi'(s) \right)^2 \frac{d^2 g}{d\sigma^2}\]
+Thus, we have the following transformation for the determinant:
+ \[ \left| \begin{matrix} \frac{df}{ds} & \frac{dg}{ds} \cr \frac{d^2 f}{ds^2} & \frac{d^2 g}{ds^2} \end{matrix} \right| = \left( \phi' (s) \right)^3 \left| \begin{matrix} \frac{df}{d \sigma} & \frac{dg}{d \sigma} \cr \frac{d^2 f}{d \sigma^2} & \frac{d^2 g}{d \sigma^2} \end{matrix} \right| \]
+Likewise, one has the following transform:
+ \[ \left( \frac{df}{ds} \right)^2 + \left( \frac{dg}{ds} \right)^2 =  \left( \phi'(s) \right)^2 \left( \left( \frac{df}{d \sigma} \right)^2 + \left( \frac{dg}{d \sigma} \right)^2 \right) \]
+Therefore, the following quantity is invariant under both rotation and reparameterization:
+ \[ \frac{\left| \begin{matrix} \frac{df}{d \sigma} & \frac{dg}{d \sigma} \cr \frac{d^2 f}{d \sigma^2} & \frac{d^2 g}{d \sigma^2} \end{matrix} \right|}{\left( \left( \frac{df}{d \sigma} \right)^2 + \left( \frac{dg}{d \sigma} \right)^2 \right)^{3/2}} \]
+In the particular case where $\sigma = s$, this equals the curvature; hence, by invariance, it equals the curvature for all choices of parameterization:
+ \[ \kappa = \frac{\left| \begin{matrix} \frac{df}{d \sigma} & \frac{dg}{d \sigma} \cr \frac{d^2 f}{d \sigma^2} & \frac{d^2 g}{d \sigma^2} \end{matrix} \right|}{\left( \left( \frac{df}{d \sigma} \right)^2 + \left( \frac{dg}{d \sigma} \right)^2 \right)^{3/2}} \]
+
+\section{Alternative Characterizations}
+
+One special case is especially worth noting.  Suppose that the curve is given as the graph of a function.  That is equivalent to choosing one of $f$ or $g$ to be the identity function.  Then the formula reduces to the following:
+ \[ \kappa = \frac{f''}{\left( 1 + (f')^2 \right)^{3/2}} \]
+It is worth noting that, at points where $f' = 0$ (i.e. where the tangent to the curve is horizontal) the curvature simply equals the second derivative.  This observation leads to another characterization of the curvature --- the curvature of a curve at a point can be obtained by setting up a coordinate system whose abscissa is the tangent to the curve at that point, expressing the curve as the graph of a function in this coordinate system, then taking the second derivative of this function at said point.  It might also be worth pointing out the curvature of a curve at a point equals the reciprocal of the radius of the osculating circle to the curve at that point.
+%%%%%
+%%%%%
+\end{document}

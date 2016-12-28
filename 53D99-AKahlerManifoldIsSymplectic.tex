@@ -1,0 +1,96 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AKahlerManifoldIsSymplectic}
+\pmcreated{2013-03-22 16:07:54}
+\pmmodified{2013-03-22 16:07:54}
+\pmowner{cvalente}{11260}
+\pmmodifier{cvalente}{11260}
+\pmtitle{a K\"ahler manifold is symplectic}
+\pmrecord{15}{38203}
+\pmprivacy{1}
+\pmauthor{cvalente}{11260}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53D99}
+\pmrelated{KahlerManifold}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Let $\omega(X,Y) = g(JX,Y)$ on a K\"ahler manifold. We will prove that $\omega$ is a symplectic form.
+
+\begin{itemize}
+
+\item $\omega$ is anti-symmetric
+
+$\omega(X,Y) = g(JX,Y) = g(Y,JX) = g(JY, J^2 X) = g(JY,-X) = -g(JY,X) = -\omega(Y,X)$. Here we used the fact that $g$ is an Hermitian tensor on a K\"ahler manifold ($g(X,Y) = g(JX, JY)$)
+
+\item $\omega$ is linear
+
+Due to anti-symmetry, we just need to check linearity on the second slot. Since $g(JX,\cdot)$ is by definition linear, $\omega$ will also be linear.
+
+\item $\omega$ is non degenerate
+
+On a given point on the manifold, pick a non null vector $X$, $\alpha_X(\cdot) = \omega(X, \cdot ) = g(JX, \cdot)$. Since $g$ is non-degenerate\footnote{no vector but the null vector is orthogonal to every other vector}, $\alpha$ is also non-degenerate (for all $X$). $\omega$ is thus non degenerate.
+
+\item $\omega$ is closed
+
+First note that 
+\begin{eqnarray}
+X(\omega(Y,Z)) &=& \nabla_X (\omega(Y,Z)) \nonumber \\
+ &=& \nabla_X (g(JY,Z)) \nonumber \\
+ &=& g(\nabla_X(JY),Z) + g(JY, \nabla_X Z) \nonumber \\
+ &=& g(J\nabla_X Y, Z) + g(JY, \nabla_X Z) \nonumber \\
+ &=& \omega(\nabla_X Y, Z) + \omega(Y, \nabla_X Z) \nonumber
+\end{eqnarray}
+
+Here we used the fact that both $g$ and $J$ are covariantly constant ($\nabla g = 0$ and $\nabla J = 0$)
+
+We aim to prove that $d \omega = 0$ which is equivalent to proving $(d \omega)(X,Y,Z) = 0$ for all vector fields $X,Y,Z$.
+
+Since this is a tensorial identity, WLOG we can assume that at a specific point $p$ in the K\"ahler manifold $[X,Y]_p = [Y,Z]_p = [Z,X]_p =0$ and prove the indentity for these vector fields\footnote{in particular this works for the canonical base of $T_p M$ associated with a local coordinate system}.
+
+Consider $X,Y,Z$ with the previous commutation relations at $p$, using the formulas for differential forms of small valence:
+
+\begin{eqnarray}
+(d \omega)(X,Y,Z) &=& X(\omega(Y,Z)) + Y(\omega(Z,X) + Z(\omega(X,Y)) ) \nonumber \\
+        &=& \omega(\nabla_X Y,Z) + \omega(Y,\nabla_X Z) + \nonumber \\
+        &&  \omega(\nabla_Y Z,X) + \omega(Z,\nabla_Y X) + \nonumber \\
+        && \omega(\nabla_Z X,Y) + \omega(X,\nabla_Z Y) \nonumber \\
+        &=& \omega(\nabla_X Y - \nabla_Y X, Z) + \omega(\nabla_Y Z - \nabla_Z Y, X) + \omega(\nabla_Z X - \nabla_X Z, Y) \nonumber
+\end{eqnarray}
+The Levi-Civita connection is torsion-free, $\nabla_X Y - \nabla_Y X = [X,Y]$ thus:
+
+$$(d \omega)(X,Y,Z) = \omega([X,Y],Z) + \omega([Y,Z],X) + \omega([Z,X],Y)$$
+
+And since all the commutators are null at $p$ (by assumption) we get that:
+
+$$ (d \omega)(X,Y,Z) = 0 $$
+
+$\omega$ is therefore closed.
+
+\end{itemize}
+
+%%%%%
+%%%%%
+\end{document}

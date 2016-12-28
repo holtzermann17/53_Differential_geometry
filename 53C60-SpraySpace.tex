@@ -1,0 +1,70 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SpraySpace}
+\pmcreated{2013-05-03 16:21:46}
+\pmmodified{2013-05-03 16:21:46}
+\pmowner{Orphanage}{1000048}
+\pmmodifier{jacou}{1000048}
+\pmtitle{spray space}
+\pmrecord{17}{37372}
+\pmprivacy{1}
+\pmauthor{Orphanage}{1000048}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53C60}
+\pmsynonym{Spray}{SpraySpace}
+\pmsynonym{geodesic spray}{SpraySpace}
+\pmsynonym{finsler spray}{SpraySpace}
+%\pmkeywords{ordinary differential equations}
+%\pmkeywords{connection}
+%\pmkeywords{nonlinear}
+%\pmkeywords{jets}
+%\pmkeywords{jet bundle}
+%\pmkeywords{Finsler}
+%\pmkeywords{manifold}
+%\pmkeywords{paths}
+%\pmkeywords{path space}
+%\pmkeywords{homogeneous function}
+%\pmkeywords{Jacobian map}
+\pmdefines{spray spaces}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Take a fibred manifold $\pi\colon B\to X$.  Choose a vector field $S$ over $B$
+that satisfies $D\pi\circ S(y)=y$ for the Jacobian map $D\pi:TB\rightarrow
+B$ over all coordinate vectors $y=(y^{1}, \ldots , y^{n})\in B$.  A
+\emph{spray} field $\textbf{G}$ over $B$ is a globally defined
+smooth vector field associated to the first jet bundle $J_{B}^{1}X$ of $X$ that is given in local coordinates $x=(x^{1}, \ldots ,x^{n})\in B$ as $$\textbf{G}=y^{i}\frac{\partial}{\partial x^{i}}-G^{i}\frac{\partial}{\partial y^{i}}.$$   The \emph{spray coefficients} $G^{i}(y)$ are second degree homogeneous functions which correspond up to nonlinear connections on $M$.  Thus by $D\pi$ the integral curves of $\mathbf{G}$ must be of second order, and so given the constraints of the spray coefficients, satisfy $\ddot{c}^{ii}=2G^{i}(\dot{c})$.  Subsequently, the pair $(X,\textbf{G})$ is called a \emph{spray space}.
+
+Example 1: Choose a system of second order quasilinear ordinary differential
+equations that satisfy $$\ddot{c}^{ii}+2G^{i}(\dot{c})=0$$ for a family
+of parameterized curves $c$, and let the system induce its
+corresponding \emph{spray}. Then when $c$ is also a Finsler
+geodesic in $B$ with constant speed so that the covariant
+derivative gives $D_{V}V=0$ along a vector field $V$, the
+corresponding autoparallels of the spray coefficients completely
+characterize a \emph{path space} for $B$.
+\end{document}
+%%%%%
+%%%%%
+\end{document}

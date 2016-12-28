@@ -1,0 +1,59 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PseudoRiemannianManifold}
+\pmcreated{2013-03-22 15:44:15}
+\pmmodified{2013-03-22 15:44:15}
+\pmowner{cvalente}{11260}
+\pmmodifier{cvalente}{11260}
+\pmtitle{pseudo-Riemannian manifold}
+\pmrecord{10}{37688}
+\pmprivacy{1}
+\pmauthor{cvalente}{11260}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53Z05}
+\pmrelated{EinsteinFieldEquations}
+\pmrelated{SylvestersLaw}
+\pmrelated{MinkowskiSpace}
+\pmrelated{CategoryOfRiemannianManifolds}
+\pmdefines{pseudo-Riemannian geometry}
+\pmdefines{pseudo-Riemannian manifold}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+A \emph{pseudo-Riemannian} manifold is a manifold $M$ together with a \PMlinkname{non degenerate}{NonDegenerateBilinearForm}, symmetric section $g$ of $T^0_{2}(M)$ (2-covariant tensor bundle over $M$).
+
+Unlike with a Riemannian manifold, $g$ is not positive definite. That is, there exist vectors $v\in T_{p}M$ such that $g(v,v)\le0$.
+
+A well known \PMlinkname{result from linear algebra}{SylvestersLaw} permits us to make a change of basis such that in the new base $g$ is represented by a diagonal matrix with $-1$ or $1$ elements in the diagonal. If there are $i$, $-1$ elements in the diagonal and $j$, $1$, the tensor is said to have signature $(i,j)$
+
+The signature will be invariant in every connected component of $M$, but usually the restriction that it be a global invariant is added to the definition of a pseudo-Riemannian manifold.
+
+Unlike a Riemannian metric, some manifolds do not admit a pseudo-Riemannian metric.
+
+Pseudo-Riemannian manifolds are crucial in Physics and in particular in General Relativity where space-time is modeled as a 4-pseudo Riemannian manifold with signature (1,3)\footnote{also referred to as $(-+++)$}.
+
+Intuitively pseudo-Riemannian manifolds are generalizations of Minkowski's space just as a Riemannian manifold is a generalization of a vector space with a positive definite metric.
+%%%%%
+%%%%%
+\end{document}

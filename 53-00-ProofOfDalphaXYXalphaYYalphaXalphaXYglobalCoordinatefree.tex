@@ -1,0 +1,86 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfDalphaXYXalphaYYalphaXalphaXYglobalCoordinatefree}
+\pmcreated{2013-03-22 15:34:04}
+\pmmodified{2013-03-22 15:34:04}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{proof of $d\alpha (X,Y) = X(\alpha(Y))$ $-$ $Y(\alpha(X))$ $ -$ $\alpha([X,Y])$ (global coordinate-free)}
+\pmrecord{5}{37472}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53-00}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+In the coordinate-free approach to differential geometry, this statement has a rather different ontological status than that which it has in the coordinate approach.  While, in the latter, it is a theorem, pure and simple, in the former, it is a combination of definition and theorem.  That is to say, one uses the equation to define the exterior derivative of a one-form but, in order for this definition to be valid, one must first show that a. the right-hand side of this identity satisfies the requisite properties of antisymmetry and bilinearity  and b. the operator $d$ implicitly defined is linear.
+
+\section{Proof of a.}
+
+For simplicity, we will break down this demontration into three parts.
+
+\subsection{Antisymmetry}
+
+It is easy enough to see that both sides of the equation change by a sign upon interchanging $X$ with $Y$ as a consequence of antisymmetry of two-forms and of the Lie bracket:
+
+\[ Y(\alpha(X)) - X(\alpha(Y))  - \alpha([Y,X]) \]
+\[ = - X(\alpha(Y)) + Y(\alpha(X)) X  + \alpha([X,Y]) \]
+\[ = -(X(\alpha(Y)) - Y(\alpha(X))  - \alpha([X,Y])) \]
+
+\subsection{Distributivity over addition}
+For simplicity, we can break down the study of how our expression behaves under linear operations into the study of how it behaves under addition and under scaling.  Because of antisymmetry, it suffices to check linearity in only one of the two arguments:
+
+\[  X(\alpha(Y+Z)) - (Y+Z)(\alpha(X))  - \alpha([X,Y+Z]) \]
+\[ = X(\alpha(Y)) + X(\alpha(Z)) - Y(\alpha(X)) - Z(\alpha(X)) - \alpha([X,Y]) - \alpha([X,Z]) \]
+\[ = (X(\alpha(Y)) - Y(\alpha(X)) - \alpha([X,Y])) + (X(\alpha(Z)) - Z(\alpha(X)) - \alpha([X,Z])) \]
+
+\subsection{Scaling}
+
+Finally, we verify that our expression transforms properly under rescaling.  Again, by antisymmetry, it suffices to look at only one argument.
+
+\[  X(\alpha(sY)) - (sY)(\alpha(X)) - \alpha([X,sY]) \]
+\[  = sX(\alpha(Y)) + X(s) \alpha(Y) - sY(\alpha(X)) - s \alpha([X,Y]) -  X(s) \alpha(Y)\]
+Cancelling a term and factoring out a common "$s$", 
+\[  = s \left( X(\alpha(Y)) - Y(\alpha(X)) - \alpha([X,Y]) \right) \]
+
+Hence this expression behaves like a two-form should.  By the principle "If it looks like a duck and quacks like a duck, it must be a duck", we conclude that the expression indeed specifies a two-form.
+
+\section{Proof of b.}
+
+As before, we will break the proof of linearity into two steps.  Note that here the term "scalar" simply means a real number, not a function on the manifold.
+
+\subsection{Distributivity over addition}
+
+\[ d(\alpha + \beta) (X,Y) = X((\alpha + \beta)(Y)) - Y((\alpha + \beta)(X))  - (\alpha + \beta)([X,Y]) \]
+\[ = X(\alpha(Y)) + X(\beta(Y)) - Y(\alpha(X)) - Y(\beta (X))- \beta([X,Y]) - \alpha([X,Y]) \]
+\[ = d \alpha (X,Y) + d \beta (X,Y) \]
+
+\subsection{Scaling}
+
+\[ d(s \alpha) (X,Y) = X((s \alpha)(Y)) - Y((s \alpha)(X))  - (s \alpha)([X,Y]) \]
+\[ = s X(\alpha(Y))  - s Y(\alpha(X)) - s \alpha([X,Y]) = s d\alpha (X,Y)\]
+%%%%%
+%%%%%
+\end{document}

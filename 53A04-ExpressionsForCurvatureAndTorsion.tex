@@ -1,0 +1,51 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExpressionsForCurvatureAndTorsion}
+\pmcreated{2013-03-22 15:38:14}
+\pmmodified{2013-03-22 15:38:14}
+\pmowner{Simone}{5904}
+\pmmodifier{Simone}{5904}
+\pmtitle{expressions for curvature and torsion}
+\pmrecord{7}{37567}
+\pmprivacy{1}
+\pmauthor{Simone}{5904}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53A04}
+\pmrelated{Torsion}
+\pmrelated{CurvatureOfACurve}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+For a \PMlinkname{regular}{Curve}, parameterized curve $\alpha\colon (a,b)\to\mathbb R^3$, not necessarily unit speed, the curvature $\kappa(t)$ and torsion $\tau(t)$ are given, respectively,  by
+\begin{align*}
+\kappa(t)&=\frac{\|\alpha'(t)\times\alpha''(t)\|}{\|\alpha'(t)\|^3};\\
+\tau(t)&=\frac{(\alpha'(t)\times\alpha''(t))\cdot\alpha'''(t)}{\|\alpha'(t)\times\alpha''(t)\|^2}.
+\end{align*}
+
+\begin{thebibliography}
+{} John McCleary, \emph{Geometry from a Differentiable Viewpoint}, Cambridge University Press, 1994.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,55 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{OrderOfContact}
+\pmcreated{2013-03-22 16:59:49}
+\pmmodified{2013-03-22 16:59:49}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{order of contact}
+\pmrecord{4}{39278}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53A04}
+\pmsynonym{order contact}{OrderOfContact}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Suppose that $A$ and $B$ are smooth curves in $\mathbb{R}^n$ which pass through 
+a common point $P$.  We say that $A$ and $B$ have zeroth order contact if their
+tangents at $P$ are distinct.
+
+Suppose that $A$ and $B$ are tangent at $P$.  We may then set up a coordinate
+system in which $P$ is the origin and the $x_1$ axis is tangent to both curves.
+By the implicit function theorem, there will be a neighborhood of $P$ such that
+$A$ can be described parametrically as $x_i = f_i (x_1)$ with $i = 2, \ldots, n$
+and $B$ can be described parametrically as $x_i = g_i (x_1)$ with 
+$i = 2, \ldots, n$.  We then define the \emph{order of contact} of $A$ and $B$ 
+at $P$ to be the largest integer $m$ such that all partial derivatives of $f_i$ 
+and $g_i$ of order not greater than $m$ at $P$ are equal.
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,74 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{FormulasInRiemannianGeometry}
+\pmcreated{2013-03-22 15:32:55}
+\pmmodified{2013-03-22 15:32:55}
+\pmowner{matte}{1858}
+\pmmodifier{matte}{1858}
+\pmtitle{formulas in Riemannian geometry}
+\pmrecord{8}{37446}
+\pmprivacy{1}
+\pmauthor{matte}{1858}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53B21}
+\pmclassification{msc}{53B20}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+\newcommand{\bX}{\boldsymbol{X}}
+\newcommand{\bY}{\boldsymbol{Y}}
+\begin{document}
+The aim of this page is to  collect
+frequently used formulas in Riemannian geometry.
+
+\subsubsection*{Symbol conventions.}
+\begin{itemize}
+\item $g_{ij}$ : the components of the
+  metric tensor;
+\item  $\Gamma_{ijk}=\Gamma_{jik}$ : the Christoffel symbols; 
+\item $X_i=X^j g_{ij}$, and $Y^i$  : rank 1
+  tensors;
+\item $T_{ij}=T_{i}{}^{k} g_{jk}$ : a rank 2 tensor;
+\item indices $i,j,k,l$ and subscripted versions thereof:  components
+taken with respect to a local coordinate frame;
+\item $x^i$, $y^j$ : systems of local coordinates;
+\item $\partial_i = \frac{\partial}{\partial x^i}$ : local coordinate frame;
+\item boldfaced symbols: the actual geometric quantity, rather
+  than components; e.g.  $\bX = X^i \partial_i.$
+\end{itemize}
+
+
+
+\subsubsection*{Formulas for the covariant derivative.}
+\begin{align*}
+  \partial_k g_{ij} &= \Gamma_{kij} + \Gamma_{kji},\\
+  \partial_k g^{ij} &= -(g^{jb} \Gamma_{bk}{}^i + g^{ia} \Gamma_{ak}{}^j), \\
+  \nabla_k g_{ij} &= 0,\\
+  \Gamma_{ijk} &= \tfrac{1}{2} ( \partial_i g_{jk} + \partial_j
+  g_{ik}-\partial_k g_{ij}),\\
+  \nabla_i X^j &= \partial_i X^j + \Gamma_{ik}{}^j X^k,\\
+  \nabla_{\bX} \bY &= X^i \,\nabla_i Y^j\, \partial_j,\\
+  \nabla_i X_j &= \partial_i X_j - \Gamma_{ij}{}^k X_k,\\
+  \nabla_i T_{jk} &= \partial_i T_{jk} - \Gamma_{ij}{}^l T_{lk}
+  -  \Gamma_{ik}{}^l T_{jl},\\
+  \nabla_i T^j{}_k &= \partial_i T^j{}_k + \Gamma_{il}{}^j T^l{}_k -
+  \Gamma_{ik}{}^l T^j{}_l.
+\end{align*}
+
+\subsubsection*{Formulas for geodesics}
+A geodesic is a curve $c\colon I \to M$ satisfying
+\[
+\ddot{c}{}^i + \Gamma_{jk}{}^i\, \dot{c}^j\dot{c}^k = 0
+\]
+%%%%%
+%%%%%
+\end{document}

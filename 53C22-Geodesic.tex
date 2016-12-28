@@ -1,0 +1,75 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Geodesic}
+\pmcreated{2013-03-22 14:06:37}
+\pmmodified{2013-03-22 14:06:37}
+\pmowner{Mathprof}{13753}
+\pmmodifier{Mathprof}{13753}
+\pmtitle{geodesic}
+\pmrecord{22}{35513}
+\pmprivacy{1}
+\pmauthor{Mathprof}{13753}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53C22}
+%\pmkeywords{shortest path}
+\pmrelated{connection}
+\pmrelated{Connection}
+\pmdefines{focal point}
+\pmdefines{minimizing geodesic}
+\pmdefines{geodesic curve}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+
+\DeclareMathOperator{\Length}{Length}
+\begin{document}
+\PMlinkescapeword{straight}
+
+Let $M$ be a differentiable manifold (at least two times differentiable) with affine connection $\nabla$. The solution to the equation \[\nabla_{\dot\gamma}\dot{\gamma}=0\] defined in the interval $[0,a]$, is called a \emph{geodesic} or a \emph{geodesic curve}. 
+It can be shown that if $\nabla$ is a Levi-Civita connection and $a$ is `small enough', then the curve $\gamma$ is the shortest possible curve between the points $\gamma(0)$ and $\gamma(a)$, and is often referred to as a \emph{minimizing geodesic} between these points.
+
+Conversely, any curve which minimizes the \PMlinkescapetext{distance} between two arbitrary points in a manifold, is a geodesic.
+
+\PMlinkescapetext{Simple} examples of geodesics includes straight lines in Euclidean space ($\mathbb{R}^n$) and great circles on spheres (such as the equator of earth).  The latter of which is not minimizing if the geodesic from the point $p$ is extended beyond its antipodal point. This example also points out to us that between any two points there may be more than one geodesic. In fact, between a point and its antipodal point on the sphere, there are an infinite number of geodesics. Given a \PMlinkescapetext{fixed point} $p$, it is also a property for a point $q$ (known as a \emph{focal point} of $p$) where different geodesics issuing from $p$ intersects, to be the point where any given geodesic from $p$ ceases to be minimizing. 
+
+\paragraph{Coordinates}
+In coordinates the equation is given by the system \[\frac{d^2x_k}{dt^2}+\sum_{i,j}\Gamma^k_{ij}\frac{dx_i}{dt}\frac{dx_j}{dt}=0 \qquad 1\leq k \leq n\]
+where $\Gamma^k_{ij}$ is the Christoffel symbols (see entry about connection), $t$ is the parameter of the curve and $\{x_1, \ldots , x_n\}$ are coordinates on $M$.
+
+The formula follows since if $\displaystyle {\dot{\gamma}}= \sum_i\frac{dx_i}{dt}\partial_{x_i}$, where  $\{\partial_{x_1}, \ldots , \partial_{x_n}\}$ are the corresponding coordinate vectors, we have 
+\begin{align*}
+\nabla_{\dot{\gamma}}{\dot{\gamma}}&= \nabla_{\sum_i\frac{dx_i}{dt}\partial_{x_i}}{\sum_j\frac{dx_j}{dt}\partial_{x_j}}\\
+&=\sum_k\dot{\gamma}\left(\frac{dx_k}{dt}\right)\partial_{x_k}+ \sum_{i,j}\frac{dx_j}{dt}\frac{dx_i}{dt}\nabla_{\partial_{x_i}}\partial_{x_j} \\
+&=\sum_k\left( \frac{d^2x_k}{dt^2}+\sum_{i,j} \frac{dx_i}{dt}\frac{dx_j}{dt}\Gamma^k_{ij}\right)\partial_{x_k}.
+\end{align*}
+
+\paragraph{Metric spaces}
+A geodesic in a metric space $(X,d)$ is simply a continuous $f:[0,a]\to X$ such that the 
+\PMlinkname{length}{LengthOfCurveInAMetricSpace} of $f$ is $a$. 
+Of course, the \PMlinkescapetext{length} may be infinite. A geodesic metric space  is a metric space 
+where the distance between two points may be realized by a geodesic.
+
+%%%%%
+%%%%%
+\end{document}

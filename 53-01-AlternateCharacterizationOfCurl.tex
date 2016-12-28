@@ -1,0 +1,212 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AlternateCharacterizationOfCurl}
+\pmcreated{2013-03-22 15:29:10}
+\pmmodified{2013-03-22 15:29:10}
+\pmowner{stevecheng}{10074}
+\pmmodifier{stevecheng}{10074}
+\pmtitle{alternate characterization of curl}
+\pmrecord{9}{37341}
+\pmprivacy{1}
+\pmauthor{stevecheng}{10074}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53-01}
+\pmrelated{curl}
+\pmrelated{nabla}
+\pmrelated{FirstOrderOperatorsInRiemannianGeometry}
+\pmrelated{Curl}
+\pmrelated{NablaNabla}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% define commands here
+\newcommand{\real}{\mathbb{R}}
+
+\providecommand{\abs}[1]{\lvert#1\rvert}
+\providecommand{\absW}[1]{\left\lvert#1\right\rvert}
+\providecommand{\absB}[1]{\Bigl\lvert#1\Bigr\rvert}
+\providecommand{\norm}[1]{\lVert#1\rVert}
+\providecommand{\normW}[1]{\left\lVert#1\right\rVert}
+\providecommand{\normB}[1]{\Bigl\lVert#1\Bigr\rVert}
+\providecommand{\defnterm}[1]{\emph{#1}}
+
+\DeclareMathOperator{\D}{D}
+
+\newcommand{\vA}{\mathbf{A}}
+\newcommand{\vg}{\mathbf{g}}
+\newcommand{\vu}{\mathbf{u}}
+\newcommand{\vv}{\mathbf{v}}
+\newcommand{\ve}{\mathbf{e}}
+\newcommand{\vF}{\mathbf{F}}
+\newcommand{\vL}{\mathbf{L}}
+\newcommand{\vn}{\mathbf{n}}
+\newcommand{\vp}{\mathbf{p}}
+\newcommand{\DF}{\D \mathbf{F}}
+\newcommand{\cross}{\times}
+\DeclareMathOperator{\curl}{curl}
+\DeclareMathOperator{\diverg}{div}
+\begin{document}
+Let $\vF$ be a smooth vector field on (an open subset of) $\real^3$.
+
+We show that $\curl \vF$ defined using the \PMlinkname{coordinate-free definition given on the parent entry}{curl}
+is the same as the curl defined
+by $\nabla \cross \vF$ in Cartesian coordinates.
+
+\section*{The case for spherical surfaces}
+This will be done by directly computing the limit $\vL$ of surface 
+integrals defining $\curl \vF(\vp)$,
+using spheres $S^2(r, \vp)$ centered at $\vp$ of radius $r$.  The formula is:
+\begin{align*}
+\curl \vF(\vp) = \vL &= \lim_{r \to 0} \frac{3}{4 \pi r^3} \iint_{S^2(r, \vp)} \vn \cross \vF \, dA \\
+&= \lim_{r \to 0} \frac{3 r^2}{4\pi r^3} 
+\iint_{S^2} \vn \cross \vF(r\vn + \vp) \, dA\,,
+\end{align*}
+where $\vn$ is the outward unit normal to the surface (at each point of the surface), and 
+$S^2$ is the unit sphere at the origin.
+
+We simplify the last integral.  
+Expanding $\vF(r\vn + \vp)$
+in a first-degree Taylor polynomial about $\vp$, we have
+\begin{align*}
+\iint_{S^2} \vn \cross \vF(r\vn + \vp) \, dA &=
+\iint_{S^2} \vn \cross \vF(\vp) \, dA \\
+& \quad + \iint_{S^2} \vn \cross \DF(\vp)r\vn \, dA + \iint_{S^2} \vn \cross o(\norm{r\vn})  \, dA\,.
+\end{align*}
+The integral $\iint_{S^2} \vn \cross \vF(\vp) \, dA$ 
+vanishes by symmetry of the sphere,
+while
+\begin{align*}
+\normW{ \iint_{S^2} \vn \cross o(\norm{r\vn}) \, dA }
+\leq \iint_{S^2} \norm{\vn} \, o(r) \, dA = o(r)\,.
+\end{align*}
+Combining these facts, we obtain
+\begin{align*}
+\vL &= \lim_{r \to 0} \left[ 0 + \frac{3}{4\pi r} \iint_{S^2} \vn \times \DF(\vp) r\vn \, dA  + o(1) \right]\\
+&= \frac{3}{4\pi} \iint_{S^2} \vn \times \DF(\vp) \vn \, dA\,.
+\end{align*}
+Notice that $\vL$ depends only on the derivative of $\vF$
+at $\vp$.
+
+We want to evaluate the last integral in Cartesian coordinates.
+Let $\ve_k$ be an orthonormal basis of $\real^3$
+oriented positively, and let $B$ be the matrix of the derivative
+$\DF(p)$ in this basis.
+Then the $k$th coordinate of $\vL$ with respect to the
+same basis
+is 
+\[
+\left(\iint_{S^2} \vn \cross B\vn \, dA \right) \cdot \ve_k 
+= \iint_{S^2} (\vn \cross B\vn) \cdot \ve_k \, dA
+\]
+The $k$th coordinate of the integrand is
+\[
+(\vn \cross B\vn) \cdot \ve_k =
+n^i \,  (B\vn)^j \, \epsilon_{ijk}
+= n^i \, B^j_l n^l \, \epsilon_{ijk}\,,
+\]
+where to lessen the writing, we employ
+the Einstein summation convention, along
+with the Levi-Civita permutation symbol $\epsilon_{ijk}$, and $B^j_l$
+denotes the entry at the $j$th row, $l$th column of $B$.
+
+In the summation above, if a summmand has $i \neq l$,
+ then the integral of that summand over the sphere is zero, by symmetry.
+This means that in the summation the index $l$ may be set to $i$,
+and thus
+\[
+\left(\iint_{S^2} \vn \cross B\vn \, dA \right) \cdot \ve_k 
+= \iint_{S^2} n^i B_i^j n^i \epsilon_{ijk} \, dA
+= B_i^j \epsilon_{ijk} \iint_{S^2} (n^i)^2 \, dA\,.
+\]
+Now there is a formula for the evaluation of integrals 
+of polynomials over $S^{m-1} \subset \real^m$, in terms of the gamma function;
+in our case ($m = 3$) the formula reads:
+\[
+\iint_{S^2} (n^i)^2 \, dA = \frac{2 \Gamma(\frac{3}{2}) \, \Gamma(\frac{1}{2})
+\, \Gamma(\frac{1}{2})}{\Gamma(\frac{3}{2} + \frac{1}{2} + \frac{1}{2})}
+= \frac{2 \Gamma(\frac{3}{2}) \, \sqrt{\pi} \, \sqrt{\pi}}{\frac{3}{2} \Gamma(\frac{3}{2})}
+= \frac{4\pi}{3}\,.
+\]
+(If you do not know this formula, the integral in our case
+can be computed directly using spherical coordinates.)
+Therefore the $k$th component of $\vL$ is
+\[
+\vL \cdot \ve_k = \frac{3}{4\pi} \, B_i^j \epsilon_{ijk} \iint_{S^2} (n^i)^2 \, dA
+= B_i^j \epsilon_{ijk} = \left.\frac{\partial F^j}{\partial x^i}\right|_\vp \, \epsilon_{ijk}\,.
+\]
+But this is just $(\nabla \cross \vF(\vp)) \cdot \ve_k$.
+
+
+\section*{The case for arbitrary surfaces}
+Although we have only
+computed
+\[
+\vL = \curl \vF(\vp) = \lim_{V \to 0} \frac{1}{V} \iint_S \vn \cross \vF \, dA
+\]
+only for spheres $S = S^2(r, \vp)$,
+this formula holds for arbitrary closed surfaces $S$ that shrink nicely to $\vp$.
+It is hardly obvious, especially since our computation before depended
+on the symmetry of the sphere extensively.
+
+To show the general result,
+consider the triple scalar product
+$(\vv \times \vF) \cdot \ve_k$.
+This is a linear functional in the vector $\vv$,
+so there exists
+a unique vector function $\vg_k$ such that
+$(\vv \times \vF) \cdot \ve_k = \vg_k \cdot \vv$ for all $\vv \in \real^3$.
+We can find the components of this $\vg_k$ by evaluating the functional
+at $\vv = \ve_i$:
+\[
+g_k^i = \vg_k \cdot \ve_i = (\ve_i \times \vF) \cdot \ve_k = \det(\ve_i, \vF, \ve_k) = F^j \epsilon_{ijk}\,.
+\]
+The reason for considering such expressions is that, putting $\vv = \vn$, we have
+\[
+\iint_{S} (\vn \times \vF) \cdot \ve_k \, dA =
+\iint_{S} \vg_k \cdot \vn \, dA = \iint_{S} \vg_k \cdot d\vA\,.
+\]
+So we have converted the original integral into an ordinary surface integral.
+And this surface integral can be changed into a volume integral, by using the divergence theorem:
+\[
+\iint_S \vg_k \cdot d\vA = \iiint_M \diverg \vg_k \, dV = \iiint_M \frac{\partial F^j}{\partial x^i} \, \epsilon_{ijk} \, dV\,,
+\]
+where $M$ is the volume whose boundary is $S$.
+Hence
+\begin{align*}
+\vL \cdot \ve_k &= \lim_{V \to 0} \frac{1}{V} \iint_S (\vn \times \vF) \cdot \ve_k \, dA 
+\\ &= 
+\lim_{V \to 0} \frac{1}{V} \iiint_M \frac{\partial F^j}{\partial x^i} \, \epsilon_{ijk} \, dV \\ &=
+\left.\frac{\partial F^j}{\partial x^i}\right|_\vp \, \epsilon_{ijk} = (\nabla \cross \vF(\vp)) \cdot \ve_k \,.
+\end{align*}
+
+\section*{Definition in terms of differential forms}
+We mention, in passing,
+a computational, yet coordinate-free, alternative to the definition of the curl,
+using differential forms.
+If $\omega$ is a 1-form on $\real^3$ such that $\omega(\vv) = \langle \vF, \vv \rangle$,
+then the curl of $\vF$ is defined as the vector function $\vg = g^k \, e_k$ such that
+\[
+d\omega(\vu, \vv) = \langle \vg, \vu \cross \vv \rangle\,.
+\]
+In Cartesian coordinates, we have
+\begin{align*}
+\omega &= F^1 \, dx^1 + F^2 \, dx^2 + F^3 \, dx^3 \\
+d\omega &= g^1 \, dx^2 \wedge dx^3 + g^2 \, dx^3 \wedge \, dx^1 + g^3 \, dx^1 \wedge dx^2\,,
+\end{align*}
+If we take the exterior derivative of the first equation for $\omega$, and then equate components
+with the second equation for $d\omega$,
+we find that $g^k$ = $(\nabla \cross \vF) \cdot \ve_k$,
+so our new definition is equivalent to the others.
+%%%%%
+%%%%%
+\end{document}

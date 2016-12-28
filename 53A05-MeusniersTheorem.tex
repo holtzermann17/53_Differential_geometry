@@ -1,0 +1,58 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MeusniersTheorem}
+\pmcreated{2013-03-22 17:28:39}
+\pmmodified{2013-03-22 17:28:39}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{Meusnier's theorem}
+\pmrecord{9}{39863}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53A05}
+\pmclassification{msc}{26B05}
+\pmclassification{msc}{26A24}
+\pmsynonym{theorem of Meusnier}{MeusniersTheorem}
+\pmrelated{EulersTheorem2}
+\pmrelated{ProjectionOfPoint}
+\pmrelated{NormalCurvatures}
+\pmdefines{inclined section}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+Let $P$ be a point of a surface \,$F(x,\,y,\,z) = 0$\, where $F$ is twice continuously differentiable in a neighbourhood of $P$.\, Set at $P$ a tangent of the surface.  At the point $P$, set through this tangent both the normal plane and a skew plane \PMlinkname{forming the angle}{AngleBetweenTwoPlanes} $\omega$ with the normal plane.  Let $\varrho$ be the radius of curvature of the normal section and $\varrho_\omega$ the radius of curvature of the {\em inclined section}.
+
+Meusnier proved in 1779 that the equation
+$$\varrho_\omega = \varrho\cos\omega$$
+between these radii of curvature is valid.
+
+One can obtain an illustrative interpretation for the Meusnier's theorem, if one thinks the sphere with radius the radius $\varrho$ of curvature of the normal section and with centre the corresponding centre of  curvature.  Then the equation utters that the circle, which is intersected from the sphere by the inclined plane, is the circle of curvature of  the intersection curve of this plane and the surface\, $F(x,\,y,\,z) = 0.$
+%%%%%
+%%%%%
+\end{document}

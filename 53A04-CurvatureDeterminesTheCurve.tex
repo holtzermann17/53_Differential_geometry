@@ -1,0 +1,97 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CurvatureDeterminesTheCurve}
+\pmcreated{2016-02-22 16:14:25}
+\pmmodified{2016-02-22 16:14:25}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{curvature determines the curve}
+\pmrecord{11}{39353}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53A04}
+\pmsynonym{fundamental theorem of plane curves}{CurvatureDeterminesTheCurve}
+%\pmkeywords{plane curve}
+\pmrelated{FundamentalTheoremOfSpaceCurves}
+\pmrelated{ErnstLindelof}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{curvature} \PMlinkescapeword{represents}
+
+The \PMlinkname{curvature}{CurvaturePlaneCurve} of plane curve determines uniquely the form and \PMlinkescapetext{size} of the curve, i.e. one has the
+
+\textbf{Theorem.}\; If\; $s\mapsto k(s)$\; is a continuous real function, then there exists always plane curves satisfying the equation
+\begin{align}
+        \kappa \;=\; k(s)
+\end{align}
+between their curvature $\kappa$ and the arc length $s$.\, All these curves are \PMlinkname{congruent}{Congruence}.\\
+
+{\em Proof.}\; Suppose that a curve $C$ satisfies the condition (1).\, Let the value\, $s = 0$\, correspond to the point $P_0$ of this curve.\, We choose $O$ as the origin of the plane.\, The tangent and the normal of $C$ in $O$ are chosen as the $x$-axis and the $y$-axis, with positive directions the directions of the tangent and normal vectors of $C$, respectively.\, According to (1) and the definition of curvature, the equation
+          $$\frac{d\theta}{ds} \;=\; k(s)$$
+for the direction angle $\theta$ of the tangent of $C$ is valid in this coordinate system; the initial condition is
+$$\theta \;=\; 0 \quad \mbox{when} \quad s \;=\; 0.$$
+Thus we get
+\begin{align}
+     \theta \;=\; \int_0^s k(t) d\!t \;:=\; \vartheta(s),
+\end{align}
+which implies
+\begin{align}
+   \frac{dx}{ds} \;=\; \cos{\vartheta(s)}, \qquad 
+   \frac{dy}{ds} \;=\; \sin{\vartheta(s)}.
+\end{align}
+Since\, $x = y = 0$\, when\, $s = 0$, we obtain
+\begin{align}
+  x \;=\; \int_0^s \cos{\vartheta(t)}\,dt, \qquad y \;=\; 
+  \int_0^s \sin{\vartheta(t)}\,dt.
+\end{align}
+Thus the function \,$s\mapsto k(s)$\, determines uniquely these functions $x$ and $y$ of the parameter $s$, and (4) represents a curve with definite form and \PMlinkescapetext{size}.
+
+The above reasoning shows that every curve which satisfies (1) is \PMlinkname{congruent}{Congruence} with the curve (4).
+
+We have still to show that the curve (4) satisfies the condition (1).\, By \PMlinkname{differentiating}{HigherOrderDerivatives} the equations (4) we get the equations (3), which imply\; $(\frac{dx}{ds})^2+(\frac{dy}{ds})^2 = 1$,\; or\, $ds^2 = dx^2+dy^2$\, which means that the parameter $s$ represents the arc length of the curve (4), counted from the origin.\, Differentiating (3) we get, because\, $\vartheta'(s) = k(s)$\, by (2),
+\begin{align}
+\frac{d^2x}{ds^2} \;=\; -k(s)\sin{\vartheta(s)}, \qquad 
+\frac{d^2y}{ds^2} \;=\; k(s)\cos{\vartheta(s)}.    
+\end{align}
+The equations (3) and (5) then yield
+$$\frac{dx}{ds}\frac{d^2y}{ds^2}-\frac{dy}{ds}\frac{d^2x}{ds^2} \;=\; k(s),$$
+i.e. the curvature of (4), according the \PMlinkname{parent entry}{CurvaturePlaneCurve}, satisfies
+$$ \left| \begin{matrix} x' & y' \cr x'' & y'' \end{matrix} \right| \;=\; k(s).$$
+Thus the proof is settled.
+
+\begin{thebibliography}{8}
+\bibitem{lindelof}{\sc Ernst Lindel\"of}: {\it Differentiali- ja integralilasku
+ja sen sovellutukset I}.\, WSOY. Helsinki (1950).
+\end{thebibliography}
+
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,48 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfPoincareLemma}
+\pmcreated{2013-03-22 14:24:36}
+\pmmodified{2013-03-22 14:24:36}
+\pmowner{pbruin}{1001}
+\pmmodifier{pbruin}{1001}
+\pmtitle{proof of Poincar\'e lemma}
+\pmrecord{4}{35912}
+\pmprivacy{1}
+\pmauthor{pbruin}{1001}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53-00}
+\pmclassification{msc}{55N05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $X$ be a smooth manifold, and let $\omega$ be a closed differential form of degree $k>0$ on $X$.  For any $x\in X$, there exists a contractible neighbourhood $U\subset X$ of $x$ (i.e. $U$ is homotopy equivalent to a single point), with inclusion map
+$$\iota\colon U\hookrightarrow X.$$
+To construct such a neighbourhood, take for example an open ball in a coordinate chart around $x$.  Because of the homotopy invariance of de Rham cohomology, the $k$th de Rham cohomology group ${\rm H}^k(U)$ is isomorphic to that of a point; in particular,
+$$
+{\rm H}^k(U)=0\quad\hbox{for all $k>0$}.
+$$
+Since $d(\iota^*\omega)=\iota^*(d\omega)=0$, this implies that there exists a $(k-1)$-form $\eta$ on $U$ such that $d\eta=\iota^*\omega$.  In the case where $X$ is a contractible manifold, such an $\eta$ exists globally since we can choose $U=X$ above.
+%%%%%
+%%%%%
+\end{document}

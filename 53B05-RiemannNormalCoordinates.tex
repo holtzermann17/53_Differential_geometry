@@ -1,0 +1,60 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RiemannNormalCoordinates}
+\pmcreated{2013-03-22 14:35:35}
+\pmmodified{2013-03-22 14:35:35}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{Riemann normal coordinates}
+\pmrecord{10}{36157}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53B05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Riemann normal coordinates may be thought of as a generalization of Cartesian coordinates from Euclidean space to any manifold (which should be at least twice differentiable) with affine connection.  (Including Riemannian manifolds as a special case, of course!)
+
+To define a system of Riemann normal coordinates, one needs to pick a point $P$ on the manifold which will serve as origin and a basis for the tangent space at $P$.  Suppose that the manifold is $d$ dimensional.  To any $d$-tuplet of real numbers $(x^1, \ldots x^n)$, we shall assign a point $Q$ of the manifold by the following procedure:
+
+Let $v$ be the vector whose components with respect to the basis chosen for the tangent space at $P$ are $x^1, \ldots x^n$.  There exists a unique affinely-parameterized geodesic $C(t)$ such that $C(0) = P$ and $[d C(t) / dt]_{t = 0} = v$.  Set $Q = C(1)$.  Then $Q$ is defined to be the point whose Riemann normal coordinates are $(x^1, \ldots x^n)$.
+
+Riemann normal coordinates enjoy several important properties:
+
+\begin{enumerate}
+\item The connection coefficients vanish at the origin of Riemann normal coordinates.
+
+\item Covariant derivatives reduce to partial derivatives at the origin of Riemann normal coordinates.
+
+\item The partial derivatives of the components of the connection evaluated at the origin of Riemann normal coordinates equals the components of the curvature tensor.  In fact, some authors take this property as a definition of the curvature tensor.
+\end{enumerate}
+
+To every point on the manifold one may associate an open neighborhood of that point in which Riemann normal coordinates based at the point provide a diffeomorphism between the neighborhood and a subset of $\mathbb{R}^d$.  In general, Riemann normal coordinates become singular when a conjugate point of $P$ is encountered so they are typically more useful for studying local geometry than global geometry.
+
+References: 
+doCarmo 1992 (see bibliography for differential geometry)
+%%%%%
+%%%%%
+\end{document}

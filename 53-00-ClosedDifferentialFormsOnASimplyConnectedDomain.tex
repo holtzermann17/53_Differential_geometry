@@ -1,0 +1,74 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ClosedDifferentialFormsOnASimplyConnectedDomain}
+\pmcreated{2013-03-22 13:32:46}
+\pmmodified{2013-03-22 13:32:46}
+\pmowner{paolini}{1187}
+\pmmodifier{paolini}{1187}
+\pmtitle{closed differential forms on a simply connected domain}
+\pmrecord{14}{34146}
+\pmprivacy{1}
+\pmauthor{paolini}{1187}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53-00}
+%\pmkeywords{exact differential form}
+\pmrelated{ClosedCurveTheorem}
+\pmrelated{PoincareLemma}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\begin{document}
+Let $D\subset \mathbb R^2$ be an open set and let $\omega$ be a differential form defined on $D$.
+
+\begin{theorem}
+If $D$ is simply connected and $\omega$ is a closed differential form,
+then $\omega$ is an exact differential form.
+\end{theorem}
+
+The proof of this result is a consequence of the following useful lemmas.
+
+\begin{lemma}
+Let $\omega$ be a closed differential form 
+and suppose that $\gamma_0$ and $\gamma_1$ are two regular homotopic curves in $D$ (with the same end points). Then 
+\[
+  \int_{\gamma_0} \omega = \int_{\gamma_1}\omega.
+\]
+\end{lemma}
+
+\begin{lemma}
+Let $\omega$ be a continuous differential form.
+If given any two curves $\gamma_0$, $\gamma_1$ in $D$ with the same end-points,
+it holds
+\[
+  \int_{\gamma_0} \omega = \int_{\gamma_1} \omega,
+\]
+then $\omega$ is exact.
+\end{lemma}
+
+See the Poincar\'e Lemma for a generalization of this result on $n$-dimensional manifolds.
+%%%%%
+%%%%%
+\end{document}

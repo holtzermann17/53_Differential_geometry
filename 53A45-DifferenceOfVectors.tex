@@ -1,0 +1,83 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DifferenceOfVectors}
+\pmcreated{2013-03-22 17:47:19}
+\pmmodified{2013-03-22 17:47:19}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{difference of vectors}
+\pmrecord{9}{40249}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53A45}
+\pmsynonym{vector difference}{DifferenceOfVectors}
+\pmsynonym{vector subtraction}{DifferenceOfVectors}
+\pmrelated{CommonPointOfTriangleMedians}
+\pmrelated{Difference2}
+\pmrelated{ProvingThalesTheoremWithVectors}
+\pmrelated{VectorValuedFunction2}
+\pmdefines{difference vector}
+\pmdefines{opposite vector}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+\usepackage{pstricks}
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+Let $\vec{a}$ and $\vec{b}$ be two vectors in the plane (or in a vector space).\, The {\em difference vector} or {\em difference} \,$\vec{a}\!-\!\vec{b}$\, of $\vec{a}$ and $\vec{b}$ is a vector $\vec{d}$\, such that
+                 $$\vec{b}+\vec{d} = \vec{a}.$$
+Thus we have
+\begin{align}
+\vec{b}+(\vec{a}\!-\!\vec{b}) = \vec{a}.
+\end{align}
+
+According to the procedure of forming the sum of vectors by setting the addends one after the other, the equation (1) tallies with the picture below; when the minuend and the subtrahend emanate from a common initial point, their difference vector can be directed from the terminal point of the subtrahend to the terminal point of the minuend. 
+
+\begin{center}
+\begin{pspicture}(-2,-1)(4,2.5)
+\psdot[linecolor=black](0,0)
+\psline[arrows=->,arrowsize=5pt,linecolor=black](0,0)(-1.5,2)
+\psline[arrows=->,arrowsize=5pt,linecolor=red](-1.5,2)(4,1)
+\psline[arrows=->,arrowsize=5pt,linecolor=blue](0,0)(4,1)
+\rput[a](2.1,0.2){$\vec{a}$}
+\rput[a](-1,0.7){$\vec{b}$}
+\rput[a](1.6,1.76){$\vec{a}\!-\!\vec{b}$}
+\rput(-2,-1){.}
+\rput(4,2.5){.}
+\end{pspicture}
+\end{center}
+
+
+\textbf{Remark.}\, It is easily seen that the difference $\vec{a}\!-\!\vec{b}$ is same as the sum vector
+$$\vec{a}\!+\!(-\vec{b})$$
+where $-\vec{b}$ is the {\em opposite vector} of $\vec{b}$:\, it may be represented by the directed line segment from the terminal point of $\vec{b}$ to the initial point of $\vec{b}$.
+
+
+%%%%%
+%%%%%
+\end{document}

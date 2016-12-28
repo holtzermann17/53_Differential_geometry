@@ -1,0 +1,94 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TiltCurve}
+\pmcreated{2013-03-22 18:08:22}
+\pmmodified{2013-03-22 18:08:22}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{tilt curve}
+\pmrecord{12}{40694}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53A05}
+\pmclassification{msc}{53A04}
+\pmclassification{msc}{51M04}
+\pmrelated{OrthogonalCurves}
+\pmrelated{Gradient}
+\pmrelated{PositionVector}
+\pmrelated{FirstFundamentalForm}
+\pmrelated{LineOfCurvature}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+The {\em tilt curves} (in German {\em die Neigungskurven}) of a surface
+                          $$z = f(x,\,y)$$
+are the curves on the surface which \PMlinkname{intersect}{ConvexAngle} orthogonally the level curves \,$f(x,\,y) = c$\, of the surface.\, If the gravitation acts in direction of the negative $z$-axis, then a drop of water on the surface aspires to slide along a tilt curve.\, For example, since the level curves of the sphere \,$z = \pm\sqrt{r^2-x^2-y^2}$\, are the ``latitude circles'', the tilt curves of the sphere are the ``meridian circles''.\, The tilt curves of a helicoid are circular helices.\\
+
+If the tilt curves are projected on the $xy$-plane, the differential equation of those projection curves is
+\begin{align}
+\frac{dy}{dx} = \frac{f'_y(x,\,y)}{f'_x(x,\,y)}.
+\end{align}
+Naturally, they also cut orthogonally (the projections of) the level curves.\\
+
+\textbf{Example.}\, Let us find the tilt curves of the elliptic paraboloid
+$$z = \frac{x^2}{a^2}+\frac{y^2}{b^2}.$$
+The level curves are the ellipses \,$\frac{x^2}{a^2}+\frac{y^2}{b^2} = c$.\, Now we have
+$$f'_x(x,\,y) = \frac{\partial}{\partial x}\!\left(\frac{x^2}{a^2}\!+\!\frac{y^2}{b^2}\right) = \frac{2x}{a^2}, \quad
+  f'_y(x,\,y) = \frac{\partial}{\partial y}\!\left(\frac{x^2}{a^2}\!+\!\frac{y^2}{b^2}\right) = \frac{2y}{b^2},$$
+whence the differential equation of the tilt curves is
+$$\frac{dy}{dx} = \frac{a^2}{b^2}\!\cdot\!\frac{y}{x}.$$
+The separation of variables and the integration yield
+$$\int\frac{dy}{y} = \frac{a^2}{b^2}\!\int\frac{dx}{x},$$
+then
+$$\ln|y| = \frac{a^2}{b^2}\ln|x|+\ln|C| = \ln(|C||x|^{a^2/b^2}),$$
+and finally
+\begin{align}
+y = C|x|^{a^2/b^2}.
+\end{align}
+Here, we may allow for $C$ all positive and negative values.\, The curves (2) originate from the origin and continue infinitely far.\\
+
+
+\textbf{Remark.}\, Given an arbitrary family of parametre curves on a surface 
+             $$\vec{r} \,=\, (x(u,\,v),\;y(u,\,v),\;z(u,\,v))^\intercal$$
+of $\mathbb{R}^3$, e.g. in the form
+                     $$\frac{du}{dv} = f(u,\,v),$$
+the family of its orthogonal curves on the surface has in the Gaussian coordinates $u,\,v$ the differential equation
+\begin{align}
+\frac{dv}{du} = -\frac{g_{11}+g_{12}f(u,\,v)}{g_{12}+g_{22}f(u,\,v)},
+\end{align}
+where 
+$$g_{11} = \vec{r}\,'_u\cdot\vec{r}\,'_u, \quad g_{12} = \vec{r}\,'_u\cdot\vec{r}\,'_v, \quad 
+  g_{22} = \vec{r}\,'_v\cdot\vec{r}\,'_v$$
+are the \PMlinkescapetext{first order} fundamental quantities $E,\,F,\,G$ of Gauss, respectively.
+
+
+
+%%%%%
+%%%%%
+\end{document}

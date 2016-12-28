@@ -1,0 +1,95 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Quadratrix}
+\pmcreated{2013-03-22 18:05:31}
+\pmmodified{2013-03-22 18:05:31}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{quadratrix}
+\pmrecord{12}{40630}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53A04}
+\pmsynonym{quadratrix of Hippias}{Quadratrix}
+\pmsynonym{quadratrix of Dinostratus}{Quadratrix}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+\usepackage{pstricks}
+\usepackage{pst-plot}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\begin{center}
+\begin{pspicture}(-1,-1)(4,3)
+\psaxes[Dx=9,Dy=9]{->}(0,0)(-0.5,-0.5)(4,3)
+\rput(4,-0.2){$x$}
+\rput(-0.24,3){$y$}
+\psline(0,0)(3.2,2)(3.2,0)
+\psdot[linecolor=blue](3.2,2)
+\psarc(0,0){0.5}{0}{34}
+\psline(3,0)(3,0.2)(3.2,0.2)
+\rput(0.7,0.2){$t$}
+\rput(3.5,1){$kt$}
+\rput(3.4,2.25){$(x,y)$}
+\end{pspicture}
+\end{center}
+
+Let the polar angle $\theta$ and the ordinate of the point \,$(x,\,y)$\, of the plane be \PMlinkname{proportional}{Variation} to a parametre $t$, e.g. such that\, $\theta = t$,\; $y = kt$.\, The above diagram shows that\, $\displaystyle\frac{x}{kt} = \cot{t}$.\, Into this we can substitute\, $\displaystyle t = \frac{y}{k}$, whence we get an equation
+\begin{align}
+x \;=\; y\cot\frac{y}{k}
+\end{align}
+between $x$ and $y$.\, The given proportionalities as locus condition, the point\, $(x,\,y)$\, draws a plane curve called {\em quadratrix}.\, If we change the $x$ and $y$ coordinates, the equation of the quadratrix is
+\begin{align}
+y \;=\; x\cot\frac{x}{k}.
+\end{align}
+The equation (2) defines an even function \,$x \mapsto y$, where for $x$ is allowed all real values at which the right hand side of (2) is defined, thus\, $x \neq n\pi k$\; ($n \in \mathbb{Z}$).
+
+\begin{center}
+\begin{pspicture}(-5.5,-6.5)(5.5,5)
+\psaxes[Dx=9,Dy=9]{->}(0,0)(-1.5,-5.5)(3.5,5.5)
+\psplot[linecolor=blue]{-0.95}{-0.01}{x 180 mul cos x 180 mul sin div x mul}
+\psplot[linecolor=blue]{0.01}{0.95}{x 180 mul cos x 180 mul sin div x mul}
+\psplot[linecolor=blue]{1.06}{1.90}{x 180 mul cos x 180 mul sin div x mul}
+\psplot[linecolor=blue]{2.10}{2.86}{x 180 mul cos x 180 mul sin div x mul}
+\psline[linestyle=dotted](-1,-5)(-1,5)
+\psline[linestyle=dotted](1,-5)(1,5)
+\psline[linestyle=dotted](2,-5)(2,5)
+\psline[linestyle=dotted](3,-5)(3,5)
+\rput(3.5,-0.2){$x$}
+\rput(-0.24,5.4){$y$}
+\rput(-5.5,-6.5){.}
+\rput(5.5,5){.}
+\end{pspicture}
+\end{center}
+
+The quadratrix was used by the ancient Greek geometers for squaring the circle, the name comes from the Latin {\em quadratrix} = `a feminine squarer'.\\
+
+\PMlinkexternal{Wiki}{http://de.wikipedia.org/wiki/Quadratrix}
+
+%%%%%
+%%%%%
+\end{document}

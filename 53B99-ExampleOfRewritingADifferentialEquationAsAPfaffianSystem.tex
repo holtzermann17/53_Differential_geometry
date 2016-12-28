@@ -1,0 +1,65 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExampleOfRewritingADifferentialEquationAsAPfaffianSystem}
+\pmcreated{2013-03-22 14:38:49}
+\pmmodified{2013-03-22 14:38:49}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{example of rewriting a differential equation as a Pfaffian system}
+\pmrecord{6}{36235}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53B99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+To show how one may reformulate a differential equation as Pfaff's problem for a set of differential forms, consider the wave equation
+ $${\partial^2 u \over \partial t^2} = {\partial^2 u \over \partial x^2} + {\partial^2 u \over \partial y^2}$$
+
+The first step is to rewrite the equation as a system of first-order equations
+ $${\partial a \over \partial t} - {\partial b \over \partial x} - {\partial c \over \partial y} = 0$$
+ $${\partial u \over \partial t} - a = 0$$
+ $${\partial u \over \partial x} - b = 0$$
+ $${\partial u \over \partial y} - c = 0$$
+
+To translate these equations into the language of differential forms, we shall use the fact that
+ $$du = {\partial u \over \partial t} \, dt + {\partial u \over \partial x} \, dx + {\partial u \over \partial y} \, dy$$
+from which it follows that
+ $$du \wedge dx \wedge dy = {\partial u \over \partial t} \, dt \wedge dx \wedge dy$$
+ $$du \wedge dy \wedge dt = {\partial u \over \partial x} \, dt \wedge dx \wedge dy$$
+ $$du \wedge dt \wedge dx = {\partial u \over \partial y} \, dt \wedge dx \wedge dy$$
+We can do likewise with $a$ or $b$ or $c$ in the place of $u$; there is no point in repeating the formulas for each of these variables.
+
+Multiplying the differential equations through by the form $dt \wedge dx \wedge dy$ and using the above identities to eliminate partial derivatives, we obtain the following system of differential forms:
+ $$da \wedge dx \wedge dy - db \wedge dy \wedge dt - dc \wedge dt \wedge dx$$
+ $$du \wedge dx \wedge dy - a \, dt \wedge dx \wedge dy$$
+ $$du \wedge dy \wedge dt - b \, dt \wedge dx \wedge dy$$
+ $$du \wedge dt \wedge dx - c \, dt \wedge dx \wedge dy$$
+From the way these forms were constructed, it is clear that a three dimensional surface in the seven dimensional space with coordinates $x,y,t,a,b,c,u$ which solves Pfaff's problem and can be parameterized by $x,y,t$ corresponds to the graph of a solution to the system of differential equations, and hence to a solution of the wave equation.
+
+Note: These considerations are purely local.  The global topology of the seven-dimensional space will depend on the domain on which the original wave equation was formulated and on the boundary conditions.
+%%%%%
+%%%%%
+\end{document}

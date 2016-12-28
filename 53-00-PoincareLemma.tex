@@ -1,0 +1,97 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PoincareLemma}
+\pmcreated{2013-03-22 14:06:28}
+\pmmodified{2013-03-22 14:06:28}
+\pmowner{matte}{1858}
+\pmmodifier{matte}{1858}
+\pmtitle{Poincar\'e lemma}
+\pmrecord{12}{35509}
+\pmprivacy{1}
+\pmauthor{matte}{1858}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53-00}
+\pmrelated{ExactDifferentialForm}
+\pmrelated{ClosedDifferentialFormsOnASimpleConnectedDomain}
+\pmrelated{LaminarField}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\newtheorem*{theorem*}{Theorem}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+
+\newcommand*{\norm}[1]{\lVert #1 \rVert}
+\newcommand*{\abs}[1]{| #1 |}
+\begin{document}
+\PMlinkescapeword{name}
+\PMlinkescapeword{states}
+\PMlinkescapeword{measure}
+\PMlinkescapeword{degree}
+
+The Poincar\'e lemma states that every closed differential form
+is locally \PMlinkname{exact}{ExactDifferentialForm}. 
+
+\begin{theorem*} (Poincar\'e Lemma)
+\cite{conlon} Suppose $X$ is a smooth
+manifold, $\Omega^k(X)$ is the set of smooth differential
+$k$-forms on $X$, and suppose  $\omega$ is a closed form 
+in $\Omega^k(X)$ for some $k>0$.
+\begin{itemize}
+\item
+Then for every $x\in X$ there is a neighbourhood $U\subset X$, and a
+$(k-1)$-form $\eta\in \Omega^{k-1}(U)$, such that
+$$ d\eta = \iota^\ast \omega,$$
+where $\iota$ is the inclusion $\iota:U\hookrightarrow X$.
+\item If $X$ is contractible, this $\eta$ exists globally; there exists a
+$(k-1)$-form $\eta\in \Omega^{k-1}(X)$ such that
+$$ d\eta = \omega.$$
+\end{itemize}
+\end{theorem*}
+
+\subsubsection*{Notes}
+Despite the name, the Poincar\'e lemma is an
+extremely important result. For instance, in algebraic topology,
+the definition of the $k$th de Rham cohomology group
+$$ 
+  H^k(X) = \frac{ \operatorname{Ker}\{ d\colon \Omega^k(X)\to \Omega^{k+1}(X)\}}{  \operatorname{Im}\{ d\colon \Omega^{k-1}(X)\to \Omega^{k}(X)\}}
+$$
+can be seen as a measure of the degree in which the Poincar\'e lemma fails.
+If $H^k(X)=0$, then every $k$ form is exact, but if $H^k(X)$ is non-zero, then
+$X$ has a non-trivial topology (or ``holes'') such that $k$-forms are not
+globally exact. For instance, in $X=\sR^2\setminus\{0\}$ with polar coordinates $(r,\phi)$,
+the $1$-form $\omega=d\phi$ is not globally exact.
+
+
+\begin{thebibliography}{9}
+ \bibitem {conlon} L. Conlon, \emph{Differentiable Manifolds: A first course},
+Birkh\"auser, 1993.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

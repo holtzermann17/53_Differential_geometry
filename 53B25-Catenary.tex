@@ -1,0 +1,96 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Catenary}
+\pmcreated{2014-10-26 21:25:30}
+\pmmodified{2014-10-26 21:25:30}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{catenary}
+\pmrecord{29}{37146}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53B25}
+\pmclassification{msc}{51N05}
+\pmsynonym{chain curve}{Catenary}
+\pmrelated{EquationOfCatenaryViaCalculusOfVariations}
+\pmrelated{LeastSurfaceOfRevolution}
+\pmrelated{HyperbolicFunctions}
+\pmrelated{Tractrix}
+\pmrelated{EqualArcLengthAndArea}
+\pmdefines{catenary}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+\begin{document}
+A \PMlinkescapetext{chain or a homogeneous flexible thin} wire takes a form resembling an arc of a parabola when suspended at its ends.\, The arc is not from a parabola but from the graph of the \PMlinkname{hyperbolic cosine}{HyperbolicFunctions} function in a suitable coordinate system.
+
+Let's derive the equation \,$y = y(x)$\, of this curve, called the {\em catenary}, in its plane with $x$-axis horizontal and $y$-axis vertical.\, We denote the \PMlinkescapetext{line density of the weight} of the wire by $\sigma$.
+
+In any point \,$(x,\,y)$\, of the wire, the tangent line of the curve forms an angle $\varphi$ with the positive direction of $x$-axis.\, Then,
+             $$\tan\varphi \;=\; \frac{dy}{dx} \;=\; y'.$$
+In the point, a certain tension $T$ of the wire acts in the direction of the \PMlinkescapetext{tangent; it has the horizontal component\, $T\cos\varphi$\, which has apparently a constant} value $a$.\, Hence we may write
+              $$T \;=\; \frac{a}{\cos\varphi},$$
+whence the vertical \PMlinkescapetext{component} of $T$ is
+          $$T\sin{\varphi} \;=\; a\tan{\varphi}$$
+and its \PMlinkname{differential}{Differential}
+      $$d(T\sin{\varphi}) \;=\; a\,d\tan{\varphi} \;=\; a\,dy'.$$
+But this differential is the amount of the supporting \PMlinkescapetext{force acting on an infinitesimal portion of the wire having the projection $dx$ on the $x$-axis.\, Because of the equilibrium, this force must be equal the weight}\, $\sigma\sqrt{1+(y'(x))^2}\,dx$ (see the arc length).\, Thus we obtain the differential equation
+\begin{align}
+\sigma\sqrt{1\!+\!y'^2}\,dx \;=\; a\,dy',
+\end{align}
+which allows the separation of variables:
+$$\int dx \;=\; \frac{a}{\sigma}\int\frac{dy'}{\sqrt{1\!+\!y'^2}}$$
+This may be solved by using the \PMlinkname{substitution}{SubstitutionForIntegration}
+$$y' \;:=\; \sinh{t}, \qquad dy' \;=\; \cosh{t}\,dt, \qquad \sqrt{1\!+\!y'^2} \;=\; \cosh{t}$$
+giving
+$$x \;=\; \frac{a}{\sigma}t+x_0,$$
+i.e.
+$$y' \;=\; \frac{dy}{dx} \;=\; \sinh\frac{\sigma(x\!-\!x_0)}{a}.$$
+This leads to the final solution
+$$y \;=\; \frac{a}{\sigma}\cosh\frac{\sigma(x\!-\!x_0)}{a}+y_0$$
+of the equation (1).\, We have denoted the constants of integration by $x_0$ and $y_0$.\, They determine the position of the catenary in regard to the coordinate axes.\, By a suitable choice of the axes and the \PMlinkescapetext{measure units one gets the simple} equation
+\begin{align}
+y \;=\; a\cosh\frac{x}{a}
+\end{align}
+of the catenary.
+
+\begin{center}
+\includegraphics{catenary}
+\end{center}
+
+\textbf{Some \PMlinkescapetext{properties} of catenary}
+\begin{itemize}
+\item $\tan\varphi = \sinh\frac{x}{a}, \quad \sin\varphi = \tanh\frac{x}{a}$ \quad (cf. the Gudermannian)
+\item The arc length of the catenary (2) from the apex\, $(0,\,a)$\, to the point\, $(x,\,y)$\, is\,\, $a\sinh\frac{x}{a} = \sqrt{y^2\!-\!a^2}$.
+\item The radius of curvature of the catenary (2) is\, $a\cosh^2\frac{x}{a}$, which is the same as length of the normal line of the catenary between the curve and the $x$-axis.
+\item The catenary is the catacaustic of the \PMlinkname{exponential curve}{ExponentialFunction} reflecting the vertical rays.
+\item If a parabola rolls on a straight line, the focus draws a catenary.
+\item The involute (a.k.a. the evolvent) of the catenary is the tractrix.
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

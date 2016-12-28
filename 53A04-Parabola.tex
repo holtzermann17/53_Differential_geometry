@@ -1,0 +1,117 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Parabola}
+\pmcreated{2013-03-22 17:08:16}
+\pmmodified{2013-03-22 17:08:16}
+\pmowner{mps}{409}
+\pmmodifier{mps}{409}
+\pmtitle{parabola}
+\pmrecord{10}{39444}
+\pmprivacy{1}
+\pmauthor{mps}{409}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53A04}
+\pmclassification{msc}{51N20}
+\pmrelated{Hyperbola}
+\pmrelated{ConicSection}
+\pmrelated{ArcLengthOfParabola}
+\pmdefines{directrix}
+\pmdefines{focus}
+\pmdefines{apex}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+\usepackage{pstricks}
+\usepackage{pst-plot}
+
+% define commands here
+\begin{document}
+A \emph{parabola} is the locus of points $P$ in the Euclidean plane
+which are equidistant from a given line $\ell$, called the
+\emph{directrix}, and a given point $F$ not on the directrix, called
+the \emph{focus}.
+
+To obtain a simple equation for the parabola, assume that the
+directrix is parallel to the $x$-axis, the focus is on the $y$-axis,
+and the directrix and focus are the same distance from the origin.  By
+reflecting the plane if necessary, this means that there is a positive
+number $a$ such that the equation of the directrix $\ell$ is $y = -a$
+and the position of the focus $F$ is $(0, a)$.  Then the condition
+that a point $(x,y)$ is equidistant from $\ell$ and $F$ can be
+interpreted as the equation
+\[
+  (y + a)^2 = x^2 + (y - a)^2.
+\]
+Since $(y + a)^2 - (y - a)^2 = 4ay$, the above equation simplifies to
+\[
+  y = \frac{1}{4a}x^2.
+\]
+
+% TODO: insert picture here
+
+Below is the graph of a parabola for $a=1$:
+
+\begin{center}
+\begin{pspicture}(-4.5,-2.5)(4.5,4.5)
+\psaxes{->}(0,0)(-4.5,-1.5)(4.5,4.5)
+\rput[b](4.5,-0.5){$x$}
+\rput[l](-0.4,4.5){$y$}
+\parabola{<->}(4,4)(0,0)
+\rput[l](-4.5,0){.}
+\rput[b](0,-2.2){Graph of $\displaystyle y=\frac{1}{4}x^2$}
+\end{pspicture}
+\end{center}
+
+From the equation
+\[
+  y = \frac{1}{4a}x^2,
+\]
+we can immediately observe some important
+properties of the parabola.  First, since $x^2$ is an even function,
+the parabola is symmetric with respect to the $y$-axis; this can also
+be deduced directly from the geometric definition of the parabola.\, The intersection point of the parabola and the symmetry axis, is called the \emph{apex} of the parabola; it is the point of the parabola nearest the directrix.\,
+Second, notice that the coefficient of $x^2$ in the equation of the
+parabola is inversely proportional to $2a$, the distance between the
+focus and the directrix.  So this distance controls how rapidly the
+function $\frac{1}{4a}x^2$ grows.  As $a$ tends to zero, the parabola
+becomes flatter and flatter, tending to the \PMlinkescapetext{straight} line $y = 0$ in
+the degenerate case $a = 0$.  On the other hand, as $a$ increases, the
+\PMlinkname{curvature}{CurvaturePlaneCurve} of the parabola at $0$ increases.  When $a$ tends to
+infinity, the parabola begins to resemble a hairpin more and more
+until it suddenly becomes a single point, the origin, in the degenerate
+case $a = \infty$.
+
+% TODO: show different a values and the parabolas they produce
+
+The parabola is a conic section with eccentricity 1.\, All parabolas are similar, which follows directly from the definition of parabola.
+
+% TODO: insert spooky ``shadow'' talk here
+
+% TODO: answer ``okay, but how do we get the equation for a more general parabola?''
+
+% TODO: mention paraboloid as generalization?
+
+\PMlinkescapeword{necessary}
+\PMlinkescapeword{simple}
+\PMlinkescapeword{symmetric} % TODO: find a good link
+%%%%%
+%%%%%
+\end{document}

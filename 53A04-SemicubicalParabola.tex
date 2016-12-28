@@ -1,0 +1,91 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SemicubicalParabola}
+\pmcreated{2013-03-22 18:29:18}
+\pmmodified{2013-03-22 18:29:18}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{semicubical parabola}
+\pmrecord{21}{41165}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53A04}
+\pmsynonym{semicubic parabola}{SemicubicalParabola}
+\pmsynonym{Neile's parabola}{SemicubicalParabola}
+\pmsynonym{Neil's parabola}{SemicubicalParabola}
+\pmrelated{CubeOfANumber}
+\pmrelated{OneSidedDerivatives}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+\usepackage{pstricks}
+\usepackage{pst-plot}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+The curve \,$y = x^3$\, is sometimes called a {\em cubic(al) parabola}, as \,$y = x^2$\, a parabola.\, Thus there is reason to call the curve
+$$y \;=\; x^{\frac{3}{2}} \;=\; x\sqrt{x}$$
+a {\em semicubical parabola}.\, Since this equation implies that
+\begin{align}
+y^2 \;=\; x^3,
+\end{align}
+which is satisfied as well by negative real numbers $y$, it is natural \PMlinkescapetext{to join} to the semicubical parabola also points below the $x$-axis.\, Therefore the equation (1) can be equivalently written as
+\begin{align}
+y \;=\; \pm{x}^{\frac{3}{2}} \;=\; \pm{x}\sqrt{x}.
+\end{align}
+According to (1) or (2), the semicubical parabola has symmetry about the $x$-axis.\, Because the positive \PMlinkescapetext{branch} of (2) forms a strictly increasing and the negative branch a strictly decreasing power function for\, $x \leqq 0$,\, the graph of (2) has an ordinary cusp in the origin.
+
+
+\begin{center}
+\begin{pspicture}(-2,-6)(4,6)
+\psaxes[Dx=1,Dy=1]{->}(0,0)(-1.5,-5.5)(3.8,5.5)
+\rput(3.8,-0.2){$x$}
+\rput(0.2,5.5){$y$}
+\psplot[linecolor=blue]{0}{3}{x x sqrt mul}
+\psplot[linecolor=blue]{0}{3}{0 x x sqrt mul sub}
+\rput(3,2.5){$y^2 = x^3$}
+\end{pspicture}
+\end{center}
+
+The arc length of the semicubical parabola from the origin to the abscissa $x$ is
+$$s(x) \;=\; \int_0^x\sqrt{1+\!\left(\frac{d}{dt}t^\frac{3}{2}\right)^2}\,dt \;=\; 
+\frac{(4\!+\!9x)\sqrt{4\!+\!9x}-8}{27},$$
+i.e. an algebraic expression in $x$.\, Actually, the semicubical parabola is historically the first algebraic curve (after the straight line) having an algebraic arc length.\\
+
+Making a \PMlinkname{squeezing}{SqueezingMathbbRn} of the plane, one can write a more general equation
+\begin{align}
+ay^2 \;=\; x^3
+\end{align}
+of the semicubical parabola; here $a$ is a positive constant.\\
+
+The semicubic parabola is also the evolute of a parabola; e.g. the equation
+$$3y^2 \;=\; (x-\frac{1}{2})^3$$
+\PMlinkescapetext{represents} the evolute of the parabola\, $y^2 = x$\, (cf. determining envelope).
+
+
+%%%%%
+%%%%%
+\end{document}

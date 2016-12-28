@@ -1,0 +1,53 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DNAInequality}
+\pmcreated{2013-03-22 15:31:14}
+\pmmodified{2013-03-22 15:31:14}
+\pmowner{PrimeFan}{13766}
+\pmmodifier{PrimeFan}{13766}
+\pmtitle{DNA inequality}
+\pmrecord{12}{37390}
+\pmprivacy{1}
+\pmauthor{PrimeFan}{13766}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53A04}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Given $\Gamma$, a convex \PMlinkname{simple closed curve}{Curve} in the plane, and $\gamma$ a closed curve contained in $\Gamma$, then $M(\Gamma) \leq M(\gamma)$ where $M$ is the mean curvature function.
+
+This was a conjecture due to S. Tabachnikov and was proved by Lagarias and Richardson of Bell Labs. The idea of the proof was to show that there was a way you could reduce a curve to the boundary of its convex hull so that if it holds for the boundary of the convex hull, then it holds for the curve itself.
+
+\emph{Conjecture} : \emph{Equality holds iff $ \Gamma$ and $\gamma $ coincide}.
+
+It's amazing how many questions are still open in the Elementary Differential Geometry of curves and surfaces.  Questions like this often serve as a great research opportunity for undergraduates.  It is also interesting to see if you could extend this result to curves on surfaces:
+
+Theorem : If $ \Gamma $ is a circle on $S^2$ , and $\gamma$ is a closed curve contained in $\Gamma$ then $M(\Gamma) \leq M(\gamma)$ .
+
+It is not known whether this result holds for $\Gamma$ a simple closed convex curve on $S^2$.
+
+It is known also that this inequality does not hold in the hyperbolic plane.
+%%%%%
+%%%%%
+\end{document}

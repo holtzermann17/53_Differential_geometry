@@ -1,0 +1,148 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Hyperbola}
+\pmcreated{2013-03-22 17:07:28}
+\pmmodified{2013-03-22 17:07:28}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{hyperbola}
+\pmrecord{34}{39427}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53A04}
+\pmclassification{msc}{51N20}
+\pmclassification{msc}{51-00}
+\pmrelated{ConicSection}
+\pmrelated{EuclideanDistance}
+\pmrelated{TransitionToSkewAngledCoordinates}
+\pmrelated{TangentLine}
+\pmrelated{HyperbolicRotation}
+\pmrelated{GraphOfEquationXyConstant}
+\pmrelated{PropertiesOfEllipse}
+\pmrelated{PropertiesOfParabola}
+\pmrelated{DecomposableCurve}
+\pmdefines{hyperbola}
+\pmdefines{focus}
+\pmdefines{foci}
+\pmdefines{focal radius}
+\pmdefines{focal radii}
+\pmdefines{apex of hyperbola}
+\pmdefines{apices of hyperbola}
+\pmdefines{transversal axis}
+\pmdefines{conjugate axis}
+\pmdefines{rectangular hyperbola}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+\usepackage{pstricks}
+\usepackage{pst-plot}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{contains} \PMlinkescapeword{branches}
+
+A {\em hyperbola} is the locus of points $P$ in the Euclidean plane such that the distances of $P$ from two \PMlinkescapetext{fixed points} (the foci $F_1$ and $F_2$) differ from each other by a constant amount ($\pm2a$).\, The line segments connecting a point of the hyperbola to the foci are called {\em focal radii}.
+
+We obtain the simplest equation for the hyperbola by choosing the foci on the other coordinate axis and equidistant ($= c > a > 0$) from the origin.\; Let\; $F_1 = (-c,\,0)$\, and $F_2 = (c,\,0)$.\, Then the locus condition for the point\, $P = (x,\,y)$\, of the hyperbola is
+$$\sqrt{(x+c)^2+y^2}-\sqrt{(x-c)^2+y^2} = \pm2a.$$
+The simplifying of this, via two squarings, yields the equation of the hyperbola
+\begin{align}
+     \frac{x^2}{a^2}\!-\!\frac{y^2}{b^2} \;=\; 1.
+\end{align}
+Here we have denoted\, $c^2\!-\!a^2 = b^2$\, where\, $b > 0$.
+
+Since the equation (1) contains only the squares of $x$ and $y$ we can infer that the hyperbola is symmetric with respect to the coordinate axes and the origin; this is naturally clear on grounds of the definition of hyperbola, too.
+
+Solving (1) for $y$ we get
+\begin{align}
+   y \;=\; \pm\frac{b}{a}\sqrt{x^2\!-\!a^2}.
+\end{align}
+This shows that $y$ is real only for\, $x \geqq a$;\, for\, $x = \pm a$\, we have\, $y = 0.$\, When 
+$|x|$ increases from $a$ to infinity, $|y|$ increases from $0$ to infinity.\, So we see that the hyperbola consists of two distinct branches from which the one is to the \PMlinkescapetext{right} from the line\, $x = a$\, and the other to the left from the line\, $x = -a$.\, These lines touch the branches at the points\, $(a,\,0)$\, and\, $(-a,\,0)$,\, which are called the {\em apices} of the hyperbola.
+
+\begin{center}
+\begin{pspicture}(-5.5,-4.5)(5.5,4)
+\psaxes[Dx=1,Dy=1]{->}(0,0)(-4.5,-3.5)(4.5,3.5)
+\rput(0.3,3.3){$y$}
+\rput(4.4,0.4){$x$}
+\psplot{1.5}{4.2}{x 2 exp -2.25 add 0.5 exp 1.5 div}
+\psplot{-1.5}{-4.2}{x 2 exp -2.25 add 0.5 exp 1.5 div}
+\psplot{1.5}{4.2}{x 2 exp -2.25 add 0.5 exp -1.5 div}
+\psplot{-1.5}{-4.2}{x 2 exp -2.25 add 0.5 exp -1.5 div}
+\rput(0,-4.5){$\mbox{Graph of \,}4x^2-9y^2=9$}
+\rput(-5.5,-4.5){.}
+\rput(5.5,4){.}
+\end{pspicture}
+\end{center}
+
+The line segment connecting the apices is the {\em transversal axis} of the hyperbola.\, The line segment on the $y$-axis from $-b$ to $b$ is the {\em conjugate axis} of the hyperbola.\, By the Pythagorean theorem, the equation\, 
+$b^2 = c^2-a^2$\, shows that the distance between an end of the transversal and an end of the conjucate axis is equal to $c$.
+
+Let's consider the part 
+$$y = \frac{b}{a}\sqrt{x^2-a^2}$$
+of the hyperbola situated in the first quadrant ($x > a$) and the line
+$$y \;=\; \frac{b}{a}x.$$
+The difference of their ordinates corresponding a same abscissa $x$ may be written
+$$\Delta \;:=\; \frac{b}{a}(x\!-\!\sqrt{x^2\!-\!a^2}) \;=\; \frac{ab}{x\!+\!\sqrt{x^2\!-\!a^2}}\;\;\;(> 0).$$
+But\, $\Delta \to 0$\, as\, $x \to \infty$,\, whence this \PMlinkescapetext{branch} of the hyperbola approaches unlimitedly from below the line.\, Accordingly, the line\, $y = \frac{b}{a}x$\, is an asymptote of our curve.\, By the symmetry, the hyperbola (1) has two asymptotes
+\begin{align}
+y \;=\; \pm\frac{b}{a}x.
+\end{align}
+The asymptotes are easy to draw, since they are the lengthened diagonals of the rectangle whose sides are on the lines\, $x = \pm a$\, and\, $y = \pm b$.\, The hyperbola may be sketched by utilising that rectangle and the asymptotes.
+
+\begin{center}
+\begin{pspicture}(-5.5,-4.5)(5.5,4)
+\psaxes[Dx=10,Dy=10]{->}(0,0)(-4.5,-3.5)(4.5,3.5)
+\rput(-0.3,3.5){$y$}
+\rput(4.55,-0.3){$x$}
+\psline{-}(-4.5,-3)(4.5,3)
+\psline{-}(-4.5,3)(4.5,-3)
+\pspolygon(-1.5,-1)(1.5,-1)(1.5,1)(-1.5,1)
+\rput(-1.85,-0.2){$-a$}
+\rput(-0.3,-1.18){$-b$}
+\rput(1.67,-0.2){$a$}
+\rput(-0.17,1.18){$b$}
+\rput(0.7,0.6){$c$}
+\psplot{1.5}{4.5}{x 2 exp -2.25 add 0.5 exp 1.5 div}
+\psplot{-1.5}{-4.5}{x 2 exp -2.25 add 0.5 exp 1.5 div}
+\psplot{1.5}{4.5}{x 2 exp -2.25 add 0.5 exp -1.5 div}
+\psplot{-1.5}{-4.5}{x 2 exp -2.25 add 0.5 exp -1.5 div}
+\rput(0,-4.5){$\mbox{Graph of \,}\frac{x^2}{a^2}-\frac{y^2}{b^2}=1$\mbox{\, with asymptotes \,}$y = \pm\frac{b}{a}x$}
+\rput(-5.5,-4.5){.}
+\rput(5.5,4){.}
+\end{pspicture}
+\end{center}
+
+Both asymptotes form with the transversal axis an angle whose tangent is equal to $\frac{b}{a}$.\, This equals 1, when the transversal axis and the conjugate axis are equal ($a = b$); then the rectangle is a square and one speaks of a {\em rectangular hyperbola}.  See also the entry transition to skew-angled coordinates.
+
+
+\begin{thebibliography}{8}
+\bibitem{LL}{\sc L. Lindel\"of}: {\em Analyyttisen geometrian oppikirja}.\, Kolmas painos.\, Suomalaisen Kirjallisuuden Seura, Helsinki (1924).
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

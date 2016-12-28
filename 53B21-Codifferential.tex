@@ -1,0 +1,60 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Codifferential}
+\pmcreated{2013-03-22 18:37:11}
+\pmmodified{2013-03-22 18:37:11}
+\pmowner{whm22}{2009}
+\pmmodifier{whm22}{2009}
+\pmtitle{codifferential}
+\pmrecord{5}{41354}
+\pmprivacy{1}
+\pmauthor{whm22}{2009}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53B21}
+\pmrelated{DifferentialForms}
+\pmrelated{Laplacian}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+The codifferential $\delta$ of a $k$-form on an $n$-dimensional
+Riemannian manifold is given by:
+
+$$(-1)^{n(k+1)+1}\ast d \ast$$
+
+where $\ast$ is the Hodge star operator and $d$ is the exterior
+derivative.
+
+\bigskip
+Let $g$ denote the matrix locally representing the metric with
+respect to co-ordinates $x_1,\cdots,x_n$. Then for a 1-form $w$ we
+have:
+
+$$
+\delta w = \frac{-1}{\surd{({\rm Det } g)}} \frac{\partial}{\partial
+x_i}\left[\surd{({\rm Det } g)} \{g^{-1}\}_{ij}  w_j \right]
+$$
+%%%%%
+%%%%%
+\end{document}

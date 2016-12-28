@@ -1,0 +1,215 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ContinuityEquation}
+\pmcreated{2013-03-22 15:56:05}
+\pmmodified{2013-03-22 15:56:05}
+\pmowner{perucho}{2192}
+\pmmodifier{perucho}{2192}
+\pmtitle{continuity equation}
+\pmrecord{8}{37944}
+\pmprivacy{1}
+\pmauthor{perucho}{2192}
+\pmtype{Application}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53A45}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+\usepackage{amsthm}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem{prop}{Proposition}
+
+\begin{document}
+\paragraph{Introduction}
+The {\em continuity equation}\cite{cite:Euler1} is a mathematical statement about mass-preserving in a continuum material body $\mathscr{B}$. This principle indeed is but a partial re-statement of the hypothesis of continuity of motion{\footnote{Cf. motion of continuum}}, plus the introduction of a new physical constant $\mathrm{\mathbf{M=L^3T^{-2}}}$. We shall postulate three properties for this associate positive quantity so-called {\em mass},
+$m=m(\mathscr{B})$.
+\paragraph{Concept of {\em mass density}}
+In order to define mass density we postulate:
+
+1. We require that mass be {\em additive}, so that the masses $dm$ of volume elements of the body $\mathscr{B}$ add up to the total mass of the body , i.e.
+\begin{align*}
+m(\mathscr{B})=\int_{\mathscr{V}}dm,
+\end{align*}
+where $\mathscr{V}=\mathscr{V}(\mathbf{X},t_0)$ is the volume occupied by the body $\mathscr{B}$ in an initial material reference configuration 
+$\chi(\mathscr{B})\equiv\chi (\mathbf{X},t_0),$ $t_0\leq\tau\leq{t},$ being $t$  an arbitrary ``present'' instant. 
+
+2. We assume that mass is a continuous function of the volume. That is a characteristic assumption in continuum mechanics; in the mathematical language we say that mass $m(\mathscr{B})$ and volume $\mathscr{V}(\mathscr{B})$ are in the {\em additive set functions.}
+
+3. In a field theory we must be able to describe the mass of a portion of a body. For this reason we introduce a point function called {\em mass density}, that we shall define in the following manner. Consider the smooth mappings $\mathscr{B}\to\Re$ given by
+\begin{align}
+\chi:\mathscr{V}(\mathbf{X},t_0)\rightarrow\mathfrak{v}(\mathbf{x},\tau), 
+\qquad t_0\leq\tau\leq{t},
+\end{align}  
+where $\mathbf{X}$ fix the position of any material particle $P_0\in\mathscr{B}$ at $\tau=t_0$, the initial reference configuration, and  $\mathbf{x}=\chi(\mathbf{X},\tau)$ fix the position of the same particle, at  point $P$ located in certain region $\Re$ embedded in the Euclidean space $(\mathbb{R}^3,\lVert\cdot\rVert)$, where the {\em volume spatial description} $\mathfrak{v}(\mathbf{x},\tau)$ of the body $\mathscr{B}$ is defined. So, the indicated coordinate transformation allows to define the mapping of neighborhoods
+\begin{align*}
+N(\mathbf{X},\delta)\mapsto N(\mathbf{x},\epsilon),
+\end{align*}
+to which we can associate the  pair of \PMlinkescapetext{additive functions} $(m_\delta\;,\mathscr{V}_\delta)$ and $(m_\epsilon\;,\mathfrak{v}_\epsilon)$, respectively. (Arguments are understood) Assuming now that all of these functions yield to zero as $(\delta\;,\epsilon)\to{0}$, we define {\footnote{Cf. Buck \cite{cite:Buck}, pp. 99-104.}}
+\begin{align}
+\rho_0\equiv\rho_0(\mathbf{X},to):=
+\lim_{\delta\to{0}}\frac{m_\delta}{\mathscr{V}_\delta}\;, \qquad
+\rho\equiv\rho(\mathbf{x},\tau):=
+\lim_{\epsilon\to{0}}\frac{m_\epsilon}{\mathfrak{v}_\epsilon},\qquad t_0\leq\tau\leq{t},
+\end{align}
+if these limits exist. Moreover, we can see these densities as a mapping transformation from the material (Lagrangian) description defined by coordinates $X^\alpha$ in the initial material reference configuration at $\tau=t_0$, to the spatial (Eulerian) description defined by coordinates $x^i$ in any later spatial configuration at $\tau=t$, i.e.
+\begin{align}
+\rho_0(X^\alpha,t_0)\mapsto\rho(x^i,t), \qquad \rho_0=J\rho, \qquad 
+J=\bigg\vert\frac{\partial{x^i}}{\partial{X^\alpha}}\bigg\vert.
+\end{align}
+Therefore the mapping $dV\mapsto{dv}$ between the volume elements $dV$ and $dv$ corresponding to the initial material configuration and  any later space configuration will also be valid, i.e. for an arbitrary mass element $dm$ in the body $\mathscr{B},$ $dm=\rho_0{dV}=\rho{dv},$ which is precisely the reason for the postulation of continuity equation.
+\paragraph{Integral form of continuity equation}
+{\em A set of particles $\mathscr{V}$ of positive mass
+\begin{align}
+m\equiv m(\mathscr{B}):=\int_{\mathscr{V}}\rho_0\; dV \equiv 
+\int_{\mathfrak{v}}\rho\; dv =: m(\Re),
+\end{align}
+is a body, and such invariance is valid also for any portion of continuum,} as we shall see in the differential form of that equation. By taking the material time derivative, we get
+\begin{align}
+\frac{Dm}{Dt}=\dot{m}=\dot{\overline{\int_{\mathscr{V}}\rho_0 dV}}=
+\dot{\overline{\int_{\mathfrak{v}}\rho {dv}}}=0.
+\end{align} 
+\paragraph{Differential form of continuity equation}
+From the continuity and positiveness on the integrand of the last integral in Eq.(5), we obtain the following statement.
+
+{\em In regions where the density is continuous} {\footnote{The mappings 
+
+$\mathbf{x}=\mathbf{x}(\mathbf{X},t),\,\,$ $\mathbf{X}=\mathbf{X}(\mathbf{x},t)$,
+
+are assumed to be single-valued and continuously differentiable with respect to each of their variables, except possibly at certain points, curves or surfaces.}}{\em the principle of mass conservation  may be expressed in the equivalent forms}{\footnote{Cf. the remarks of Hilbert\cite{cite:Hilbert}, 
+pp. 100-108.}} 
+\begin{align}
+\dot{\overline{\rho dv}}=0,\quad \nabla_{\!x}\!\cdot\!\mathbf{v}=
+-\dot{\overline{\log{\rho}}},\quad 
+\frac{\partial\rho}{\partial{t}}+\nabla_{\!x}\!\cdot\!(\rho\mathbf{v})=0,\quad
+\dot{\rho}+\rho\nabla_{\!x}\!\cdot\!\mathbf{v}=0,
+\end{align}
+the derivatives standing for material rate of change{\footnote {Cf. time dilatation of a volume element}}. These equations are essentialy due to Euler 
+\cite{cite:Euler2}. For isochoric motions
+\begin{align*}
+ dv=dV,\qquad \rho=\rho_0,\qquad \nabla_{\!x}\!\cdot\!\mathbf{v}=I_{\mathbf{d}}=0,
+\end{align*}
+$I_{\mathbf{d}}$ being the first invariant of Cauchy's rate strain tensor $\mathbf{d}$.
+\paragraph{Integral vs. differential approach}
+The basic laws that we apply in fluid mechanics and thermodynamics studies can be formulated in terms of finite (global) or infinitesimal (local) approach depending on the nature of the problem. In the former case we apply equations governing the gross behavior of the flow through an integral formulation which is usually easier to treat analytically. In the latter we deal with differential equations providing a means of determining the detailed behavior of the flow. Since the mentioned disciplines deal with the formulation of the basic laws in terms of finite systems, such formulations are the basis for deriving the control volume equations, concept that we shall develop to continuation.  
+\paragraph{Additional definitions}
+{\em 1. Control volume (CV).} Is an arbitrary but convenient volume spatial description {\footnote{It is usual to consider fixed the control volume with respect to the chosen coordinate system.} through which the fluid flows. In fact , we are normally concerned with flows through devices such as pipelines, turbines, compressors, nozzles, etc. In these cases it is difficult to focus attention on a fixed identifiable quantity of mass. So it is much more convenient, for purpose of analysis, to focus attention on a fixed volume through which the fluid flows, a fact that plenty justifies to use the control volume approach. It will be denoted as $\mathfrak{v}(\mathbf{x},\tau)$. Since the mass is varying inside of the control volume , we have
+\begin{align*}
+\frac{\partial}{\partial{t}}\int_{\mathfrak{v}}\rho(\mathbf{x},t)dv=
+\int_{\mathfrak{v}}\Big(\frac{\partial\rho}{\partial{t}}\Big)dv\neq{0}.
+\end{align*}
+In this case the material rate derivative must be considered as a local rate, because the spatial coordinates $x^i$ are held constant for a fixed control volume.
+
+{\em 2. Control surface (CS).} This is how we call the geometric boundary of the control volume. We shall denote it as $\partial\mathfrak{v}.$ So, if we define a unit vector $\mathbf{n}$ always chosen to be the outward normal of the boundary $\partial\mathfrak{v}$ and $da$ is an element of area on the control surface, we have $\mathbf{da}=\mathbf{n}da$. Eventually this surface may be real or imaginary; it may be at rest or in motion. For instance, in pipeflow the lateral wall is a real physical boundary that comprises part of the control surface but the two transversal circular portions of it are imaginary, i.e. there is no corresponding physical surface. These imaginary boundaries are selected arbitrarily for accounting purposes. Since the location of the control surface has a direct effect on the accounting procedure in applying the basic laws, it is extremely important that the control surface be clearly defined before beginning any form of analysis. 
+  
+
+{\em 3. Mass flow rate.}{\footnote{So-called also $\emph{mass flux.}$}} Let us suppose that a velocity field $\mathbf{v}(\mathbf{x},t)$ is defined over a  region $\Re$ of the space such that a control volume $\mathfrak{v}(\mathbf{x},t)\subset\Re$. Let $\partial\mathfrak{v}$ be its control surface. We define the mass flow rate across an area element $\mathbf{da}$ on the control surface, as
+\begin{align*}
+\dot{\overline{d\mathfrak{m}}}\equiv{d\dot{\mathfrak{m}}}:=
+\rho(\mathbf{x},t)\mathbf{v}(\mathbf{x},t)\!\cdot\!\mathbf{da}(\mathbf{x},t)=
+\rho(\mathbf{x},t)\mathbf{v}(\mathbf{x},t)\!\cdot\!\mathbf{n}(\mathbf{x},t)da,
+\end{align*}
+and the {\em net mass flow rate} or {\em efflux} across the control surface $\partial\mathfrak{v}$, as
+\begin{align}
+\dot{\mathfrak{m}}:=
+\int_{\partial\mathfrak{v}}\rho\mathbf{v}\!\cdot\!\mathbf{n}da,
+\end{align}
+where the variable arguments are understood. Let now $\vartheta=\vartheta(\mathbf{x},t)$ be the angle between the velocity field $\mathbf{v}$ (tangent to the flow streamlines) and the outward normal $\mathbf{n}$; we have
+\[
+d\dot{\mathfrak{m}}=\rho\mathbf{v}\!\cdot\!\mathbf{n}da=
+\rho\lVert\mathbf{v}\rVert{da}\cos\vartheta= \begin{cases}
+\text{an outflow,} & \text{if}\,
+\, 0 \leq \vartheta <\pi/2 \\
+\text{an inflow,} & \text{if}\,\, \pi/2 < \vartheta \leq \pi.
+\end{cases}
+\] 
+It is clear that mass flow rate cannot cross the streamlines. The introduction of the definitions that we have done, allows to stablish the following useful proposition.
+\paragraph{Continuity equation for a control volume.}
+\begin{prop} \emph{``The rate of mass change within a stationary control volume is equal to the net mass flow rate across its control surface''}.
+\end{prop}
+
+\begin{proof}
+From Eqs.(5)-(6), and assuming diffeomorfic the coordinates transformation,
+\begin{align*}
+\dot{m}=0=\dot{\overline{\int_{\mathfrak{v}}\rho{dv}}}=
+\int_{\mathfrak{v}}\dot{\overline{\rho{dv}}}=
+\int_{\mathscr{V}}\dot{\overline{\rho(JdV)}}=
+\int_{\mathscr{V}}\dot{\overline{\rho J}}dV=
+\int_{\mathscr{V}}(\dot{\rho}J+\rho\dot{J})dV 
+\end{align*}
+\begin{align*}
+\int_{\mathscr{V}}\Big[\Big(\frac{\partial\rho}{\partial t}+
+\mathbf{v}\!\cdot\!\nabla_{\!x}\rho\Big)J+
+\rho(J\nabla_{\!x}\!\cdot\!\mathbf{v})\Big]dV=
+\int_{\mathscr{V}}\frac{\partial\rho}{\partial t}(JdV)+
+\int_{\mathscr{V}}(\mathbf{v}\!\cdot\!\nabla_{\!x}\rho+
+\rho\nabla_{\!x}\!\cdot\!\mathbf{v})(JdV),
+\end{align*}
+\begin{align*}
+\frac{\partial}{\partial t}\!\int_{\mathfrak{v}}\rho dv+
+\int_{\mathfrak{v}}\nabla_{\!x}\!\cdot\!(\rho\mathbf{v})dv=0,
+\end{align*}
+and by applying the Gauss-Green divergence theorem, we obtain
+\begin{align}
+\frac{\partial}{\partial t}\!\int_{\mathfrak{v}}\rho dv=
+-\int_{\partial\mathfrak{v}}\!\rho\mathbf{v}\!\cdot\!\mathbf{n}da,
+\end{align}
+as desired. 
+\end{proof}
+{\em Remark.} In Eq.(8), the velocity field $\mathbf{v}$ is relative to the CS. So, the formula is still valid for CV rigid motions (i.e. as a whole motions) as we may substitute the field $\mathbf{v}$ by the relative velocity field 
+$\mathbf{w}=\mathbf{v}-\mathbf{v}_{CV}$.
+\paragraph{Steady-state flow}
+In this case{\footnote{Cf.\cite{cite:Fox}, for instance.}}, the fluid properties are independent on time. Therefore Eq.(8) reduces to
+\begin{align}
+\int_{\partial\mathfrak{v}}\!\rho\mathbf{v}\!\cdot\!\mathbf{n}da=0,
+\end{align}
+thus the mass flow rate $\dot{\mathfrak{m}}_{in}$,  across the CS $\partial\mathfrak{v}_{in}$, entering the CV  is equal to the mass flow rate $\dot{\mathfrak{m}}_{out}$,  across the CS $\partial\mathfrak{v}_{out}$, leaving the CV  i.e.
+\begin{align}
+\dot{\mathfrak{m}}=\dot{\mathfrak{m}}_{in}:=
+\int_{\partial\mathfrak{v}_{in}}\!\rho|\mathbf{v}\!\cdot\!\mathbf{n}|da=
+\int_{\partial\mathfrak{v}_{out}}\!\rho\mathbf{v}\!\cdot\!\mathbf{n}da=:
+\dot{\mathfrak{m}}_{out}.
+\end{align}
+That equation is extensively used in applications such as internal combustion engines, reciprocating machines, turbomachinery, etc. On the other hand, if it is possible to define concrete inlet/outlet cross sections $A$ on the CS, the flow is normal (i.e. $\cos\vartheta=\pm{1}$) and uniform (non-viscous flow, for example) and assuming constant density in each section (a reasonable supposition), we get
+\begin{align*}
+\dot{\mathfrak{m}}=\rho{v}A, \qquad (\rho{v}A)_{in}=(\rho{v}A)_{out},
+\end{align*}
+where $v$ is the normal speed flow at the respective section. For multiple inlets and outlets, we have the obvious formulas
+\begin{align*}
+\sum\dot{\mathfrak{m}}_{in}=\sum\dot{\mathfrak{m}}_{out}, \qquad
+\sum(\rho{v}A)_{in}=\sum(\rho{v}A)_{out}.
+\end{align*}
+\begin{thebibliography}{99}
+\bibitem{cite:Euler1}
+L. Euler, {\em Principes gÃ©nÃ©raux du mouvement des fluides,} Hist. Acad. Berlin {\bf 1755,} 217-273, 1757.
+\bibitem{cite:Hilbert}
+D. Hilbert, {\em Mechanik der Continua,} lectures of 1906-1907; MS notes by A.R. Crathorne in Univ. Illinois Library, 1907.
+\bibitem{cite:Buck}
+R. C. Buck, {\em Advanced Calculus,} New York: McGraw-Hill Co., 1965.
+\bibitem{cite:Euler2}
+L. Euler, {\em Sectio secunda de principiis motus fluidorum,} Novi Comm. Petrop. {\bf 14} (1769), 270-386, 1770.
+\bibitem{cite:Fox}
+R. W. Fox and A. T. McDonald, {\em Introduction to fluid mechanics,} John Wiley \& Sons, Inc., 7-8, 1973.
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

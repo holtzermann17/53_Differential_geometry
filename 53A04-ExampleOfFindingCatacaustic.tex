@@ -1,0 +1,108 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExampleOfFindingCatacaustic}
+\pmcreated{2013-03-22 18:52:59}
+\pmmodified{2013-03-22 18:52:59}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{example of finding catacaustic}
+\pmrecord{17}{41731}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53A04}
+\pmclassification{msc}{51N20}
+\pmclassification{msc}{26B05}
+\pmclassification{msc}{26A24}
+\pmsynonym{example of catacaustic}{ExampleOfFindingCatacaustic}
+\pmsynonym{catacaustic of exponential curve}{ExampleOfFindingCatacaustic}
+\pmrelated{Catacaustic}
+\pmrelated{ConditionOfOrthogonality}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+\usepackage{pstricks}
+\usepackage{pst-plot}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+Let us find the catacaustic when the family of vertical rays \,$x = t$\, coming from above \PMlinkname{reflects}{HeronsPrinciple} from the curve \,$y = e^x$.\\
+
+The line \,$x = t$\, meets the curve in the point \,$(t,\,e^t)$\, where the slope angle $\alpha$ of the normal line of the curve satisfies
+$$\tan\alpha = -e^{-t}$$
+and the slope angle of the reflected ray is $2\alpha\!+\!\frac{\pi}{2}$; so its slope is
+$$\tan(2\alpha\!+\!\frac{\pi}{2}) \;=\; -\frac{1}{\tan2\alpha} \;=\; \frac{\tan^2\alpha\!-\!1}{2\tan{\alpha}} \;=\;
+\frac{e^{-2t}-1}{-2e^{-t}} \;=\; \frac{e^t-e^{-t}}{2} \;=\; \sinh{t}$$
+(N.B.\, $\tan(2\alpha\!+\!\frac{\pi}{2})$ cannot be determined with the addition formula of \PMlinkname{tangent}{Trigonometry}, but by using the complement formula:\, 
+$\tan(2\alpha\!+\!\frac{\pi}{2}) = \tan(\frac{\pi}{2}-(-2\alpha)) = \cot(-2\alpha) = -\frac{1}{\tan2\alpha}$.)
+Thus the equation of the reflected ray is
+$$y-e^t \;=\; (\sinh{t})(x-t),$$
+i.e.
+\begin{align}
+F(x,\,y,\,t) \;:=\; (x-t)\sinh{t}-y+e^t \;=\; 0.
+\end{align}
+We have the partial derivative
+\begin{align}
+F'_t(x,\,y,\,t) \;=\; -\sinh{t}+(x-t)\cosh{t}+e^t.
+\end{align}
+Then the points of the catacaustic, i.e. the envelope of all reflected rays satisfy (see determining envelope)
+\begin{align}
+\begin{cases}
+F(x,\,y,\,t) \;=\; 0,\\ 
+F'_t(x,\,y,\,t) \;=\; 0.
+\end{cases}
+\end{align}
+For eliminating the parametre $t$ from (3) solve first its latter equation for $x\!-\!t$:
+\begin{align}
+x\!-\!t \;=\; \frac{\sinh{t}-e^t}{\cosh{t}} \;\equiv\; -1
+\end{align}
+By (1) and (4), we obtain 
+$$y \;=\; e^t+(x\!-\!t)\sinh{t} \;=\; e^t-\sinh{t} \;\equiv\; \cosh{t},$$
+whence the equation of the catacaustic reads simply
+\begin{align}
+y \;=\; \cosh(x\!+\!1).
+\end{align}
+This \PMlinkescapetext{represents} a catenary with the \PMlinkescapetext{apex} in the point\, $(-1,\,1)$ .
+
+\begin{center}
+\begin{pspicture}(-5,-2)(3.5,7)
+\psaxes[Dx=10,Dy=10]{->}(0,0)(-3.5,-0.5)(3.5,6.5)
+\rput(3.6,-0.2){$x$}
+\rput(0.2,6.6){$y$}
+\psplot{-3}{1.9}{2.71828 x exp}
+\psplot[linecolor=red]{-3.5}{1.5}{2.71828 x 1 add exp 2.71828 x 1 add neg exp add 2 div}
+\psline[linecolor=blue](1,2.71828)(1,6)
+\psline[arrows=->,linecolor=blue](1,2.71828)(-0.5,0.88)
+\psline[linecolor=blue](-0.7,0.49659)(-0.7,6)
+\psline[arrows=->,linecolor=blue](-0.7,0.49659)(-3.2,2.38)
+\rput(-3.7,5.5){$y = \cosh(x\!+\!1)$}
+\rput(2.4, 5.5){$y = e^x$}
+\rput(-1,-1){Two vertical rays (blue) reclecting from the exponential curve}
+\end{pspicture}
+\end{center}
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,156 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Curve}
+\pmcreated{2013-03-22 12:54:17}
+\pmmodified{2013-03-22 12:54:17}
+\pmowner{rmilson}{146}
+\pmmodifier{rmilson}{146}
+\pmtitle{curve}
+\pmrecord{28}{33255}
+\pmprivacy{1}
+\pmauthor{rmilson}{146}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53B25}
+\pmclassification{msc}{14H50}
+\pmclassification{msc}{14F35}
+\pmclassification{msc}{51N05}
+\pmsynonym{parametrized curve}{Curve}
+\pmsynonym{parameterized curve}{Curve}
+\pmsynonym{path}{Curve}
+\pmsynonym{trajectory}{Curve}
+\pmrelated{FundamentalGroup}
+\pmrelated{TangentSpace}
+\pmrelated{RealTree}
+\pmdefines{closed curve}
+\pmdefines{Jordan curve}
+\pmdefines{regular curve}
+\pmdefines{simple closed curve}
+\pmdefines{simple curve}
+\pmdefines{plane curve}
+\pmdefines{planar curve}
+\pmdefines{convex curve}
+\pmdefines{locally convex curve}
+\pmdefines{local multiplicity}
+\pmdefines{globally  convex}
+\pmdefines{global multiplicity}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+\newcommand{\Rset}{\mathbb{R}}
+\newcommand{\lp}{\left(}
+\newcommand{\rp}{\right)}
+\newcommand{\lb}{\left[}
+\newcommand{\rb}{\right]}
+\begin{document}
+\PMlinkescapeword{regular}
+\PMlinkescapeword{simple}
+\PMlinkescapeword{term}
+\section*{Summary.}
+The term \emph{curve} is associated with two closely related notions.
+The first notion is kinematic: a parameterized curve is a function of
+one real variable taking values in some ambient geometric setting.
+This variable can be interpreted as time, in which case the function
+describes the evolution of a moving particle. The second notion is
+geometric; in this sense a curve is an arc, a 1-dimensional subset of
+an ambient space. The two notions are related: the image of a
+parameterized curve describes the trajectory of a moving particle.
+Conversely, a given arc admits multiple parameterizations.  A
+trajectory can be traversed by moving particles at different speeds.
+
+In algebraic geometry, the term curve is used to describe a
+1-dimensional variety relative to the complex numbers or some other
+ground field.  This can be potentially confusing, because a curve over
+the complex numbers refers to an object which, in conventional
+geometry, one would refer to as a surface. In particular, a Riemann
+surface can be regarded as as complex curve.
+
+\section*{Kinematic definition}
+Let $I\subset \Rset$ be an \PMlinkname{interval}{Interval} of the real line. A parameterized
+curve is a continuous mapping $\gamma:I\to X$ taking values in a
+topological space $X$. We say that $\gamma$ is a \emph{simple curve}
+if it has no self-intersections, that is if the mapping $\gamma$ is
+injective.
+
+We say that $\gamma$ is a \emph{closed curve}, or a
+\emph{\PMlinkname{loop}{loop}} whenever $I=[a,b]$ is a closed
+interval, and the endpoints are mapped to the same value;
+$\gamma(a)=\gamma(b).$ Equivalently, a loop may be defined to be a
+continuous mapping $\gamma \colon \mathbb{S}^1\to X$ whose domain
+$\mathbb{S}^1$ is the unit circle. A simple closed curve is often
+called a \emph{Jordan curve}.
+
+If $X=\mathbb{R}^2$ then $\gamma$ is called a \emph{plane curve} or \emph{planar curve}.
+
+A smooth closed curve $\gamma$ in $\mathbb{R}^n$ is \emph{locally \PMlinkescapetext{convex}} 
+if the local multiplicity of intersection  
+of $\gamma$ with each hyperplane at of each of the intersection points does not
+exceed $n$. The \emph{global multiplicity} is the sum of the local
+multiplicities. 
+A simple smooth curve in $\mathbb{R}^n$ is called \emph{\PMlinkescapetext{convex}} (or 
+\emph{globally \PMlinkescapetext{convex}}) if the global multiplicity
+of its intersection with any affine hyperplane is less than or equal to $n$.
+An example of a closed convex curve in $\mathbb{R}^{2n}$ is the normalized
+generalized ellipse:
+$$
+(\sin t, \cos t, \frac{\sin 2t}{2}, \frac{\cos 2t}{2}, \ldots , \frac{\sin nt}{n}, \frac{\cos nt}{n}).
+$$
+In odd dimension there are no closed convex curves. 
+
+
+In many instances the ambient space $X$ is a differential manifold, in
+which case we can speak of differentiable curves. Let $I$ be an open
+interval, and let $\gamma:I\to X$ be a differentiable curve. For
+every $t\in I$ can regard the \PMlinkname{derivative}{RelatedRates},
+$\dot{\gamma}(t)$, as the \PMlinkname{velocity}{RelatedRates} of a
+moving particle, at time $t$. The velocity $\dot{\gamma}(t)$ is a
+\PMlinkname{tangent vector}{TangentSpace}, which belongs to
+$T_{\gamma(t)} X$, the tangent space of the manifold $X$ at the point
+$\gamma(t)$. We say that a differentiable curve $\gamma(t)$ is
+\emph{regular}, if its velocity, $\dot{\gamma}(t)$, is non-vanishing
+for all $t\in I$.
+
+It is also quite common to consider curves that take values in
+$\Rset^n$. In this case, a parameterized curve can be regarded as a
+vector-valued function $\vec{\gamma}:I \to \Rset^n$, that is an
+  $n$-tuple of functions $$\vec{\gamma}(t) =
+\begin{pmatrix}
+\gamma_1(t)\\ \vdots \\ \gamma_n(t)
+\end{pmatrix},$$
+where $\gamma_i:I\to \Rset$, $i=1,\ldots,n$ are scalar-valued functions.
+
+\section*{Geometric definition.}
+A (non-singular) curve $C$, equivalently, an arc, is a connected,
+1-dimensional submanifold of a differential manifold $X$. This means
+that for every point $p\in C$ there exists an open neighbourhood
+$U\subset X$ of $p$ and a chart $\alpha:U\to \Rset^n$ such that
+$$\alpha(C\cap U) = \{ (t,0,\ldots,0)\in \Rset^n :
+-\epsilon<t<\epsilon\}$$
+for some real $\epsilon>0$.
+
+An alternative, but equivalent definition, describes an arc as the
+image of a regular parameterized curve. To accomplish this, we need
+to define the notion of reparameterization. Let $I_1,I_2\subset
+\Rset$ be intervals. A reparameterization is a continuously
+differentiable function
+$$s:I_1\to I_2$$ whose derivative is never vanishing. Thus, $s$ is
+either monotone increasing, or monotone decreasing.
+Two regular, parameterized curves
+$$\gamma_i:I_i\to X,\quad i=1,2$$
+are said to be related by a reparameterization if there exists a
+reparameterization $s:I_1\to I_2$ such that
+$$\gamma_1 = \gamma_2\circ s.$$
+The inverse of a reparameterization
+function is also a reparameterization. Likewise, the composition of
+two parameterizations is again a reparameterization. Thus the
+reparameterization relation between curves, is in fact an
+equivalence relation. An arc can now be defined as an equivalence
+class of regular, simple curves related by reparameterizations. In
+order to exclude pathological embeddings with wild endpoints we also
+impose the condition that the arc, as a subset of $X$, be
+homeomorphic to an open interval.
+%%%%%
+%%%%%
+\end{document}

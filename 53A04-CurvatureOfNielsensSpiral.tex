@@ -1,0 +1,115 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CurvatureOfNielsensSpiral}
+\pmcreated{2015-02-06 12:53:54}
+\pmmodified{2015-02-06 12:53:54}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{curvature of Nielsen's spiral}
+\pmrecord{22}{39350}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53A04}
+\pmsynonym{arc length of Nielsen's spiral}{CurvatureOfNielsensSpiral}
+%\pmkeywords{arc length}
+\pmrelated{CosineIntegral}
+\pmrelated{SineIntegral}
+\pmrelated{FamousCurvesInThePlane}
+\pmrelated{DerivativeForParametricForm}
+\pmdefines{Nielsen's spiral}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+%\usepackage{pstricks}
+%\usepackage{pst-plot}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\DeclareMathOperator{\ci}{ci}
+\DeclareMathOperator{\si}{si}
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+{\em Nielsen's spiral} is the plane curve defined in the 
+parametric form
+\begin{align}
+x = a\,\mbox{ci}\,{t}, \quad y = a\,\mbox{si}\,{t} 
+\end{align}
+where $a$ is a non-zero constant, ``$\mbox{ci}$'' and 
+``$\mbox{si}$'' are the \PMlinkname{cosine integral}{sineintegral} 
+and \PMlinkname{the sine integral}{sineintegral} 
+and $t$ is the \PMlinkname{parameter}{Parametre} ($t > 0$).
+
+We determine the \PMlinkname{curvature}{CurvaturePlaneCurve} $\kappa$ of this curve using the expression
+\begin{align}
+\kappa = \frac{x'y''-y'x''}{{[}(x')^2+(y')^2{]}^{3/2}}.
+\end{align}
+
+The first derivatives of (1) are
+\begin{align}
+x' = \frac{d}{dt}\left(a\int_\infty^t\frac{\cos{u}}{u}\,du\!\right) 
+\;=\; \frac{a\cos{t}}{t},
+\end{align}
+\begin{align}
+y' \;=\; \frac{d}{dt}\left(a\int_\infty^t\frac{\sin{u}}{u}\,du\!\right) 
+\;=\; \frac{a\sin{t}}{t},
+\end{align}
+and hence the second derivatives
+$$x'' = -a\cdot\frac{t\sin{t}+\cos{t}}{t^2}, \quad y'' = a\cdot\frac{t\cos{t}-\sin{t}}{t^2}.$$
+Substituting the derivatives in (2) yields
+$$\kappa \;=\; 
+a^2\!\cdot\!\frac{(\cos{t})(t\cos{t}-\sin{t})+(\sin{t})(t\sin{t}+\cos{t})}{t\cdot t^2}
+\!:\!\left(\frac{a^2\cos^2{t}+a^2\sin^2{t}}{t^2}\right)^{\frac{3}{2}}\!,$$
+which is easily simplified to
+\begin{align}
+\kappa \;=\; \frac{t}{a}.
+\end{align}
+
+
+The \PMlinkname{arc length}{ArcLength} of Nielsen's spiral can also be obtained in a \PMlinkescapetext{simple} \PMlinkname{closed form}{ClosedForm4}; using (3) and (4) we get:
+$$s \;=\; \int_1^t\sqrt{x'^2\!+\!y'^2}\,dt \;=\; 
+\int_1^t\sqrt{ \frac{a^2\cos^2t}{t^2}+\frac{a^2\sin^2t}{t^2} }\,dt \;=\; \int_1^t\frac{a}{t}\,dt,$$
+i.e.
+\begin{align}
+s \;=\; a\ln{t}.
+\end{align}
+
+
+\textbf{Note.}\, The expressions for $x'$ and $y'$ allow us determine as well
+$$\frac{dy}{dx} \;=\; \frac{y'}{x'} \;=\; \frac{\sin{t}}{\cos{t}} \;=\; \tan{t},$$
+which says that the sense of the parameter $t$ is the slope angle of the tangent line of the Nielsen's spiral.
+
+\begin{figure}
+\begin{center}
+\includegraphics{nielsen}
+\caption{Plot of Nielsen's spiral for $2 \leq t \leq 50$.  
+Axis scaling is in units of $a$. 
+{\small 
+(Octave / MATLAB \PMlinkexternal{source program}{http://aux.planetmath.org/files/objects/9350/nielsen.m} for plot;
+in \PMlinkexternal{PDF format}{http://aux.planetmath.org/files/objects/9350/nielsen.pdf})}}
+\end{center}
+\end{figure}
+
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,113 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LocallyEuclidean}
+\pmcreated{2013-03-22 14:14:49}
+\pmmodified{2013-03-22 14:14:49}
+\pmowner{matte}{1858}
+\pmmodifier{matte}{1858}
+\pmtitle{locally Euclidean}
+\pmrecord{14}{35692}
+\pmprivacy{1}
+\pmauthor{matte}{1858}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53-00}
+\pmrelated{Manifold}
+\pmrelated{LocallyHomeomorphic}
+\pmrelated{EmptyProduct}
+\pmdefines{locally Euclidean space}
+\pmdefines{chart}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+
+ \usepackage{bbm}
+ \newcommand{\Z}{\mathbbmss{Z}}
+ \newcommand{\C}{\mathbbmss{C}}
+ \newcommand{\R}{\mathbbmss{R}}
+ \newcommand{\Q}{\mathbbmss{Q}}
+
+
+
+\newcommand*{\norm}[1]{\lVert #1 \rVert}
+\newcommand*{\abs}[1]{| #1 |}
+\begin{document}
+A locally Euclidean space $X$ is a topological space that locally
+``looks'' like $\R^n$.
+This makes it possible to talk about 
+coordinate axes around $X$. It also gives some topological structure
+to the space: for example, since $\R^n$ is locally compact, so is $X$. 
+However, the restriction does not induce any geometry onto $X$. 
+
+\PMlinkescapeword{constant}
+{\bf Definition} 
+Suppose $X$ is a topological space. Then $X$ is
+called \emph{locally Euclidean} if for each $x\in X$ there is a neighbourhood
+ $U\subseteq X$, a $V\subseteq \sR^n$, and
+a homeomorphism $\phi: U\to V$. Then the triple $(U,\phi, n)$
+is called a \emph{chart} for $X$.
+
+Here, $\sR$ is the set of real numbers, and for $n=0$ we define
+$\sR^0$ as set with a single point equipped with the discrete topology.
+
+\subsubsection*{Local dimension}
+Suppose $X$ is a locally Euclidean space with $x\in X$. Further,
+suppose $(U,\phi, n)$ is a chart of $X$ such that $x\in U$.
+Then we define the \emph{local \PMlinkescapetext{dimension}} of $X$ at $x$ is $n$.
+This is well defined, that is, the local dimension does not
+depend on the chosen chart. If
+$(U',\phi', n')$ is another chart with $x\in U'$, then
+$\psi\circ \phi^{-1}: \phi(U\cap U') \to \psi(U\cap U')$
+is a homeomorphism between $\phi(U\cap U')\subseteq \sR^n$
+and $\psi(U\cap U')\subseteq \sR^{n'}$. By Brouwer's theorem
+for the invariance of dimension (which is nontrivial),
+it follows that $n=n'$.
+
+If the local dimension is constant, say $n$, we say that the dimension
+of $X$ is $n$, and write $\dim X = n$. 
+\subsubsection*{Examples}
+\begin{itemize}
+\item Any set with the discrete topology, is a locally 
+      Euclidean of dimension $0.$ 
+\item Any open subset of $\sR^n$ is locally Euclidean.
+\item Any manifold is locally Euclidean. For example, 
+using a stereographic projection, one can show that the sphere $S^n$
+is locally Euclidean.
+\item The long line is locally Euclidean of dimension one.  Note that the long line is not Hausforff. \cite{conlon}.
+\end{itemize}
+
+\subsubsection*{Notes}
+The concept locally Euclidean has a different meaning in the
+setting of Riemannian manifolds. 
+
+\begin{thebibliography}{9}
+ \bibitem {conlon} L. Conlon, \emph{Differentiable Manifolds: A first course},
+Birkh\"auser, 1993.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

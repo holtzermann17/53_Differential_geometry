@@ -1,0 +1,100 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DifferentialOperator}
+\pmcreated{2013-03-22 12:20:29}
+\pmmodified{2013-03-22 12:20:29}
+\pmowner{rmilson}{146}
+\pmmodifier{rmilson}{146}
+\pmtitle{differential operator}
+\pmrecord{10}{31984}
+\pmprivacy{1}
+\pmauthor{rmilson}{146}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53-00}
+\pmclassification{msc}{35-00}
+\pmclassification{msc}{47E05}
+\pmclassification{msc}{47F05}
+\pmrelated{Operator}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\natnums}{\mathbb{N}}
+\newcommand{\cnums}{\mathbb{C}}
+
+\newcommand{\cfty}{\mathcal{C}^\infty}
+\newcommand{\ord}{\mathop{\mathrm{ord}}\nolimits}
+
+\newtheorem{proposition}{Proposition}
+\begin{document}
+Roughly speaking, a {\em differential operator} is a mapping,
+typically understood to be linear, that transforms a function into
+another function by means of partial derivatives and multiplication by
+other functions.  
+
+On $\reals^n$, a differential operator is commonly understood to be a
+linear transformation of $\cfty(\reals^n)$ having the form
+$$  f \mapsto \sum_{I} a^I f_I,\quad f\in
+\cfty(\reals^n),  
+$$
+where the sum is taken over a finite number of multi-indices
+$I=(i^1,\ldots,i^n)\in \natnums^n$, where $a^I\in
+\cfty(\reals^n)$, and where $f_I$ denotes a partial
+derivative of $f$ taken $i_1$ times with respect to the first
+variable, $i_2$ times with respect to the second variable, etc.
+The {\em order} of the operator is the maximum number of derivatives
+taken in the above formula, i.e. the maximum of $i_1+\ldots+i_n$
+taken over all the $I$ involved in the above summation.
+
+On a $\cfty$ manifold $M$, a differential operator is commonly
+understood to be a linear transformation of $\cfty(M)$ having the
+above form relative to some system of coordinates.  Alternatively, one
+can equip $\cfty(M)$ with the limit-order topology, and define a
+differential operator as a continuous transformation of $\cfty(M)$.
+
+The order of a differential operator is a more subtle notion on a
+manifold than on $\reals^n$.  There are two complications. First, one
+would like a definition that is independent of any particular system
+of coordinates.  Furthermore, the order of an operator is at best a local
+concept: it can change from
+point to point, and indeed be unbounded if the manifold is
+non-compact.  To address these issues, for a differential operator $T$
+and $x\in M$, 
+we define $\ord_x(T)$ the order of $T$ at $x$, to be the smallest
+$k\in\natnums$ such that
+$$T[f^{k+1}](x) = 0$$
+for all $f\in\cfty(M)$ such that $f(x)=0$.  For
+a fixed differential operator $T$, the function $\ord(T):M\rightarrow
+\natnums$ defined by
+$$x\mapsto \ord_x(T)$$
+is lower semi-continuous, meaning that
+$$\ord_y(T)\geq \ord_x(T)$$
+for all $y\in M$ sufficiently close to $x$.
+
+The global order of $T$ is defined to be the maximum of $\ord_x(T)$
+taken over all $x\in M$.  This maximum may not exist if $M$ is
+non-compact, in which case one says that the order of $T$ is infinite.
+
+Let us conclude by making two remarks. The notion of a differential
+operator can be generalized even further by allowing the operator to
+act on sections of a bundle.
+
+A differential operator $T$ is a local operator, meaning that
+$$T[f](x) = T[g](x),\quad f,g\in\cfty(M),\; x\in M,$$
+if $f\equiv g$ in some neighborhood of $x$.  A theorem, proved by
+Peetre states that the converse is also true, namely that every local
+operator is necessarily a differential operator.
+
+\bigskip
+{\bf References}
+
+\begin{enumerate}
+\item Dieudonn\'e, J.A., {\em Foundations of modern analysis}
+\item Peetre, J. , ``Une caract\'erisation abstraite des op\'erateurs
+  diff\'erentiels'', {\em Math. Scand.}, v. 7, 1959, p. 211
+\end{enumerate}
+%%%%%
+%%%%%
+\end{document}

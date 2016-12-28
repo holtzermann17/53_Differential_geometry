@@ -1,0 +1,452 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DifferentialPropositionalCalculusAppendix4}
+\pmcreated{2013-03-22 18:09:25}
+\pmmodified{2013-03-22 18:09:25}
+\pmowner{Jon Awbrey}{15246}
+\pmmodifier{Jon Awbrey}{15246}
+\pmtitle{differential propositional calculus : appendix 4}
+\pmrecord{7}{40714}
+\pmprivacy{1}
+\pmauthor{Jon Awbrey}{15246}
+\pmtype{Application}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53A40}
+\pmclassification{msc}{39A12}
+\pmclassification{msc}{34G99}
+\pmclassification{msc}{03B44}
+\pmclassification{msc}{03B05}
+\pmclassification{msc}{03B42}
+\pmrelated{DifferentialLogic}
+\pmrelated{MinimalNegationOperator}
+\pmrelated{PropositionalCalculus}
+\pmrelated{ZerothOrderLogic}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+\tableofcontents
+
+\subsection{Detail of Calculation for the Difference Map}
+
+\begin{center}\begin{tabular}{||c||c|c|c|c||}
+\multicolumn{5}{c}{\textbf{Detail of Calculation for $\operatorname{D}f = \operatorname{E}f + f$}} \\[6pt]
+\hline\hline
+&
+$\begin{array}{cr}
+  & \operatorname{E}f|_{\operatorname{d}x\ \operatorname{d}y} \\
++ &                 f|_{\operatorname{d}x\ \operatorname{d}y} \\
+= & \operatorname{D}f|_{\operatorname{d}x\ \operatorname{d}y} \\
+\end{array}$
+&
+$\begin{array}{cr}
+  & \operatorname{E}f|_{\operatorname{d}x\ (\operatorname{d}y)} \\
++ &                 f|_{\operatorname{d}x\ (\operatorname{d}y)} \\
+= & \operatorname{D}f|_{\operatorname{d}x\ (\operatorname{d}y)} \\
+\end{array}$
+&
+$\begin{array}{cr}
+  & \operatorname{E}f|_{(\operatorname{d}x)\ \operatorname{d}y} \\
++ &                 f|_{(\operatorname{d}x)\ \operatorname{d}y} \\
+= & \operatorname{D}f|_{(\operatorname{d}x)\ \operatorname{d}y} \\
+\end{array}$
+&
+$\begin{array}{cr}
+  & \operatorname{E}f|_{(\operatorname{d}x)(\operatorname{d}y)} \\
++ &                 f|_{(\operatorname{d}x)(\operatorname{d}y)} \\
+= & \operatorname{D}f|_{(\operatorname{d}x)(\operatorname{d}y)} \\
+\end{array}$ \\[6pt]
+\hline\hline
+$f_{0}$ & $0 + 0 = 0$ & $0 + 0 = 0$ & $0 + 0 = 0$ & $0 + 0 = 0$ \\[6pt]
+\hline\hline
+$f_{1}$
+&
+$\begin{smallmatrix}
+  &   x\ y   & \operatorname{d}x & \operatorname{d}y \\
++ &  (x)(y)  & \operatorname{d}x & \operatorname{d}y \\
+= & ((x, y)) & \operatorname{d}x & \operatorname{d}y \\
+\end{smallmatrix}$
+&
+$\begin{smallmatrix}
+  &  x\ (y) & \operatorname{d}x & (\operatorname{d}y) \\
++ & (x) (y) & \operatorname{d}x & (\operatorname{d}y) \\
+= &     (y) & \operatorname{d}x & (\operatorname{d}y) \\
+\end{smallmatrix}$
+&
+$\begin{smallmatrix}
+  & (x)\ y  & (\operatorname{d}x) & \operatorname{d}y \\
++ & (x) (y) & (\operatorname{d}x) & \operatorname{d}y \\
+= & (x)     & (\operatorname{d}x) & \operatorname{d}y \\
+\end{smallmatrix}$
+&
+$\begin{smallmatrix}
+  & (x)(y) & (\operatorname{d}x) & (\operatorname{d}y) \\
++ & (x)(y) & (\operatorname{d}x) & (\operatorname{d}y) \\
+= &   0    & (\operatorname{d}x) & (\operatorname{d}y) \\
+\end{smallmatrix}$ \\[6pt]
+\hline
+$f_{2}$
+&
+$\begin{smallmatrix}
+  &  x\ (y) & \operatorname{d}x & \operatorname{d}y \\
++ & (x)\ y  & \operatorname{d}x & \operatorname{d}y \\
+= & (x,  y) & \operatorname{d}x & \operatorname{d}y \\
+\end{smallmatrix}$
+&
+$\begin{smallmatrix}
+  &  x\  y  & \operatorname{d}x & (\operatorname{d}y) \\
++ & (x)\ y  & \operatorname{d}x & (\operatorname{d}y) \\
+= &      y  & \operatorname{d}x & (\operatorname{d}y) \\
+\end{smallmatrix}$
+&
+$\begin{smallmatrix}
+  & (x) (y) & (\operatorname{d}x) & \operatorname{d}y \\
++ & (x)\ y  & (\operatorname{d}x) & \operatorname{d}y \\
+= & (x)     & (\operatorname{d}x) & \operatorname{d}y \\
+\end{smallmatrix}$
+&
+$\begin{smallmatrix}
+  & (x)\ y & (\operatorname{d}x) & (\operatorname{d}y) \\
++ & (x)\ y & (\operatorname{d}x) & (\operatorname{d}y) \\
+= &    0   & (\operatorname{d}x) & (\operatorname{d}y) \\
+\end{smallmatrix}$ \\[6pt]
+\hline
+$f_{4}$
+&
+$\begin{smallmatrix}
+  & (x)\ y  & \operatorname{d}x & \operatorname{d}y \\
++ &  x\ (y) & \operatorname{d}x & \operatorname{d}y \\
+= & (x,  y) & \operatorname{d}x & \operatorname{d}y \\
+\end{smallmatrix}$
+&
+$\begin{smallmatrix}
+  & (x) (y) & \operatorname{d}x & (\operatorname{d}y) \\
++ &  x\ (y) & \operatorname{d}x & (\operatorname{d}y) \\
+= &     (y) & \operatorname{d}x & (\operatorname{d}y) \\
+\end{smallmatrix}$
+&
+$\begin{smallmatrix}
+  &  x\  y  & (\operatorname{d}x) & \operatorname{d}y \\
++ &  x\ (y) & (\operatorname{d}x) & \operatorname{d}y \\
+= &  x      & (\operatorname{d}x) & \operatorname{d}y \\
+\end{smallmatrix}$
+&
+$\begin{smallmatrix}
+  & x\ (y) & (\operatorname{d}x) & (\operatorname{d}y) \\
++ & x\ (y) & (\operatorname{d}x) & (\operatorname{d}y) \\
+= &   0    & (\operatorname{d}x) & (\operatorname{d}y) \\
+\end{smallmatrix}$ \\[6pt]
+\hline
+$f_{8}$
+&
+$\begin{smallmatrix}
+  &  (x)(y)  & \operatorname{d}x & \operatorname{d}y \\
++ &   x\ y   & \operatorname{d}x & \operatorname{d}y \\
+= & ((x, y)) & \operatorname{d}x & \operatorname{d}y \\
+\end{smallmatrix}$
+&
+$\begin{smallmatrix}
+  & (x)\ y & \operatorname{d}x & (\operatorname{d}y) \\
++ &  x\  y & \operatorname{d}x & (\operatorname{d}y) \\
+= &      y & \operatorname{d}x & (\operatorname{d}y) \\
+\end{smallmatrix}$
+&
+$\begin{smallmatrix}
+  &  x\ (y) & (\operatorname{d}x) & \operatorname{d}y \\
++ &  x\  y  & (\operatorname{d}x) & \operatorname{d}y \\
+= &  x      & (\operatorname{d}x) & \operatorname{d}y \\
+\end{smallmatrix}$
+&
+$\begin{smallmatrix}
+  & x\ y & (\operatorname{d}x) & (\operatorname{d}y) \\
++ & x\ y & (\operatorname{d}x) & (\operatorname{d}y) \\
+= &   0  & (\operatorname{d}x) & (\operatorname{d}y) \\
+\end{smallmatrix}$ \\[6pt]
+\hline\hline
+$f_{3}$
+&
+$\begin{smallmatrix}
+  &  x  & \operatorname{d}x & \operatorname{d}y \\
++ & (x) & \operatorname{d}x & \operatorname{d}y \\
+= &  1  & \operatorname{d}x & \operatorname{d}y \\
+\end{smallmatrix}$
+&
+$\begin{smallmatrix}
+  &  x  & \operatorname{d}x & (\operatorname{d}y) \\
++ & (x) & \operatorname{d}x & (\operatorname{d}y) \\
+= &  1  & \operatorname{d}x & (\operatorname{d}y) \\
+\end{smallmatrix}$
+&
+$\begin{smallmatrix}
+  & (x) & (\operatorname{d}x) & \operatorname{d}y \\
++ & (x) & (\operatorname{d}x) & \operatorname{d}y \\
+= &  0  & (\operatorname{d}x) & \operatorname{d}y \\
+\end{smallmatrix}$
+&
+$\begin{smallmatrix}
+  & (x) & (\operatorname{d}x) & (\operatorname{d}y) \\
++ & (x) & (\operatorname{d}x) & (\operatorname{d}y) \\
+= &  0  & (\operatorname{d}x) & (\operatorname{d}y) \\
+\end{smallmatrix}$ \\[6pt]
+\hline
+$f_{12}$
+&
+$\begin{smallmatrix}
+  & (x) & \operatorname{d}x & \operatorname{d}y \\
++ &  x  & \operatorname{d}x & \operatorname{d}y \\
+= &  1  & \operatorname{d}x & \operatorname{d}y \\
+\end{smallmatrix}$
+&
+$\begin{smallmatrix}
+  & (x) & \operatorname{d}x & (\operatorname{d}y) \\
++ &  x  & \operatorname{d}x & (\operatorname{d}y) \\
+= &  1  & \operatorname{d}x & (\operatorname{d}y) \\
+\end{smallmatrix}$
+&
+$\begin{smallmatrix}
+  &  x  & (\operatorname{d}x) & \operatorname{d}y \\
++ &  x  & (\operatorname{d}x) & \operatorname{d}y \\
+= &  0  & (\operatorname{d}x) & \operatorname{d}y \\
+\end{smallmatrix}$
+&
+$\begin{smallmatrix}
+  & x & (\operatorname{d}x) & (\operatorname{d}y) \\
++ & x & (\operatorname{d}x) & (\operatorname{d}y) \\
+= & 0 & (\operatorname{d}x) & (\operatorname{d}y) \\
+\end{smallmatrix}$ \\[6pt]
+\hline\hline
+$f_{6}$
+&
+$\begin{smallmatrix}
+  & (x, y) & \operatorname{d}x & \operatorname{d}y \\
++ & (x, y) & \operatorname{d}x & \operatorname{d}y \\
+= &   0    & \operatorname{d}x & \operatorname{d}y \\
+\end{smallmatrix}$
+&
+$\begin{smallmatrix}
+  & ((x, y)) & \operatorname{d}x & (\operatorname{d}y) \\
++ &  (x, y)  & \operatorname{d}x & (\operatorname{d}y) \\
+= &    1     & \operatorname{d}x & (\operatorname{d}y) \\
+\end{smallmatrix}$
+&
+$\begin{smallmatrix}
+  & ((x, y)) & (\operatorname{d}x) & \operatorname{d}y \\
++ &  (x, y)  & (\operatorname{d}x) & \operatorname{d}y \\
+= &    1     & (\operatorname{d}x) & \operatorname{d}y \\
+\end{smallmatrix}$
+&
+$\begin{smallmatrix}
+  & (x, y) & (\operatorname{d}x) & (\operatorname{d}y) \\
++ & (x, y) & (\operatorname{d}x) & (\operatorname{d}y) \\
+= &   0    & (\operatorname{d}x) & (\operatorname{d}y) \\
+\end{smallmatrix}$ \\[6pt]
+\hline
+$f_{9}$
+&
+$\begin{smallmatrix}
+  & ((x, y)) & \operatorname{d}x & \operatorname{d}y \\
++ & ((x, y)) & \operatorname{d}x & \operatorname{d}y \\
+= &    0     & \operatorname{d}x & \operatorname{d}y \\
+\end{smallmatrix}$
+&
+$\begin{smallmatrix}
+  &  (x, y)  & \operatorname{d}x & (\operatorname{d}y) \\
++ & ((x, y)) & \operatorname{d}x & (\operatorname{d}y) \\
+= &    1     & \operatorname{d}x & (\operatorname{d}y) \\
+\end{smallmatrix}$
+&
+$\begin{smallmatrix}
+  &  (x, y)  & (\operatorname{d}x) & \operatorname{d}y \\
++ & ((x, y)) & (\operatorname{d}x) & \operatorname{d}y \\
+= &    1     & (\operatorname{d}x) & \operatorname{d}y \\
+\end{smallmatrix}$
+&
+$\begin{smallmatrix}
+  & ((x, y)) & (\operatorname{d}x) & (\operatorname{d}y) \\
++ & ((x, y)) & (\operatorname{d}x) & (\operatorname{d}y) \\
+= &    0     & (\operatorname{d}x) & (\operatorname{d}y) \\
+\end{smallmatrix}$ \\[6pt]
+\hline\hline
+$f_{5}$
+&
+$\begin{smallmatrix}
+  &  y  & \operatorname{d}x & \operatorname{d}y \\
++ & (y) & \operatorname{d}x & \operatorname{d}y \\
+= &  1  & \operatorname{d}x & \operatorname{d}y \\
+\end{smallmatrix}$
+&
+$\begin{smallmatrix}
+  & (y) & \operatorname{d}x & (\operatorname{d}y) \\
++ & (y) & \operatorname{d}x & (\operatorname{d}y) \\
+= &  0  & \operatorname{d}x & (\operatorname{d}y) \\
+\end{smallmatrix}$
+&
+$\begin{smallmatrix}
+  &  y  & (\operatorname{d}x) & \operatorname{d}y \\
++ & (y) & (\operatorname{d}x) & \operatorname{d}y \\
+= &  1  & (\operatorname{d}x) & \operatorname{d}y \\
+\end{smallmatrix}$
+&
+$\begin{smallmatrix}
+  & (y) & (\operatorname{d}x) & (\operatorname{d}y) \\
++ & (y) & (\operatorname{d}x) & (\operatorname{d}y) \\
+= &  0  & (\operatorname{d}x) & (\operatorname{d}y) \\
+\end{smallmatrix}$ \\[6pt]
+\hline
+$f_{10}$
+&
+$\begin{smallmatrix}
+  & (y) & \operatorname{d}x & \operatorname{d}y \\
++ &  y  & \operatorname{d}x & \operatorname{d}y \\
+= &  1  & \operatorname{d}x & \operatorname{d}y \\
+\end{smallmatrix}$
+&
+$\begin{smallmatrix}
+  &  y  & \operatorname{d}x & (\operatorname{d}y) \\
++ &  y  & \operatorname{d}x & (\operatorname{d}y) \\
+= &  0  & \operatorname{d}x & (\operatorname{d}y) \\
+\end{smallmatrix}$
+&
+$\begin{smallmatrix}
+  & (y) & (\operatorname{d}x) & \operatorname{d}y \\
++ &  y  & (\operatorname{d}x) & \operatorname{d}y \\
+= &  1  & (\operatorname{d}x) & \operatorname{d}y \\
+\end{smallmatrix}$
+&
+$\begin{smallmatrix}
+  &  y  & (\operatorname{d}x) & (\operatorname{d}y) \\
++ &  y  & (\operatorname{d}x) & (\operatorname{d}y) \\
+= &  0  & (\operatorname{d}x) & (\operatorname{d}y) \\
+\end{smallmatrix}$ \\[6pt]
+\hline\hline
+$f_{7}$
+&
+$\begin{smallmatrix}
+  & ((x)(y)) & \operatorname{d}x & \operatorname{d}y \\
++ &  (x\ y)  & \operatorname{d}x & \operatorname{d}y \\
+= & ((x, y)) & \operatorname{d}x & \operatorname{d}y \\
+\end{smallmatrix}$
+&
+$\begin{smallmatrix}
+  & ((x)\ y) & \operatorname{d}x & (\operatorname{d}y) \\
++ &  (x\  y) & \operatorname{d}x & (\operatorname{d}y) \\
+= &       y  & \operatorname{d}x & (\operatorname{d}y) \\
+\end{smallmatrix}$
+&
+$\begin{smallmatrix}
+  & (x\ (y)) & (\operatorname{d}x) & \operatorname{d}y \\
++ & (x\  y)  & (\operatorname{d}x) & \operatorname{d}y \\
+= &  x       & (\operatorname{d}x) & \operatorname{d}y \\
+\end{smallmatrix}$
+&
+$\begin{smallmatrix}
+  & (x\ y) & (\operatorname{d}x) & (\operatorname{d}y) \\
++ & (x\ y) & (\operatorname{d}x) & (\operatorname{d}y) \\
+= &   0    & (\operatorname{d}x) & (\operatorname{d}y) \\
+\end{smallmatrix}$ \\[6pt]
+\hline
+$f_{11}$
+&
+$\begin{smallmatrix}
+  & ((x)\ y)  & \operatorname{d}x & \operatorname{d}y \\
++ &  (x\ (y)) & \operatorname{d}x & \operatorname{d}y \\
+= &  (x,  y)  & \operatorname{d}x & \operatorname{d}y \\
+\end{smallmatrix}$
+&
+$\begin{smallmatrix}
+  & ((x) (y)) & \operatorname{d}x & (\operatorname{d}y) \\
++ &  (x\ (y)) & \operatorname{d}x & (\operatorname{d}y) \\
+= &      (y)  & \operatorname{d}x & (\operatorname{d}y) \\
+\end{smallmatrix}$
+&
+$\begin{smallmatrix}
+  & (x\  y)  & (\operatorname{d}x) & \operatorname{d}y \\
++ & (x\ (y)) & (\operatorname{d}x) & \operatorname{d}y \\
+= &  x       & (\operatorname{d}x) & \operatorname{d}y \\
+\end{smallmatrix}$
+&
+$\begin{smallmatrix}
+  & (x\ (y)) & (\operatorname{d}x) & (\operatorname{d}y) \\
++ & (x\ (y)) & (\operatorname{d}x) & (\operatorname{d}y) \\
+= &    0     & (\operatorname{d}x) & (\operatorname{d}y) \\
+\end{smallmatrix}$ \\[6pt]
+\hline
+$f_{13}$
+&
+$\begin{smallmatrix}
+  &  (x\ (y)) & \operatorname{d}x & \operatorname{d}y \\
++ & ((x)\ y)  & \operatorname{d}x & \operatorname{d}y \\
+= &  (x,  y)  & \operatorname{d}x & \operatorname{d}y \\
+\end{smallmatrix}$
+&
+$\begin{smallmatrix}
+  &  (x\  y) & \operatorname{d}x & (\operatorname{d}y) \\
++ & ((x)\ y) & \operatorname{d}x & (\operatorname{d}y) \\
+= &       y  & \operatorname{d}x & (\operatorname{d}y) \\
+\end{smallmatrix}$
+&
+$\begin{smallmatrix}
+  & ((x) (y)) & (\operatorname{d}x) & \operatorname{d}y \\
++ & ((x)\ y)  & (\operatorname{d}x) & \operatorname{d}y \\
+= &  (x)      & (\operatorname{d}x) & \operatorname{d}y \\
+\end{smallmatrix}$
+&
+$\begin{smallmatrix}
+  & ((x)\ y) & (\operatorname{d}x) & (\operatorname{d}y) \\
++ & ((x)\ y) & (\operatorname{d}x) & (\operatorname{d}y) \\
+= &     0    & (\operatorname{d}x) & (\operatorname{d}y) \\
+\end{smallmatrix}$ \\[6pt]
+\hline
+$f_{14}$
+&
+$\begin{smallmatrix}
+  &  (x\ y)  & \operatorname{d}x & \operatorname{d}y \\
++ & ((x)(y)) & \operatorname{d}x & \operatorname{d}y \\
+= & ((x, y)) & \operatorname{d}x & \operatorname{d}y \\
+\end{smallmatrix}$
+&
+$\begin{smallmatrix}
+  &  (x\ (y)) & \operatorname{d}x & (\operatorname{d}y) \\
++ & ((x) (y)) & \operatorname{d}x & (\operatorname{d}y) \\
+= &      (y)  & \operatorname{d}x & (\operatorname{d}y) \\
+\end{smallmatrix}$
+&
+$\begin{smallmatrix}
+  & ((x)\ y)  & (\operatorname{d}x) & \operatorname{d}y \\
++ & ((x) (y)) & (\operatorname{d}x) & \operatorname{d}y \\
+= &  (x)      & (\operatorname{d}x) & \operatorname{d}y \\
+\end{smallmatrix}$
+&
+$\begin{smallmatrix}
+  & ((x)(y)) & (\operatorname{d}x) & (\operatorname{d}y) \\
++ & ((x)(y)) & (\operatorname{d}x) & (\operatorname{d}y) \\
+= &    0     & (\operatorname{d}x) & (\operatorname{d}y) \\
+\end{smallmatrix}$ \\[6pt]
+\hline\hline
+$f_{15}$ & $1 + 1 = 0$ & $1 + 1 = 0$ & $1 + 1 = 0$ & $1 + 1 = 0$ \\[6pt]
+\hline\hline
+\end{tabular}\end{center}
+
+%%%%%
+%%%%%
+\end{document}

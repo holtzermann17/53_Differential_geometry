@@ -1,0 +1,67 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{FundamentalTheoremOfSpaceCurves}
+\pmcreated{2013-03-22 13:23:28}
+\pmmodified{2013-03-22 13:23:28}
+\pmowner{rmilson}{146}
+\pmmodifier{rmilson}{146}
+\pmtitle{fundamental theorem of space curves}
+\pmrecord{5}{33929}
+\pmprivacy{1}
+\pmauthor{rmilson}{146}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53A04}
+\pmrelated{SpaceCurve}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\natnums}{\mathbb{N}}
+\newcommand{\cnums}{\mathbb{C}}
+\newcommand{\znums}{\mathbb{Z}}
+\newcommand{\lp}{\left(}
+\newcommand{\rp}{\right)}
+\newcommand{\lb}{\left[}
+\newcommand{\rb}{\right]}
+\newcommand{\supth}{^{\text{th}}}
+\newtheorem{proposition}{Proposition}
+\newtheorem{definition}[proposition]{Definition}
+
+\newtheorem{theorem}[proposition]{Theorem}
+
+\newcommand{\bg}{\boldsymbol{\gamma}}
+\newcommand{\dbg}{\bg'}
+\newcommand{\ddbg}{\bg''}
+\newcommand{\dddbg}{\bg'''}
+\newcommand{\der}[1]{#1{}'}
+\newcommand{\bT}{\mathbf{T}}
+\newcommand{\bN}{\mathbf{N}}
+\newcommand{\bB}{\mathbf{B}}
+\begin{document}
+\paragraph{Informal summary.} The curvature and torsion of a space
+curve are invariant with respect to Euclidean motions.  Conversely, a
+given space curve is determined up to a Euclidean motion, by its
+curvature and torsion,  expressed as functions of the arclength.
+
+\paragraph{Theorem.}
+Let $\bg:I\to\reals$ be a regular, parameterized space curve, without
+points of inflection. Let $\kappa(t), \tau(t)$ be the
+corresponding curvature and torsion functions. Let
+$T:\reals^3\to\reals^3$ be a Euclidean isometry. The curvature and
+torsion of the transformed curve 
+$T(\bg(t))$ are given by $\kappa(t)$ and $\tau(t)$, respectively.
+
+
+Conversely, let $\kappa,\tau:I\to\reals$ be continuous functions,
+defined on an interval $I\subset\reals$, and suppose that $\kappa(t)$
+never vanishes. Then, there exists an arclength parameterization
+$\bg:I\to\reals$ of a regular, oriented space curve, without points of
+inflection, such that $\kappa(t)$ and $\tau(t)$ are the corresponding
+curvature and torsion functions.  If $\hat{\bg}:I\to\reals$ is another
+such space curve, then there exists a Euclidean isometry
+$T:\reals^3\to\reals^3$ such that $\hat{\bg}(t) = T(\bg(t)).$
+%%%%%
+%%%%%
+\end{document}

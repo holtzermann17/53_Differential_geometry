@@ -1,0 +1,98 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TangentOfHyperbola}
+\pmcreated{2013-03-22 19:10:31}
+\pmmodified{2013-03-22 19:10:31}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{tangent of hyperbola}
+\pmrecord{12}{42083}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53A04}
+\pmclassification{msc}{51N20}
+\pmclassification{msc}{51-00}
+%\pmkeywords{tangent line}
+\pmrelated{Slope}
+\pmrelated{TangentOfConicSection}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{tangent}
+
+Let us derive the equation of the tangent line of the hyperbola
+\begin{align}
+\frac{x^2}{a^2}-\frac{y^2}{b^2} \;=\; 1
+\end{align}
+having\, $(x_0,\,y_0)$\, as the tangency point ($y_0 \neq 0$).\\
+
+
+
+If\, $(x_1,\,y_1)$\, is another point of the hyperbola ($x_1 \neq x_0$), the secant line through both points is
+\begin{align}
+y\!-\!y_0 \;=\; \frac{y_1\!-\!y_0}{x_1\!-\!x_0}(x\!-\!x_0).
+\end{align}
+Since both points satisfy the equation (1) of the hyperbola, we have
+$$0 \;=\; 1\!-\!1 
+\;=\; \left(\frac{x_1^2}{a^2}-\frac{y_1^2}{b^2}\right)-\left(\frac{x_0^2}{a^2}-\frac{y_0^2}{b^2}\right)
+\;=\; \frac{(x_1\!-\!x_0)(x_1\!+\!x_0)}{a^2}-\frac{(y_1\!-\!y_0)(y_1\!+\!y_0)}{b^2},$$
+which implies the proportion equation
+$$\frac{y_1\!-\!y_0}{x_1\!-\!x_0} \;=\; \frac{b^2(x_1\!+\!x_0)}{a^2(y_1\!+\!y_0)}.$$
+Thus the \PMlinkescapetext{secant} equation (2) may be written
+\begin{align}
+y\!-\!y_0 \;=\; \frac{b^2(x_1\!+\!x_0)}{a^2(y_1\!+\!y_0)}(x\!-\!x_0).
+\end{align}
+When we let here\, $x_1 \to x_0, \;\, y_1 \to y_0$,\, this changes to the equation of the tangent:
+\begin{align}
+y\!-\!y_0 \;=\; \frac{b^2x_0}{a^2y_0}(x\!-\!x_0).
+\end{align}
+A little simplification allows to write it as
+$$\frac{x_0x}{a^2}-\frac{y_0y}{b^2} \;=\; \frac{x_0^2}{a^2}-\frac{y_0^2}{b^2},$$
+i.e. 
+\begin{align}
+\frac{x_0x}{a^2}-\frac{y_0y}{b^2} \;=\; 1.
+\end{align}
+
+\textbf{Limiting position of tangent}
+
+Putting first\, $y := 0$\, and then\, $x := 0$\, into (5) one obtains the values 
+$$x \;=\; \frac{a^2}{x_0} \quad \mbox{and} \quad y \;=\; -\frac{b^2}{y_0}$$
+on which the tangent line intersects the coordinate axes.\, From these one sees that when the point of tangency unlimitedly moves away from the origin ($x_0 \to \infty,\; y_0 \to \infty$), both intersection points tend to the origin.\, At the same time, the slope $\frac{b^2x_0}{a^2y_0}$ tends to a certain limit $\frac{b}{a}$, because
+$$\frac{y_0}{x_0} \;=\; \frac{b}{a}\sqrt{x_0^2\!-\!a^2}:x_0 
+\;=\; \frac{b}{a}\sqrt{1\!-\!\frac{a^2}{x_0^2}}\; \longrightarrow\,\frac{b}{a}.$$
+Thus one infers that the limiting position of the tangent line is the \PMlinkname{asymptote}{Hyperbola2} \,$y = \frac{b}{a}x$\, of the hyperbola.
+
+Consequently, one can say the asymptotes of a hyperbola to be \PMlinkescapetext{tangents} whose tangency points are infinitely far.\\
+
+
+The tangent (5) halves the angle between the focal radii of the hyperbola drawn from\, $(x_0,\,y_0)$.
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,79 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExhaustionByCompactSets}
+\pmcreated{2013-03-22 15:18:13}
+\pmmodified{2013-03-22 15:18:13}
+\pmowner{matte}{1858}
+\pmmodifier{matte}{1858}
+\pmtitle{exhaustion by compact sets}
+\pmrecord{6}{37103}
+\pmprivacy{1}
+\pmauthor{matte}{1858}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53-00}
+\pmrelated{MethodOfExhaustion}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+
+ \usepackage{bbm}
+ \newcommand{\Z}{\mathbbmss{Z}}
+ \newcommand{\C}{\mathbbmss{C}}
+ \newcommand{\F}{\mathbbmss{F}}
+ \newcommand{\R}{\mathbbmss{R}}
+ \newcommand{\Q}{\mathbbmss{Q}}
+
+
+
+\newcommand*{\norm}[1]{\lVert #1 \rVert}
+\newcommand*{\abs}[1]{| #1 |}
+
+
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+\begin{document}
+Let $U$ be an open set in $\R^n$ (or a manifold with countable base).
+\,Then there exists a sequence of compact sets
+ $K_1, K_2, \ldots$ such that 
+\begin{eqnarray*}
+      K_i &\subseteq& \operatorname{int} K_{i+1}, \quad i=1,2,\ldots, \\
+      U &=& \cup_{i=1}^\infty K_i,
+\end{eqnarray*}
+where ``$\operatorname{int}$'' denotes the topological interior. \,
+Such a sequence is called an \emph{exhaustion by compact sets}
+for $U$.
+%%%%%
+%%%%%
+\end{document}

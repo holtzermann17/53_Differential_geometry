@@ -1,0 +1,70 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CurvatureOfACircle}
+\pmcreated{2013-03-22 15:50:30}
+\pmmodified{2013-03-22 15:50:30}
+\pmowner{cvalente}{11260}
+\pmmodifier{cvalente}{11260}
+\pmtitle{curvature of a circle}
+\pmrecord{9}{37820}
+\pmprivacy{1}
+\pmauthor{cvalente}{11260}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53A04}
+\pmrelated{circle}
+\pmrelated{curvature}
+\pmrelated{Connection}
+\pmrelated{CircleOfCurvature}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $C_r$ be a circle of radius $r$ centered at the origin.
+
+A canonical parameterization of the curve is (counterclockwise)
+
+$$ g(s) = r\left( \cos \left( \frac{s}{r} \right), \sin \left( \frac{s}{r}\right) \right) $$
+
+for $s \in (0, 2\pi r)$ (actually this leaves out the point $(r,0)$ but this could be treated via another parameterization taking $s \in (-\pi r, \pi r)$)
+
+Differentiating the parameterization we get
+
+$$ \mathbf{T} = g'(s) = \left( -\sin \left( \frac{s}{r} \right), \cos \left( \frac{s}{r}\right) \right)$$
+
+and this results in the normal
+
+$$\mathbf{N} = J \cdot\mathbf{T} = -\left(\cos\left(\frac{s}{r}\right),\;\sin\left(\frac{s}{r}\right)\right) 
+= -\frac{g(s)}{r}$$
+
+Differentiating $g$ a second time we can calculate the curvature
+
+$$\mathbf{T}' = -\frac{1}{r}\left(\cos\left(\frac{s}{r}\right),\;\sin\left(\frac{s}{r}\right)\right) =  \frac{1}{r} \mathbf{N}$$
+
+and by definition
+
+$$ \mathbf{T}' = k\mathbf{N}\;\; \therefore\; k = \frac{1}{r} $$
+
+and thus the curvature of a circle of radius $r$ is $\displaystyle{\frac{1}{r}}$ provided that the positive direction on the circle is anticlockwise; otherwise it is $\displaystyle{-\frac{1}{r}}$.
+%%%%%
+%%%%%
+\end{document}

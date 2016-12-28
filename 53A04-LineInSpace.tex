@@ -1,0 +1,123 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LineInSpace}
+\pmcreated{2013-03-22 17:28:52}
+\pmmodified{2013-03-22 17:28:52}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{line in space}
+\pmrecord{12}{39867}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53A04}
+\pmclassification{msc}{51N20}
+\pmsynonym{line in $\mathbb{R}^3$}{LineInSpace}
+\pmsynonym{space line}{LineInSpace}
+\pmrelated{LineInThePlane}
+\pmrelated{DistanceOfNonParallelLines}
+\pmrelated{AngleBetweenTwoLines}
+\pmrelated{AnalyticGeometry}
+\pmdefines{direction vector}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{onto}
+\PMlinkescapeword{represents}
+
+A line $l$ in $\mathbb{R}^3$ can be thought as the intersection of two planes and therefore can be represented by two simultaneous equations of planes of the form
+\begin{align}
+\begin{cases}
+                A_1x\!+\!B_1y\!+\!C_1z\!+\!D_1 \;=\; 0\\  
+                A_2x\!+\!B_2y\!+\!C_2z\!+\!D_2 \;=\; 0,
+\end{cases}
+\end{align}
+where $A_i$, $B_i$, $C_i$, $D_i$ are real \PMlinkescapetext{constants} and\, $A_i^2\!+\!B_i^2\!+\!C_i^2 > 0$.  
+
+Eliminating one of the variables $x$, $y$, $z$ from the pair of equations, one obtains an equation of another plane.  Thus, if one first eliminates $x$ and then $y$, one may obtain simultaneous equations of the form
+\begin{align}
+\begin{cases}
+                y \;=\; mz\!+\!p\\
+                x \;=\; nz\!+\!q.
+\end{cases}
+\end{align}
+
+Obtaining equations exactly of the form of those in (2) from the equations in (1) may not be possible.  For example, if \,$A_1 = B_1 = 0$,\, then the first equation in (1) simplifies to\, $C_1z\!+\!D_1 = 0$.\,  Note though that, in this particular case, one can solve for $z$ and plug this value into the equation\, 
+$A_2x\!+\!B_2y\!+\!C_2z\!+\!D_2 = 0$\, in \PMlinkescapetext{order} to obtain the equation of a line on the $xy$-plane.  The \PMlinkescapetext{remainder} of this entry deals with the case in which (2) is obtainable.
+
+Note that an ordered triple \,$(x_0,\,y_0,\,z_0)$\, satisfies (1) if and only if it also satisfies (2), and hence the system of equations (2) represents the same line as well.  Separately, both of the equations in (2) are equations of planes, of which the former is parallel to the $x$-axis ($x$ can change independently of $y$ and $z$) and the latter is parallel to the $y$-axis ($y$ can change independently of $z$ and $x$).  The line itself is the intersection of these two planes, and it can be projected along the planes indicated by the individual equations in (2) onto the $yz$-plane and the $zx$-plane, respectively.  
+
+In a narrower meaning, the equation\, $y = mz\!+\!p$\, represents the projection line of $l$ onto the $yz$-plane and the equation\, $x = nz\!+\!q$\, the projection line of $l$ onto the $zx$-plane.\\
+
+A line in space can be represented also without using planes.  We can derive another way by starting with two vectors:  one vector $\vec{r}_0$ drawn from the origin to a chosen point of the line  (the so-called position vector of this point) and another vector (the so-called {\em direction vector}) $\vec{u}$ determining the direction of the line.  Then there exists a real number $t$ such that the position vector $\vec{r}$ of an arbitrary point of the line can be expressed as
+\begin{align}
+    \vec{r} \;=\; \vec{r}_0\!+\!t\vec{u}.
+\end{align}
+This is the {\em vector-formed equation of the line}.  Since every vector can be given by three coordinates of the end-point, we may write
+$$\vec{r} \;=\;
+\begin{pmatrix}
+x\\y\\z
+\end{pmatrix},\quad \vec{r}_0 \;=\;
+\begin{pmatrix}
+x_0\\y_0\\z_0
+\end{pmatrix},\quad \vec{u} \;=\;
+\begin{pmatrix}
+a\\b\\c
+\end{pmatrix}\!.$$
+Thus, (3) reads
+$$\begin{pmatrix}
+x\\y\\z
+\end{pmatrix} \;=\;
+\begin{pmatrix}
+x_0\\y_0\\z_0
+\end{pmatrix}+t
+\begin{pmatrix}
+a\\b\\c
+\end{pmatrix}\!,$$
+and we obtain three scalar equations
+\begin{align}
+\begin{cases}
+         x \;=\; x_0\!+\!ta\\  
+         y \;=\; y_0\!+\!tb\\
+         z \;=\; z_0\!+\!tc.
+\end{cases}
+\end{align}
+These are the {\em parametric equations of the line} (3), with the parameter $t$ taking all real values.  The contents of (4) is often written with proportions:
+$$\frac{x\!-\!x_0}{a} \;=\; \frac{y\!-\!y_0}{b} \;=\; \frac{z\!-\!z_0}{c}\;\;\; (= t)$$
+
+\begin{thebibliography}{8}
+\bibitem{LL}{\sc L. Lindel\"of}: {\em Analyyttisen geometrian oppikirja}.\, Kolmas painos.\, Suomalaisen Kirjallisuuden Seura, Helsinki (1924).
+\end{thebibliography}
+
+
+
+
+
+%%%%%
+%%%%%
+\end{document}

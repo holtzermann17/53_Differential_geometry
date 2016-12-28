@@ -1,0 +1,140 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ParallelogramPrinciple}
+\pmcreated{2013-03-22 17:47:04}
+\pmmodified{2013-03-22 17:47:04}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{parallelogram principle}
+\pmrecord{16}{40244}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53A45}
+\pmsynonym{addition of vectors}{ParallelogramPrinciple}
+\pmsynonym{vector addition}{ParallelogramPrinciple}
+\pmsynonym{sum vector}{ParallelogramPrinciple}
+%\pmkeywords{vector sum}
+\pmrelated{CommonPointOfTriangleMedians}
+\pmrelated{ProvingThalesTheoremWithVectors}
+\pmdefines{directed line segment}
+\pmdefines{sum of vectors}
+\pmdefines{side vector}
+\pmdefines{median vector}
+\pmdefines{diagonal vector}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+\usepackage{pstricks}
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{right} \PMlinkescapeword{opposite sides}
+
+\begin{itemize}
+\item A starting \PMlinkescapetext{point} for learning vectors is to think that they are {\em directed line segments}.  Thus a vector $\vec{u}$ has a direction and a length (magnitude) and nothing else.  Therefore, if two vectors $\vec{u}$ and $\vec{v}$ have a same direction and a same length, one can consider them identical (and denote\, $\vec{u} = \vec{v}$).  So the location of a certain vector in the plane (or in the space) is insignificant; in fact one may also think that this vector consists of all possible directed line segments having a common direction and a common length.
+
+\item However, a vector $\vec{u}$ as an infinite set of directed segments is quite uncomfortable to handle, and one can choose from all possible representants of $\vec{u}$ one individual directed segment $\overrightarrow{AB}$, i.e. a line segment directed from a certain point $A$ (the {\em initial point}) to another certain point $B$ (the {\em terminal point}).  Although $\overrightarrow{AB}$ is only a representant of $\vec{u}$, one may write\, $\overrightarrow{AB} = \vec{u}$\, or\, $\vec{u} = \overrightarrow{AB}$.
+
+\item For describing a vector $\vec{u}$, it's convenient to know its position in the coordinate system of the plane (or the space); there one can say e.g. how great a displacement $\vec{u}$ means from left to right (i.e. in the direction of $x$-axis) and how great from below upwards (i.e. in the direction of the $y$-axis); those displacements may be expressed with two numbers.\, One may for example write
+\begin{align}
+\vec{u} = \left(\!\begin{array}{c} +5\\-1 \end{array}\!\right)\!,
+\end{align}
+where the first (upper) number $+5$ tells that the vector leads 5 length-units to the right and the second (lower) number $-1$ that it leads 1 length-unit downwards.\\
+
+\end{itemize}
+
+\textbf{Addition of vectors}
+
+Since the vector may be interpreted as a \PMlinkescapetext{combination} of a horizontal displacement and a vertical displacement, it's meaningful that by the addition of two vectors the horizontal displacements are summed and likewise the vertical displacements.\, Accordingly, if we have
+\begin{align}
+\vec{v} = \left(\!\begin{array}{c} +1\\-3 \end{array}\!\right)\!,
+\end{align}
+then the {\em sum} of the vectors (1) and (2) is
+$$\vec{u}+\vec{v} = 
+\left(\!\begin{array}{c} +5\\-1 \end{array}\!\right)+\left(\!\begin{array}{c} +1\\-3 \end{array}\!\right) =
+\left(\!\begin{array}{c} +5+1\\-1-3 \end{array}\!\right) = \left(\!\begin{array}{c} +6\\-4 \end{array}\!\right)\!,$$
+which result means a vector leading 6 length-units to the right and 4 down.
+\begin{center}
+\begin{pspicture}(0,0)(7,-4.2)
+\psdot[linecolor=red](0,0)
+\psline[arrows=->,arrowsize=5pt,linecolor=green](0,0)(5,-1)
+\psline[arrows=->,arrowsize=5pt,linecolor=cyan](5,-1)(6,-4)
+\psline[arrows=->,arrowsize=5pt,linecolor=blue](0,0)(6,-4)
+\rput[a](2.8,-0.3){$\vec{u}$}
+\rput[a](5.7,-2.2){$\vec{v}$}
+\rput[a](3.4,-1.8){$\vec{u}\!+\!\vec{v}$}
+\end{pspicture}
+\end{center}
+When we set the vectors $\vec{u}$ and $\vec{v}$ one after the other, as in the above picture, and \textbf{take the sum vector from the initial point of the first addend to the terminal point of the second addend}, then both the horizontal and the vertical displacements are respectively added.\, The addition rule as a formula using the points is
+    $$\overrightarrow{PQ}+\overrightarrow{QR} = \overrightarrow{PR}.\\$$
+
+Note, that \textbf{the sum vector $\vec{u}+\vec{v}$ can be also obtained as the {\em diagonal vector} of the parallelogram with one pair of opposite sides equal to $\vec{u}$ and the other pair of opposite sides equal to $\vec{v}$}.\, The parallelogram picture illustrates also that the vector addition is commutative, i.e. that\, $\vec{u}+\vec{v} = \vec{v}+\vec{u}$.
+
+\begin{center}
+\begin{pspicture}(0,0)(7,-5)
+\psdot[linecolor=red](0,0)
+\psline[arrows=->,arrowsize=5pt,linecolor=green](0,0)(5,-1)
+\psline[arrows=->,arrowsize=5pt,linecolor=cyan](5,-1)(6,-4)
+\psline[arrows=->,arrowsize=5pt,linecolor=cyan](0,0)(1,-3)
+\psline[arrows=->,arrowsize=5pt,linecolor=green](1,-3)(6,-4)
+\psline[arrows=->,arrowsize=5pt,linecolor=blue](0,0)(6,-4)
+\rput[a](2.8,-0.3){$\vec{u}$}
+\rput[a](5.7,-2.2){$\vec{v}$}
+\rput[a](3.4,-1.8){$\vec{u}\!+\!\vec{v}$}
+\rput[a](0.3,-1.6){$\vec{v}$}
+\rput[a](3.4,-3.8){$\vec{u}$}
+\end{pspicture}
+\end{center}
+If we think the second (dashed in the third picture) diagonal of the parallelogram, it is halved by the first (blue) diagonal, since the diagonals of any parallelogram bisect each other (see parallelogram theorems); as well the (blue) diagonal representing the sum $\vec{u}+\vec{v}$ is halved into two equal vectors (better: directed segments) $\vec{m} = \frac{1}{2}(\vec{u}+\vec{v})$.\, In the triangle $ABC$, the vectors $\vec{u}$, $\vec{v}$, $\vec{m}$ may be called two {\em side vectors} and a {\em median vector}, all having the common initial point $A$.\, Thus we can write the
+
+\textbf{Theorem.}\, In a triangle, the median vector emanating from a certain vertex is the arithmetic mean of the side vectors emanating from the same vertex.
+\begin{center}
+\begin{pspicture}(0,0)(10,-5)
+\psdot[linecolor=red](0,0)
+\psline[arrows=->,arrowsize=5pt,linecolor=green](0,0)(5,-1)
+\psline[arrows=->,arrowsize=5pt,linecolor=cyan](5,-1)(6,-4)
+\psline[arrows=->,arrowsize=5pt,linecolor=cyan](0,0)(1,-3)
+\psline[arrows=->,arrowsize=5pt,linecolor=green](1,-3)(6,-4)
+\psline[arrows=->,arrowsize=5pt,linecolor=blue](0,0)(3,-2)
+\psline[arrows=->,arrowsize=5pt,linecolor=blue](0,0)(6,-4)
+\rput[a](2.8,-0.3){$\vec{u}$}
+\rput[a](5.7,-2.36){$\vec{v}$}
+\psline[linestyle=dashed](1,-3)(5,-1)
+\rput[a](0.3,-1.6){$\vec{v}$}
+\rput[a](3.4,-3.8){$\vec{u}$}
+\rput[a](1.6,-1.35){$\vec{m}$}
+\rput[a](4.4,-2.7){$\vec{m}$}
+\rput[a](-0.1,0.3){$A$}
+\rput[a](5.3,-0.9){$B$}
+\rput[a](0.7,-3.1){$C$}
+\rput[a](9,-1.2){$\vec{m} = \frac{1}{2}(\vec{u}+\vec{v})$}
+\end{pspicture}
+\end{center}
+
+%%%%%
+%%%%%
+\end{document}

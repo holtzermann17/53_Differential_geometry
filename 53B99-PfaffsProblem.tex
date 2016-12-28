@@ -1,0 +1,51 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PfaffsProblem}
+\pmcreated{2013-03-22 14:37:48}
+\pmmodified{2013-03-22 14:37:48}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{Pfaff's problem}
+\pmrecord{13}{36210}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53B99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Given a manifold $M$, let $S$ be a set of differential forms on $M$.  \emph{Pfaff's problem} is to determine all submanifolds of $M$ such that the pullback of any form in $S$ vanishes identically.  
+
+In the context of Pfaff's problem, a set of differential forms is often called a \emph{Pfaffian system} and a manifold on which the \PMlinkname{pullback}{PullbackOfAKForm} of these forms vanishes is called a solution to this system.  Sometimes, (especially in older literature) one also sees a notation like $a \, dx + b\,dx = 0$ to indicate that the pullback of the form $a \, dx + b \, dy$ is required to vanish.  A more accurate notation would be $\iota_M^* (a \, dx + b \,dy) = 0$ which explicitly indicates the pullback to the submanifold.
+
+Given a system of local coordinates on $M$, Pfaff's problem is equivalent to a system of partial differential equations.  Conversely, given a system of differential equations, one can find a set of differential forms such that solutions of the system of equations correspond to solutions of Pfaff's problem for that set of forms.  In this way, Pfaff's problem \PMlinkescapetext{links} differential geometry and the theory of differential equations.  The resulting cross-fertilization has been beneficial for both \PMlinkescapetext{fields}.
+
+On the one hand, translating a system of differential equations into a Pfaff's problem makes it easier to discuss the transformation properties of that equation since changes of variable for the equation correspond to diffeomorphisms of the manifold on which the Pfaff's problem is formulated.  This is especially true when the transformations mix dependent and independent variables or involve derivatives of variables.  For this reason, it is often easier to study the transformation properties and symmetries of a system of differential equations by examining the transformation properties and symmetries of a system of differential forms corresponding to the system of equations.  Also, questions of consistency and integrability conditions are usually much more easily discussed for systems of differential forms than for systems of differential equations.
+
+On the other hand, to prove the existence or uniqueness of a solution to Pfaff's problem for a certain class of systems of differential forms, it is typical to first translate the statement to be proven to a statement about the existence or uniqueness of a solution to a system of differential equations and then apply existence and uniqueness theorems for differential equations.
+
+Reference: Schouten and v. d. Kulk 1949 in bibliography for differential geometry
+%%%%%
+%%%%%
+\end{document}

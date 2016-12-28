@@ -1,0 +1,100 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ArbelosAndParbelos}
+\pmcreated{2014-06-29 8:56:48}
+\pmmodified{2014-06-29 8:56:48}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{arbelos and parbelos}
+\pmrecord{19}{42606}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53A04}
+\pmclassification{msc}{53-03}
+\pmclassification{msc}{51M99}
+\pmclassification{msc}{01A20}
+\pmclassification{msc}{00A08}
+\pmdefines{arbelos}
+\pmdefines{parbelos}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+\usepackage{pstricks}
+\usepackage{pst-plot}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\begin{center}
+\begin{pspicture}(-7,-1)(7,7)
+\psarc[linecolor=red](0,0){6}{0}{180}
+\psarc[linecolor=red](-2.25,0){3.75}{0}{180}
+\psarc[linecolor=red](3.75,0){2.25}{0}{180}
+\rput(1,4){An arbelos}
+\rput(-6.5,-0.5){.}
+\rput(6.5,6.5){.}
+\end{pspicture}
+\end{center}
+The {\it arbelos} is the plane region bounded by three pairwise tangent semicircles with diameters on the same line.\\
+
+The arbelos was known already in classical Greek geometry.\, It has many interesting properties; see e.g. \PMlinkexternal{Mathworld}{http://mathworld.wolfram.com/Arbelos.html}.\, One is that the distance between the two outermost points along the inner semicircles of the arbelos is the same as the distance along the outer semicircle, namely, its radius times $\pi$.\\
+
+\begin{center}
+\begin{pspicture}(-7,-1)(7,4)
+\psplot[linecolor=blue]{-6}{6}{3 x x 12 div mul sub}
+\psplot[linecolor=blue]{-6}{1.5}{1.875 x 2.25 add x 2.25 add mul 7.5 div sub}
+\psplot[linecolor=blue]{1.5}{6}{1.125 x 3.75 sub x 3.75 sub mul 4.5 div sub}
+\rput(1,2){A parbelos}
+\rput(-6.5,-0.5){.}
+\rput(6.5,3.3){.}
+\end{pspicture}
+\end{center}
+The {\it parbelos}, a parabolic analog of the arbelos, is the 
+plane region bounded by the \PMlinkname{latus rectum}{Hyperbola} arcs of three parabolas with latera recta AB, BC, AC, where the points A, B, C lie on a line.\, Unlike in the arbelos, the arcs of the parbelos are not  pairwise tangent: the inner two are tangent to the outer one, but not to each other.\, The parbelos has several interesting properties which can be seen in Sondow's article [1]; see also Tsukerman's paper [2].\\
+
+Some of them are analogous to the properties of the arbelos.  
+For example, the distance between the two outermost two points 
+of the parbelos along the inner arcs is the same as along the 
+outer arc, namely, its semilatus rectum times the 
+\PMlinkname{universal parabolic constant}{ArcLengthOfParabola} 
+$P$.
+
+\begin{thebibliography}{8}
+\bibitem{JS}{\sc Jonathan Sondow}: The parbelos, a parabolic 
+analog of the arbelos. --  {\it Amer. Math. Monthly} 
+\textbf{120} (2013) 929--935.\, Also in 
+\PMlinkexternal{arXiv}{http://arxiv.org/abs/1210.2279} (2012).
+\bibitem{ET}{\sc Emmanuel Tsukerman}: Solution of Sondow's 
+problem: a synthetic proof of the tangency property of the 
+parbelos.\, -- {\it Amer. Math. Monthly} {\bf 121} (2014) 438--443.  
+Also in 
+\PMlinkexternal{arXiv}{http://arxiv.org/abs/1210.5580} (2012).
+\end{thebibliography}
+
+
+
+%%%%%
+%%%%%
+\end{document}

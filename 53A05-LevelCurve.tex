@@ -1,0 +1,76 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LevelCurve}
+\pmcreated{2013-03-22 17:35:27}
+\pmmodified{2013-03-22 17:35:27}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{level curve}
+\pmrecord{13}{40003}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53A05}
+\pmclassification{msc}{53A04}
+\pmclassification{msc}{51M04}
+\pmsynonym{contour curve}{LevelCurve}
+\pmsynonym{isopleth}{LevelCurve}
+%\pmkeywords{level set}
+\pmrelated{LevelSet}
+\pmrelated{ConvexAngle}
+\pmdefines{level surface}
+\pmdefines{contour surface}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+The {\em level curves} (in German {\em Niveaukurve}, in French {\em ligne de niveau}) of a surface 
+\begin{align}
+z \;=\; f(x,\,y)
+\end{align}
+in $\mathbb{R}^3$ are the intersection curves of the surface and the planes \,$z = \,\mathrm{constant}$.  Thus the projections of the level curves on the $xy$-plane have equations of the form
+\begin{align}
+f(x,\,y) \;=\; c
+\end{align}
+where $c$ is a constant.\\
+
+For example, the level curves of the \PMlinkname{hyperbolic paraboloid}{RuledSurface} \,$z = xy$\, are the rectangular hyperbolas \;$xy = c$\, (cf. \PMlinkname{this entry}{GraphOfEquationXyConstant}).\\
+
+The gradient \,$f'_x(x,\,y)\,\vec{i}\!+\!f'_y(x,\,y)\,\vec{j}$\, of the function $f$ in any point of the surface (1) is perpendicular to the level curve (2), since the slope of the gradient is $\displaystyle\frac{f'_y}{f'_x}$ and the slope of the level curve is $\displaystyle-\frac{f'_x}{f'_y}$, whence the slopes are opposite inverses.\\
+
+Analogically one can define the {\em level surfaces} (or {\em contour surfaces})
+\begin{align}
+F(x,\,y,\,z) \;=\; c
+\end{align}
+for a function $F$ of three variables $x$, $y$, $z$.  The gradient of $F$ in a point\, $(x,\,y,\,z)$\, is parallel to the surface normal of the level surface passing through this point.
+
+
+
+
+%%%%%
+%%%%%
+\end{document}

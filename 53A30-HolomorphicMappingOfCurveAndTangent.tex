@@ -1,0 +1,133 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HolomorphicMappingOfCurveAndTangent}
+\pmcreated{2013-03-22 18:42:19}
+\pmmodified{2013-03-22 18:42:19}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{holomorphic mapping of curve and tangent}
+\pmrecord{9}{41469}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53A30}
+\pmclassification{msc}{30E20}
+%\pmkeywords{conformal mapping}
+\pmdefines{directly conformal}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+\usepackage{pstricks}
+\usepackage{pst-plot}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+Let $D$ be a domain of the complex plane and the function \,$f\!:\,D \to \mathbb{C}$\, be holomorphic.\, Then for each point $z$ of 
+$D$ there is a corresponding point \,$w = f(z)\,\in \mathbb{C}$;\, we think that $z$ and $w$ both lie in their own complex planes, $z$-plane and $w$-plane.
+
+Since $f$ is continuous in $D$, if $z$ draws a continuous curve $\gamma$ in $D$ then its image point $w$ also draws a continuous curve $\gamma_w$.\, Let $z_0$ and $z_0\!+\!\Delta z$ be two points on $\gamma$ and $w_0$ and 
+$w_0\!+\!\Delta w$ their image points on $\gamma_w$.
+
+\begin{center}
+\begin{pspicture}(-5.5,-3)(5.5,4)
+\psline(-5.3,0.09)(-3.6,1.96)
+\psline[arrows=->](-5.3,0.09)(-2.5,-1.59)
+\psplot[linecolor=blue]{-5.3}{-3.1}{x 5 add x 5 add mul}
+\psdot[linecolor=blue](-5.3,0.09)
+\psdot[linecolor=blue](-3.6,1.96)
+\rput(-5.5,-0.15){$z_0$}
+\rput(-2.75,1.96){$z_0\!+\!\Delta z$}
+\rput(-3.76,0.6){$\Delta s$}
+\rput(-4.7,1.1){$k$}
+\rput(-2.2,-1.5){$(\varphi)$}
+\rput(-2.75,3.6){$\gamma$}
+\rput(-4.5,-2.5){$z$-plane}
+
+\rput(0,-0.2){$w_0$}
+\psplot[linecolor=red]{0.1}{1.6}{x 1 mul 2 x sub div sqrt x mul}
+\psline(0.1,0)(1.5,2.5)
+\psline[arrows=->](0.1,0)(2.5,0.9)
+\psdot[linecolor=red](0.1,0)
+\psdot[linecolor=red](1.47,2.45)
+\rput(2.4,2.45){$w_0\!+\!\Delta w$}
+\rput(1.8,3.4){$\gamma_w$}
+\rput(1.5,1.2){$\Delta s_w$}
+\rput(0.5,1.3){$k_w$}
+\rput(3,1){$(\varphi_w)$}
+\rput(1,-2.5){$w$-plane}
+\end{pspicture}
+\end{center}
+
+We suppose still that the curve $\gamma$ has a tangent line at the point $z_0$ and that the value of the derivative $f'$ has in $z_0$ a nonzero value
+\begin{align}
+f'(z_0) \,=\, \varrho e^{i\omega}.
+\end{align}
+If the slope angles of the secant lines \,$(z_0,\,z_0\!+\!\Delta z)$\, and\, $(w_0,\,w_0\!+\!\Delta w)$\, are $\alpha$ and $\alpha_w$, then we have
+$$\Delta z \,=\, ke^{i\alpha},  \quad \Delta w \,=\, k_we^{i\alpha_w},$$
+and the difference quotient of $f$ has the form
+$$\frac{\Delta w}{\Delta z} \;=\; 
+\frac{f(z_0\!+\!\Delta z)-f(z_0)}{\Delta z} \,=\, \frac{k_w}{k}e^{i(\alpha_w-\alpha)}.$$
+Let now\, $\Delta z \to 0$.\, Then the point $z_0\!+\!\Delta z$ tends on the curve $\gamma$ to $z_0$ and 
+$$\lim_{\Delta z \to 0}\frac{\Delta w}{\Delta z} \;=\; f'(z_0).$$
+This implies, by (1), that
+\begin{align}
+\lim_{\Delta z \to 0}\frac{k_w}{k} \;=\; \varrho.
+\end{align}
+From this we infer, because\, $\varrho \neq 0$\, that, up to a multiple of $2\pi$,
+\begin{align}
+\lim_{\Delta z \to 0}(\alpha_w-\alpha) \;=\; \omega.
+\end{align}
+But the limit of $\alpha$ is the slope angle $\varphi$ of the tangent of $\gamma$ at $z_0$.\, Hence (3) implies that
+\begin{align}
+\varphi_w \;=\; \lim_{\Delta z \to 0}\alpha_w \;=\; \varphi+\omega.
+\end{align}
+Accordingly, we have the 
+
+\textbf{Theorem 1.}\, If a curve $\gamma$ has a tangent line in a point $z_0$ where the derivative $f'$ does not vanish, then the image curve $f(\gamma)$ also has in the corresponding point $w_0$ a certain tangent line with a direction obtained by rotating the tangent of $\gamma$ by the angle
+$$\omega \;=\; \arg f'(z_0).$$\\
+
+If the curve $\gamma$ is smooth, then also $\gamma_w$ is smooth, and it follows easily from (2) the corresponding limit equation between the arc lengths:
+\begin{align}
+\lim_{\Delta z \to 0}\frac{s_w}{s} \;=\; |f'(z_0)|.
+\end{align}
+
+
+\textbf{Conformality}
+
+If we have besides $\gamma$ another curve $\gamma'$ emanating from $z_0$ with its tangent, the mapping $f$ from $D$ in $z$-plane to $w$-plane gives two curves and their tangents emanating from $w_0$.\, Thus we have two equations (4):
+$$\varphi_w \;=\; \varphi+\omega, \quad \varphi_w' \;=\; \varphi'+\omega$$
+By subtracting we obtain
+\begin{align}
+\varphi_w'-\varphi_w \;=\; \varphi'-\varphi,
+\end{align}
+whence we have the
+
+\textbf{Theorem 2.}\, The mapping created by the holomorphic function $f$ preserves the magnitude of the angle between two curves in any point $z$ where\, $f'(z) \neq 0$.\, The equation (6) tells also that the orientation of the angle is preserved.\\
+
+The facts in Theorem 2 are expressed so that the mapping is {\em directly conformal}.\, If the orientation were reversed the mapping were called {\em inversely conformal}; in this case $f$ were not holomorphic but {\em antiholomorphic.}
+
+%%%%%
+%%%%%
+\end{document}

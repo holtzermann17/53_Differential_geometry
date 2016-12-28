@@ -1,0 +1,302 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SecondFundamentalForm}
+\pmcreated{2013-03-22 15:29:02}
+\pmmodified{2013-03-22 15:29:02}
+\pmowner{stevecheng}{10074}
+\pmmodifier{stevecheng}{10074}
+\pmtitle{second fundamental form}
+\pmrecord{5}{37339}
+\pmprivacy{1}
+\pmauthor{stevecheng}{10074}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53A05}
+\pmrelated{FirstFundamentalForm}
+\pmrelated{ShapeOperator}
+\pmrelated{NormalSection}
+\pmrelated{NormalCurvatures}
+\pmdefines{normal curvature}
+\pmdefines{principal direction}
+\pmdefines{principal curvature}
+\pmdefines{Weingarten matrix}
+\pmdefines{Weingarten map}
+\pmdefines{Gauss map}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{enumerate}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% define commands here
+\newcommand{\complex}{\mathbb{C}}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\rat}{\mathbb{Q}}
+\newcommand{\nat}{\mathbb{N}}
+
+\providecommand{\abs}[1]{\lvert#1\rvert}
+\providecommand{\absW}[1]{\left\lvert#1\right\rvert}
+\providecommand{\absB}[1]{\Bigl\lvert#1\Bigr\rvert}
+\providecommand{\norm}[1]{\lVert#1\rVert}
+\providecommand{\normW}[1]{\left\lVert#1\right\rVert}
+\providecommand{\normB}[1]{\Bigl\lVert#1\Bigr\rVert}
+\providecommand{\defnterm}[1]{\emph{#1}}
+
+\DeclareMathOperator{\D}{D}
+\DeclareMathOperator{\linspan}{span}
+\newcommand{\TpM}{\mathrm{T}_p M}
+\newcommand{\ctwo}{\mathcal{II}}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\begin{document}
+\PMlinkescapeword{normal}
+
+In classical differential geometry
+the \defnterm{second fundamental form} is a symmetric bilinear form
+defined on a differentiable surface $M$ embedded in $\real^3$, which in some sense
+measures the curvature of $M$ in space.
+
+To construct the second fundamental form requires a small digression.
+After the digression we will discuss how it relates to the curvature of $M$.
+
+\section*{Construction of the second fundamental form}
+Consider the tangent planes $\TpM$ of the surface $M$ for each point $p \in M$.
+There are two unit normals to $\TpM$.
+Assuming $M$ is orientable, we can choose one of these unit \PMlinkname{normals}{MutualPositionsOfVectors}, $n(p)$,
+so that $n(p)$ varies smoothly with $p$.
+
+Since $ n(p)$ is a unit vector in $\real^3$, it may be considered
+as a point on the sphere $S^2 \subset \real^3$.  Then we
+have a map $ n\colon M \to S^2$.  It is called the \defnterm{normal map}
+or \defnterm{Gauss map}.
+
+The \defnterm{second fundamental form} is the tensor field $\ctwo$ on $M$ defined
+by
+\begin{equation}\label{def}
+\ctwo_p(\xi, \eta) = - \langle \D n_p(\xi), \eta \rangle\,, \quad \xi, \eta \in \TpM\,, 
+\end{equation}
+where $\langle, \rangle$ is the dot product of $\real^3$,
+and we consider the tangent planes of surfaces in $\real^3$
+to be subspaces of $\real^3$.
+
+The linear transformation $\D n_p$ is in reality the tangent mapping
+$\D n_p \colon \TpM \to \mathrm{T}_{ n(p)} S^2$,
+but since $\mathrm{T}_{ n(p)}S^2 = \TpM$ by the definition of $ n$,
+we prefer to think of $\D n_p$ as $\D n_p \colon \TpM \to \TpM$.
+
+The tangent map $\D n$, is often called the \defnterm{Weingarten map}.
+
+\begin{prop}\label{symmetric}
+The second fundamental form is a symmetric form.
+\begin{proof}
+This is a computation using a coordinate chart $\sigma$ for $M$.
+Let $u, v$ be the corresponding names for the coordinates.
+From the equation
+\[
+\left\langle  n, \frac{\partial \sigma}{\partial v} \right\rangle = 0\,,
+\]
+differentiating with respect to $u$ using the product rule gives
+\begin{equation}\label{symmetric-one}
+\begin{split}
+\left\langle  n, \frac{\partial^2 \sigma}{\partial u \partial v} \right\rangle &=
+- \left\langle \frac{\partial  n}{\partial u}, \frac{\partial \sigma}{\partial v} \right\rangle \\
+&= - \left\langle \D  n\left( \frac{\partial \sigma}{\partial u} \right), \frac{\partial \sigma}{\partial v} \right\rangle  \\
+&= \ctwo\left(\frac{\partial \sigma}{\partial u}, \frac{\partial \sigma}{\partial v}\right)\,.
+\end{split}
+\end{equation}
+(The second equality follows from the definition of the tangent map $\D n$.)
+Reversing the roles of $u, v$ and repeating the last derivation,
+we obtain also:
+\begin{equation}\label{symmetric-two}
+\left\langle  n, \frac{\partial^2 \sigma}{\partial u \partial v} \right\rangle = \left\langle  n, \frac{\partial^2 \sigma}{\partial v \partial u} \right\rangle =
+\ctwo\left(\frac{\partial \sigma}{\partial v}, \frac{\partial \sigma}{\partial u}\right)\,.
+\end{equation}
+Since $\partial \sigma/\partial u$ and $\partial \sigma/\partial v$
+form a basis for $\TpM$, combining
+\eqref{symmetric-one} and \eqref{symmetric-two} proves that $\mathcal{II}$ is symmetric.
+\end{proof}
+\end{prop}
+
+In view of Proposition \ref{symmetric},
+it is customary to regard the second fundamental form
+as a quadratic form,
+as it done with the first fundamental form.
+Thus, the second fundamental form is referred to with the following expression\footnote{
+Unfortunately the coefficient $M$ here clashes with our use of the letter $M$ for
+the surface (manifold), but whenever we write $M$, the context should make clear 
+which meaning is intended.
+The use of the symbols $L, M, N$ for the coefficients of the second fundamental form
+is standard, but probably was established long before
+anyone thought about manifolds.}:
+\[
+L \, du^2 + 2M \, dudv + N \, dv^2\,.
+\]
+Compare with the tensor notation
+\[
+\ctwo = L \, du \otimes du + M \, du \otimes dv + M \, dv \otimes du + N dv \otimes dv\,.
+\]
+Or in matrix form (with respect to the coordinates $u, v$),
+\[
+\ctwo = \begin{pmatrix}
+L & M \\
+M & N
+\end{pmatrix}\,.
+\]
+
+\section*{Curvature of curves on a surface}
+Let $\gamma$ be a curve lying on the surface $M$, parameterized by arc-length.
+Recall that the curvature $\kappa(s)$ of $\gamma$ at $s$
+is $\gamma''(s)$.  If we want to measure the curvature of the surface, it is natural
+to consider the component of $\gamma''(s)$ in the normal $n(\gamma(s))$.
+Precisely, this quantity is
+\[
+\langle \gamma''(s), n(\gamma(s)) \rangle\,,
+\]
+and is called the \defnterm{normal curvature} of $\gamma$ on $M$.
+
+So to study the curvature of $M$, we ignore the component of the curvature of $\gamma$ 
+in the tangent plane of $M$.
+Also, physically speaking, the normal curvature is proportional to the acceleration
+required to keep a moving particle \emph{on} the surface $M$.
+
+We now come to the motivation for defining the second fundamental form:
+\begin{prop}\label{principal-curvature}
+Let $\gamma$ be a curve on $M$, parameterized by arc-length,
+and $\gamma(s) = p$.
+Then
+\[
+\langle \gamma''(s), n(p) \rangle = \ctwo\bigl(\gamma'(s), \gamma'(s)\bigr)\,.
+\]
+\begin{proof}
+From the equation
+\[
+\langle n(\gamma(s)), \gamma'(s) \rangle = 0\,,
+\]
+differentiate with respect to $s$:
+\begin{align*}
+\langle n(\gamma(s)), \gamma''(s) \rangle &= - \left\langle \frac{d}{ds} n(\gamma(s)), \gamma'(s) \right\rangle \\
+&= -\bigl\langle \D n(\gamma'(s)), \gamma'(s) \bigr\rangle \\
+&= \ctwo\bigl(\gamma'(s), \gamma'(s)\bigr)\,. \qedhere
+\end{align*}
+\end{proof}
+\end{prop}
+
+It is now time to mention an important consequence of Proposition \ref{symmetric}:
+the fact that $\ctwo$ is symmetric means that 
+$-\D n$ is \emph{self-adjoint} with respect to the inner product $\mathcal{I}$
+(the first fundamental form).  So, if $-\D n$ is expressed
+as a matrix with orthonormal coordinates (with respect to $\mathcal{I}$),
+then the matrix is symmetric.  (The minus sign in front of $\D n$
+is to make the formulas work out nicely.)
+
+Certain theorems in linear algebra tell us
+that, $-\D n_p$ being self-adjoint, it has an orthonormal basis of 
+eigenvectors $e_1, e_2$ with corresponding eigenvalues $\kappa_1 \leq \kappa_2$.
+These eigenvalues are called the \defnterm{principal curvatures}
+of $M$ at $p$.  
+The eigenvectors $e_1, e_2$ are the \defnterm{principal directions}.
+The terminology is justified by the following theorem:
+
+\begin{thm}[Euler's Theorem]
+The normal curvature of a curve $\gamma$ has the form
+\[
+\langle \gamma''(s), n(p) \rangle = \kappa_1 \, \cos^2 \theta + \kappa_2 \, \sin^2 \theta\,, \quad p = \gamma(s)\,.
+\]
+It follows that the minimum possible normal curvature is $\kappa_1$,
+and the maximum possible is $\kappa_2$.
+\begin{proof}
+Since $e_1, e_2$ form an orthonormal basis for $\TpM$, we may write
+\[
+\gamma'(s) = \cos \theta \, e_1 + \sin \theta \, e_2
+\]
+for some angle $\theta$.
+Then
+\begin{align*}
+\langle \gamma''(s), n(p) \rangle &= \ctwo\bigl(\gamma'(s), \gamma'(s) \bigr)
+\\
+&= \bigl\langle -\D n_p(\gamma'(s)), \gamma'(s) \bigr\rangle \\
+&= \langle \kappa_1 \cos \theta \, e_1 + \kappa_2 \sin \theta \, e_2, \cos \theta \, e_1 + \sin \theta \, e_2 \rangle
+\\
+&= \kappa_1 \, \cos^2 \theta + \kappa_2 \, \sin^2 \theta\,. \qedhere
+\end{align*}
+\end{proof}
+\end{thm}
+
+\section*{Matrix representations of second fundamental form and Weingarten map}
+
+At this point, we should find the explicit prescriptions
+for calculating the second fundamental form and the Weingarten map.
+
+Let $\sigma$ be a coordinate chart for $M$,
+and $u,v$ be the names of the coordinates.
+For a test vector $\xi \in \TpM$, we write $\xi_u$ and $\xi_v$
+for the $u,v$ coordinates of $\xi$.
+
+We compute the matrix $W$ for $-\D n$ in $u,v$-coordinates.
+We have
+\begin{align*}
+\begin{pmatrix}
+\xi_u & \xi_v
+\end{pmatrix}
+\begin{pmatrix}
+L & M \\
+M & N
+\end{pmatrix} 
+\begin{pmatrix}
+\xi_u \\ \xi_v
+\end{pmatrix}
+&= \ctwo(\xi, \xi) = \langle -\D n(\xi), \xi \rangle \\
+&= \left(
+Q \begin{pmatrix}
+\xi_u \\
+\xi_v
+\end{pmatrix}
+\right)^\mathrm{T}
+Q W \begin{pmatrix}
+\xi_u \\
+\xi_v
+\end{pmatrix} \\
+&= 
+\begin{pmatrix}
+\xi_u &
+\xi_v
+\end{pmatrix}
+\, (Q^\mathrm{T}
+Q) \, W \begin{pmatrix}
+\xi_u \\
+\xi_v
+\end{pmatrix}\,,
+\end{align*}
+where $Q$ is the matrix that changes from $u,v$-coordinates to orthonormal
+coordinates for $\TpM$ --- this is necessary to compute the inner product.
+But 
+\[
+Q^\mathrm{T} Q = \begin{pmatrix}
+E & F \\
+F & G
+\end{pmatrix} = \mathcal{I} \quad \text{(the first fundamental form),}
+\]
+because $Q$ is the matrix
+with columns $\partial\sigma/\partial u$ and $\partial\sigma/\partial v$
+expressed in orthonormal coordinates.
+
+(More to be written...)
+
+\begin{thebibliography}{3}
+\bibitem{Spivak}
+Michael Spivak.  {\it A Comprehensive Introduction to Differential Geometry}, volumes I and II.
+ Publish or Perish, 1979.
+\bibitem{Pressley}
+Andrew Pressley. {\it Elementary Differential Geometry}.  Springer-Verlag, 2003.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

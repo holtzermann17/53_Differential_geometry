@@ -1,0 +1,52 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{EasyCalculationOfTheAreaOfAnEllipse}
+\pmcreated{2013-03-22 15:44:18}
+\pmmodified{2013-03-22 15:44:18}
+\pmowner{cvalente}{11260}
+\pmmodifier{cvalente}{11260}
+\pmtitle{easy calculation of the area of an ellipse}
+\pmrecord{7}{37689}
+\pmprivacy{1}
+\pmauthor{cvalente}{11260}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53A04}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Consider the unit circle $\left \{ \right (x,y) \in \mathbb{R}^2 : x^2+y^2\le 1\}$. It's a well known fact that the area of this set is $\pi$.
+
+Now consider the following linear transformation $(x,y)\to(u,v)=(ax,by)$.
+
+The determinant of the transformation is $ab$ and the transformed circle is:
+
+ $\left \{ \right (u,v) \in \mathbb{R}^2 : \left (\frac{u}{a} \right )^2 + \left (\frac{v}{b} \right )^2 \le 1\}$  an ellipse of axis $(a,b)$.
+
+Now since the Jacobian of the transformation is constant, the \PMlinkname{change of variables in integral theorem}{ChangeOfVariablesInIntegralOnMathbbRn} allows us to say the area of the transformed set is $ab$ 
+times the area of the original set.
+
+Thus, the area of an ellipse is $\pi a b$.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,72 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ArcLengthOfParabola}
+\pmcreated{2013-03-22 18:57:19}
+\pmmodified{2013-03-22 18:57:19}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{arc length of parabola}
+\pmrecord{13}{41812}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53A04}
+\pmclassification{msc}{26A42}
+\pmclassification{msc}{26A09}
+\pmclassification{msc}{26A06}
+\pmsynonym{closed-form arc lengths}{ArcLengthOfParabola}
+\pmrelated{FamousCurvesInThePlane}
+\pmrelated{AreaFunctions}
+\pmdefines{universal parabolic constant}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\DeclareMathOperator{\arsinh}{arsinh}
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+The parabola is one of the quite few plane curves, the arc length of which is expressible in closed form; other ones are line, \PMlinkname{circle}{Circle}, semicubical parabola, \PMlinkname{logarithmic curve}{NaturalLogarithm2}, catenary, tractrix, cycloid, clothoid, astroid, Nielsen's spiral,  logarithmic spiral.\, Determining the \PMlinkname{arc length of ellipse}{PerimeterOfEllipse} and hyperbola leads to elliptic integrals.\\
+
+We evaluate the \PMlinkescapetext{length} of the parabola
+\begin{align}
+y \;=\; ax^2 \qquad (a > 0)
+\end{align}
+from the apex (the origin) to the point \,$(x,\,ax^2)$.\\
+
+The usual arc length \PMlinkescapetext{formula gives}
+$$s \;=\; \int_0^x\!\sqrt{1\!+\!y'^2}\,dx \;=\; \int_0^x\!\sqrt{1\!+4a^2x^2}\,dx 
+\;=\; \frac{1}{2a}\int_0^{2ax}\!\sqrt{t^2\!+\!1}\,dt.$$
+where one has made the \PMlinkname{substitution}{ChangeOfVariableInDefiniteIntegral} $2ax =: t$.\, Then one can utilise the result in the entry \PMlinkname{integration of $\sqrt{x^2\!+\!1}$}{IntegrationOfSqrtx21}, whence
+\begin{align}
+s \;=\; \frac{1}{4a}\left(2ax\sqrt{4a^2x^2\!+\!1}+\arsinh{2ax}\right).
+\end{align}
+
+This expression for the parabola arc length becomes especially \PMlinkescapetext{simple} when the arc is extended from the apex to the end point \,$(\frac{1}{2a},\,\frac{1}{4a})$\, of the parametre, i.e. the latus rectum; this arc length is
+$$\frac{1}{4a}(\sqrt{2}+\arsinh{1}) \;=\; \frac{1}{4a}\left(\sqrt{2}+\ln(1\!+\!\sqrt{2})\right).$$
+Here,\, $\sqrt{2}+\ln(1\!+\!\sqrt{2}) =: P$\, is called the {\it universal parabolic constant}, since it is common to all parabolas; it is the ratio of the arc to the semiparametre.\, This constant appears also for example in the areas of some surfaces of revolution (see \PMlinkexternal{Reese and Sondow}{http://mathworld.wolfram.com/UniversalParabolicConstant.html}).
+
+%%%%%
+%%%%%
+\end{document}

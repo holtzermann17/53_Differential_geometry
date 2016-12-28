@@ -1,0 +1,189 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TimeDilatationOfAVolumeElement}
+\pmcreated{2013-03-22 15:54:28}
+\pmmodified{2013-03-22 15:54:28}
+\pmowner{perucho}{2192}
+\pmmodifier{perucho}{2192}
+\pmtitle{time dilatation of a volume element}
+\pmrecord{10}{37911}
+\pmprivacy{1}
+\pmauthor{perucho}{2192}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53A45}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+\paragraph{Introduction}
+The rate of change of a volume element constitutes an important subject in certain applications related to the velocity field in fluid flow and elasticity, 
+besides it admits some physical interpretations intimately entailed to  
+tensor invariants, as we shall see.
+\paragraph{Formulae derivation} 
+Let $X^\alpha$ and $x^i$ be material and spatial coordinates, respectively. Consider  {\em diffeomorphic} the mapping \footnote{See motion of continuum}
+\begin{align*}
+X^\alpha \mapsto x^i(X^\alpha,\tau), \qquad  t_0\leq\tau\leq{t},
+\end{align*} 
+which represents the motion of continuum $\Re\subset(\mathbb{R}^3,\lVert\cdot\rVert)$ . The Jacobian $J=\vert x^i_{\;,\alpha}\vert$ (comma denoting partial differentiation with respect to the indicated coordinate) of coordinate transformation is given by
+\begin{align*}
+J=\epsilon^{\alpha\beta\gamma}\;x^1_{\;,\alpha}\,x^2_{\;,\beta}\,x^3_{\;,\gamma}
+\equiv C^\gamma_3 \;x^3_{\;,\gamma}\;,
+\end{align*}
+$\epsilon^{\alpha\beta\gamma}$ being the Levi-Civita density, $C^\gamma_3$ the cofactor of $x^3_{\;,\gamma}$ in the determinant expansion and it comes expressed as
+\begin{align*}
+C^\gamma_3=\epsilon^{\alpha\beta\gamma}\;x^1_{\;,\alpha}\,x^2_{\;,\beta}=
+\frac{1}{2} (\epsilon^{\alpha\beta\gamma}\;x^1_{\;,\alpha}\,x^2_{\;,\beta}+
+\epsilon^{\beta\alpha
+\gamma}\;x^1_{\;,\beta}\,x^2_{\;,\alpha})
+\end{align*}
+\begin{align*}
+=\frac{1}{2}\epsilon^{\alpha\beta\gamma} 
+\;(x^1_{\;,\alpha}\,x^2_{\;,\beta}-x^1_{\;,\beta}\,x^2_{\;,\alpha})=\frac{1}{2}
+\epsilon^{\alpha\beta\gamma}\epsilon_{ij3}\;x^i_{\;,\alpha}\;x^j_{\;,\beta}.
+\end{align*}
+So that, for any arbitrary cofactor $C^\gamma_k,$
+\begin{align*}
+C^\gamma_k=\frac{1}{2}
+\epsilon^{\alpha\beta\gamma}\epsilon_{ijk}\;x^i_{\;,\alpha}\;x^j_{\;,\beta}.
+\end{align*}
+Let us multiply by $x^n_{\;,\gamma}.$
+\begin{align}
+C^\gamma_k \;x^n_{\;,\gamma}=\frac{1}{2}
+\epsilon_{ijk}\;\epsilon^{\alpha\beta\gamma}\;x^i_{\;,\alpha}\;x^j_{\;,\beta}
+\;x^n_{\;,\gamma} =\frac{1}{2}\vert{x}^i_{\;,\alpha}\vert\epsilon_{ijk}\;\epsilon^{ijn}=
+J\delta^n_k, \qquad \frac{C^\gamma_k}{J}\;x^n_{\;,\gamma}=\delta^n_k,
+\end{align}
+where we have used well-known alternator's properties. Moreover, since the cofactor $C^\gamma_k$ is independent on $x^k_{\;,\gamma}$ by its own definition,
+\begin{align}
+\frac{\partial}{\partial{x^n_{\;,\gamma}}}(J\delta^n_k)=
+\frac{\partial{J}}{\partial{x^k_{\;,\gamma}}}=C^\gamma_k.
+\end{align}
+But
+\begin{align*}
+X^\gamma_{\;,k}\;x^n_{\;,\gamma}=\delta^n_k,
+\end{align*}
+which it is compared with Eq.(1) to obtain
+\begin{align*}
+X^\gamma_{\;,k}=\frac{C^\gamma_k}{J}, \qquad C^\gamma_k=JX^\gamma_{\;,k}.
+\end{align*}
+So from Eq.(2) we get
+\begin{align}
+\frac{\partial{J}}{\partial{x^k_{\;,\gamma}}}=JX^\gamma_{\;,k}.
+\end{align}
+Let us now consider the relation $dv=JdV$ between the spatial and material volume elements, and by taking the material time derivative
+\begin{align}
+\dot{\overline{dv}}=\dot{J}dV,
+\end{align}
+because $\dot{\overline{dV}}=0,$ by definition. From Eqs.(3)-(4),
+\begin{align*}
+\dot{\overline{\Big(\frac{dv}{dV}\Big)}}=
+\frac{\partial{J}}{\partial{x^i_{\;,\alpha}}}
+\;\dot{\overline{x^i_{\;,\alpha}}}=\frac{\partial{J}}{\partial{x^i_{\;,\alpha}}}
+\;\dot{x}^i_{\;,\alpha}=JX^\alpha_{\;,i}\;v^i_{\;,\alpha}=Jv^i_{\;,i}
+\end{align*}
+where $\dot{x}^i_{\;,\alpha}\equiv{v^i_{\;,\alpha}}$ are material gradient components of velocity field, thus arriving to the result due to Euler\cite{cite:Euler}
+\begin{align}
+\frac{\dot{J}}{J}=v^i_{\;,i}\equiv\nabla_x\cdot\mathbf{v}, \qquad \dot{\overline{\log{J}}}=\nabla_x\cdot\mathbf{v},
+\end{align}
+expressing the spatial divergence of velocity field.
+Also, by substituting $dV=dv/J$ in Eq.(4) we get
+\begin{align}
+\dot{\overline{\log{dv}}}=\nabla_x\cdot\mathbf{v}.
+\end{align}
+\paragraph{Physical interpretations}
+\begin{itemize}
+\item {The time logarithm of dilatation and the first  invariant $I_{\nabla_x\mathbf{v}}$ associate to the tensor of velocity spatial gradient, coincide exactly.} 
+\item {If we consider the {\em Lagrangian strain} tensor $E_{ij}=1/2(u_{i,j}+u_{j,i}+u_{i,k}u_{k,j})$ (large strain) for $``small"$ strain, i.e. the initial undistorsioned (material) reference configuration $\chi_\varkappa(X_i,t_0)$ maps to  near distorsioned (spatial) reference configuration $\chi_{\varkappa+\Delta\varkappa}(X_i,\tau)$ (as $\tau\to t_0$) during the motion of continuum $\Re,$ coinciding approximately the spatial coordinates with the material coordinates and therefore, as a consequence, the quadratic displacement gradient $u_{i,k}u_{k,j}\approx 0.$ {\footnote{Indeed for small strain is required that $\nabla_X\mathbf{u}\cdot\mathbf{u}\nabla_X\approx\mathbf{0}$ and $\nabla_X\mathbf{u}\cdot\nabla_x\mathbf{u}\approx\mathbf{0}.$ To see this, we consider the coordinates transformation $\mathbf{x}(\tau)=\chi(\mathbf{X},\tau),$ as $\tau\to {t_0}.$ So $d\mathbf{x}=d\mathbf{X}\cdot\nabla_X\mathbf{x}.$ But $d\mathbf{u}=d\mathbf{X}\cdot\nabla_X\mathbf{u}=
+d\mathbf{x}\cdot\nabla_x\mathbf{u},$  then by the first equation, we have $d\mathbf{u}=(d\mathbf{X}\cdot\nabla_X\mathbf{x})\cdot\nabla_x\mathbf{u}=
+d\mathbf{X}\cdot (\nabla_X\mathbf{x}\cdot\nabla_x\mathbf{u}),$ and since $d\mathbf{X}$ is arbitrary $\nabla_X\mathbf{u}=\nabla_X\mathbf{x}\cdot\nabla_x\mathbf{u}.$ (The chain rule!) Recalling now $\mathbf{x}=\mathbf{X}+\mathbf{u},$ we get $\nabla_X\mathbf{u}=[\nabla_X(\mathbf{X}+\mathbf{u})]\cdot\nabla_x\mathbf{u}=
+(\mathbf{1}+\nabla_X\mathbf{u})\cdot\nabla_x\mathbf{u}=
+\nabla_x\mathbf{u}+\nabla_X\mathbf{u}\cdot\nabla_x\mathbf{u},$ which shows that quadratic gradient is approximately equal to {\bf zero} whenever $\nabla_X\mathbf{u}\approx\nabla_x\mathbf{u},$ i.e. the material undistorsioned reference configuration $\varkappa$ be approximately equal to the spatial distorsioned configuration $\varkappa+\Delta\varkappa.$}} In fact elasticity theory defines {\em infinitesimal strain} tensor as $e_{ij}\equiv\ 1/2(u_{i,j}+u_{j,i}),$ i.e. $e_{ij}\approx E_{ij}$ for small strain, but the definition of tensor $\mathbf{e}$ is exact. So, in the vector displacement $u_i=x_i-X_i,$ we take the material rate $\dot{u}_i=\dot{x}_i\equiv{v}_i$ and hence $\dot{u}_{i,j}=v_{i,j}.$ Therefore, according to the mentioned approximation, the material time derivative for tensors $\mathbf{E}$ and $\mathbf{e}$ are given by $\dot{E}_{ij}\approx \dot{e}_{ij}\approx 1/2(v_{i,j}+v_{j,i}).$ {\footnote{The last approximation because the tensors $\mathbf{E}$ and $\mathbf{e}$  are usually defined with respect to material coordinates and not with respect to the spatial ones.}} Now by contracting $j=i$, we get $\dot{E}_{ii}\approx\dot{e}_{i,i}\approx v_{i,i}=\nabla\cdot\mathbf{v}.$ {\footnote{Notice that although this is an approximated result, Eqs.(5)-(6) are exact.}}} 
+\item{Considering the infinitesimal strain tensor $\mathbf{e}$ (or $\mathbf{E}$ for small strain), we see that sum of {\em normal strain} $e_{ii}=e_{11}+e_{22}+e_{33}=u_{1,1}+u_{2,2}+u_{3,3}$ represents the {\em trace} or first invariant $I_{\mathbf{e}}$. Thus, in the initial undistorsioned reference configuration $\varkappa,$ we can use principal centered axes (i.e. along the eigenvectors of tensor $\mathbf{e},$ whose representation corresponds to pure normal strains) of a volume element $dV$ in order to measure the induced {\em dilatation} $(dv-dV)/dV$ in the distorsioned reference configuration $\varkappa + \Delta\varkappa$. So, for an elemental rectangular parallelopiped of volume $dV$, we have
+\begin{align*}
+\Big(\frac{dv}{dV}\Big)\approx (1+e_{11})(1+e_{22})(1+e_{33})=1+e_{ii}+ o(e^2_{nn}). \quad   (n\; not\; summed)
+\end{align*}
+By taking now the material time derivative,
+\begin{align*}
+\dot{\overline{\Big(\frac{dv}{dV}\Big)}}\approx \dot{e}_{ii}\approx\dot{E}_{ii}\approx\dot{u}_{i,i}=\dot{x}_{i,i}=v_{i,i}=
+\nabla\cdot\mathbf{v},
+\end{align*}
+thus completing the aimed physical interpretation.}
+\item{A volume-preserving motion is said to be {\em isochoric.} Then
+\begin{align*}
+J=\bigg\vert\frac{\partial x^i}{\partial X^\alpha}\bigg\vert=1, \qquad \operatorname{div}_x\mathbf{v}=0.
+\end{align*}
+$V$ is called {\em material volume} and $v$ is called {\em control volume.}}
+\item{Although we have used Cartesian rectangular systems, if we introduce generalizated tensors, all the results obtained are also valid for curvilinear coordinates . For instance,
+\begin{enumerate}
+\item Divergence
+\begin{align*}
+\nabla_x\cdot\mathbf{v}=\mathbf{g}^i\cdot\frac{\partial}{\partial{x^i}}
+(v^j\mathbf{g}_j)=\mathbf{g}^i\cdot\mathbf{g}_j v^j\vert_i =v^i\vert_i=v^i_{\;,i}+\Gamma^j_{ji}v^i, 
+\end{align*}
+\begin{align*} 
+\Gamma^j_{ji}=\frac{1}{2g}\frac{\partial{g}}{\partial{x}^i}, \quad
+g=\vert{g_{ij}}\vert,
+\quad g_{jk}g^{ki}=\delta^i_j,
+\end{align*}
+where $v^j\vert_i,\,\mathbf{g}^i,\,\mathbf{g}_j,$ stand for covariant 
+derivative and contravariant and covariant spatial base vectors, respectively.
+\item Gradient
+\begin{align*}
+\nabla_X\mathbf{u}=\mathbf{G}^\alpha\frac{\partial}{\partial{X}^\alpha}
+(u^\beta\mathbf{G}_\beta)=u^\beta\vert_\alpha\mathbf{G}^\alpha\mathbf{G}_\beta=
+(u^\beta_{\;,\alpha}+
+\Gamma^\beta_{\gamma\alpha}u^\gamma)\mathbf{G}^\alpha\mathbf{G}_\beta,
+\end{align*}
+\begin{align*}
+\Gamma^\beta_{\gamma\alpha}=G^{\beta\delta}\Gamma_{\gamma\alpha\delta},
+\quad \Gamma_{\gamma\alpha\delta}=\frac{1}{2}(G_{\gamma\delta,\alpha}+
+G_{\alpha\delta,\gamma}-G_{\gamma\alpha,\delta}).
+\end{align*}
+\begin{align*}
+\mathbf{u}\nabla_X=\frac{\partial}{\partial{X}^\beta}(u^\alpha\mathbf{G}_\alpha)
+\mathbf{G}^\beta=u^\alpha\vert_\beta\mathbf{G}_\alpha\mathbf{G}^\beta=
+(u^\alpha_{\;,\beta}+\Gamma^\alpha_{\gamma\beta}u^\gamma)\mathbf{G}_\alpha
+\mathbf{G}^\beta,
+\end{align*}
+where $\mathbf{G}_\alpha\;,\,\mathbf{G}^\beta$ are the covariant and contravariant 
+material base vectors, respectively. {\em mutatis mutandis} for spatial gradient
+tensors $\nabla_x\mathbf{u}\;,\,\mathbf{u}\nabla_x.$
+\item Material time derivative
+\begin{align*}
+\dot{\mathbf{v}}=\dot{\overline{v^i\mathbf{g}_i}}=
+\frac{\partial{v^i}}{\partial{t}}\mathbf{g}_i+v^i\vert_jv^j\mathbf{g}_i=
+\frac{\partial{v^i}}{\partial{t}}\mathbf{g}_i+(v^i_{\;,j}v^j+
+\Gamma^i_{kj}v^kv^j)\mathbf{g}_i,
+\end{align*}
+where the local time derivative  $\partial\mathbf{g}_i/\partial{t}=\mathbf{0},$ by definition.
+\end{enumerate}}
+\end{itemize}
+\begin{thebibliography}{1}
+\bibitem{cite:Euler}
+L. Euler, {\em Principes gÃ©nÃ©raux du mouvement des fluides,} Hist. Acad. Berlin {\bf 1755,} 274-315, 1757.
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

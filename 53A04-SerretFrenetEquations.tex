@@ -1,0 +1,97 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SerretFrenetEquations}
+\pmcreated{2013-03-22 12:15:13}
+\pmmodified{2013-03-22 12:15:13}
+\pmowner{rmilson}{146}
+\pmmodifier{rmilson}{146}
+\pmtitle{Serret-Frenet equations}
+\pmrecord{20}{31636}
+\pmprivacy{1}
+\pmauthor{rmilson}{146}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53A04}
+\pmsynonym{Frenet equations}{SerretFrenetEquations}
+\pmsynonym{Frenet-Serret equations}{SerretFrenetEquations}
+\pmsynonym{Frenet-Serret formulas}{SerretFrenetEquations}
+\pmsynonym{Serret-Frenet formulas}{SerretFrenetEquations}
+\pmsynonym{Frenet formulas}{SerretFrenetEquations}
+\pmrelated{SpaceCurve}
+\pmrelated{Torsion}
+\pmrelated{CurvatureOfACurve}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\newcommand{\reals}{\mathbb{R}}
+
+\newcommand{\SO}{\operatorname{SO}}
+\begin{document}
+Let $I\subset\reals$ be an interval, and let $\gamma:I\to\reals^3$ be
+an arclength parameterization of an oriented space curve, assumed to
+be \PMlinkname{regular}{Curve}, and free of points of inflection.  Let $T(s)$, $N(s)$,
+$B(s)$ denote the corresponding moving trihedron, and $\kappa(s),
+\tau(s)$ the corresponding \PMlinkname{curvature}{CurvatureOfACurve}
+and \PMlinkname{torsion functions}{Torsion}.  The following
+differential relations, called the Serret-Frenet equations, hold
+between these three vectors.
+\begin{eqnarray}
+\label{eq:dT}
+T'(s) &=& \kappa(s) N(s);\\
+\label{eq:dN}
+N'(s) &=& -\kappa(s) T(s) + \tau(s)B(s); \\
+\label{eq:dB}
+B'(s) &=& -\tau(s) N(s).
+\end{eqnarray}
+
+Equation \eqref{eq:dT} follows directly from the \PMlinkname{definition of the
+normal}{MovingFrame} $N(s)$ and from the \PMlinkname{definition of the
+curvature}{CurvatureAndTorsion}, $\kappa(s)$. Taking the derivative of
+the relation 
+$$N(s)\cdot T(s) = 0,$$
+gives
+$$N'(s)\cdot T(s)  = - T'(s) \cdot N(s) = -\kappa(s).$$
+Taking the derivative of the relation
+$$N(s)\cdot N(s) = 1,$$
+gives
+$$N'(s) \cdot N(s) = 0.$$
+By the \PMlinkname{definition of torsion}{CurvatureAndTorsion}, we have
+$$N'(s)\cdot B(s) = \tau(s).$$
+This proves equation \eqref{eq:dN}.
+Finally,
+taking derivatives of the relations
+\begin{gather*}
+T(s)\cdot B(s) = 0,\\
+N(s)\cdot B(s) = 0,\\
+B(s)\cdot B(s) =1,  
+\end{gather*}
+and making use of \eqref{eq:dT} and \eqref{eq:dN}
+gives
+\begin{gather*}
+B'(s) \cdot T(s) = -T'(s)\cdot B(s) = 0,\\
+B'(s) \cdot N(s) = -N'(s)\cdot B(s) = -\tau(s),\\
+B'(s)\cdot B(s) = 0.  
+\end{gather*}
+This proves equation \eqref{eq:dB}.
+
+It is also convenient to describe the Serret-Frenet equations by using
+matrix notation.  Let $F:I \to \SO(3)$ (see - special orthogonal
+group), the mapping defined by
+$$F(s) = (T(s),N(s),B(s)),\quad s\in I$$
+represent the Frenet frame as a $3\times 3$ orthonormal
+matrix.  Equations \eqref{eq:dT} \eqref{eq:dN} \eqref{eq:dB} can be
+succinctly given as
+$$F(s)^{-1} F'(s) = 
+\begin{pmatrix}
+  0 & \kappa(s) & 0 \\
+  -\kappa(s)  & 0 & \tau(s) \\
+  0 & -\tau(s) & 0
+\end{pmatrix}
+$$
+In this formulation, the above relation is also known as the structure
+equations of an oriented space curve.
+%%%%%
+%%%%%
+%%%%%
+\end{document}

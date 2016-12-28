@@ -1,0 +1,102 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CircularHelix}
+\pmcreated{2013-03-22 13:23:25}
+\pmmodified{2013-03-22 13:23:25}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{circular helix}
+\pmrecord{13}{33928}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53A04}
+\pmrelated{SpaceCurve}
+\pmrelated{RightHandedSystemOfVectors}
+\pmdefines{circular helices}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\natnums}{\mathbb{N}}
+\newcommand{\cnums}{\mathbb{C}}
+\newcommand{\znums}{\mathbb{Z}}
+\newcommand{\lp}{\left(}
+\newcommand{\rp}{\right)}
+\newcommand{\lb}{\left[}
+\newcommand{\rb}{\right]}
+\newcommand{\supth}{^{\text{th}}}
+\newtheorem{proposition}{Proposition}
+\newtheorem{definition}[proposition]{Definition}
+
+\newtheorem{theorem}[proposition]{Theorem}
+
+\newcommand{\be}{\mathbf{e}}
+\newcommand{\bg}{\boldsymbol{\gamma}}
+\newcommand{\dbg}{\bg'}
+\newcommand{\ddbg}{\bg''}
+\newcommand{\dddbg}{\bg'''}
+\newcommand{\der}[1]{#1{}'}
+\newcommand{\bT}{\mathbf{T}}
+\newcommand{\bN}{\mathbf{N}}
+\newcommand{\bB}{\mathbf{B}}
+\begin{document}
+The space curve traced out by the parameterization
+$$\bg(t)=\left[\begin{array}{c}a \cos(t)\\ a\sin
+    (t)\\ bt\end{array}\right],\quad t\in \reals,\; a,b\in\reals$$
+is called a \emph{circular helix} (plur. {\em helices}).  
+
+Its Frenet frame is:
+\begin{align*}
+  \bT &= \frac{1}{\sqrt{a^2+b^2}} \begin{bmatrix} -a\sin t \\
+  \hphantom{-}a\cos t \\b\end{bmatrix}\,,\\
+  \bN &= \begin{bmatrix} -\cos t \\ -\sin t \\ 0 \end{bmatrix}\,,\\
+  \bB &= \frac{1}{\sqrt{a^2+b^2}} \begin{bmatrix} \hphantom{-}b\sin t \\
+  -b\cos t \\ a\end{bmatrix}\,.
+\end{align*}
+Its curvature and torsion are the following constants:
+\begin{align*}
+  \kappa = \frac{a}{a^2+b^2}\,, \quad
+  \tau = \frac{b}{a^2+b^2}\,.
+\end{align*}
+
+A circular helix can be conceived of as a space curve with constant,
+non-zero curvature, and constant, non-zero torsion.  Indeed, one can
+show that if a space curve satisfies the above constraints, then there
+exists a system of Cartesian coordinates in which the curve has a
+parameterization of the form shown above.
+
+\begin{figure}
+\begin{center}
+\includegraphics{helix2.eps}
+\caption{A plot of a circular helix with $a = b = 1$, and $\kappa = \tau = 1/2$.}
+\end{center}
+\end{figure}
+
+An important property of the circular helix is that for any point of it, the angle $\varphi$ between its tangent and the helix axis is constant. Indeed, if we consider the position vector of that arbitrary point, we have (where $\mathbf{k}$ is the unit vector parallel to helix axis)
+\begin{align*}
+\frac{d\bg}{dt}\cdot\mathbf{k}=\begin{bmatrix} -a\sin t \\
+\hphantom{-}a\cos t \\ b \end{bmatrix}\begin{bmatrix} 0\; 0\; 1\end{bmatrix}=b
+\equiv \bigg\lVert\frac{d\bg}{dt}\bigg\rVert\cos\varphi=\sqrt{a^2+b^2}\cos\varphi.
+\end{align*} 
+Therefore,
+\begin{align*}
+\cos\varphi=\frac{b}{\sqrt{a^2+b^2}} \text{constant},
+\end{align*}
+as was to be shown. 
+
+There is also another parameter, the so-called \emph{pitch of the helix} $P$ which is the separation between two consecutive turns. 
+(It is mostly used in the manufacture of screws.)
+Thus,
+\begin{align*}
+P=\gamma_3(t+2\pi)-\gamma_3(t)= b(t+2\pi)-bt=2\pi b\,,
+\end{align*}
+and $P$ is also a constant.
+
+
+%%%%%
+%%%%%
+\end{document}

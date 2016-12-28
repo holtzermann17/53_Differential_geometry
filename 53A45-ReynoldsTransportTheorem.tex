@@ -1,0 +1,103 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ReynoldsTransportTheorem}
+\pmcreated{2013-03-22 16:00:48}
+\pmmodified{2013-03-22 16:00:48}
+\pmowner{perucho}{2192}
+\pmmodifier{perucho}{2192}
+\pmtitle{Reynolds transport theorem}
+\pmrecord{7}{38048}
+\pmprivacy{1}
+\pmauthor{perucho}{2192}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53A45}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+\usepackage{amsthm}
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem{definition*}{Definition}
+\newtheorem{theorem*}{Reynolds transport theorem}
+\begin{document}
+\paragraph{Introduction}
+{\em Reynolds transport theorem} \cite{cite:Reynolds} is a fundamental theorem used in formulating the basic laws of fluid mechanics. We will enunciate and demonstrate in this entry the referred theorem. For our purpose, let us consider a fluid flow, characterized by its streamlines, in the Euclidean vector space $(\mathbb{R}^3,\lVert\cdot\rVert)$ and embedded on it we consider, a continuum body $\mathscr{B}$ occupying a volume $\mathscr{V}$ whose particles are fixed by their material (Lagrangian) coordinates $\mathbf{X}$, and a region $\Re$ where a control volume $\mathfrak{v}$ is defined whose points are fixed by it spatial (Eulerian) coordinates $\mathbf{x}$ and bounded by the control surface $\partial\mathfrak{v}$. An arbitrary tensor field of any rank is defined over the fluid flow according to the following definition. 
+\begin{definition*} We call an {\em extensive tensor property} to the expression
+\begin{align}
+\Psi(\mathbf{x},t):=
+\int_{\mathfrak{v}}\psi(\mathbf{x},t)\rho(\mathbf{x},t)dv,
+\end{align}
+where $\psi(\mathbf{x},t)$ is the respective {\em intensive tensor property}.
+\end{definition*}
+\paragraph{Theorem's hypothesis}
+The kinematics of the continuum can be described by a diffeomorphism $\chi$ which, at any given instant $t\in [0,\infty)\subset\mathbb{R}$, gives the spatial coordinates $\mathbf{x}$ of the material particle $\mathbf{X}$,
+\begin{align*}
+\mathscr{V}\times[0,\infty)\rightarrow \mathfrak{v}\times[0,\infty), \qquad
+t \mapsto t, \qquad \mathbf{X}\mapsto\mathbf{x}=\chi(\mathbf{X},t).
+\end{align*}
+Indeed the above sentence corresponds to a change of coordinates which must verify
+\begin{align*}
+J=\bigg\vert\frac{\partial{x}_i}{\partial{X}_j}\bigg\vert\equiv
+\big\vert{F_{ij}}\big\vert\neq{0}, \qquad 
+F_{ij}:=\frac{\partial{x}_i}{\partial{X}_j},
+\end{align*} 
+$J$ being the Jacobian of transformation and $F_{ij}$ the Cartesian components of the so-called {\em strain gradient tensor} $\mathbf{F}$.
+\begin{theorem*} 
+The material rate of an extensive tensor property associate to a continuum body $\mathscr{B}$ is equal to the local rate of such property in a control volume $\mathfrak{v}$ plus the efflux of the respective intensive property across its control surface $\partial\mathfrak{v}$. 
+\end{theorem*}
+\begin{proof}
+By taking on Eq.(1) the material time derivative,
+\begin{align*}
+\frac{D\Psi}{Dt}=\dot{\Psi}=\dot{\overline{\int_{\mathfrak{v}}\psi\rho\;dv}}=
+\dot{\overline{\int_{\mathscr{V}}\psi\rho{J}dV}}=
+\int_{\mathscr{V}}\dot{\overline{\psi\rho{J}}}dV=
+\int_{\mathscr{V}}(\dot{\overline{\psi\rho}}J+\psi\rho\dot{J})dV=
+\end{align*}
+\begin{align*}
+\int_{\mathscr{V}}\Big\{J\Big[\frac{\partial}{\partial{t}}(\psi\rho)+
+\mathbf{v}\!\cdot\!\nabla_x(\psi\rho)\Big]+
+\psi\rho\;(J\nabla_x\!\cdot\!\mathbf{v})\Big\}dV=
+\int_{\mathscr{V}}\Big\{\Big[\frac{\partial}{\partial{t}}(\psi\rho)\Big]
++\big[\mathbf{v}\!\cdot\!\nabla_x(\psi\rho)+
+(\psi\rho)\nabla_x\!\cdot\!\mathbf{v}\big]\Big\}(JdV)
+\end{align*}
+\begin{align*}
+=\int_{\mathfrak{v}}\frac{\partial}{\partial{t}}(\psi\rho)dv+
+\int_{\mathfrak{v}}\nabla_x\!\cdot\!(\psi\rho\;\mathbf{v})dv=
+\frac{\partial}{\partial{t}}\int_{\mathfrak{v}}\psi\rho\,dv+
+\int_{\partial\mathfrak{v}}\psi\rho\,\mathbf{v}\!\cdot\!\mathbf{n}\,da,
+\end{align*}
+since $\partial_t(dv)=0$ ($\mathbf{x}$ fixed) on the first integral and by applying the Gauss-Green divergence theorem on the second integral at the left-hand side. Finally, by substituting Eq.(1) on the first integral at the right-hand side, we obtain
+\begin{align}
+\dot{\Psi}=\frac{\partial\Psi}{\partial{t}}+
+\int_{\partial\mathfrak{v}}\psi\rho\,\mathbf{v}\!\cdot\!\mathbf{n}\,da,
+\end{align}
+endorsing the theorem statement.
+\end{proof}
+\begin{thebibliography}{1}
+\bibitem{cite:Reynolds}
+O. Reynolds, {\em Papers on mechanical and physical subjects-the sub-mechanics of the Universe,} Collected Work, Volume III, Cambridge University Press, 1903.
+\end{thebibliography} 
+
+
+%%%%%
+%%%%%
+\end{document}

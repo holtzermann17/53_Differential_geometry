@@ -1,0 +1,115 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SingularPointsOfPlaneCurve}
+\pmcreated{2013-03-22 17:56:58}
+\pmmodified{2013-03-22 17:56:58}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{singular points of plane curve}
+\pmrecord{11}{40448}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53A04}
+\pmclassification{msc}{51N05}
+\pmrelated{Cusp}
+\pmdefines{ordinary cusp}
+\pmdefines{ramphoid cusp}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+\usepackage{pstricks}
+\usepackage{pst-plot}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{side} \PMlinkescapeword{sides}
+
+The points of a plane curve
+ $$x \;=\; x(t), \quad y \;=\; y(t)$$
+in which both derivatives $x'(t)$ and $y'(t)$ vanish, are in general singular points of this curve.  For studying such points we suppose that
+ $$x'(t_0) \;=\; y'(t_0) \;=\; 0$$ 
+and that $x(t)$ and $y(t)$ have in a neighbourhood of $t_0$ the derivatives of all \PMlinkname{orders}{HigherOrderDerivatives}.\, Thus we have the Taylor expansions
+\begin{align}
+\begin{cases}
+x(t) \;=\; x_0+a_2(t\!-\!t_0)^2+a_3(t\!-\!t_0)^3+\ldots\\
+y(t) \;=\; y_0+b_2(t\!-\!t_0)^2+b_3(t\!-\!t_0)^3+\ldots,
+\end{cases}
+\end{align}
+where\, $x_0 = x(t_0),\;\, y_0 = y(t_0)$.
+
+Assume now that $a_2$ and $b_2$ are not both 0.\, Then the slope of the chord (secant line) between the points \,$(x_0,\,y_0)$\, and\, $(x,\,y)$\, is\, $m = (y-y_0)\!:\!(x-x_0)$\, and by (1) its limit as\, $t \to t_0$\, equals $\frac{b_2}{a_2}$ (or the limit of $1/m$ is $\frac{a_2}{b_2}$).\, Accordingly, the curve has in the point \,$(x_0,\,y_0)$\, a definite tangent line (which may be vertical if\, $a_2 = 0$).\, From the expression
+ $$y\!-\!y_0 \;=\; b_2(t\!-\!t_0)^2+b_3(t\!-\!t_0)^3+\ldots$$
+one sees that when $|t\!-\!t_0|$ is sufficiently small, the difference $y\!-\!y_0$ of the ordinates has the same sign as $b_2$, i.e. the sign is the same on both sides of $t_0$.\, This means that the curve has a cusp at the point.
+
+If the slope angle of the tangent line is $\alpha$, we have
+ $$\sin\alpha \;=\; \frac{b_2}{\sqrt{a_2^2\!+\!b_2^2}}, \quad \cos\alpha \;=\; \frac{a_2}{\sqrt{a_2^2\!+\!b_2^2}}.$$
+We can form the projection of the chord to the normal line of the tangent, obtaining
+\begin{align}
+(x\!-\!x_0)\cos(\alpha\!+\!\frac{\pi}{2})+(y\!-\!y_0)\sin(\alpha\!+\!\frac{\pi}{2}) 
+\;=\; \frac{(a_2b_3\!-\!a_3b_2)(t\!-\!t_0)^3\!+\!(a_2b_4\!-\!a_4b_2)(t\!-\!t_0)^4\!+\ldots}{\sqrt{a_2^2\!+\!b_2^2}}.
+\end{align}
+
+\begin{itemize} 
+\item The case\, $a_2b_3\!-\!a_3b_2 \neq 0$.\, When $|t\!-\!t_0|$ is sufficiently small, the expression (2) of the projection changes its sign at the same time as $t\!-\!t_0$ (due to the third power).\, Thus the two branches of the curve are on different sides of the tangent line.\, One speaks of a {\em ordinary cusp}.
+\item The case\, $a_2b_3\!-\!a_3b_2 = 0$\, but\, $a_2b_4\!-\!a_4b_2 \neq 0$.\, The expansion (2) begins with the term with the even power $(t\!-\!t_0)^4$, the projection keeps its sign as $t$ passes through $t_0$.\, Therefore the both branches are on the same side of the tangent line.\, Now there is a {\em ramphoid cusp} (in German {\em die Schnabelspitze}) on the curve.\\
+\end{itemize}
+
+
+\textbf{Example.}\, Examine the singular points of the \PMlinkname{algebraic}{AlgebraicFunction} curve
+ $$(y\!-\!x^2)^2 \;=\; x^5.$$
+Let us take the ratio \,$\displaystyle\frac{y}{x^2} =: t$\, as the parametre.\, This yields first\,  
+$(x^2t\!-\!x^2)^2 = x^5$;\, dividing by $x^4$ gives the parametric presentation
+\begin{align*}
+\begin{cases}
+x \;=\; (t\!-\!1)^2,\\
+y = (t\!-\!1)^4t.
+\end{cases}
+\end{align*}
+The derivatives\, $\frac{dx}{dt} = 2(t\!-\!1)$\, and\, $\frac{dy}{dt} = 4(t\!-\!1)^3t+(t\!-\!1)^4$\, have the common \PMlinkname{zero}{ZeroOfAFunction} \,$t = 1$,\, whence there is a cusp in the point \,$(0,\,0)$.\, Now the Taylor expansions in\, $t = 1$\, are the polynomials
+\begin{align*}
+\begin{cases}
+x \;=\; (t\!-\!1)^2,\\
+y \;=\; (t\!-\!1)^4(1\!+\!(t\!-\!1)) \;=\; (t\!-\!1)^4+(t\!-\!1)^5.
+\end{cases}
+\end{align*}
+Thus\, $a_2 = b_4 = b_5 =1,\;\, a_3 = a_4 = b_2 = b_3 =0$,\, and accordingly\, $a_2b_3\!-\!a_3b_2 = 0$,\; $a_2b_4\!-\!a_4b_2 = 1 \neq 0$.\, It is a question of a ramphoid cusp.\, Both branches start from the origin to the \PMlinkescapetext{right}, their common tangent is the $x$-axis.\, Note that the curve may be given in the form\, $y = x^2(1\pm\sqrt{x})$.
+
+\begin{center}
+\psset{unit=3cm}
+\begin{pspicture}(-0.5,-1.5)(2.5,2.5)
+\psaxes[Dx=1,Dy=1]{->}(0,0)(-0.5,-1.5)(2.5,2.5)
+\rput(2.5,-0.1){$x$}
+\rput(0.1,2.5){$y$}
+\rput(-0.12,-0.12){$0$}
+\psdot[linecolor=blue](0,0)
+\psplot[linecolor=blue]{0.0}{1.1}{x x mul x 2.5 exp add}
+\psplot[linecolor=blue]{0.0}{1.5}{x x mul x 2.5 exp sub}
+\end{pspicture}
+\end{center}
+
+%%%%%
+%%%%%
+\end{document}

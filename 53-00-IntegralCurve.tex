@@ -1,0 +1,86 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{IntegralCurve}
+\pmcreated{2013-03-22 15:16:31}
+\pmmodified{2013-03-22 15:16:31}
+\pmowner{matte}{1858}
+\pmmodifier{matte}{1858}
+\pmtitle{integral curve}
+\pmrecord{5}{37063}
+\pmprivacy{1}
+\pmauthor{matte}{1858}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53-00}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+
+ \usepackage{bbm}
+ \newcommand{\Z}{\mathbbmss{Z}}
+ \newcommand{\C}{\mathbbmss{C}}
+ \newcommand{\F}{\mathbbmss{F}}
+ \newcommand{\R}{\mathbbmss{R}}
+ \newcommand{\Q}{\mathbbmss{Q}}
+
+
+
+\newcommand*{\norm}[1]{\lVert #1 \rVert}
+\newcommand*{\abs}[1]{| #1 |}
+
+
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+\begin{document}
+{\bf Definition} 
+Suppose $M$ is a smooth manifold, and $X$ is a 
+smooth vector field on $M$. Then an {\bf integral curve} of $X$ through 
+a point $x\in M$ is a curve $c\colon I\to M$, such that 
+\begin{eqnarray*}
+ c'(t) &=& (X\circ c)(t), \,\,\,\,\,\,\,\mbox{for all $t$ in $I$}\\
+ c(0) &=& x.
+\end{eqnarray*}
+Here $I\subset \sR$ is some open  interval of $0$, and $c'(t)$ is
+the tangent vector in $T_{c(t)}M$ represented by the curve.
+
+Suppose $x^i$ are local coordinates for $M$, $c^i$ are functions
+representing $c$ in these local coordinates, and 
+   $X=X^i \frac{\partial}{\partial x^i}$. Then the condition on $c$
+is 
+$$
+   \frac{dc^i}{dt}(t) = X^i\circ c(t), \quad \mbox{for all $t$}.
+$$
+%%%%%
+%%%%%
+\end{document}

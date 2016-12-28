@@ -1,0 +1,87 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{IntegralManifold}
+\pmcreated{2013-03-22 14:52:00}
+\pmmodified{2013-03-22 14:52:00}
+\pmowner{jirka}{4157}
+\pmmodifier{jirka}{4157}
+\pmtitle{integral manifold}
+\pmrecord{6}{36542}
+\pmprivacy{1}
+\pmauthor{jirka}{4157}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53B25}
+\pmclassification{msc}{52-00}
+\pmclassification{msc}{37C10}
+\pmrelated{FrobeniussTheorem}
+\pmdefines{completely integrable}
+\pmdefines{completely integrable distribution}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{theorem}
+\newtheorem*{thm}{Theorem}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{conj}{Conjecture}
+\newtheorem*{cor}{Corollary}
+\newtheorem*{example}{Example}
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\begin{document}
+In the following we will \PMlinkescapetext{mean} $C^\infty$ when we say smooth.
+
+\begin{defn}
+Let $M$ be a smooth manifold of dimension $m$ and let $\Delta$ be a
+distribution of dimension $n$ on $M$.  Suppose that $N$ is a connected
+submanifold of $M$ such that for every $x \in N$ we have that
+$T_x(N)$ (the tangent space of $N$ at $x$) is contained in $\Delta_x$
+(the distribution at $x$).  We can abbreviate this by saying that
+$T(N) \subset \Delta$.  We then say that $N$ is an {\em integral manifold}
+of $\Delta$.
+\end{defn}
+
+Do note that $N$ could be of lower dimension then $\Delta$
+and is not required to be a regular submanifold of $M$.
+
+\begin{defn}
+We say that a distribution $\Delta$ of dimension $n$ on $M$
+is {\em completely integrable} if for
+each point $x \in M$ there exists an integral manifold $N$ of $\Delta$ 
+passing through $x$ such that the dimension of $N$ is equal to the dimension
+of $\Delta$.
+\end{defn}
+
+An example of an integral manifold is the integral curve
+of a non-vanishing vector field and then of course the span of the
+vector field is a completely integrable distribution.
+
+\begin{thebibliography}{9}
+\bibitem{boothby}
+William M.\@ Boothby.
+{\em \PMlinkescapetext{An Introduction to Differentiable Manifolds and
+Riemannian Geometry}},
+Academic Press, San Diego, California, 2003.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

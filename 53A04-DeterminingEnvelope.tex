@@ -1,0 +1,105 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DeterminingEnvelope}
+\pmcreated{2013-03-22 17:10:48}
+\pmmodified{2013-03-22 17:10:48}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{determining envelope}
+\pmrecord{10}{39494}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53A04}
+\pmclassification{msc}{51N20}
+\pmclassification{msc}{26B05}
+\pmclassification{msc}{26A24}
+%\pmkeywords{envelope}
+\pmrelated{SingularSolution}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\textbf{Theorem.}\; Let $c$ be the parameter of the family\, $F(x,\,y,\,c) = 0$\, of curves and suppose that the function $F$ has the partial derivatives $F'_x$, $F'_y$ and $F'_c$ in a certain domain of $\mathbb{R}^3$.\, If the family has an envelope $E$ in this domain, then the coordinates $x,\,y$ of an arbitrary point of $E$ and the value $c$ of the parameter determining the family member touching $E$ in\, $(x,\,y)$\, satisfy the pair of equations
+\begin{align}
+\begin{cases}
+  F(x,\,y,\,c) = 0,\\
+  F'_c(x,\,y,\,c) = 0.
+\end{cases}
+\end{align}
+I.e., one may in principle eliminate $c$ from such a pair of equations and obtain the equation of an envelope.\\
+
+\textbf{Example 1.}\, Let us determine the envelope of the the family
+\begin{align}
+y = Cx+\frac{Ca}{\sqrt{1+C^2}}
+\end{align}
+of lines, with $C$ the parameter ($a$ is a positive constant).\, Now the pair (1) for the envelope may be written
+\begin{align}
+ F(x,\,y,\,C)\, := \,Cx-y+\frac{Ca}{\sqrt{1+C^2}} = 0,\quad
+ F'_C(x,\,y,\,C) \equiv x+\frac{a}{(1+C^2)\sqrt{1+C^2}} = 0.
+\end{align}
+It's easier to first eliminate $x$ by taking its expression from the second equation and putting it to the first equation.\, It follows the expression\, $y = \frac{C^3a}{(1+C^2)\sqrt{1+C^2}}$,\, and so we have the parametric presentation
+$$x= -\frac{a}{(1+C^2)\sqrt{1+C^2}},\quad y = \frac{C^3a}{(1+C^2)\sqrt{1+C^2}}$$
+of the envelope.\, The parameter $C$ can be eliminated from these equations by squaring both equations, then taking cube roots and adding both equations.\, The result is symmetric equation
+$$\sqrt[3]{x^2}+\sqrt[3]{y^2} = \sqrt[3]{a^2},$$
+which represents an astroid.\, But the parametric form tells, that the envelope consists only of the left half of the astroid.\\
+
+\textbf{Example 2.}\, What is the envelope of the family
+\begin{align}
+y-\frac{1}{2}a^2 = -\frac{1}{4}(x-a)^2,
+\end{align}
+of parabolas, with $a$ the parameter?
+
+With a fixed $a$, the equation presents a parabola which is \PMlinkname{congruent}{Congruence} to the parabola\, $y = -\frac{1}{4}x^2$\, and the apex of which is\, $(a,\,\frac{1}{2}a^2)$.\, When $a$ is changed, the parabola is submitted to a translation such that the apex draws the parabola\, $y = \frac{1}{2}x^2.$
+
+The pair (1) for the envelope of the parabolas (4) is simply
+$$y-\frac{1}{2}a^2+\frac{1}{4}(x-a)^2 = 0,\quad x = -a,$$
+which allows immediately eliminate $a$, giving
+\begin{align}
+y = -\frac{1}{2}x^2.
+\end{align}
+Thus the envelope of the parabolas is a ``narrower'' parabola.\, One infers easily, that a parabola (4) touches the envelope (5) in the point\, $(-a,\,-\frac{1}{2}a^2)$\, which is symmetric with the apex of (4) with respect to the origin.\\
+
+The converse of the above theorem is not true.  In fact, we have the 
+
+\textbf{Proposition.}\, The curve
+\begin{align}
+x = x(c),\quad y = y(c),
+\end{align}
+given in this parametric form and satisfying the condition (1), is not necessarily the envelope of the family\, $F(x,\,y,\,c) = 0$\, of curves, but may as well be the locus of the special points of these curves, namely in the case that the functions (6) satisfy except (1) also both of the equations
+$$F'_x(x,\,y,\,c) = 0,\quad F'_y(x,\,y,\,c) = 0.$$\\
+
+\textbf{Examples.}\, Let's look some simple cases illustrating the above proposition.
+
+a) The family\, $(x-c)^2-y = 0$\, consists of congruent parabolas having their vertices on the $x$-axis.\, Differentiating the equation with respect to $c$ gives\, $x-c = 0$,\, and thus the corresponding pair (1) yields the result\, $x = c,\; y = 0$,\, i.e. the $x$-axis, which also is the envelope.
+
+b) In the case of the family\, $(x-c)^2-y^3 = 0$\, (or\, $y = \sqrt[3]{(x-c)^2}$) the pair (1) defines again the $x$-axis, which now isn't the envelope but the locus of the special points (sharp vertices) of the curves.
+
+c) The third family\, $(x-c)^3-y^2 = 0$\, of the semicubical parabolas also gives from (1) the $x$-axis, which this time is simultaneously the envelope of the curves and the locus of the special points.
+%%%%%
+%%%%%
+\end{document}

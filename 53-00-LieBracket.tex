@@ -1,0 +1,87 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LieBracket}
+\pmcreated{2013-03-22 14:10:02}
+\pmmodified{2013-03-22 14:10:02}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{Lie bracket}
+\pmrecord{10}{35591}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53-00}
+\pmrelated{HamiltonianAlgebroids}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+
+% The below lines should work as the command
+% \renewcommand{\bibname}{References}
+% without creating havoc when rendering an entry in 
+% the page-image mode.
+\makeatletter
+\@ifundefined{bibname}{}{\renewcommand{\bibname}{References}}
+\makeatother
+
+\newcommand*{\norm}[1]{\lVert #1 \rVert}
+\newcommand*{\abs}[1]{| #1 |}
+
+\begin{document}
+The Lie bracket is an anticommutative, bilinear, first order differential operator on vector fields.  It may be defined either in terms of local coordinates or in a global, coordinate-free fashion.  Though both defintions are prevalent, it is perhaps easier to formulate the Lie Bracket without the use of coordinates at all, as a commutator:
+
+{\bf Definition} (Global, coordinate-free) Suppose $X$ and $Y$ are vector fields on a smooth manifold $M$.  Regarding these vector fields as operators on functions, the Lie bracket is their commutator:
+\begin{align*}
+[X,Y](f)=X(Y(f))-Y(X(f)).
+\end {align*}
+
+{\bf Definition} (Local coordinates) Suppose $X$ and $Y$ are vector fields on a smooth $n$-dimensional manifold $M$,
+suppose $(x^1,\ldots, x^n)$ are local coordinates around some point $x\in M$, 
+and suppose that in these local coordinates
+\begin{eqnarray*}
+X(x)&=&X^i(x) \frac{\partial}{\partial x^i}\Big|_x, \\
+Y(x)&=&Y^i(x) \frac{\partial}{\partial x^i}\Big|_x.
+\end{eqnarray*}
+Then the \emph{Lie bracket} of the above vector fields is the locally defined vector field
+$$[X,Y](x) = X^i \frac{\partial Y^j}{\partial x^i} \frac{\partial}{\partial x^j}\Big|_x-Y^i \frac{\partial X^j}{\partial x^i} \frac{\partial}{\partial x^j}\Big|_x.$$
+(The Einstein summation convention employed in the above equations ---
+repeated indices are to be summed from the range 1 to $n$.)
+
+\subsubsection*{Properties}
+Suppose $X,Y,Z$ are smooth vector fields on a smooth manifold $M$. 
+\begin{itemize}
+ \item $[X,Y]=\mathcal{L}_XY$ where $\mathcal{L}_XY$ is the Lie derivative.
+ \item $[\cdot,\cdot]$ is anti-symmetric and bi-linear. 
+\item Vector fields on $M$ with the Lie bracket is a Lie algebra. That is to say, the Lie bracket satisfies the Jacobi identity:
+ \[ [X,[Y,Z]] + [Y,[Z,X]] + [Z,[X,Y]]=0. \]
+\item The Lie bracket is covariant with respect to changes of coordinates.
+ \end{itemize}
+
+%%%%%
+%%%%%
+\end{document}

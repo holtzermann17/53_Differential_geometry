@@ -1,0 +1,97 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CharacteristicPolynomialOfASymplecticMatrixIsAReciprocalPolynomial}
+\pmcreated{2013-03-22 15:33:18}
+\pmmodified{2013-03-22 15:33:18}
+\pmowner{matte}{1858}
+\pmmodifier{matte}{1858}
+\pmtitle{characteristic polynomial of a symplectic matrix is a reciprocal polynomial}
+\pmrecord{7}{37455}
+\pmprivacy{1}
+\pmauthor{matte}{1858}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53D05}
+\pmrelated{ReciprocalPolynomial}
+\pmrelated{CharacteristicPolynomialOfAOrthogonalMatrixIsAReciprocalPolynomial}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+
+ \usepackage{bbm}
+ \newcommand{\Z}{\mathbbmss{Z}}
+ \newcommand{\C}{\mathbbmss{C}}
+ \newcommand{\F}{\mathbbmss{F}}
+ \newcommand{\R}{\mathbbmss{R}}
+ \newcommand{\Q}{\mathbbmss{Q}}
+
+
+
+\newcommand*{\norm}[1]{\lVert #1 \rVert}
+\newcommand*{\abs}[1]{| #1 |}
+
+
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+\begin{document}
+\begin{thm}
+The characteristic polynomial of a symplectic matrix is a reciprocal polynomial.
+\end{thm}
+
+\begin{proof}
+Let $A$ be the symplectic matrix, and let
+$p(\lambda) = \det(A-\lambda I)$ be
+its characteristic polynomial. We wish to prove that
+$$
+p(\lambda) = \pm \lambda^n p(1/\lambda).
+$$
+By definition, $AJA^T=J$ where $J$ is the matrix
+$$
+J=\left( \begin{array}{cc}
+0 & I \\
+-I & 0
+\end{array} \right).
+$$
+Since $A$ and $J$ are symplectic matrices, their determinants are $1$, and
+\begin{eqnarray*}
+p(\lambda) &=& \det (AJ - \lambda J) \\
+           &=&\det (AJ - \lambda AJA^T) \\
+           &=&\det (-\lambda A) \det (J) \det (-\frac{1}{\lambda} J + JA^T) \\
+           &=&\pm \lambda^n \det (A-\frac{1}{\lambda} I ).
+\end{eqnarray*}
+as claimed.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

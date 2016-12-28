@@ -1,0 +1,62 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GeodesicCompleteness}
+\pmcreated{2013-06-03 13:04:01}
+\pmmodified{2013-06-03 13:04:01}
+\pmowner{jacou}{1000048}
+\pmmodifier{unlord}{1}
+\pmtitle{geodesic completeness}
+\pmrecord{14}{42594}
+\pmprivacy{1}
+\pmauthor{jacou}{1}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53C22}
+%\pmkeywords{Hopf-Rinow Theorem}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+
+% making logically defined graphics
+%\usepackage{xypic}
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+A Riemannian metric on a manifold $M$ is said to be {\bf geodesically complete} iff its geodesic flow is a complete flow,
+i.e. iff for every point $p\in M$ and every tangent vector $v\in T_pM$ at $p$ the solution to the geodesic equation
+$$
+\nabla_{\dot{\gamma}}\dot{\gamma}=0
+$$
+with initial condition $\gamma(0)=p$, $\dot{\gamma}(0)=v$ is defined for all time. 
+The Hopf-Rinow theorem
+asserts that a Riemannian metric is complete if and only if the corresponding metric on $M$ defined by
+$$
+   d(p,q)\colon=\inf\{L(c), \; c\colon[0,1]\to M,\; c(0)=p,\; c(1)=q\}
+$$
+is a complete metric (i.e. Cauchy sequences converge). Here $L(c)$ denote the length of the smooth curve $c$, i.e.
+$$
+   L(c)\colon=\int_0^1 \|\dot{c}(t)\|_{c(t)} \,dt
+$$
+For a proof of the Hopf-Rinow theorem see Milnor's monograph {\em Morse Theory} 
+Princeton Annals of Math Studies {\bf 51} page 62.
+
+
+%%%%%
+%%%%%
+\end{document}

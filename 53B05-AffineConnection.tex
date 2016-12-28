@@ -1,0 +1,48 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AffineConnection}
+\pmcreated{2013-03-22 14:36:53}
+\pmmodified{2013-03-22 14:36:53}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{affine connection}
+\pmrecord{5}{36191}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53B05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+An affine connection is a connection defined on the tangent bundle of a manifold.  Such connections enjoy many properties which are not true of connections on other bundles.  The reason for this goes back to the fact that to define a connection, one needs to consider two vector spaces, the tangent space and the fiber space.  In the case of an affine connection, these two spaces are the same, and this leads to possibilities which one would not have when the spaces were distinct.
+
+Perhaps the most important property of affine connections is that they allow one to define geodesics.  Because the defining equation of a geodesic involves the covariant derivative of a tangent vector field, only affine connections give rise to geodesics.  Furthermore, the converse is true:  An affine connection is uniquely determined by the set of its geodesic curves.
+
+Given an affine connection, one can obtain another affine connection by interchanging the role of the vector which specifies direction of parallel transport and the vector being transported.  In local coordinates, an expression for this new connection is
+ $${C'}^i_{jk} = C^i_{kj}$$
+Since the difference of two connections is a tensor field, one has a tensor field, known as the torsion tensor, associated to every affine connection. 
+ $$T^i_{jk} = C^i_{jk} - C^i_{kj}$$
+%%%%%
+%%%%%
+\end{document}

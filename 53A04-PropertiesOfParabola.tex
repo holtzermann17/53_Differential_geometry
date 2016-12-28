@@ -1,0 +1,144 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PropertiesOfParabola}
+\pmcreated{2013-03-22 18:54:05}
+\pmmodified{2013-03-22 18:54:05}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{properties of parabola}
+\pmrecord{17}{41749}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53A04}
+\pmclassification{msc}{51N20}
+\pmrelated{ThreeTheoremsOnParabolas}
+\pmrelated{PropertiesOfEllipse}
+\pmrelated{Hyperbola2}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+\usepackage{mathrsfs}
+\usepackage{pstricks}
+\usepackage{pst-plot}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+
+ \usepackage{bbm}
+ \newcommand{\Z}{\mathbbmss{Z}}
+ \newcommand{\C}{\mathbbmss{C}}
+ \newcommand{\F}{\mathbbmss{F}}
+ \newcommand{\R}{\mathbbmss{R}}
+ \newcommand{\Q}{\mathbbmss{Q}}
+
+
+
+\newcommand*{\norm}[1]{\lVert #1 \rVert}
+\newcommand*{\abs}[1]{| #1 |}
+
+
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+\begin{document}
+Let us consider the parabola
+\begin{align}
+y \;=\; \frac{x^2}{2p}
+\end{align}
+where $2p$ is the latus rectum (a.k.a. parametre), i.e. the double distance of the focus from the directrix.\\
+
+\textbf{1.}\, Cut the parabola with the family
+\begin{align}
+y \;=\; mx\!+\!k
+\end{align}
+of parallel lines ($m$ is \PMlinkname{constant}{Polynomial}).\, Substituting the right hand side of (2) into (1) yields the quadratic equation
+$$x^2-2mpx-2kp \;=\; 0$$
+which determines the abscissas of the intersection points.\, By the properties of quadratic equations, the sum of abscissas of both points is $2mp$ and thus their arithmetic mean is $mp$.\, This means that the midpoint of the chord cut by the parabola from the line (2) has the constant abscissa
+\begin{align}
+x_0 \;=\; mp.
+\end{align}
+Accordingly, \emph{all midpoints of parallel chords of parabola are on a line parallel to the axis of parabola}.\\
+
+\textbf{2.}\, In the case the line (2) is a tangent of the parabola, the midpoint $P_0$ of the chord coincides with the point of tangency, having the abscissa $x_0$.\, Thus the slope of the tangent is by (3) equal
+$$m_t \;=\; \frac{x_0}{p}$$
+and therefore the equation of the tangent is
+$$y\!-\!y_0 \;=\; \frac{x_0}{p}(x\!-\!x_0) \;\equiv\; \frac{x_0x}{p}-2\!\cdot\!\frac{x_0^2}{2p} 
+\;\equiv\; \frac{x_0x}{p}-2y_0.$$
+This is simplified to
+\begin{align}
+y\!+\!y_0 \;=\; \frac{x_0x}{p}
+\end{align}
+(cf. tangent of conic section).\\
+
+
+\textbf{3.}\, The tangent (4) cuts the axis of the parabola in the point $T$ whose ordinate is $-y_0\,(\leqq\, 0)$.\, If 
+$F$ is the focus and $N$ the projection of $P_0$ on the directrix, we have
+$$TF \;=\; y_0+\frac{p}{2} \;=\; P_0N \;=\; P_0F$$
+(the last equality by the definition of parabola).\, Thus we see that the quadrilateral $P_0FTN$ is a rhombus.\, Therefore its diagonals bisect and intersect each other perpendicularly (in the point $M$ on the $x$-axis).\, Consequently, we get the following two results.\\
+
+\emph{The projection of the focus on any tangent of parabola is on the tangent whose point of tangency is the apex of the parabola.}\\
+
+\emph{The tangent of parabola forms equal angles with the axis and the focal radius drawn to the point of tangency.}
+
+
+\begin{center}
+\begin{pspicture}(-5,-3.5)(5,7)
+\psaxes[Dx=10,Dy=10]{->}(0,0)(-4.5,-3)(4.5,5)
+\rput(4.6,-0.2){$x$}
+\rput(0.2,5.1){$y$}
+\psplot[linecolor=blue]{-4}{4}{x x mul 4 div}
+\psline (-4,-1)(4,-1)
+\psline[linecolor=blue](4,3.75)(-0.4,-2.85)
+\psline(0,1)(3,2.25)
+\psline(3,2.25)(3,-1)(0,-2.25)
+\psline(0,1)(3,-1)
+\psline[linestyle=dotted](0,2.25)(3,2.25)
+\psdots(0,1)(3,2.25)(3,-1)(0,-2.25)(1.5,0)
+\rput(0.23,1.3){$F$}
+\rput(-0.2,2.25){$y_0$}
+\rput(-0.4,-2.2){$-y_0$}
+\rput(0.23,-2.4){$T$}
+\rput(3.3,2.25){$P_0$}
+\rput(3.2,-1.2){$N$}
+\rput(1.8,0.2){$M$}
+\rput(-2.8,-1.3){directrix}
+\rput(-3,4){$y\,=\,\frac{x^2}{2p}$}
+\end{pspicture}
+\end{center}
+
+\begin{thebibliography}{8}
+\bibitem{LP}{\sc Lauri Pimi\"a}: {\em Analyyttinen geometria}.\, Werner S\"oderstr\"om Osakeyhti\"o, Porvoo and Helsinki (1958).
+\end{thebibliography} 
+
+
+%%%%%
+%%%%%
+\end{document}

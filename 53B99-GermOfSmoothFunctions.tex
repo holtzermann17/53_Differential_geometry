@@ -1,0 +1,47 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GermOfSmoothFunctions}
+\pmcreated{2013-03-22 13:05:08}
+\pmmodified{2013-03-22 13:05:08}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{germ of smooth functions}
+\pmrecord{4}{33501}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53B99}
+%\pmkeywords{vector fields}
+%\pmkeywords{local functions}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+If $x$ is a point on a smooth manifold $M$, then a {\em germ of smooth functions near $x$} is represented by a pair $(U,f)$ where $U \subseteq M$ is an open neighbourhood of $x$, and $f$ is a smooth function $U \rightarrow \mathbb{R}$. Two such pairs $(U,f)$ and $(V,g)$ are considered equivalent if there is a third open neighbourhood $W$ of $x$, contained in both $U$ and $V$, such that $f|_W=g|_W$. To be precise, a germ of smooth functions near $x$ is an equivalence class of such pairs. 
+
+In more fancy language: the set $\mathcal{O}_x$ of germs at $x$ is the stalk at $x$ of the sheaf $\mathcal{O}$ of smooth functions on $M$. It is clearly an $\mathbb{R}$-algebra.
+
+Germs are useful for defining the tangent space $T_x M$ in a coordinate-free manner: it is simply the space of all $\mathbb{R}$-linear maps $X:\mathcal{O}_x \rightarrow \mathbb{R}$ satisfying Leibniz' rule $X(fg)=X(f)g+fX(g)$. (Such a map is called an $\mathbb{R}$-linear derivation of $\mathcal{O}_x$ with values in $\mathbb{R}$.)
+%%%%%
+%%%%%
+\end{document}

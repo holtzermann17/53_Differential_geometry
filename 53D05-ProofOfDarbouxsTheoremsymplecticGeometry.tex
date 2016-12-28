@@ -1,0 +1,102 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfDarbouxsTheoremsymplecticGeometry}
+\pmcreated{2013-03-22 14:09:55}
+\pmmodified{2013-03-22 14:09:55}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{proof of Darboux's theorem (symplectic geometry)}
+\pmrecord{8}{35589}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53D05}
+%\pmkeywords{Moser trick}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\R}{\mathbb{R}^{2n}}
+\begin{document}
+We first observe that it suffices to prove the theorem for symplectic
+forms defined on an open neighbourhood of $0 \in \R$.
+
+Indeed, if we have a symplectic manifold $(M, \eta)$, and a point
+$x_0$, we can take a (smooth) coordinate chart about $x_0$.  We can then
+use the coordinate function to push $\eta$ forward to a symplectic form
+$\omega$ on a neighbourhood of $0$ in $\R$.  If the result holds on $\R$,
+we can compose the coordinate chart with the resulting symplectomorphism to
+get the theorem in general.
+
+Let $\omega_0 = \sum_{i=1}^{n} dx_i \wedge dy_i$.  Our goal is then to find a (local) diffeomorphism $\Psi$ so that $\Psi(0) = 0$ and $\Psi^*\omega_0 = \omega$.
+
+Now, we recall that $\omega$ is a non--degenerate two--form.  Thus, on
+$T_{0} \R$, it is a non--degenerate anti--symmetric bilinear form.  By a linear change of basis, it can be put in the standard form.  So, we
+may assume that $\omega(0) = \omega_0(0)$.
+
+We will now proceed by the ``Moser trick''.  Our goal is to find a
+diffeomorphism $\Psi$ so that $\Psi(0) = 0$ and $\Psi^*\omega =
+\omega_0$.
+We will obtain this diffeomorphism as the time--$1$ map of the
+flow of an ordinary differential equation.  We will see this as the
+result of a deformation of $\omega_0$.
+
+Let $\omega_t = t \omega_0 + (1-t) \omega$.
+Let $\Psi_{t}$ be the time $t$ map of the differential equation
+ $$\frac{d}{dt} \Psi_t(x) = X_t(\Psi_t(x))$$
+in which $X_t$ is a vector field determined by a condition to be stated later.  
+
+We will make the ansatz $$\Psi_{t}^* \omega = \omega_t.$$
+
+Now, we differentiate this \PMlinkescapetext{identity}:
+$$ 0 = \frac{d}{dt} \Psi_t^*\omega_t = \Psi_t^*( L_{X_t}\omega_t +
+\frac{d}{dt} \omega_t). $$
+
+($L_{X_t}\omega_t$ denotes the Lie derivative of $\omega_t$ with respect
+to the vector field $X_t$.)
+
+By applying Cartan's identity and recalling that $\omega$ is closed, we
+obtain :
+$$ 0 = \Psi_t^*(d \iota_{X_t} \omega_t + \omega - \omega_0) $$
+
+Now, $\omega - \omega_0$ is closed, and hence, by Poincar\'e's Lemma,
+locally exact.	So, we can write $\omega - \omega_0 = - d\lambda$.
+
+Thus $$ 0 = \Psi_t^*( d ( i_{X_t} \omega_t - \lambda )) $$
+
+We want to require then $$ i_{X_t} \omega_t = \lambda. $$  Now, we observe that
+$\omega_0 = \omega$ at $0$, so $\omega_t = \omega_0$ at $0$.  Then, as
+$\omega_0$ is non--degenerate, $\omega_t$ will be non--degenerate on an
+open neighbourhood of $0$.  Thus, on this neighbourhood, we may use this to
+define $X_t$ (uniquely!).
+
+We also observe that $X_t(0) = 0$.  Thus, by choosing a sufficiently
+small neighbourhood of $0$, the flow of $X_t$ will be defined for time
+greater than $1$.
+
+All that remains now is to check that this resulting flow has the desired
+properties.  This follows merely by reading our \PMlinkescapetext{derivation} of the ODE,
+backwards.
+%%%%%
+%%%%%
+\end{document}

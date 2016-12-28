@@ -1,0 +1,72 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DerivationOfPappussCentroidTheorem}
+\pmcreated{2013-03-22 19:36:11}
+\pmmodified{2013-03-22 19:36:11}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{derivation of Pappus's centroid theorem}
+\pmrecord{7}{42595}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53A05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\textbf{I.}\, Let $s$ denote the arc rotating about the $x$-axis (and its length) and $R$ be the $y$-coordinate of the centroid of the arc.\, If the arc may be given by the equation
+$$y \;=\; y(x)$$
+where\, $a \le x \le b$, the area of the formed surface of revolution is
+$$A \;=\; 2\pi\!\int_a^b\!y(x)\sqrt{1\!+\![y'(x)]^2}\,dx.$$
+This can be concisely written
+\begin{align}
+A \;=\; 2\pi\!\int_s\!y\,ds
+\end{align}
+since differential-geometrically, the product $\sqrt{1\!+\![y'(x)]^2}\,dx$ is the arc-element.\, We rewrite (1) as
+$$A \;=\; s\cdot2\pi\cdot\frac{1}{s}\!\int_s\!y\,ds.$$
+Here, the last factor is the ordinate of the centroid of the rotating arc, whence we have the result
+$$A \;=\; s \cdot2 \pi R$$
+which states the first Pappus's centroid theorem.\\
+
+
+\textbf{II.}\, For deriving the second Pappus's centroid theorem, we suppose that the region defined by
+$$a \;\le\, x \;\le\; b, \quad 0 \;\le\; y_1(x) \;\le\, y \;\le\; y_2(x),$$
+having the area $A$ and the centroid with the ordinate $R$, rotates about the $x$-axis and forms the solid of revolution with the volume $V$.\, The centroid of the area-element between the arcs\, $y = y_1(x)$\, and\, $y = y_2(x)$\, is $[y_2(x)\!+\!y_1(x)]/2$ when the abscissa is $x$; the area of this element with the width $dx$ is $[y_2(x)\!-\!y_1(x)]\,dx$.\, Thus we get the equation
+$$R \;=\; \frac{1}{A}\int_a^b\frac{y_2(x)\!+\!y_1(x)}{2}[y_2(x)\!-y_1(x)]\,dx$$
+which may be written shortly
+\begin{align}
+R \;=\; \frac{1}{2A}\int_a^b(y_2^2\!-\!y_1^2)\,dx.
+\end{align}
+The volume of the solid of revolution is
+$$V \;=\; \pi\!\int_a^b(y_2^2\!-\!y_1^2)\,dx \;=\; A\cdot2\pi\cdot\frac{1}{2A}\!\int_a^b(y_2^2\!-\!y_1^2)\,dx.$$
+By (2), this attains the form
+$$V \;=\; A\cdot 2\pi R.$$
+
+%%%%%
+%%%%%
+\end{document}

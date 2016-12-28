@@ -1,0 +1,64 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{EuclideanSpaceAsAManifold}
+\pmcreated{2013-03-22 15:29:48}
+\pmmodified{2013-03-22 15:29:48}
+\pmowner{matte}{1858}
+\pmmodifier{matte}{1858}
+\pmtitle{Euclidean space as a manifold}
+\pmrecord{9}{37355}
+\pmprivacy{1}
+\pmauthor{matte}{1858}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53B21}
+\pmclassification{msc}{53B20}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+\usepackage{bbm}
+
+\newcommand{\En}{\mathbbmss{E}^n}
+\newcommand{\V}{\mathbbmss{V}}
+\newcommand{\R}{\mathbbmss{R}}
+\newcommand{\T}{\operatorname{T}}
+\begin{document}
+Let $\En$ be $n$-dimensional Euclidean space, and let $(\V,\langle
+\cdot, \cdot\rangle)$ be the corresponding $n$-dimensional
+inner product space of translation isometries.  Alternatively, we can
+consider Euclidean space as an inner product space that has forgotten
+which point is its origin.  Forgetting even more information, we have
+the structure of $\En$ as a differential manifold.  We can obtain an
+atlas with just one coordinate chart, a Cartesian coordinate system
+$(x^1,\ldots,x^n)$ which gives us a bijection between $\En$ and $\R^n$.  The
+tangent bundle is trivial, with $\T\En \cong \En \times \V.$
+Equivalently, every tangent space $\T_p\En,\; p\in \En$. is isomorphic
+to $\V$.
+
+We can retain a bit more structure, and consider $\En$ as a Riemannian
+manifold by equipping it with the metric tensor
+\begin{eqnarray*}
+g &=& dx^1 \otimes dx^1 + \cdots + dx^n \otimes dx^n \\
+&=& \delta_{ij} dx^i \otimes dx^j.
+\end{eqnarray*}
+We can also describe $g$ in a coordinate-free fashion as
+\[ g(u,v) = \langle u,v\rangle,\quad u,v\in \V.\] 
+\subsubsection*{Properties}
+\begin{enumerate}
+\item Geodesics are straight lines in $\R^n$.
+\item The Christoffel symbols vanish identically.
+\item The Riemann curvature tensor vanish identically.
+\end{enumerate}
+Conversely, we can
+characterize Eucldiean space as a connected, complete Riemannian
+manifold with vanishing curvature and trivial fundamental group.
+%%%%%
+%%%%%
+\end{document}

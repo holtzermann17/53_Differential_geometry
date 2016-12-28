@@ -1,0 +1,133 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Differential}
+\pmcreated{2014-02-23 15:34:46}
+\pmmodified{2014-02-23 15:34:46}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{differential}
+\pmrecord{23}{42097}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53A04}
+\pmclassification{msc}{26A06}
+\pmclassification{msc}{26-03}
+\pmclassification{msc}{01A45}
+\pmsynonym{differential increment}{Differential}
+\pmrelated{Derivative2}
+\pmrelated{LeibnizNotation}
+\pmrelated{ExactDifferentialEquation}
+\pmrelated{ProductAndQuotientOfFunctionsSum}
+\pmrelated{TotalDifferential}
+\pmdefines{differential quotient}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+\usepackage{pstricks}
+\usepackage{pst-plot}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+If a real function $f$ has the derivative at a value $x$ of its argument, 
+then the absolute value of the expression
+$$\frac{f(x\!+\!\Delta x)\!-\!f(x)}{\Delta x}-f'(x)$$
+may be made smaller than any given positive number by making $|\Delta x|$ sufficiently small.\, If we generally denote by $\langle\Delta x\rangle$ an expression having such a property, we can write
+$$\frac{f(x\!+\!\Delta x)\!-\!f(x)}{\Delta x}-f'(x) \;=\; \langle\Delta x\rangle.$$
+This allows us to express the increment of the function \,$f(x\!+\!\Delta x)\!-\!f(x) := \Delta f$\, in the form
+\begin{align}
+\Delta f \;=\; (f'(x)\!+\!\langle\Delta x\rangle)\Delta x \;=\;f'(x)\Delta x+\langle\Delta x\rangle\Delta x.
+\end{align}
+
+This result may be uttered as the
+
+\textbf{Theorem.}\, If the derivative $f'(x)$ exists, then the increment $\Delta f$ of the function corresponding to the increment of the argument from $x$ to $x\!+\!\Delta x$ may be divided into two essentially different parts:\\
+$1^\circ$. One part is proportional to the increment $\Delta x$ of the argument, i.e. it equals this increment multiplied by a coefficient $f'(x)$ which is \PMlinkescapetext{independent} on the increment.\\
+$2^\circ$. The ratio of the other part $\langle\Delta x\rangle\Delta x$ to the increment $\Delta x$ of the argument tends to 0 along with $\Delta x$.
+
+As well, the converse of the theorem is true.\\
+
+
+By Leibniz, the former part $f'(x)\Delta x$ is called the \emph{differential}, or the \emph{differential increment} of the function, and denoted by $df(x)$, briefly $df$.\\
+
+It is easily checked that when one has set the tangent line of the curve at the point \,$(x,\,f(x))$,\,  the differential increment $df(x)$ geometrically means the increment of the ordinate of the \PMlinkescapetext{tangent} corresponding to the transition from the abscissa $x$ to the ascissa $x\!+\!\Delta x$.\\
+
+
+The differential of the identity function ($f(x) \equiv x$,\; $f'(x) \equiv 1$) is
+$$dx \;=\; 1\cdot\Delta x \;=\; \Delta x.$$
+Accordingly, one can without discrepancies denote the increment $\Delta x$ of the variable $x$ by $dx$.\, Therefore, the differential of a function $f$ gets the \PMlinkescapetext{consistent} notation
+\begin{align}
+df(x) \;=\; f'(x)\,dx.
+\end{align}
+It follows
+\begin{align}
+f'(x) \;=\; \frac{df(x)}{dx},
+\end{align}
+in which the \emph{differential quotient} is often replaced using a ``differentiation operator'':
+\begin{align}
+f'(x) \;=\; \frac{d}{dx}f(x)
+\end{align}
+
+\begin{center}
+\psset{unit=2cm}
+\begin{pspicture}(1,-0.5)(6.5,4)
+\psline{->}(2,0)(6.3,0)
+\psplot[linecolor=blue]{2.3}{6}{x x mul 5 div x sub 2 add}
+\psdot(3,0.8)
+\psplot{2.3}{6}{x 0.2 mul 0.2 add}
+\psline(5,0)(5,2)
+\psline[linestyle=dashed](3,0.8)(5,0.8)
+\psline(3,0)(3,0.8)
+\rput(6,3.38){$y=f(x)$}
+\rput(3,-0.15){$x$}
+\rput(5,-0.15){$x\!+\!\Delta x$}
+\rput(4,0.65){$\Delta x$}
+\rput(3,0.96){$P$}
+\rput(5,2.16){$Q$}
+\rput(5.13,1){$df$}
+\rput(1,-0.5){.}
+\rput(6.5,4){.}
+\end{pspicture}
+\end{center}
+
+\textbf{Remark.}\, One can write certain \PMlinkescapetext{formulas} for forming differentials.\, For example, if $f$ and $g$ are two differentiable functions, one has
+\begin{align}
+d(f\!+\!g) \;=\; df\!+\!dg, \;\qquad d(fg) \;=\; fdg+g\,df.
+\end{align}
+Naturally, they seem trivial consequences of the sum rule and the product rule, but they include a deeper contents in the case where $f$ and $g$ depend on more than one variable (see \PMlinkname{total differential}{TotalDifferential}).\\
+As for a composite function, e.g. $h = f\!\circ\!u$, the chain rule and (2) yield
+$$df(u(x)) \;=\; f'(u(x))u'(x)dx \;=\; f'(u(x))du(x),$$
+i.e. simply
+$$dh \;=\; f'(u)du.$$
+
+
+\begin{thebibliography}{9}
+\bibitem{J} {\sc Ernst Lindel\"of}: \emph{Johdatus korkeampaan analyysiin}. Fourth edition. Werner S\"oderstr\"om Osakeyhti\"o, Porvoo ja Helsinki (1956).
+\bibitem{d} {\sc E. Lindel\"of}: \emph{Einf\"uhrung in die h\"ohere Analysis}. Nach der ersten schwedischen
+und zweiten finnischen Auflage auf deutsch herausgegeben von E. Ullrich. Teubner, Leipzig (1934).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

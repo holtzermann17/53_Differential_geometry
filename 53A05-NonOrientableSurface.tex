@@ -1,0 +1,113 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{NonOrientableSurface}
+\pmcreated{2013-03-22 19:02:29}
+\pmmodified{2013-03-22 19:02:29}
+\pmowner{juanman}{12619}
+\pmmodifier{juanman}{12619}
+\pmtitle{non orientable surface}
+\pmrecord{33}{41918}
+\pmprivacy{1}
+\pmauthor{juanman}{12619}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53A05}
+\pmclassification{msc}{57M20}
+\pmclassification{msc}{14J29}
+\pmrelated{Surface}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+\usepackage{psfrag}
+% need this for including graphics (\includegraphics)\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Non orientable phenomena are a consequence about the consideration of the tangent bundles regarding an embedding. One asks if $e:A\to B$ is an embedding then how the tangent bundles $TA$ and $TB$ relate?
+ 
+
+
+For example: we could consider the core (simple close curve) of an cylinder $S^1\times I$ or in a Mobius band 
+$M\ddot{o}$. First we can observe that if $C_1=S^1\times\{ \frac{1}{2}\}$  has as a regular neighborhood whose boundary is two component disconnected curve (in fact two disjoint circles), while the boundary of a regular neighborhood $N$ of the core curve $C\ddot{o}$ is a single circle: $\partial M\ddot{o}$.
+
+In terms of tangent bundles we see that we can choose along the cylinder core a consistent normal in the sense that if this curve is traveled then at the end we have the same basis. In contrast with happens in $C\ddot{o}$ which after a full turn we are going to find a reflexion of the normal axe.   
+
+Now employing the standard classification of closed surfaces we will construct another kind.
+
+\begin{quote}
+{\it These are the only types of orientable surfaces: $O_0$ the sphere; $O_1$ the two torus; $O_2=O_1\# O_1$ the bitoro; $O_3=O_1\# O_1\# O_1$ the tritoro,... etc,
+i.e.
+$$O_g=O_1\# \cdots\# O_1$$}
+\end{quote}   
+
+So, with the connected sum device we have:
+\bigskip
+
+
+The projective plane
+\begin{eqnarray*}
+{\mathbb{R}}P^2&=&(O_0\setminus{\rm{int}}D)\cup_{\partial}M\ddot{o}\\
+&=&D\cup_{\partial}M\ddot{o}
+\end{eqnarray*}
+
+\bigskip
+
+The Klein bottle
+\begin{eqnarray*}
+{\mathbb{R}}P^2\#{\mathbb{R}}P^2
+&=&[O_0\setminus( {\rm{int}}D_1\sqcup {\rm{int}}D_2)]\cup_{\partial}
+[(M\ddot{o})_1\sqcup (M\ddot{o})_2]\\
+&=&(M\ddot{o})_1\cup_{\partial}(M\ddot{o})_2
+\end{eqnarray*}
+
+\bigskip
+
+If we standarize as $N_1={\mathbb{R}}P^2$ and $N_2={\mathbb{R}}P^2\#{\mathbb{R}}P^2$, then the genus three non orientable surface is
+\begin{eqnarray*}
+N_3&=&{\mathbb{R}}P^2\#{\mathbb{R}}P^2\#{\mathbb{R}}P^2\\
+&=&N_2\#{\mathbb{R}}P^2\\
+&=&O_1\#{\mathbb{R}}P^2\\
+&=&(
+[O_0\setminus({\rm{int}}D_1\sqcup {\rm{int}}D_2\sqcup {\rm{int}}D_3)]\cup_{\partial}
+[(M\ddot{o})_1\sqcup (M\ddot{o})_2\sqcup (M\ddot{o})_3]\\
+&=&(O_1\setminus{\rm{int}}D)\cup_{\partial}M\ddot{o}\\
+&=&(N_2\setminus{\rm{int}}D)\cup_{\partial}M\ddot{o}
+\end{eqnarray*}
+
+
+\bigskip
+
+$\bullet\bullet\bullet$
+\bigskip
+
+\begin{center}
+\includegraphics{moandco2}
+\end{center}
+
+\begin{xy}
+(0,10)*+{\mathbb{R}^2}="f"; 
+(13,10)*+{TM\ddot{o}}="e";
+(15,0)*+{M\ddot{o}}="m";
+{\ar@{.} "f";"e"}?*!/_2mm/{\subset};
+{\ar "e";"m"}?*!/_3mm/{p};
+\end{xy}
+
+
+%%%%%
+%%%%%
+\end{document}

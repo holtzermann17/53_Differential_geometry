@@ -1,0 +1,69 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SymplecticMatrix}
+\pmcreated{2013-03-22 13:32:28}
+\pmmodified{2013-03-22 13:32:28}
+\pmowner{matte}{1858}
+\pmmodifier{matte}{1858}
+\pmtitle{symplectic matrix}
+\pmrecord{11}{34140}
+\pmprivacy{1}
+\pmauthor{matte}{1858}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53D05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\newcommand{\mm}{\mathrm{M}}
+\newcommand{\oo}{\mathrm{O}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\I}{\mathbf{I}}
+
+A real $2n\times 2n$ matrix $A\in\mm_{2n}(\R)$ is a \emph{symplectic matrix}
+if $A J A^T = J$, where $A^T$ is the transpose of $A$, and 
+$J\in\oo(2n)$ is the orthogonal matrix
+$$J=\left( \begin{array}{cc}
+\mathbf 0 & \I_n \\
+-\I_n & \mathbf 0
+\end{array} \right).$$ 
+Here $\I_n\in\mm_n(\R)$ is the identity $n\times n$ matrix and 
+$\mathbf 0\in\mm_n(\R)$ is the zero $n\times n$ matrix.
+
+Symplectic matrices satisfy the following
+properties:
+\begin{enumerate}
+\item The determinant of a symplectic matrix equals one.
+\item With standard matrix multiplication, symplectic $2n\times 2n$ 
+matrices form a group denoted by $\mathrm{Sp}(2n)$.
+\item Suppose $\Psi=\begin{pmatrix} A&B \\ C & D \end{pmatrix}$,
+where $A,B,C,D$ are $n\times n$ matrices. Then
+$\Psi$ is symplectic if and only if
+$$A D^T - BC^T = I, \,\,\,\,\, AB^T=BA^T, \,\,\,\,\, CD^T=DC^T.$$
+\item If $X$ and $Y$ are real $n\times n$ matrices, then
+$U=X+iY$ is unitary if and only if
+$\begin{pmatrix} X & -Y \\ Y & X \end{pmatrix}$ is symplectic.
+\end{enumerate}
+%%%%%
+%%%%%
+\end{document}

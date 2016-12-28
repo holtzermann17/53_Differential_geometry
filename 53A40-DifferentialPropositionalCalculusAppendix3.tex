@@ -1,0 +1,512 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DifferentialPropositionalCalculusAppendix3}
+\pmcreated{2013-03-22 18:09:20}
+\pmmodified{2013-03-22 18:09:20}
+\pmowner{Jon Awbrey}{15246}
+\pmmodifier{Jon Awbrey}{15246}
+\pmtitle{differential propositional calculus : appendix 3}
+\pmrecord{10}{40712}
+\pmprivacy{1}
+\pmauthor{Jon Awbrey}{15246}
+\pmtype{Application}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53A40}
+\pmclassification{msc}{39A12}
+\pmclassification{msc}{34G99}
+\pmclassification{msc}{03B44}
+\pmclassification{msc}{03B42}
+\pmclassification{msc}{03B05}
+\pmrelated{DifferentialLogic}
+\pmrelated{MinimalNegationOperator}
+\pmrelated{PropositionalCalculus}
+\pmrelated{ZerothOrderLogic}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+\tableofcontents
+
+\subsection{Taylor Series Expansion}
+
+\begin{center}\begin{tabular}{|c|c|c||c|c|c|c|}
+\multicolumn{7}{c}{\textbf{Taylor Series Expansion $\operatorname{D}f = \operatorname{d}f + \operatorname{d}^2 f$}} \\
+\hline
+&
+$\begin{matrix}
+\operatorname{d}f = \\
+\partial_x f \cdot \operatorname{d}x\ +\ \partial_y f \cdot \operatorname{d}y \\
+\end{matrix}$
+&
+$\begin{matrix}
+\operatorname{d}^2 f = \\
+\partial_{xy} f \cdot \operatorname{d}x\, \operatorname{d}y \\
+\end{matrix}$
+&
+$\operatorname{d}f|_{x\ y}$   &
+$\operatorname{d}f|_{x\ (y)}$ &
+$\operatorname{d}f|_{(x)\ y}$ &
+$\operatorname{d}f|_{(x)(y)}$ \\
+\hline
+$f_0$ & $0$ & $0$ & $0$ & $0$ & $0$ & $0$ \\
+\hline
+$\begin{matrix}
+f_{1} \\
+f_{2} \\
+f_{4} \\
+f_{8} \\
+\end{matrix}$
+&
+$\begin{matrix}
+(y) & \operatorname{d}x & + & (x) & \operatorname{d}y \\
+ y  & \operatorname{d}x & + & (x) & \operatorname{d}y \\
+(y) & \operatorname{d}x & + &  x  & \operatorname{d}y \\
+ y  & \operatorname{d}x & + &  x  & \operatorname{d}y \\
+\end{matrix}$
+&
+$\begin{matrix}
+\operatorname{d}x\ \operatorname{d}y \\
+\operatorname{d}x\ \operatorname{d}y \\
+\operatorname{d}x\ \operatorname{d}y \\
+\operatorname{d}x\ \operatorname{d}y \\
+\end{matrix}$
+&
+$\begin{matrix}
+0 \\
+\operatorname{d}x \\
+\operatorname{d}y \\
+\operatorname{d}x + \operatorname{d}y \\
+\end{matrix}$
+&
+$\begin{matrix}
+\operatorname{d}x \\
+0 \\
+\operatorname{d}x + \operatorname{d}y \\
+\operatorname{d}y \\
+\end{matrix}$
+&
+$\begin{matrix}
+\operatorname{d}y \\
+\operatorname{d}x + \operatorname{d}y \\
+0 \\
+\operatorname{d}x \\
+\end{matrix}$
+&
+$\begin{matrix}
+\operatorname{d}x + \operatorname{d}y \\
+\operatorname{d}y \\
+\operatorname{d}x \\
+0 \\
+\end{matrix}$ \\
+\hline
+$\begin{matrix}
+f_{3}  \\
+f_{12} \\
+\end{matrix}$
+&
+$\begin{matrix}
+\operatorname{d}x \\
+\operatorname{d}x \\
+\end{matrix}$
+&
+$\begin{matrix}
+0 \\
+0 \\
+\end{matrix}$
+&
+$\begin{matrix}
+\operatorname{d}x \\
+\operatorname{d}x \\
+\end{matrix}$
+&
+$\begin{matrix}
+\operatorname{d}x \\
+\operatorname{d}x \\
+\end{matrix}$
+&
+$\begin{matrix}
+\operatorname{d}x \\
+\operatorname{d}x \\
+\end{matrix}$
+&
+$\begin{matrix}
+\operatorname{d}x \\
+\operatorname{d}x \\
+\end{matrix}$ \\
+\hline
+$\begin{matrix}
+f_{6} \\
+f_{9} \\
+\end{matrix}$
+&
+$\begin{matrix}
+\operatorname{d}x + \operatorname{d}y \\
+\operatorname{d}x + \operatorname{d}y \\
+\end{matrix}$
+&
+$\begin{matrix}
+0 \\
+0 \\
+\end{matrix}$
+&
+$\begin{matrix}
+\operatorname{d}x + \operatorname{d}y \\
+\operatorname{d}x + \operatorname{d}y \\
+\end{matrix}$
+&
+$\begin{matrix}
+\operatorname{d}x + \operatorname{d}y \\
+\operatorname{d}x + \operatorname{d}y \\
+\end{matrix}$
+&
+$\begin{matrix}
+\operatorname{d}x + \operatorname{d}y \\
+\operatorname{d}x + \operatorname{d}y \\
+\end{matrix}$
+&
+$\begin{matrix}
+\operatorname{d}x + \operatorname{d}y \\
+\operatorname{d}x + \operatorname{d}y \\
+\end{matrix}$ \\
+\hline
+$\begin{matrix}
+f_{5}  \\
+f_{10} \\
+\end{matrix}$
+&
+$\begin{matrix}
+\operatorname{d}y \\
+\operatorname{d}y \\
+\end{matrix}$
+&
+$\begin{matrix}
+0 \\
+0 \\
+\end{matrix}$
+&
+$\begin{matrix}
+\operatorname{d}y \\
+\operatorname{d}y \\
+\end{matrix}$
+&
+$\begin{matrix}
+\operatorname{d}y \\
+\operatorname{d}y \\
+\end{matrix}$
+&
+$\begin{matrix}
+\operatorname{d}y \\
+\operatorname{d}y \\
+\end{matrix}$
+&
+$\begin{matrix}
+\operatorname{d}y \\
+\operatorname{d}y \\
+\end{matrix}$ \\
+\hline
+$\begin{matrix}
+f_{7} \\
+f_{11} \\
+f_{13} \\
+f_{14} \\
+\end{matrix}$
+&
+$\begin{matrix}
+ y  & \operatorname{d}x & + &  x  & \operatorname{d}y \\
+(y) & \operatorname{d}x & + &  x  & \operatorname{d}y \\
+ y  & \operatorname{d}x & + & (x) & \operatorname{d}y \\
+(y) & \operatorname{d}x & + & (x) & \operatorname{d}y \\
+\end{matrix}$
+&
+$\begin{matrix}
+\operatorname{d}x\ \operatorname{d}y \\
+\operatorname{d}x\ \operatorname{d}y \\
+\operatorname{d}x\ \operatorname{d}y \\
+\operatorname{d}x\ \operatorname{d}y \\
+\end{matrix}$
+&
+$\begin{matrix}
+\operatorname{d}x + \operatorname{d}y \\
+\operatorname{d}y \\
+\operatorname{d}x \\
+0 \\
+\end{matrix}$
+&
+$\begin{matrix}
+\operatorname{d}y \\
+\operatorname{d}x + \operatorname{d}y \\
+0 \\
+\operatorname{d}x \\
+\end{matrix}$
+&
+$\begin{matrix}
+\operatorname{d}x \\
+0 \\
+\operatorname{d}x + \operatorname{d}y \\
+\operatorname{d}y \\
+\end{matrix}$
+&
+$\begin{matrix}
+0 \\
+\operatorname{d}x \\
+\operatorname{d}y \\
+\operatorname{d}x + \operatorname{d}y \\
+\end{matrix}$ \\
+\hline
+$f_{15}$ & $0$ & $0$ & $0$ & $0$ & $0$ & $0$ \\
+\hline
+\end{tabular}\end{center}
+
+\subsection{Partial Differentials and Relative Differentials}
+
+\begin{center}\begin{tabular}{|c|c|c|c|c|c|c|}
+\multicolumn{7}{c}{\textbf{Partial Differentials and Relative Differentials}} \\
+\hline
+&
+$f$
+&
+$\frac{\partial f}{\partial x}$
+&
+$\frac{\partial f}{\partial y}$
+&
+$\begin{matrix}
+\operatorname{d}f = \\
+\partial_x f \cdot \operatorname{d}x\ +\ \partial_y f \cdot \operatorname{d}y
+\end{matrix}$
+&
+$\frac{\partial x}{\partial y} \big| f$
+&
+$\frac{\partial y}{\partial x} \big| f$ \\
+\hline
+$f_0$ & $(~)$ & $0$ & $0$ & $0$ & $0$ & $0$ \\
+\hline
+$\begin{matrix}
+f_{1} \\
+f_{2} \\
+f_{4} \\
+f_{8} \\
+\end{matrix}$
+&
+$\begin{matrix}
+(x)(y) \\
+(x)~y  \\
+ x~(y) \\
+ x~~y  \\
+\end{matrix}$
+&
+$\begin{matrix}
+(y) \\
+ y  \\
+(y) \\
+ y  \\
+\end{matrix}$
+&
+$\begin{matrix}
+(x) \\
+(x) \\
+ x  \\
+ x  \\
+\end{matrix}$
+&
+$\begin{matrix}
+(y) & \operatorname{d}x & + & (x) & \operatorname{d}y \\
+ y  & \operatorname{d}x & + & (x) & \operatorname{d}y \\
+(y) & \operatorname{d}x & + &  x  & \operatorname{d}y \\
+ y  & \operatorname{d}x & + &  x  & \operatorname{d}y \\
+\end{matrix}$
+&
+$\begin{matrix}
+~ \\
+~ \\
+~ \\
+~ \\
+\end{matrix}$
+&
+$\begin{matrix}
+~ \\
+~ \\
+~ \\
+~ \\
+\end{matrix}$ \\
+\hline
+$\begin{matrix}
+f_{3}  \\
+f_{12} \\
+\end{matrix}$
+&
+$\begin{matrix}
+(x) \\
+ x  \\
+\end{matrix}$
+&
+$\begin{matrix}
+1 \\
+1 \\
+\end{matrix}$
+&
+$\begin{matrix}
+0 \\
+0 \\
+\end{matrix}$
+&
+$\begin{matrix}
+\operatorname{d}x \\
+\operatorname{d}x \\
+\end{matrix}$
+&
+$\begin{matrix}
+~ \\
+~ \\
+\end{matrix}$
+&
+$\begin{matrix}
+~ \\
+~ \\
+\end{matrix}$ \\
+\hline
+$\begin{matrix}
+f_{6} \\
+f_{9} \\
+\end{matrix}$
+&
+$\begin{matrix}
+ (x,~y)  \\
+((x,~y)) \\
+\end{matrix}$
+&
+$\begin{matrix}
+1 \\
+1 \\
+\end{matrix}$
+&
+$\begin{matrix}
+1 \\
+1 \\
+\end{matrix}$
+&
+$\begin{matrix}
+\operatorname{d}x + \operatorname{d}y \\
+\operatorname{d}x + \operatorname{d}y \\
+\end{matrix}$
+&
+$\begin{matrix}
+~ \\
+~ \\
+\end{matrix}$
+&
+$\begin{matrix}
+~ \\
+~ \\
+\end{matrix}$ \\
+\hline
+$\begin{matrix}
+f_{5}  \\
+f_{10} \\
+\end{matrix}$
+&
+$\begin{matrix}
+(y) \\
+ y  \\
+\end{matrix}$
+&
+$\begin{matrix}
+0 \\
+0 \\
+\end{matrix}$
+&
+$\begin{matrix}
+1 \\
+1 \\
+\end{matrix}$
+&
+$\begin{matrix}
+\operatorname{d}y \\
+\operatorname{d}y \\
+\end{matrix}$
+&
+$\begin{matrix}
+~ \\
+~ \\
+\end{matrix}$
+&
+$\begin{matrix}
+~ \\
+~ \\
+\end{matrix}$ \\
+\hline
+$\begin{matrix}
+f_{7} \\
+f_{11} \\
+f_{13} \\
+f_{14} \\
+\end{matrix}$
+&
+$\begin{matrix}
+ (x~~y)  \\
+ (x~(y)) \\
+((x)~y)  \\
+((x)(y)) \\
+\end{matrix}$
+&
+$\begin{matrix}
+ y  \\
+(y) \\
+ y  \\
+(y) \\
+\end{matrix}$
+&
+$\begin{matrix}
+ x  \\
+ x  \\
+(x) \\
+(x) \\
+\end{matrix}$
+&
+$\begin{matrix}
+ y  & \operatorname{d}x & + &  x  & \operatorname{d}y \\
+(y) & \operatorname{d}x & + &  x  & \operatorname{d}y \\
+ y  & \operatorname{d}x & + & (x) & \operatorname{d}y \\
+(y) & \operatorname{d}x & + & (x) & \operatorname{d}y \\
+\end{matrix}$
+&
+$\begin{matrix}
+~ \\
+~ \\
+~ \\
+~ \\
+\end{matrix}$
+&
+$\begin{matrix}
+~ \\
+~ \\
+~ \\
+~ \\
+\end{matrix}$ \\
+\hline
+$f_{15}$ & $((~))$ & $0$ & $0$ & $0$ & $0$ & $0$ \\
+\hline
+\end{tabular}\end{center}
+
+%%%%%
+%%%%%
+\end{document}

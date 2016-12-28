@@ -1,0 +1,67 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{KahlerManifold}
+\pmcreated{2013-03-22 15:43:26}
+\pmmodified{2013-03-22 15:43:26}
+\pmowner{cvalente}{11260}
+\pmmodifier{cvalente}{11260}
+\pmtitle{K\"ahler manifold}
+\pmrecord{13}{37673}
+\pmprivacy{1}
+\pmauthor{cvalente}{11260}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53D99}
+\pmsynonym{k\"ahlerian manifold}{KahlerManifold}
+\pmsynonym{k\"ahler structure}{KahlerManifold}
+%\pmkeywords{k\"ahler}
+%\pmkeywords{complex}
+%\pmkeywords{hermitian}
+%\pmkeywords{symplectic}
+\pmrelated{almostcomplexstructure}
+\pmrelated{RiemannianMetric}
+\pmrelated{HyperkahlerManifold}
+\pmrelated{MathbbCIsAKahlerManifold}
+\pmrelated{SymplecticManifold}
+\pmrelated{aKahlerManifoldIsSymplectic}
+\pmrelated{AKahlerManifoldIsSymplectic}
+\pmrelated{AlmostComplexStructure}
+\pmdefines{Hermitian metric tensor}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $M$ be a  complex manifold with integrable \PMlinkname{complex structure}{AlmostComplexStructure}  $J$.
+
+Suppose $M$ is also a Riemannian manifold with metric tensor $g$ such that $\forall_{X,Y} g(X,Y) = g(JX,JY)$. We say that $g$ is an \emph{Hermitian metric tensor}.
+
+A differentiable manifold $M$ is said to be a \emph{K\"ahler manifold} iff all the following conditions are verified:
+\begin{itemize}
+\item $M$ is a complex manifold with \PMlinkescapeword{complex structure} complex structure $J$
+\item $M$ is a Riemannian manifold with an Hermitian metric $g$
+\item $J$ is covariantly constant with regard to the Levi-Civita connection ($\nabla J = 0$)
+\end{itemize}
+
+K\"ahler manifolds are symplectic in a natural way with symplectic form defined by $\omega(X,Y) = g(JX,Y)$
+%%%%%
+%%%%%
+\end{document}

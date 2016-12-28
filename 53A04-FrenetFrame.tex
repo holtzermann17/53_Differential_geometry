@@ -1,0 +1,63 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{FrenetFrame}
+\pmcreated{2013-03-22 12:15:44}
+\pmmodified{2013-03-22 12:15:44}
+\pmowner{rmilson}{146}
+\pmmodifier{rmilson}{146}
+\pmtitle{Frenet frame}
+\pmrecord{16}{31660}
+\pmprivacy{1}
+\pmauthor{rmilson}{146}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53A04}
+\pmsynonym{moving trihedron}{FrenetFrame}
+\pmsynonym{moving frame}{FrenetFrame}
+\pmsynonym{rep\`ere mobile}{FrenetFrame}
+\pmsynonym{Frenet trihedron}{FrenetFrame}
+\pmrelated{SpaceCurve}
+\pmdefines{osculating plane}
+\pmdefines{normal plane}
+\pmdefines{rectifying plane}
+\pmdefines{unit normal}
+\pmdefines{unit tangent}
+\pmdefines{binormal}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\newcommand{\reals}{\mathbb{R}}
+\begin{document}
+Let $I\subset \reals$ be an interval and let $\gamma:I\to\reals^3$ be a
+parameterized space curve, assumed to be
+\PMlinkname{regular}{SpaceCurve} and free of points of inflection. We
+interpret $\gamma(t)$ as the trajectory of a particle moving through
+3-dimensional space.  The moving trihedron (also known as the Frenet
+frame, the Frenet trihedron, the rep\`ere mobile, and the moving
+frame) is an orthonormal basis of 3-vectors $T(t),N(t),B(t),$ defined
+and named as follows:
+\begin{align*}
+  T(t) &= \displaystyle \frac{\gamma'(t)}{\Vert \gamma'(t) \Vert}\, ,
+  &&
+  \text{the unit  tangent;}\\
+  N(t) &= \displaystyle \frac{T'(t)}{\Vert T'(t) \Vert} \, ,&&
+  \text{the unit normal;}\\ \\
+  B(t) &= T(t)\times N(t)  \, ,&& \text{the unit binormal.}\\
+\end{align*}
+A straightforward application of the chain rule shows that these
+definitions are covariant with respect to reparameterizations.  Hence,
+the above three vectors should be conceived as being attached to the
+point $\gamma(t)$ of the oriented space curve, rather than being
+functions of the parameter $t$.
+
+Corresponding to the above vectors are 3 planes, passing through each
+point $\gamma(t)$ of the space curve.  The \emph{osculating plane} at
+the point $\gamma(t)$ is the plane spanned by $T(t)$ and $N(t)$; the
+\emph{normal plane} at $\gamma(t)$ is the plane spanned by $N(t)$ and
+$B(t)$; the rectifying plane at $\gamma(t)$ is the plane spanned by
+$T(t)$ and $B(t)$.
+%%%%%
+%%%%%
+%%%%%
+\end{document}

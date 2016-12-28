@@ -1,0 +1,159 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Ellipse}
+\pmcreated{2013-03-22 15:18:10}
+\pmmodified{2013-03-22 15:18:10}
+\pmowner{matte}{1858}
+\pmmodifier{matte}{1858}
+\pmtitle{ellipse}
+\pmrecord{33}{37102}
+\pmprivacy{1}
+\pmauthor{matte}{1858}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53A04}
+\pmclassification{msc}{51N20}
+\pmclassification{msc}{51-00}
+\pmrelated{SqueezingMathbbRn}
+\pmrelated{Ellipsoid}
+\pmdefines{major axis}
+\pmdefines{minor axis}
+\pmdefines{major semi-axis}
+\pmdefines{minor semi-axis}
+\pmdefines{focus}
+\pmdefines{foci}
+\pmdefines{aphelium}
+\pmdefines{perihelium}
+\pmdefines{eccentric anomaly}
+\pmdefines{focal radius}
+\pmdefines{focal radii}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+\usepackage{mathrsfs}
+\usepackage{pstricks}
+\usepackage{pst-plot}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+
+ \usepackage{bbm}
+ \newcommand{\Z}{\mathbbmss{Z}}
+ \newcommand{\C}{\mathbbmss{C}}
+ \newcommand{\F}{\mathbbmss{F}}
+ \newcommand{\R}{\mathbbmss{R}}
+ \newcommand{\Q}{\mathbbmss{Q}}
+
+
+
+\newcommand*{\norm}[1]{\lVert #1 \rVert}
+\newcommand*{\abs}[1]{| #1 |}
+
+
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+\begin{document}
+\PMlinkescapeword{equation}
+\PMlinkescapeword{terms}
+
+An \emph{ellipse} that is centered at the origin is the curve in the plane determined by
+\begin{equation}
+\left(\frac{x}{a}\right)^2 + \left(\frac{y}{b}\right)^2 = 1,
+\end{equation}
+where $a,b>0$.
+
+Below is a graph of the ellipse $\displaystyle \left(\frac{x}{3}\right)^2+\left(\frac{y}{2}\right)^2=1$:
+
+\begin{center}
+\begin{pspicture}(-3.2,-2.2)(3.5,2.5)
+\psaxes{->}(0,0)(-3.2,-2.2)(3.5,2.5)
+\psellipse(0,0)(3,2)
+\rput[b](3.5,-0.5){$x$}
+\rput[r](0,2.5){$y$}
+\end{pspicture}
+\end{center}
+
+The \emph{major axis} of an ellipse is the longest line segment whose endpoints are on the ellipse.  The \emph{minor axis} of an ellipse is the shortest line segment through the midpoint of the ellipse whose endpoints are on the ellipse.
+
+In the first equation given above, if $a=b$, the ellipse reduces to a circle of radius $a$, whereas if $a>b$ (as in the graph above), $a$ is said to be the {\em major semi-axis} length and $b$ the {\em minor semi-axis} length; \PMlinkname{i.e.}{Ie}, the lengths of the major axis and minor axis are $2a$ and $2b$, respectively.
+
+More generally, given any two points $p_1$ and $p_2$ in the (Euclidean) plane and any real number $r$, let $E$ be the set of points $p$ having the property that the sum of the distances from $p$ to $p_1$ and $p_2$ is $r$; i.e.,
+$$E = \left\{ p\, |\, r=\lvert p-p_1\rvert + \vert p-p_2\rvert\right\}.$$
+In terms of the geometric look of $E$, there are three possible scenarios for $E$: $E=\varnothing$, $E=\overline{p_1p_2}$, the line segment with end-points $p_1$ and $p_2$, or $E$ is an ellipse.  Points $p_1$ and $p_2$ are called \emph{foci} of the ellipse; the line segments connecting a point of the ellipse to the foci are the {\em focal radii} belonging to that point.  When $p_1=p_2$ and $r>0$, $E$ is a circle.  Under appropriate linear transformations (a translation followed by a rotation), $E$ has an algebraic appearance expressed in (1).  
+
+In polar coordinates, the ellipse is parametrized as
+\begin{eqnarray*}
+   x(t) &=& a\cos t, \\
+   y(t) &=& b\sin t,  \quad t\in[0,\,2\pi).
+\end{eqnarray*}
+If\, $a>b$,\, then $t$ is the {\em eccentric anomaly}; i.e., the polar angle of the point on the circumscribed circle having the same abscissa as the point of the ellipse.
+
+\subsubsection*{Properties}
+\begin{enumerate}
+\item If\, $a > b$,\, the foci of the ellipse (1) are on the $x$-axis with distances $\sqrt{a^2-b^2}$ from the origin.\, The constant sum of the \PMlinkescapetext{focal radii} of a point $p$ is equal to $2a$.
+\item The normal line of the ellipse at its point $p$ halves the angle between the focal radii drawn from $p$.
+\item The area of an ellipse is $\pi a b$.  (See \PMlinkname{this page}{AreaOfPlaneRegion}.)
+\item The length of the perimeter of an ellipse can be expressed using an elliptic integral. 
+\end{enumerate}
+
+\subsubsection*{Eccentricity}
+By definition, the {\em eccentricity} $\epsilon$ ($0\leq\epsilon<1$) of the ellipse is given by 
+\begin{equation*}
+\epsilon=\frac{\sqrt{a^2-b^2}}{a}\cdot
+\end{equation*}
+For $\epsilon=0$, the ellipse reduces to a circle. Further, $b=a\sqrt{1-\epsilon^2}$, and by assuming that foci are located on $x$-axis, $p_1$ on $x<0$ and $p_2$ on $x>0$, then $|O-p_1|=|O-p_2|=\epsilon a$, where $O(0,0)$ is the origin of the rectangular coordinate system.  
+\subsubsection*{Polar equation of the ellipse}
+By translating the $y$-axis towards the focus $p_1$, we have
+\begin{eqnarray*}
+x' &=& x+\epsilon a,  \\
+y' &=& y,
+\end{eqnarray*}
+but from (1) we get
+\begin{equation}
+\left(\frac{x'-\epsilon a}{a}\right)^2 + \left(\frac{y'}{b}\right)^2 = 1.
+\end{equation}
+By using the transformation equations to polar coordinates
+\begin{eqnarray*}
+x' &=& r\cos\theta, \\
+y' &=& r\sin\theta,
+\end{eqnarray*}
+and through (2) we arrive at the polar equation
+\begin{equation}
+r(\theta)=\frac{(1-\epsilon^2)a}{1-\epsilon\cos\theta}\cdot
+\end{equation}
+This equation allows us to determine some additional properties about the ellipse: 
+\begin{align*}
+r_{max}:=r(0)=(1+\epsilon)a, \qquad \text{which is called the {\em aphelium}}; \\
+r_{min}:=r(\pi)=(1-\epsilon)a, \qquad \text{which is called the {\em perihelium}}.
+\end{align*}
+Hence, the general definition of the ellipse expressed above shows that $r_{min}+r_{max}=2a$ and also that the arithmetic mean $\displaystyle \frac{r_{min}+r_{max}}{2}=a$ corresponds to the major semi-axis, while the geometric mean $\sqrt{r_{min}r_{max}}=b$ corresponds to the minor semi-axis of the ellipse. Likewise, if $\theta_\epsilon$ is the angle between the {\em polar axis} $x'$ and the radial distance $|B-p_1|$, where $B(0,b)$ is the point of the ellipse over the $y$-axis, then we get the useful equation $\cos\theta_\epsilon=\epsilon$.
+%%%%%
+%%%%%
+\end{document}

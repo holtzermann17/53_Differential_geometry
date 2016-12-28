@@ -1,0 +1,110 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HyperbolicRotation}
+\pmcreated{2013-03-22 17:24:34}
+\pmmodified{2013-03-22 17:24:34}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{hyperbolic rotation}
+\pmrecord{9}{39782}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53A04}
+\pmclassification{msc}{51N20}
+\pmclassification{msc}{51-00}
+\pmrelated{Hyperbola2}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+Let $\mathbb{E}$ be the Euclidean plane equipped with the Cartesian coordinate system.  Recall that given a circle $C$ centered at the origin $O$, one can define an ``ordinary'' rotation $R$ to be a linear transformation that takes any point on $C$ to another point on $C$.  In other words, $R(C)\subseteq C$.  
+
+Similarly, given a rectangular hyperbola (the counterpart of a circle) $H$ centered at the origin, we define a \emph{hyperbolic rotation} (with respect to $H$) as a linear transformation $T$ (on $\mathbb{E}$) such that $T(H)\subseteq H$.
+
+Since a hyperbolic rotation is defined as a linear transformation, let us see what it looks like in matrix form.  We start with the simple case when a rectangular hyperbola $H$ has the form $xy=r$, where $r$ is a non-negative real number.
+
+Suppose $T$ denotes a hyperbolic rotation such that $T(H)\subseteq H$.  Set 
+\begin{center}
+$
+\begin{pmatrix}
+x' \\
+y'
+\end{pmatrix}
+=
+\begin{pmatrix}
+a & b \\
+c & d
+\end{pmatrix}
+\begin{pmatrix}
+x \\
+y
+\end{pmatrix}
+$
+\end{center}
+where $\begin{pmatrix}
+a & b \\
+c & d
+\end{pmatrix}$
+is the matrix representation of $T$, and $xy=x'y'=r$.  Solving for $a,b,c,d$ and we get $ad=1$ and $b=c=0$.  In other words, with respect to rectangular hyperbolas of the form $xy=r$, the matrix representation of a hyperbolic rotation looks like
+\begin{center}
+$
+\begin{pmatrix}
+a & 0 \\
+0 & a^{-1}
+\end{pmatrix}
+$
+\end{center}
+Since the matrix is non-singular, we see that in fact $T(H)=H$.
+
+Now that we know the matrix form of a hyperbolic rotation when the rectangular hyperbolas have the form $xy=r$, it is not hard to solve the general case.  Since the two asymptotes of any rectangular hyperbola $H$ are perpendicular, by an appropriate change of bases (ordinary rotation), $H$ can be transformed into a rectangular hyperbola $H'$ whose asymptotes are the $x$ and $y$ axes, so that $H'$ has the algebraic form $xy=r$.  As a result, the matrix representation of a hyperbolic rotation $T$ with respect to $H$ has the form 
+\begin{center}
+$
+P
+\begin{pmatrix}
+a & 0 \\
+0 & a^{-1}
+\end{pmatrix}
+P^{-1}
+$ 
+\end{center}
+for some $0\ne a\in\mathbb{R}$ and some orthogonal matrix $P$.  In other words, $T$ is diagonalizable with $a$ and $a^{-1}$ as eigenvalues ($T$ is non-singular as a result).
+
+Below are some simple properties:
+\begin{itemize}
+\item Unlike an ordinary rotation $R$, where $R$ fixes any circle centered at $O$, a hyperbolic rotation $T$ fixing one rectangular hyperbola centered at $O$ may not fix another hyperbola of the same kind (as implied by the discussion above).
+\item Let $P$ be the pencil of all rectangular hyperbolas centered at $O$.  For each $H\in P$, let $[H]$ be the subset of $P$ containing all hyperbolas whose asymptotes are same as the asymptotes for $H$.  If a hyperbolic rotation $T$ fixing $H$, then $T(H')=H'$ for any $H'\in [H]$.
+\item $[\cdot]$ defined above partitions $P$ into disjoint subsets.  Call each of these subset a sub-pencil.  Let $A$ be a sub-pencil of $P$.  Call $T$ fixes $A$ if $T$ \emph{fixes} any element of $A$.  Let $A\ne B$ be sub-pencils of $P$.  Then $T$ fixes $A$ iff $T$ does not fix $B$.
+\item Let $A,B$ be sub-pencils of $P$.  Let $T,S$ be hyperbolic rotations such that $T$ fixes $A$ and $S$ fixes $B$.  Then $T\circ S$ is a hyperbolic rotation iff $A=B$.
+\item In other words, the set of all hyperbolic rotations fixing a sub-pencil is closed under composition.  In fact, it is a group.
+\item Let $T$ be a hyperbolic rotation fixing the hyperbola $xy=r$.  Then $T$ fixes its branches (connected components) iff $T$ has positive eigenvalues.
+\item $T$ preserves area.
+\item Suppose $T$ fixes the unit hyperbola $H$.  Let $P,Q\in H$.  Then $T$ fixes the (measure of) hyperbolic angle between $P$ and $Q$.  In other words, if $\alpha$ is the measure of the hyperbolic angle between $P$ and $Q$ and, by abuse of notation, let $T(\alpha)$ be the measure of the hyperbolic angle between $T(P)$ and $T(Q)$.  Then $\alpha = T(\alpha)$.
+\end{itemize}
+
+The definition of a hyperbolic rotation can be generalized into an arbitrary two-dimensional vector space: it is any diagonalizable linear transformation with a pair of eigenvalues $a,b$ such that $ab=1$.
+%%%%%
+%%%%%
+\end{document}

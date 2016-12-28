@@ -1,0 +1,110 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExampleOfCurvaturespaceCurve}
+\pmcreated{2013-03-22 15:40:58}
+\pmmodified{2013-03-22 15:40:58}
+\pmowner{bloftin}{6104}
+\pmmodifier{bloftin}{6104}
+\pmtitle{example of curvature (space curve)}
+\pmrecord{8}{37624}
+\pmprivacy{1}
+\pmauthor{bloftin}{6104}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53A04}
+\pmrelated{PositionVector}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Example space curves and calculating their curvatures using the formula
+
+$$\kappa(t) =\frac{\Vert {\bf r}'(t)\times {\bf r}''(t)\Vert}{ \Vert {\bf r}'(t)\Vert^3}$$
+
+
+{\bf 1.}  ${\bf r}(t) = 3t \hat{i} + t^2\hat{j} - 4t^2\hat{k}$
+
+the first derivative
+
+${\bf r}'(t) = 3 \hat{i} + 2t\hat{j} - 8t\hat{k}$
+
+vector magnitude of the derivative
+
+$\Vert {\bf r}'(t)\Vert = \sqrt{ 3^2 + (2t)^2 + (-8t)^2}$
+
+$\Vert {\bf r}'(t)\Vert = \sqrt{ 9 + 4t^2 + 16t^2} = \sqrt{9 + 20 t^2}$
+
+the second derivative
+
+${\bf r}''(t) = 2 \hat{j} - 8 \hat{k}$
+
+the cross product 
+
+${\bf r}'(t)\times {\bf r}''(t) = \left|
+\begin{array}{ccc}
+\hat{i} & \hat{j} & \hat{k} \\
+3 & 2t & -8t \\
+0 & 2 & -8 \\
+\end{array}\right| = (-16t + 16t)\hat{i} - (-24)\hat{j} + 6\hat{k}$
+
+
+${\bf r}'(t)\times {\bf r}''(t) = 24\hat{j} + 6\hat{k}$
+
+$\Vert {\bf r}'(t)\times {\bf r}''(t) \Vert = \sqrt{576 + 36} = \sqrt{612} = 2\sqrt{153}$
+
+$\Vert {\bf r}'(t)\Vert^3 = (9 + 20t^2)^{3/2}$
+
+$\kappa(t) = \frac{2\sqrt{153}}{(9 + 20t^2)^{3/2}}$
+
+{\bf 2.} Calculate the curvature of the right circular helix as given in the plot below and defined as 
+
+${\bf r}(t) = \cos t \hat{i} + \sin t \hat{j} + t\hat{k}$
+
+\begin{figure}
+\includegraphics[scale=.6]{helix.eps}
+\vspace{10 pt}
+\end{figure}
+
+${\bf r}'(t) = -\sin t \hat{i} + \cos t\hat{j} + \hat{k}$
+
+$\Vert {\bf r}'(t)\Vert = \sqrt{ \sin^2 t + \cos^2 t + 1^2} = \sqrt{2}$
+
+${\bf r}''(t) = -\cos t \hat{i} -\sin t \hat{j}$
+
+${\bf r}'(t)\times {\bf r}''(t) = \left|
+\begin{array}{ccc}
+\hat{i} & \hat{j} & \hat{k} \\
+-\sin t & \cos t & 1 \\
+-\cos t & -\sin t & 0 \\
+\end{array}\right| = \sin t\hat{i} - \cos t\hat{j} + (\sin^2 t + \cos^2 t)\hat{k}$
+
+
+${\bf r}'(t)\times {\bf r}''(t) =  \sin t\hat{i} - \cos t\hat{j} + \hat{k}$
+
+$\Vert {\bf r}'(t)\times {\bf r}''(t) \Vert = \sqrt{\sin^2 t + \cos^2 t + 1^2} = \sqrt{2}$
+
+$\Vert {\bf r}'(t)\Vert^3 = 2^{3/2}$
+
+$\kappa(t) = \frac{\sqrt{2}}{2^{3/2}} = \frac{1}{2}$
+%%%%%
+%%%%%
+\end{document}

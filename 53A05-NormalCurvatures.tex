@@ -1,0 +1,116 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{NormalCurvatures}
+\pmcreated{2013-03-22 17:26:27}
+\pmmodified{2013-03-22 17:26:27}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{normal curvatures}
+\pmrecord{13}{39821}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53A05}
+\pmclassification{msc}{26B05}
+\pmclassification{msc}{26A24}
+\pmrelated{SecondFundamentalForm}
+\pmrelated{MeusniersTheorem}
+\pmrelated{ErnstLindelof}
+\pmdefines{principal normal plane}
+\pmdefines{principal section}
+\pmdefines{principal curvature}
+\pmdefines{Euler's theorem}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{curvature}
+Let us determine the \PMlinkname{normal curvatures}{NormalSection} $\varkappa$ of the surface
+\begin{align}
+z \;=\; z(x,\,y)
+\end{align}
+in the origin, when (1) has the continuous 1st and 2nd order partial derivatives in a neighbourhood of\, $(0,\,0)$\, and satisfies
+\begin{align}
+z(0,\,0) \;=\; z'_x(0,\,0) \;=\; z'_y(0,\,0) = 0.
+\end{align}
+It's a question of the \PMlinkname{curvature}{CurvaturePlaneCurve} of the intersection curves of the surface (1) and planes containing the $z$-axis, which is the normal of the surface in the origin.\\ \\
+
+If the angle between the $zx$-plane and a plane $\tau$ containing the $z$-axis is denoted by $\varphi$, when the line of intersection of the plane $\tau$ and the $xy$-plane is represented by the equations
+$$x \;=\; \varrho\cos\varphi,\quad y \;=\; \varrho\sin\varphi \qquad (-\infty \,<\, \varrho \,<\, \infty),$$
+then equation of the the normal section curve $C_\varphi$ is
+$$z \;=\; z(\varrho\cos\varphi,\,\varrho\sin\varphi),$$
+where $\varrho$ is the abscissa and $z$ the ordinate.\, It follows that
+$$\frac{dz}{d\varrho} \;=\; \frac{\partial z}{\partial x}\cos\varphi+\frac{\partial z}{\partial y}\sin\varphi,$$
+$$\frac{d^2z}{d\varrho^2} \;=\; 
+\frac{\partial^2z}{\partial x^2}\cos^2\!\varphi+2\frac{\partial^2z}{\partial x \partial y}\sin\varphi\cos\varphi+
+\frac{\partial^2z}{\partial y^2}\sin^2\!\varphi;$$
+thus by (2), in the origin we have
+$$\frac{dz}{d\varrho} \;=\; 0,\quad 
+\frac{d^2z}{d\varrho^2} \;=\; a\cos^2\!\varphi+2b\sin\varphi\cos\varphi+c\sin^2\!\varphi,$$
+where $a$, $b$, $c$ \PMlinkescapetext{mean} the values of the derivatives $\frac{\partial^2z}{\partial x^2}$, 
+$\frac{\partial^2z}{\partial x \partial y}$, $\frac{\partial^2z}{\partial y^2}$ in the origin.\\ \\
+Using those values, we obtain for the normal curvature of $C_\varphi$ in the origin the value
+\begin{align}
+\varkappa(\varphi) \;=\; 
+\left[\frac{\frac{d^2z}{d\varrho^2}}{\left(1+\left(\frac{dz}{d\varrho}\right)^2\right)^{3/2}}\right]_{\varrho\,=\,0}
+\;=\; a\cos^2\!\varphi+2b\sin\varphi\cos\varphi+c\sin^2\!\varphi.
+\end{align}
+This result gets a more illustrative form when we try to express it by using the least and the greatest value of $\varkappa(\varphi)$.\, Instead to utilize the zeros of the derivative of the sum in (3), it's simpler first to transfer to the \PMlinkname{double angle}{DoubleAngleIdentity},
+\begin{align}
+\varkappa(\varphi) \;=\; \frac{a\!+\!c}{2}+\frac{a\!-\!c}{2}\cos2\varphi+b\sin2\varphi,
+\end{align}
+and here to introduce an auxiliary angle $\alpha$\, ($0 \,\le\, \alpha \,<\, \pi$) such that
+$$\frac{a\!-\!c}{2} \;:=\; k\cos2\alpha,\quad b \;:=\; k\sin2\alpha.$$
+This allows us to write (4) as
+\begin{align}
+\varkappa(\varphi) \;=\; \frac{a\!+\!c}{2}+k\,\cos2(\varphi\!-\!\alpha).
+\end{align}
+From this we see immediately that the curvature attains its greatest and least value 
+$\displaystyle\frac{a\!+\!c}{2}\pm k$ when\, $\varphi = \alpha$\, and\, $\varphi = \alpha\!+\!\frac{\pi}{2}$.
+
+Accordingly, the corresponding \PMlinkescapetext{normal planes} $\tau$, the {\em principal normal planes}, are perpendicular to each other; their normal section curves on the surface (1) in the origin are briefly called the {\em principal sections}.
+
+The expression (5) of the normal curvature may still be edited.\, Let us take a new parameter angle\, $\varphi-\alpha := \theta$.\, One can write
+$$\varkappa(\varphi) \;=\; \frac{a\!+\!c}{2}(\cos^2\theta+\sin^2\theta)+k(\cos^2\theta-\sin^2\theta) 
+\;=\; \left(\!\frac{a\!+\!c}{2}+k\!\right)\cos^2\theta+\left(\!\frac{a\!+\!c}{2}-k\!\right)\sin^2\theta 
+\;:=\; \varkappa_\theta.$$
+
+So the final result, the so-called {\em \PMlinkname{Euler's theorem}{SecondFundamentalForm}}, can be expressed in the form
+\begin{align}
+\varkappa_\theta \;=\; \varkappa_1\cos^2\theta+\varkappa_2\sin^2\theta.
+\end{align}
+Here, the {\em principal curvatures} $\varkappa_1$ and $\varkappa_2$ are the greatest and the least value of the normal curvature, respectively, and $\theta$ is the \PMlinkname{angle between}{AngleBetweenTwoPlanes} the normal section plane corresponding $\varkappa_1$ and the normal section plane corresponding $\varkappa_\theta$.  As it becomes clear in the \PMlinkname{parent entry}{NormalSection}, the result (6) is true not only in the origin but at any point on a surface when the given function has the continuous 1st and 2nd derivatives in some neighbourhood of the point.
+
+
+\begin{thebibliography}{8}
+\bibitem{lindelof}{\sc Ernst Lindel\"of}: {\em Differentiali- ja integralilasku
+ja sen sovellutukset II}.\, Mercatorin Kirjapaino Osakeyhti\"o, Helsinki (1932).
+\end{thebibliography} 
+
+%%%%%
+%%%%%
+\end{document}

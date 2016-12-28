@@ -1,0 +1,212 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ChristoffelSymbols}
+\pmcreated{2013-03-22 15:43:52}
+\pmmodified{2013-03-22 15:43:52}
+\pmowner{juanman}{12619}
+\pmmodifier{juanman}{12619}
+\pmtitle{Christoffel symbols}
+\pmrecord{24}{37681}
+\pmprivacy{1}
+\pmauthor{juanman}{12619}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53B20}
+\pmclassification{msc}{53-01}
+\pmsynonym{connection coefficients}{ChristoffelSymbols}
+\pmrelated{Connection}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+A vector field in ${\mathbb{R}}^n$ can be seen as a differentiable ($C^{\infty}$) map 
+$V\colon{\Bbb{R}}^n\to {\mathbb{R}}^n$. 
+
+Or as a section ${\mathbb{R}}^n\stackrel{V}\to T({\mathbb{R}}^n)$
+where $T{\mathbb{R}}^n\equiv{\mathbb{R}}^n\times{\mathbb{R}}^n$ is the ${\mathbb{R}}^n$'s trivial tangent bundle obeying
+$p\mapsto (p,V(p)\in T_p({\mathbb{R}}^n))$ with $T_p({\mathbb{R}}^n)\equiv{\mathbb{R}}^n$ being the tangent space at $p$. 
+
+Another viewpoint about tangent vectors is that they are also linear operators called {\bf derivations} and they act 
+over scalars $f\colon {\mathbb{R}}^n\to{\mathbb{R}}$ via $p\mapsto Vf|_p=V(p)\cdot\nabla f|_p$.
+
+Let $X$ be one of them and $dX|_p$ its Jacobian matrix evaluated at the point $p\in{\Bbb{R}}^n$.
+Then, for any other vector field $Y\colon{\mathbb{R}}^n\to{\mathbb{R}}^n$, 
+$$dX|_p(Y(p))$$
+ measures how $X$ varies in the direction $Y$ at $p$. 
+
+We have $dX|_p(Y(p))=(Y(p)\cdot\nabla X^1|_p,...,Y(p)\cdot\nabla X^n|_p)$, where $X=\sum_sX^se_s$ in components. 
+Also, it is obvious that $p\mapsto dX|_p(Y(p))$ defines a new vector field in ${\mathbb{R}}^n$ which is symbolized as
+$$D_YX$$
+We can be consider it as a bilinear map
+$$D:T({\mathbb{R}}^n)\times T({\mathbb{R}}^n)\to T({\mathbb{R}}^n).$$
+$$(X,Y)\mapsto D_XY$$
+Further, it is easy to see that for any scalar $f\colon {\mathbb{R}}^n\to{\mathbb{R}}$ 
+\begin{enumerate}
+\item $D_{fY}X=fD_YX$
+\item $D_Y(fX)=(Yf)X+ fD_YX$
+\item $D_XY-D_YX=[X,Y]$
+\item $X(Y\cdot Z)=D_XY\cdot Z+X\cdot D_XZ$
+
+\end{enumerate} 
+Here we have abbreviated (as usual) $Yf=Y\cdot\nabla F$ and the operation $[X,Y]$ is the Lie bracket.
+
+This $D$ is called the {\bf standard connection} of ${\mathbb{R}}^n$.
+
+Now, let $M$ be a n-dimensional differentiable manifold and let $TM$ be its tangent bundle.
+The set of differentiable sections $\Gamma(M)=\{X\colon M\to TM\}$ is a differentiable Lie algebra which is endowed with a differentiable inner product $g\colon\Gamma(M)\times\Gamma(M)\to{\mathbb{R}}$ via
+$$g(X,Y)|_p=X(p)\cdot Y(p)$$ 
+in each $T_p(M)\equiv{\mathbb{R}}^n$.
+
+It is possible construct a bilinear operator $\nabla$
+$$\nabla\colon \Gamma(M)\times\Gamma(M)\to\Gamma(M)$$
+compatible with $g$ and which satisfies the following properties
+
+\begin{enumerate}
+\item $\nabla_{fY}X=f\nabla_YX$
+\item $\nabla_Y(fX)=(Yf)X+ f\nabla_YX$
+\item $\nabla_XY-\nabla_YX=[X,Y]$
+\item $Xg(Y,Z)=g(\nabla_XY,Z)+g(X,\nabla_XZ)$
+\end{enumerate} 
+
+The {\bf Fundamental Theorem of Riemannian Geometry} establishes that this $\nabla$ exists and it is unique, 
+and it is called the {\bf Levi-Civita connection} for the metric $g$ on $M$.
+
+Now, if one uses a coordinated patch in $M$ one has a set of n-coordinated vector fields $\partial_1,..,\partial_n$
+meaning $\partial_i={{\partial}\over{\partial u^i}}$ being $u^i$ the coordinate functions.
+These are also dubbed holonomic derivations.
+
+So it makes sense to speak about the derivatives $\nabla_{\partial_i}\partial_j$
+and since the $\partial_i$ are tangent which generate at a point $T_p(M)$, then $\nabla_{\partial_i}\partial_j$
+is also tangent, so there are $n\times n$ numbers (functions if one varies position) $\Gamma^s_{ij}$ which enters 
+in the relation
+$$\nabla_{\partial_i}\partial_j=\sum_s\Gamma^s_{ij}\partial_s.$$
+These coefficients $\Gamma^s_{ij}$ are called {\bf Christoffel symbols} and an easy calculation shows that
+$$\Gamma^k_{ij}={1\over 2}\sum_sg^{ks}[g_{sj,i}+g_{is,j}-g_{ij,s}]$$ 
+where  $g_{ij}=g(\partial_i,\partial_j)$, $g^{ij}$ are the entries of the matrix $[g_{ij}]^{-1}$ and 
+$g_{ij,k}=\partial_k(g_{ij})$.
+
+Routinely one can check that under a change of coordinates $u^i\to w^j$ these functions transform as
+$$\bar{\Gamma}^i_{kl}=
+{{\partial w^i}\over{\partial u^m}}{{\partial u^n}\over{\partial w^k}}{{\partial u^p}\over{\partial w^l}}
+\Gamma^m_{np}+{{\partial}^2u^p\over{\partial w^k\partial w^l}}{{\partial w^i}\over{\partial u^p}}
+$$
+here we have used Einstein's sum convention ($m,n,p$-sums) and the term 
+$${
+{\partial}^2u^p\over{\partial w^k\partial w_l}
+}
+{
+{\partial w^i}\over{\partial u^p}
+}$$ 
+shows that the $\Gamma^i_{kl}$ are not tensors.
+
+For a proof please see the last part in:
+\PMlinkexternal{http://planetmath.org/?op=getobj\&from=collab\&id=64}{http://planetmath.org/?op=getobj\&from=collab\&id=64}
+
+\paragraph{Connection with base vectors.} 
+
+Let us assume that coordinates $u^i$ are referred to a right-handed orthogonal Cartesian system with attached constant base vectors $\mathbf{e}_i\equiv\mathbf{e}^i$ and coordinates $w^j$ referred to a general curvilinear system attached to a local covariant base vectors $\mathbf{g}_j$ and local contravariant base vectors $\mathbf{g}^k$, both systems embedded in the Euclidean space $\mathbb{R}^n$. We shall also suppose diffeomorphic the transfomation $u^i\mapsto w^j$. Then, by definition 
+\begin{align}
+\mathbf{g}_j:=\frac{\partial u^i}{\partial w^j}\mathbf{e}_i\:, \qquad
+\mathbf{g}^j:=\frac{\partial w^j}{\partial u^i}\mathbf{e}^i\:,
+\end{align}
+and its inverses
+\begin{align}
+\mathbf{e}_i=\mathbf{e}^i=\frac{\partial u^i}{\partial w^j}\mathbf{g}^j=
+\frac{\partial w^j}{\partial u^i}\mathbf{g}_j\:.
+\end{align}
+Let us consider differentiation of base vectors $\mathbf{g}_j$, which may be written from (1),(2)
+\begin{align*}
+\frac{\partial\mathbf{g}_j}{\partial w^k}=
+\frac{\partial^2 u^i}{\partial w^j\partial w^k}\mathbf{e}_i=
+\frac{\partial^2 u^i}{\partial w^j\partial w^k}
+\frac{\partial u^i}{\partial w^s}\mathbf{g}^s=
+\frac{\partial^2 u^i}{\partial w^j\partial w^k}
+\frac{\partial w^s}{\partial u^i}\mathbf{g}_s\equiv
+\frac{\partial\mathbf{g}_k}{\partial w^j}\:,
+\end{align*}
+and using the Christoffel symbols this becomes
+\begin{align}
+\frac{\partial\mathbf{g}_j}{\partial w^k}=\Gamma_{jks}\mathbf{g}^s=
+\Gamma^r_{jk}\mathbf{g}_r\:,
+\end{align}
+where
+\begin{align}
+\Gamma_{jks}=\frac{\partial^2 u^i}{\partial w^j\partial w^k}
+\frac{\partial u^i}{\partial w^s}\:, \qquad \Gamma^r_{jk}=g^{rs}\Gamma_{jks}\:.
+\end{align}
+Since the transformation of covariant and contravariant metric tensors are given by
+\begin{align*}
+g_{jk}=\frac{\partial u^i}{\partial w^j}\frac{\partial u^l}{\partial w^k}\delta_{il}\:,
+\qquad g^{jk}=\frac{\partial w^j}{\partial u^i}
+\frac{\partial w^k}{\partial u^l}\delta^{il}\:,
+\end{align*}
+is easy to see from here that Christoffel symbol $\Gamma_{jks}$ enjoy the property
+\begin{align}
+\Gamma_{jks}=\frac{1}{2}\bigg(\frac{\partial g_{js}}{\partial w^k}+
+\frac{\partial g_{ks}}{\partial w^j}-
+\frac{\partial g_{jk}}{\partial w^s}\bigg)\:\cdot
+\end{align}
+In a similar way we find for the derivative of the contravariant base vectors
+\begin{align}
+\frac{\partial\mathbf{g}^j}{\partial w^k}=-\Gamma^j_{ks}\mathbf{g}^s\:.
+\end{align}
+Is easy to show the following results:
+\begin{align*}
+\Gamma_{jks}=\Gamma_{kjs}=
+\mathbf{g}_s\cdot\frac{\partial\mathbf{g}_k}{\partial w^j}=
+\mathbf{g}_s\cdot\frac{\partial\mathbf{g}_j}{\partial w^k}\:,
+\end{align*}
+\begin{align*}
+\Gamma^r_{jk}=\Gamma^r_{kj}=\mathbf{g}^r\cdot
+\frac{\partial\mathbf{g}_j}{\partial w^k}=
+\mathbf{g}^r\cdot
+\frac{\partial\mathbf{g}_k}{\partial w^j}=
+-\mathbf{g}_j\cdot\frac{\partial\mathbf{g}^r}{\partial w^k}\:,
+\end{align*}
+\begin{align*}
+\Gamma^i_{ir}=\frac{1}{2}g^{is}(g_{is,r}+g_{rs,i}-g_{ir,s})=
+\frac{1}{2}g^{is}g_{is,r}=
+\frac{1}{2g}\frac{\partial g}{\partial g_{is}}
+\frac{\partial g_{is}}{\partial w^r}=
+\frac{1}{\sqrt{g}}\frac{\partial\sqrt{g}}{\partial w^r}\:,
+\end{align*}
+\begin{align*}
+\Gamma_{jsk}+\Gamma_{ksj}=g_{jk,s}\:,
+\end{align*}
+comma denoting differentiation with respect to the curvilinear coordinates $w^j$ and $g=|g_{jk}|$. When the coordinate curves are orthogonal we have the following formulae for the Christoffel symbols: \bf{(repeated indices are not to be summed)}
+\begin{align*}
+\Gamma_{jks}=0\:, \qquad \Gamma^s_{jk}=0\:, \qquad (j\neq k\neq s\neq j),
+\end{align*}
+\begin{align*}
+\Gamma_{iir}=-\frac{1}{2}\frac{\partial g_{ii}}{\partial w^r}\:, \qquad
+\Gamma^r_{ii}=-\frac{1}{2g_{rr}}\frac{\partial g_{ii}}{\partial w^r}\:, \qquad
+(r\neq i)\:,
+\end{align*}
+\begin{align*}
+\Gamma_{iri}=\Gamma_{rii}=\frac{1}{2}\frac{\partial g_{ii}}{\partial w^r}\:,
+\qquad \Gamma^r_{ri}=\Gamma^r_{ir}=
+\frac{1}{2g_{rr}}\frac{\partial g_{rr}}{\partial w^i}=
+\frac{1}{2}\frac{\partial\log{g_{rr}}}{\partial w^i}\:\cdot
+\end{align*}
+%%%%%
+%%%%%
+\end{document}

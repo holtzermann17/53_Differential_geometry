@@ -1,0 +1,73 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CurvaturespaceCurve}
+\pmcreated{2013-03-22 12:14:58}
+\pmmodified{2013-03-22 12:14:58}
+\pmowner{slider142}{78}
+\pmmodifier{slider142}{78}
+\pmtitle{curvature (space curve)}
+\pmrecord{13}{31632}
+\pmprivacy{1}
+\pmauthor{slider142}{78}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53A04}
+\pmsynonym{curvature}{CurvaturespaceCurve}
+\pmrelated{SpaceCurve}
+\pmrelated{Torsion}
+\pmrelated{ExpressionsForCurvatureAndTorsion}
+\pmrelated{SerretFrenetFormulas}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\newcommand{\reals}{\mathbb{R}}
+\begin{document}
+Let $I\subset\reals$ be an interval, and let $\gamma:I\to\reals^3$ be
+an arclength parameterization of an oriented space curve, assumed to
+be regular, and free of points of inflection.  We interpret $\gamma(t)$ as
+the trajectory of a particle moving through 3-dimensional space.  Let
+$T(t), N(t), B(t)$ denote the corresponding moving trihedron.  The
+speed of this particle is given by 
+\[
+   v(t) = \Vert \gamma'(t) \Vert.
+\]
+
+The quantity
+\[ \kappa(t) = \frac{\Vert T'(t)\Vert}{v(t)} = 
+               \frac{\Vert \gamma'(t)\times \gamma''(t)\Vert}
+                     {\Vert \gamma'(t)\Vert^3}
+\]
+is called the
+\emph{curvature} of the space curve.  It is invariant with respect to
+reparameterization, and is therefore a measure of an intrinsic property
+of the curve, a real number geometrically assigned to the point
+$\gamma(t)$. If one parameterizes the curve with respect to the arclength $s$, one gets the more concise relation that
+\[
+   \kappa(s) = \frac{1\cdot\Vert\gamma''(s)\Vert\cdot\sin\frac{\pi}{2}}{1^3} 
+             = \Vert\gamma''(s)\Vert.
+\]
+
+Physically, curvature may be conceived as the ratio of the normal
+acceleration of a particle to the particle's speed.  This ratio
+measures the degree to which the curve deviates from the straight line
+at a particular point. Indeed, one can show
+that of all the circles passing through $\gamma(t)$ and lying on the
+osculating plane, the one of radius $1/\kappa(t)$ serves as the best
+approximation to the space curve at the point $\gamma(t)$.
+
+To treat curvature analytically, we take the derivative of the relation
+\[ \gamma'(t) = v(t) T(t).\]
+This yields the following
+decomposition of the acceleration vector:
+\[
+  \gamma''(t) = v'(t) T(t) + v(t) T'(t)
+              = v(t) \left\{ (\log v)'(t)\, T(t) + \kappa(t)\, N(t)\right\}.
+\]
+Thus, to change speed,
+one needs to apply acceleration along the tangent vector; to change
+heading the acceleration must be applied along the normal.
+%%%%%
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,109 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SymplecticManifold}
+\pmcreated{2013-03-22 13:12:18}
+\pmmodified{2013-03-22 13:12:18}
+\pmowner{matte}{1858}
+\pmmodifier{matte}{1858}
+\pmtitle{symplectic manifold}
+\pmrecord{11}{33667}
+\pmprivacy{1}
+\pmauthor{matte}{1858}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53D05}
+\pmrelated{ContactManifold}
+\pmrelated{KahlerManifold}
+\pmrelated{HyperkahlerManifold}
+\pmrelated{MathbbCIsAKahlerManifold}
+\pmdefines{symplectic form}
+\pmdefines{symplectomorphism}
+\pmdefines{canonical transformation}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+
+ \usepackage{bbm}
+ \newcommand{\Z}{\mathbbmss{Z}}
+ \newcommand{\C}{\mathbbmss{C}}
+ \newcommand{\R}{\mathbbmss{R}}
+ \newcommand{\Q}{\mathbbmss{Q}}
+
+
+
+\newcommand*{\norm}[1]{\lVert #1 \rVert}
+\newcommand*{\abs}[1]{| #1 |}
+
+
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+\begin{document}
+Symplectic manifolds constitute
+the mathematical structure for modern Hamiltonian mechanics.
+Symplectic manifolds can also be seen as even dimensional 
+analogues to contact manifolds. 
+
+\begin{defn}
+A {\em symplectic manifold} is a pair $(M,\omega)$ consisting 
+of a smooth manifold $M$ and a 
+closed \PMlinkname{2-form}{DifferentialForms} 
+$\omega\in\Omega^2(M)$, that is non-degenerate
+at each point.  
+Then $\omega$ is called a {\em symplectic 
+form} for $M$.
+\end{defn}
+
+\subsubsection*{Properties}
+\begin{enumerate}
+\item Every symplectic manifold is even dimensional. This is 
+easy to understand in view of the physics. In Hamilton
+equations, location and momentum vectors always appear in pairs.
+\item A form $\omega\in \Omega^2(M)$ on a $2n$-dimensional 
+manifold $M$ is non-degenerate if and only if the 
+$n$-fold product $\omega^n= \omega\wedge \cdots \wedge \omega$
+is non-zero.
+\item As a consequence of the last \PMlinkescapetext{property}, every symplectic manifold
+is orientable. 
+\end{enumerate}
+
+Let $(M,\omega)$ and $(N,\eta)$ be symplectic manifolds.  Then a diffeomorphism $f\colon M\to N$ is
+called a {\em symplectomorphism} if $f^*\eta=\omega$, that is, if the symplectic form on $N$
+pulls back to the form on $M$.
+
+\subsubsection*{Notes}
+A symplectomorphism is also known as a \emph{canonical transformation}.
+This \PMlinkescapetext{term} is mostly used in the mechanics literature.
+%%%%%
+%%%%%
+\end{document}

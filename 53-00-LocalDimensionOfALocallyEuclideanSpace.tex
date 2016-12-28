@@ -1,0 +1,51 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LocalDimensionOfALocallyEuclideanSpace}
+\pmcreated{2013-03-22 18:55:34}
+\pmmodified{2013-03-22 18:55:34}
+\pmowner{joking}{16130}
+\pmmodifier{joking}{16130}
+\pmtitle{local dimension of a locally Euclidean space}
+\pmrecord{7}{41778}
+\pmprivacy{1}
+\pmauthor{joking}{16130}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53-00}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Let $X$ be a locally Euclidean space. Recall that the local dimension of $X$ in $y\in X$ is a natural number $n\in\mathbb{N}$ such that there is an open neighbourhood $U\subseteq X$ of $y$ homeomorphic to $\mathbb{R}^n$. This number is well defined (please, see parent object for more details) and we will denote it by $\mathrm{dim}_{y}X$.\\ \\
+\textbf{Proposition.} Function $f:X\to\mathbb{N}$ defined by $f(y)=\mathrm{dim}_{y}X$ is continuous (where on $\mathbb{N}$ we have discrete topology).\\ \\
+\textit{Proof.} It is enough to show that preimage of a point is open. Assume that $n\in\mathbb{N}$ and $y\in X$ is such that $f(y)=n$. Then there is an open neighbourhood $U\subseteq X$ of $y$ such that $U$ is homeomorphic to $\mathbb{R}^n$. Obviously for any $x\in U$ we have that $U$ is an open neighbourhood of $x$ homeomorphic to $\mathbb{R}^n$. Therefore $f(x)=n$, so $U\subseteq f^{-1}(n)$. Thus (since $y$ was arbitrary) we've shown that around every point in $f^{-1}(n)$ there is an open neighbourhood of that point contained in $f^{-1}(n)$. This shows that $f^{-1}(n)$ is open, which completes the proof. $\square$\\ \\
+\textbf{Corollary.} Assume that $X$ is a connected, locally Euclidean space. Then local dimension is constant, i.e. there exists natural number $n\in\mathbb{N}$ such that for any $y\in X$ we have
+$$\mathrm{dim}_{y}X=n.$$
+\textit{Proof.} Consider the mapping $f:X\to\mathbb{N}$ such that $f(y)=\mathrm{dim}_{y}X$. Proposition shows that $f$ is continuous. Therefore $f(X)$ is connected, because $X$ is. But $\mathbb{N}$ has discrete topology, so there are no other connected subsets then points. Thus there is $n\in\mathbb{N}$ such that $f(X)=\{n\}$, which completes the proof. $\square$\\ \\
+\textbf{Remark.} Generally, local dimension need not be constant. For example consider $X_1,X_2\subseteq\mathbb{R}^3$ such that
+$$X_1=\{(x,0,0)\ |\ x\in\mathbb{R}\}\ \ \ \ X_2=\{(x,y,1)\ |\ x,y\in\mathbb{R}\}.$$
+One can easily show that $X=X_1\cup X_2$ (with topology inherited from $\mathbb{R}^3$) is locally Euclidean, but $\mathrm{dim}_{(0,0,0)}X=1$ and $\mathrm{dim}_{(1,1,1)}X=2$.
+
+%%%%%
+%%%%%
+\end{document}

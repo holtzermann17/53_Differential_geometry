@@ -1,0 +1,92 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Evolute}
+\pmcreated{2013-03-22 17:35:06}
+\pmmodified{2013-03-22 17:35:06}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{evolute}
+\pmrecord{8}{39997}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53A04}
+\pmrelated{ConditionOfOrthogonality}
+\pmrelated{ArcLength}
+\pmrelated{BolzanosTheorem}
+\pmrelated{SubstitutionNotation}
+\pmdefines{evolute}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\sijoitus}[2]%
+{\operatornamewithlimits{\Big/}_{\!\!\!#1}^{\,#2}}
+\begin{document}
+The locus of the center of curvature of a plane curve is called the {\em evolute} of this curve.
+
+The coordinates of the center of curvature belonging to the point \,$P = (x,\,y)$\, of the curve $\gamma$ are
+\begin{align}
+\xi \;=\; x-\varrho\,\sin\alpha,\qquad \eta \;=\; y+\varrho\,\cos\alpha,
+\end{align}
+where $\varrho$ is the radius of curvature in $P$ and $\alpha$ is the slope angle of the tangent line of the curve in $P$.\, So (1) may be regarded as the equations of the evolute of $\gamma$.\\
+
+If the plane curve is given in the parametric form \, $x = x(t),\;\, y = y(t)$,\, the corresponding parametric equations of the evolute are
+ $$\xi \;=\; x-\frac{(x'^{\,2}\!+\!y'^{\,2})y'}{x'y''\!-\!x''y'},\qquad
+ \eta \;=\; y+\frac{(x'^{\,2}\!+\!y'^{\,2})x'}{x'y''\!-\!x''y'}.$$
+In the spexial case that the curve is given in the form\, $y = y(x)$\, these equations can be written
+ $$\xi \;=\; x-\frac{(1\!+\!y'^{\,2})y'}{y''},\qquad \eta \;=\; y+\frac{1\!+\!y'^{\,2}}{y''}.$$
+
+
+For examining the properties of the evolute we choose for parameter the arc length $s$, measured from a certain point of the curve; then in (1) the quantities $x,\,y,\,\varrho,\,\alpha$ and thus $\xi$ and $\eta$ are functions of $s$.  We assume that all needed derivatives exist and are continuous.
+
+Differentiating (1) with respect to $s$, we obtain
+ $$\frac{d\xi}{ds} \;=\; \frac{dx}{ds}-\varrho\frac{d\alpha}{ds}\cos\alpha-\frac{d\varrho}{ds}\sin\alpha,\qquad
+  \frac{d\eta}{ds} \;=\; \frac{dy}{ds}-\varrho\frac{d\alpha}{ds}\sin\alpha+\frac{d\varrho}{ds}\cos\alpha,$$
+and recalling that\, $\frac{dx}{ds} = \cos\alpha$,\, $\frac{dy}{ds} = \sin\alpha$\, and\, $\varrho\frac{d\alpha}{ds} = 1$\, it yields
+\begin{align}
+\frac{d\xi}{ds} \;=\; -\frac{d\varrho}{ds}\sin\alpha,\qquad \frac{d\eta}{ds} \;=\; \frac{d\varrho}{ds}\cos\alpha.
+\end{align}
+If\, $\frac{d\varrho}{ds} \neq 0$\, in the point \,$(x,\,y)$\, of $\gamma$, the derivatives $\frac{d\xi}{ds}$ and $\frac{d\eta}{ds}$ do not vanish simultaneously, and so the evolute has in the corresponding point\, $(\xi,\,\eta)$\, a tangent line with the slope
+ $$\frac{d\eta}{ds}:\frac{d\xi}{ds} \;=\; -\frac{1}{\tan\alpha}.$$
+Since the \PMlinkescapetext{right side} of this is the slope of the normal line of the given curve $\gamma$, we have the
+
+\textbf{Theorem 1.}\, The normal line of the curve in a point\, $(x,\,y)$,\, where\, $\displaystyle\frac{d\varrho}{ds} \neq 0$, is the tangent line of the evolute, having as tangency point the corresponding center of curvature\, $(\xi,\,\eta)$.\, Thus the evolute is the envelope of the normal lines of the curve.\\
+
+We shall calculate the arc length $\sigma$ of the evolute corresponding the arc of the curve $\gamma$ which is passed through when the parameter $s$ grows from $s_1$ to $s_2$; we assume that $\varrho$ and $\frac{d\varrho}{ds}$ are then continuous and distinct from zero.  According the arc length formula,
+ $$\sigma \;=\; \int_{s_1}^{s_2}\sqrt{\left(\frac{d\xi}{ds}\right)^{\!2}+\left(\frac{d\eta}{ds}\right)^{\!2}}\,ds.$$
+Using the equations (2) and the fact that the sign of $\frac{d\varrho}{ds}$ does not change, we can write
+ $$\sigma \;=\; \int_{s_1}^{s_2}\sqrt{\left(\frac{d\varrho}{ds}\right)^{\!2}}\,ds \;=\; 
+  \int_{s_1}^{s_2}\left|\frac{d\varrho}{ds}\right|\,ds \;=\; \left|\int_{s_1}^{s_2}\frac{d\varrho}{ds}\,ds\right|
+\;=\; \left|\sijoitus{s_1}{\quad s_2}\varrho\right| \;=\; |\varrho_2\!-\!\varrho_1|,$$
+where $\varrho_1$ and $\varrho_2$ are the corresponding \PMlinkescapetext{radii of curvature} of $\gamma$.  We have proved the
+
+\textbf{Theorem 2.}\, The \PMlinkescapetext{length} of an arc of the evolute is equal to the difference of the \PMlinkescapetext{radii of curvature} of the given curve touching the arc of the evolute in its end points, provided that $\varrho$ and $\frac{d\varrho}{ds}$ are continuous and do not change their sign on the arc of the curve.
+
+\begin{thebibliography}{8}
+\bibitem{lindelof}{\sc Ernst Lindel\"of}: {\em Differentiali- ja integralilasku
+ja sen sovellutukset I}.  Toinen painos. WSOY, Helsinki (1950).
+\end{thebibliography} 
+
+%%%%%
+%%%%%
+\end{document}

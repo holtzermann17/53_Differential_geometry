@@ -1,0 +1,85 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfExhaustionByCompactSetsFormathbbRn}
+\pmcreated{2013-03-22 15:51:38}
+\pmmodified{2013-03-22 15:51:38}
+\pmowner{cvalente}{11260}
+\pmmodifier{cvalente}{11260}
+\pmtitle{proof of exhaustion by compact sets for $\mathbb{R}^n$}
+\pmrecord{5}{37850}
+\pmprivacy{1}
+\pmauthor{cvalente}{11260}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53-00}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\inter}{\operatorname{int}}
+\begin{document}
+First consider $A\subset \mathbb{R}^n$ to be a bounded open set and designate the open ball centered at $x$ with radius $r$ by $B_r(x)$
+
+Construct $C_n=\bigcup_{x \in \partial A} B_{\frac{1}{n}}(x)$, where $\partial A$ is the boundary of $A$ and define $K_n = A \backslash C_n$.
+
+\begin{itemize}
+\item $K_n$ is compact.
+
+It is bounded since $K_n \subset A$ and $A$ is by assumption bounded.
+ $K_n$ is also closed. To see this consider $x \in \partial K_n$ but $x \notin K_n$. Then there exists $y \in \partial A$ and $0<r<\frac{1}{n}$ such that $x \in B_r(y)$.
+But $B_r(y) \cap K_n = \{\}$ because $B_{\frac{1}{n}}(y) \cap K_n = \{\}$ and $0<r<\frac{1}{n} \implies B_r(y) \subset B_{\frac{1}{n}}(y)$.
+This implies that $x \notin \partial K_n$ and we have a contradiction. $K_n$ is therefore closed.
+
+\item $K_{n} \subset \inter K_{n+1}$
+
+Suppose $x \in K_n$ and $x \notin \inter K_{n+1}$. This means that for all $y \in \partial A$, $x \in \overline{B_{\frac{1}{n+1}}(y)} \vee x \in \mathbb{R}^n \backslash A$.
+Since $x \in K_n \implies x \in A$ we must have $x \in \overline{B_{\frac{1}{n+1}}(y)}$.
+But $x \in \overline{B_{\frac{1}{n+1}}(y)} \subset B_{\frac{1}{n}}(y) \implies x \notin K_n$ and we have a contradiction.
+
+\item $\bigcup_{n=1}^{\infty} K_n = A$
+
+Suppose $x \in A$, since $A$ is open there must exist $r>0$ such that $B_r(x) \subset A$.
+Considering $n$ such that $\frac{1}{n}<r$ we have that $x \notin B_{\frac{1}{n}}(y)$ for all $y \in \partial A$ and thus $x \in K_n$.
+
+\end{itemize}
+
+Finally if $A$ is not bounded consider $A_k = A \cap B_{k}(0)$ and define $K_n = \bigcup_{k=1}^n K_{k,n}$ where $K_{k,n}$ is the set resulting from the previous construction on the bounded set $A_k$.
+
+\begin{itemize}
+
+\item $K_n$  will be compact because it is the finite union of compact sets.
+
+\item $K_{n} \subset \inter K_{n+1}$ because $K_{k,n} \subset \inter K_{k,n+1}$ and $\inter(A \cup B) \subset \inter A \cup \inter B$
+
+\item $\bigcup_{n=1}^{\infty} K_n = A$
+
+First find $k$ such that $x \in A_k$.
+This will always be possible since all it requires is that $k>|x|$.
+Finally since $n > k \implies K_{k,n} \subset K_{n,n}$ by construction the argument for the bounded case is directly applicable.
+
+\end{itemize}
+
+
+
+\end{document}
+%%%%%
+%%%%%
+\end{document}

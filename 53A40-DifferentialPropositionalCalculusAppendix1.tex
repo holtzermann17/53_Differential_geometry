@@ -1,0 +1,604 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DifferentialPropositionalCalculusAppendix1}
+\pmcreated{2013-11-16 13:40:11}
+\pmmodified{2013-11-16 13:40:11}
+\pmowner{Jon Awbrey}{15246}
+\pmmodifier{Jon Awbrey}{15246}
+\pmtitle{differential propositional calculus : appendix 1}
+\pmrecord{20}{40677}
+\pmprivacy{1}
+\pmauthor{Jon Awbrey}{15246}
+\pmtype{Application}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53A40}
+\pmclassification{msc}{39A12}
+\pmclassification{msc}{34G99}
+\pmclassification{msc}{03B44}
+\pmclassification{msc}{03B42}
+\pmclassification{msc}{03B05}
+\pmrelated{DifferentialLogic}
+\pmrelated{MinimalNegationOperator}
+\pmrelated{PropositionalCalculus}
+\pmrelated{ZerothOrderLogic}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+\textbf{Note.}  The following Tables are best viewed in the Page Image mode.
+
+\tableofcontents
+
+\subsection{Table A1.  Propositional Forms on Two Variables}
+
+Table A1 lists equivalent expressions for the Boolean functions of two variables in a number of different notational systems.
+
+\begin{quote}\begin{tabular}{|c|c|c|c|c|c|c|}
+\multicolumn{7}{c}{\textbf{Table A1.  Propositional Forms on Two Variables}} \\
+\hline
+$\mathcal{L}_1$ &
+$\mathcal{L}_2$ &&
+$\mathcal{L}_3$ &
+$\mathcal{L}_4$ &
+$\mathcal{L}_5$ &
+$\mathcal{L}_6$ \\
+\hline
+& & $x =$ & 1 1 0 0 & & & \\
+& & $y =$ & 1 0 1 0 & & & \\
+\hline
+$f_{0}$     &
+$f_{0000}$  &&
+0 0 0 0     &
+$(~)$       &
+$\operatorname{false}$ &
+$0$         \\
+$f_{1}$     &
+$f_{0001}$  &&
+0 0 0 1     &
+$(x)(y)$    &
+$\operatorname{neither}\ x\ \operatorname{nor}\ y$ &
+$\lnot x \land \lnot y$ \\
+$f_{2}$     &
+$f_{0010}$  &&
+0 0 1 0     &
+$(x)\ y$    &
+$y\ \operatorname{without}\ x$ &
+$\lnot x \land y$ \\
+$f_{3}$     &
+$f_{0011}$  &&
+0 0 1 1     &
+$(x)$       &
+$\operatorname{not}\ x$ &
+$\lnot x$   \\
+$f_{4}$     &
+$f_{0100}$  &&
+0 1 0 0     &
+$x\ (y)$    &
+$x\ \operatorname{without}\ y$ &
+$x \land \lnot y$ \\
+$f_{5}$     &
+$f_{0101}$  &&
+0 1 0 1     &
+$(y)$       &
+$\operatorname{not}\ y$ &
+$\lnot y$   \\
+$f_{6}$     &
+$f_{0110}$  &&
+0 1 1 0     &
+$(x,\ y)$   &
+$x\ \operatorname{not~equal~to}\ y$ &
+$x \ne y$   \\
+$f_{7}$     &
+$f_{0111}$  &&
+0 1 1 1     &
+$(x\ y)$    &
+$\operatorname{not~both}\ x\ \operatorname{and}\ y$ &
+$\lnot x \lor \lnot y$ \\
+\hline
+$f_{8}$     &
+$f_{1000}$  &&
+1 0 0 0     &
+$x\ y$      &
+$x\ \operatorname{and}\ y$ &
+$x \land y$ \\
+$f_{9}$     &
+$f_{1001}$  &&
+1 0 0 1     &
+$((x,\ y))$ &
+$x\ \operatorname{equal~to}\ y$ &
+$x = y$     \\
+$f_{10}$    &
+$f_{1010}$  &&
+1 0 1 0     &
+$y$         &
+$y$         &
+$y$         \\
+$f_{11}$    &
+$f_{1011}$  &&
+1 0 1 1     &
+$(x\ (y))$  &
+$\operatorname{not}\ x\ \operatorname{without}\ y$ &
+$x \Rightarrow y$ \\
+$f_{12}$    &
+$f_{1100}$  &&
+1 1 0 0     &
+$x$         &
+$x$         &
+$x$         \\
+$f_{13}$    &
+$f_{1101}$  &&
+1 1 0 1     &
+$((x)\ y)$  &
+$\operatorname{not}\ y\ \operatorname{without}\ x$ &
+$x \Leftarrow y$ \\
+$f_{14}$    &
+$f_{1110}$  &&
+1 1 1 0     &
+$((x)(y))$  &
+$x\ \operatorname{or}\ y$ &
+$x \lor y$  \\
+$f_{15}$    &
+$f_{1111}$  &&
+1 1 1 1     &
+$((~))$     &
+$\operatorname{true}$ &
+$1$         \\
+\hline
+\end{tabular}\end{quote}
+
+\subsection{Table A2.  Propositional Forms on Two Variables}
+
+Table A2 lists the sixteen Boolean functions of two variables in a different order, grouping them by structural similarity into seven natural classes.
+
+\begin{quote}\begin{tabular}{|c|c|c|c|c|c|c|}
+\multicolumn{7}{c}{\textbf{Table A2.  Propositional Forms on Two Variables}} \\
+\hline
+$\mathcal{L}_1$ &
+$\mathcal{L}_2$ &&
+$\mathcal{L}_3$ &
+$\mathcal{L}_4$ &
+$\mathcal{L}_5$ &
+$\mathcal{L}_6$ \\
+\hline
+& & $x =$ & 1 1 0 0 & & & \\
+& & $y =$ & 1 0 1 0 & & & \\
+\hline
+$f_{0}$     &
+$f_{0000}$  &&
+0 0 0 0     &
+$(~)$       &
+$\operatorname{false}$ &
+$0$         \\
+\hline
+$f_{1}$     &
+$f_{0001}$  &&
+0 0 0 1     &
+$(x)(y)$    &
+$\operatorname{neither}\ x\ \operatorname{nor}\ y$ &
+$\lnot x \land \lnot y$ \\
+$f_{2}$     &
+$f_{0010}$  &&
+0 0 1 0     &
+$(x)\ y$    &
+$y\ \operatorname{without}\ x$ &
+$\lnot x \land y$ \\
+$f_{4}$     &
+$f_{0100}$  &&
+0 1 0 0     &
+$x\ (y)$    &
+$x\ \operatorname{without}\ y$ &
+$x \land \lnot y$ \\
+$f_{8}$     &
+$f_{1000}$  &&
+1 0 0 0     &
+$x\ y$      &
+$x\ \operatorname{and}\ y$ &
+$x \land y$ \\
+\hline
+$f_{3}$     &
+$f_{0011}$  &&
+0 0 1 1     &
+$(x)$       &
+$\operatorname{not}\ x$ &
+$\lnot x$   \\
+$f_{12}$    &
+$f_{1100}$  &&
+1 1 0 0     &
+$x$         &
+$x$         &
+$x$         \\
+\hline
+$f_{6}$     &
+$f_{0110}$  &&
+0 1 1 0     &
+$(x,\ y)$   &
+$x\ \operatorname{not~equal~to}\ y$ &
+$x \ne y$   \\
+$f_{9}$     &
+$f_{1001}$  &&
+1 0 0 1     &
+$((x,\ y))$ &
+$x\ \operatorname{equal~to}\ y$ &
+$x = y$     \\
+\hline
+$f_{5}$     &
+$f_{0101}$  &&
+0 1 0 1     &
+$(y)$       &
+$\operatorname{not}\ y$ &
+$\lnot y$   \\
+$f_{10}$    &
+$f_{1010}$  &&
+1 0 1 0     &
+$y$         &
+$y$         &
+$y$         \\
+\hline
+$f_{7}$     &
+$f_{0111}$  &&
+0 1 1 1     &
+$(x\ y)$    &
+$\operatorname{not~both}\ x\ \operatorname{and}\ y$ &
+$\lnot x \lor \lnot y$ \\
+$f_{11}$    &
+$f_{1011}$  &&
+1 0 1 1     &
+$(x\ (y))$  &
+$\operatorname{not}\ x\ \operatorname{without}\ y$ &
+$x \Rightarrow y$ \\
+$f_{13}$    &
+$f_{1101}$  &&
+1 1 0 1     &
+$((x)\ y)$  &
+$\operatorname{not}\ y\ \operatorname{without}\ x$ &
+$x \Leftarrow y$ \\
+$f_{14}$    &
+$f_{1110}$  &&
+1 1 1 0     &
+$((x)(y))$  &
+$x\ \operatorname{or}\ y$ &
+$x \lor y$  \\
+\hline
+$f_{15}$    &
+$f_{1111}$  &&
+1 1 1 1     &
+$((~))$     &
+$\operatorname{true}$ &
+$1$         \\
+\hline
+\end{tabular}\end{quote}
+
+\subsection{Table A3.  $\operatorname{E}f$ Expanded Over Differential Features $\{ \operatorname{d}x, \operatorname{d}y \}$}
+
+\begin{quote}\begin{tabular}{|c|c||c|c|c|c|}
+\multicolumn{6}{c}{\textbf{Table A3.  $\operatorname{E}f$ Expanded Over Differential Features $\{ \operatorname{d}x, \operatorname{d}y \}$}} \\
+\hline
+& &
+$\operatorname{T}_{11}$ &
+$\operatorname{T}_{10}$ &
+$\operatorname{T}_{01}$ &
+$\operatorname{T}_{00}$ \\
+& $f$ &
+$\operatorname{E}f|_{\operatorname{d}x\ \operatorname{d}y}$   &
+$\operatorname{E}f|_{\operatorname{d}x (\operatorname{d}y)}$  &
+$\operatorname{E}f|_{(\operatorname{d}x) \operatorname{d}y}$  &
+$\operatorname{E}f|_{(\operatorname{d}x)(\operatorname{d}y)}$ \\
+\hline
+$f_{0}$  & $(~)$       & $(~)$       & $(~)$       & $(~)$       & $(~)$       \\
+\hline
+$f_{1}$  & $(x)(y)$    & $x\ y$      & $x\ (y)$    & $(x)\ y$    & $(x)(y)$    \\
+$f_{2}$  & $(x)\ y$    & $x\ (y)$    & $x\ y$      & $(x)(y)$    & $(x)\ y$    \\
+$f_{4}$  & $x\ (y)$    & $(x)\ y$    & $(x)(y)$    & $x\ y$      & $x\ (y)$    \\
+$f_{8}$  & $x\ y$      & $(x)(y)$    & $(x)\ y$    & $x\ (y)$    & $x\ y$      \\
+\hline
+$f_{3}$  & $(x)$       & $x$         & $x$         & $(x)$       & $(x)$       \\
+$f_{12}$ & $x$         & $(x)$       & $(x)$       & $x$         & $x$         \\
+\hline
+$f_{6}$  & $(x,\ y)$   & $(x,\ y)$   & $((x,\ y))$ & $((x,\ y))$ & $(x,\ y)$   \\
+$f_{9}$  & $((x,\ y))$ & $((x,\ y))$ & $(x,\ y)$   & $(x,\ y)$   & $((x,\ y))$ \\
+\hline
+$f_{5}$  & $(y)$       & $y$         & $(y)$       & $y$         & $(y)$       \\
+$f_{10}$ & $y$         & $(y)$       & $y$         & $(y)$       & $y$         \\
+\hline
+$f_{7}$  & $(x\ y)$    & $((x)(y))$  & $((x)\ y)$  & $(x\ (y))$  & $(x\ y)$    \\
+$f_{11}$ & $(x\ (y))$  & $((x)\ y)$  & $((x)(y))$  & $(x\ y)$    & $(x\ (y))$  \\
+$f_{13}$ & $((x)\ y)$  & $(x\ (y))$  & $(x\ y)$    & $((x)(y))$  & $((x)\ y)$  \\
+$f_{14}$ & $((x)(y))$  & $(x\ y)$    & $(x\ (y))$  & $((x)\ y)$  & $((x)(y))$  \\
+\hline
+$f_{15}$ & $((~))$     & $((~))$     & $((~))$     & $((~))$     & $((~))$     \\
+\hline
+\multicolumn{2}{|c||}{\PMlinkname{Fixed Point}{FixedPoint} Total:} & 4 & 4 & 4 & 16 \\
+\hline
+\end{tabular}\end{quote}
+
+\subsection{Table A4.  $\operatorname{D}f$ Expanded Over Differential Features $\{ \operatorname{d}x, \operatorname{d}y \}$}
+
+\begin{quote}\begin{tabular}{|c|c||c|c|c|c|}
+\multicolumn{6}{c}{\textbf{Table A4.  $\operatorname{D}f$ Expanded Over Differential Features $\{ \operatorname{d}x, \operatorname{d}y \}$}} \\
+\hline
+& $f$ &
+$\operatorname{D}f|_{\operatorname{d}x\ \operatorname{d}y}$   &
+$\operatorname{D}f|_{\operatorname{d}x (\operatorname{d}y)}$  &
+$\operatorname{D}f|_{(\operatorname{d}x) \operatorname{d}y}$  &
+$\operatorname{D}f|_{(\operatorname{d}x)(\operatorname{d}y)}$ \\
+\hline
+$f_{0}$  & $(~)$       & $(~)$       & $(~)$   & $(~)$   & $(~)$ \\
+\hline
+$f_{1}$  & $(x)(y)$    & $((x,\ y))$ & $(y)$   & $(x)$   & $(~)$ \\
+$f_{2}$  & $(x)\ y$    & $(x,\ y)$   & $y$     & $(x)$   & $(~)$ \\
+$f_{4}$  & $x\ (y)$    & $(x,\ y)$   & $(y)$   & $x$     & $(~)$ \\
+$f_{8}$  & $x\ y$      & $((x,\ y))$ & $y$     & $x$     & $(~)$ \\
+\hline
+$f_{3}$  & $(x)$       & $((~))$     & $((~))$ & $(~)$   & $(~)$ \\
+$f_{12}$ & $x$         & $((~))$     & $((~))$ & $(~)$   & $(~)$ \\
+\hline
+$f_{6}$  & $(x,\ y)$   & $(~)$       & $((~))$ & $((~))$ & $(~)$ \\
+$f_{9}$  & $((x,\ y))$ & $(~)$       & $((~))$ & $((~))$ & $(~)$ \\
+\hline
+$f_{5}$  & $(y)$       & $((~))$     & $(~)$   & $((~))$ & $(~)$ \\
+$f_{10}$ & $y$         & $((~))$     & $(~)$   & $((~))$ & $(~)$ \\
+\hline
+$f_{7}$  & $(x\ y)$    & $((x,\ y))$ & $y$     & $x$     & $(~)$ \\
+$f_{11}$ & $(x\ (y))$  & $(x,\ y)$   & $(y)$   & $x$     & $(~)$ \\
+$f_{13}$ & $((x)\ y)$  & $(x,\ y)$   & $y$     & $(x)$   & $(~)$ \\
+$f_{14}$ & $((x)(y))$  & $((x,\ y))$ & $(y)$   & $(x)$   & $(~)$ \\
+\hline
+$f_{15}$ & $((~))$     & $(~)$       & $(~)$   & $(~)$   & $(~)$ \\
+\hline
+\end{tabular}\end{quote}
+
+\subsection{Table A5.  $\operatorname{E}f$ Expanded Over Ordinary Features $\{ x, y \}$}
+
+\begin{quote}\begin{tabular}{|c|c||c|c|c|c|}
+\multicolumn{6}{c}{\textbf{Table A5.  $\operatorname{E}f$ Expanded Over Ordinary Features $\{ x, y \}$}} \\
+\hline
+& $f$ &
+$\operatorname{E}f|_{x\ y}$   &
+$\operatorname{E}f|_{x (y)}$  &
+$\operatorname{E}f|_{(x) y}$  &
+$\operatorname{E}f|_{(x)(y)}$ \\
+\hline
+$f_{0}$ &
+$(~)$   &
+$(~)$   &
+$(~)$   &
+$(~)$   &
+$(~)$   \\
+\hline
+$f_{1}$  &
+$(x)(y)$ &
+$\operatorname{d}x\ \operatorname{d}y$   &
+$\operatorname{d}x\ (\operatorname{d}y)$ &
+$(\operatorname{d}x)\ \operatorname{d}y$ &
+$(\operatorname{d}x)(\operatorname{d}y)$ \\
+$f_{2}$  &
+$(x)\ y$ &
+$\operatorname{d}x\ (\operatorname{d}y)$ &
+$\operatorname{d}x\ \operatorname{d}y$   &
+$(\operatorname{d}x)(\operatorname{d}y)$ &
+$(\operatorname{d}x)\ \operatorname{d}y$ \\
+$f_{4}$  &
+$x\ (y)$ &
+$(\operatorname{d}x)\ \operatorname{d}y$ &
+$(\operatorname{d}x)(\operatorname{d}y)$ &
+$\operatorname{d}x\ \operatorname{d}y$   &
+$\operatorname{d}x\ (\operatorname{d}y)$ \\
+$f_{8}$ &
+$x\ y$  &
+$(\operatorname{d}x)(\operatorname{d}y)$ &
+$(\operatorname{d}x)\ \operatorname{d}y$ &
+$\operatorname{d}x\ (\operatorname{d}y)$ &
+$\operatorname{d}x\ \operatorname{d}y$   \\
+\hline
+$f_{3}$ &
+$(x)$   &
+$\operatorname{d}x$   &
+$\operatorname{d}x$   &
+$(\operatorname{d}x)$ &
+$(\operatorname{d}x)$ \\
+$f_{12}$ &
+$x$      &
+$(\operatorname{d}x)$ &
+$(\operatorname{d}x)$ &
+$\operatorname{d}x$   &
+$\operatorname{d}x$   \\
+\hline
+$f_{6}$   &
+$(x,\ y)$ &
+$(\operatorname{d}x,\ \operatorname{d}y)$   &
+$((\operatorname{d}x,\ \operatorname{d}y))$ &
+$((\operatorname{d}x,\ \operatorname{d}y))$ &
+$(\operatorname{d}x,\ \operatorname{d}y)$   \\
+$f_{9}$     &
+$((x,\ y))$ &
+$((\operatorname{d}x,\ \operatorname{d}y))$ &
+$(\operatorname{d}x,\ \operatorname{d}y)$   &
+$(\operatorname{d}x,\ \operatorname{d}y)$   &
+$((\operatorname{d}x,\ \operatorname{d}y))$ \\
+\hline
+$f_{5}$ &
+$(y)$   &
+$\operatorname{d}y$   &
+$(\operatorname{d}y)$ &
+$\operatorname{d}y$   &
+$(\operatorname{d}y)$ \\
+$f_{10}$ &
+$y$      &
+$(\operatorname{d}y)$ &
+$\operatorname{d}y$   &
+$(\operatorname{d}y)$ &
+$\operatorname{d}y$   \\
+\hline
+$f_{7}$  &
+$(x\ y)$ &
+$((\operatorname{d}x)(\operatorname{d}y))$ &
+$((\operatorname{d}x)\ \operatorname{d}y)$ &
+$(\operatorname{d}x\ (\operatorname{d}y))$ &
+$(\operatorname{d}x\ \operatorname{d}y)$   \\
+$f_{11}$   &
+$(x\ (y))$ &
+$((\operatorname{d}x)\ \operatorname{d}y)$ &
+$((\operatorname{d}x)(\operatorname{d}y))$ &
+$(\operatorname{d}x\ \operatorname{d}y)$   &
+$(\operatorname{d}x\ (\operatorname{d}y))$ \\
+$f_{13}$   &
+$((x)\ y)$ &
+$(\operatorname{d}x\ (\operatorname{d}y))$ &
+$(\operatorname{d}x\ \operatorname{d}y)$   &
+$((\operatorname{d}x)(\operatorname{d}y))$ &
+$((\operatorname{d}x)\ \operatorname{d}y)$ \\
+$f_{14}$   &
+$((x)(y))$ &
+$(\operatorname{d}x\ \operatorname{d}y)$   &
+$(\operatorname{d}x\ (\operatorname{d}y))$ &
+$((\operatorname{d}x)\ \operatorname{d}y)$ &
+$((\operatorname{d}x)(\operatorname{d}y))$ \\
+\hline
+$f_{15}$ &
+$((~))$  &
+$((~))$  &
+$((~))$  &
+$((~))$  &
+$((~))$  \\
+\hline
+\end{tabular}\end{quote}
+
+\subsection{Table A6.  $\operatorname{D}f$ Expanded Over Ordinary Features $\{ x, y \}$}
+
+\begin{quote}\begin{tabular}{|c|c||c|c|c|c|}
+\multicolumn{6}{c}{\textbf{Table A6.  $\operatorname{D}f$ Expanded Over Ordinary Features $\{ x, y \}$}} \\
+\hline
+& $f$ &
+$\operatorname{D}f|_{x\ y}$   &
+$\operatorname{D}f|_{x (y)}$  &
+$\operatorname{D}f|_{(x) y}$  &
+$\operatorname{D}f|_{(x)(y)}$ \\
+\hline
+$f_{0}$ &
+$(~)$   &
+$(~)$   &
+$(~)$   &
+$(~)$   &
+$(~)$   \\
+\hline
+$f_{1}$  &
+$(x)(y)$ &
+$\operatorname{d}x\ \operatorname{d}y$     &
+$\operatorname{d}x\ (\operatorname{d}y)$   &
+$(\operatorname{d}x)\ \operatorname{d}y$   &
+$((\operatorname{d}x)(\operatorname{d}y))$ \\
+$f_{2}$  &
+$(x)\ y$ &
+$\operatorname{d}x\ (\operatorname{d}y)$   &
+$\operatorname{d}x\ \operatorname{d}y$     &
+$((\operatorname{d}x)(\operatorname{d}y))$ &
+$(\operatorname{d}x)\ \operatorname{d}y$   \\
+$f_{4}$  &
+$x\ (y)$ &
+$(\operatorname{d}x)\ \operatorname{d}y$   &
+$((\operatorname{d}x)(\operatorname{d}y))$ &
+$\operatorname{d}x\ \operatorname{d}y$     &
+$\operatorname{d}x\ (\operatorname{d}y)$   \\
+$f_{8}$ &
+$x\ y$  &
+$((\operatorname{d}x)(\operatorname{d}y))$ &
+$(\operatorname{d}x)\ \operatorname{d}y$   &
+$\operatorname{d}x\ (\operatorname{d}y)$   &
+$\operatorname{d}x\ \operatorname{d}y$     \\
+\hline
+$f_{3}$ &
+$(x)$   &
+$\operatorname{d}x$ &
+$\operatorname{d}x$ &
+$\operatorname{d}x$ &
+$\operatorname{d}x$ \\
+$f_{12}$ &
+$x$      &
+$\operatorname{d}x$ &
+$\operatorname{d}x$ &
+$\operatorname{d}x$ &
+$\operatorname{d}x$ \\
+\hline
+$f_{6}$   &
+$(x,\ y)$ &
+$(\operatorname{d}x,\ \operatorname{d}y)$ &
+$(\operatorname{d}x,\ \operatorname{d}y)$ &
+$(\operatorname{d}x,\ \operatorname{d}y)$ &
+$(\operatorname{d}x,\ \operatorname{d}y)$ \\
+$f_{9}$     &
+$((x,\ y))$ &
+$(\operatorname{d}x,\ \operatorname{d}y)$ &
+$(\operatorname{d}x,\ \operatorname{d}y)$ &
+$(\operatorname{d}x,\ \operatorname{d}y)$ &
+$(\operatorname{d}x,\ \operatorname{d}y)$ \\
+\hline
+$f_{5}$ &
+$(y)$   &
+$\operatorname{d}y$ &
+$\operatorname{d}y$ &
+$\operatorname{d}y$ &
+$\operatorname{d}y$ \\
+$f_{10}$ &
+$y$      &
+$\operatorname{d}y$ &
+$\operatorname{d}y$ &
+$\operatorname{d}y$ &
+$\operatorname{d}y$ \\
+\hline
+$f_{7}$  &
+$(x\ y)$ &
+$((\operatorname{d}x)(\operatorname{d}y))$ &
+$(\operatorname{d}x)\ \operatorname{d}y$   &
+$\operatorname{d}x\ (\operatorname{d}y)$   &
+$\operatorname{d}x\ \operatorname{d}y$     \\
+$f_{11}$   &
+$(x\ (y))$ &
+$(\operatorname{d}x)\ \operatorname{d}y$   &
+$((\operatorname{d}x)(\operatorname{d}y))$ &
+$\operatorname{d}x\ \operatorname{d}y$     &
+$\operatorname{d}x\ (\operatorname{d}y)$   \\
+$f_{13}$   &
+$((x)\ y)$ &
+$\operatorname{d}x\ (\operatorname{d}y)$   &
+$\operatorname{d}x\ \operatorname{d}y$     &
+$((\operatorname{d}x)(\operatorname{d}y))$ &
+$(\operatorname{d}x)\ \operatorname{d}y$   \\
+$f_{14}$   &
+$((x)(y))$ &
+$\operatorname{d}x\ \operatorname{d}y$     &
+$\operatorname{d}x\ (\operatorname{d}y)$   &
+$(\operatorname{d}x)\ \operatorname{d}y$   &
+$((\operatorname{d}x)(\operatorname{d}y))$ \\
+\hline
+$f_{15}$ &
+$((~))$  &
+$(~)$    &
+$(~)$    &
+$(~)$    &
+$(~)$    \\
+\hline
+\end{tabular}\end{quote}
+
+%%%%%
+%%%%%
+\end{document}

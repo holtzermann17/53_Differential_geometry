@@ -1,0 +1,558 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DifferentialPropositionalCalculus}
+\pmcreated{2013-08-22 21:54:38}
+\pmmodified{2013-08-22 21:54:38}
+\pmowner{Jon Awbrey}{15246}
+\pmmodifier{Jon Awbrey}{15246}
+\pmtitle{differential propositional calculus}
+\pmrecord{69}{40395}
+\pmprivacy{1}
+\pmauthor{Jon Awbrey}{15246}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53A40}
+\pmclassification{msc}{39A12}
+\pmclassification{msc}{34G99}
+\pmclassification{msc}{03B44}
+\pmclassification{msc}{03B42}
+\pmclassification{msc}{03B05}
+\pmsynonym{differential extension of propositional calculus}{DifferentialPropositionalCalculus}
+\pmrelated{Derivation}
+\pmrelated{DifferentialField}
+\pmrelated{DifferentialGeometry}
+\pmrelated{DifferentialLogic}
+\pmrelated{FiniteDifference}
+\pmrelated{FiniteField}
+\pmrelated{MinimalNegationOperator}
+\pmrelated{PropositionalCalculus}
+\pmrelated{ZerothOrderLogic}
+\pmdefines{differential basis}
+\pmdefines{differential extension}
+\pmdefines{differential feature}
+\pmdefines{differential inference}
+\pmdefines{differential proposition}
+\pmdefines{differential quality}
+\pmdefines{differential variable}
+\pmdefines{logical transformation}
+\pmdefines{source universe}
+\pmdefines{target universe}
+\pmdefines{tangent universe}
+\pmdefines{basic proposition}
+
+% This is the default PlanetMath preamble.
+% as your knowledge of TeX increases, you
+% will probably want to edit this, but it
+% should be fine as is for beginners.
+
+% Almost certainly you want these:
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% Used for TeXing text within EPS files:
+
+\usepackage{psfrag}
+
+% Need this for including graphics (\includegraphics):
+
+\usepackage{graphicx}
+
+% For neatly defining theorems and propositions:
+
+%\usepackage{amsthm}
+
+% Making logically defined graphics:
+
+%%%\usepackage{xypic}
+
+% There are many more packages, add them here as you need them.
+
+% define commands here
+
+\begin{document}
+A \textbf{differential propositional calculus} is a \PMlinkname{propositional calculus}{PropositionalCalculus} extended by a set of terms for describing aspects of change and difference, for example, processes that take place in a universe of discourse or transformations that map a source universe into a target universe.
+
+\tableofcontents
+
+\section{Casual introduction}
+
+Consider the situation represented by the venn diagram in Figure 1.
+
+\begin{center}\begin{tabular}{c}
+\includegraphics[scale=0.9]{DifferentialPropositionalCalculus1}
+\\
+Figure $1.$\ Local Habitations, And Names
+\end{tabular}\end{center}
+
+The area of the rectangle represents a universe of discourse, $X.$  This might be a population of individuals having various additional properties or it might be a collection of locations that various individuals occupy.  The area of the ``circle" represents the individuals that have the property $q$ or the locations that fall within the corresponding region $Q.$  Four individuals, $a, b, c, d,$ are singled out by name.  It happens that $b$ and $c$ currently reside in region $Q$ while $a$ and $d$ do not.
+
+Now consider the situation represented by the venn diagram in Figure 2.
+
+\begin{center}\begin{tabular}{c}
+\includegraphics[scale=0.9]{DifferentialPropositionalCalculus2}
+\\
+Figure $2.$\ Same Names, Different Habitations
+\end{tabular}\end{center}
+
+Figure 2 differs from Figure 1 solely in the circumstance that the object $c$ is outside the region $Q$ while the object $d$ is inside the region $Q.$  So far, there is nothing that says that our encountering these Figures in this order is other than purely accidental, but if we interpret the present sequence of frames as a ``moving picture" representation of their natural order in a temporal process, then it would be natural to say that $a$ and $b$ have remained as they were with regard to quality $q$ while $c$ and $d$ have changed their standings in that respect.  In particular, $c$ has moved from the region where $q$ is $\textsl{true}$ to the region where $q$ is $\textsl{false}$ while $d$ has moved from the region where $q$ is $\textsl{false}$ to the region where $q$ is $\textsl{true}.$
+
+Figure 1$^\prime$ reprises the situation shown in Figure 1, but this time interpolates a new quality that is specifically tailored to account for the relation between Figure 1 and Figure 2.
+
+\begin{center}\begin{tabular}{c}
+\includegraphics[scale=0.9]{DifferentialPropositionalCalculus3}
+\\
+Figure $1^\prime.$\ Back, To The Future
+\end{tabular}\end{center}
+
+This new quality, $\operatorname{d}q,$ is an example of a \textit{differential quality}, since its absence or presence qualifies the absence or presence of change occurring in another quality.  As with any other quality, it is represented in the venn diagram by means of a ``circle" that distinguishes two halves of the universe of discourse, in this case, the portions of $X$ outside and inside the region $\operatorname{d}Q.$
+
+Figure 1 represents a universe of discourse, $X,$ together with a basis of discussion, $\{ q \},$ for expressing propositions about the contents of that universe.  Once the quality $q$ is given a name, say, the symbol $``q"$, we have a basis for a formal language that is specifically cut out for discussing $X$ in terms of $q,$ and this formal language is more formally known as the \textit{propositional calculus} with alphabet $\{ ``q" \}.$
+
+In the context marked by $X$ and $\{ q \}$ there are but four different pieces of information that can be expressed in the corresponding propositional calculus, namely, the propositions: $\textsl{false},\ \lnot q,\ q,\ \textsl{true}.$  Referring to the sample of points in Figure 1, $\textsl{false}$ holds of no points, $\lnot q$ holds of $a$ and $d$, $q$ holds of $b$ and $c$, and $\textsl{true}$ holds of all points in the sample.
+
+Figure $1^\prime$ preserves the same universe of discourse and extends the basis of discussion to a set of two qualities, $\{ q,\ \operatorname{d}q \}.$  In parallel fashion, the initial propositional calculus is extended by means of the enlarged alphabet, $\{ ``q", ``\operatorname{d}q" \}.$  Any propositional calculus over two basic propositions allows for the expression of 16 propositions all together.  Just by way of salient examples in the present setting, we can pick out the most informative propositions that apply to each of our sample points.  Using overlines to express logical negation, these are given as follows:
+
+\begin{itemize}
+\item
+$\overline{q}\ \overline{\operatorname{d}q}$ describes $a$
+\item
+$\overline{q}\ \operatorname{d}q$ describes $d$
+\item
+$q\ \overline{\operatorname{d}q}$ describes $b$
+\item
+$q\ \operatorname{d}q$ describes $c$
+\end{itemize}
+
+Table 3 exhibits the rules of inference that give the differential quality $\operatorname{d}q$ its meaning in practice.
+
+\begin{center}\begin{tabular}{ccccccc}
+\multicolumn{7}{c}{\textbf{Table 3.  Differential Inference Rules}} \\[12pt]
+From & $\overline{q}$ & and & $\overline{\operatorname{d}q}$ & infer & $\overline{q}$ & next. \\[6pt]
+From & $\overline{q}$ & and & $\operatorname{d}q$ & infer & $q$ & next. \\[6pt]
+From & $q$ & and & $\overline{\operatorname{d}q}$ & infer & $q$ & next. \\[6pt]
+From & $q$ & and & $\operatorname{d}q$ & infer & $\overline{q}$ & next. \\[6pt]
+\end{tabular}\end{center}
+
+\section{Cactus calculus}
+
+Table 4 outlines a syntax for propositional calculus based on two types of logical connectives, both of variable $k$-ary scope.
+
+\begin{itemize}
+
+\item
+A bracketed list of propositional expressions in the form $(e_1, e_2, \ldots, e_{k-1}, e_k)$ indicates that exactly one of the propositions $e_1, e_2, \ldots, e_{k-1}, e_k$ is false.
+
+\item
+A concatenation of propositional expressions in the form $e_1\ e_2\ \ldots\ e_{k-1}\ e_k$ indicates that all of the propositions $e_1, e_2, \ldots, e_{k-1}, e_k$ are true, in other words, that their logical conjunction is true.
+
+\end{itemize}
+
+\begin{center}\begin{tabular}{|c|c|c|}
+\multicolumn{3}{c}{\textbf{Table 4.  Syntax and Semantics of a Propositional Calculus}} \\[8pt]
+\hline
+\textbf{Expression}      &
+\textbf{Interpretation}  &
+\textbf{Other Notations} \\[4pt]
+\hline
+$~$                      &
+$\operatorname{True}$    &
+$1$                      \\[4pt]
+\hline
+$(~)$                    &
+$\operatorname{False}$   &
+$0$                      \\[4pt]
+\hline
+$x$                      &
+$x$                      &
+$x$                      \\[4pt]
+\hline
+$(x)$                    &
+$\operatorname{Not}\ x$  &
+$\begin{matrix}
+x'        \\
+\tilde{x} \\
+\lnot x   \\
+\end{matrix}$            \\[4pt]
+\hline
+$x\ y\ z$                &
+$x\ \operatorname{and}\ y\ \operatorname{and}\ z$ &
+$x \land y \land z$      \\[4pt]
+\hline
+$((x)(y)(z))$            &
+$x\ \operatorname{or}\ y\ \operatorname{or}\ z$   &
+$x \lor y \lor z$        \\[4pt]
+\hline
+$(x\ (y))$               &
+$\begin{matrix}
+x\ \operatorname{implies}\ y                 \\
+\operatorname{If}\ x\ \operatorname{then}\ y \\
+\end{matrix}$            &
+$x \Rightarrow y$        \\[4pt]
+\hline
+$(x, y)$                 &
+$\begin{matrix}
+x\ \operatorname{not~equal~to}\ y \\
+x\ \operatorname{exclusive~or}\ y \\
+\end{matrix}$            &
+$\begin{matrix}
+x \neq y \\
+x + y    \\
+\end{matrix}$            \\[4pt]
+\hline
+$((x, y))$               &
+$\begin{matrix}
+x\ \operatorname{is~equal~to}\ y    \\
+x\ \operatorname{if~and~only~if}\ y \\
+\end{matrix}$            &
+$\begin{matrix}
+x = y               \\
+x \Leftrightarrow y \\
+\end{matrix}$            \\[4pt]
+\hline
+$(x, y, z)$              &
+$\begin{matrix}
+\operatorname{Just~one~of} \\
+x, y, z                    \\
+\operatorname{is~false}.   \\
+\end{matrix}$            &
+$\begin{matrix}
+x'y~z~ \\
+\lor   \\
+x~y'z~ \\
+\lor   \\
+x~y~z' \\
+\end{matrix}$            \\[4pt]
+\hline
+$((x),(y),(z))$          &
+$\begin{matrix}
+\operatorname{Just~one~of}    \\
+x, y, z                       \\
+\operatorname{is~true}.       \\
+&                             \\
+\operatorname{Partition~all}  \\
+\operatorname{into}\ x, y, z. \\
+\end{matrix}$            &
+$\begin{matrix}
+x~y'z' \\
+\lor   \\
+x'y~z' \\
+\lor   \\
+x'y'z~ \\
+\end{matrix}$            \\[4pt]
+\hline
+$\begin{matrix}
+((x, y), z) \\
+&           \\
+(x, (y, z)) \\
+\end{matrix}$            &
+$\begin{matrix}
+\operatorname{Oddly~many~of} \\
+x, y, z                      \\
+\operatorname{are~true}.     \\
+\end{matrix}$            &
+$\begin{matrix}
+x + y + z \\
+=         \\
+x~y~z~    \\
+\lor      \\
+x~y'z'    \\
+\lor      \\
+x'y~z'    \\
+\lor      \\
+x'y'z~    \\
+\end{matrix}$            \\[4pt]
+\hline
+$(w, (x),(y),(z))$       &
+$\begin{matrix}
+\operatorname{Partition}\ w      \\
+\operatorname{into}\ x, y, z.    \\
+&                                \\
+\operatorname{Genus}\ w\ \operatorname{comprises} \\
+\operatorname{species}\ x, y, z. \\
+\end{matrix}$            &
+$\begin{matrix}
+w'x'y'z' \\
+\lor     \\
+w~x~y'z' \\
+\lor     \\
+w~x'y~z' \\
+\lor     \\
+w~x'y'z~ \\
+\end{matrix}$            \\[4pt]
+\hline
+\end{tabular}\end{center}
+
+All other propositional connectives can be obtained through combinations of these two forms.  Strictly speaking, the concatenation form is dispensable in light of the bracket form, but it is convenient to maintain it as an abbreviation of more complicated bracket expressions.  The briefest expression for logical truth is the empty word, abstractly denoted $\varepsilon$ or $\lambda$ in formal languages, where it forms the identity element for concatenation.  It can be given visible expression in this context by means of the logically equivalent expression $``((~))",$ or, especially if operating in an algebraic context, by a simple $``1".$  Also when working in an algebraic mode, the plus sign $``+"$ may be used for exclusive disjunction.  For example, we have the following paraphrases of algebraic expressions by bracket expressions:
+
+$$ x + y \quad = \quad (x, y)$$
+
+$$x + y + z \quad = \quad ((x, y), z) \quad = \quad (x, (y, z))$$
+
+It is important to note that the last expressions are not equivalent to the triple bracket $(x, y, z).$
+
+For more information about this syntax for propositional calculus, see the entries on \PMlinkname{minimal negation operators}{MinimalNegationOperator}, \PMlinkname{zeroth order logic}{ZerothOrderLogic}, and Table A1 in \PMlinkname{Appendix 1}{DifferentialPropositionalCalculusAppendices}.
+
+\section{Formal development}
+
+The preceding discussion outlined the ideas leading to the differential extension of propositional logic.  The next task is to lay out the concepts and terminology that are needed to describe various orders of differential propositional calculi.
+
+\subsection{Elementary notions}
+
+Logical description of a universe of discourse begins with a set of logical signs.  For the sake of simplicity in a first approach, assume that these logical signs are collected in the form of a finite alphabet, $\mathfrak{A} = \{ ``a_1", \ldots, ``a_n" \}.$  Each of these signs is interpreted as denoting a logical feature, for instance, a property that objects in the universe of discourse may have or a proposition about objects in the universe of discourse.  Corresponding to the alphabet $\mathfrak{A}$ there is then a set of logical features, $\mathcal{A} = \{ a_1, \ldots, a_n \}.$
+
+A set of logical features, $\mathcal{A} = \{ a_1, \ldots, a_n \},$ affords a basis for generating an $n$-dimensional universe of discourse, written $A^\circ = [ \mathcal{A} ] = [ a_1, \ldots, a_n ].$  It is useful to consider a universe of discourse as a \PMlinkname{categorical}{Category} object that incorporates both the set of points $A = \langle a_1, \ldots, a_n \rangle$ and the set of propositions $A^\uparrow = \{ f : A \to \mathbb{B} \}$ that are implicit with the ordinary picture of a venn diagram on $n$ features.  Accordingly, the universe of discourse $A^\circ$ may be regarded as an ordered pair $(A, A^\uparrow)$ having the type $(\mathbb{B}^n, (\mathbb{B}^n \to \mathbb{B})),$ and this last type designation may be abbreviated as $\mathbb{B}^n\ +\!\to \mathbb{B},$ or even more succinctly as $[ \mathbb{B}^n ].$  For convenience, the data type of a finite set on $n$ elements may be indicated by either one of the equivalent notations, $[n]$ or $\mathbf{n}.$
+
+Table 5 summarizes the notations that are needed to describe ordinary propositional calculi in a systematic fashion.
+
+\begin{center}\begin{tabular}{|l|l|l|l|}
+\multicolumn{4}{c}{\textbf{Table 5.  Propositional Calculus : Basic Notation}} \\[8pt]
+\hline
+
+\textbf{Symbol} &
+\textbf{Notation} &
+\textbf{Description} &
+\textbf{Type} \\[4pt]
+\hline
+
+$\mathfrak{A}$ &
+$\{ ``a_1", \ldots, ``a_n" \}$ &
+Alphabet &
+$[n] = \mathbf{n}$ \\[4pt]
+\hline
+
+$\mathcal{A}$ &
+$\{ a_1, \ldots, a_n \}$
+& Basis &
+$[n] = \mathbf{n}$ \\[4pt]
+\hline
+
+$A_i$ &
+$\{ \overline{a_i}, a_i \}$ &
+Dimension $i$ &
+$\mathbb{B}$ \\[4pt]
+\hline
+
+$A$ & $\langle \mathcal{A} \rangle$      & Set of cells,      & $\mathbb{B}^n$ \\[4pt]
+    & $\langle a_1, \ldots, a_n \rangle$ & coordinate tuples, & \\[4pt]
+    & $\{ (a_1, \ldots, a_n) \}$         & points, or vectors & \\[4pt]
+    & $A_1 \times \ldots \times A_n$     & in the universe    & \\[4pt]
+    & $\textstyle \prod_{i=1}^n A_i$     & of discourse       & \\[4pt]
+\hline
+
+$A^*$ &
+$(\operatorname{hom} : A \to \mathbb{B})$ &
+Linear functions &
+$(\mathbb{B}^n)^* \cong \mathbb{B}^n$ \\[4pt]
+\hline
+
+$A^\uparrow$ &
+$(A \to \mathbb{B})$ &
+Boolean functions &
+$\mathbb{B}^n \to \mathbb{B}$ \\[4pt]
+\hline
+
+$A^\circ$ & $[ \mathcal{A} ]$         & Universe of discourse    &
+$(\mathbb{B}^n, (\mathbb{B}^n \to \mathbb{B}))$                  \\[4pt]
+          & $(A, A^\uparrow)$         & based on the features    &
+$(\mathbb{B}^n\ +\!\to \mathbb{B})$                              \\[4pt]
+          & $(A\ +\!\to \mathbb{B})$  & $\{ a_1, \ldots, a_n \}$ &
+$[\mathbb{B}^n]$                                                 \\[4pt]
+          & $(A, (A \to \mathbb{B}))$ & & \\[4pt]
+          & $[ a_1, \ldots, a_n ]$    & & \\[4pt]
+\hline
+\end{tabular}\end{center}
+
+\subsection{Special classes of propositions}
+
+A \textit{basic proposition}, \textit{coordinate proposition}, or \textit{simple proposition} in the universe of discourse $[a_1, \ldots, a_n]$ is one of the propositions in the set $\{ a_1, \ldots, a_n \}.$
+
+Among the $2^{2^n}$ propositions in $[a_1, \ldots, a_n]$ are several families of $2^n$ propositions each that take on special forms with respect to the basis $\{ a_1, \ldots, a_n \}.$  Three of these families are especially prominent in the present context, the \textit{linear}, the \textit{positive}, and the \textit{singular} propositions.  Each family is naturally parameterized by the coordinate $n$-tuples in $\mathbb{B}^n$ and falls into $n + 1$ ranks, with a binomial coefficient $\binom{n}{k}$ giving the number of propositions that have rank or weight $k.$
+
+\begin{itemize}
+
+\item
+The \textit{linear propositions}, $\{ \ell : \mathbb{B}^n \to \mathbb{B} \} = (\mathbb{B}^n \xrightarrow{\ell} \mathbb{B}),$ may be expressed as sums:
+
+\begin{quote}$\begin{matrix}
+\sum_{i=1}^n e_i &
+= &
+e_1 + \ldots + e_n &
+\operatorname{where} &
+e_i = a_i &
+\operatorname{or} &
+e_i = 0 &
+\operatorname{for}\ i = 1\ \operatorname{to}\ n. \\
+\end{matrix}$\end{quote}
+
+\item
+The \textit{positive propositions}, $\{ p : \mathbb{B}^n \to \mathbb{B} \} = (\mathbb{B}^n \xrightarrow{p} \mathbb{B}),$ may be expressed as products:
+
+\begin{quote}$\begin{matrix}
+\prod_{i=1}^n e_i &
+= &
+e_1 \cdot \ldots \cdot e_n &
+\operatorname{where} &
+e_i = a_i &
+\operatorname{or} &
+e_i = 1 &
+\operatorname{for}\ i = 1\ \operatorname{to}\ n. \\
+\end{matrix}$\end{quote}
+
+\item
+The \textit{singular propositions}, $\{ \mathbf{x} : \mathbb{B}^n \to \mathbb{B} \} = (\mathbb{B}^n \xrightarrow{s} \mathbb{B}),$ may be expressed as products:
+
+\begin{quote}$\begin{matrix}
+\prod_{i=1}^n e_i &
+= &
+e_1 \cdot \ldots \cdot e_n &
+\operatorname{where} &
+e_i = a_i &
+\operatorname{or} &
+e_i = (a_i) &
+\operatorname{for}\ i = 1\ \operatorname{to}\ n. \\
+\end{matrix}$\end{quote}
+
+\end{itemize}
+
+In each case the rank $k$ ranges from $0$ to $n$ and counts the number of positive appearances of the coordinate propositions $a_1, \ldots, a_n$ in the resulting expression.  For example, for $n = 3,$ the linear proposition of rank $0$ is $0,$ the positive proposition of rank $0$ is $1,$ and the singular proposition of rank $0$ is $(a_1)(a_2)(a_3).$
+
+The basic propositions $a_i : \mathbb{B}^n \to \mathbb{B}$ are both linear and positive.  So these two kinds of propositions, the linear and the positive, may be viewed as two different ways of generalizing the class of basic propositions.
+
+Finally, it is important to note that all of the above distinctions are relative to the choice of a particular logical basis $\mathcal{A} = \{ a_1, \ldots, a_n \}.$  For example, a singular proposition with respect to the basis $\mathcal{A}$ will not remain singular if $\mathcal{A}$ is extended by a number of new and independent features.  Even if one keeps to the original set of pairwise options $\{ a_i \} \cup \{ (a_i) \}$ to pick out a new basis, the sets of linear propositions and positive propositions are both determined by the choice of basic propositions, and this whole determination is tantamount to the purely conventional choice of a cell as origin.
+
+\subsection{Differential extensions}
+
+An initial universe of discourse, $A^\circ$, supplies the groundwork for any number of further extensions, beginning with the \textit{first order differential extension}, $\operatorname{E}A^\circ.$  The construction of $\operatorname{E}A^\circ$ can be described in the following stages:
+
+\begin{itemize}
+
+\item
+The initial alphabet, $\mathfrak{A} = \{ ``a_1", \ldots, ``a_n" \},$ is extended by a \textit{first order differential alphabet}, $\operatorname{d}\mathfrak{A} = \{ ``\operatorname{d}a_1", \ldots, ``\operatorname{d}a_n" \},$ resulting in a \textit{first order extended alphabet}, $\operatorname{E}\mathfrak{A},$ defined as follows:
+
+\begin{quote}
+$\operatorname{E}\mathfrak{A} = \mathfrak{A}\ \cup\ \operatorname{d}\mathfrak{A} = \{ ``a_1", \ldots, ``a_n", ``\operatorname{d}a_1", \ldots, ``\operatorname{d}a_n" \}.$
+\end{quote}
+
+\item
+The initial basis, $\mathcal{A} = \{ a_1, \ldots, a_n \},$ is extended by a \textit{first order differential basis}, $\operatorname{d}\mathcal{A} = \{ \operatorname{d}a_1, \ldots, \operatorname{d}a_n \},$ resulting in a \textit{first order extended basis}, $\operatorname{E}\mathcal{A},$ defined as follows:
+
+\begin{quote}
+$\operatorname{E}\mathcal{A} = \mathcal{A}\ \cup\ \operatorname{d}\mathcal{A} = \{ a_1, \ldots, a_n, \operatorname{d}a_1, \ldots, \operatorname{d}a_n \}.$
+\end{quote}
+
+\item
+The initial space, $A = \langle a_1, \ldots, a_n \rangle,$ is extended by a \textit{first order differential space} or \textit{tangent space}, $\operatorname{d}A = \langle \operatorname{d}a_1, \ldots, \operatorname{d}a_n \rangle,$ at each point of $A,$ resulting in a \textit{first order extended space} or \textit{tangent bundle space}, $\operatorname{E}A,$ defined as follows:
+
+\begin{quote}
+$\operatorname{E}A = A\ \times\ \operatorname{d}A = \langle \operatorname{E}\mathcal{A} \rangle = \langle \mathcal{A}\ \cup\ \operatorname{d}\mathcal{A} \rangle = \langle a_1, \ldots, a_n, \operatorname{d}a_1, \ldots, \operatorname{d}a_n \rangle.$
+\end{quote}
+
+\item
+Finally, the initial universe, $A^\circ = [ a_1, \ldots, a_n ],$ is extended by a \textit{first order differential universe} or \textit{tangent universe}, $\operatorname{d}A^\circ = [ \operatorname{d}a_1, \ldots, \operatorname{d}a_n ],$ at each point of $A^\circ,$ resulting in a \textit{first order extended universe} or \textit{tangent bundle universe}, $\operatorname{E}A^\circ,$ defined as follows:
+
+\begin{quote}
+$\operatorname{E}A^\circ = [ \operatorname{E}\mathcal{A} ] = [ \mathcal{A}\ \cup\ \operatorname{d}\mathcal{A} ] = [ a_1, \ldots, a_n, \operatorname{d}a_1, \ldots, \operatorname{d}a_n ].$
+\end{quote}
+
+This gives $\operatorname{E}A^\circ$ the type:
+
+\begin{quote}
+$[ \mathbb{B}^n \times \mathbb{D}^n ] = (\mathbb{B}^n \times \mathbb{D}^n\ +\!\to \mathbb{B}) = (\mathbb{B}^n \times \mathbb{D}^n, \mathbb{B}^n \times \mathbb{D}^n \to \mathbb{B}).$
+\end{quote}
+
+\end{itemize}
+
+A proposition in a differential extension of a universe of discourse is called a \textit{differential proposition} and forms the analogue of a system of differential equations in \PMlinkname{ordinary calculus}{Calculus}.  With these constructions, the first order extended universe $\operatorname{E}A^\circ$ and the first order differential proposition $f : \operatorname{E}A \to \mathbb{B},$ we have arrived, in concept at least, at the foothills of differential logic.
+
+Table 6 summarizes the notations that are needed to describe the first order differential extensions of propositional calculi in a systematic manner.
+
+\begin{center}\begin{tabular}{|l|l|l|l|}
+\multicolumn{4}{c}{\textbf{Table 6.  Differential Extension : Basic Notation}} \\[8pt]
+\hline
+
+\textbf{Symbol} &
+\textbf{Notation} &
+\textbf{Description} &
+\textbf{Type} \\[4pt]
+\hline
+
+$\operatorname{d}\mathfrak{A}$ &
+$\{ ``\operatorname{d}a_1", \ldots, ``\operatorname{d}a_n" \}$ &
+Alphabet of differential symbols &
+$[n] = \mathbf{n}$ \\[4pt]
+\hline
+
+$\operatorname{d}\mathcal{A}$ &
+$\{ \operatorname{d}a_1, \ldots, \operatorname{d}a_n \}$ &
+Basis of differential features &
+$[n] = \mathbf{n}$ \\[4pt]
+\hline
+
+$\operatorname{d}A_i$ &
+$\{ \overline{\operatorname{d}a_i}, \operatorname{d}a_i \}$ &
+Differential dimension $i$ &
+$\mathbb{D}$ \\[4pt]
+\hline
+
+$\operatorname{d}A$ &
+$\langle \operatorname{d}\mathcal{A} \rangle$ &
+Tangent space at a point: &
+$\mathbb{D}^n$ \\[4pt]
+&
+$\langle \operatorname{d}a_1, \ldots, \operatorname{d}a_n \rangle$ &
+Set of changes, &
+\\[4pt]
+&
+$\{ (\operatorname{d}a_1, \ldots, \operatorname{d}a_n) \}$ &
+motions, steps, &
+\\[4pt]
+&
+$\operatorname{d}A_1 \times \ldots \times \operatorname{d}A_n$ &
+tangent vectors &
+\\[4pt]
+&
+$\textstyle \prod_{i=1}^n \operatorname{d}A_i$ &
+at a point &
+\\[4pt]
+\hline
+
+$\operatorname{d}A^*$ &
+$(\operatorname{hom} : \operatorname{d}A \to \mathbb{B})$ &
+Linear functions on $\operatorname{d}A$ &
+$(\mathbb{D}^n)^* \cong \mathbb{D}^n$ \\[4pt]
+\hline
+
+$\operatorname{d}A^\uparrow$ &
+$(\operatorname{d}A \to \mathbb{B})$ &
+Boolean functions on $\operatorname{d}A$ &
+$\mathbb{D}^n \to \mathbb{B}$ \\[4pt]
+\hline
+
+$\operatorname{d}A^\circ$ &
+$[ \operatorname{d}\mathcal{A} ]$ &
+Tangent universe &
+$(\mathbb{D}^n, (\mathbb{D}^n \to \mathbb{B}))$ \\[4pt]
+&
+$(\operatorname{d}A, \operatorname{d}A^\uparrow)$ &
+at a point of $A^\circ,$ &
+$(\mathbb{D}^n\ +\!\to \mathbb{B})$ \\[4pt]
+&
+$(\operatorname{d}A\ +\!\to \mathbb{B})$ &
+based on the &
+$[\mathbb{D}^n]$ \\[4pt]
+&
+$(\operatorname{d}A, (\operatorname{d}A \to \mathbb{B}))$ &
+tangent features &
+\\[4pt]
+&
+$[ \operatorname{d}a_1, \ldots, \operatorname{d}a_n ]$ &
+$\{ \operatorname{d}a_1, \ldots, \operatorname{d}a_n \}$ &
+\\[4pt]
+\hline
+\end{tabular}\end{center}
+
+%%%%%
+%%%%%
+\end{document}

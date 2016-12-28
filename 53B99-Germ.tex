@@ -1,0 +1,63 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Germ}
+\pmcreated{2013-03-22 17:25:36}
+\pmmodified{2013-03-22 17:25:36}
+\pmowner{fernsanz}{8869}
+\pmmodifier{fernsanz}{8869}
+\pmtitle{germ}
+\pmrecord{5}{39801}
+\pmprivacy{1}
+\pmauthor{fernsanz}{8869}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53B99}
+\pmrelated{TangentSpace}
+\pmdefines{Germ}
+\pmdefines{function germ.}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+% define commands here
+\newcommand{\To}{\longrightarrow}
+
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+\numberwithin{equation}{section}
+\begin{document}
+\title{Germ}%
+\author{Fernando Sanz GÃ¡miz}%
+
+\begin{defn}[Germ]
+Let $M$ and $N$ be manifolds and $x \in M$. We consider all smooth
+mappings $f: U_f \to N$, where $U_f$ is some open neighborhood of
+$x$ in $M$. We define an equivalence relation on the set of mappings
+considered, and we put $f \underset{x}{\sim} g$ if there is some
+open neighborhood $V$ of $x$ with $f|_V = g|_V$. The equivalence
+class of a mapping $f$ is called the \emph{germ of f at x}, denoted
+by $\overline{f}$ or, sometimes, $germ_x f$, and we write
+$$\overline{f}:(M,x) \to (N,f(x))$$
+\end{defn}
+
+\bigskip
+
+\begin{rem}
+Germs arise naturally in differential topolgy. It is very convenient
+when dealing with derivatives at the point $x$, as every mapping in
+a germ will have the same derivative values and properties in $x$,
+and hence can be identified for such purposes: every mapping in a
+germ gives rise to the same \emph{tangent vector} of $M$ at $x$.
+\end{rem}
+%%%%%
+%%%%%
+\end{document}

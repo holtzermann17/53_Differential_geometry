@@ -1,0 +1,57 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfDalphaXYXalphaYYalphaXalphaXYlocalCoordinates}
+\pmcreated{2013-03-22 15:34:01}
+\pmmodified{2013-03-22 15:34:01}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{proof of $d\alpha (X,Y) = X(\alpha(Y))$ $-$ $Y(\alpha(X))$ $ -$ $\alpha([X,Y])$ (local coordinates)}
+\pmrecord{8}{37471}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53-00}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Since this result is local (in other words, the identity holds on the whole manifold if and only if its restriction to every coordinate patch of the manifold holds), it suffices to demonstrate it in a local coordinate system.  To do this, we shall compute coordinate expressions for the various terms and verify that the sum of terms on the right-hand side equals the left-hand side.
+
+\[ d\alpha (X,Y) = (\alpha_{j,i} - \alpha_{i,j}) X^i Y^j = \alpha_{j,i} X^i Y^j -   \alpha_{i,j} X^i Y^j \]
+
+\[ X(\alpha(Y)) = X^i \partial_i (\alpha_j Y^j) = X^i \alpha_{j,i} Y^j + X^i \alpha_j {Y^j}_{,i} \]
+
+\[ Y(\alpha(X)) = Y^j \partial_j (\alpha_i X^i) = Y^j \alpha_{i,j} X^i + Y^j \alpha_i {X^i}_{,j} \]
+
+\[ \alpha([X,Y]) = \alpha_i (X^j {Y^i}_{,j} - Y^j {X^i}_{,j}) = \alpha_i X^j {Y^i}_{,j} - \alpha_i Y^j {X^i}_{,j}\]
+
+Upon combining the right-hand sides of the last three equations and cancelling common terms, we obtain
+
+\[ X^i \alpha_{j,i} Y^j + X^i \alpha_j {Y^j}_{,i} - Y^j \alpha_{i,j} X^i  - \alpha_i X^j {Y^i}_{,j} \]
+
+Upon renaming dummy indices (switching $i$ with $j$), the second and fourth terms cancel.  What remains is exactly the right-hand side of the first equation.  Hence, we have
+
+\[ d\alpha (X,Y) = X(\alpha(Y)) - Y(\alpha(X)) - \alpha([X,Y]) \]
+%%%%%
+%%%%%
+\end{document}

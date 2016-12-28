@@ -1,0 +1,85 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{EverySymplecticManifoldHasEvenDimension}
+\pmcreated{2013-03-22 15:44:05}
+\pmmodified{2013-03-22 15:44:05}
+\pmowner{cvalente}{11260}
+\pmmodifier{cvalente}{11260}
+\pmtitle{every symplectic manifold has even dimension}
+\pmrecord{18}{37685}
+\pmprivacy{1}
+\pmauthor{cvalente}{11260}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53D05}
+\pmrelated{AlternatingForm}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\DeclareMathOperator{\dimens}{dim}
+\DeclareMathOperator{\linspan}{span}
+\begin{document}
+All we need to prove is that every finite dimensional vector space $V$ with an anti-symmetric non-degenerate linear form $\omega$ has an even dimension $2k$. This is only a linear algebra result. In the case of a symplectic manifold $V$ is just the tangent space at a point, and thus its dimension equals the manifold's dimension.
+
+Pick any not null vector $v_0 \in V$. Since $\omega$ is non-degenerate $\omega(v_0,\cdot)$ is a not null linear form. Therefore there exists a not null vector $u_0$ such that $\omega(v_0,u_0)=1$
+
+Now $v_0$ and $u_0$ are linearly independent because if $v_0=\lambda u_0$ then $\omega(v_0, u_0) = \omega(\lambda u_0, u_0) = \lambda \omega(u_0,u_0) = 0$ (by anti-symmetry).
+
+Let $V_0 = \linspan\{v_0, u_0\}$. Consider a space $V_1$ of "orthogonal" elements to $V_0$ under $\omega$. That is:
+
+$V_1 = \left\{ v_1\in V: \text{ for all $v \in V_0$},\: \omega(v,v_1)=0 \right\}$
+
+We now prove $V = V_0 \bigoplus V_1$:
+
+\begin{itemize}
+
+\item $V_0 \bigcap V_1 = \{0\}$
+
+Suppose $w \in V_0 \bigcap V_1$ is not null, then it can be written $w = \alpha v_0 + \beta u_0$ because it belongs to $V_0$. Since it also belongs to $V_1$ is is "orthogonal" to both $v_0$ and $u_0$. That is:
+
+$\omega(v_0,w) = 0 \implies \beta \omega(v_0,u_0) = 0 \implies \beta =0$
+similarly
+
+$\omega(u_0,w) = 0 \implies \alpha \omega(u_0,v_0) = 0 \implies \alpha =0$
+
+So $w$ must be null.
+
+\item $V = V_0 \bigoplus V_1$
+
+Suppose $w \in V$. Let $\alpha = \omega(v_0,w)$, $\beta = \omega(u_0,w)$, $w_0 = \alpha u_0 - \beta v_0$.
+
+Then $\omega(v_0,w_0) = \alpha = \omega(v_0,w)$ and $\omega(u_0,w_0)=\beta=\omega(u_0,w)$.
+
+Considering $w_1=w - w_0$ we have $w = w_0 + w_1$ (by construction) and $\omega(v_0,w_1) = \omega(v_0, w-w_0)=\omega(v_0,w) - \omega(v_0,w_0) = \omega(v_0,w) -  \omega(v_0,w) =0 $ and similarly for $\omega(u_0,w_1)$
+
+So $w_1 \in V_1$, $w_0 \in V_0$ and $w=w_0 + w_1$ and thus $V = V_0 \bigoplus V_1$
+
+\end{itemize}
+
+So the matrix representation of $\omega$ is block-diagonal in $V_0 \bigoplus V_1$ and a restriction anti-symmetric bilinear for of $\omega$ to $V_1$ exists.
+
+If $V_1$ is not null we can repeat the procedure with the restriction. Since $\dimens(V)=\dimens(V_0)+\dimens(V_1)$ and $V$ is finite dimensional the procedure must stop at a finite step.
+
+At the end we get a decomposition $V=\bigoplus_{i=0}^{k-1}V_i$, where $\dimens(V_i)=2$ and $\dimens(V)=2k$ is even.
+%%%%%
+%%%%%
+\end{document}

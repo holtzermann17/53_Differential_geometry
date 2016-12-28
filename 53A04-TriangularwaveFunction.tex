@@ -1,0 +1,89 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TriangularwaveFunction}
+\pmcreated{2013-03-22 15:18:43}
+\pmmodified{2013-03-22 15:18:43}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{triangular-wave function}
+\pmrecord{26}{37115}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53A04}
+\pmclassification{msc}{26A06}
+\pmsynonym{triangular wave function}{TriangularwaveFunction}
+\pmsynonym{saw-blade function}{TriangularwaveFunction}
+\pmsynonym{saw blade function}{TriangularwaveFunction}
+%\pmkeywords{periodic function}
+\pmrelated{CyclometricFunctions}
+\pmrelated{CommonFourierSeries}
+\pmrelated{GettingTaylorSeriesFromDifferentialEquation}
+\pmrelated{PeriodicExtension}
+\pmrelated{LissajousCurves}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\usepackage{pstricks}
+\usepackage{pst-plot}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+\begin{document}
+\PMlinkescapeword{inner function}
+
+The \PMlinkname{arcsine}{CyclometricFunctions} is the inverse function of the sine.  Therefore the composition function
+                    $$f:\,x\mapsto \arcsin(\sin{x})$$
+is the identity map \, $x\mapsto x$\, on the interval \, $[-\frac{\pi}{2},\,\frac{\pi}{2}]$.\, On this interval, the inner function $\sin$ \PMlinkescapetext{increases monotonically and continuously from its least value $-1$ to its greatest value 1; then the outer} function $\arcsin$ (\PMlinkname{i.e.}{Ie} the angle corresponding the sine value) and the whole composition correspondingly grows from $-\frac{\pi}{2}$ to $\frac{\pi}{2}$.\, On the next equally long interval\, $[\frac{\pi}{2},\,\frac{3\pi}{2}]$,\, when the inner function decreases from 1 to $-1$, the composition thus decreases from $\frac{\pi}{2}$ to $-\frac{\pi}{2}$,\, evidently again linearly.\, We have now run through a \PMlinkescapetext{period} interval\, $[-\frac{\pi}{2},\,\frac{3\pi}{2}]$\, of the inner function and the composition $f$ and obtained a wedge-formed portion ($\wedge$) of the graph.\, Because of the periodicity, the whole graph of $f$ consists of such successive wedges and thus looks like a saw \PMlinkescapetext{blade}.\, The {\em triangular-wave function} is continuous.\, Its derivative (away from the \PMlinkescapetext{singular points} \, $\frac{\pi}{2}+n\pi,\, n\in\mathbb{Z}$) is a 
+\PMlinkname{square-wave function}{CommonFourierSeries}.
+
+\begin{center}
+\begin{pspicture}(-6.6,-2.3)(6.7,2.3) 
+\psline[linecolor=blue](-6.6,-0.3168)(-4.7124,1.5708)
+\psline[linecolor=blue](-4.7124,1.5708)(-1.5708,-1.5708)
+\psline[linecolor=blue](-1.5708,-1.5708)(1.5708,1.5708)
+\psline[linecolor=blue](1.5708,1.5708)(4.7124,-1.5708)
+\psline[linecolor=blue](4.7124,-1.5708)(6.6,0.3168)
+\rput[l](-6.6,0){.}
+\psaxes[labels=none,Dx=1.5708,Dy=1.5708]{->}(0,0)(-6.6,-1.8)(7.0,2.3)
+\rput[a](7.1,-0.25){$x$}
+\rput[r](-0.22,2.35){$y$}
+\rput[a](0,-2.3){\textbf{Figure:} Graph of $\arcsin(\sin x)$}
+\rput[a](-6.2832,-0.4){$2\pi$}
+\rput[a](-4.7124,-0.4){$-\frac{3\pi}{2}$}
+\rput[a](-3.1416,-0.4){$\pi$}
+\rput[a](-1.5708,-0.4){$-\frac{\pi}{2}$}
+\rput[a](1.5708,-0.4){$\frac{\pi}{2}$}
+\rput[a](3.1416,-0.4){$\pi$}
+\rput[a](4.7124,-0.4){$\frac{3\pi}{2}$}
+\rput[a](6.2832,-0.4){$2\pi$}
+\rput[r](-0.3,-1.5708){$-\frac{\pi}{2}$}
+\rput[r](-0.3,1.5708){$\frac{\pi}{2}$}
+\end{pspicture}
+\end{center}
+
+Sometimes, such a function is called a {\em saw-tooth function}, although this name usually refers to a discontinuous function with graph consisting of either ascending ($/$) or descending ($\backslash$) line segments with jumps.
+%%%%%
+%%%%%
+\end{document}

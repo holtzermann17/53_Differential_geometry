@@ -1,0 +1,99 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{VectorFieldsLagrangianAndEulerianDescription}
+\pmcreated{2016-05-24 22:37:07}
+\pmmodified{2016-05-24 22:37:07}
+\pmowner{perucho}{2192}
+\pmmodifier{perucho}{2192}
+\pmtitle{vector fields: Lagrangian and Eulerian description}
+\pmrecord{17}{37863}
+\pmprivacy{1}
+\pmauthor{perucho}{2192}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53A45}
+\pmdefines{continuum}
+\pmdefines{body}
+\pmdefines{material coordinates}
+\pmdefines{spatial coordinates}
+\pmdefines{configuration}
+\pmdefines{deformation}
+
+\documentclass{article}
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+
+% making logically defined graphics
+%\usepackage{xypic}
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+When we deal with vector fields defined over a {\em continuum} media, a suitable choice of coordinate systems becomes indispensable in \PMlinkescapetext{order to accurately describe the action that such fields} produce on the continuum and the subsequent physical behavior that such a material media experiences.\, We shall discuss two possible methods that allow to approach the mentioned phenomena.
+
+\textbf{Some basic concepts and definitions}
+
+Let us consider a continuum embedded in an {\em Euclidean vector space}\, $(\mathbb{R}^3,\lVert\cdot\rVert)$.\, This continuum, alternatively called {\em body}, can be either deformable or undeformable. Let $\Re_0$ be the region initially accupied by the body and $\Re$ any  subsequently space occupied by that continuum. Each region of the Euclidean space filled by the body shall be called {\em configuration.} In a system of coordinates arbitrarily chosen, every particle of the body is identified in $\Re_0$ as a point $P_0$ of coordinates $(a,b,c)$, and let this point be carried over to a point $P$ in $\Re$, being its coordinates $(x_1,x_2,x_3)$. Thus, the transformation of all the points $(a,b,c)$ in $\Re_0$ into the points $(x_1,x_2,x_3)$ in $\Re$, indeed corresponds to a mapping which it can be expressed by
+\begin{align}
+x_1=x_1(a,b,c), \quad x_2=x_2(a,b,c), \quad x_3=x_3(a,b,c),
+\end{align}
+provided $\Re_0$ and $\Re$ are subsets of $\mathbb{R}^3$ and the mapping represented by
+\[x_i:\Re_0 \to \Re, \quad i = 1,\,2,\,3, \]
+occupying the body different regions or configurations in the space.\, The change of configuration that the body experiences we shall call it {\em deformation.} It is essential to understand that it is the body that deforms, not the space the body occupies.
+
+Let us assume that  Eq.(1) is a smooth continuous transformation (or deformation) and it can be inverted to the equations
+\begin{align}
+a=a(x_1,x_2,x_3), \quad b=b(x_1,x_2,x_3), \quad c=c(x_1,x_2,x_3),
+\end{align}
+then the equations (1) and (2) define the continuum or body on study.\, 
+So far, we have introduced some basic concepts in \PMlinkescapetext{order} to give a physical description of a continuum adopting different configurations as it experiences a deformation.\, We shall now consider a more general and formal description.
+
+\textbf{Material and spatial coordinates}
+
+Let $X^\alpha$ be the coordinates defining the points $P_0$ of a continuum initially located in the region $\Re_0$ and let $G_{\alpha\beta}$ be the respective metric tensor. The $X^\alpha$ are called {\em material} or {\em Lagrangian} coordinates which allow a description of the configuration $\Re_0$. Analogously, let $x^i$ be the coordinates defining the position of points $P$ in the configuration $\Re$, once a deformation of body ocurrs, and let $g_{ij}$ be the correspondent metric tensor. The $x^i$ are called {\em spatial} or {\em Eulerian} coordinates which describe the space occupied for the continuum in the configuration $\Re$.\, Thus, for instance, the squares of line elements in those regions $\Re_0$ and $\Re$ are given by
+\begin{align*}
+ dS_0^2=G_{\alpha\beta}dX^\alpha dX^\beta, \quad ds^2=g_{ij}dx^i dx^j
+\end{align*}
+respectively. Consequently, whereas the Lagrangian coordinates describe an initial configuration of the body in $\Re_0$,\, the Eulerian coordinates describe the region $\Re$ of the space occupied by the continuum once the deformation takes place. That very general scheme, in which the choice of material system is independent of the choice of spatial coordinates, was introduced by Murnagham \cite{cite:Murnagham}.
+
+Indeed those so-called descriptions are current erroneous German terminology, which refers as Lagrangian to the material coordinates that were introduced by Euler \cite{cite:Euler} and spatial coordinates as Eulerian that were introduced by D'Alembert \cite{cite:D'Alembert}.
+
+Possibly a more useful scheme is that introduced by Brillouin \cite{cite:Brillouin}, as it allows a suitable definition of {\em motion of a continuum.} In that case a parameter is introduced (usually the time $t$) and the approach requires that metric tensors coincide, i.e.
+\begin{align*}
+g_{ij}(x^k)=G_{ij}(X^\alpha(x^k,t)),
+\end{align*}
+considering the motion as a transformation of coordinates. (See the motion of continuum for more details.)
+
+It is relevant to mention that certain quantities which are relative invariants in Brillouin's scheme, are absolute in Murnagham's. In particular, if $\rho_0$ is the density of the media in $\Re_0$ and $\rho$ in $\Re$, considering the Jacobian of the transformation, we have
+\begin{align*}
+\rho_0=J\rho.
+\end{align*}
+With respect to the transformations of either spatial (Eulerian) or material (Lagrangian) alone, all of those quantities are absolute scalars, but if $\rho$ is considered as the transformed value of $\rho_0$, then both values must be the densities in the $x^i$ and $X^\alpha$ systems, respectively, therefore showing a fundamental difference between the mentioned schemes.
+
+\begin{thebibliography}{1}
+\bibitem{cite:Murnagham}
+F. D. Murnagham, {\em Finite deformations of an elastic solid}, Amer. J. Math. {\bf 59,} 235-260, 1937.
+\bibitem{cite:Euler}
+L. Euler, Lettre de M. Euler \`{a} M. de Lagrange, {\em Recherches sur la propagation des Ã©branlements dans une milieu Ã©lastique,} Misc. Taur. ${\bf 2}^2$ (1760-1761), 1-10 = {\em Opera}(2) {\bf 10,} 255-263 = {\em Oeuvres de Lagrange} {\bf 14,} 178-188, 1762.
+\bibitem{cite:D'Alembert}
+J. L. D'Alembert, {\em Essai d'une Nouvelle ThÃ©orie de la Resistance des Fluides,} Paris, 1752.
+\bibitem{cite:Brillouin}
+L. Brillouin, {\em Les lois de l'Ã©lasticitÃ© en coordonnÃ©es quelconques,} Proc. Int. Congr. Math. Toronto (1924) {\bf 2,} 73-97 \\(a preliminary version of [1925, {\bf 1}]), 1928.   
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

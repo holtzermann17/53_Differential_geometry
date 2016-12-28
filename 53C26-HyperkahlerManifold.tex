@@ -1,0 +1,162 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HyperkahlerManifold}
+\pmcreated{2013-03-22 15:50:16}
+\pmmodified{2013-03-22 15:50:16}
+\pmowner{tiphareth}{13221}
+\pmmodifier{tiphareth}{13221}
+\pmtitle{hyperk\"ahler manifold}
+\pmrecord{4}{37813}
+\pmprivacy{1}
+\pmauthor{tiphareth}{13221}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53C26}
+\pmsynonym{"hyper-K\"ahler manifold"}{HyperkahlerManifold}
+\pmsynonym{"hyper-K\"ahlerian manifold"}{HyperkahlerManifold}
+\pmrelated{Kahlermanifold}
+\pmrelated{almostcomplexstructure}
+\pmrelated{symplecticmanifold}
+\pmrelated{quaternions}
+\pmrelated{Quaternions}
+\pmrelated{KahlerManifold}
+\pmrelated{SymplecticManifold}
+\pmrelated{AlmostComplexStructure}
+\pmdefines{"hyperk\"ahler manifold"}
+\pmdefines{"hypercomplex manifold"}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+{\bf Definition:}
+Let {\it M} be a smooth manifold, and {\it I,J,K $\in$ End(TM)}
+endomorphisms of the tangent bundle satisfying the
+quaternionic relation
+\[
+I^2=J^2=K^2=IJK=-Id_{TM}.
+\]
+The manifold {\it (M,I,J,K)} is called {\bf hypercomplex}
+if the almost complex structures {\it I, J, K}
+are {\bf integrable}. If, in addition, {\it M}
+is equipped with a Riemannian metric {\it g} which
+is K\"ahler with respect to {\it I,J,K}, the
+manifold {\it (M,I,J,K,g)} is called {\bf hyperk\"ahler}. 
+
+\hfill
+
+Since {\it g} is K\"ahler with respect to
+{\it (I,J,K)}, we have
+\[
+\nabla I = \nabla J = \nabla K=0
+\]
+where $\nabla$ denotes the Levi-Civita connection.
+This means that the holonomy of $\nabla$ lies inside
+the group {\it Sp(n)} of quaternionic-Hermitian
+endomorphisms. The converse is also true: a
+Riemannian manifold is hyperk\"ahler if and only
+if its holonomy is contained in {\it Sp(n)}.
+This definition is standard in differential
+geometry. 
+
+In physics literature, one sometimes assumes 
+that  the holonomy of a hyperk\"ahler manifold is 
+precisely {\it Sp(n)}, and not its proper
+subgroup. In mathematics, such hyperk\"ahler
+manifolds are called {\bf simple hyperk\"ahler manifolds}.
+
+The following splitting theorem (due to F. Bogomolov)
+is implied by Berger's classification of irreducible 
+holonomies.
+
+\hfill
+
+{\bf Theorem:} Any hyperk\"ahler
+manifold has a finite covering which is a product
+of a hyperk\"ahler torus and several simple
+hyperk\"ahler manifolds.
+
+\hfill
+
+
+Consider the K\"ahler forms $\omega_I, \omega_J, \omega_K$
+on {\it M}:
+\[
+\omega_I(\cdot, \cdot):= g(\cdot, I\cdot), \ \
+\omega_J(\cdot, \cdot):= g(\cdot, J\cdot), \ \
+\omega_K(\cdot, \cdot):= g(\cdot, K\cdot).
+\]
+An elementary linear-algebraic calculation implies
+that the 2-form $\omega_J+\sqrt{-1}\omega_K$ is of Hodge type (2,0)
+on {\it (M,I)}. This form is clearly closed and
+non-degenerate, hence it is a holomorphic 
+symplectic form.
+
+In algebraic geometry, the word ``hyperk\"ahler''
+is essentially synonymous with ``holomorphically
+symplectic'', due to the following theorem, which is
+implied by Yau's solution of Calabi conjecture
+(the famous Calabi-Yau theorem).
+
+\hfill
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+{\bf Theorem:} \label{_Calabi-Yau_Theorem_}
+Let {\it (M,I)} be a compact, K\"ahler, holomorphically
+symplectic manifold. Then there exists a unique
+hyperk\"ahler metric on {\it (M,I)} with the same K\"ahler class.
+
+\hfill
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+{\bf Remark:}
+The hyperk\"ahler metric is unique, but there could
+be several hyperk\"ahler structures compatible with
+a given hyperk\"ahler metric on {\it (M,I)}.
+
+{\small
+\begin{thebibliography}{6666}
+
+\bibitem[Bea]{_Beauville_} 
+ Beauville, A. {\em 
+Varietes K\"ahleriennes dont la premi\`ere classe de Chern est
+nulle.}  J. Diff. Geom. {\bf 18}, pp. 755-782 (1983).
+
+\bibitem[Bes]{_Besse:Einst_Manifo_} 
+Besse, 
+A., {\em Einstein Manifolds}, Springer-Verlag, New York (1987)
+
+\bibitem[Bo1]{_Bogomolov:decompo_}  
+Bogomolov, F. {\em On the decomposition of 
+K\"ahler manifolds with trivial canonical class}, Math. USSR-Sb.
+{\bf 22} (1974), 580-583.
+
+\bibitem[Y]{_Yau:Calabi-Yau_} 
+Yau, S. T., {\em On the Ricci curvature of a compact K\"ahler manifold 
+and the complex Monge-Amp\`ere equation I.}  Comm. on Pure and Appl.
+Math. 31, 339-411 (1978).
+
+\end{thebibliography}
+
+}% end of small
+%%%%%
+%%%%%
+\end{document}

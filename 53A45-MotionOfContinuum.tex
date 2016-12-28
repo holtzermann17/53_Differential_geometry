@@ -1,0 +1,178 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MotionOfContinuum}
+\pmcreated{2013-03-22 15:53:16}
+\pmmodified{2013-03-22 15:53:16}
+\pmowner{perucho}{2192}
+\pmmodifier{perucho}{2192}
+\pmtitle{motion of continuum}
+\pmrecord{15}{37889}
+\pmprivacy{1}
+\pmauthor{perucho}{2192}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53A45}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\textbf{Definition.}
+
+Let $\mathscr{B}$ be a body embedded in an Euclidean vector space 
+$(\mathbb{R}^3,\lVert \cdot \rVert)$ and let $\chi$ be a smooth homeomorphism describing a family of mappings
+\[\chi\colon \mathscr{B} \to \Re, \qquad \Re=\chi(\mathscr{B}),\]
+such that every material particle $P\in\mathscr{B}$ is carried over a {\em place}\footnote{This very convenient term was introduced by Lodge\cite{cite:Lodge}}$\mathbf{x}\in\Re$ of the space in the course of time, i.e.
+\[\chi\colon P\mapsto \mathbf{x}, \qquad \mathbf{x}(t):=\chi(P,t).\]
+These mappings are called {\em configurations}, the body being represented as a {\em continuum}$\Re$ in the Euclidean space. Such a description we shall call it {\em motion of  continuum.}
+
+\textbf{Particle position vector, velocity and acceleration.}
+
+Choose an arbitrary system of coordinates. Fix any particle $P\in\mathscr{B}$. At any instant $t$ whatever, once the motion it has took place, for $\mathbf{x}\in\Re$ we define
+\begin{align}
+\mathbf{x}=\chi(P,t),
+\end{align}
+\begin{align}
+\mathbf{v}=\mathbf{\dot{x}}=\frac{d}{dt}\chi(P,t),
+\end{align}
+\begin{align}   
+\mathbf{a}=\mathbf{\ddot{x}}=\frac{d^2}{dt^2}\chi(P,t). 
+\end{align}
+In the course of motion, sometimes it is important to consider any previous instant $\tau,\; t_0 \leq \tau \leq t$,\; where $t_0$ is the initial instant and $t$ the ``present'' one. Hence, we may restate Eqs. (1)-(3) substituting $t$ by $\tau$ and so they may be refered to as {\em histories} of position, velocity and acceleration, respectively. Also it is usual to denote those equations with the more compact notation $\mathbf{x}=\mathbf{x}(t)$, $\mathbf{v}=\mathbf{v}(t)$ and $\mathbf{a}=\mathbf{a}(t)$, as $\tau=t$.
+It is important to notice that such  equations do not give us a complete description of motion, because they say not the manner about how to identify every and each of the particles conforming  the body. So, in order to get that complete identification, we shall now introduce the material and spatial descriptions of  continuum.
+
+\textbf{Material description of motion.}
+
+Let $P\in\mathscr{B}$ an arbitrary point of the body indentified by its material coordinates $X_i$ with respect to a cartesian rectangular system arbitrarily chocen. Those coordinates ``map''each point of the body in certain configuration of reference in the same way that spatial coordinates $x_i$ provide a scheme \footnote{Cf. \; CFT, \; pp.507,508 \cite{cite:CFT}} of a region $\Re$ of the space. Since the body adopts distinct configurations through the motion $\mathbf{x}(t)$, we need to precise the concept of {\em reference configuration}. So, we shall call a reference configuration to the homeomorphism mapping $\varkappa$ given by
+\begin{align}
+\mathbf{X}=\varkappa(P), \qquad P=\varkappa^{-1}(\mathbf{X}),
+\end{align}
+where $\mathbf{X}$ is the point of material coordinates $X_i$ identifying any particle $P\in\mathscr{B}$ in the considered configuration.
+Such a representation satisfy two necessary requisites: first, a distinction between the motion $\mathbf{x}(\tau)$ and its material description at the considered reference configuration $\chi_\varkappa$ and second, invariance under a change of reference configuration, so being  well-defined the motion of  continuum, through a  material description. In fact, from Eq.(1) and Eq.(4) with $t=\tau$, we get  
+\begin{align}
+\mathbf{x}(\tau)=\chi(P,\tau)=\chi(\varkappa^{-1}(\mathbf{X}),\tau)\equiv\chi_\varkappa(\mathbf{X},\tau).
+\end{align}
+Furthermore, if $\overline{\varkappa}$ represents another reference configuration (i.e. another system of coordinates $\overline{X}_i$), then from Eq.(4), $\overline{\mathbf{X}}=\overline{\varkappa}(P)$, \; $P=\overline{\varkappa}^{-1}(\overline{\mathbf{X}})$, and so from Eq.(5), $\mathbf{x}(\tau)=\chi_{\overline{\varkappa}}(\overline{\mathbf{X}},
+\tau)$. Since we are speaking about the same motion at some $\tau\in[t_0,t]$, we have
+\begin{align} 
+\mathbf{x}(\tau)=\chi_{\varkappa}(\mathbf{X},\tau)=\chi_{\overline{\varkappa}}(\mathbf{\overline{X}},\tau),
+\end{align}
+so showing  the required invariance. That equation indeed represents a transformation of mappings under changes of reference configuration, therefore we conclude that an invariance condition indicating changes of representation, leads to a transformation relation. In those cases where the configuration is intended, we shall write
+\begin{align}
+\mathbf{x}(\tau)=\chi(\mathbf{X},\tau),
+\end{align}
+\begin{align}
+\mathbf{v}(\tau)=\mathbf{\dot{x}}(\mathbf{X},\tau),
+\end{align}
+\begin{align}
+\mathbf{a}(\tau)=\mathbf{\ddot{x}}(\mathbf{X},\tau).
+\end{align}
+Since $\chi$ and its inverse $\chi^{-1}$ are injective and differentiable, we get as a corollary the {\em principle of impenetrability:}
+\begin{align*}
+``an\, element\, of\, matter\, can\, never\, penetrate\, another\, element\, of\, matter".
+\end{align*}
+That principle implies that the Jacobian of the transformation between material and spatial coordinates it must be positive i.e.,
+\[J= \bigg|\frac{\partial{x_i}}{\partial{X_j}}\bigg| > 0,\]
+what means that (from $dv=JdV$) a volume element cannot be reduced into a point once the deformation takes place.
+
+\textbf{Spatial description of motion.}
+
+In a spatial description of motion, we do not relate directly to  particles but  uniquely to their velocities.{\footnote {The velocity was introduced as a primitive concept by D'Alembert\cite{cite:D'Alembert}}}So we shall deal with the  field of particle velocities $\mathbf{v}(\mathbf{x},t)$, $\mathbf{x}\in \Re$, because the ``history'' about a specific particle $\mathbf{X}\in\mathscr{B}$ is not needed. Such a description  is a suitable choice in fluid mechanics, for instance. The distinction between material and spatial descriptions is quite basic: in the former $\mathbf{x}$ is the dependent variable, and $\mathbf{X},t$ the independent variables, whereas in the latter $\mathbf{v}$ is the dependent variable, and $\mathbf{x},t$ the independent ones. Let us define the {\em time material derivative} or the {\em material rate} $D_t${\footnote {a notation introduced by Stokes\cite{cite:Stokes}} like which it is found by an ``observer'' moving with a particle $X$, i.e., with material coordinates $X_i$ held constant. Likewise, the {\em local rate} $\partial_t$ is found by an ``observer'' situated at a fixed point $\mathbf{x}$, i.e., spatial coordinates $x_i$ held constant. Therefore, from those definitions we get
+\[D_t\mathbf{X}\equiv\frac{D\mathbf{X}}{Dt}\bigg|_{\mathbf{X}=const.}=\mathbf{0}, \quad \partial_t\mathbf{x}\equiv\frac{\partial\mathbf{x}}{\partial{t}}\bigg|_{\mathbf{x}=const.}=\mathbf{0}.\]
+Thus, we may find out the aceleration field $\mathbf{a}(\mathbf{x},t)$ by calculating the material rate of the velocity field $\mathbf{v}(\mathbf{x},t)$,
+\begin{align}
+\mathbf{v}=\mathbf{v}(\mathbf{x},t), \quad \mathbf{a}(\mathbf{x},t)\equiv\mathbf{\dot{v}}=\partial_t{\mathbf{v}}+(\mathbf{v}\cdot\nabla)\mathbf{v},
+\end{align}
+by application of the chain rule, and where $\mathbf{v}=\mathbf{\dot{x}}(\mathbf{x},t)$ by definition. We can also to express  Eq.(10) in a rectangular cartesian system,
+\begin{align}
+v_i=\dot{x}_i(x_k,t), \qquad a_i=\dot{v}_i(x_k,t)=\partial_t{v_i}+v_jv_{i,j},
+\end{align}
+where we have used the conventional index summation. Eqs.(10)-(11) correspond to the spatial description of  motion. In fluid mechanics language, the term $(\mathbf{v}\cdot\nabla)\mathbf{v}$ or equivalently, $v_jv_{i,j}$,  is called the {\em convected rate} because the particle-bound ``observer'' moves, by virtue of its instantaneous velocity $\mathbf{v}$, into regions of different local field values. Furthermore, we call a {\em steady field} if the local rate vanishes and a {\em uniform field} if the convected rate vanishes.
+
+\textbf{Some applications.}
+
+In continuum mechanics there are two classical field theories: {\em elasticity} theory and {\em hydrodymamics}.Continuum kinematics it is largely determined by the kind of mechanical response (the cause being, any field forces or impulses solicitation) that is being described. Although we can use in those theories either of the descriptions of motion, from the point of view of mechanical response alone the material description comes to be adequate for elasticity theory, whereas the spatial description (velocity field) is the natural way 
+for hydrodynamics. Basically, a deformable solid possesses a ``kind of memory'' 
+from an initial undistorsioned configuration $\Re_0$, so it becomes necessary 
+to somehow ``label'' the body particles at that undistorsioned initial configuration. Thus, material coordinates $X_i$ it will be a suitable way in order to make the proper description of the solid in the subsequent distorsioned configurations. On the other hand, a {\em viscous fluid} (liquid, gas or plasm) presents a completely different mechanical behavior   because its response is determined solely by the instantaneous values of the time rates of deformation. So in general, viscous fluids have no memory at all, not existing past configurations that are special in any way. For that reason, it is natural to use spatial description for viscous fluids.
+
+As an illustration, we shall do a briefly discussion on {\em finite strain} in elasticity theory and on {\em rate of deformation} which corresponds to hydrodynamics (viscous fluids) kinematics.
+
+{\em 1. Finite strain.} \, \, We define {\em particle displacement} $\mathbf{u}$, as the difference between, the position $\mathbf{x}\in\Re$ of an arbitrary particle of the deformable solid in any distorsioned configuration,  and the position $\mathbf{X}\in\Re_0$ of the same particle in the initial undistorsioned configuration of the body, both with respect to a rectangular cartesian system arbitrarily chosen. That is,
+\[\mathbf{u}=\mathbf{x}-\mathbf{X}.\]
+We apply now the operator $\nabla_{\mathbf{X}}$ (respect to material particle $\mathbf{X}$), to obtain
+\[\nabla_{\mathbf{X}}\mathbf{u}=\nabla_{\mathbf{X}}\mathbf{x}-\mathbf{1},\]
+where, $\nabla_{\mathbf{X}}\mathbf{X}=\mathbf{1}$  is the unit tensor. By taking the transpose, we have
+\[\nabla_{\mathbf{X}}\mathbf{x}=\mathbf{1}+\nabla_{\mathbf{X}}\mathbf{u}, \qquad \mathbf{x}\nabla_{\mathbf{X}}=\mathbf{1}+\mathbf{u}\nabla_{\mathbf{X}}.\]
+Next we consider the square line element
+\[ds^2=d\mathbf{x}\cdot{d\mathbf{x}}=(d\mathbf{X}\cdot\nabla_{\mathbf{X}}\mathbf{x})\cdot(\mathbf{x}\nabla_{\mathbf{X}}\cdot{d\mathbf{X}})=d\mathbf{X}\cdot(\mathbf{1}+\nabla_{\mathbf{X}}\mathbf{u})\cdot(\mathbf{1}+\mathbf{u}\nabla_{\mathbf{X}})\cdot{d\mathbf{X}}\equiv {d\mathbf{X}}\cdot\mathbf{C}\cdot{d\mathbf{X}},\]    
+where $\mathbf{C}$  is the Cauchy-Green deformation tensor\cite{cite:Cauchy-Green}. Finally, we define the {\em finite strain} as
+\[\mathbf{E}\equiv\frac{1}{2}(\mathbf{C}-\mathbf{1}),\]
+in which, by replacing $\mathbf{C}$, we get
+\[\mathbf{E}=\frac{1}{2}(\nabla_{\mathbf{X}}\mathbf{u}+\mathbf{u}\nabla_{\mathbf{X}}+\nabla_{\mathbf{X}}\mathbf{u}\cdot\mathbf{u}\nabla_{\mathbf{X}}),\]
+or equivalently,
+\[E_{ij}=\frac{1}{2}(u_{i,j}+u_{j,i}+u_{i,k}u_{k,j}),\]
+a symmetric cartesian tensor of second order(subscript comma denoting differentiation).
+
+The theory of finite strain is the creation of Cauchy\cite{cite:Cauchy},\cite{cite:Cauchy1}.
+
+{\em 2. Rate of deformation.} Let $X^\alpha\in\mathscr{B}$ be  material coordinates describing particles at the sine of a viscous fluid, and let $\dot{x}^i(x^k(X^\alpha,t),t)$ be the velocity field who is tangent to the fluid flow streamlines crossing the region $\Re$ of the space. Since the material derivatives $\dot{\overline{dX^\alpha}}=0$ and $\dot{\overline{x^i\,_{,\alpha}}}=\dot{x}^i_{\,,\alpha}$, we have (by applying the chain rule)
+\begin{align*}
+\dot{\overline{dx^i}}=\dot{\overline{x^i_{\,,\alpha}dX^\alpha}}=
+\dot{x}^i_{\,,\alpha}dX^\alpha=\dot{x}^i_{\,,j}x^j_{\,,\alpha}d X^\alpha 
+=\dot{x}^i_{\,,j}dx^j.  \qquad (a)
+\end{align*}
+We find now the material rate of $x^i_{\,,\beta}X^\beta_{\,,j}=\delta^i_j$ and then we multiply by $X^\alpha_{\,,i}$, to obtain
+\begin{align*}
+\dot{\overline{X^\alpha_{\,,j}}}=-\dot{x}^i_{\,,\beta}X^\beta_{\,,j}X^\alpha_{\,,i}=-\dot{x}^i_{\,,j}X^\alpha_{\,,i}.
+\end{align*}
+Next we evaluate the material derivative of a square line element, with metric tensor $g_{ij}$ {\footnote{If the spatial coordinate system be instantaneously stationary, then $\partial_tg_{ij}=0.$ Furthermore, since the components of the metric tensor are constant in orthogonal cartesian coordinates the corresponding Christoffel symbols are zero, and the covariant derivatives of the metric tensor vanish in all coordinate systems. That is, $\delta^i_j\big|_k=g_{ij}\big|_k=0.$ Therefore, we have $\dot{g}_{ij}=\partial_tg_{ij}+g_{ij}\big|_k\dot{x}^k=0.$}}  located in $\Re$,
+\begin{align*}
+\dot{\overline{ds^2}}=\dot{\overline{g_{ij}dx^idx^j}}=g_{ij}(\dot{\overline{dx^i}}dx^j+dx^i\dot{\overline{dx^j}}),
+\end{align*}
+whence, by Eq.(a), we arrive to the Beltrami equation\cite{cite:Beltrami}
+\begin{align*}
+\dot{\overline{ds^2}}=2d_{ij}dx^idx^j, \qquad d_{ij}\equiv\frac{1}{2}(\dot{x}_{i,j}+\dot{x}_{j,i}),
+\end{align*}
+where $d_{ij}$  is a symmetric tensor of second order which represents the required {\em rate of deformation.}
+\begin{thebibliography}{1}
+\bibitem{cite:Lodge}
+A.S. Lodge, {\em On the use of convected coordinate systems in the mechanics of continuous media,} Proc. Cambr. Phil. Soc. ${\bf 47,}$  575-584, 1951.
+\bibitem{cite:CFT}
+C. Truesdell, R.A. Toupin, {\em The Classical Field Theories} Enc. of Physics, ${\bf III/1,}$  Springer Verlag, New York, 1960.
+\bibitem{cite:D'Alembert}
+J. L. D'Alembert, {\em Essai d'une Nouvelle Th\'eorie de la Resistance des Fluides,}, Paris, 1752.
+\bibitem{cite:Stokes}
+G.G. Stokes, {\em On the theories of the internal friction of fluids in motion, and of the equilibrium and motion of elastic solids,} Trans. Cambr. Phil. Soc. ${\bf 8}$ (1844-1849), 287-319 = {\em papers} ${\bf 1,}$ 75-129, 1845.
+\bibitem{cite:Cauchy-Green}
+G. Green, {\em On the propagation of light in crystallized media} (1839), Trans. Cambr. Phil. Soc. ${\bf 7}$ (1839-1842), 121-140 = {\em Papers}, 293-311, 1841. 
+\bibitem{cite:Cauchy}
+A.-L. Cauchy {\em Sur le condensation et la dilatation des corps solides,} Ex. de Math. ${\bf 2}$ = {\em Oeuvres} (2) ${\bf 7,}$ 82-83, 1827.
+\bibitem{cite:Cauchy1}
+A.-L. Cauchy {\em MÃ©moire sur les dilatations, les condensations et les rotations produits par un changement de forme dans un syst\`eme de points materiÃ©ls,} Ex. d'An. Phys. Math. ${\bf 2}$ = {\em Oeuvres} (2) ${\bf 12,}$ 343-377, 1841. 
+\bibitem{cite:Beltrami}
+E. Beltrami, {\em Sui principi fondamentali della idrodinamica,} Mem. Acad. Sci. Bologna (3) ${\bf 1,}$ 431-476, ${\bf 2}$ (1872), 381-437, ${\bf 3}$ (1873), 349-407, ${\bf 5}$ (1874), 443-484 = {\em Richerche sulla cinematica dei fluidi,} Opere ${\bf 2,}$ 202-379, 1871.  
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

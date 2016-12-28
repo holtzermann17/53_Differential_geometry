@@ -1,0 +1,156 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Cycloid}
+\pmcreated{2013-11-29 11:13:47}
+\pmmodified{2013-11-29 11:13:47}
+\pmowner{matte}{1858}
+\pmmodifier{pahio}{2872}
+\pmtitle{cycloid}
+\pmrecord{19}{37100}
+\pmprivacy{1}
+\pmauthor{matte}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53A04}
+\pmrelated{ArcLength}
+\pmrelated{GoniometricFormulae}
+\pmrelated{EvoluteOfCycloid}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{pstricks}
+\usepackage{pst-plot}
+
+\usepackage{mathrsfs}
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+
+ \usepackage{bbm}
+ \newcommand{\Z}{\mathbbmss{Z}}
+ \newcommand{\C}{\mathbbmss{C}}
+ \newcommand{\F}{\mathbbmss{F}}
+ \newcommand{\R}{\mathbbmss{R}}
+ \newcommand{\Q}{\mathbbmss{Q}}
+
+
+
+\newcommand*{\norm}[1]{\lVert #1 \rVert}
+\newcommand*{\abs}[1]{| #1 |}
+
+
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+\begin{document}
+A \emph{cycloid} is a curve that a point on the perimeter of a wheel \PMlinkescapetext{traces} 
+when rolling along the $x$-axis without slipping.\, If the 
+radius of the rolling wheel is $a$, then the cycloid may be 
+presented in the parametric form
+\begin{align}
+\begin{cases}
+x \;=\; a(\varphi-\sin\varphi),\\
+y \;=\; a(1-\cos\varphi),
+\end{cases}
+\end{align}
+where $\varphi$ expresses the angle rotated by the wheel around its \PMlinkescapetext{center}.
+
+In what follows, a blue curve indicates a cycloid (or a portion thereof) and red line segments indicate radii of the wheel.
+
+Below is a picture of the wheel on the $x$-axis with\, $\varphi = 0$.
+
+\begin{center}
+\begin{pspicture}(-1,0)(1,2)
+\pscircle(0,1){1}
+\psline[linecolor=red](0,0)(0,1)
+\psline{->}(-1,0)(1,0)
+\rput[b](1,-0.3){$x$}
+\psdots(0,0)(0,1)
+\rput[l](-1,0){.}
+\rput[a](0,2){.}
+\end{pspicture}
+\end{center}
+
+As the wheel rolls, $\varphi$ increases.\, To obtain the cycloid, we keep track of the \PMlinkname{path}{Path} along which the \PMlinkescapetext{fixed point} of the wheel has travelled.
+
+\begin{center}
+\begin{pspicture}(-1,0)(3.2,2)
+\pscurve[linecolor=blue](0,0)(0.00126,0.019215)(0.01,0.07612)(0.0335,0.16853)(0.0783,0.2929)(0.1503,0.44443)
+                        (0.25422,0.61732)(0.39366,0.80491)(0.5708,1)(0.78636,1.19509)(1.04,1.3827)(1.3284,1.5556)
+                        (1.45,1.6)
+\psarc[linecolor=green](2.2,1){1}{135}{270}
+\psarc(2.2,1){1}{-90}{139}
+\psline[linecolor=red](2.2,0)(2.2,1)(1.45,1.6)
+\psarc(2.2,1){0.15}{135}{270}
+\rput[r](2,0.9){$\varphi$}
+\psline{-}(-1,0)(0,0)
+\psline[linecolor=green](0,0)(2.2,0)
+\psline{->}(2.2,0)(3.2,0)
+\psdots(2.2,1)(1.45,1.6)
+\rput[b](3.2,-0.3){$x$}
+\rput[l](-1,0){.}
+\rput[a](2.2,2){.}
+\end{pspicture}
+\end{center}
+
+After the wheel has completed a full turn, the cycloid takes a sharp turn due to the fact that the point hits the 
+$x$-axis, then begins travelling upwards again.
+
+Thus, below is the graph of a cycloid for\, $a=1$.
+
+\begin{center}
+\begin{pspicture}(-7,-1)(7,3)
+\pscurve[linecolor=blue]{-}(-6.5374,0.61732)(-6.4335,0.44443)(-6.3615,0.2929)(-6.317,0.16853)
+                            (-6.2932,0.07612)(-6.2844,0.019215)(-6.2832,0)
+\pscurve[linecolor=blue](-6.282,0.019215)(-6.2732,0.07612)(-6.25,0.16853)(-6.205,0.2929)(-6.133,0.44443)
+                        (-6.03,0.61732)(-5.89,0.80491)(-5.7124,1)(-5.4969,1.19509)(-5.24357,1.3827)(-4.955,1.5556)
+                        (-4.6341,1.7071)(-4.2862,1.83147)(-3.917,1.924)(-3.533,1.98)(-3.1416,2)(-2.75,1.98)
+                        (-2.36621,1.924)(-2,1.83147)(-1.649,1.7071)(-1.3284,1.5556)(-1.04,1.3827)(-0.78636,1.19509)
+                        (-0.5708,1)(-0.39366,0.80491)(-0.25422,0.61732)(-0.1503,0.44443)(-0.0783,0.2929)
+                        (-0.0335,0.16853)(-0.01,0.07612)(-0.00126,0.019215)(0,0)
+\pscurve[linecolor=blue](0,0)(0.00126,0.019215)(0.01,0.07612)(0.0335,0.16853)(0.0783,0.2929)(0.1503,0.44443)
+                        (0.25422,0.61732)(0.39366,0.80491)(0.5708,1)(0.78636,1.19509)(1.04,1.3827)(1.3284,1.5556)
+                        (1.649,1.7071)(2,1.83147)(2.36621,1.924)(2.75,1.98)(3.1416,2)(3.533,1.98)(3.917,1.924)
+                        (4.2862,1.83147)(4.6341,1.7071)(4.955,1.5556)(5.24357,1.3827)(5.4969,1.19509)(5.7124,1)
+                        (5.89,0.80491)(6.03,0.61732)(6.133,0.44443)(6.205,0.2929)(6.25,0.16853)(6.2732,0.07612)
+                        (6.282,0.019215)
+\pscurve[linecolor=blue]{-}(6.2832,0)(6.2844,0.019215)(6.2932,0.07612)(6.317,0.16853)(6.3615,0.2929)(6.4335,0.44443)
+                            (6.5374,0.61732)
+\psaxes{->}(0,0)(-6.5,-0.5)(6.5,2.3)
+\rput[a](6.6,-0.25){$x$}
+\rput[r](-0.22,2.35){$y$}
+\rput[l](-6.5,0){.}
+\end{pspicture}
+\end{center}
+
+The graph of a cycloid for any $a$ can be obtained by replacing 
+$1$ with $a$ and $2$ with $2a$ on the $y$-axis of the graph 
+above.\\
+
+The slope of the tangent line of the cycloid (1) is
+$$\frac{dy}{dx} \;=\; \frac{dy}{d\varphi}:\frac{dx}{d\varphi} 
+\;=\; \frac{\sin\varphi}{1-\cos\varphi} 
+\;=\; \cot\frac{\varphi}{2},$$
+which is not defined when $\varphi$ is a multiple of $2\pi$.\, 
+At these points the quotient $\frac{\sin\varphi}{1-\cos\varphi}$ 
+has the left limit $-\infty$ and the right limit $+\infty$; this 
+means vertical tangent lines and thus the ordinary cusps of the 
+continuous curve.\\
+
+The length of one arc of the cycloid formed by one revolution of the circle (\PMlinkname{e.g.}{Eg}\, $0 \le \varphi \le 2\pi$) is
+\begin{align*}
+\int_0^{2\pi}\!\sqrt{\left(\frac{dx}{d\varphi}\right)^2\!+\!\left(\frac{dy}{d\varphi}\right)^2}\,d\varphi &\;=\; a\!\int_0^{2\pi}\!\sqrt{(1\!-\!\cos\varphi)^2\!+\!(\sin\varphi)^2}\,d\varphi \\
+& \;=\; a\!\int_0^{2\pi}\!\sqrt{2(1\!-\!\cos\varphi)}\,d\varphi \\
+& \;=\; 2a\!\int_0^{2\pi}\!\sin\frac{\varphi}{2}\,d\varphi.
+\end{align*}
+Therefore, the length of one arc of the cycloid is $8a$, \PMlinkname{i.e.}{Ie} four times the diameter of the circle.
+%%%%%
+%%%%%
+\end{document}

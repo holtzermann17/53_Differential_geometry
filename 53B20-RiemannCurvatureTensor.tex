@@ -1,0 +1,70 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RiemannCurvatureTensor}
+\pmcreated{2013-03-22 16:26:17}
+\pmmodified{2013-03-22 16:26:17}
+\pmowner{juanman}{12619}
+\pmmodifier{juanman}{12619}
+\pmtitle{Riemann curvature tensor}
+\pmrecord{10}{38592}
+\pmprivacy{1}
+\pmauthor{juanman}{12619}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53B20}
+\pmclassification{msc}{53A55}
+\pmrelated{Curvature}
+\pmrelated{Connection}
+\pmrelated{FormalLogicsAndMetaMathematics}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Let 
+$\mathcal{X}$ denote the vector space of smooth vector fields on a
+smooth Riemannian manifold $(M,g)$.  Note that $\mathcal{X}$ is actually a
+$\mathcal{C}^\infty(M)$ module because we can multiply a vector field
+by a function to obtain another vector field.
+The \emph{Riemann curvature tensor} is the tri-linear
+$\mathcal{C}^\infty$ mapping  
+$$R:{\mathcal{X}}\times{\mathcal{X}}\times{\mathcal{X}}\to{\mathcal{X}},$$ 
+which is defined by
+$$R(X,Y)Z=\nabla_X\nabla_YZ-\nabla_Y\nabla_XZ-\nabla_{[X,Y]}Z$$
+where $X,Y,Z\in\mathcal{X}$ are vector fields,  where $\nabla$ is
+the Levi-Civita connection attached to the metric tensor $g$, and
+where the square brackets denote the Lie bracket of two vector fields.
+The tri-linearity means that for every smooth $f\colon M\to\mathbb{R}$
+we have
+$$fR(X,Y)Z=R(fX,Y)Z=R(X,fY)Z=R(X,Y)fZ.$$
+
+In components this tensor is classically denoted by a set of
+four-indexed components ${R^i}_{jkl}$. This means that given a
+basis of linearly independent vector fields $X_i$ we have
+$$R(X_j,X_k)X_l=\sum_s {R^s}_{jkl}X_s.$$
+
+In a two dimensional manifold it is known that the Gaussian curvature
+it is given by
+$$K_g=\frac{R_{1212}}{g_{11}g_{22}-{g_{12}}^2}$$
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,76 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LineThroughAnIntersectionPoint}
+\pmcreated{2013-03-22 17:30:28}
+\pmmodified{2013-03-22 17:30:28}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{line through an intersection point}
+\pmrecord{8}{39897}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53A04}
+\pmclassification{msc}{51N20}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{represents}
+Suppose that the lines
+\begin{align}
+       Ax+By+C = 0\;\; \mbox{and}\;\; A'x+B'y+C' = 0
+\end{align}
+have an intersection point.  Then for any real value of $k$, the equation
+\begin{align}
+             Ax+By+C+k(A'x+B'y+C') = 0
+\end{align}
+represents a line passing through that point.
+
+In fact, the \PMlinkescapetext{degree} of the equation (2) is 1, and therefore it represents a line; secondly, (2) is satisfied if both equations (1) are satisfied, and therefore the line passes through that intersection point.\\
+
+
+\textbf{Example.}  Determine the equation of the line passing through the point \,$(-5,\,2)$\, and the intersection point of the lines\, $6x-7y+9 = 0$\, and\, $5x+9y-3 = 0$.
+
+The equation of a line through the common point of those lines is
+\begin{align}            
+           6x-7y+9 +k(5x+9y-3) = 0.
+\end{align}
+We have to find such a value for $k$ that also\, $(-5,\,2)$\, lies on the line, i.e. that the equation (3) is satisfied by the values\, $x = -5$,\, $y = 2$.  So we get for determining $k$ the equation
+                   $$-35-10k = 0,$$
+whence\, $k = -\frac{7}{2}$.  Using this value in (3), multiplying the equation by 2 and simplifying, we obtain the sought equation
+                  $$23x+77y-39 = 0.$$
+This result would be obtained, of course, by first calculating the intersection point of the two given lines (it is\, $(-\frac{60}{89},\,\frac{63}{89})$) and then forming the equation of the line passing this point and the point\, $(-5,\,2)$, but then the calculations would have been substantially longer.
+
+\textbf{Note.}  It is apparent that no value of $k$ allows the equation (2) to \PMlinkescapetext{represent} the line\,\\ $A'x+B'y+C' = 0$\, itself.  Thus, if we had in the example instead the point\, $(-5,\,2)$\, e.g. the point\, $(6,\,-3)$\, of the line\, $5x+9y-3 = 0$, then we had the condition\, $66+0k = 0$\, which gives no value of $k$.
+
+\begin{thebibliography}{9}
+\bibitem{VA}{\sc K. V\"ais\"al\"a:} {\em Algebran oppi- ja esimerkkikirja II}. Nelj\"as painos. \, Werner S\"oderstr\"om osakeyhti\"o, Porvoo \& Helsinki (1956).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

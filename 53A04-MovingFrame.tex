@@ -1,0 +1,61 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MovingFrame}
+\pmcreated{2013-03-22 16:27:01}
+\pmmodified{2013-03-22 16:27:01}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{moving frame}
+\pmrecord{6}{38606}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53A04}
+\pmsynonym{frame}{MovingFrame}
+\pmrelated{TNBFrame}
+\pmdefines{frame}
+\pmdefines{orthonormal frame}
+\pmdefines{parallelizable}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Let $M$ be a smooth manifold.  A \emph{moving frame} (sometimes just a \emph{frame}) on $M$ is a choice, for every $P\in M$, of a basis for the tangent space $T_pM$ to $M$ at $P$.  More formally (and abstractly), a frame is a (smooth) section of the principal bundle for $\operatorname{GL}_n$ over $M$.
+
+\subsection*{Examples and Remarks}
+\begin{itemize}
+\item If $M=\mathbb{R}^n$, then any basis of $\mathbb{R}^n$ trivially gives a frame as well.
+\item A more interesting example (and perhaps a source for the definition) is when $M=\mathbb{R}^2-\{(0,0)\},$ and we take the vectors $\frac{\partial}{\partial r}$ and $\frac{\partial}{\partial\theta}$ at a point $(r,\theta)$.  Note that this frame cannot be extended to a smooth frame on all of $\mathbb{R}^2$.
+\item Similar to the previous example, one can show that the 2-sphere admits no frames.  A manifold which admits a (global) frame is called \emph{parallelizable.}
+\item A key example of a frame is the Frenet frame.
+\item One places adjective in front of "moving frame" if that adjective pertains to each basis, e.g. an \emph{orthogonal frame} is a frame for which each basis is orthogonal (with respect to a given inner product).  Given any frame, one can always "orthonormalize" it in a smooth manner to provide an orthonormal frame.
+\item Frames arise in general relativity as a formalization of the observation that there is no ``preferred'' observer standpoint.
+\end{itemize}
+
+\begin{thebibliography}{9}
+\bibitem {wikibinom} Wikipedia's \PMlinkexternal{entry on moving frame}{http://en.wikipedia.org/wiki/Moving_frame}
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

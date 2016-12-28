@@ -1,0 +1,58 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GermSpace}
+\pmcreated{2013-03-22 19:18:20}
+\pmmodified{2013-03-22 19:18:20}
+\pmowner{joking}{16130}
+\pmmodifier{joking}{16130}
+\pmtitle{germ space}
+\pmrecord{4}{42242}
+\pmprivacy{1}
+\pmauthor{joking}{16130}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53B99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Let $X$, $Y$ be topological spaces and $x\in X$. Consider the set of all continuous functions
+$$C(X,Y)=\{f:X\to Y\ |\ f\mbox{ is continuous}\}.$$
+For any two functions $f,g:X\to Y$ we put
+$$f\sim_{x} g$$
+if and only if there exists an open neighbourhood $U\subseteq X$ of $x$ such that
+$$f_{|U}=g_{|U}.$$
+The corresponding quotient set is called \textbf{the germ space} at $x\in X$ and we denote it by $G_x(X,Y)$.
+
+More generally, if $X$, $Y$ are topological spaces with $x\in X$, then consider the following set:
+$$C_x(X,Y)=\{f:U\to Y\ |\ f\mbox{ is continuous and }U\mbox{ is an open neighbourhood of }x\}.$$
+Again we define a relation on $C_x(X,Y)$. If $f:U\to Y$ and $g:U'\to Y$, then put
+$$f\sim_{x} g$$
+if and only if there exists and open neighbourhood $V\subseteq X$ of $x$ such that $V\subseteq U\cap U'$ and
+$$f_{|V}=g_{|V}.$$
+The corresponding set is called \textbf{the generalized germ space} at $x\in X$ and we denote it by $G_x^*(X,Y)$.
+
+Note that if $Y=\mathbb{R}$ or $Y=\mathbb{C}$ (or $Y$ is any topological ring), then both $G_x(X,Y)$ and $G_x^*(X,Y)$ have a well-defined ring structure via pointwise addition and multiplication.
+%%%%%
+%%%%%
+\end{document}

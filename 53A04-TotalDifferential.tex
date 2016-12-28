@@ -1,0 +1,103 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TotalDifferential}
+\pmcreated{2013-03-22 19:11:24}
+\pmmodified{2013-03-22 19:11:24}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{total differential}
+\pmrecord{10}{42101}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53A04}
+\pmclassification{msc}{26B05}
+\pmclassification{msc}{01A45}
+\pmsynonym{exact differential}{TotalDifferential}
+\pmsynonym{differential}{TotalDifferential}
+\pmrelated{ExactDifferentialForm}
+\pmrelated{ExactDifferentialEquation}
+\pmrelated{Differential}
+\pmrelated{DifferntiableFunction}
+\pmdefines{differentiable}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{consistent}  \PMlinkescapeword{independent}
+
+
+There is the generalisation of the theorem in \PMlinkname{the parent entry}{Differential} concerning the real functions of several variables; here we formulate it for three variables:\\
+
+\textbf{Theorem.}\, Suppose that $S$ is a ball in $\mathbb{R}^3$, the function \,$f\!:S\to \mathbb{R}$\, is continuous and has partial derivatives $f_x',\,f_y',\,f_z'$ in $S$ and the partial derivatives are continuous in a point 
+\,$(x,\,y,\,z)$\, of $S$.\, Then the increment
+$$\Delta f \;:=\; f(x\!+\!\Delta x,\,y\!+\!\Delta y,\,z\!+\!\Delta z)-f(x,\,y,\,z),$$
+which $f$ gets when one moves from\, $(x,\,y,\,z)$\, to another point 
+\,$(x\!+\!\Delta x,\,y\!+\!\Delta y,\,z\!+\!\Delta z)$\, of $S$, can be split into two parts as follows:
+\begin{align}
+\Delta f \;=\; [f_x'(x,\,y,\,z)\Delta x+f_y'(x,\,y,\,z)\Delta y+f_z'(x,\,y,\,z)\Delta z]+\langle\varrho\rangle\varrho.
+\end{align}
+Here,\, $\varrho := \sqrt{\Delta x^2\!+\!\Delta y^2\!+\!\Delta z^2}$\, and $\langle\varrho\rangle$ is a quantity tending to 0 along with $\varrho$.\\
+
+
+The former part of $\Delta x$ is called the (\emph{total}) \emph{differential} or the \emph{exact differential} of the function $f$ in the point \,$(x,\,y,\,z)$\, and it is denoted by\, $df(x,\,y,\,z)$\, of briefly $df$.\, In the special case \,$f(x,\,y,\,z) \equiv x$,\, we see that\, $df = \Delta x$\, and thus\, $\Delta x = dx$;\, similarly\, 
+$\Delta y = dy$\, and $\Delta z = dz$.\, Accordingly, we obtain for the general case the more consistent notation
+\begin{align}
+df \;=\; f_x'(x,\,y,\,z)dx+f_y'(x,\,y,\,z)dy+f_z'(x,\,y,\,z)dz,
+\end{align}
+where $dx,\,dy,\,dz$ may be thought as independent variables.\\
+
+
+We now assume conversely that the increment of a function $f$ in $\mathbb{R}^3$ can be split into two parts as follows:
+\begin{align}
+f(x\!+\!\Delta x,\,y\!+\!\Delta y,\,z\!+\!\Delta z)-f(x,\,y,\,z) 
+\;=\; [A\Delta x+B\Delta y+C\Delta z]+\langle\varrho\rangle\varrho
+\end{align}
+where the coefficients $A,\,B,\,C$ are independent on the quantities $\Delta x,\,\Delta y,\,\Delta z$ and 
+$\varrho,\,\langle\varrho\rangle$ are as in the above theorem.\, Then one can infer that the partial derivatives 
+$f_x',\,f_y',\,f_z'$ exist in the point\, $(x,\,y,\,z)$\, and have the values $A,\,B,\,C$, respectively.\, In fact, if we choose\, $\Delta y = \Delta z = 0$, then\, $\varrho = |\Delta x|$\, whence (3) attains the form
+$$f(x\!+\!\Delta x,\,y\!+\!\Delta y,\,z\!+\!\Delta z)-f(x,\,y,\,z) \,=\, A\Delta x+\langle\Delta x\rangle\Delta x$$
+and therefore 
+$$A \;=\; \lim_{\Delta x \to 0}\frac{f(x\!+\!\Delta x,\,y\!+\!\Delta y,\,z\!+\!\Delta z)-f(x,\,y,\,z)}{\Delta x}
+\;=\; f_x'(x,\,y,\,z).$$
+Similarly we see the values of $f_y'$ and $f_z'$.
+
+The last consideration showed the uniqueness of the total differential.\\
+
+\textbf{Definition.}\, A function $f$ in $\mathbb{R}^3$, satisfying the conditions of the above theorem is said to be \emph{differentiable} in the point\, $(x,\,y,\,z)$.\\
+
+
+\textbf{Remark.}\, The differentiability of a function $f$ of two variables in the point\, $(x,\,y)$\, means that the surface \;$z \,=\, f(x,\,y)$\; has a tangent plane in this point.
+
+\begin{thebibliography}{8}
+\bibitem{lindelof}{\sc Ernst Lindel\"of}: {\em Differentiali- ja integralilasku
+ja sen sovellutukset II}.\, Mercatorin Kirjapaino Osakeyhti\"o, Helsinki (1932).
+\end{thebibliography} 
+
+%%%%%
+%%%%%
+\end{document}

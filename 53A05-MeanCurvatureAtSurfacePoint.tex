@@ -1,0 +1,71 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MeanCurvatureAtSurfacePoint}
+\pmcreated{2013-03-22 17:26:56}
+\pmmodified{2013-03-22 17:26:56}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{mean curvature at surface point}
+\pmrecord{8}{39830}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53A05}
+\pmclassification{msc}{26B05}
+\pmclassification{msc}{26A24}
+%\pmkeywords{normal section}
+%\pmkeywords{curvature}
+\pmrelated{AdditionFormulasForSineAndCosine}
+\pmrelated{GaussianCurvature}
+\pmrelated{MeanCurvature}
+\pmdefines{mean curvature}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+Let $P$ be a point on the surface \,$F(x,\,y,\,z) = 0$\, where the function $F$ is twice continuously differentiable on a neighbourhood of $P$.  Then the normal curvature $\varkappa_\theta$ at $P$ is, by Euler's theorem, \PMlinkescapetext{expressible} via the principal curvatures $\varkappa_1$ and $\varkappa_2$ as
+\begin{align}
+     \varkappa_\theta = \varkappa_1\cos^2\theta+\varkappa_2\sin^2\theta,
+\end{align}
+where $\theta$ is the \PMlinkname{angle between}{AngleBetweenTwoPlanes} the normal section plane corresponding $\varkappa_1$ and the normal section plane corresponding $\varkappa_\theta$.  When we apply (1) by taking instead $\theta$ the angle $\theta\!+\!\frac{\pi}{2}$, we may write
+   $$\varkappa_{\theta+\frac{\pi}{2}} = 
+\varkappa_1\sin^2\theta+\varkappa_2\cos^2\theta.$$
+Adding this equation to (1) then yields
+   $$\frac{\varkappa_\theta+\varkappa_{\theta+\frac{\pi}{2}}}{2} = 
+\frac{\varkappa_1+\varkappa_2}{2}.$$
+
+The contents of this result is the
+
+\textbf{Theorem.}  The arithmetic mean of the \PMlinkname{curvatures}{CurvaturePlaneCurve} of two perpendicular normal sections has a \PMlinkescapetext{constant} value, which is equal to the arithmetic mean of the principal curvatures.  This mean is called the {\em mean curvature} at the point in question.
+
+\begin{thebibliography}{8}
+\bibitem{lindelof}{\sc Ernst Lindel\"of}: {\em Differentiali- ja integralilasku
+ja sen sovellutukset II}.\, Mercatorin Kirjapaino Osakeyhti\"o, Helsinki (1932).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

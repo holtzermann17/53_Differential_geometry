@@ -1,0 +1,52 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AffineParameter}
+\pmcreated{2013-03-22 14:35:47}
+\pmmodified{2013-03-22 14:35:47}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{affine parameter}
+\pmrecord{9}{36164}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53C22}
+\pmdefines{affinely-parameterized}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Given a geodesic curve, an \emph{affine parameterization} for that curve is a parameterization by a parameter $t$ such that the parametric equations for the curve satisfy the geodesic equation.
+
+Put another way, if one picks a parameterization of a geodesic curve by an arbitrary parameter $s$ and sets $u^\mu = dx^\mu / ds$, then we have
+ $$u^\mu \nabla_\mu u^\nu = f(s) u^\nu$$
+for some function $f$.  In general, the right hand side of this equation does not equal zero --- it is only zero in the special case where $t$ is an affine parameter.
+
+The reason for the name ``affine parameter'' is that, if $t_1$ and $t_2$ are affine parameters for the same geodesic curve, then they are related by an affine transform, i.e. there exist constants $a$ and $b$ such that
+ \[t_1 = a t_2 + b\]
+Conversely, if $t$ is an affine parameter, then $at + b$ is also an affine parameter.
+
+From this it follows that an affine parameter $t$ is uniquely determined if we specify its value at two points on the geodesic or if we specify both its value and the value of $dx^\mu / dt$ at a single point of the geodesic.
+%%%%%
+%%%%%
+\end{document}

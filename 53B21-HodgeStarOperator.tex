@@ -1,0 +1,72 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HodgeStarOperator}
+\pmcreated{2013-03-22 13:31:41}
+\pmmodified{2013-03-22 13:31:41}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{Hodge star operator}
+\pmrecord{11}{34120}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53B21}
+\pmsynonym{Hodge operator}{HodgeStarOperator}
+\pmsynonym{star operator}{HodgeStarOperator}
+\pmdefines{hodge star operator}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let V be a $n$-dimensional ($n$ finite) vector space with inner product $g$.  The \emph{Hodge star operator} (denoted by $\ast$) is 
+a linear operator mapping \PMlinkid{$p$-forms}{3050} on $V$ to $(n-p)$-forms, i.e., 
+$$\ast : \Omega^p (V)\to \Omega^{n-p}(V).$$
+
+In terms of a basis $\{e^1,\ldots, e^n\}$ for $V$ and the corresponding dual basis $\{e_1,\ldots, e_n\}$ for $V^*$ (the star used to denote the dual space is not to be confused with the Hodge star!), with the inner product being expressed in terms of components as
+$g = \sum_{i,j = 1}^n g_{ij} e^i\otimes e^j$, the $\ast$-operator
+is defined as the linear operator that maps the basis elements of $\Omega^p(V)$ as
+\begin{eqnarray*}
+\label{hodgedef}
+\ast(e^{i_1} \wedge \cdots \wedge e^{i_p})\!\!\!\! &=& \!\!\!\!\frac{\sqrt{|g|}}{(n-p)!} g^{i_1 l_1}\cdots  g^{i_p l_p} \varepsilon_{l_1 \cdots l_p\, l_{p+1} \cdots l_n} e^{l_{p+1}}\wedge \cdots \wedge  e^{l_{n}}.
+\end{eqnarray*}
+Here, $|g|=\det g_{ij}$, and $\varepsilon$ is the Levi-Civita permutation symbol
+
+This operator may be defined in a coordinate-free manner by the condition
+ $$u \wedge *v = g (u, v) \, \mathop{\bf Vol}(g)$$
+where the notation $g(u,v)$ denotes the inner product on $p$-forms (in coordinates, $g(u,v) = g_{i_1 j_1} \cdots g_{i_p j_p} u^{i_1 \ldots i_p} v^{j_1 \ldots j_p}$) and $\mathop{\bf Vol}(g)$ is the unit volume form associated to the metric. (in coordinates, $\mathop{\bf Vol}(g) = \sqrt {\operatorname{det}(g)} e^1 \wedge \cdots \wedge e^n$)
+
+Generally $\ast \ast = (-1)^{p(n-p)} \operatorname{id}$, where $\operatorname{id}$ is the 
+identity operator in $\Omega^p (V)$. In three dimensions, 
+$\ast \ast = \operatorname{id}$ for all $p=0,\ldots,3$.
+On $\mathbb{R}^3$  with Cartesian coordinates, the metric tensor is 
+$g=dx\otimes dx + dy\otimes dy + dz\otimes dz$, and the Hodge 
+star operator is 
+\begin{eqnarray*}
+ \ast dx = dy\wedge dz,\ \ \ \ \ \   \ast dy = dz\wedge dx,\ \ \ \ \ \  \ast dz = dx\wedge dy.
+\end{eqnarray*}
+
+The Hodge star operation occurs most frequently in differential geometry in the case where $M^n$ is a $n$-dimensional orientable manifold with 
+a Riemannian (or pseudo-Riemannian) tensor $g$ and $V$ is a cotangent vector space of $M^n$.  Also, one can extend this notion to antisymmetric tensor fields by computing Hodge star pointwise.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,88 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ArcLengthOfLogarithmicCurve}
+\pmcreated{2013-03-22 19:01:45}
+\pmmodified{2013-03-22 19:01:45}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{arc length of logarithmic curve}
+\pmrecord{11}{41901}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53A04}
+\pmclassification{msc}{26A42}
+\pmclassification{msc}{26A09}
+\pmclassification{msc}{26A06}
+\pmsynonym{arc length of exponential curve}{ArcLengthOfLogarithmicCurve}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\DeclareMathOperator{\arsinh}{arsinh}
+\DeclareMathOperator{\arcosh}{arcosh}
+\DeclareMathOperator{\artanh}{artanh}
+\DeclareMathOperator{\arcoth}{arcoth}
+\begin{document}
+\PMlinkescapeword{substitution}
+The arc length of the graph of \PMlinkname{logarithm function}{NaturalLogarithm2} is expressible in closed form (other cases are listed in the entry arc length of parabola).\, The usual arc length \PMlinkescapetext{formula}
+$$s \;=\; \int_a^b\!\sqrt{1+(f'(x))^2}\,dx$$
+gives, if\, $0 < a < b$,\, for\, $f(x) := \ln{x}$,\, $f'(x) = \frac{1}{x}$,\, the expression
+\begin{align}
+s \;=\; \int_a^b\!\frac{\sqrt{1\!+\!x^2}}{x}\,dx.
+\end{align}
+Here, finding a suitable substitution for integration may be a bit difficult.\, E.g.\, $x := \tan{t}$
+leads to
+$$\int\!\frac{\sqrt{1\!+\!x^2}}{x}\,dx \;=\; \int\frac{dt}{\sin{t}\,\cos^2{t}},$$
+the substitution\, $x := \sinh{t}$\, to
+$$\int\!\frac{\sqrt{1\!+\!x^2}}{x}\,dx \;=\; \int\frac{\cosh^2{t}}{\sinh{t}}\,dt,$$
+which both seem to require a new substitution.\, As well the Euler's substitutions (1st and 2nd ones) lead to awkward rational functions as integrands.
+
+But there is the straightforward \PMlinkescapetext{simple} substitution
+$$\sqrt{1\!+\!x^2} \;:=\; t, \quad x \;=\; \sqrt{t^2\!-\!1}, \quad dx \;=\; \frac{t\,dt}{\sqrt{t^2\!-\!1}}$$
+yielding
+$$\int\!\frac{\sqrt{1\!+\!x^2}}{x}\,dx \;=\; \int\!\frac{t^2\,dt}{t^2\!-\!1}
+\;=\; t+\frac{1}{2}\ln\frac{t\!-\!1}{t\!+\!1}+C \;=\; t-\arcoth{t}+C$$
+(see area functions) and then
+$$\int\!\frac{\sqrt{1\!+\!x^2}}{x}\,dx \;=\; 
+\sqrt{1\!+\!x^2}+\frac{1}{2}\ln\frac{\sqrt{1\!+\!x^2}-1}{\sqrt{1\!+\!x^2}+1}+C \;=\; 
+\sqrt{1\!+\!x^2}+\ln\frac{x}{1+\sqrt{1\!+\!x^2}}+C.$$
+Using this antiderivative, one can obtain the arc length (1).\, For example, if\, $a = \sqrt{3}$\, and\, 
+$b = \sqrt{15}$,\, the result is\, $s = 2+\ln\frac{3}{\sqrt{5}}$.\\
+
+As for finding the arc length of the graph of the \PMlinkid{exponential function}{2541} \,$x \mapsto e^x$,\, which actually is the same curve as the graph of the inverse function \,$x \mapsto \ln{x}$,\, one may write the expression
+\begin{align}
+s \;=\; \int_\alpha^\beta\!\sqrt{1\!+\!e^{2x}}\,dx.
+\end{align}
+Since here the substitution
+$$e^x \;:=\; t, \quad x \;=\; \ln{t}, \quad dx \;=\; \frac{dt}{t}$$
+shows that
+$$\int\!\sqrt{1\!+\!e^{2x}}\,dx \;=\; \int\!\frac{\sqrt{1\!+\!t^2}}{t}\,dt,$$
+we see that it's really a question of the same task as above.\, The antiderivative is
+$$\int\!\sqrt{1\!+\!e^{2x}}\,dx \;=\; \sqrt{1\!+\!e^{2x}}-\arsinh{e^{-x}}+C 
+\;=\; \sqrt{1\!+\!e^{2x}}+\ln\frac{e^x}{1+\sqrt{1\!+\!e^{2x}}}+C.$$
+
+
+
+%%%%%
+%%%%%
+\end{document}

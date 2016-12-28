@@ -1,0 +1,51 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Submersion}
+\pmcreated{2013-03-22 15:28:49}
+\pmmodified{2013-03-22 15:28:49}
+\pmowner{pbruin}{1001}
+\pmmodifier{pbruin}{1001}
+\pmtitle{submersion}
+\pmrecord{4}{37335}
+\pmprivacy{1}
+\pmauthor{pbruin}{1001}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53-00}
+\pmclassification{msc}{57R50}
+\pmrelated{Immersion}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+A differentiable map $f\colon X\to Y$ \PMlinkescapetext{between} differential manifolds $X$ and $Y$ is called a \emph{submersion at a point} $x\in X$ if the tangent map
+$$
+\mathrm{T}f(x)\colon\mathrm{T}X(x)\to\mathrm{T}Y(f(x))
+$$
+between the tangent spaces of $X$ and $Y$ at $x$ and $f(x)$ is surjective.
+
+If $f$ is a submersion at every point of $X$, then $f$ is called a \emph{submersion}.  A submersion $f\colon X\to Y$ is an open mapping, and its image is an open submanifold of $Y$.
+
+A fibre bundle $p\colon X\to B$ over a manifold $B$ is an example of a submersion.
+%%%%%
+%%%%%
+\end{document}

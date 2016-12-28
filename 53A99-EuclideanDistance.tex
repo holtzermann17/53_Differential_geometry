@@ -1,0 +1,57 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{EuclideanDistance}
+\pmcreated{2013-03-22 12:08:21}
+\pmmodified{2013-03-22 12:08:21}
+\pmowner{drini}{3}
+\pmmodifier{drini}{3}
+\pmtitle{Euclidean distance}
+\pmrecord{15}{31318}
+\pmprivacy{1}
+\pmauthor{drini}{3}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53A99}
+\pmclassification{msc}{54E35}
+\pmsynonym{Euclidean metric}{EuclideanDistance}
+\pmsynonym{standard metric}{EuclideanDistance}
+\pmsynonym{standard topology}{EuclideanDistance}
+\pmsynonym{Euclidean}{EuclideanDistance}
+\pmsynonym{canonical topology}{EuclideanDistance}
+\pmsynonym{usual topology}{EuclideanDistance}
+\pmrelated{Topology}
+\pmrelated{BoundedInterval}
+\pmrelated{EuclideanVectorSpace}
+\pmrelated{DistanceOfNonParallelLines}
+\pmrelated{EuclideanVectorSpace2}
+\pmrelated{Hyperbola2}
+\pmrelated{CassiniOval}
+
+%\usepackage{graphicx}
+%%%%\usepackage{xypic} 
+\usepackage{bbm}
+\newcommand{\Z}{\mathbbmss{Z}}
+\newcommand{\C}{\mathbbmss{C}}
+\newcommand{\R}{\mathbbmss{R}}
+\newcommand{\Q}{\mathbbmss{Q}}
+\newcommand{\mathbb}[1]{\mathbbmss{#1}}
+\begin{document}
+If $u=(x_1,y_1)$ and $v=(x_2,y_2)$ are two points on the plane, their \emph{Euclidean distance} is given by 
+\begin{equation}\label{equno}
+\sqrt{(x_1-x_2)^2 + (y_1-y_2)^2}.
+\end{equation}
+Geometrically, it's the length of the segment joining $u$ and $v$, and also the norm of the difference vector (considering $\R^n$ as vector space).
+
+This distance induces a metric (and therefore a topology) on $\mathbb{R}^2$, called \emph{Euclidean metric (on $\R^2$)} or \emph{standard metric (on $\mathbb{R}^2)$}. The topology so induced is called \emph{standard topology} or \emph{usual topology on $\R^2$} and one basis can be obtained considering the set of all the open balls.
+
+If $a=(x_1,x_2,\ldots,x_n)$ and $b=(y_1,y_2,\ldots,y_n)$, then formula \ref{equno} can be generalized to $\R^n$ by defining the Euclidean distance from $a$ to $b$ as
+\begin{equation}d(a,b)=\sqrt{(x_1-y_1)^2+(x_2-y_2)^2+\cdots+(x_n-y_n)^2}.\end{equation}
+
+Notice that this distance coincides with absolute value when $n=1$.
+Euclidean distance on $\mathbb{R}^n$ is also a metric (Euclidean or standard metric), and therefore we can give $\mathbb{R}^n$ a topology, which is called the standard (canonical, usual, etc) topology of $\mathbb{R}^n$. The resulting (topological and vectorial) space is known as \emph{Euclidean space}.
+
+This can also be done for $\C^n$ since as set $\C=\R^2$ and thus the metric on $\C$ is the same given to $\R^2$, and in general, $\C^n$ gets the same metric as $R^{2n}$.
+%%%%%
+%%%%%
+%%%%%
+\end{document}

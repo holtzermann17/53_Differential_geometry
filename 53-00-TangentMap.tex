@@ -1,0 +1,120 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TangentMap}
+\pmcreated{2013-03-22 14:06:19}
+\pmmodified{2013-03-22 14:06:19}
+\pmowner{matte}{1858}
+\pmmodifier{matte}{1858}
+\pmtitle{tangent map}
+\pmrecord{7}{35506}
+\pmprivacy{1}
+\pmauthor{matte}{1858}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53-00}
+\pmsynonym{push forward map}{TangentMap}
+\pmsynonym{pushforward}{TangentMap}
+\pmsynonym{pushforward map}{TangentMap}
+\pmrelated{PullbackOfAKForm}
+\pmrelated{FlowBoxTheorem}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+
+ \usepackage{bbm}
+ \newcommand{\Z}{\mathbbmss{Z}}
+ \newcommand{\C}{\mathbbmss{C}}
+ \newcommand{\R}{\mathbbmss{R}}
+ \newcommand{\Q}{\mathbbmss{Q}}
+
+
+
+\newcommand*{\norm}[1]{\lVert #1 \rVert}
+\newcommand*{\abs}[1]{| #1 |}
+
+
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+\begin{document}
+\PMlinkescapeword{represent}
+\begin{defn}
+Suppose $X$ and $Y$ are smooth manifolds with tangent bundles
+$TX$ and $TY$, and suppose $f:X\to Y$
+is a smooth mapping. Then the {\bf tangent map} of $f$ is the map
+$Df\colon TX\to TY$ defined as follows: If $v\in T_x(X)$ for some 
+$x\in X$, then
+we can represent $v$ by some curve 
+$c\colon I \to X$ with $c(0)=x$ and $I=(-1,1)$. 
+Now $(Df)(v)$ is defined as the tangent vector in $T(Y)$ 
+represented by the curve $f\circ c\colon I \to Y$. Thus,
+since $(f\circ c)(0)=f(x)$, it follows that $(Df)(v)\in T_{f(x)}(Y)$.
+\end{defn}
+
+\subsubsection*{Properties}
+Suppose $X$ and $Y$ are a smooth manifolds.
+\begin{itemize}
+\item If $\operatorname{id}_X$ is the identity mapping on $X$, then 
+$D\mbox{id}_X$ is the identity mapping on $TX$. 
+\item Suppose $X,Y,Z$ are smooth manifolds, and $f,g$ are mappings
+$f\colon X\to Y$, $g\colon Y\to Z$. Then 
+$$ 
+  D(f\circ g) = (Df)\circ (Dg).
+$$
+\item If $f\colon X\to Y$ is a diffeomorphism, then the inverse of $Df$ is a diffeomorphism,
+and 
+$$ 
+  (Df)^{-1}=D(f^{-1}).
+$$
+\end{itemize}
+
+\subsubsection*{Notes}
+Note that if $f\colon X\to Y$ is a mapping as in 
+the definition, then the tangent map is
+a mapping 
+$$
+ Df\colon  TX\to TY,
+$$
+whereas the \PMlinkname{pullback}{PullbackOfAKForm} of $f$ is a mapping
+$$
+  f^\ast\colon \Omega^k(Y)\to \Omega^k(X).
+$$
+For this reason, the tangent map is also sometimes called the pushforward map.
+That is, a pullback takes objects from $Y$ to $X$, and 
+a pushforward  takes objects from $X$ to $Y$.
+
+Sometimes, the tangent map of $f$ is also denoted by $f_\ast$. However,
+the motivation for denoting the tangent map by $Df$ is that if $X$ and $Y$
+are open subsets in $\sR^n$ and $\sR^m$, then $Df$ is simply
+the Jacobian of $f$.
+%%%%%
+%%%%%
+\end{document}

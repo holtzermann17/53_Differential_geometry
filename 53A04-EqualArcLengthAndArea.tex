@@ -1,0 +1,79 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{EqualArcLengthAndArea}
+\pmcreated{2013-03-22 19:13:36}
+\pmmodified{2013-03-22 19:13:36}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{equal arc length and area}
+\pmrecord{8}{42149}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53A04}
+\pmclassification{msc}{34A34}
+\pmclassification{msc}{34A05}
+\pmclassification{msc}{26A09}
+\pmsynonym{equal area and arc length}{EqualArcLengthAndArea}
+\pmrelated{Arcosh}
+\pmrelated{HyperbolicFunctions}
+\pmrelated{ChainCurve}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+\usepackage{pstricks}
+\usepackage{pst-plot}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\DeclareMathOperator{\arcosh}{arcosh}
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{ln}
+
+We want to determine the nonnegative differentiable real functions \,$x \mapsto y$\, whose graph has the property that the arc length between any two points of it is the same as the \PMlinkname{area}{AreaOfPlaneRegion} \PMlinkescapetext{bounded} by the curve, the $x$-axis and the ordinate lines of those points.\\
+
+The requirement leads to the equation
+\begin{align}
+\int_a^x\!\sqrt{1+\left(\frac{dy}{dx}\right)^2}\,dx \;=\; \int_a^x\!y\,dx.
+\end{align}
+By the fundamental theorem of calculus, we infer from (1) the differential equation
+\begin{align}
+\sqrt{1+\left(\frac{dy}{dx}\right)^2} \;=\; y,
+\end{align}
+whence\, $\frac{dy}{dx} = \sqrt{y^2\!-\!1}$.\, In the case\, $y \not\equiv 1$,\, the separation of variables yields
+$$\int\!dx \;=\; \int\!\frac{dy}{\sqrt{y^2\!-\!1}},$$
+i.e. 
+$$x\!+\!C \;=\; \arcosh{y}.$$
+Consequently, the equation (2) has the general solution
+\begin{align}
+y \;=\; \cosh(x\!+\!C)
+\end{align}
+and the singular solution
+\begin{align}
+y \;\equiv\; 1.
+\end{align}
+
+The functions defined by (3) and (4) are the only \PMlinkescapetext{function types} satisfying the given requirement.\, The graphs are a chain curve (which may be translated in the horizontal direction) and a line parallel to the $x$-axis.\, Evidently, the line is the envelope of the integral curves given be the general solution.
+%%%%%
+%%%%%
+\end{document}

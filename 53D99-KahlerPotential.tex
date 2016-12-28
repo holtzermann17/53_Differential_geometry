@@ -1,0 +1,58 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{KahlerPotential}
+\pmcreated{2013-03-22 16:33:17}
+\pmmodified{2013-03-22 16:33:17}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{K\"ahler potential}
+\pmrecord{7}{38740}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53D99}
+\pmsynonym{Kahler potential}{KahlerPotential}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+A {K\"ahler potential} is a real-valued function $f$ defined on some coordinate patch of a  
+Hermitean manifold such that the metric of the manifold is given by the expression
+\[
+ g_{ij*} = {\partial^2 f \over dz^i d{\overline z}^j} .
+\]
+It turns out that, for every K\'ahler manifold, there will exist a coordinate neighborhood of any 
+given point in which the metric can be expresses in terms of a potential this way.
+
+As an elementary example of a K\"ahler potential, we may consider $f(z,{\overline z}) = z
+{\overline z}$.  This potential gives rise to the flat metric $ds^2 = dz d{\overline z}$.
+
+K\"ahler potentials have applications in physics. For example, this function $f(x) = \log(x) + g(x)$ relates to the motion of certain subatomic particles called gauginos.
+
+\begin{thebibliography}{1}
+\bibitem{tb} T. Barreiro, B. de Carlos \& E. J. Copeland, ``On non-perturbative corrections to the K\"ahler potential'' {\it Physical Review} D57 (1998): 7354 - 7360
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,102 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SmarandacheGeometries}
+\pmcreated{2013-03-22 15:28:24}
+\pmmodified{2013-03-22 15:28:24}
+\pmowner{jonnathan}{5141}
+\pmmodifier{jonnathan}{5141}
+\pmtitle{Smarandache geometries}
+\pmrecord{7}{37327}
+\pmprivacy{1}
+\pmauthor{jonnathan}{5141}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53A35}
+\pmrelated{FlorentinSmarandache}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+An axiom is said \emph{smarandachely denied} (S-denied) if in the same space the axiom behaves differently (i.e., validated and invalided; or only invalidated but in at least two distinct ways). 
+
+A \emph{Smarandache geometry} (SG) is a geometry which has at least one smarandachely denied axiom (1969). 
+
+Thus, as a particular case, Euclidean, Lobachevsky-Bolyai-Gauss, and Riemannian geometries may be united altogether, in the same space, by some SGs. These last geometries can be partially Euclidean and partially non-Euclidean.
+
+The novelty of the SG is the fact that they introduce for the first time \emph {the degree of negation in geometry}, similarly to the degree of falsehood in fuzzy or neutrosophic logic. For example an axiom can be denied in percentage of 30% only.
+\newline Also SG are defined on multispaces, i.e. unions of Euclidean and non-Euclidean subspaces, or unions of distinct non-Euclidean spaces. 
+
+As an example of S-denying, a proposition $\phi$, which is the conjunction of a set $\phi_{i}$ of propositions, can be \emph{invalidated in many ways} if it is minimally unsatisfiable, that is, such that the conjunction of any proper subset of the $\phi_{i}$ is satisfied in a structure, but $\phi$ itself is not.
+
+Many axioms have one of the following forms in the sequential logic:
+\newline Let $n, m \geqslant 1$ be two integers, also $A=A_1 \times A_2 \times \cdots \times A_{n}$ and $B=B_1 \times B_2 \times \cdots \times B_{m}$.  
+\newline Let $x = (x_1, x_2, \cdots, x_{n})$ and $y = (y_1, y_2, \cdots, y_{m})$, also $\textit{P}(x)$ and $\textit{Q}(x)$ be relationships on $x$ and $\textit{R}(x, y)$ a relationship between $x$ and $y$.  Then:
+\newline $a_1$ \indent $\forall x \in A$, $\exists$ and is unique $y \in B$, such that $\textit{R}(x, y)$.
+\newline\ $a_2$  \indent If $x \in A$ such that $\textit{P}(x)$, then $\textit{Q}(x)$.
+\newline $a_3$  \indent $\forall x \in A$ one has $\textit{P}(x)$.
+
+One can invalidate in many ways the first class of axioms $a_1$ as follows:
+\newline 1.1. \indent $\exists x \in A$ and $\exists$ finitely many (at least two) $y \in B$ such that $\textit{R}(x, y)$.
+\newline 1.2. \indent $\exists x \in A$ and $\exists$ infinitely many $y \in B$ such that $\textit{R}(x, y)$.
+\newline 1.3. \indent $\exists x \in A$ such that $\nexists y \in B$ for which $\textit{R}(x, y)$.
+
+One can invalidate in many ways the second class of axioms $a_2$ as follows:
+\newline 2.1.  \indent $\exists$ a unique $x \in A$ such that $\textit{P}(x)$ but $\neg \textit{Q}(x)$.
+\newline 2.2.  \indent $\exists$ finitely many (more than one) $x \in A$ such that $\textit{P}(x)$ but $\neg \textit{Q}(x)$.
+\newline 2.3. \indent $\exists$ infinitely many $x \in A$ such that $\textit{P}(x)$ but $\neg \textit{Q}(x)$.
+\newline 2.4. \indent $\forall x \in A$ such that $\textit{P}(x)$ one has $\neg \textit{Q}(x)$.
+
+One can invalidate in many ways the third class of axioms $a_3$ as follows:
+\newline 3.1. \indent $\exists x \in A$ and is unique such that $\neg \textit{P}(x)$.
+\newline 3.2. \indent $\exists$ finitely many $x \in A$ such that $\neg \textit{P}(x)$.
+\newline 3.3. \indent $\exists$ infinitely many $x \in A$ such that $\neg \textit{P}(x)$.
+
+Not all axioms can be smarandachely denied. 
+
+Here it is an example of what it means for \emph{an axiom to be invalidated in multiple ways} $[2]$:
+As a particular axiom let's take Euclid's Fifth Postulate. In Euclidean or parabolic geometry a line has one parallel only through a given point. In Lobacevskian or hyperbolic geometry a line has at least two parallels through a given point. In Riemannian or elliptic geometry a line has no parallel through a given point. Whereas in Smarandache geometries there are lines which have no parallels through a given point and other lines which have one or more parallels through a given point (the fifth postulate is invalidated in many ways).
+
+Therefore, the Euclid's Fifth Postulate (which asserts that there is only one parallel passing through an exterior point to a given line) can be invalidated in many ways, i.e. \emph{Smarandachely denied}, as follows:
+
+- first invalidation: there is no parallel passing through an exterior point to a given line;
+
+- second invalidation: there is a finite number of parallels passing through an exterior point to a given line;
+
+- third invalidation: there are infinitely many parallels passing through an exterior point to a given line.
+ 
+
+
+\begin{thebibliography} {6}
+\bibitem{chimienti} S. Chimienti, M. Bencze, {\em Smarandache Paradoxist Geometry}, Bulletin of Pure and Applied Sciences, Vol. 17E, No. 1, 123-1124, 1998.
+\bibitem{iseri} H. Iseri, {\em Smarandache Manifolds}, Am. Res. Press, 2002.
+\PMlinkexternal{The book is also online.}{http://www.gallup.unm.edu/~smarandache/Iseri-book.pdf}.
+\bibitem{kuciuk} L. Kuciuk, M. Antholy {\em An Introduction to Smarandache Geometries}, JP Journal of Geometry and Topology, Vol. 5, No. 1, 77-82, 2005.  
+\newline Presented at {\em New Zealand Mathematics Colloquium}, Massey University, Palmerston North, New Zealand, December 3-6, 2001.
+\bibitem{mao1} Linfan Mao, {\em An introduction to Smarandache geometries on maps}, 2005 International Conference on Graph Theory and Combinatorics, Zhejiang Normal University,  Jinhua, Zhejiang, P. R. China, June 25-30, 2005.
+\bibitem{mao2} Linfan Mao, {\em Automorphism Groups of Maps, Surfaces and Smarandache Geometries}, partially post-doctoral research for the Chinese Academy of Science, Beijing, 2005.
+\newblock \PMlinkexternal{Second book which is online.}{http://www.gallup.unm.edu/~smarandache/Linfan.pdf}.
+\bibitem{smarandache} F. Smarandache, {\em Paradoxist Mathematics}, in \it {Collected Papers (Vol. II)}, Kishinev University Press, Kishinev, 5-28, 1997.  
+\PMlinkexternal{Third book which is online.}{http://www.gallup.unm.edu/~smarandache/CP2.pdf}.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

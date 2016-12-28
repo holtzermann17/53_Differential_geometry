@@ -1,0 +1,123 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RiemannianManifold}
+\pmcreated{2013-03-22 13:02:54}
+\pmmodified{2013-03-22 13:02:54}
+\pmowner{djao}{24}
+\pmmodifier{djao}{24}
+\pmtitle{Riemannian manifold}
+\pmrecord{31}{33452}
+\pmprivacy{1}
+\pmauthor{djao}{24}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53B20}
+\pmclassification{msc}{53B21}
+\pmsynonym{Riemann space and metric}{RiemannianManifold}
+%\pmkeywords{Riemannian metric tensor}
+%\pmkeywords{Riemannian manifold}
+%\pmkeywords{Riemann space}
+%\pmkeywords{Quantum Riemannian Geometry}
+%\pmkeywords{category of Riemannian manifolds}
+\pmrelated{QuantumGeometry2}
+\pmrelated{Gradient}
+\pmrelated{CategoryOfRiemannianManifolds}
+\pmrelated{HomotopyCategory}
+\pmrelated{CWComplexDefinitionRelatedToSpinNetworksAndSpinFoams}
+\pmrelated{QuantumAlgebraicTopologyOfCWComplexRepresentationsNewQATResultsForQuantumStateSpacesOfSpinNetworks}
+\pmdefines{Riemannian metric}
+\pmdefines{Riemannian structure}
+\pmdefines{metric tensor}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\newcommand{\rT}{\operatorname{T}}
+\newcommand{\Rset}{\mathbb{R}}
+\newcommand{\ddx}[1]{\frac{\partial}{\partial  x^{#1}}}
+\newcommand{\iprod}{\mathop{\rfloor}}
+
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+A {\em Riemannian metric tensor} is a covariant, type $(0,2)$ tensor
+field 
+$g\in\Gamma(\rT^* M\otimes \rT^*M)$ such that at each point $p\in M$,
+the bilinear form
+$g_p:\rT_pM\times \rT_p M\to \Rset$ is symmetric and
+positive definite. Here $T^* M$ is the cotangent bundle of $M$ (defined as a sheaf), $\Gamma$ is the set of global sections of $T^* M \otimes T^* M$, and $g_p$ is the value of the function $g$ at the point $p \in M$.
+
+Let $(x^1,\ldots,x^n)$ be a system of local coordinates on an open
+subset $U\subset M$, let $dx^i,\; i=1,\ldots, n$ be the corresponding
+coframe of 1-forms, and let $\displaystyle \ddx{i},\; i=1,\ldots, n$
+be the corresponding dual frame of vector fields.  Using the local
+coordinates, the metric tensor has the unique expression
+$$g=\sum_{i,j=1}^n g_{ij}\, dx^i\otimes dx^j,$$
+where the metric
+tensor components $$g_{ij}=g\left(\ddx{i},\ddx{j}\right)$$
+are smooth
+functions on $U$.
+
+Once we fix the local coordinates, the functions $g_{ij}$ completely
+determine the Riemannian metric.  Thus, at each point $p\in U$, the
+matrix $(g_{ij}(p))$ is symmetric, and positive definite.  Indeed, it
+is possible to define a Riemannian structure on a manifold $M$ by
+specifying an atlas over $M$ together with a matrix of functions
+$g_{ij}$ on each coordinate chart which are symmetric and positive
+definite, with the proviso that the $g_{ij}$'s must be compatible with
+each other on overlaps.
+
+A manifold $M$ together with a Riemannian metric tensor $g$ is called
+a {\em Riemannian manifold}.
+
+{\bf Note:} A Riemannian metric tensor on $M$ is not a distance metric
+on $M$. However, on a connected manifold every Riemannian metric
+tensor on $M$ induces a distance metric on $M$, given by $$
+d(x,y) :=
+\inf \left\{ \int_0^1 \left[g\!\!\left( \frac{dc}{dt},
+      \frac{dc}{dt}\right)_{\!c(t)}\right]^{1/2}dt \right\} ,\quad
+x,y\in M,$$
+where the infimum is taken over all rectifiable curves
+$c:[0,1]\to M$ with $c(0)=x$ and $c(1)=y$.
+
+Often, it is the $g_{ij}$ that are referred to as the ``Riemannian
+metric''.  This, however, is a misnomer.  Properly speaking, the
+$g_{ij}$ should be called local coordinate components of a metric
+tensor, where as ``Riemannian metric'' should refer to the distance
+function defined above.  However, the practice of calling the
+collection of $g_{ij}$'s by the misnomer ``Riemannian metric'' appears
+to have stuck.
+
+\textbf{Remarks:}
+\begin{itemize}
+
+\item Both the Riemannian manifold and Riemannian metric tensor are fundamental concepts
+in Einstein's General Relativity (GR) theory where the ``Riemannian metric'' and curvature of the
+physical Riemannian space-time are changed by the presence of massive bodies and energy
+according to \PMlinkname{Einstein's fundamental GR field equations}{EinsteinFieldEquations}. 
+\item The category of Riemannian manifolds (or `spaces') provides an alternative framework for GR theories
+as well as algebraic quantum field theories (AQFTs);
+\item The category of `pseudo-Riemannian' manifolds, deals in fact with extensions of Minkowski spaces, does not
+possess the Riemannian metric defined in this entry on Riemannian manifolds, and is claimed as a useful
+approach to defining 4D-spacetimes in relativity theories.
+
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

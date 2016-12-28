@@ -1,0 +1,125 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Curl}
+\pmcreated{2013-03-22 12:47:39}
+\pmmodified{2013-03-22 12:47:39}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{curl}
+\pmrecord{17}{33110}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53-01}
+\pmsynonym{rotor}{Curl}
+%\pmkeywords{vector analysis}
+%\pmkeywords{Stokes' theorem}
+\pmrelated{IrrotationalField}
+\pmrelated{FirstOrderOperatorsInRiemannianGeometry}
+\pmrelated{AlternateCharacterizationOfCurl}
+\pmrelated{ExampleOfLaminarField}
+\pmdefines{curl of a vector field}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+The \emph{curl} (also known as \emph{rotor}) is a first order linear
+differential operator which acts on vector fields in $\mathbb{R}^{3}$.
+
+Intuitively, the curl of a vector field measures the extent to which a
+vector field differs from being the gradient of a scalar field.  The
+name "curl" comes from the fact that vector fields at a point with a
+non-zero curl can be seen as somehow "swirling around" said point.  A
+mathematically precise formulation of this notion can be obtained in
+the form of the definition of curl as limit of an integral about a
+closed circuit.
+
+Let $F$ be a  vector field in $\mathbb{R}^{3}$.
+
+Pick an orthonormal basis $\{\vec{e_{1}},\vec{e_{2}},\vec{e_{3}}\}$
+and write
+$\vec{F}=F^{1}\vec{e_{1}}+F^{2}\vec{e_{2}}+F^{3}\vec{e_{3}}$.  Then
+the curl of $F$, notated $\operatorname{curl}\vec{F}$ or
+$\operatorname{rot}\vec{F}$ or $\vec{\nabla}\times\vec{F}$, is given
+as follows:
+ 
+\begin{eqnarray*}
+\operatorname{curl}\vec{F} & = & \left[\frac{\partial F^{3}}{\partial
+q^{2}}-\frac{\partial F^{2}}{\partial
+q^{3}}\right]\vec{e_{1}}+\left[\frac{\partial F^{1}}{\partial
+q^{3}}-\frac{\partial F^{3}}{\partial
+q^{1}}\right]\vec{e_{2}} + \\ 
+ & \; & \left[\frac{\partial F^{2}}{\partial 
+q^{1}}-\frac{\partial F^{1}}{\partial 
+q^{2}}\right]\vec{e_{3}}
+\end{eqnarray*}
+
+By applying the chain rule, one can verify that one obtains the same
+answer irregardless of choice of basis, hence curl is well-defined as
+a function of vector fields.  Another way of coming to the same
+conclusion is to exhibit an expression for the curl of a vector field
+which does not require the choice of a basis.  One such expression is
+as follows: Let $V$ be the volume of a closed surface $S$ enclosing
+the point $p$.  Then one has
+
+\[
+\operatorname{curl}\vec{F}(p)=\lim_{V\to
+0}\frac{1}{V}\int\!\!\int_{S}\vec{n}\times\vec{F}dS
+\]
+
+Where $n$ is the outward unit normal vector to $S$.
+
+Curl is easily computed in an
+arbitrary orthogonal coordinate system by using the appropriate
+scale factors. That is
+
+
+\begin{eqnarray*}
+\operatorname{curl}\vec{F} & = & \frac{1}{h_{3}h_{2}}\left[\frac{\partial}{\partial
+q^{2}}\left(h_{3}F^{3}\right)-\frac{\partial}{\partial
+q^{3}}\left(h_{2}F^{2}\right)\right]\vec{e_{1}}+\frac{1}{h_{3}h_{1}}\left[\frac{\partial}{\partial
+q^{3}}\left(h_{1}F^{1}\right)-\frac{\partial}{\partial
+q^{1}}\left(h_{3}F^{3}\right)\right]\vec{e_{2}} + \\ 
+ & \; & \frac{1}{h_{1}h_{2}}\left[\frac{\partial}{\partial
+q^{1}}\left(h_{2}F^{2}\right)-\frac{\partial}{\partial
+q^{2}}\left(h_{1}F^{1}\right)\right]\vec{e_{3}}
+\end{eqnarray*}
+
+for the arbitrary orthogonal curvilinear coordinate system
+$(q^{1},q^{2},q^{3})$ having scale factors $(h_{1},h_{2},h_{3})$.
+Note the scale factors are given by
+
+\[
+h_{i}=\left(\frac{d}{dx_{i}}\right)\left(\frac{d}{dx_{i}}\right)\;\ni\;
+i\in \{1,2,3\}.
+\]
+
+ Non-orthogonal systems are more easily handled with
+tensor analysis or exterior calculus. 
+
+\[ (\operatorname{curl}\vec{F})^i = \epsilon^{ijk} \nabla_j F_k \]
+
+\[ \operatorname{curl}\vec{F} = * d (F_1 dx^1 + F_2 dx^2 + F_3 dx^3) \]
+%%%%%
+%%%%%
+\end{document}

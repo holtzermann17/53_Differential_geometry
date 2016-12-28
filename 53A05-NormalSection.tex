@@ -1,0 +1,73 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{NormalSection}
+\pmcreated{2013-03-22 17:26:25}
+\pmmodified{2013-03-22 17:26:25}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{normal section}
+\pmrecord{10}{39820}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53A05}
+\pmclassification{msc}{26A24}
+\pmclassification{msc}{26B05}
+\pmrelated{SecondFundamentalForm}
+\pmrelated{DihedralAngle}
+\pmdefines{normal curvature}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{curvature}
+
+\textbf{Normal sections}
+
+Let $P$ be a point of a surface
+\begin{align}
+F(x,\,y,\,z) = 0,
+\end{align}
+where $F$ has the continuous first and \PMlinkescapetext{second order} partial derivatives in a neighbourhood of $P$.\, If one intersects the surface with a plane containing the surface normal at $P$, the intersection curve is called a {\em normal section}.\\
+
+\textbf{Normal curvatures}
+
+When the direction of the intersecting plane is varied, one gets different normal sections, and their \PMlinkname{curvatures}{CurvaturePlaneCurve} at $P$, the so-called {\em normal curvatures}, vary having a minimum value $\varkappa_1$ and a maximum value $\varkappa_2$.\, The arithmetic mean of $\varkappa_1$ and $\varkappa_2$ is called the {\em mean curvature} of the surface at $P$.\\
+
+By the suppositions on the function $F$, examining the normal curvatures can without loss of generality be \PMlinkescapetext{reduced} to the following:\, Examine the curvature of the normal sections through the origin, the surface given in the form
+\begin{align}
+                        z = z(x,\,y),
+\end{align}
+where\, $z(x,\,y)$\, has the continuous first and \PMlinkescapetext{second order} partial derivatives in a neighbourhood of the origin and 
+  $$z(0,\,0) = z'_x(0,\,0) = z'_y(0,\,0) = 0.$$
+Indeed, one can take a new rectangular coordinate system with $P$ the new origin and the normal at $P$ the new $z$-axis; then the new $xy$-plane coincides with the tangent plane of the surface (1) at $P$.  The equation (1) defines the function of (2).
+
+
+
+%%%%%
+%%%%%
+\end{document}

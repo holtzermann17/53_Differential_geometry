@@ -1,0 +1,193 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CirculationAndVorticity}
+\pmcreated{2016-05-24 23:17:48}
+\pmmodified{2016-05-24 23:17:48}
+\pmowner{perucho}{2192}
+\pmmodifier{perucho}{2192}
+\pmtitle{circulation and vorticity}
+\pmrecord{13}{39611}
+\pmprivacy{1}
+\pmauthor{perucho}{2192}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53A45}
+\pmrelated{SourcesAndSinksOfVectorField}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{bm}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem{theorem}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+
+\begin{document}
+\begin{document}
+\subsection{Introduction}
+Vortex theory is essentially due to Sir W. Thomson, Lord Kelvin \cite{cite:Kelvin} and H. v. Helmholtz \cite{cite:Helmholtz}, although d'Alembert, Euler, Cauchy, Lagrange, Hankel , Hadamard and Stokes also contibuted important ideas.  A useful kinematic notion in many problems of hydrodynamics is that of {\em circulation} and {\em vorticity}. These concepts are usually  related through the Stokes' theorem. There are also many purposes for which it is more convenient to think in terms of circulation and vorticity rather than in terms of the velocity field, despite the simpler physical character of the latter quantity. It also proves to be possible and useful, in many important cases of fluid flow, to separate the flow field into two regions with different properties, one of them being characterized by the vorticity and being approximately zero everywhere. It is well-known that such concepts are associated with viscous fluids {\footnote{It turns out that inside the \emph{boundary layer} viscous effects take place, and therefore the flow is rotational ($\bm{\omega}=\nabla\times\mathbf{v}\neq\mathbf{0}$) whereas outside of it the flow is irrotational, i.e. the flow is \emph{potential}($\bm{\omega}=\nabla\times\mathbf{v}\equiv\mathbf{0}\implies\mathbf{v}=\nabla\phi$, where the scalar function $\phi=\phi(\mathbf{x},t)$ is the \emph{potential} of the velocity field)}} but we will only treat the purely kinematical consequences.
+
+\subsection{Circulation}
+Let us consider a contractible closed curve embedded in the fluid flow that we shall call a \emph{circuit}$\mathcal{C}$ and described in a counterclockwise sense. Each arc element can be considered as an infinitesimal vector $d\mathbf{x}$ which is tangent to $\mathcal{C}$. As usual, $\mathbf{v}=\mathbf{v}(\mathbf{x},t)$ represents the instantaneous velocity field at each point. Then, if the scalar product of $\mathbf{v}$ and $d\mathbf{x}$ is integrated around the circuit, the line integral
+\begin{equation}
+\Gamma=\oint_\mathcal{C}\mathbf{v}\cdot d\mathbf{x}=
+\oint_\mathcal{C}\lVert\mathbf{v}\rVert\cos(\mathbf{v},d\mathbf{x})dx,
+\end{equation}
+where $dx=\lVert d\mathbf{x}\rVert$, is called the \emph{circulation} around $\mathcal{C}$. All values of $\mathbf{v}$ are to be taken for the same instant $t$. Although evident because the additiveness of integral (1) defining circulation, results illustrative to show that circulation is additive. Suppose we cut the circuit $\mathcal{C}$ by some path $AB$ and give the two new circuits $AB\mathcal{C}_1A$ with circulation $\Gamma_1$ and $BA\mathcal{C}_2B$ with circulation $\Gamma_2$, both the same sense as $\mathcal{C}$. Thus (1) shows that 
+\begin{equation*}
+\Gamma_1+\Gamma_2=\oint_{AB\mathcal{C}_1}\mathbf{v}\cdot d\mathbf{x}+
+\oint_{BA\mathcal{C}_2}\mathbf{v}\cdot d\mathbf{x}=
+\int_{AB}\mathbf{v}\cdot d\mathbf{x}+
+\int_{\mathcal{C}_1}\mathbf{v}\cdot d\mathbf{x}+
+\int_{BA}\mathbf{v}\cdot d\mathbf{x}+
+\int_{\mathcal{C}_2}\mathbf{v}\cdot d\mathbf{x},
+\end{equation*}
+cancelling the  integrals along $AB$ and $BA$ since $\mathbf{v}$ is the same and $d\mathbf{x}$ is opposite on these two 
+paths. Thus,
+\begin{equation*}
+\Gamma_1+\Gamma_2=\int_{\mathcal{C}_1}\mathbf{v}\cdot d\mathbf{x}+
+\int_{\mathcal{C}_2}\mathbf{v}\cdot d\mathbf{x}
+\equiv \oint_\mathcal{C}\mathbf{v}\cdot d\mathbf{x},
+\end{equation*}
+exactly the inegral around $\mathcal{C}$, and hence
+\begin{equation}
+\Gamma=\Gamma_1+\Gamma_2.
+\end{equation}
+We may generalize (2). Let $\mathcal{A}$ be any open two-sided surface spanning $\mathcal{C}$ and consider the side where the sense of description of $\mathcal{C}$ appears counterclockwise, and normals to $\mathcal{A}$ will always be drawn out from this side. On $\mathcal{A}$ draw two sets of orthogonal curves forming a lattice and each generated mesh is a closed circuit, the sense of description being taken counterclockwise as viewed from the normal to the surface; its circulation denoted  by $\Gamma_i,\; i=1,\cdots,m$. By iterated application of (2) we obtain
+\begin{equation}
+\Gamma=\sum_{i=1}^m\Gamma_i,
+\end{equation}
+where $m$ is the number of meshes in the lattice. Increasing the number of orthogonal curves in such a way that the lattice becomes more dense and all meshes become smaller, increasing so the number of terms in (3). Let a function 
+$\gamma=\gamma(\mathbf{x},t)$ be defined at each point $P$ of $\mathcal{A}$ as the limit of the quotient between the 
+circulation along the contour of a mesh around $P$ and the area of the mesh, becoming all of these one steadily smaller in all directions. So that for an arbitrary mesh the circulation is $\Gamma_i\thickapprox\gamma_id\mathfrak{a}_i$, where $\gamma_i$ is the value of $\gamma$ at some point in the mesh, and $d\mathfrak{a}_i$ its respective area. Thus, as the number of terms increases indefinitely, the right-hand member of (3) yields the surface integral of $\gamma$ over $\mathcal{A}$, i.e.
+\begin{equation}
+\Gamma=\int_{\mathcal{A}}\gamma\,d\mathfrak{a}.
+\end{equation}
+From the definition of $\gamma$, we conclude that the value of this function at any point $\mathbf{x}$ of $\mathcal{A}$ 
+depends upon the distribution of the velocity $\mathbf{v}=\mathbf{v}(\mathbf{x},t)$ in the neighborhood of this point and that $\gamma=\nabla\times\mathbf{v}\cdot\mathbf{n}$, {\footnote{This can be easily seen if we choose a mesh centered in a neighborhood of $\mathbf{x}$ equipped with Cartesian local coordinates $\{x_i\}$, and impose the sufficient surface 
+regularity at that point. Thus the circulation, around that mesh located in the local plane $\{x_1,x_2\}$, is given by (comma denotes partial differentiation respect to the indicated component)
+\begin{equation*}
+d\Gamma=(v_{2,1}-v_{1,2})dx_1dx_2.
+\end{equation*}
+Since $dx_1dx_2$ is the area of this mesh, the function $\gamma$ must have the value $(v_{2,1}-v_{1,2})$ at $\mathbf{x}$. But this quantity is exactly the $x_3$-component of $\nabla\times\mathbf{v}$, defined as 
+\begin{equation*}
+\nabla\times\mathbf{v}=(v_{3,2}-v_{2,3},\, v_{1,3}-v_{3,1},\, v_{1,2}-v_{2,1}).
+\end{equation*}
+This definition is valid in any rectangular right-handed coordinate system. Since the $x_3$-direction is here that of the normal at $\mathbf{x}$ to the surface $\mathcal{A}$, the result in question follows.}} where $\mathbf{n}$ is the outward normal to the surface $\mathcal{A}$ at an arbitrary point $\mathbf{x}$. From this fact and by using (1) and (4) we have
+\begin{equation}
+\oint_\mathcal{C}\mathbf{v}\cdot d\mathbf{x}=
+\int_\mathcal{A}\nabla\times\mathbf{v}\cdot\mathbf{n}\,d\mathfrak{a},
+\end{equation}
+which is known as Stokes' theorem. It states that the circulation along any circuit is given by 
+the surface integral of $\nabla\times\mathbf{v}$ over any surface spanning the circuit. It is 
+clear that (5) can be applied only if it is possible to find some surface that has the given 
+circuit as rim and on which $\nabla\times\mathbf{v}$ is defined everywhere. Thus, in the case 
+of a fluid flow circulating around an infinite cylindrical obstacle, no such surface can be 
+found for any circuit   surrounds the cylinder. However, the Stokes' theorem can be yet applied if we 
+choose two circuits $\mathcal{C}_1$ and $\mathcal{C}_2$ about the obstacle (no intersecting 
+themselves) and by making a cut $AB$, it can be combined into a single circuit for which a 
+suitable spanning surface exists. Then the left side of (5) becomes $(\Gamma_1-\Gamma_2)$. 
+{\footnote{The contributions from $AB$ and $BA$ cancel.}} In particular, if the flow is $\emph{irrotational}$ (a term introduced by Lord Kelvin) in its domain, i.e. $\nabla\times\mathbf{v}\equiv\mathbf{0}$, then $\Gamma_1=\Gamma_2$. So that the circulation is equal for every circuit surrounding the obstacle.    
+  
+ \subsection{Vorticity}
+The analysis of the relative motion near a point of the fluid outcomes that the force exerted by one portion of fluid on an adjacent portion depends on the way in which the fluid is being deformed by the motion, and it is necessary as a preliminary to dynamical considerations, to make an analysis of the character of the motion in the neighborhood of any point. That analysis it has to do with the study of local rate of strain and rate of rotation. Thus, the velocity field of the fluid at the place $\mathbf{x}$ and time $t$ is given by $\mathbf{v}=\mathbf{v}(\mathbf{x},t)$ and the \emph{simultaneous} velocity at a neighboring position $\mathbf{x}+\delta\mathbf{x}$ is $\mathbf{v}+\delta\mathbf{v}$. Thus, for Cartesian coordinates,
+\begin{equation}
+\delta v_i=\frac{\partial v_i}{\partial x_j}\delta x_j,
+\end{equation}
+where the usual summation index convention applies here and that equation is correct to the first order in the small distance $\delta\mathbf{x}$ between the two points located in the cited neighborhood. The kinematical character of the relative velocity $\delta\mathbf{v}$, considered as a linear function of $\delta\mathbf{x}$, can be recognized by decomposing the velocity gradient $\partial v_i/\partial x_j$, which is a tensor of second rank, into parts which are symmetrical and skew-symmetrical in the indices $i$ and $j$. That is,
+\begin{equation*}
+\delta v_i=\delta v_i^{(d)}+\delta v_i^{(w)},
+\end{equation*}
+where
+\begin{equation*}
+\delta v_i^{(d)}=d_{ij}\delta x_j, \qquad \delta v_i^{(w)}=w_{ij}\delta x_j,
+\end{equation*}
+and
+\begin{equation*}
+d_{ij}=\frac{1}{2}\bigg(\frac{\partial v_i}{\partial x_j}+
+\frac{\partial v_j}{\partial x_i}\bigg), \qquad
+w_{ij}=\frac{1}{2}\bigg(\frac{\partial v_i}{\partial x_j}-
+\frac{\partial v_j}{\partial x_i}\bigg).
+\end{equation*}
+The first above equation corresponds to the well-known {\em rate of deformation} tensor, but we are here interested in the second one so-called the \emph{ vorticity tensor}, i.e.
+\begin{equation}
+w_{ij}:=\frac{1}{2}\left(\dot{x}_{i,j}-\dot{x}_{j,i}\right)=
+\frac{1}{2}\left(v_{i,j}-v_{j,i}\right),
+\end{equation}
+where $\dot{x}_{i,j}\equiv v_{i,j}$ are the Cartesian components of the velocity gradient in connection to the velocity field 
+$\mathbf{v}(\mathbf{x},t)\equiv\mathbf{\dot{x}}(\mathbf{x},t)$. Since (7) is skew-symmetric, the associate axial vector in the Euclidean space $\mathbb{R}^3$ is given by ($\epsilon_{ijk}$ is the Levi-Civita's isotropic Cartesian tensor)
+\begin{equation*}
+2\Omega_k\equiv -\epsilon_{ijk}v_{i,j}=\epsilon_{ijk}v_{j,i},
+\end{equation*}
+which was introduced by Lagrange and Cauchy \cite{cite:Lagrange} and was shown by Cauchy and Stokes \cite{cite:Stokes} to represent a local instantaneous rate of rotation in a neighborhood of some point $\mathbf{x}$ in the fluid media, that in the time being we call it the \emph{local angular velocity} in such neighborhood (a dynamical cause is generally due to the fluid viscosity). It is usually called \emph{vortex vector} or simply \emph{vorticity}, and is defined by
+\begin{equation}
+\boldsymbol\omega:=\boldsymbol\nabla\mathbf\times\mathbf{v}.
+\end{equation} 
+Notice that \emph{vorticity} is, by definition, the twice of the \emph{local angular velocity}, that is, $\boldsymbol\omega\equiv 2\boldsymbol\Omega$.
+
+\subsection{The vorticity distribution}
+One consequence from the definition of vortex vector is the identity
+\begin{equation}
+\boldsymbol\nabla\cdot\boldsymbol\omega\equiv 0.
+\end{equation} 
+A line in the fluid whose tangent is everywhere parallel to the local vortex vector is termed a \emph{vortex line}. The family of such lines  at any instant is defined by an equation analogous to the streamlines. The surface in the fluid flow formed for all the vortex lines passing through a given contractible closed curve drawn in the fluid is said to be a \emph{vortex tube}. The \emph{flux} of the vortex vector across an open surface bounded by this same closed curve and lying entirely  in the fluid flow is
+\begin{equation*}
+\int_{\mathcal{A}}\boldsymbol\omega\cdot\mathbf{n}\,d\mathfrak{a},
+\end{equation*}
+i.e. the Stokes' theorem right-hand side. We can use (9) to prove that this integral has the same value for any open surface lying in the fluid flow and bounded by any contractible closed curve which lies in the vortex tube and passes round it once. For if $\mathbf{n}\,d\mathfrak{a}$ and $\mathbf{n}'\,d\mathfrak{a}'$ are vector elements of area of two such open surfaces, with $\mathbf{n}$,\, $\mathbf{n}'$ having the same sense relative to the vortex tube, the Gauss-Green divergence theorem applied to the control volume enclosed by these two surfaces and the connecting (lateral) portion of the vortex tube, shows that
+\begin{equation*}  
+\int_{\mathcal{A}}\boldsymbol\omega\cdot\mathbf{n}\,d\mathfrak{a}- \int_{\mathcal{A}'}\boldsymbol\omega'\cdot\mathbf{n}'\,d\mathfrak{a}'=
+\int_{\mathfrak{v}}\boldsymbol\nabla\cdot\boldsymbol\omega\, d\mathfrak{v}=0,
+\end{equation*}
+where $\mathfrak{v}$ is the Eulerian description of the control volume in question. Note that there is no contribution to the surface integral from the portion of the vortex tube. The flux of vorticity along a vortex tube is thus independent of the choice of the open surface used to measure it, and is termed the \emph{strength} of the vortex tube. In the case of a vortex tube of infinitesimal cross section (usually called \emph{filament-tube}), such strength is equal to the product of cross-sectional area and the magnitude of the local vortex vector, being the same at all stations along the vortex tube. It is very important to mention that a vortex tube cannot begin or end in the interior of the fluid flow, but must either be a closed tube, like a torus, or else (provided it does not meet a boundary) must extend {\em ad infinitum} in either direction. For at an end, if were one, a continuous transition would be possible, along the mantle of the vortex tube, between contractible closed curves $\mathcal{C}_1$ located there and cross-sectional contractible one $\mathcal{C}_2$, which is inconsistent with the fact  that $\Gamma_1=0$ while $\Gamma_2=constant\neq 0$. \\
+An extensive and detailed bibliographical data is given in \cite{cite:Truesdell}. 
+
+\subsection{Acknowledgement} To Cameron McLeman=mathcam, for his clear explanation about the distinction between reducible and contractible curves and its `closedness'. Until about the mid-past century, mechanicists used the word `reducible' like synonymous of `contractible'. See, for example, \cite{cite:Batchelor}
+
+\begin{thebibliography}{1}
+\bibitem{cite:Kelvin}
+W. Thomson, {\em On vortex motion}, Trans. Roy. Soc. Edinburgh, {\bf 25}, 1869.  
+\bibitem{cite:Tait}
+W. Thomson, P.G. Tait, {\em Treatise on Natural Philosophy}, Part I (1879), Part II (1883), Cambridge University Press, 1912.
+\bibitem{cite:Helmholtz}
+H. v. Helmholtz, {\em \"Uber Integrale der hydrodynamischen Gleishungen, welche den Wirbelbewegugen entsprechen}, J. {\em reine angew.} Math. {\bf 55}, pp. 25-55, 1858.    
+\bibitem{cite:Lagrange}
+J. L. Lagrange, {\em MÃ©moire sur la thÃ©orie du mouvement des fluides}, Nouv. MÃ©m. Acad. Berlin, pp. 151-198, 1781 = {\em 
+Ouevres}\, {\bf 4}, pp. 695-748, 1783.
+\bibitem{cite:Cauchy}
+A. L. Cauchy, {\em Memoire sur les dilatations, les condensation, et les rotations produites par un changement de forme dans un systÃ¨me de points matÃ©riels, Ouvres Completes}, Ser. 2, Vol. 12, pp. 343-377, Paris: Gauthier-Villars, 1916. 
+\bibitem{cite:Stokes}
+G. G. Stokes, {\em On the theories of the internal friction of fluids in motion, and of the equilibrium and motion of elastic solids, Trans. Cambridge Phil. Soc.}\, {\bf 8}, p. 287 ff., 1845.
+\bibitem{cite:Truesdell}
+C. Truesdell, {\em The Kinematics of Vorticity}, Bloomington: Indiana Univ. Press, 1954.
+\bibitem{cite:Batchelor}
+G. K. Batchelor, {\em An Introduction to Fluid Dynamics},\, {\bf 2}, p. 92, Cambridge University Press, 1967. 
+\end{thebibliography}
+\end{document}
+
+
+
+
+%%%%%
+%%%%%
+\end{document}

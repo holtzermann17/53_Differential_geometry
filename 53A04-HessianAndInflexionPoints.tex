@@ -1,0 +1,191 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HessianAndInflexionPoints}
+\pmcreated{2013-03-22 18:22:26}
+\pmmodified{2013-03-22 18:22:26}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{Hessian and inflexion points}
+\pmrecord{14}{41015}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53A04}
+\pmclassification{msc}{26A51}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem{thm}{Theorem}
+\begin{document}
+\begin{thm}
+Suppose that $C$ is a curve in the real projective plane 
+$\mathbb{R}\mathbb{P}^2$ given by a homogeneous
+equation $F(x,y,z) = 0$ of 
+\PMlinkname{degree of homogeneity}{HomogeneousFunction} $n$.
+If $F$ has continuous first derivatives in a neighborhood of 
+a point $P$ and the gradient of $F$ is non-zero at $P$ and $P$ 
+is an inflection point of $C$, then $H(P) = 0$, where $H$ is 
+the Hessian determinant:
+\[
+ H = \left| \begin{matrix}
+   {\partial^2 F \over \partial x^2} &
+   {\partial^2 F \over \partial x \partial y} &
+   {\partial^2 F \over \partial x \partial z} \\
+   {\partial^2 F \over \partial y \partial x} &
+   {\partial^2 F \over \partial y^2} &
+   {\partial^2 F \over \partial y \partial z} \\
+   {\partial^2 F \over \partial z \partial x} &
+   {\partial^2 F \over \partial z \partial y} &
+   {\partial^2 F \over \partial z^2}
+ \end{matrix} \right|
+\]
+\end{thm}
+
+
+\begin{proof}
+We may choose a system $x,y,z$ of homogenous coordinates 
+such that the point $P$ lies at $(0,0,1)$ and the equation 
+of the tangent to $C$ at $P$ is $y = 0$.  Using the 
+implicit function theorem, we may conclude that there
+exists an interval $(-\epsilon,\epsilon)$ and a function
+$f \colon (-\epsilon,\epsilon) \to \mathbb{R}$ such that
+$F(t, f(t), 1) = 0$ when $-\epsilon < t < \epsilon$.  In
+other words, the portion of curve near $P$ may be described
+in non-homogenous coordinates by $y = f(x)$.  By the way
+the coordinates were chosen, $f(0) = 0$ and $f'(0) = 0$.
+Because $P$ is an inflection point, we also have $f''(0) = 0$.
+
+Differentiating the equation $F(t, f(t), 1) = 0$ twice,
+we obtain the following:
+\begin{align*}
+ 0 = {d \over dt} F(t, f(t), 1) &=
+   {\partial F \over \partial x} (t, f(t), 1) +
+   f'(t) {\partial F \over \partial y} (t, f(t), 1)
+\\
+ 0 = {d^2 \over dt^2} F(t, f(t), 1) &=
+   {\partial^2 F \over \partial x^2} (t, f(t), 1) +
+   f'(t) {\partial^2 F \over \partial x \partial y} (t, f(t), 1) \\ &\quad+
+   \left(f'(t)\right)^2 {\partial^2 F \over \partial y^2} (t, f(t), 1) +
+   f''(t) {\partial F \over \partial y} (t, f(t), 1)
+\end{align*}
+We will now put $t=0$ but, for reasons which will be 
+explained later, we do not yet want to make use of the
+fact that $f''(0) = 0$:
+\begin{align*}
+ {\partial F \over \partial x} (0,0,1) &= 0 \\
+ {\partial^2 F \over \partial x^2} (0,0,1) &= 
+ -f''(0) {\partial F \over \partial y} (0,0,1) 
+\end{align*}
+
+Since $F$ is homogenous, Euler's formula holds:
+\[
+ x {\partial F \over \partial x} +
+ y {\partial F \over \partial y} +
+ z {\partial F \over \partial z} = n F
+\]
+Taking partial derivatives, we obtain the following:
+\begin{align*}
+ x {\partial^2 F \over \partial x^2} +
+ y {\partial^2 F \over \partial x \partial y} +
+ z {\partial^2 F \over \partial x \partial z} = 
+ (n - 1) {\partial F \over \partial x} \\
+ x {\partial^2 F \over \partial x \partial y} +
+ y {\partial^2 F \over \partial y^2} +
+ z {\partial^2 F \over \partial y \partial z} = 
+ (n - 1) {\partial F \over \partial y} \\
+ x {\partial^2 F \over \partial x \partial z} +
+ y {\partial^2 F \over \partial y \partial z} +
+ z {\partial^2 F \over \partial z^2} = 
+ (n - 1) {\partial F \over \partial z}
+\end{align*}
+Evaluating at $(0,0,1)$ and making use of the
+equations deduced above, we obtain the following:
+\begin{align*}
+ {\partial F \over \partial z} (0,0,1) &= 0 \\
+ {\partial^2 F \over \partial x \partial z} (0,0,1) &= 0 \\
+ {\partial^2 F \over \partial y \partial z} (0,0,1) &= 
+    (n - 1) {\partial F \over \partial y} (0,0,1) \\
+ {\partial^2 F \over \partial z^2} (0,0,1) &= 0
+\end{align*} 
+Making use of these facts, we may now evaluate the determinant:
+\begin{align*}
+ H (0,0,1) &= \left| \begin{matrix}
+   - f''(0) {\partial F \over \partial y} (0,0,1) &
+   {\partial^2 F \over \partial x \partial y} (0,0,1) &
+   0 \\
+   {\partial^2 F \over \partial x \partial y} (0,0,1) &
+   {\partial^2 F \over \partial^2 y} (0,0,1) & 
+   (n - 1) {\partial F \over \partial y} (0,0,1) \\
+   0 &
+   (n - 1) {\partial F \over \partial y} (0,0,1) &
+   0
+  \end{matrix} \right| \\ &=
+ (n - 1)^2 
+ \left( {\partial F \over \partial y} (0,0,1) \right)^2
+ f'' (0)
+\end{align*}
+Since $P$ is an inflection point, $f''(0) = 0$, so we
+have $H(0,0,1) = 0$.
+\end{proof}
+
+Actually, we proved slightly more than what was stated.
+Because the gradient is assumed not to vanish at $P$,
+but $\partial F / \partial x = 0$ and $\partial F
+/ \partial z = 0$ by the way we set up our coordinate
+system, we must have $\partial F / \partial y \neq 0$.
+Thus, we see that, if $n \neq 1$, then $H(0,0,1) = 0$ 
+if and only if $f''(0)$.  However, note that this does
+not mean that the Hessian vanishes if and only if $P$ is
+an inflection point since the definition of inflection
+point not only requires that $f''(0) = 0$ but that the
+sign of $f''(t)$ change as $t$ passes through $0$.
+
+This result is used quite often in algebraic geometry,
+where $F$ is a homogenous polynomial.  In such a context,
+it is desirable to keep demonstrations purely
+algebraic and avoid introducing analysis where possible, 
+so a variant of this result is preferred.  The theorem 
+may be restated as follows:
+
+\begin{thm}
+Suppose that $C$ is a curve in the real projective plane 
+$\mathbb{R}\mathbb{P}^2$ given by an equation $F(x,y,z) = 0$ 
+where $F$ is a homogenous polynomial of degree $n$.
+If $C$ is regular at a point $P$ and $P$ is an inflection point 
+of $C$, then $H(P) = 0$, where $H$ is the Hessian determinant.
+\end{thm}
+
+To make our proof purely algebraic, we replace the use of
+the implicit function theorem to obtain $f$ with an expansion
+in a formal power series.  As above, we choose our $x,y,z$ 
+coordinates so as to place $P$ at $(0,0,1)$ and make $C$
+tangent to the line $y=0$ at $P$.  Then, since $P$ is a regular
+point of $C$, we may parameterize $C$ by a formal power series
+$f(t) = \sum_{k=0}^\infty c_k t^k$ such that $F(t,f(t),1) = 0$.
+Then, if we 
+\PMlinkname{define derivatives algebraically}{DerivativeOfPolynomial},
+we may proceed with the rest of the proof exactly as above.
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,164 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{NotesOnTheClassicalDefinitionOfAManifold}
+\pmcreated{2013-03-22 14:14:47}
+\pmmodified{2013-03-22 14:14:47}
+\pmowner{rmilson}{146}
+\pmmodifier{rmilson}{146}
+\pmtitle{notes on the classical definition of a manifold}
+\pmrecord{11}{35691}
+\pmprivacy{1}
+\pmauthor{rmilson}{146}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53-03}
+\pmrelated{Manifold}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+
+ \usepackage{bbm}
+ \newcommand{\Z}{\mathbbmss{Z}}
+ \newcommand{\C}{\mathbbmss{C}}
+ \newcommand{\R}{\mathbbmss{R}}
+ \newcommand{\Q}{\mathbbmss{Q}}
+
+
+
+\newcommand*{\norm}[1]{\lVert #1 \rVert}
+\newcommand*{\abs}[1]{| #1 |}
+
+ \newcommand{\reals}{\mathbb{R}}
+ \newcommand{\natnums}{\mathbb{N}}
+ \newcommand{\cnums}{\mathbb{C}}
+ 
+ \newcommand{\lp}{\left(}
+ \newcommand{\rp}{\right)}
+ \newcommand{\lb}{\left[}
+ \newcommand{\rb}{\right]}
+ 
+ 
+ \newcommand{\cA}{\mathcal{A}}
+ \newcommand{\cC}{\mathcal{C}}
+ \newcommand{\cT}{\mathcal{T}}
+
+\begin{document}
+\PMlinkescapeword{types}
+\PMlinkescapeword{information}
+\PMlinkescapeword{relation}
+\PMlinkescapeword{restricted} 
+\PMlinkescapeword{order}
+\PMlinkescapeword{theory}
+\PMlinkescapeword{structure}
+
+\subsubsection*{Classical Definition} 
+Historically, the data for a
+ manifold was specified as a collection of coordinate domains related
+ by changes of coordinates. The manifold itself could be obtained by
+ gluing the domains in accordance with the transition functions,
+ provided the changes of coordinates were free of inconsistencies.
+ 
+ In this formulation, a $\cC^k$ manifold is specified by two types of
+ information. The first item of information is a collection of open
+ sets
+ $$V_\alpha\subset\reals^n,\quad \alpha\in \cA,$$
+ indexed by some set
+ $\cA$. The second item is a collection of transition functions, that
+ is to say $\cC^k$ diffeomorphisms
+ $$\sigma_{\alpha\beta}:V_{\alpha\beta}\rightarrow \reals^n,\quad
+ V_{\alpha\beta}\subset
+ V_\alpha,\;\text{open},\quad\alpha,\beta\in\cA,$$
+ obeying certain
+ consistency and topological conditions.
+ 
+ 
+ We call a pair
+ $$(\alpha,x),\quad \alpha\in \cA,\; x\in V_\alpha$$
+ the coordinates of
+ a point relative to chart $\alpha$, and define the manifold $M$
+ to be the set of equivalence classes of such pairs modulo the relation
+ $$(\alpha,x)\simeq (\beta,\sigma_{\alpha\beta}(x)).$$
+ To ensure that the above is an
+ equivalence relation we impose the following hypotheses.
+ \begin{itemize}
+ \item For $\alpha\in \cA$, the transition function
+ $\sigma_{\alpha\alpha}$ is the identity on $V_\alpha$.
+ \item For $\alpha,\beta\in \cA$ the transition functions
+ $\sigma_{\alpha\beta}$ and $\sigma_{\beta\alpha}$ are inverses.
+ \item For $\alpha,\beta,\gamma\in \cA$ we have for a suitably
+ restricted domain
+ $$\sigma_{\beta\gamma}\circ\sigma_{\alpha\beta} =
+ \sigma_{\alpha\gamma}$$
+ \end{itemize}
+ We topologize $M$ with the least coarse topology that will make
+ the
+ mappings from each $V_\alpha$ to $M$ continuous. Finally, we
+ demand
+ that the resulting topological space be paracompact and Hausdorff.
+ 
+ \subsubsection{Notes} 
+To understand the role played by the notion of a
+ differential manifold, one has to go back to classical differential
+ geometry, which dealt with geometric objects such as curves and
+ surface only in reference to some ambient geometric setting ---
+ typically a 2-dimensional plane or 3-dimensional space. Roughly
+ speaking, the concept of a manifold was created in order to treat the
+ intrinsic geometry of such an object, independent of any embedding.
+ The motivation for a theory of intrinsic geometry can be seen in
+ results such as Gauss's famous Theorema Egregium, that showed that a
+ certain geometric property of a surface, namely the scalar
+ curvature, was fully determined by intrinsic metric properties of the
+ surface, and was independent of any particular embedding. Riemann 
+\cite{riemann}
+ took this idea further in his habilitation lecture by describing
+ intrinsic metric geometry of $n$-dimensional space without recourse to
+ an ambient Euclidean setting. The modern notion of manifold, as a
+ general setting for geometry involving differential properties evolved
+ early in the twentieth century from works of mathematicians such as
+ Hermann Weyl \cite{weyl}, who introduced the ideas of an atlas and transition
+ functions, and Elie Cartan, who investigation global properties and
+ geometric structures on differential manifolds. The modern definition
+ of a manifold was introduced by Hassler Whitney \cite{whitney}
+ (For more foundational information, follow \PMlinkexternal{this link}{http://web.archive.org/web/20041010165022/http://www.math.uchicago.edu/~mfrank/founddiffgeom3.html} to some old notes by \PMlinkexternal{Matthew Frank}{http://web.archive.org/web/20040511092724/www.math.uchicago.edu/~mfrank/} ).
+ 
+\begin{thebibliography}{9}
+ \bibitem{riemann}
+ Riemann, B., ``\"Uber die Hypothesen welche der Geometrie zu
+ Grunde liegen
+ (On the hypotheses that lie at the foundations of geometry)'' in
+ M. Spivak, {\em A comprehensive introduction to differential
+ geometry}, vol. II.
+ \bibitem{spivak} Spivak, M., {\em A comprehensive introduction to
+ differential  geometry}, vols I \& II.
+ \bibitem{weyl} Weyl, H., {\em The concept of a Riemann surface}, 1913
+ \bibitem{whitney} Whitney, H., \emph{Differentiable Manifolds}, Annals of
+ Mathematics, 1936.
+ \end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

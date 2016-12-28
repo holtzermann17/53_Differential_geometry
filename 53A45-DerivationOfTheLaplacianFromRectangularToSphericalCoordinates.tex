@@ -1,0 +1,176 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DerivationOfTheLaplacianFromRectangularToSphericalCoordinates}
+\pmcreated{2013-03-22 17:04:57}
+\pmmodified{2013-03-22 17:04:57}
+\pmowner{swapnizzle}{13346}
+\pmmodifier{swapnizzle}{13346}
+\pmtitle{derivation of the Laplacian from rectangular to spherical coordinates}
+\pmrecord{11}{39376}
+\pmprivacy{1}
+\pmauthor{swapnizzle}{13346}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53A45}
+%\pmkeywords{laplacian}
+%\pmkeywords{spherical}
+%\pmkeywords{coordinates}
+%\pmkeywords{partial derivatives}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{array}
+\usepackage[mathcal]{eucal}
+\usepackage{xy}
+\begin{document}
+We begin by recognizing the familiar conversion from rectangular to spherical coordinates (note that $\phi$ is used to denote the azimuthal angle, whereas $\theta$ is used to denote the polar angle)
+\begin{eqnarray}
+& & x = r\sin(\theta)\cos(\phi), \qquad y = r\sin(\theta)\sin(\phi), \qquad z = r\cos(\theta),
+\end{eqnarray}
+and conversely from spherical to rectangular coordinates
+\begin{eqnarray}
+& & r = \sqrt{x^{2}+y^{2}+z^{2}}, \qquad \theta = \arccos\left(\frac{z}{r}\right), \qquad \phi = \arctan\left(\frac{y}{x}\right).
+\end{eqnarray}
+Now, we know that the Laplacian in rectangular coordinates is defined\footnote[1]{Readers should note that we do not have to define the Laplacian this way. A more rigorous approach would be to define the Laplacian in some coordinate free manner.} in the following way 
+\begin{eqnarray}
+{\nabla}^2 f &=& \frac{{\partial}^2 f}{\partial x^2} + \frac{{\partial}^2 f}{\partial y^2} + \frac{{\partial}^2 f}{\partial z^2}.
+\end{eqnarray}
+We also know that the partial derivatives in rectangular coordinates can be expanded in the following way by using the chain rule
+\begin{eqnarray}
+\frac{\partial f}{\partial x} &=& \frac{\partial f}{\partial r}\frac{\partial r}{\partial x}+ \frac{\partial f}{\partial\theta}\frac{\partial\theta}{\partial x} + \frac{\partial f}{\partial\phi}\frac{\partial\phi}{\partial x},\\
+\frac{\partial f}{\partial y} &=& \frac{\partial f}{\partial r}\frac{\partial r}{\partial y}+ \frac{\partial f}{\partial\theta}\frac{\partial\theta}{\partial y} + \frac{\partial f}{\partial\phi}\frac{\partial\phi}{\partial y},\\
+\frac{\partial f}{\partial z} &=& \frac{\partial f}{\partial r}\frac{\partial r}{\partial z}+ \frac{\partial f}{\partial\theta}\frac{\partial\theta}{\partial z} + \frac{\partial f}{\partial\phi}\frac{\partial\phi}{\partial z}.
+\end{eqnarray}
+The next step is to convert the right-hand side of each of the above three equations so that it only has partial derivatives in terms of $r$, $\theta$ and $\phi$. We can do this by substituting the following values (which are easily derived from (2)) in their respective places in the above three equations
+\begin{eqnarray}
+& & \frac{\partial r}{\partial x} = \sin(\theta)\cos(\phi), \qquad \frac{\partial\theta}{\partial x} = \frac{1}{r}\cos(\theta)\cos(\phi), \qquad \frac{\partial\phi}{\partial x} = -\frac{1}{r}\frac{\sin(\phi)}{\sin(\theta)}, \nonumber\\
+& & \frac{\partial r}{\partial y} = \sin(\theta)\sin(\phi), \qquad \frac{\partial\theta}{\partial y} = \frac{1}{r}\cos(\theta)\sin(\phi), \qquad \frac{\partial\phi}{\partial y} = \frac{1}{r}\frac{\cos(\phi)}{\sin(\theta)}, \nonumber\\
+& & \frac{\partial r}{\partial z} = \cos(\theta), \qquad \frac{\partial\theta}{\partial z} = -\frac{1}{r}\sin(\theta), \qquad \frac{\partial\phi}{\partial z} = 0.
+\end{eqnarray}
+After the substitution, equation (4) looks like the following
+\begin{eqnarray}
+\frac{\partial f}{\partial x} &=& \sin(\theta)\cos(\phi)\frac{\partial f}{\partial r} + \frac{1}{r}\cos(\theta)\cos(\phi)\frac{\partial f}{\partial\theta} - \frac{1}{r}\frac{\sin(\phi)}{\sin(\theta)}\frac{\partial f}{\partial\phi}.
+\end{eqnarray}
+Assuming that $f$ is a sufficiently differentiable function, we can replace $f$ by $\frac{\partial f}{\partial x}$ in the above equation and arrive at the following
+\begin{eqnarray}
+\frac{{\partial}^2 f}{\partial x^2} &=& \sin(\theta)\cos(\phi)\frac{\partial}{\partial r}\Big[\frac{\partial f}{\partial x}\Big] + \frac{1}{r}\cos(\theta)\cos(\phi)\frac{\partial}{\partial\theta}\Big[\frac{\partial f}{\partial x}\Big] - \frac{1}{r}\frac{\sin(\phi)}{\sin(\theta)}\frac{\partial}{\partial\phi}\Big[\frac{\partial f}{\partial x}\Big].
+\end{eqnarray}
+Now the trick is to substitute equation (8) $\textit{into}$ equation (9) in order to eliminate any partial derivatives with respect to $x$. The result is the following equation
+\begin{eqnarray*}
+\frac{{\partial}^2 f}{\partial x^2} &=& \sin(\theta)\cos(\phi)\frac{\partial}{\partial r}\Big[\sin(\theta)\cos(\phi)\frac{\partial f}{\partial r} + \frac{1}{r}\cos(\theta)\cos(\phi)\frac{\partial f}{\partial\theta} - \frac{1}{r}\frac{\sin(\phi)}{\sin(\theta)}\frac{\partial f}{\partial\phi}\Big] + \\
+& & \frac{1}{r}\cos(\theta)\cos(\phi)\frac{\partial}{\partial\theta}\Big[\sin(\theta)\cos(\phi)\frac{\partial f}{\partial r} + \frac{1}{r}\cos(\theta)\cos(\phi)\frac{\partial f}{\partial\theta} - \frac{1}{r}\frac{\sin(\phi)}{\sin(\theta)}\frac{\partial f}{\partial\phi}\Big] - \\
+& & \frac{1}{r}\frac{\sin(\phi)}{\sin(\theta)}\frac{\partial}{\partial\phi}\Big[\sin(\theta)\cos(\phi)\frac{\partial f}{\partial r} + \frac{1}{r}\cos(\theta)\cos(\phi)\frac{\partial f}{\partial\theta} - \frac{1}{r}\frac{\sin(\phi)}{\sin(\theta)}\frac{\partial f}{\partial\phi}\Big].\\
+\end{eqnarray*}
+In the hopes of simplifying the above equation, we operate the derivates on the operands and get
+\begin{eqnarray*}
+\frac{{\partial}^2 f}{\partial x^2} &=& \sin(\theta)\cos(\phi)\Big[\sin(\theta)\cos(\phi)\frac{{\partial}^2 f}{\partial r^2} - \frac{1}{r^2}\cos(\theta)\cos(\phi)\frac{\partial f}{\partial\theta} + \frac{1}{r}\cos(\theta)\cos(\phi)\frac{{\partial}^2 f}{\partial r \partial\theta} + \\
+& & \frac{1}{r^2}\frac{\sin(\phi)}{\sin(\theta)}\frac{\partial f}{\partial\phi} - \frac{1}{r}\frac{\sin(\phi)}{\sin(\theta)}\frac{{\partial}^2 f}{\partial\phi\partial r}\Big] + \frac{1}{r}\cos(\theta)\cos(\phi)\Big[\cos(\theta)\cos(\phi)\frac{\partial f}{\partial r} + \\
+& & \sin(\theta)\cos(\phi)\frac{{\partial}^2 f}{\partial r\partial\theta} - \frac{1}{r}\sin(\theta)\cos(\phi)\frac{\partial f}{\partial\theta} + \frac{1}{r}\cos(\theta)\cos(\phi)\frac{{\partial}^2 f}{\partial{\theta}^2} + \frac{1}{r}\frac{\sin(\phi)\cos(\theta)}{{\sin}^2(\theta)}\frac{\partial f}{\partial\phi} - \\
+& & \frac{1}{r}\frac{\sin(\phi)}{\sin(\theta)}\frac{{\partial}^2 f}{\partial\theta\partial\phi}\Big] - \frac{1}{r}\frac{\sin(\phi)}{\sin(\theta)}\Big[-\sin(\theta)\sin(\phi)\frac{\partial f}{\partial r} + \sin(\theta)\cos(\phi)\frac{{\partial}^2 f}{\partial r\partial\phi} - \\
+& & \frac{1}{r}\cos(\theta)\sin(\phi)\frac{\partial f}{\partial\theta} + \frac{1}{r}\cos(\theta)\cos(\phi)\frac{{\partial}^2 f}{\partial\theta \partial\phi} - \frac{1}{r}\frac{\cos(\phi)}{\sin(\theta)}\frac{\partial f}{\partial\phi} - \frac{1}{r}\frac{\sin(\phi)}{\sin(\theta)}\frac{{\partial}^2 f}{\partial{\phi}^2}\Big].\\
+\end{eqnarray*}
+After further simplifying the above equation, we arrive at the following form 
+\begin{eqnarray*}
+\frac{{\partial}^2 f}{\partial x^2} &=& \Big[{\sin}^2(\theta){\cos}^2(\phi)\frac{{\partial}^2 f}{\partial r^2} - \frac{1}{r^2}\cos(\theta)\sin(\theta){\cos}^2(\phi)\frac{\partial f}{\partial\theta} + \frac{1}{r}\cos(\theta)\sin(\theta){\cos}^2(\phi)\frac{{\partial}^2 f}{\partial r \partial\theta} + \\
+& & \frac{1}{r^2}\sin(\phi)\cos(\phi)\frac{\partial f}{\partial\phi} - \frac{1}{r}\sin(\phi)\cos(\phi)\frac{{\partial}^2 f}{\partial\phi\partial r}\Big] + \Big[\frac{1}{r}{\cos}^2(\theta){\cos}^2(\phi)\frac{\partial f}{\partial r}
++ \\
+& & \frac{1}{r}\sin(\theta)\cos(\theta){\cos}^2(\phi)\frac{{\partial}^2 f}{\partial r\partial\theta} - \frac{1}{r^2}\sin(\theta)\cos(\theta){\cos}^2(\phi)\frac{\partial f}{\partial\theta} + \frac{1}{r^2}{\cos}^2(\theta){\cos}^2(\phi)\frac{{\partial}^2 f}{\partial{\theta}^2} + \\
+& & \frac{1}{r^2}\frac{\sin(\phi)\cos(\phi){\cos}^2(\theta)}{{\sin}^2(\theta)}\frac{\partial f}{\partial\phi} - \frac{1}{r^2}\frac{\cos(\theta)\sin(\phi)\cos(\phi)}{\sin(\theta)}\frac{{\partial}^2 f}{\partial\theta\partial\phi}\Big] + \Big[\frac{1}{r}{\sin}^2(\phi)\frac{\partial f}{\partial r} - \\ 
+& & \frac{1}{r}\sin(\phi)\cos(\phi)\frac{{\partial}^2 f}{\partial r\partial\phi} + \frac{1}{r^2}\frac{\cos(\theta){\sin}^2(\phi)}{\sin(\theta)}\frac{\partial f}{\partial\theta} - \frac{1}{r^2}\frac{\cos(\theta)\cos(\phi)\sin(\phi)}{\sin(\theta)}\frac{{\partial}^2 f}{\partial\theta \partial\phi} + \\
+& & \frac{1}{r^2}\frac{\sin(\phi)\cos(\phi)}{{\sin}^2(\theta)}\frac{\partial f}{\partial\phi} + \frac{1}{r^2}\frac{{\sin}^2(\phi)}{{\sin}^2(\theta)}\frac{{\partial}^2 f}{\partial{\phi}^2}\Big].
+\end{eqnarray*}
+
+Notice that we have derived the first term of the right-hand side of equation (3) (i.e. $\frac{{\partial}^2 f}{\partial x^2}$) in terms of spherical coordinates. We now have to do a similar arduous derivation for the rest of the two terms (i.e. $\frac{{\partial}^2 f}{\partial y^2}$ and $\frac{{\partial}^2 f}{\partial z^2}$). Lets do it!
+
+After we substitute the values of (7) into equation (5) we get
+\begin{eqnarray}
+\frac{\partial f}{\partial y} &=& \sin(\theta)\sin(\phi)\frac{\partial f}{\partial r} + \frac{1}{r}\cos(\theta)\sin(\phi)\frac{\partial f}{\partial\theta} + \frac{1}{r}\frac{\cos(\phi)}{\sin(\theta)}\frac{\partial f}{\partial\phi}.
+\end{eqnarray}
+Again, assuming that $f$ is a sufficiently differentiable function, we can replace $f$ by $\frac{\partial f}{\partial y}$ in the above equation and arrive at the following
+\begin{eqnarray}
+\frac{{\partial}^2 f}{\partial y^2} &=& \sin(\theta)\sin(\phi)\frac{\partial}{\partial r}\Big[\frac{\partial f}{\partial y}\Big] + \frac{1}{r}\cos(\theta)\sin(\phi)\frac{\partial}{\partial\theta}\Big[\frac{\partial f}{\partial y}\Big] + \frac{1}{r}\frac{\cos(\phi)}{\sin(\theta)}\frac{\partial}{\partial\phi}\Big[\frac{\partial f}{\partial y}\Big].
+\end{eqnarray}
+Now we substitute equation (10) into equation (11) in order to eliminate any partial derivatives with respect to $y$. The result is the following
+\begin{eqnarray*}
+\frac{{\partial}^2 f}{\partial y^2} &=& \sin(\theta)\sin(\phi)\frac{\partial}{\partial r}\Big[\sin(\theta)\sin(\phi)\frac{\partial f}{\partial r} + \frac{1}{r}\cos(\theta)\sin(\phi)\frac{\partial f}{\partial\theta} + \frac{1}{r}\frac{\cos(\phi)}{\sin(\theta)}\frac{\partial f}{\partial\phi}\Big] + \\
+& & \frac{1}{r}\cos(\theta)\sin(\phi)\frac{\partial}{\partial\theta}\Big[\sin(\theta)\sin(\phi)\frac{\partial f}{\partial r} + \frac{1}{r}\cos(\theta)\sin(\phi)\frac{\partial f}{\partial\theta} + \frac{1}{r}\frac{\cos(\phi)}{\sin(\theta)}\frac{\partial f}{\partial\phi}\Big] + \\
+& & \frac{1}{r}\frac{\cos(\phi)}{\sin(\theta)}\frac{\partial}{\partial\phi}\Big[\sin(\theta)\sin(\phi)\frac{\partial f}{\partial r} + \frac{1}{r}\cos(\theta)\sin(\phi)\frac{\partial f}{\partial\theta} + \frac{1}{r}\frac{\cos(\phi)}{\sin(\theta)}\frac{\partial f}{\partial\phi}\Big].
+\end{eqnarray*}
+Now we operate the operators and get
+\begin{eqnarray*}
+\frac{{\partial}^2 f}{\partial y^2} &=& \sin(\theta)\sin(\phi)\Big[\sin(\theta)\sin(\phi)\frac{{\partial}^2 f}{\partial r^2} - \frac{1}{r^2}\cos(\theta)\sin(\phi)\frac{\partial f}{\partial\theta} + \frac{1}{r}\cos(\theta)\sin(\phi)\frac{{\partial}^2 f}{\partial r\partial\theta} -\\
+& & \frac{1}{r^2}\frac{\cos(\phi)}{\sin(\theta)}\frac{\partial f}{\partial\phi} + \frac{1}{r}\frac{\cos(\phi)}{\sin(\theta)}\frac{{\partial}^2 f}{\partial r\partial\phi}\Big] + \frac{1}{r}\cos(\theta)\sin(\phi)\Big[\sin(\theta)\sin(\phi)\frac{\partial f}{\partial r\partial\theta} + \\
+& & \cos(\theta)\sin(\phi)\frac{\partial f}{\partial r} - \frac{1}{r}\sin(\theta)\sin(\phi)\frac{\partial f}{\partial\theta} + \frac{1}{r}\cos(\theta)\sin(\phi)\frac{{\partial}^2 f}{\partial{\theta}^2} - \frac{1}{r}\frac{\cos(\phi)cos(\theta)}{{\sin}^2(\theta)}\frac{\partial f}{\partial\phi} + \\
+& & \frac{1}{r}\frac{\cos(\phi)}{\sin(\theta)}\frac{{\partial}^2 f}{\partial\theta\partial\phi}\Big] + \frac{1}{r}\frac{\cos(\phi)}{\sin(\theta)}\Big[\sin(\theta)\cos(\phi)\frac{\partial f}{\partial r} + \sin(\theta)\sin(\phi)\frac{{\partial}^2 f}{\partial r\partial\phi} + \\
+& & \frac{1}{r}\cos(\theta)\cos(\phi)\frac{\partial f}{\partial\theta} + \frac{1}{r}\cos(\theta)\sin(\phi)\frac{{\partial}^2 f}{\partial\theta\partial\phi} - \frac{1}{r}\frac{\sin(\phi)}{\sin(\theta)}\frac{\partial f}{\partial\phi} + \frac{1}{r}\frac{\cos(\phi)}{\sin(\theta)}\frac{{\partial}^2 f}{\partial{\phi}^2}\Big],
+\end{eqnarray*}
+and after some simplifications
+\begin{eqnarray*}
+\frac{{\partial}^2 f}{\partial y^2} &=& \Big[{\sin}^2(\theta){\sin}^2(\phi)\frac{{\partial}^2 f}{\partial r^2} - \frac{1}{r^2}\sin(\theta)\cos(\theta){\sin}^2(\phi)\frac{\partial f}{\partial\theta} + \frac{1}{r}\sin(\theta)\cos(\theta){\sin}^2(\phi)\frac{{\partial}^2 f}{\partial r\partial\theta} - \\
+& & \frac{1}{r^2}\sin(\phi)\cos(\phi)\frac{\partial f}{\partial\phi} + \frac{1}{r}\sin(\phi)\cos(\phi)\frac{{\partial}^2 f}{\partial r\partial\phi}\Big] + \Big[\frac{1}{r}\cos(\theta)\sin(\theta){\sin}^2(\phi)\frac{\partial f}{\partial r\partial\theta} + \\
+& & \frac{1}{r}{\cos}^2(\theta){\sin}^2(\phi)\frac{\partial f}{\partial r} - \frac{1}{r^2}\sin(\theta)\cos(\theta){\sin}^2(\phi)\frac{\partial f}{\partial\theta} + \frac{1}{r^2}{\cos}^2(\theta){\sin}^2(\phi)\frac{{\partial}^2 f}{\partial{\theta}^2} - \\
+& & \frac{1}{r^2}\frac{\sin(\phi)\cos(\phi){\cos}^2(\theta)}{{\sin}^2(\theta)}\frac{\partial f}{\partial\phi} + \frac{1}{r^2}\frac{\cos(\theta)\sin(\phi)\cos(\phi)}{\sin(\theta)}\frac{{\partial}^2 f}{\partial\theta\partial\phi}\Big] + \Big[\frac{1}{r}{\cos}^2(\phi)\frac{\partial f}{\partial r} + \\
+& & \frac{1}{r}\cos(\phi)\sin(\phi)\frac{{\partial}^2 f}{\partial r\partial\phi} + \frac{1}{r^2}\frac{\cos(\theta){\cos}^2(\phi)}{\sin(\theta)}\frac{\partial f}{\partial\theta} + \frac{1}{r^2}\frac{\cos(\theta){\cos}(\phi)\sin(\phi)}{\sin(\theta)}\frac{{\partial}^2 f}{\partial\theta\partial\phi} - \\
+& & \frac{1}{r^2}\frac{\sin(\phi)\cos(\phi)}{{\sin}^2(\theta)}\frac{\partial f}{\partial\phi} + \frac{1}{r^2}\frac{{\cos}^2(\phi)}{{\sin}^2(\theta)}\frac{{\partial}^2 f}{\partial{\phi}^2}\Big].
+\end{eqnarray*}
+
+Now its time to derive $\frac{{\partial}^2 f}{\partial z^2}$. After our substitution of value in (7) into equation (6) we get
+\begin{eqnarray}
+\frac{\partial f}{\partial z} &=& \cos(\theta)\frac{\partial f}{\partial r} - \frac{1}{r}\sin(\theta)\frac{\partial f}{\partial\theta}.
+\end{eqnarray}
+Once more, assuming that $f$ is a sufficiently differentiable function, we can replace $f$ by $\frac{\partial f}{\partial z}$ in the above equation which gives us the following 
+\begin{eqnarray}
+\frac{{\partial}^2 f}{\partial z^2} &=& \cos(\theta)\frac{\partial}{\partial r}\Big[\frac{\partial f}{\partial z}\Big] - \frac{1}{r}\sin(\theta)\frac{\partial}{\partial\theta}\Big[\frac{\partial f}{\partial z}\Big].
+\end{eqnarray}
+Now we substitute equation (12) into equation (13) in order to eliminate any partial derivatives with respect to $z$ and we arrive at
+\begin{eqnarray*}
+\frac{{\partial}^2 f}{\partial z^2} &=& \cos(\theta)\frac{\partial}{\partial r}\Big[\cos(\theta)\frac{\partial f}{\partial r} - \frac{1}{r}\sin(\theta)\frac{\partial f}{\partial\theta}\Big] - \\
+& & \frac{1}{r}\sin(\theta)\frac{\partial}{\partial\theta}\Big[\cos(\theta)\frac{\partial f}{\partial r} - \frac{1}{r}\sin(\theta)\frac{\partial f}{\partial\theta}\Big].
+\end{eqnarray*}
+After operating the operators we get
+\begin{eqnarray*}
+\frac{{\partial}^2 f}{\partial z^2} &=& \cos(\theta)\Big[\cos(\theta)\frac{{\partial}^2 f}{\partial r^2} + \frac{1}{r^2}\sin(\theta)\frac{\partial f}{\partial\theta} - \frac{1}{r}\sin(\theta)\frac{{\partial}^2 f}{\partial r \partial\theta}\Big] - \\
+& & \frac{1}{r}\sin(\theta)\Big[-\sin(\theta)\frac{\partial f}{\partial r} + \cos(\theta)\frac{{\partial}^2 f}{\partial r \partial\theta} - \frac{1}{r}\cos(\theta)\frac{\partial f}{\partial\theta} - \\
+& & \frac{1}{r}\sin(\theta)\frac{{\partial}^2 f}{\partial{\theta}^2}\Big],
+\end{eqnarray*}
+and then simplifying
+\begin{eqnarray*}
+\frac{{\partial}^2 f}{\partial z^2} &=& \Big[{\cos}^2(\theta)\frac{{\partial}^2 f}{\partial r^2} + \frac{1}{r^2}\cos(\theta)\sin(\theta)\frac{\partial f}{\partial\theta} - \frac{1}{r}\cos(\theta)\sin(\theta)\frac{{\partial}^2 f}{\partial r \partial\theta}\Big] + \Big[\frac{1}{r}{\sin}^2(\theta)\frac{\partial f}{\partial r} - \\
+& & \frac{1}{r}\sin(\theta)\cos(\theta)\frac{{\partial}^2 f}{\partial r \partial
+\theta} + \frac{1}{r^2}\sin(\theta)\cos(\theta)\frac{\partial f}{\partial\theta} + \frac{1}{r^2}{\sin}^2(\theta)\frac{{\partial}^2 f}{\partial{\theta}^2}\Big].
+\end{eqnarray*}
+
+Now that we have all three terms of the right hand side of equation (3)(i.e. $\frac{{\partial}^2 f}{\partial x^2}$, $\frac{{\partial}^2 f}{\partial y^2}$ and $\frac{{\partial}^2 f}{\partial z^2}$), we add them all together (because of equation (3)) to get the laplacian in terms of $r$, $\theta$ and $\phi$ 
+\begin{eqnarray*}
+{\nabla}^2 f &=& \Big[{\sin}^2(\theta){\cos}^2(\phi)\frac{{\partial}^2 f}{\partial r^2} - \frac{1}{r^2}\cos(\theta)\sin(\theta){\cos}^2(\phi)\frac{\partial f}{\partial\theta} + \frac{1}{r}\cos(\theta)\sin(\theta){\cos}^2(\phi)\frac{{\partial}^2 f}{\partial r \partial\theta} + \\
+& & \frac{1}{r^2}\sin(\phi)\cos(\phi)\frac{\partial f}{\partial\phi} - \frac{1}{r}\sin(\phi)\cos(\phi)\frac{{\partial}^2 f}{\partial\phi\partial r}\Big] + \Big[\frac{1}{r}{\cos}^2(\theta){\cos}^2(\phi)\frac{\partial f}{\partial r}
++ \\
+& & \frac{1}{r}\sin(\theta)\cos(\theta){\cos}^2(\phi)\frac{{\partial}^2 f}{\partial r\partial\theta} - \frac{1}{r^2}\sin(\theta)\cos(\theta){\cos}^2(\phi)\frac{\partial f}{\partial\theta} + \frac{1}{r^2}{\cos}^2(\theta){\cos}^2(\phi)\frac{{\partial}^2 f}{\partial{\theta}^2} + \\
+& & \frac{1}{r^2}\frac{\sin(\phi)\cos(\phi){\cos}^2(\theta)}{{\sin}^2(\theta)}\frac{\partial f}{\partial\phi} - \frac{1}{r^2}\frac{\cos(\theta)\sin(\phi)\cos(\phi)}{\sin(\theta)}\frac{{\partial}^2 f}{\partial\theta\partial\phi}\Big] + \Big[\frac{1}{r}{\sin}^2(\phi)\frac{\partial f}{\partial r} - \\ 
+& & \frac{1}{r}\sin(\phi)\cos(\phi)\frac{{\partial}^2 f}{\partial r\partial\phi} + \frac{1}{r^2}\frac{\cos(\theta){\sin}^2(\phi)}{\sin(\theta)}\frac{\partial f}{\partial\theta} - \frac{1}{r^2}\frac{\cos(\theta)\cos(\phi)\sin(\phi)}{\sin(\theta)}\frac{{\partial}^2 f}{\partial\theta \partial\phi} + \\
+& & \frac{1}{r^2}\frac{\sin(\phi)\cos(\phi)}{{\sin}^2(\theta)}\frac{\partial f}{\partial\phi} + \frac{1}{r^2}\frac{{\sin}^2(\phi)}{{\sin}^2(\theta)}\frac{{\partial}^2 f}{\partial{\phi}^2}\Big] + \Big[{\sin}^2(\theta){\sin}^2(\phi)\frac{{\partial}^2 f}{\partial r^2} - \\
+& & \frac{1}{r^2}\sin(\theta)\cos(\theta){\sin}^2(\phi)\frac{\partial f}{\partial\theta} + \frac{1}{r}\sin(\theta)\cos(\theta){\sin}^2(\phi)\frac{{\partial}^2 f}{\partial r\partial\theta} - \frac{1}{r^2}\sin(\phi)\cos(\phi)\frac{\partial f}{\partial\phi} + \\
+& & \frac{1}{r}\sin(\phi)\cos(\phi)\frac{{\partial}^2 f}{\partial r\partial\phi}\Big] + \Big[\frac{1}{r}\cos(\theta)\sin(\theta){\sin}^2(\phi)\frac{\partial f}{\partial r\partial\theta} + \frac{1}{r}{\cos}^2(\theta){\sin}^2(\phi)\frac{\partial f}{\partial r} - \\
+& & \frac{1}{r^2}\sin(\theta)\cos(\theta){\sin}^2(\phi)\frac{\partial f}{\partial\theta} + \frac{1}{r^2}{\cos}^2(\theta){\sin}^2(\phi)\frac{{\partial}^2 f}{\partial{\theta}^2} - \frac{1}{r^2}\frac{\sin(\phi)\cos(\phi){\cos}^2(\theta)}{{\sin}^2(\theta)}\frac{\partial f}{\partial\phi} + \\
+& & \frac{1}{r^2}\frac{\cos(\theta)\sin(\phi)\cos(\phi)}{\sin(\theta)}\frac{{\partial}^2 f}{\partial\theta\partial\phi}\Big] + \Big[\frac{1}{r}{\cos}^2(\phi)\frac{\partial f}{\partial r} + \frac{1}{r}\cos(\phi)\sin(\phi)\frac{{\partial}^2 f}{\partial r\partial\phi} + \\
+& & \frac{1}{r^2}\frac{\cos(\theta){\cos}^2(\phi)}{\sin(\theta)}\frac{\partial f}{\partial\theta} + \frac{1}{r^2}\frac{\cos(\theta){\cos}(\phi)\sin(\phi)}{\sin(\theta)}\frac{{\partial}^2 f}{\partial\theta\partial\phi} - \frac{1}{r^2}\frac{\sin(\phi)\cos(\phi)}{{\sin}^2(\theta)}\frac{\partial f}{\partial\phi} + \\
+& & \frac{1}{r^2}\frac{{\cos}^2(\phi)}{{\sin}^2(\theta)}\frac{{\partial}^2 f}{\partial{\phi}^2}\Big] + \Big[{\cos}^2(\theta)\frac{{\partial}^2 f}{\partial r^2} + \frac{1}{r^2}\cos(\theta)\sin(\theta)\frac{\partial f}{\partial\theta} - \frac{1}{r}\cos(\theta)\sin(\theta)\frac{{\partial}^2 f}{\partial r \partial\theta}\Big] + \\
+& & \Big[\frac{1}{r}{\sin}^2(\theta)\frac{\partial f}{\partial r} - \frac{1}{r}\sin(\theta)\cos(\theta)\frac{{\partial}^2 f}{\partial r \partial\theta} + \frac{1}{r^2}\sin(\theta)\cos(\theta)\frac{\partial f}{\partial\theta} + \frac{1}{r^2}{\sin}^2(\theta)\frac{{\partial}^2 f}{\partial{\theta}^2}\Big].
+\end{eqnarray*}
+
+It may be hard to believe but the truth is that the above expression, after some miraculous simplifications of course, reduces to the following succinct form and we finally arrive at the Laplacian in spherical coordinates!
+\begin{eqnarray}
+{\nabla}^2 f &=& \frac{{\partial}^2 f}{\partial r^2} + \frac{1}{r^2}\frac{{\partial}^2 f}{\partial{\theta}^2} + \frac{1}{r^2}\frac{1}{{\sin}^2(\theta)}\frac{{\partial}^2 f}{\partial{\phi}^2} + \frac{2}{r}\frac{\partial f}{\partial r} + \frac{1}{r^2}\frac{\cos(\theta)}{\sin(\theta)}\frac{\partial f}{\partial\theta}.
+\end{eqnarray}
+
+We can write the Laplacian in an even more compact form as\footnote[2]{Readers might be surprised how I got from expression (14) to expression (15) so fast! Even though it is true that expression (14) is equivalent to expression (15), I wouldn't have been able to write the expression (15) if I hadn't known about it beforehand.}
+\begin{eqnarray}
+{\nabla}^2 f &=& \frac{1}{r^2}\frac{\partial}{\partial r}\Big[ r^2\frac{\partial f}{\partial r}\Big] + \frac{1}{r^2\sin(\theta)}\frac{\partial}{\partial\theta}\Big[\sin(\theta)\frac{\partial f}{\partial\theta}\Big] + \frac{1}{r^2{\sin}^2(\theta)}\frac{{\partial}^2 f}{\partial{\phi}^2}.
+\end{eqnarray}
+
+\end{document}
+%%%%%
+%%%%%
+\end{document}

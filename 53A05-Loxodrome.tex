@@ -1,0 +1,119 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Loxodrome}
+\pmcreated{2013-03-22 19:11:02}
+\pmmodified{2013-03-22 19:11:02}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{loxodrome}
+\pmrecord{11}{42092}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53A05}
+\pmclassification{msc}{53A04}
+\pmclassification{msc}{26B05}
+\pmclassification{msc}{26A24}
+\pmdefines{meridian}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+\usepackage{pstricks}
+\usepackage{pst-plot}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{constant}
+
+Think in $\mathbb{R}^3$ a sphere with radius $r$ and two antipodal points of it wich we call the North pole and the South pole.\, \emph{Meridians} are great circles passing through the \PMlinkescapetext{poles}.\, A \emph{loxodrome} is a curve on the sphere intersecting all meridians at the same angle.\\
+
+
+Let 
+\begin{align*}
+\begin{cases}
+x \;=\; r\sin{u}\cos{v}\\
+y \;=\; r\sin{u}\sin{v}\\
+z \;=\; r\cos{u}
+\end{cases}
+\end{align*}
+be a parametric presentation of the sphere (cf. the spherical coordinates).\, We will show that
+\begin{align}
+bv \;=\; \ln\tan\frac{u}{2}+c,
+\end{align}
+where $b$ and $c$ are constants, is an equation of loxodromes in the Gaussian coordinates $u,\,v$.\\
+
+We denote\, $\displaystyle\frac{1}{b} := a$,\, whence the equation of the family (1) in the parameter plane reads
+\begin{align}
+v \;=\; a\ln\tan\frac{u}{2}+ac \;:=\; v(u).
+\end{align}
+When we denote also the position vector of a point of the sphere by
+$$\vec{k} \;=\; \vec{k}(u,\,v) \;:=\; (r\sin{u}\cos{v},\,r\sin{u}\sin{v},\,r\cos{u}),$$
+we have the tangent vector of a curve (1) on the sphere:
+$$\vec{t} \;:=\; \frac{d}{du}\vec{k}(u,\,v(u)) \;=\; \vec{k}'_u+\vec{k}'_v\!\cdot\!v'(u).$$
+Since
+$$\vec{k}'_u \;=\; (r\cos{u}\cos{v},\,r\cos{u}\sin{v},\,-r\sin{u}), \quad 
+\vec{k}'_v \;=\; (-r\sin{u}\sin{v},\,r\sin{u}\cos{v},\,0)$$
+and since
+$$v'(u) \;=\; \frac{a}{\tan{\frac{u}{2}}}\cdot\frac{1}{\cos^2\frac{u}{2}}\cdot\frac{1}{2} 
+\;=\; \frac{a}{2\sin\frac{u}{2}\cos\frac{u}{2}} \;=\; \frac{a}{\sin{u}},$$
+we can write the tangent vector of the curve as
+$$\vec{t} \;=\; r\cdot(\cos{u}\cos{v}-a\sin{v},\,\cos{u}\sin{v}+a\cos{v},\,-\sin{u}).$$
+For a tangent vector of a meridian, the partial derivative $\vec{k}'_u$ may be taken.\, 
+Thus we obtain the value
+$$\cos(\vec{t},\,\vec{k}'_u) \;=\; \frac{\vec{t}\cdot\vec{k}'_u}{\left|\vec{t}\right||\vec{k}'_u|} 
+\;=\; \frac{1}{\sqrt{1\!+\!a^2}} \;=\; \frac{b}{\sqrt{b^2\!+\!1}},$$
+which is a constant.\, It means that the angle $\alpha$ between the curve (1) and a meridian is constant.\\
+
+\begin{center}
+\begin{pspicture}(-1,-1)(5,4.5)
+\psline{->}(0,0)(0,3.5)
+\psline{->}(-0.9,0)(4.5,0)
+\psline{->}(0,0)(4,2.67)
+\psline(-0.05,2)(3.07,2)
+\psline(0,1.85)(0.15,1.85)(0.15,2)
+\psarc(0,0){0.25}{40}{90}
+\rput(1.5,2.2){$1$}
+\rput(-0.2,1.1){$b$}
+\rput(2.25,0.9){$\sqrt{b^2\!+\!1}$}
+\rput(0.34,3.6){$\vec{k}'_u$}
+\rput(4.7,0.25){$\vec{k}'_v$}
+\rput(4.1,2.9){$\vec{t}$}
+\rput(0.25,0.4){$\alpha$}
+\rput(-1,-1){.}
+\rput(5,4.3){.}
+\end{pspicture}
+\end{center}
+
+
+
+Pictures in \PMlinkexternal{Wiki}{http://hu.wikipedia.org/wiki/Loxodroma}
+
+
+
+
+
+%%%%%
+%%%%%
+\end{document}

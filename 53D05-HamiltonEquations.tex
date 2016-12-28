@@ -1,0 +1,109 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HamiltonEquations}
+\pmcreated{2013-03-22 14:45:58}
+\pmmodified{2013-03-22 14:45:58}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{Hamilton equations}
+\pmrecord{9}{36410}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53D05}
+\pmclassification{msc}{70H05}
+\pmrelated{Quantization}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+
+ \usepackage{bbm}
+ \newcommand{\Z}{\mathbbm{Z}}
+ \newcommand{\C}{\mathbbm{C}}
+ \newcommand{\R}{\mathbbm{R}}
+ \newcommand{\Q}{\mathbbm{Q}}
+
+
+
+\newcommand*{\norm}[1]{\lVert #1 \rVert}
+\newcommand*{\abs}[1]{| #1 |}
+
+
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+\begin{document}
+The Hamilton equations are a formulation of the equations of motion in classical mechanics.
+
+\subsubsection*{Local formulation}
+Suppose $U\subseteq \R^n$ is an open set, suppose $I$ is an interval
+(representing time), and $H\colon U\times \R^n\times I\to \R$
+is a smooth function. Then the equations
+\begin{align}
+\label{HE1}
+\dot{q}_j &= \frac{\partial H}{\partial p_j}(q(t),p(t),t), \\
+\label{HE2}
+\dot{p}_j &= -\frac{\partial H}{\partial q_j}(q(t),p(t),t), 
+\end{align}
+are the \emph{Hamilton equations} for the curve
+$$
+  (q, p)=(q_1,\ldots, q_n, p_1,\ldots, p_n) \colon I\to U\times \R^n.
+$$
+Such a solution is called a \emph{bicharacteristic}, and $H$ is
+called a \emph{Hamiltonian function}. Here we use classical notation;
+the $q_i$'s represent the location of the particles, 
+the $p_i$'s represent the momenta of the  particles.
+
+
+\subsubsection*{Global formulation}
+Suppose $P$ is a symplectic manifold with symplectic form $\omega$ and that $H\colon P\to \R$
+is a smooth function.  Then $X_H$, the Hamiltonian 
+vector field corresponding to $H$ is determined by 
+$$
+  dH=\omega(X_H,\cdot).
+$$
+The most common case is when $P$ is the cotangent bundle of a manifold $Q$
+equipped with the canonical symplectic form $\omega=-d\alpha$, 
+where $\alpha$ is the \PMlinkname{Poincar\'e $1$-form}{Poincare1Form}.  (Note that other authors may have different sign convention.)  Then Hamilton's equations are the equations for the flow of the vector field $X_H$.  Given a system of coordinates $x^1, \ldots x^{2n}$ on the manifold $P$, they can be written as follows:
+$$
+ \dot x^i = (X_H)^i (x_1, \ldots x_{2n}, t)
+$$
+The relation with the former definition is that in canonical 
+local coordinates $(q_i,p_j)$ for $T^\ast Q$, the flow of $X_H$ 
+is determined by equations \eqref{HE1}-\eqref{HE2}.
+
+Also, the following terminology is frequently encountered --- the manifold $P$ is known as the phase space, the manifold $Q$ is known as the configuration space, and the product $P \times\R$ is known as state space.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,89 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Distribution1}
+\pmcreated{2013-03-22 14:51:57}
+\pmmodified{2013-03-22 14:51:57}
+\pmowner{jirka}{4157}
+\pmmodifier{jirka}{4157}
+\pmtitle{distribution}
+\pmrecord{6}{36541}
+\pmprivacy{1}
+\pmauthor{jirka}{4157}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53-00}
+\pmsynonym{C^\infty n-plane distribution}{Distribution1}
+\pmrelated{FrobeniussTheorem}
+\pmdefines{involutive}
+\pmdefines{involutive distribution}
+\pmdefines{local basis}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{theorem}
+\newtheorem*{thm}{Theorem}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{conj}{Conjecture}
+\newtheorem*{cor}{Corollary}
+\newtheorem*{example}{Example}
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\begin{document}
+In the following we will \PMlinkescapetext{mean} $C^\infty$ when we say smooth.
+
+\begin{defn}
+Let $M$ be a smooth manifold of dimension $m$.  Let $n \leq m$ and for each $x \in M$, we assign an $n$-dimensional subspace
+$\Delta_x \subset T_x(M)$ of the tangent space in such a way that for a
+neighbourhood $N_x \subset M$ of $x$ there exist $n$ linearly independent
+smooth vector fields $X_1,\ldots,X_n$ such that for any point $y \in N_x$,
+$X_1(y),\ldots,X_n(y)$ span $\Delta_y$.  We let $\Delta$ refer to the
+collection of all the $\Delta_x$ for all $x \in M$ and we then call $\Delta$ a
+{\em distribution} of dimension $n$ on $M$, or sometimes a
+{\em $C^\infty$ $n$-plane distribution} on $M$.  The set of smooth
+vector fields $\{ X_1,\ldots,X_n \}$ is called a {\em local basis} of $\Delta$.
+\end{defn}
+
+Note: The naming is unfortunate here as these distributions have nothing
+to do with \PMlinkname{distributions in the sense of analysis}{Distribution}.
+However the naming is in wide use.
+
+\begin{defn}
+We say that a distribution $\Delta$ on $M$
+is {\em involutive} if for every point $x \in M$ there exists a local basis 
+$\{ X_1,\ldots,X_n \}$
+in a neighbourhood of $x$ such that for all $1 \leq i, j \leq n$, $[X_i,X_j]$
+(the commutator of two vector fields) is in the span of 
+$\{ X_1,\ldots,X_n \}$.  That is, if 
+$[X_i,X_j]$ is a linear combination of $\{ X_1,\ldots,X_n \}$.
+Normally this is written as $[ \Delta , \Delta ] \subset \Delta$.
+\end{defn}
+
+\begin{thebibliography}{9}
+\bibitem{boothby}
+William M.\@ Boothby.
+{\em \PMlinkescapetext{An Introduction to Differentiable Manifolds and
+Riemannian Geometry}},
+Academic Press, San Diego, California, 2003.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

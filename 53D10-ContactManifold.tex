@@ -1,0 +1,64 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ContactManifold}
+\pmcreated{2013-03-22 13:43:27}
+\pmmodified{2013-03-22 13:43:27}
+\pmowner{RevBobo}{4}
+\pmmodifier{RevBobo}{4}
+\pmtitle{contact manifold}
+\pmrecord{4}{34409}
+\pmprivacy{1}
+\pmauthor{RevBobo}{4}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53D10}
+\pmrelated{SymplecticManifold}
+\pmdefines{contact structure}
+\pmdefines{contact form}
+\pmdefines{contactomorphism}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $M$ be a smooth manifold and $\alpha$ a one form on $M$. Then $\alpha$ is a
+\emph{contact form} on $M$ if
+\begin{enumerate}
+\item for each point $m \in M$, $\alpha_{m} \neq 0$ and
+\item the restriction $d\alpha_{m}|_{\ker{\alpha_{m}}}$ of the differential of $\alpha$
+is nondegenerate.
+\end{enumerate}
+
+Condition 1 ensures that $\xi=\ker{\alpha}$ is a subbundle of the vector bundle $TM$. Condition 2 equivalently says $d\alpha$ is a symplectic structure on the vector bundle $\xi \to M$. A \emph{contact structure} $\xi$ on a manifold $M$ is a subbundle of $TM$ so that for each $m \in M$, there is a contact form $\alpha$ defined on some neighborhood of $m$ so that $\xi = \ker{\alpha}$. A co-oriented contact structure is a subbundle of $TM$ of the form $\xi=\ker{\alpha}$ for some globally defined contact form $\alpha$. 
+
+A (co-oriented) \emph{contact manifold} is a pair $(M,\xi)$ where $M$ is a manifold and $\xi$ is a (co-oriented) contact structure. Note, symplectic linear algebra implies that $\dim{M}$ is odd. If $\dim{M} = 2n+1$ for some positive integer $n$, then a one form $\alpha$ is a contact form if and only if $\alpha \wedge (d\alpha)^{n}$ is everywhere nonzero. 
+
+Suppose now that $(M_1,\xi_1=\ker{\alpha_1})$ and $(M_2,\xi_2=\ker{\alpha_2})$ are co-oriented contact manifolds. A diffeomorphism $\phi:M_1 \to M_2$ is called a \emph{contactomorphism} if the pullback along $\phi$ of $\alpha_2$ differs from $\alpha_1$ by some positive smooth function $f:M_1 \to \mathbb{R}$, that is, $\phi^{*}\alpha_{2} = f\alpha_{1}$.
+
+\textbf{Examples}:
+\begin{enumerate}
+\item $\mathbb{R}^3$ is a contact manifold with the contact structure induced by the one form $\alpha = dz + xdy$.
+\item Denote by $\mathbb{T}^{2}$ the two-torus $\mathbb{T}^{2} = S^1 \times S^1$. Then, $\mathbb{R} \times \mathbb{T}^2$ (with coordinates $t,\theta_1,\theta_2$) is a contact manifold with the contact structure induced by 
+$\alpha = \cos{t\theta_1}+\sin{t\theta_2}$.
+\end{enumerate}
+%%%%%
+%%%%%
+\end{document}

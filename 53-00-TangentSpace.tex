@@ -1,0 +1,153 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TangentSpace}
+\pmcreated{2013-03-22 12:21:04}
+\pmmodified{2013-03-22 12:21:04}
+\pmowner{rmilson}{146}
+\pmmodifier{rmilson}{146}
+\pmtitle{tangent space}
+\pmrecord{5}{32007}
+\pmprivacy{1}
+\pmauthor{rmilson}{146}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53-00}
+\pmsynonym{tangent vector}{TangentSpace}
+\pmrelated{Manifold}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\natnums}{\mathbb{N}}
+\newcommand{\cnums}{\mathbb{C}}
+
+\newcommand{\lp}{\left(}
+\newcommand{\rp}{\right)}
+\newcommand{\lb}{\left[}
+\newcommand{\rb}{\right]}
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\dgamma}{\dot{\gamma}}
+\newcommand{\hM}{\hat{M}}
+\newcommand{\Mat}{\mathop{\mathrm{Mat}}\nolimits}
+
+\newcommand{\rJ}{\mathrm{J}}
+
+\newcommand{\bu}{\mathbf{u}}
+\newcommand{\bv}{\mathbf{v}}
+
+\newcommand{\cC}{\mathcal{C}}
+\begin{document}
+{\bf Summary} The tangent space of differential manifold $M$ at a
+point $x\in M$ is the vector space whose elements are velocities of
+trajectories that pass through $x$. The standard notation for the
+tangent space of $M$ at the point $x$ is $T_x M$. 
+
+
+{\bf Definition (Standard).}  Let $M$ be a differential manifold and
+$x$ a point of $M$. Let
+$$\gamma_i:I_i\rightarrow M,\quad I_i\subset\reals,\quad i=1,2$$
+be
+two differentiable trajectories passing through $x$ at times $t_1\in
+I_1, t_2\in I_2$, respectively.  We say that these trajectories are in
+first order contact at $x$ if for all differentiable functions
+$f:U\rightarrow\reals$ defined in some neighbourhood $U\subset M$ of
+$x$, we have
+$$(f\circ\gamma_1)'(t_1) = (f\circ\gamma_2)'(t_2).$$
+First order
+contact is an equivalence relation, and we define $T_x M$, the {\em
+  tangent space} of $M$ at $x$, to be the set of corresponding
+equivalence classes.  
+
+Given a trajectory
+$$\gamma:I\rightarrow M,\quad I\subset\reals$$
+passing through $x$ at
+time $t\in I$, we define $\dgamma(t)$ the {\em tangent vector} ,
+a.k.a. the {\em velocity}, of $\gamma$ at time $t$, to be the
+equivalence class of $\gamma$ modulo first order contact.  We endow
+$T_x M$ with the structure of a real vector space by identifying it
+with $\reals^n$ relative to a system of local coordinates.   These
+identifications will differ from chart to chart, but they will all be
+linearly compatible.
+
+To describe this identification, consider a coordinate chart 
+$$\alpha: U_\alpha\to \reals^n,\quad U_\alpha\subset M,\quad x\in U.$$
+We call the real vector
+$$(\alpha\circ\gamma)'(t)\in\reals^n$$
+the representation of
+$\dgamma(t)$ relative to the chart $\alpha$.  It is a simple exercise
+to show that two trajectories are in first order contact at $x$ if and
+only if their velocities have the same representation.  Another simple
+exercise will show that for every $\bu\in \reals^n$ the trajectory
+$$t\to\alpha^{-1}(\alpha(x) + t\bu)$$
+has velocity $\bu$ relative to the chart $\alpha$.  Hence, every
+element of $\reals^n$ represents some actual velocity, and therefore
+the mapping  $T_x M\to \reals^n$ given by
+$$[\gamma]\to (\alpha\circ\gamma)'(t),\quad \gamma(t)=x,$$
+is a bijection.
+
+Finally if $\beta:U_\beta\to \reals^n,\quad U_\beta\subset M,\quad
+x\in U_\beta$ is another chart, then for all differentiable
+trajectories $\gamma(t)=x$ we have
+$$(\beta\circ\gamma)'(t) = J (\alpha\circ\gamma)'(t),$$
+where $J$ is
+the Jacobian matrix at $\alpha(x)$ of the suitably restricted mapping
+$\beta\circ\alpha^{-1}:\alpha(U_\alpha\cap U_\beta)\to\reals^n$.  The
+linearity of the above relation
+implies that the vector space structure of $T_xM$ is independent of the
+choice of coordinate chart.
+
+{\bf Definition (Classical).}  Historically, tangent vectors were
+specified as elements of $\reals^n$ relative to some system of
+coordinates, a.k.a. a coordinate chart. This point of view naturally
+leads to the definition of a tangent space as $\reals^n$ modulo changes
+of coordinates.  
+
+Let $M$ be a differential manifold represented as a collection of
+parameterization domains
+$$\{V_\alpha\subset\reals^n:\alpha\in \cA\}$$ indexed by labels
+belonging to a set $\cA$, and 
+transition function diffeomorphisms
+$$\sigma_{\alpha\beta}:V_{\alpha\beta}\rightarrow
+V_{\beta\alpha},\quad \alpha,\beta\in \cA,\quad V_{\alpha\beta}\subset
+V_\alpha$$
+Set 
+$$\hM = \{ (\alpha,x)\in \cA\times \reals^n: x\in V_\alpha\},$$
+and recall that a points of the manifold are represented by elements
+of $\hM$ modulo an equivalence relation imposed by the transition functions
+[see Manifold --- Definition (Classical)].
+For a transition function $\sigma_{\alpha\beta}$,  let
+$$\rJ\sigma_{\alpha\beta}:V_{\alpha\beta}\rightarrow
+\Mat_{n,n}(\reals)$$
+denote the corresponding Jacobian matrix of partial derivatives.   We
+call a triple
+$$(\alpha,x,\bu),\quad \alpha\in\cA,\; x\in V_\alpha,\; \bu\in
+\reals^n$$
+the representation of a tangent vector at $x$ relative to coordinate
+system $\alpha$, and make the identification
+$$(\alpha,x,\bu) \simeq
+(\beta,\sigma_{\alpha\beta}(x),[\rJ\sigma_{\alpha\beta}](x)(\bu)),\quad
+\alpha,\beta\in \cA,\; x\in V_{\alpha\beta},\; \bu \in \reals^n.$$
+to arrive at the definition of a tangent vector at $x$.
+
+
+{\bf Notes.} The notion of tangent space derives from the observation
+that there is no natural way to relate and compare velocities at
+different points of a manifold.  This is already evident when we
+consider objects moving on a surface in 3-space, where the velocities
+take their value in the tangent planes of the surface. On a general
+surface, distinct points correspond to distinct tangent planes, and
+therefore the velocities at distinct points are not commensurate.
+
+The situation is even more complicated for an abstract manifold, where
+absent an ambient Euclidean setting there is, apriori, no obvious
+``tangent plane'' where the velocities can reside.  This point of view
+leads to the definition of a velocity as some sort of equivalence
+class.
+
+
+{\bf See also:} tangent bundle, connection, parallel translation
+%%%%%
+%%%%%
+\end{document}

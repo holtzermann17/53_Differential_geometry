@@ -1,0 +1,401 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DifferentialPropositionalCalculusAppendix2}
+\pmcreated{2013-03-22 18:09:13}
+\pmmodified{2013-03-22 18:09:13}
+\pmowner{Jon Awbrey}{15246}
+\pmmodifier{Jon Awbrey}{15246}
+\pmtitle{differential propositional calculus : appendix 2}
+\pmrecord{15}{40710}
+\pmprivacy{1}
+\pmauthor{Jon Awbrey}{15246}
+\pmtype{Application}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53A40}
+\pmclassification{msc}{39A12}
+\pmclassification{msc}{34G99}
+\pmclassification{msc}{03B44}
+\pmclassification{msc}{03B42}
+\pmclassification{msc}{03B05}
+\pmrelated{DifferentialLogic}
+\pmrelated{MinimalNegationOperator}
+\pmrelated{PropositionalCalculus}
+\pmrelated{ZerothOrderLogic}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+\PMlinkescapephrase{action}
+\PMlinkescapephrase{Action}
+\PMlinkescapephrase{actions}
+\PMlinkescapephrase{Actions}
+\PMlinkescapephrase{algebraic}
+\PMlinkescapephrase{Algebraic}
+\PMlinkescapephrase{basis}
+\PMlinkescapephrase{Basis}
+\PMlinkescapephrase{expanded}
+\PMlinkescapephrase{Expanded}
+\PMlinkescapephrase{expands}
+\PMlinkescapephrase{Expands}
+
+The actions of the \PMlinkname{difference operator}{FiniteDifference} $\operatorname{D}$ and the \PMlinkname{tangent operator}{TangentMap} $\operatorname{d}$ on the 16 propositional forms in two variables are shown in the Tables below.
+
+Table A7 expands the resulting differential forms over a \textit{logical basis}:
+
+\begin{center}
+$\{ (\operatorname{d}x)(\operatorname{d}y),\ \operatorname{d}x\,(\operatorname{d}y),\ (\operatorname{d}x)\,\operatorname{d}y,\ \operatorname{d}x\,\operatorname{d}y \}.$
+\end{center}
+
+This set consists of the singular propositions in the first order differential variables, indicating mutually exclusive and exhaustive \textit{cells} of the tangent universe of discourse.  Accordingly, this set of differential propositions may also be referred to as the cell-basis, point-basis, or singular differential basis.  In this setting it is frequently convenient to use the following abbreviations:
+
+\begin{center}
+$\partial x = \operatorname{d}x\,(\operatorname{d}y)$ and $\partial y = (\operatorname{d}x)\,\operatorname{d}y.$
+\end{center}
+
+Table A8 expands the resulting differential forms over an \textit{algebraic basis}:
+
+\begin{center}
+$\{ 1,\ \operatorname{d}x,\ \operatorname{d}y,\ \operatorname{d}x\,\operatorname{d}y \}.$
+\end{center}
+
+This set consists of the positive propositions in the first order differential variables, indicating overlapping positive regions of the tangent universe of discourse.  Accordingly, this set of differential propositions may also be referred to as the positive differential basis.
+
+\tableofcontents
+
+\subsection{Table A7.  Differential Forms Expanded on a Logical Basis}
+
+\begin{center}\begin{tabular}{|c|c|c|c|}
+\multicolumn{4}{c}{\textbf{Table A7.  Differential Forms Expanded on a Logical Basis}} \\
+\hline
+&
+$f$ &
+$\operatorname{D}f$ &
+$\operatorname{d}f$ \\
+\hline
+$f_{0}$ &
+$(~)$   &
+$0$     &
+$0$     \\
+\hline
+$\begin{smallmatrix}
+f_{1} \\
+f_{2} \\
+f_{4} \\
+f_{8} \\
+\end{smallmatrix}$
+&
+$\begin{smallmatrix}
+(x) & (y) \\
+(x) &  y  \\
+ x  & (y) \\
+ x  &  y  \\
+\end{smallmatrix}$
+&
+$\begin{smallmatrix}
+    (y)  &  \operatorname{d}x\ (\operatorname{d}y) & + &
+ (x)     & (\operatorname{d}x)\ \operatorname{d}y  & + &
+((x, y)) &  \operatorname{d}x\  \operatorname{d}y  \\
+     y   &  \operatorname{d}x\ (\operatorname{d}y) & + &
+ (x)     & (\operatorname{d}x)\ \operatorname{d}y  & + &
+ (x, y)  &  \operatorname{d}x\  \operatorname{d}y  \\
+    (y)  &  \operatorname{d}x\ (\operatorname{d}y) & + &
+  x      & (\operatorname{d}x)\ \operatorname{d}y  & + &
+ (x, y)  &  \operatorname{d}x\  \operatorname{d}y  \\
+     y   &  \operatorname{d}x\ (\operatorname{d}y) & + &
+  x      & (\operatorname{d}x)\ \operatorname{d}y  & + &
+((x, y)) &  \operatorname{d}x\  \operatorname{d}y  \\
+\end{smallmatrix}$
+&
+$\begin{smallmatrix}
+(y) & \partial x & + & (x) & \partial y \\
+ y  & \partial x & + & (x) & \partial y \\
+(y) & \partial x & + &  x  & \partial y \\
+ y  & \partial x & + &  x  & \partial y \\
+\end{smallmatrix}$ \\
+\hline
+$\begin{smallmatrix}
+f_{3}  \\
+f_{12} \\
+\end{smallmatrix}$
+&
+$\begin{smallmatrix}
+(x) \\
+ x  \\
+\end{smallmatrix}$
+&
+$\begin{smallmatrix}
+\operatorname{d}x\ (\operatorname{d}y) & + &
+\operatorname{d}x\  \operatorname{d}y  \\
+\operatorname{d}x\ (\operatorname{d}y) & + &
+\operatorname{d}x\  \operatorname{d}y  \\
+\end{smallmatrix}$
+&
+$\begin{smallmatrix}
+\partial x \\
+\partial x \\
+\end{smallmatrix}$ \\
+\hline
+$\begin{smallmatrix}
+f_{6} \\
+f_{9} \\
+\end{smallmatrix}$
+&
+$\begin{smallmatrix}
+ (x, & y)  \\
+((x, & y)) \\
+\end{smallmatrix}$
+&
+$\begin{smallmatrix}
+ \operatorname{d}x\ (\operatorname{d}y) & + &
+(\operatorname{d}x)\ \operatorname{d}y  \\
+ \operatorname{d}x\ (\operatorname{d}y) & + &
+(\operatorname{d}x)\ \operatorname{d}y  \\
+\end{smallmatrix}$
+&
+$\begin{smallmatrix}
+\partial x & + & \partial y \\
+\partial x & + & \partial y \\
+\end{smallmatrix}$ \\
+\hline
+$\begin{smallmatrix}
+f_{5}  \\
+f_{10} \\
+\end{smallmatrix}$
+&
+$\begin{smallmatrix}
+(y) \\
+ y  \\
+\end{smallmatrix}$
+&
+$\begin{smallmatrix}
+(\operatorname{d}x)\ \operatorname{d}y & + &
+ \operatorname{d}x\  \operatorname{d}y \\
+(\operatorname{d}x)\ \operatorname{d}y & + &
+ \operatorname{d}x\  \operatorname{d}y \\
+\end{smallmatrix}$
+&
+$\begin{smallmatrix}
+\partial y \\
+\partial y \\
+\end{smallmatrix}$ \\
+\hline
+$\begin{smallmatrix}
+f_{7}  \\
+f_{11} \\
+f_{13} \\
+f_{14} \\
+\end{smallmatrix}$
+&
+$\begin{smallmatrix}
+ (x  &  y)  \\
+ (x  & (y)) \\
+((x) &  y)  \\
+((x) & (y)) \\
+\end{smallmatrix}$
+&
+$\begin{smallmatrix}
+     y   &  \operatorname{d}x\ (\operatorname{d}y) & + &
+  x      & (\operatorname{d}x)\ \operatorname{d}y  & + &
+((x, y)) &  \operatorname{d}x\  \operatorname{d}y  \\
+    (y)  &  \operatorname{d}x\ (\operatorname{d}y) & + &
+  x      & (\operatorname{d}x)\ \operatorname{d}y  & + &
+ (x, y)  &  \operatorname{d}x\  \operatorname{d}y  \\
+     y   &  \operatorname{d}x\ (\operatorname{d}y) & + &
+ (x)     & (\operatorname{d}x)\ \operatorname{d}y  & + &
+ (x, y)  &  \operatorname{d}x\  \operatorname{d}y  \\
+    (y)  &  \operatorname{d}x\ (\operatorname{d}y) & + &
+ (x)     & (\operatorname{d}x)\ \operatorname{d}y  & + &
+((x, y)) &  \operatorname{d}x\  \operatorname{d}y  \\
+\end{smallmatrix}$
+&
+$\begin{smallmatrix}
+ y  & \partial x & + &  x  & \partial y \\
+(y) & \partial x & + &  x  & \partial y \\
+ y  & \partial x & + & (x) & \partial y \\
+(y) & \partial x & + & (x) & \partial y \\
+\end{smallmatrix}$ \\
+\hline
+$f_{15}$ &
+$((~))$  &
+$0$      &
+$0$      \\
+\hline
+\end{tabular}\end{center}
+
+\subsection{Table A8.  Differential Forms Expanded on an Algebraic Basis}
+
+\begin{center}\begin{tabular}{|c|c|c|c|}
+\multicolumn{4}{c}{\textbf{Table A8.  Differential Forms Expanded on an Algebraic Basis}} \\
+\hline
+&
+$f$ &
+$\operatorname{D}f$ &
+$\operatorname{d}f$ \\
+\hline
+$f_{0}$ &
+$(~)$   &
+$0$     &
+$0$     \\
+\hline
+$\begin{smallmatrix}
+f_{1} \\
+f_{2} \\
+f_{4} \\
+f_{8} \\
+\end{smallmatrix}$
+&
+$\begin{smallmatrix}
+(x) & (y) \\
+(x) &  y  \\
+ x  & (y) \\
+ x  &  y  \\
+\end{smallmatrix}$
+&
+$\begin{smallmatrix}
+(y) & \operatorname{d}x & + &
+(x) & \operatorname{d}y & + &
+      \operatorname{d}x\ \operatorname{d}y \\
+ y  & \operatorname{d}x & + &
+(x) & \operatorname{d}y & + &
+      \operatorname{d}x\ \operatorname{d}y \\
+(y) & \operatorname{d}x & + &
+ x  & \operatorname{d}y & + &
+      \operatorname{d}x\ \operatorname{d}y \\
+ y  & \operatorname{d}x & + &
+ x  & \operatorname{d}y & + &
+      \operatorname{d}x\ \operatorname{d}y \\
+\end{smallmatrix}$
+&
+$\begin{smallmatrix}
+(y) & \operatorname{d}x & + & (x) & \operatorname{d}y \\
+ y  & \operatorname{d}x & + & (x) & \operatorname{d}y \\
+(y) & \operatorname{d}x & + &  x  & \operatorname{d}y \\
+ y  & \operatorname{d}x & + &  x  & \operatorname{d}y \\
+\end{smallmatrix}$ \\
+\hline
+$\begin{smallmatrix}
+f_{3}  \\
+f_{12} \\
+\end{smallmatrix}$
+&
+$\begin{smallmatrix}
+(x) \\
+ x  \\
+\end{smallmatrix}$
+&
+$\begin{smallmatrix}
+\operatorname{d}x \\
+\operatorname{d}x \\
+\end{smallmatrix}$
+&
+$\begin{smallmatrix}
+\operatorname{d}x \\
+\operatorname{d}x \\
+\end{smallmatrix}$ \\
+\hline
+$\begin{smallmatrix}
+f_{6} \\
+f_{9} \\
+\end{smallmatrix}$
+&
+$\begin{smallmatrix}
+ (x, & y)  \\
+((x, & y)) \\
+\end{smallmatrix}$
+&
+$\begin{smallmatrix}
+\operatorname{d}x & + & \operatorname{d}y \\
+\operatorname{d}x & + & \operatorname{d}y \\
+\end{smallmatrix}$
+&
+$\begin{smallmatrix}
+\operatorname{d}x & + & \operatorname{d}y \\
+\operatorname{d}x & + & \operatorname{d}y \\
+\end{smallmatrix}$ \\
+\hline
+$\begin{smallmatrix}
+f_{5}  \\
+f_{10} \\
+\end{smallmatrix}$
+&
+$\begin{smallmatrix}
+(y) \\
+ y  \\
+\end{smallmatrix}$
+&
+$\begin{smallmatrix}
+\operatorname{d}y \\
+\operatorname{d}y \\
+\end{smallmatrix}$
+&
+$\begin{smallmatrix}
+\operatorname{d}y \\
+\operatorname{d}y \\
+\end{smallmatrix}$ \\
+\hline
+$\begin{smallmatrix}
+f_{7}  \\
+f_{11} \\
+f_{13} \\
+f_{14} \\
+\end{smallmatrix}$
+&
+$\begin{smallmatrix}
+ (x  &  y)  \\
+ (x  & (y)) \\
+((x) &  y)  \\
+((x) & (y)) \\
+\end{smallmatrix}$
+&
+$\begin{smallmatrix}
+ y  & \operatorname{d}x & + &
+ x  & \operatorname{d}y & + &
+      \operatorname{d}x\ \operatorname{d}y \\
+(y) & \operatorname{d}x & + &
+ x  & \operatorname{d}y & + &
+      \operatorname{d}x\ \operatorname{d}y \\
+ y  & \operatorname{d}x & + &
+(x) & \operatorname{d}y & + &
+      \operatorname{d}x\ \operatorname{d}y \\
+(y) & \operatorname{d}x & + &
+(x) & \operatorname{d}y & + &
+      \operatorname{d}x\ \operatorname{d}y \\
+\end{smallmatrix}$
+&
+$\begin{smallmatrix}
+ y  & \operatorname{d}x & + &  x  & \operatorname{d}y \\
+(y) & \operatorname{d}x & + &  x  & \operatorname{d}y \\
+ y  & \operatorname{d}x & + & (x) & \operatorname{d}y \\
+(y) & \operatorname{d}x & + & (x) & \operatorname{d}y \\
+\end{smallmatrix}$ \\
+\hline
+$f_{15}$ &
+$((~))$  &
+$0$      &
+$0$      \\
+\hline
+\end{tabular}\end{center}
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,91 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Sinusoid}
+\pmcreated{2015-02-04 11:23:26}
+\pmmodified{2015-02-04 11:23:26}
+\pmowner{matte}{1858}
+\pmmodifier{pahio}{2872}
+\pmtitle{sinusoid}
+\pmrecord{12}{37101}
+\pmprivacy{1}
+\pmauthor{matte}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53A04}
+\pmrelated{Trigonometry}
+\pmrelated{DefinitionsInTrigonometry}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+
+ \usepackage{bbm}
+ \newcommand{\Z}{\mathbbmss{Z}}
+ \newcommand{\C}{\mathbbmss{C}}
+ \newcommand{\F}{\mathbbmss{F}}
+ \newcommand{\R}{\mathbbmss{R}}
+ \newcommand{\Q}{\mathbbmss{Q}}
+
+
+
+\newcommand*{\norm}[1]{\lVert #1 \rVert}
+\newcommand*{\abs}[1]{| #1 |}
+
+
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+\begin{document}
+A \emph{sinusoid} is a curve of the form
+\begin{eqnarray*}
+  \mathbb{R}&\to& \mathbb{R}^2 \\
+   t&\mapsto & (t,\,\sin{kt}),
+\end{eqnarray*}
+where $k>0$ is a parameter determining the oscillation.
+
+The basic sinusoid, the curve 
+          $$y  = \sin{x}$$
+in the $xy$-plane, oscillates periodically with the \PMlinkname{period of sine}{ComplexSineAndCosine}, $2\pi$, as $x$ increases.
+\begin{center}
+\includegraphics{sinusoid}
+\end{center}
+\begin{itemize}
+\item On the interval \,$[0,\,\frac{\pi}{2}]$,\, the curve is ascending because the \PMlinkname{derivative of sine}{ComplexSineAndCosine}, $\cos{x}$, is positive for acute angles $x$. 
+\item Consequently, on the interval \,$[\frac{\pi}{2},\,\pi]$,\,the supplement formula \,$\sin{(\pi-x)} = \sin{x}$\, tells that the sinusoid is descending.
+\item Thus we get on the whole interval \,$[0,\,\pi]$\, a cap-formed ($\smallfrown$) arc. 
+\item Because \PMlinkname{sine is an odd function}{ComplexSineAndCosine}, we have on the interval \,$[-\pi,\,0]$\, the \PMlinkescapetext{mirror image} of the cap, a cup-formed ($\smallsmile$) arc.
+\item All in all, on the period interval \,$[-\pi,\,\pi]$\, the sinusoid consists of the consecutive cup and cap, together a lying-S formed ($\backsim$) arc. 
+\item The same is repeated on each other period interval \,$[(2n\!-\!1)\pi,\,(2n\!+\!1)\pi]$\, where \,$n\in\mathbb{Z}$.
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

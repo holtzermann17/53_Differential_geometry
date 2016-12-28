@@ -1,0 +1,60 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RelationBetweenGermSpaceAndGeneralizedGermSpace}
+\pmcreated{2013-03-22 19:18:23}
+\pmmodified{2013-03-22 19:18:23}
+\pmowner{joking}{16130}
+\pmmodifier{joking}{16130}
+\pmtitle{relation between germ space and generalized germ space}
+\pmrecord{5}{42243}
+\pmprivacy{1}
+\pmauthor{joking}{16130}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53B99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Let $X$, $Y$ be a topological spaces and $x\in X$. Consider \PMlinkname{the germ space}{GermSpace} and \PMlinkname{the generalized germ space}{GermSpace} at $x$:
+$$G_x(X,Y);\ \ G_x^*(X,Y).$$
+If $f:X\to Y$ is a continuous function, then we have an induced element $[f]\in G_x^*(X,Y)$. It can be easily seen, that if $[f]=[g]\in G_x(X,Y)$, then $[f]=[g]\in G_x^*(X,Y)$. In particular we have a well-defined mapping
+$$\tau:G_x(X,Y)\to G_x^*(X,Y);$$
+$$\tau([f])=[f].$$
+
+\textbf{Proposition 1.} $\tau$ is injective.
+
+\textit{Proof.} Indeed, assume that $\tau([f])=\tau([g])$ for some $f,g:X\to Y$. Let $f':U\to Y$ and $g':U'\to Y$ be a representatives of $\tau([f])$ and $\tau([g])$ respectively. It follows, that there exists an open neighbourhood $V\subseteq X$ of $x$ such that 
+$$f_{|V}=f'_{|V}=g'_{|V}=g_{|V}.$$
+In particular $[f]=[g]$ in $G_x(X,Y)$, which completes the proof. $\square$
+
+\textbf{Proposition 2.} If $X$ is a normal space and $Y$ is a normal absolute retract (for example $Y=\mathbb{R}$), then $\tau$ is onto.
+
+\textit{Proof.} Assume that $[f]\in G_x^*(X,Y)$ for some $f:U\to Y$. Since $X$ is regular (because it is normal) then there exists an open neighbourhood $V\subseteq X$ such that the closure $\overline{V}\subseteq U$. Now since $X$ is normal and $Y$ is a normal absolute retract, then $f_{|\overline{V}}$ can be extended to entire $X$ (by the generalized Tietze extension theorem). It is easily seen that any such extension gives the same element in $G_x(X,Y)$ (and it is independent on the choice of the representative $f$) and if $F:X\to Y$ is an extension of $f_{|\overline{V}}$, then
+$$\tau([F])=[f]$$
+because $F_{|V}=f_{|V}$. This completes the proof. $\square$
+
+\textbf{Remark.} If in addition $Y$ is a topological ring (for example $Y=\mathbb{R}$), then it can be easily checked that $\tau$ preserves ring structures. In particular if $X$ is normal and $Y=\mathbb{R}$ or $Y=\mathbb{C}$, then $\tau$ is an isomorphism of rings. Also it is a good question whether the assumptions in proposition 2 can be weakened.
+%%%%%
+%%%%%
+\end{document}

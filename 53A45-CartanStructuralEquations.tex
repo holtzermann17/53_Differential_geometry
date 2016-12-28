@@ -1,0 +1,94 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CartanStructuralEquations}
+\pmcreated{2013-03-22 17:35:46}
+\pmmodified{2013-03-22 17:35:46}
+\pmowner{juanman}{12619}
+\pmmodifier{juanman}{12619}
+\pmtitle{Cartan structural equations}
+\pmrecord{12}{40010}
+\pmprivacy{1}
+\pmauthor{juanman}{12619}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53A45}
+\pmclassification{msc}{58A12}
+\pmclassification{msc}{58A10}
+%\pmkeywords{Cartan Calculus}
+%\pmkeywords{differential forms}
+%\pmkeywords{spin connection}
+%\pmkeywords{holonomy}
+%\pmkeywords{an-holonomy}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+To deduce the Cartan structural equations in a coordinated frame we are going to use the definition of the Christoffel symbols (connection coefficients) and where we always are going to use the Einstein sum convention:
+$$\nabla_{\partial_ i}\partial_j={\Gamma^s}_{ij}\partial_s$$
+and the curvature tensor 
+$$R(X,Y)Z=\nabla_X\nabla_YZ-\nabla_Y\nabla_XZ-\nabla_{[X,Y]}Z$$
+where $X,Y,Z$ are any three vector fields in a riemannian manifold $\cal{M}$ with the Levi-Civita connection $\nabla$. 
+
+First, we define through the relation $\nabla_X\partial_i={\omega^s}_i(X)\partial_s$ a set of scalar function ${\omega^s}_i$ which are easily to see that they actually are 1-forms. We observe that ${\omega^s}_i(\partial_j)={\Gamma^s}_{ij}$.
+
+They satisfy skew-symmetry rule: $\omega_{si}=-\omega_{is}$,
+which arises from the covariant constancy of the metric tensor $g_{kl}$ i.e. 
+\begin{eqnarray*}
+0&=&\nabla_{X}g_{kl}\\
+ &=&\nabla_{X}\langle\partial_k,\partial_l\rangle\\
+ &=&\langle\nabla_{X}\partial_k,\partial_l\rangle+\langle\partial_k,\nabla_{X}\partial_l\rangle\\
+ &=&\langle{\omega^s}_k(X)\partial_s,\partial_l\rangle+\langle\partial_k,{\omega^s}_l(X)\partial_s\rangle\\
+ &=&{\omega^s}_k(X)g_{sl}+{\omega^s}_l(X)g_{ks}\\
+0&=&\omega_{lk}(X)+\omega_{kl}(X)
+\end{eqnarray*}
+that last equation is valid for each vector field $X$, then $\omega_{lk}=-\omega_{kl}$.
+
+Next we define through the relation
+$$R(X,Y)\partial_i={\Omega^s}_i(X,Y)\partial_s$$
+the scalars ${\Omega^s}_i(X,Y)$ which are the so called connection 2-forms.
+That they are really 2-forms is an easy caligraphic exercise.
+
+Now by the use of the Riemann curvature tensor above we see
+\begin{eqnarray*}
+R(X,Y)\partial_i&=&\nabla_X\nabla_Y\partial_i-\nabla_Y\nabla_X\partial_i-\nabla_{[X,Y]}\partial_i\\
+    &=&\nabla_X({\omega^s}_i(Y)\partial_s)-\nabla_Y({\omega^s}_i(X)\partial_s)-{\omega^s}_i[X,Y]\partial_s\\
+    &=&X({\omega^s}_i(Y))\partial_s+{\omega^s}_i(Y)\nabla_X\partial_s-
+Y({\omega^s}_i(X)\partial_s-{\omega^s}_i(X)\nabla_Y\partial_s-{\omega^s}_i[X,Y]\partial_s\\
+    &=&X({\omega^s}_i(Y))\partial_s+{\omega^s}_i(Y){\omega^t}_s(X)\partial_t-
+Y({\omega^s}_i(X)\partial_s-{\omega^s}_i(X){\omega^t}_s(Y)\partial_t-{\omega^s}_i[X,Y]\partial_s\\
+    &=&[X({\omega^s}_i(Y))+{\omega^t}_i(Y){\omega^s}_t(X)-Y({\omega^s}_i(X))-{\omega^t}_i(X){\omega^s}_t(Y)-{\omega^s}_i[X,Y]]\partial_s\\
+{\Omega^s}_i(X,Y)\partial_s &=& [X({\omega^s}_i(Y))-Y({\omega^s}_i(X))-{\omega^s}_i[X,Y]+{\omega^s}_t(X){\omega^t}_i(Y)-{\omega^s}_t(Y){\omega^t}_i(X)]\partial_s\\
+\end{eqnarray*}
+In this last relation we recognize -in the first three terms- the exterior derivative of ${\omega^s}_i$ evaluated at $(X,Y)$ i.e.
+$$d{\omega^s}_i(X,Y)=X({\omega^s}_i(Y))-Y({\omega^s}_i(X))-{\omega^s}_i[X,Y]$$
+and in the last two terms its wedge product 
+$${\omega^s}_t\wedge{\omega^t}_i(X,Y)={\omega^s}_t(X){\omega^t}_i(Y)-{\omega^s}_t(Y){\omega^t}_i(X)$$  
+all these for any two fields $X,Y$. Hence
+$${\Omega^s}_i=d{\omega^s}_i+{\omega^s}_t\wedge{\omega^t}_i$$
+which is called the second Cartan structural equation for the coordinated frame field $\partial_i$.
+
+
+More interesting things happen in an an-holonomic basis. 
+%%%%%
+%%%%%
+\end{document}

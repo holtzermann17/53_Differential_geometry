@@ -1,0 +1,88 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CauchyInvarianceRule}
+\pmcreated{2013-03-22 19:11:33}
+\pmmodified{2013-03-22 19:11:33}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{Cauchy invariance rule}
+\pmrecord{7}{42104}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53A04}
+\pmclassification{msc}{01A45}
+\pmclassification{msc}{26B05}
+\pmsynonym{total differential of composite function}{CauchyInvarianceRule}
+\pmrelated{ChainRuleSeveralVariables}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+If\, $f(u,\,v,\,w)$,\, $u(x,\,y)$,\, $v(x,\,y)$,\, $w(x,\,y)$\, are differentiable functions and
+\begin{align}
+\bar{f}(x,\,y) \;:=\; f(u(x,\,y),\,v(x,\,y),\,w(x,\,y))
+\end{align}
+their composite function, then according to the \PMlinkid{chain rule}{2798}, we have the partial derivatives
+\begin{align}
+\begin{cases}
+\bar{f}'_x(x,\,y) \;=\; f'_u(u,\,v,\,w)\,u'_x(x,\,y)+f'_v(u,\,v,\,w)\,v'_x(x,\,y)+f'_w(u,\,v,\,w)\,w'_x(x,\,y),\\
+\bar{f}'_y(x,\,y) \;=\; f'_u(u,\,v,\,w)\,u'_y(x,\,y)+f'_v(u,\,v,\,w)\,v'_y(x,\,y)+f'_w(u,\,v,\,w)\,w'_y(x,\,y).
+\end{cases}
+\end{align}
+Multiplying these two equations by $dx$ and $dy$, respectively, and then adding them, we obtain for the total differential of the composite function the expression
+\begin{align*}
+d\bar{f}(x,\,y) &\;=\; \bar{f}'_x(x,\,y)\,dx+\bar{f}'_y(x,\,y)\,dy\\
+ &\;=\; (f'_uu'_x+f'_vv'_x+f'_ww'_x)\,dx+(f'_uu'_y+f'_vv'_y+f'_ww'_y)\,dy\\
+ &\;=\; f'_u[u'_x\,dx+u'_y\,dy]+f'_v[v'_x\,dx+v'_y\,dy]+f'_w[w'_x\,dx+w'_y\,dy].
+\end{align*}
+But the sums in the brackets \PMlinkescapetext{represent} the total differentials of the inner functions, whence we may write 
+\begin{align}
+d\bar{f}(x,\,y) \;=\; f'_u(u,\,v,\,w)\,du(x,\,y)+f'_v(u,\,v,\,w)\,dv(x,\,y)+f'_w(u,\,v,\,w)\,dw(x,\,y)
+\end{align}
+where one must still substitute\; $u := u(x,\,y),\;\, v := v(x,\,y),\;\, w := w(x,\,y)$.\, Comparing (3) with the expression of the total differential
+\begin{align}
+df(u,\,v,\,w) \;=\; f'_u(u,\,v,\,w)\,du+f'_v(u,\,v,\,w)\,dv+f'_w(u,\,v,\,w)\,dw
+\end{align}
+of the outer function, we infer the following\\
+
+\textbf{Rule.}\, The total differential of the composite function (1) is directly obtained from the expression of the total differential of the outer function, when one replaces in it the variables $u,\,v,\,w$ with the corresponding inner functions and the differentials $du,\,dv,\,dw$ with the total differentials of those inner functions.\\
+
+This rule of Cauchy is analogical for any number of inner functions and their variables.\, The rule also offers the simplest way to form the partial derivatives of the composite function.
+
+\begin{thebibliography}{8}
+\bibitem{lindelof}{\sc Ernst Lindel\"of}: {\em Differentiali- ja integralilasku
+ja sen sovellutukset II}.\, Mercatorin Kirjapaino Osakeyhti\"o, Helsinki (1932).
+\end{thebibliography} 
+
+
+
+
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,79 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CircleOfCurvature}
+\pmcreated{2013-03-22 16:59:46}
+\pmmodified{2013-03-22 16:59:46}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{circle of curvature}
+\pmrecord{13}{39277}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{53A04}
+\pmsynonym{osculating circle}{CircleOfCurvature}
+\pmrelated{CurvatureOfaCircle}
+\pmrelated{OsculatingCurve}
+\pmdefines{radius of curvature}
+\pmdefines{center of curvature}
+\pmdefines{centre of curvature}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+Let a given plane curve $\gamma$ have a definite 
+\PMlinkname{curvature}{CurvaturePlaneCurve} $\kappa$ in 
+a point $P$ of $\gamma$.\, The {\em circle of curvature} of $\gamma$ in the 
+point $P$ is the circle which has the radius $\frac{1}{|\kappa|}$ 
+and which has with the curve the common tangent in $P$ and which 
+in a neighbourhood of $P$ is on the same side as the curve.
+
+The radius $\varrho$ of the circle of curvature is the 
+{\em radius of curvature} of $\gamma$ in $P$.\, The center of the 
+circle of curvature is the {\em center of curvature} of $\gamma$ in $P$.
+
+When the curve $\gamma$ is given in the parametric form
+              $$x = x(t),\;\; y Â´= y(t),$$
+the coordinates of the center of curvature belonging to the point\, $(x,\,y)$\, 
+of the curve are
+$$\xi = x-\frac{(x'^2+y'^2)y'}{x'y''-x''y'},\quad
+\eta = y+\frac{(x'^2+y'^2)x'}{x'y''-x''y'}.$$
+
+
+\textbf{Example.}\, Since the curvature of the parabola \,$y = x^2$\, 
+in the origin is\; $-2$,\, the corresponding radius of curvature is 
+$\frac{1}{2}$ and the center of curvature\, $(0,\,\frac{1}{2})$.
+
+Furthermore, it is possible to define the circle of curvature without
+first knowing about curvature of the curve.  (In fact, using this definition,
+one could reverse the procedure and define curvature as the radius of
+the circle of curvature.)   We may define the circle of curvature 
+a point $P$ of $\gamma$ as the unique circle passing through $P$ which 
+makes a second-order contact with $\gamma$ at $P$.  
+%%%%%
+%%%%%
+\end{document}
