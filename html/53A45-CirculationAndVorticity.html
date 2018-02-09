@@ -1,0 +1,412 @@
+<!DOCTYPE html><html>
+<head>
+<title>circulation and vorticity</title>
+<!--Generated on Fri Feb  9 22:25:22 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">circulation and vorticity</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">circulation and vorticity</p>
+</div>
+<section id="S0.SS1" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">0.1 </span>Introduction</h2>
+
+<div id="S0.SS1.p1" class="ltx_para">
+<p class="ltx_p">Vortex theory is essentially due to Sir W. Thomson, Lord Kelvin <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib1" title="" class="ltx_ref">1</a>]</cite> and H. v. Helmholtz <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib3" title="" class="ltx_ref">3</a>]</cite>, although d’Alembert, Euler, Cauchy, Lagrange, Hankel , Hadamard and Stokes also contibuted important ideas. A useful kinematic notion in many problems of hydrodynamics is that of <span class="ltx_text ltx_font_italic">circulation</span> and <span class="ltx_text ltx_font_italic">vorticity</span>. These concepts are usually related through the Stokes’ theorem. There are also many purposes for which it is more convenient to think in terms of circulation and vorticity rather than in terms of the velocity field, despite the simpler physical character of the latter quantity. It also proves to be possible and useful, in many important cases of fluid flow, to separate the flow field into two regions with different properties, one of them being characterized by the vorticity and being approximately zero everywhere. It is well-known that such concepts are associated with viscous fluids <span class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">1</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">1</sup>It turns out that inside the <em class="ltx_emph ltx_font_italic">boundary layer</em> viscous effects take place, and therefore the flow is rotational (<math id="S0.SS1.p1.m1" class="ltx_Math" alttext="\bm{\omega}=\nabla\times\mathbf{v}\neq\mathbf{0}" display="inline"><mrow><mi>𝝎</mi><mo>=</mo><mrow><mo>∇</mo><mo>×</mo><mi>𝐯</mi></mrow><mo>≠</mo><mn>𝟎</mn></mrow></math>) whereas outside of it the flow is irrotational, i.e. the flow is <em class="ltx_emph ltx_font_italic">potential</em>(<math id="S0.SS1.p1.m2" class="ltx_Math" alttext="\bm{\omega}=\nabla\times\mathbf{v}\equiv\mathbf{0}\implies\mathbf{v}=\nabla\phi" display="inline"><mrow><mi>𝝎</mi><mo>=</mo><mrow><mo>∇</mo><mo>×</mo><mi>𝐯</mi></mrow><mo>≡</mo><mn>𝟎</mn><mo>⟹</mo><mi>𝐯</mi><mo>=</mo><mrow><mo>∇</mo><mo>⁡</mo><mi>ϕ</mi></mrow></mrow></math>, where the scalar function <math id="S0.SS1.p1.m3" class="ltx_Math" alttext="\phi=\phi(\mathbf{x},t)" display="inline"><mrow><mi>ϕ</mi><mo>=</mo><mrow><mi>ϕ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝐱</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> is the <em class="ltx_emph ltx_font_italic">potential</em> of the velocity field)</span></span></span> but we will only treat the purely kinematical consequences.</p>
+</div>
+</section>
+<section id="S0.SS2" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">0.2 </span>Circulation</h2>
+
+<div id="S0.SS2.p1" class="ltx_para">
+<p class="ltx_p">Let us consider a contractible closed curve embedded in the fluid flow that we shall call a <em class="ltx_emph ltx_font_italic">circuit</em><math id="S0.SS2.p1.m1" class="ltx_Math" alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math> and described in a counterclockwise sense. Each arc element can be considered as an infinitesimal vector <math id="S0.SS2.p1.m2" class="ltx_Math" alttext="d\mathbf{x}" display="inline"><mrow><mi>d</mi><mo>⁢</mo><mi>𝐱</mi></mrow></math> which is tangent to <math id="S0.SS2.p1.m3" class="ltx_Math" alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math>. As usual, <math id="S0.SS2.p1.m4" class="ltx_Math" alttext="\mathbf{v}=\mathbf{v}(\mathbf{x},t)" display="inline"><mrow><mi>𝐯</mi><mo>=</mo><mrow><mi>𝐯</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝐱</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> represents the instantaneous velocity field at each point. Then, if the scalar product of <math id="S0.SS2.p1.m5" class="ltx_Math" alttext="\mathbf{v}" display="inline"><mi>𝐯</mi></math> and <math id="S0.SS2.p1.m6" class="ltx_Math" alttext="d\mathbf{x}" display="inline"><mrow><mi>d</mi><mo>⁢</mo><mi>𝐱</mi></mrow></math> is integrated around the circuit, the line integral</p>
+<table id="S0.E1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E1.m1" class="ltx_Math" alttext="\Gamma=\oint_{\mathcal{C}}\mathbf{v}\cdot d\mathbf{x}=\oint_{\mathcal{C}}%
+\lVert\mathbf{v}\rVert\cos(\mathbf{v},d\mathbf{x})dx," display="block"><mrow><mrow><mi mathvariant="normal">Γ</mi><mo>=</mo><mrow><msub><mo largeop="true" symmetric="true">∮</mo><mi class="ltx_font_mathcaligraphic">𝒞</mi></msub><mrow><mi>𝐯</mi><mo>⋅</mo><mrow><mo>𝑑</mo><mi>𝐱</mi></mrow></mrow></mrow><mo>=</mo><mrow><msub><mo largeop="true" symmetric="true">∮</mo><mi class="ltx_font_mathcaligraphic">𝒞</mi></msub><mrow><mrow><mo fence="true" stretchy="false">∥</mo><mi>𝐯</mi><mo fence="true" stretchy="false">∥</mo></mrow><mo>⁢</mo><mrow><mi>cos</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>𝐯</mi><mo>,</mo><mrow><mi>d</mi><mo>⁢</mo><mi>𝐱</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><mi>x</mi></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="S0.SS2.p1.m7" class="ltx_Math" alttext="dx=\lVert d\mathbf{x}\rVert" display="inline"><mrow><mrow><mi>d</mi><mo>⁢</mo><mi>x</mi></mrow><mo>=</mo><mrow><mo fence="true" stretchy="false">∥</mo><mrow><mi>d</mi><mo>⁢</mo><mi>𝐱</mi></mrow><mo fence="true" stretchy="false">∥</mo></mrow></mrow></math>, is called the <em class="ltx_emph ltx_font_italic">circulation</em> around <math id="S0.SS2.p1.m8" class="ltx_Math" alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math>. All values of <math id="S0.SS2.p1.m9" class="ltx_Math" alttext="\mathbf{v}" display="inline"><mi>𝐯</mi></math> are to be taken for the same instant <math id="S0.SS2.p1.m10" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math>. Although evident because the additiveness of integral (1) defining circulation, results illustrative to show that circulation is additive. Suppose we cut the circuit <math id="S0.SS2.p1.m11" class="ltx_Math" alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math> by some path <math id="S0.SS2.p1.m12" class="ltx_Math" alttext="AB" display="inline"><mrow><mi>A</mi><mo>⁢</mo><mi>B</mi></mrow></math> and give the two new circuits <math id="S0.SS2.p1.m13" class="ltx_Math" alttext="AB\mathcal{C}_{1}A" display="inline"><mrow><mi>A</mi><mo>⁢</mo><mi>B</mi><mo>⁢</mo><msub><mi class="ltx_font_mathcaligraphic">𝒞</mi><mn>1</mn></msub><mo>⁢</mo><mi>A</mi></mrow></math> with circulation <math id="S0.SS2.p1.m14" class="ltx_Math" alttext="\Gamma_{1}" display="inline"><msub><mi mathvariant="normal">Γ</mi><mn>1</mn></msub></math> and <math id="S0.SS2.p1.m15" class="ltx_Math" alttext="BA\mathcal{C}_{2}B" display="inline"><mrow><mi>B</mi><mo>⁢</mo><mi>A</mi><mo>⁢</mo><msub><mi class="ltx_font_mathcaligraphic">𝒞</mi><mn>2</mn></msub><mo>⁢</mo><mi>B</mi></mrow></math> with circulation <math id="S0.SS2.p1.m16" class="ltx_Math" alttext="\Gamma_{2}" display="inline"><msub><mi mathvariant="normal">Γ</mi><mn>2</mn></msub></math>, both the same sense as <math id="S0.SS2.p1.m17" class="ltx_Math" alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math>. Thus (1) shows that</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\Gamma_{1}+\Gamma_{2}=\oint_{AB\mathcal{C}_{1}}\mathbf{v}\cdot d\mathbf{x}+%
+\oint_{BA\mathcal{C}_{2}}\mathbf{v}\cdot d\mathbf{x}=\int_{AB}\mathbf{v}\cdot d%
+\mathbf{x}+\int_{\mathcal{C}_{1}}\mathbf{v}\cdot d\mathbf{x}+\int_{BA}\mathbf{%
+v}\cdot d\mathbf{x}+\int_{\mathcal{C}_{2}}\mathbf{v}\cdot d\mathbf{x}," display="block"><mrow><mrow><mrow><msub><mi mathvariant="normal">Γ</mi><mn>1</mn></msub><mo>+</mo><msub><mi mathvariant="normal">Γ</mi><mn>2</mn></msub></mrow><mo>=</mo><mrow><mrow><msub><mo largeop="true" symmetric="true">∮</mo><mrow><mi>A</mi><mo>⁢</mo><mi>B</mi><mo>⁢</mo><msub><mi class="ltx_font_mathcaligraphic">𝒞</mi><mn>1</mn></msub></mrow></msub><mrow><mi>𝐯</mi><mo>⋅</mo><mrow><mo>𝑑</mo><mi>𝐱</mi></mrow></mrow></mrow><mo>+</mo><mrow><msub><mo largeop="true" symmetric="true">∮</mo><mrow><mi>B</mi><mo>⁢</mo><mi>A</mi><mo>⁢</mo><msub><mi class="ltx_font_mathcaligraphic">𝒞</mi><mn>2</mn></msub></mrow></msub><mrow><mi>𝐯</mi><mo>⋅</mo><mrow><mo>𝑑</mo><mi>𝐱</mi></mrow></mrow></mrow></mrow><mo>=</mo><mrow><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mrow><mi>A</mi><mo>⁢</mo><mi>B</mi></mrow></msub><mrow><mi>𝐯</mi><mo>⋅</mo><mrow><mo>𝑑</mo><mi>𝐱</mi></mrow></mrow></mrow><mo>+</mo><mrow><msub><mo largeop="true" symmetric="true">∫</mo><msub><mi class="ltx_font_mathcaligraphic">𝒞</mi><mn>1</mn></msub></msub><mrow><mi>𝐯</mi><mo>⋅</mo><mrow><mo>𝑑</mo><mi>𝐱</mi></mrow></mrow></mrow><mo>+</mo><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mrow><mi>B</mi><mo>⁢</mo><mi>A</mi></mrow></msub><mrow><mi>𝐯</mi><mo>⋅</mo><mrow><mo>𝑑</mo><mi>𝐱</mi></mrow></mrow></mrow><mo>+</mo><mrow><msub><mo largeop="true" symmetric="true">∫</mo><msub><mi class="ltx_font_mathcaligraphic">𝒞</mi><mn>2</mn></msub></msub><mrow><mi>𝐯</mi><mo>⋅</mo><mrow><mo>𝑑</mo><mi>𝐱</mi></mrow></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">cancelling the integrals along <math id="S0.SS2.p1.m18" class="ltx_Math" alttext="AB" display="inline"><mrow><mi>A</mi><mo>⁢</mo><mi>B</mi></mrow></math> and <math id="S0.SS2.p1.m19" class="ltx_Math" alttext="BA" display="inline"><mrow><mi>B</mi><mo>⁢</mo><mi>A</mi></mrow></math> since <math id="S0.SS2.p1.m20" class="ltx_Math" alttext="\mathbf{v}" display="inline"><mi>𝐯</mi></math> is the same and <math id="S0.SS2.p1.m21" class="ltx_Math" alttext="d\mathbf{x}" display="inline"><mrow><mi>d</mi><mo>⁢</mo><mi>𝐱</mi></mrow></math> is opposite on these two
+paths. Thus,</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\Gamma_{1}+\Gamma_{2}=\int_{\mathcal{C}_{1}}\mathbf{v}\cdot d\mathbf{x}+\int_{%
+\mathcal{C}_{2}}\mathbf{v}\cdot d\mathbf{x}\equiv\oint_{\mathcal{C}}\mathbf{v}%
+\cdot d\mathbf{x}," display="block"><mrow><mrow><mrow><msub><mi mathvariant="normal">Γ</mi><mn>1</mn></msub><mo>+</mo><msub><mi mathvariant="normal">Γ</mi><mn>2</mn></msub></mrow><mo>=</mo><mrow><mrow><msub><mo largeop="true" symmetric="true">∫</mo><msub><mi class="ltx_font_mathcaligraphic">𝒞</mi><mn>1</mn></msub></msub><mrow><mi>𝐯</mi><mo>⋅</mo><mrow><mo>𝑑</mo><mi>𝐱</mi></mrow></mrow></mrow><mo>+</mo><mrow><msub><mo largeop="true" symmetric="true">∫</mo><msub><mi class="ltx_font_mathcaligraphic">𝒞</mi><mn>2</mn></msub></msub><mrow><mi>𝐯</mi><mo>⋅</mo><mrow><mo>𝑑</mo><mi>𝐱</mi></mrow></mrow></mrow></mrow><mo>≡</mo><mrow><msub><mo largeop="true" symmetric="true">∮</mo><mi class="ltx_font_mathcaligraphic">𝒞</mi></msub><mrow><mi>𝐯</mi><mo>⋅</mo><mrow><mo>𝑑</mo><mi>𝐱</mi></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">exactly the inegral around <math id="S0.SS2.p1.m22" class="ltx_Math" alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math>, and hence
+</p>
+<table id="S0.E2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E2.m1" class="ltx_Math" alttext="\Gamma=\Gamma_{1}+\Gamma_{2}." display="block"><mrow><mrow><mi mathvariant="normal">Γ</mi><mo>=</mo><mrow><msub><mi mathvariant="normal">Γ</mi><mn>1</mn></msub><mo>+</mo><msub><mi mathvariant="normal">Γ</mi><mn>2</mn></msub></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2)</span></td>
+</tr>
+</table>
+<p class="ltx_p">We may generalize (2). Let <math id="S0.SS2.p1.m23" class="ltx_Math" alttext="\mathcal{A}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒜</mi></math> be any open two-sided surface spanning <math id="S0.SS2.p1.m24" class="ltx_Math" alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math> and consider the side where the sense of description of <math id="S0.SS2.p1.m25" class="ltx_Math" alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math> appears counterclockwise, and normals to <math id="S0.SS2.p1.m26" class="ltx_Math" alttext="\mathcal{A}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒜</mi></math> will always be drawn out from this side. On <math id="S0.SS2.p1.m27" class="ltx_Math" alttext="\mathcal{A}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒜</mi></math> draw two sets of orthogonal curves forming a lattice and each generated mesh is a closed circuit, the sense of description being taken counterclockwise as viewed from the normal to the surface; its circulation denoted by <math id="S0.SS2.p1.m28" class="ltx_Math" alttext="\Gamma_{i},\;i=1,\cdots,m" display="inline"><mrow><mrow><mrow><msub><mi mathvariant="normal">Γ</mi><mi>i</mi></msub><mo rspace="5.3pt">,</mo><mi>i</mi></mrow><mo>=</mo><mn>1</mn></mrow><mo>,</mo><mrow><mi mathvariant="normal">⋯</mi><mo>,</mo><mi>m</mi></mrow></mrow></math>. By iterated application of (2) we obtain</p>
+<table id="S0.E3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E3.m1" class="ltx_Math" alttext="\Gamma=\sum_{i=1}^{m}\Gamma_{i}," display="block"><mrow><mrow><mi mathvariant="normal">Γ</mi><mo>=</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>m</mi></munderover><msub><mi mathvariant="normal">Γ</mi><mi>i</mi></msub></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3)</span></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="S0.SS2.p1.m29" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> is the number of meshes in the lattice. Increasing the number of orthogonal curves in such a way that the lattice becomes more dense and all meshes become smaller, increasing so the number of terms in (3). Let a function
+<math id="S0.SS2.p1.m30" class="ltx_Math" alttext="\gamma=\gamma(\mathbf{x},t)" display="inline"><mrow><mi>γ</mi><mo>=</mo><mrow><mi>γ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝐱</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> be defined at each point <math id="S0.SS2.p1.m31" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> of <math id="S0.SS2.p1.m32" class="ltx_Math" alttext="\mathcal{A}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒜</mi></math> as the limit of the quotient between the
+circulation along the contour of a mesh around <math id="S0.SS2.p1.m33" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> and the area of the mesh, becoming all of these one steadily smaller in all directions. So that for an arbitrary mesh the circulation is <math id="S0.SS2.p1.m34" class="ltx_Math" alttext="\Gamma_{i}\thickapprox\gamma_{i}d\mathfrak{a}_{i}" display="inline"><mrow><msub><mi mathvariant="normal">Γ</mi><mi>i</mi></msub><mo>≈</mo><mrow><msub><mi>γ</mi><mi>i</mi></msub><mo>⁢</mo><mi>d</mi><mo>⁢</mo><msub><mi>𝔞</mi><mi>i</mi></msub></mrow></mrow></math>, where <math id="S0.SS2.p1.m35" class="ltx_Math" alttext="\gamma_{i}" display="inline"><msub><mi>γ</mi><mi>i</mi></msub></math> is the value of <math id="S0.SS2.p1.m36" class="ltx_Math" alttext="\gamma" display="inline"><mi>γ</mi></math> at some point in the mesh, and <math id="S0.SS2.p1.m37" class="ltx_Math" alttext="d\mathfrak{a}_{i}" display="inline"><mrow><mi>d</mi><mo>⁢</mo><msub><mi>𝔞</mi><mi>i</mi></msub></mrow></math> its respective area. Thus, as the number of terms increases indefinitely, the right-hand member of (3) yields the surface integral of <math id="S0.SS2.p1.m38" class="ltx_Math" alttext="\gamma" display="inline"><mi>γ</mi></math> over <math id="S0.SS2.p1.m39" class="ltx_Math" alttext="\mathcal{A}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒜</mi></math>, i.e.</p>
+<table id="S0.E4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E4.m1" class="ltx_Math" alttext="\Gamma=\int_{\mathcal{A}}\gamma\,d\mathfrak{a}." display="block"><mrow><mrow><mi mathvariant="normal">Γ</mi><mo>=</mo><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mi class="ltx_font_mathcaligraphic">𝒜</mi></msub><mrow><mpadded width="+1.7pt"><mi>γ</mi></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>𝔞</mi></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4)</span></td>
+</tr>
+</table>
+<p class="ltx_p">From the definition of <math id="S0.SS2.p1.m40" class="ltx_Math" alttext="\gamma" display="inline"><mi>γ</mi></math>, we conclude that the value of this function at any point <math id="S0.SS2.p1.m41" class="ltx_Math" alttext="\mathbf{x}" display="inline"><mi>𝐱</mi></math> of <math id="S0.SS2.p1.m42" class="ltx_Math" alttext="\mathcal{A}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒜</mi></math>
+depends upon the distribution of the velocity <math id="S0.SS2.p1.m43" class="ltx_Math" alttext="\mathbf{v}=\mathbf{v}(\mathbf{x},t)" display="inline"><mrow><mi>𝐯</mi><mo>=</mo><mrow><mi>𝐯</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝐱</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> in the neighborhood of this point and that <math id="S0.SS2.p1.m44" class="ltx_Math" alttext="\gamma=\nabla\times\mathbf{v}\cdot\mathbf{n}" display="inline"><mrow><mi>γ</mi><mo>=</mo><mrow><mrow><mo>∇</mo><mo>×</mo><mi>𝐯</mi></mrow><mo>⋅</mo><mi>𝐧</mi></mrow></mrow></math>, <span class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">2</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">2</sup>This can be easily seen if we choose a mesh centered in a neighborhood of <math id="S0.SS2.p1.m45" class="ltx_Math" alttext="\mathbf{x}" display="inline"><mi>𝐱</mi></math> equipped with Cartesian local coordinates <math id="S0.SS2.p1.m46" class="ltx_Math" alttext="\{x_{i}\}" display="inline"><mrow><mo stretchy="false">{</mo><msub><mi>x</mi><mi>i</mi></msub><mo stretchy="false">}</mo></mrow></math>, and impose the sufficient surface
+regularity at that point. Thus the circulation, around that mesh located in the local plane <math id="S0.SS2.p1.m47" class="ltx_Math" alttext="\{x_{1},x_{2}\}" display="inline"><mrow><mo stretchy="false">{</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>x</mi><mn>2</mn></msub><mo stretchy="false">}</mo></mrow></math>, is given by (comma denotes partial differentiation respect to the indicated component)
+
+<span id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<span class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<span class="ltx_eqn_cell ltx_eqn_center_padleft"></span>
+<span class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="d\Gamma=(v_{2,1}-v_{1,2})dx_{1}dx_{2}." display="block"><mrow><mrow><mrow><mi>d</mi><mo>⁢</mo><mi mathvariant="normal">Γ</mi></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><msub><mi>v</mi><mrow><mn>2</mn><mo>,</mo><mn>1</mn></mrow></msub><mo>-</mo><msub><mi>v</mi><mrow><mn>1</mn><mo>,</mo><mn>2</mn></mrow></msub></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>d</mi><mo>⁢</mo><msub><mi>x</mi><mn>1</mn></msub><mo>⁢</mo><mi>d</mi><mo>⁢</mo><msub><mi>x</mi><mn>2</mn></msub></mrow></mrow><mo>.</mo></mrow></math></span>
+<span class="ltx_eqn_cell ltx_eqn_center_padright"></span></span>
+</span>
+Since <math id="S0.SS2.p1.m48" class="ltx_Math" alttext="dx_{1}dx_{2}" display="inline"><mrow><mi>d</mi><mo>⁢</mo><msub><mi>x</mi><mn>1</mn></msub><mo>⁢</mo><mi>d</mi><mo>⁢</mo><msub><mi>x</mi><mn>2</mn></msub></mrow></math> is the area of this mesh, the function <math id="S0.SS2.p1.m49" class="ltx_Math" alttext="\gamma" display="inline"><mi>γ</mi></math> must have the value <math id="S0.SS2.p1.m50" class="ltx_Math" alttext="(v_{2,1}-v_{1,2})" display="inline"><mrow><mo stretchy="false">(</mo><mrow><msub><mi>v</mi><mrow><mn>2</mn><mo>,</mo><mn>1</mn></mrow></msub><mo>-</mo><msub><mi>v</mi><mrow><mn>1</mn><mo>,</mo><mn>2</mn></mrow></msub></mrow><mo stretchy="false">)</mo></mrow></math> at <math id="S0.SS2.p1.m51" class="ltx_Math" alttext="\mathbf{x}" display="inline"><mi>𝐱</mi></math>. But this quantity is exactly the <math id="S0.SS2.p1.m52" class="ltx_Math" alttext="x_{3}" display="inline"><msub><mi>x</mi><mn>3</mn></msub></math>-component of <math id="S0.SS2.p1.m53" class="ltx_Math" alttext="\nabla\times\mathbf{v}" display="inline"><mrow><mo>∇</mo><mo>×</mo><mi>𝐯</mi></mrow></math>, defined as
+
+<span id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<span class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<span class="ltx_eqn_cell ltx_eqn_center_padleft"></span>
+<span class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="\nabla\times\mathbf{v}=(v_{3,2}-v_{2,3},\,v_{1,3}-v_{3,1},\,v_{1,2}-v_{2,1})." display="block"><mrow><mrow><mrow><mo>∇</mo><mo>×</mo><mi>𝐯</mi></mrow><mo>=</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>v</mi><mrow><mn>3</mn><mo>,</mo><mn>2</mn></mrow></msub><mo>-</mo><msub><mi>v</mi><mrow><mn>2</mn><mo>,</mo><mn>3</mn></mrow></msub></mrow><mo rspace="4.2pt">,</mo><mrow><msub><mi>v</mi><mrow><mn>1</mn><mo>,</mo><mn>3</mn></mrow></msub><mo>-</mo><msub><mi>v</mi><mrow><mn>3</mn><mo>,</mo><mn>1</mn></mrow></msub></mrow><mo rspace="4.2pt">,</mo><mrow><msub><mi>v</mi><mrow><mn>1</mn><mo>,</mo><mn>2</mn></mrow></msub><mo>-</mo><msub><mi>v</mi><mrow><mn>2</mn><mo>,</mo><mn>1</mn></mrow></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>.</mo></mrow></math></span>
+<span class="ltx_eqn_cell ltx_eqn_center_padright"></span></span>
+</span>
+This definition is valid in any rectangular right-handed coordinate system. Since the <math id="S0.SS2.p1.m54" class="ltx_Math" alttext="x_{3}" display="inline"><msub><mi>x</mi><mn>3</mn></msub></math>-direction is here that of the normal at <math id="S0.SS2.p1.m55" class="ltx_Math" alttext="\mathbf{x}" display="inline"><mi>𝐱</mi></math> to the surface <math id="S0.SS2.p1.m56" class="ltx_Math" alttext="\mathcal{A}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒜</mi></math>, the result in question follows.</span></span></span> where <math id="S0.SS2.p1.m57" class="ltx_Math" alttext="\mathbf{n}" display="inline"><mi>𝐧</mi></math> is the outward normal to the surface <math id="S0.SS2.p1.m58" class="ltx_Math" alttext="\mathcal{A}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒜</mi></math> at an arbitrary point <math id="S0.SS2.p1.m59" class="ltx_Math" alttext="\mathbf{x}" display="inline"><mi>𝐱</mi></math>. From this fact and by using (1) and (4) we have</p>
+<table id="S0.E5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E5.m1" class="ltx_Math" alttext="\oint_{\mathcal{C}}\mathbf{v}\cdot d\mathbf{x}=\int_{\mathcal{A}}\nabla\times%
+\mathbf{v}\cdot\mathbf{n}\,d\mathfrak{a}," display="block"><mrow><mrow><mrow><msub><mo largeop="true" symmetric="true">∮</mo><mi class="ltx_font_mathcaligraphic">𝒞</mi></msub><mrow><mi>𝐯</mi><mo>⋅</mo><mrow><mo>𝑑</mo><mi>𝐱</mi></mrow></mrow></mrow><mo>=</mo><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mi class="ltx_font_mathcaligraphic">𝒜</mi></msub><mrow><mrow><mrow><mo>∇</mo><mo>×</mo><mi>𝐯</mi></mrow><mo>⋅</mo><mpadded width="+1.7pt"><mi>𝐧</mi></mpadded></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><mi>𝔞</mi></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5)</span></td>
+</tr>
+</table>
+<p class="ltx_p">which is known as Stokes’ theorem. It states that the circulation along any circuit is given by
+the surface integral of <math id="S0.SS2.p1.m60" class="ltx_Math" alttext="\nabla\times\mathbf{v}" display="inline"><mrow><mo>∇</mo><mo>×</mo><mi>𝐯</mi></mrow></math> over any surface spanning the circuit. It is
+clear that (5) can be applied only if it is possible to find some surface that has the given
+circuit as rim and on which <math id="S0.SS2.p1.m61" class="ltx_Math" alttext="\nabla\times\mathbf{v}" display="inline"><mrow><mo>∇</mo><mo>×</mo><mi>𝐯</mi></mrow></math> is defined everywhere. Thus, in the case
+of a fluid flow circulating around an infinite cylindrical obstacle, no such surface can be
+found for any circuit surrounds the cylinder. However, the Stokes’ theorem can be yet applied if we
+choose two circuits <math id="S0.SS2.p1.m62" class="ltx_Math" alttext="\mathcal{C}_{1}" display="inline"><msub><mi class="ltx_font_mathcaligraphic">𝒞</mi><mn>1</mn></msub></math> and <math id="S0.SS2.p1.m63" class="ltx_Math" alttext="\mathcal{C}_{2}" display="inline"><msub><mi class="ltx_font_mathcaligraphic">𝒞</mi><mn>2</mn></msub></math> about the obstacle (no intersecting
+themselves) and by making a cut <math id="S0.SS2.p1.m64" class="ltx_Math" alttext="AB" display="inline"><mrow><mi>A</mi><mo>⁢</mo><mi>B</mi></mrow></math>, it can be combined into a single circuit for which a
+suitable spanning surface exists. Then the left side of (5) becomes <math id="S0.SS2.p1.m65" class="ltx_Math" alttext="(\Gamma_{1}-\Gamma_{2})" display="inline"><mrow><mo stretchy="false">(</mo><mrow><msub><mi mathvariant="normal">Γ</mi><mn>1</mn></msub><mo>-</mo><msub><mi mathvariant="normal">Γ</mi><mn>2</mn></msub></mrow><mo stretchy="false">)</mo></mrow></math>.
+<span class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">3</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">3</sup>The contributions from <math id="S0.SS2.p1.m66" class="ltx_Math" alttext="AB" display="inline"><mrow><mi>A</mi><mo>⁢</mo><mi>B</mi></mrow></math> and <math id="S0.SS2.p1.m67" class="ltx_Math" alttext="BA" display="inline"><mrow><mi>B</mi><mo>⁢</mo><mi>A</mi></mrow></math> cancel.</span></span></span> In particular, if the flow is <em class="ltx_emph ltx_markedasmath ltx_font_italic">irrotational</em> (a term introduced by Lord Kelvin) in its domain, i.e. <math id="S0.SS2.p1.m69" class="ltx_Math" alttext="\nabla\times\mathbf{v}\equiv\mathbf{0}" display="inline"><mrow><mrow><mo>∇</mo><mo>×</mo><mi>𝐯</mi></mrow><mo>≡</mo><mn>𝟎</mn></mrow></math>, then <math id="S0.SS2.p1.m70" class="ltx_Math" alttext="\Gamma_{1}=\Gamma_{2}" display="inline"><mrow><msub><mi mathvariant="normal">Γ</mi><mn>1</mn></msub><mo>=</mo><msub><mi mathvariant="normal">Γ</mi><mn>2</mn></msub></mrow></math>. So that the circulation is equal for every circuit surrounding the obstacle.</p>
+</div>
+</section>
+<section id="S0.SS3" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">0.3 </span>Vorticity</h2>
+
+<div id="S0.SS3.p1" class="ltx_para">
+<p class="ltx_p">The analysis of the relative motion near a point of the fluid outcomes that the force exerted by one portion of fluid on an adjacent portion depends on the way in which the fluid is being deformed by the motion, and it is necessary as a preliminary to dynamical considerations, to make an analysis of the character of the motion in the neighborhood of any point. That analysis it has to do with the study of local rate of strain and rate of rotation. Thus, the velocity field of the fluid at the place <math id="S0.SS3.p1.m1" class="ltx_Math" alttext="\mathbf{x}" display="inline"><mi>𝐱</mi></math> and time <math id="S0.SS3.p1.m2" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math> is given by <math id="S0.SS3.p1.m3" class="ltx_Math" alttext="\mathbf{v}=\mathbf{v}(\mathbf{x},t)" display="inline"><mrow><mi>𝐯</mi><mo>=</mo><mrow><mi>𝐯</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝐱</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> and the <em class="ltx_emph ltx_font_italic">simultaneous</em> velocity at a neighboring position <math id="S0.SS3.p1.m4" class="ltx_Math" alttext="\mathbf{x}+\delta\mathbf{x}" display="inline"><mrow><mi>𝐱</mi><mo>+</mo><mrow><mi>δ</mi><mo>⁢</mo><mi>𝐱</mi></mrow></mrow></math> is <math id="S0.SS3.p1.m5" class="ltx_Math" alttext="\mathbf{v}+\delta\mathbf{v}" display="inline"><mrow><mi>𝐯</mi><mo>+</mo><mrow><mi>δ</mi><mo>⁢</mo><mi>𝐯</mi></mrow></mrow></math>. Thus, for Cartesian coordinates,</p>
+<table id="S0.E6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E6.m1" class="ltx_Math" alttext="\delta v_{i}=\frac{\partial v_{i}}{\partial x_{j}}\delta x_{j}," display="block"><mrow><mrow><mrow><mi>δ</mi><mo>⁢</mo><msub><mi>v</mi><mi>i</mi></msub></mrow><mo>=</mo><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>v</mi><mi>i</mi></msub></mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mi>j</mi></msub></mrow></mfrac><mo>⁢</mo><mi>δ</mi><mo>⁢</mo><msub><mi>x</mi><mi>j</mi></msub></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(6)</span></td>
+</tr>
+</table>
+<p class="ltx_p">where the usual summation index convention applies here and that equation is correct to the first order in the small distance <math id="S0.SS3.p1.m6" class="ltx_Math" alttext="\delta\mathbf{x}" display="inline"><mrow><mi>δ</mi><mo>⁢</mo><mi>𝐱</mi></mrow></math> between the two points located in the cited neighborhood. The kinematical character of the relative velocity <math id="S0.SS3.p1.m7" class="ltx_Math" alttext="\delta\mathbf{v}" display="inline"><mrow><mi>δ</mi><mo>⁢</mo><mi>𝐯</mi></mrow></math>, considered as a linear function of <math id="S0.SS3.p1.m8" class="ltx_Math" alttext="\delta\mathbf{x}" display="inline"><mrow><mi>δ</mi><mo>⁢</mo><mi>𝐱</mi></mrow></math>, can be recognized by decomposing the velocity gradient <math id="S0.SS3.p1.m9" class="ltx_Math" alttext="\partial v_{i}/\partial x_{j}" display="inline"><mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>v</mi><mi>i</mi></msub></mrow><mo>/</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mi>j</mi></msub></mrow></mrow></math>, which is a tensor of second rank, into parts which are symmetrical and skew-symmetrical in the indices <math id="S0.SS3.p1.m10" class="ltx_Math" alttext="i" display="inline"><mi>i</mi></math> and <math id="S0.SS3.p1.m11" class="ltx_Math" alttext="j" display="inline"><mi>j</mi></math>. That is,</p>
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="\delta v_{i}=\delta v_{i}^{(d)}+\delta v_{i}^{(w)}," display="block"><mrow><mrow><mrow><mi>δ</mi><mo>⁢</mo><msub><mi>v</mi><mi>i</mi></msub></mrow><mo>=</mo><mrow><mrow><mi>δ</mi><mo>⁢</mo><msubsup><mi>v</mi><mi>i</mi><mrow><mo stretchy="false">(</mo><mi>d</mi><mo stretchy="false">)</mo></mrow></msubsup></mrow><mo>+</mo><mrow><mi>δ</mi><mo>⁢</mo><msubsup><mi>v</mi><mi>i</mi><mrow><mo stretchy="false">(</mo><mi>w</mi><mo stretchy="false">)</mo></mrow></msubsup></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where</p>
+<table id="S0.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex6.m1" class="ltx_Math" alttext="\delta v_{i}^{(d)}=d_{ij}\delta x_{j},\qquad\delta v_{i}^{(w)}=w_{ij}\delta x_%
+{j}," display="block"><mrow><mrow><mrow><mrow><mi>δ</mi><mo>⁢</mo><msubsup><mi>v</mi><mi>i</mi><mrow><mo stretchy="false">(</mo><mi>d</mi><mo stretchy="false">)</mo></mrow></msubsup></mrow><mo>=</mo><mrow><msub><mi>d</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo>⁢</mo><mi>δ</mi><mo>⁢</mo><msub><mi>x</mi><mi>j</mi></msub></mrow></mrow><mo rspace="22.5pt">,</mo><mrow><mrow><mi>δ</mi><mo>⁢</mo><msubsup><mi>v</mi><mi>i</mi><mrow><mo stretchy="false">(</mo><mi>w</mi><mo stretchy="false">)</mo></mrow></msubsup></mrow><mo>=</mo><mrow><msub><mi>w</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo>⁢</mo><mi>δ</mi><mo>⁢</mo><msub><mi>x</mi><mi>j</mi></msub></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and</p>
+<table id="S0.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex7.m1" class="ltx_Math" alttext="d_{ij}=\frac{1}{2}\bigg{(}\frac{\partial v_{i}}{\partial x_{j}}+\frac{\partial
+v%
+_{j}}{\partial x_{i}}\bigg{)},\qquad w_{ij}=\frac{1}{2}\bigg{(}\frac{\partial v%
+_{i}}{\partial x_{j}}-\frac{\partial v_{j}}{\partial x_{i}}\bigg{)}." display="block"><mrow><mrow><mrow><msub><mi>d</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo>=</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mrow><mo maxsize="210%" minsize="210%">(</mo><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>v</mi><mi>i</mi></msub></mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mi>j</mi></msub></mrow></mfrac><mo>+</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>v</mi><mi>j</mi></msub></mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mi>i</mi></msub></mrow></mfrac></mrow><mo maxsize="210%" minsize="210%">)</mo></mrow></mrow></mrow><mo rspace="22.5pt">,</mo><mrow><msub><mi>w</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo>=</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mrow><mo maxsize="210%" minsize="210%">(</mo><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>v</mi><mi>i</mi></msub></mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mi>j</mi></msub></mrow></mfrac><mo>-</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>v</mi><mi>j</mi></msub></mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mi>i</mi></msub></mrow></mfrac></mrow><mo maxsize="210%" minsize="210%">)</mo></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The first above equation corresponds to the well-known <span class="ltx_text ltx_font_italic">rate of deformation</span> tensor, but we are here interested in the second one so-called the <em class="ltx_emph ltx_font_italic"> vorticity tensor</em>, i.e.</p>
+<table id="S0.E7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E7.m1" class="ltx_Math" alttext="w_{ij}:=\frac{1}{2}\left(\dot{x}_{i,j}-\dot{x}_{j,i}\right)=\frac{1}{2}\left(v%
+_{i,j}-v_{j,i}\right)," display="block"><mrow><mrow><msub><mi>w</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo>:=</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mrow><mo>(</mo><mrow><msub><mover accent="true"><mi>x</mi><mo>˙</mo></mover><mrow><mi>i</mi><mo>,</mo><mi>j</mi></mrow></msub><mo>-</mo><msub><mover accent="true"><mi>x</mi><mo>˙</mo></mover><mrow><mi>j</mi><mo>,</mo><mi>i</mi></mrow></msub></mrow><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mrow><mo>(</mo><mrow><msub><mi>v</mi><mrow><mi>i</mi><mo>,</mo><mi>j</mi></mrow></msub><mo>-</mo><msub><mi>v</mi><mrow><mi>j</mi><mo>,</mo><mi>i</mi></mrow></msub></mrow><mo>)</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(7)</span></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="S0.SS3.p1.m12" class="ltx_Math" alttext="\dot{x}_{i,j}\equiv v_{i,j}" display="inline"><mrow><msub><mover accent="true"><mi>x</mi><mo>˙</mo></mover><mrow><mi>i</mi><mo>,</mo><mi>j</mi></mrow></msub><mo>≡</mo><msub><mi>v</mi><mrow><mi>i</mi><mo>,</mo><mi>j</mi></mrow></msub></mrow></math> are the Cartesian components of the velocity gradient in connection to the velocity field
+<math id="S0.SS3.p1.m13" class="ltx_Math" alttext="\mathbf{v}(\mathbf{x},t)\equiv\mathbf{\dot{x}}(\mathbf{x},t)" display="inline"><mrow><mrow><mi>𝐯</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝐱</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≡</mo><mrow><mover accent="true"><mi>𝐱</mi><mo>˙</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝐱</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. Since (7) is skew-symmetric, the associate axial vector in the Euclidean space <math id="S0.SS3.p1.m14" class="ltx_Math" alttext="\mathbb{R}^{3}" display="inline"><msup><mi>ℝ</mi><mn>3</mn></msup></math> is given by (<math id="S0.SS3.p1.m15" class="ltx_Math" alttext="\epsilon_{ijk}" display="inline"><msub><mi>ϵ</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi><mo>⁢</mo><mi>k</mi></mrow></msub></math> is the Levi-Civita’s isotropic Cartesian tensor)</p>
+<table id="S0.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex8.m1" class="ltx_Math" alttext="2\Omega_{k}\equiv-\epsilon_{ijk}v_{i,j}=\epsilon_{ijk}v_{j,i}," display="block"><mrow><mrow><mrow><mn>2</mn><mo>⁢</mo><msub><mi mathvariant="normal">Ω</mi><mi>k</mi></msub></mrow><mo>≡</mo><mrow><mo>-</mo><mrow><msub><mi>ϵ</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi><mo>⁢</mo><mi>k</mi></mrow></msub><mo>⁢</mo><msub><mi>v</mi><mrow><mi>i</mi><mo>,</mo><mi>j</mi></mrow></msub></mrow></mrow><mo>=</mo><mrow><msub><mi>ϵ</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi><mo>⁢</mo><mi>k</mi></mrow></msub><mo>⁢</mo><msub><mi>v</mi><mrow><mi>j</mi><mo>,</mo><mi>i</mi></mrow></msub></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">which was introduced by Lagrange and Cauchy <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib4" title="" class="ltx_ref">4</a>]</cite> and was shown by Cauchy and Stokes <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib6" title="" class="ltx_ref">6</a>]</cite> to represent a local instantaneous rate of rotation in a neighborhood of some point <math id="S0.SS3.p1.m16" class="ltx_Math" alttext="\mathbf{x}" display="inline"><mi>𝐱</mi></math> in the fluid media, that in the time being we call it the <em class="ltx_emph ltx_font_italic">local angular velocity</em> in such neighborhood (a dynamical cause is generally due to the fluid viscosity). It is usually called <em class="ltx_emph ltx_font_italic">vortex vector</em> or simply <em class="ltx_emph ltx_font_italic">vorticity</em>, and is defined by</p>
+<table id="S0.E8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E8.m1" class="ltx_Math" alttext="\bm{\omega}:=\bm{\nabla}\mathbf{\times}\mathbf{v}." display="block"><mrow><mrow><mi>𝝎</mi><mo>:=</mo><mrow><mo mathvariant="bold">∇</mo><mo>×</mo><mi>𝐯</mi></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(8)</span></td>
+</tr>
+</table>
+<p class="ltx_p">Notice that <em class="ltx_emph ltx_font_italic">vorticity</em> is, by definition, the twice of the <em class="ltx_emph ltx_font_italic">local angular velocity</em>, that is, <math id="S0.SS3.p1.m17" class="ltx_Math" alttext="\bm{\omega}\equiv 2\bm{\Omega}" display="inline"><mrow><mi>𝝎</mi><mo>≡</mo><mrow><mn>2</mn><mo>⁢</mo><mi>𝛀</mi></mrow></mrow></math>.</p>
+</div>
+</section>
+<section id="S0.SS4" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">0.4 </span>The vorticity distribution</h2>
+
+<div id="S0.SS4.p1" class="ltx_para">
+<p class="ltx_p">One consequence from the definition of vortex vector is the identity</p>
+<table id="S0.E9" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E9.m1" class="ltx_Math" alttext="\bm{\nabla}\cdot\bm{\omega}\equiv 0." display="block"><mrow><mrow><mrow><mo mathvariant="bold">∇</mo><mo>⋅</mo><mi>𝝎</mi></mrow><mo>≡</mo><mn>0</mn></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(9)</span></td>
+</tr>
+</table>
+<p class="ltx_p">A line in the fluid whose tangent is everywhere parallel to the local vortex vector is termed a <em class="ltx_emph ltx_font_italic">vortex line</em>. The family of such lines at any instant is defined by an equation analogous to the streamlines. The surface in the fluid flow formed for all the vortex lines passing through a given contractible closed curve drawn in the fluid is said to be a <em class="ltx_emph ltx_font_italic">vortex tube</em>. The <em class="ltx_emph ltx_font_italic">flux</em> of the vortex vector across an open surface bounded by this same closed curve and lying entirely in the fluid flow is</p>
+<table id="S0.Ex9" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex9.m1" class="ltx_Math" alttext="\int_{\mathcal{A}}\bm{\omega}\cdot\mathbf{n}\,d\mathfrak{a}," display="block"><mrow><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mi class="ltx_font_mathcaligraphic">𝒜</mi></msub><mrow><mrow><mi>𝝎</mi><mo>⋅</mo><mpadded width="+1.7pt"><mi>𝐧</mi></mpadded></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><mi>𝔞</mi></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">i.e. the Stokes’ theorem right-hand side. We can use (9) to prove that this integral has the same value for any open surface lying in the fluid flow and bounded by any contractible closed curve which lies in the vortex tube and passes round it once. For if <math id="S0.SS4.p1.m1" class="ltx_Math" alttext="\mathbf{n}\,d\mathfrak{a}" display="inline"><mrow><mpadded width="+1.7pt"><mi>𝐧</mi></mpadded><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>𝔞</mi></mrow></math> and <math id="S0.SS4.p1.m2" class="ltx_Math" alttext="\mathbf{n}^{\prime}\,d\mathfrak{a}^{\prime}" display="inline"><mrow><mpadded width="+1.7pt"><msup><mi>𝐧</mi><mo>′</mo></msup></mpadded><mo>⁢</mo><mi>d</mi><mo>⁢</mo><msup><mi>𝔞</mi><mo>′</mo></msup></mrow></math> are vector elements of area of two such open surfaces, with <math id="S0.SS4.p1.m3" class="ltx_Math" alttext="\mathbf{n}" display="inline"><mi>𝐧</mi></math>,  <math id="S0.SS4.p1.m4" class="ltx_Math" alttext="\mathbf{n}^{\prime}" display="inline"><msup><mi>𝐧</mi><mo>′</mo></msup></math> having the same sense relative to the vortex tube, the Gauss-Green divergence theorem applied to the control volume enclosed by these two surfaces and the connecting (lateral) portion of the vortex tube, shows that</p>
+<table id="S0.Ex10" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex10.m1" class="ltx_Math" alttext="\int_{\mathcal{A}}\bm{\omega}\cdot\mathbf{n}\,d\mathfrak{a}-\int_{\mathcal{A}^%
+{\prime}}\bm{\omega}^{\prime}\cdot\mathbf{n}^{\prime}\,d\mathfrak{a}^{\prime}=%
+\int_{\mathfrak{v}}\bm{\nabla}\cdot\bm{\omega}\,d\mathfrak{v}=0," display="block"><mrow><mrow><mrow><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mi class="ltx_font_mathcaligraphic">𝒜</mi></msub><mrow><mrow><mi>𝝎</mi><mo>⋅</mo><mpadded width="+1.7pt"><mi>𝐧</mi></mpadded></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><mi>𝔞</mi></mrow></mrow></mrow><mo>-</mo><mrow><msub><mo largeop="true" symmetric="true">∫</mo><msup><mi class="ltx_font_mathcaligraphic">𝒜</mi><mo>′</mo></msup></msub><mrow><mrow><msup><mi>𝝎</mi><mo>′</mo></msup><mo>⋅</mo><mpadded width="+1.7pt"><msup><mi>𝐧</mi><mo>′</mo></msup></mpadded></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><msup><mi>𝔞</mi><mo>′</mo></msup></mrow></mrow></mrow></mrow><mo>=</mo><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mi>𝔳</mi></msub><mrow><mrow><mo mathvariant="bold">∇</mo><mo>⋅</mo><mpadded width="+1.7pt"><mi>𝝎</mi></mpadded></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><mi>𝔳</mi></mrow></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="S0.SS4.p1.m5" class="ltx_Math" alttext="\mathfrak{v}" display="inline"><mi>𝔳</mi></math> is the Eulerian description of the control volume in question. Note that there is no contribution to the surface integral from the portion of the vortex tube. The flux of vorticity along a vortex tube is thus independent of the choice of the open surface used to measure it, and is termed the <em class="ltx_emph ltx_font_italic">strength</em> of the vortex tube. In the case of a vortex tube of infinitesimal cross section (usually called <em class="ltx_emph ltx_font_italic">filament-tube</em>), such strength is equal to the product of cross-sectional area and the magnitude of the local vortex vector, being the same at all stations along the vortex tube. It is very important to mention that a vortex tube cannot begin or end in the interior of the fluid flow, but must either be a closed tube, like a torus, or else (provided it does not meet a boundary) must extend <span class="ltx_text ltx_font_italic">ad infinitum</span> in either direction. For at an end, if were one, a continuous transition would be possible, along the mantle of the vortex tube, between contractible closed curves <math id="S0.SS4.p1.m6" class="ltx_Math" alttext="\mathcal{C}_{1}" display="inline"><msub><mi class="ltx_font_mathcaligraphic">𝒞</mi><mn>1</mn></msub></math> located there and cross-sectional contractible one <math id="S0.SS4.p1.m7" class="ltx_Math" alttext="\mathcal{C}_{2}" display="inline"><msub><mi class="ltx_font_mathcaligraphic">𝒞</mi><mn>2</mn></msub></math>, which is inconsistent with the fact that <math id="S0.SS4.p1.m8" class="ltx_Math" alttext="\Gamma_{1}=0" display="inline"><mrow><msub><mi mathvariant="normal">Γ</mi><mn>1</mn></msub><mo>=</mo><mn>0</mn></mrow></math> while <math id="S0.SS4.p1.m9" class="ltx_Math" alttext="\Gamma_{2}=constant\neq 0" display="inline"><mrow><msub><mi mathvariant="normal">Γ</mi><mn>2</mn></msub><mo>=</mo><mrow><mi>c</mi><mo>⁢</mo><mi>o</mi><mo>⁢</mo><mi>n</mi><mo>⁢</mo><mi>s</mi><mo>⁢</mo><mi>t</mi><mo>⁢</mo><mi>a</mi><mo>⁢</mo><mi>n</mi><mo>⁢</mo><mi>t</mi></mrow><mo>≠</mo><mn>0</mn></mrow></math>. 
+<br class="ltx_break">An extensive and detailed bibliographical data is given in <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib7" title="" class="ltx_ref">7</a>]</cite>.</p>
+</div>
+</section>
+<section id="S0.SS5" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">0.5 </span>Acknowledgement</h2>
+
+<div id="S0.SS5.p1" class="ltx_para">
+<p class="ltx_p">To Cameron McLeman=mathcam, for his clear explanation about the distinction between reducible and contractible curves and its ‘closedness’. Until about the mid-past century, mechanicists used the word ‘reducible’ like synonymous of ‘contractible’. See, for example, <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib8" title="" class="ltx_ref">8</a>]</cite></p>
+</div>
+</section>
+<section id="bib" class="ltx_bibliography">
+<h2 class="ltx_title ltx_title_bibliography">References</h2>
+
+<ul class="ltx_biblist">
+      
+<li id="bib.bib1" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">1</span>
+        
+<span class="ltx_bibblock">
+W. Thomson, <span class="ltx_text ltx_font_italic">On vortex motion</span>, Trans. Roy. Soc. Edinburgh, <span class="ltx_text ltx_font_bold">25</span>, 1869.
+
+</span>
+      </li>
+      
+<li id="bib.bib2" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">2</span>
+        
+<span class="ltx_bibblock">
+W. Thomson, P.G. Tait, <span class="ltx_text ltx_font_italic">Treatise on Natural Philosophy</span>, Part I (1879), Part II (1883), Cambridge University Press, 1912.
+
+</span>
+      </li>
+      
+<li id="bib.bib3" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">3</span>
+        
+<span class="ltx_bibblock">
+H. v. Helmholtz, <span class="ltx_text ltx_font_italic">Über Integrale der hydrodynamischen Gleishungen, welche den Wirbelbewegugen entsprechen</span>, J. <span class="ltx_text ltx_font_italic">reine angew.</span> Math. <span class="ltx_text ltx_font_bold">55</span>, pp. 25-55, 1858.
+
+</span>
+      </li>
+      
+<li id="bib.bib4" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">4</span>
+        
+<span class="ltx_bibblock">
+J. L. Lagrange, <span class="ltx_text ltx_font_italic">MÃÂ©moire sur la thÃÂ©orie du mouvement des fluides</span>, Nouv. MÃÂ©m. Acad. Berlin, pp. 151-198, 1781 = <span class="ltx_text ltx_font_italic">Ouevres</span>  <span class="ltx_text ltx_font_bold">4</span>, pp. 695-748, 1783.
+
+</span>
+      </li>
+      
+<li id="bib.bib5" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">5</span>
+        
+<span class="ltx_bibblock">
+A. L. Cauchy, <span class="ltx_text ltx_font_italic">Memoire sur les dilatations, les condensation, et les rotations produites par un changement de forme dans un systÃÂ¨me de points matÃÂ©riels, Ouvres Completes</span>, Ser. 2, Vol. 12, pp. 343-377, Paris: Gauthier-Villars, 1916.
+
+</span>
+      </li>
+      
+<li id="bib.bib6" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">6</span>
+        
+<span class="ltx_bibblock">
+G. G. Stokes, <span class="ltx_text ltx_font_italic">On the theories of the internal friction of fluids in motion, and of the equilibrium and motion of elastic solids, Trans. Cambridge Phil. Soc.</span>  <span class="ltx_text ltx_font_bold">8</span>, p. 287 ff., 1845.
+
+</span>
+      </li>
+      
+<li id="bib.bib7" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">7</span>
+        
+<span class="ltx_bibblock">
+C. Truesdell, <span class="ltx_text ltx_font_italic">The Kinematics of Vorticity</span>, Bloomington: Indiana Univ. Press, 1954.
+
+</span>
+      </li>
+      
+<li id="bib.bib8" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">8</span>
+        
+<span class="ltx_bibblock">
+G. K. Batchelor, <span class="ltx_text ltx_font_italic">An Introduction to Fluid Dynamics</span>,  <span class="ltx_text ltx_font_bold">2</span>, p. 92, Cambridge University Press, 1967.
+
+</span>
+      </li>
+    
+</ul>
+</section>
+<div id="p3" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">circulation and vorticity</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CirculationAndVorticity</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2016-05-24 23:17:48</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2016-05-24 23:17:48</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">perucho (2192)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">perucho (2192)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">13</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">perucho (2192)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 53A45</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">SourcesAndSinksOfVectorField</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 22:25:22 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

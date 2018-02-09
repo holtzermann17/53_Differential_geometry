@@ -1,0 +1,459 @@
+<!DOCTYPE html><html>
+<head>
+<title>Christoffel symbols</title>
+<!--Generated on Fri Feb  9 22:27:05 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">Christoffel symbols</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">A vector field in <math id="p1.m1" class="ltx_Math" alttext="{\mathbb{R}}^{n}" display="inline"><msup><mi>ℝ</mi><mi>n</mi></msup></math> can be seen as a differentiable (<math id="p1.m2" class="ltx_Math" alttext="C^{\infty}" display="inline"><msup><mi>C</mi><mi mathvariant="normal">∞</mi></msup></math>) map
+<math id="p1.m3" class="ltx_Math" alttext="V\colon{\mathbb{R}}^{n}\to{\mathbb{R}}^{n}" display="inline"><mrow><mi>V</mi><mo>:</mo><mrow><msup><mi>ℝ</mi><mi>n</mi></msup><mo>→</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow></mrow></math>.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Or as a section <math id="p2.m1" class="ltx_Math" alttext="{\mathbb{R}}^{n}\lx@stackrel{{\scriptstyle V}}{{\to}}T({\mathbb{R}}^{n})" display="inline"><mrow><msup><mi>ℝ</mi><mi>n</mi></msup><mover><mo movablelimits="false">→</mo><mi>V</mi></mover><mrow><mi>T</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>ℝ</mi><mi>n</mi></msup><mo stretchy="false">)</mo></mrow></mrow></mrow></math>
+where <math id="p2.m2" class="ltx_Math" alttext="T{\mathbb{R}}^{n}\equiv{\mathbb{R}}^{n}\times{\mathbb{R}}^{n}" display="inline"><mrow><mrow><mi>T</mi><mo>⁢</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow><mo>≡</mo><mrow><msup><mi>ℝ</mi><mi>n</mi></msup><mo>×</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow></mrow></math> is the <math id="p2.m3" class="ltx_Math" alttext="{\mathbb{R}}^{n}" display="inline"><msup><mi>ℝ</mi><mi>n</mi></msup></math>’s trivial tangent bundle obeying
+<math id="p2.m4" class="ltx_Math" alttext="p\mapsto(p,V(p)\in T_{p}({\mathbb{R}}^{n}))" display="inline"><mrow><mi>p</mi><mo>↦</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo>,</mo><mi>V</mi><mrow><mo stretchy="false">(</mo><mi>p</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><msub><mi>T</mi><mi>p</mi></msub><mrow><mo stretchy="false">(</mo><msup><mi>ℝ</mi><mi>n</mi></msup><mo stretchy="false">)</mo></mrow><mo stretchy="false">)</mo></mrow></mrow></math> with <math id="p2.m5" class="ltx_Math" alttext="T_{p}({\mathbb{R}}^{n})\equiv{\mathbb{R}}^{n}" display="inline"><mrow><mrow><msub><mi>T</mi><mi>p</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>ℝ</mi><mi>n</mi></msup><mo stretchy="false">)</mo></mrow></mrow><mo>≡</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow></math> being the tangent space at <math id="p2.m6" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math>.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">Another viewpoint about tangent vectors is that they are also linear operators called <span class="ltx_text ltx_font_bold">derivations</span> and they act
+over scalars <math id="p3.m1" class="ltx_Math" alttext="f\colon{\mathbb{R}}^{n}\to{\mathbb{R}}" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><msup><mi>ℝ</mi><mi>n</mi></msup><mo>→</mo><mi>ℝ</mi></mrow></mrow></math> via <math id="p3.m2" class="ltx_Math" alttext="p\mapsto Vf|_{p}=V(p)\cdot\nabla f|_{p}" display="inline"><mrow><mi>p</mi><mo>↦</mo><msub><mrow><mrow><mi>V</mi><mo>⁢</mo><mi>f</mi></mrow><mo fence="true" stretchy="false">|</mo></mrow><mi>p</mi></msub><mo>=</mo><msub><mrow><mrow><mrow><mi>V</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⋅</mo><mrow><mo>∇</mo><mo>⁡</mo><mi>f</mi></mrow></mrow><mo fence="true" stretchy="false">|</mo></mrow><mi>p</mi></msub></mrow></math>.</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">Let <math id="p4.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> be one of them and <math id="p4.m2" class="ltx_Math" alttext="dX|_{p}" display="inline"><msub><mrow><mrow><mi>d</mi><mo>⁢</mo><mi>X</mi></mrow><mo fence="true" stretchy="false">|</mo></mrow><mi>p</mi></msub></math> its Jacobian matrix evaluated at the point <math id="p4.m3" class="ltx_Math" alttext="p\in{\mathbb{R}}^{n}" display="inline"><mrow><mi>p</mi><mo>∈</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow></math>.
+Then, for any other vector field <math id="p4.m4" class="ltx_Math" alttext="Y\colon{\mathbb{R}}^{n}\to{\mathbb{R}}^{n}" display="inline"><mrow><mi>Y</mi><mo>:</mo><mrow><msup><mi>ℝ</mi><mi>n</mi></msup><mo>→</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow></mrow></math>,</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="dX|_{p}(Y(p))" display="block"><mrow><msub><mrow><mrow><mi>d</mi><mo>⁢</mo><mi>X</mi></mrow><mo fence="true" stretchy="false">|</mo></mrow><mi>p</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>Y</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">measures how <math id="p4.m5" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> varies in the direction <math id="p4.m6" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math> at <math id="p4.m7" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math>.</p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">We have <math id="p5.m1" class="ltx_Math" alttext="dX|_{p}(Y(p))=(Y(p)\cdot\nabla X^{1}|_{p},...,Y(p)\cdot\nabla X^{n}|_{p})" display="inline"><mrow><mrow><msub><mrow><mrow><mi>d</mi><mo>⁢</mo><mi>X</mi></mrow><mo fence="true" stretchy="false">|</mo></mrow><mi>p</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>Y</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">(</mo><msub><mrow><mrow><mrow><mi>Y</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⋅</mo><mrow><mo>∇</mo><mo>⁡</mo><msup><mi>X</mi><mn>1</mn></msup></mrow></mrow><mo fence="true" stretchy="false">|</mo></mrow><mi>p</mi></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mrow><mrow><mrow><mi>Y</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⋅</mo><mrow><mo>∇</mo><mo>⁡</mo><msup><mi>X</mi><mi>n</mi></msup></mrow></mrow><mo fence="true" stretchy="false">|</mo></mrow><mi>p</mi></msub><mo stretchy="false">)</mo></mrow></mrow></math>, where <math id="p5.m2" class="ltx_Math" alttext="X=\sum_{s}X^{s}e_{s}" display="inline"><mrow><mi>X</mi><mo>=</mo><mrow><msub><mo largeop="true" symmetric="true">∑</mo><mi>s</mi></msub><mrow><msup><mi>X</mi><mi>s</mi></msup><mo>⁢</mo><msub><mi>e</mi><mi>s</mi></msub></mrow></mrow></mrow></math> in components.
+Also, it is obvious that <math id="p5.m3" class="ltx_Math" alttext="p\mapsto dX|_{p}(Y(p))" display="inline"><mrow><mi>p</mi><mo>↦</mo><mrow><msub><mrow><mrow><mi>d</mi><mo>⁢</mo><mi>X</mi></mrow><mo fence="true" stretchy="false">|</mo></mrow><mi>p</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>Y</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math> defines a new vector field in <math id="p5.m4" class="ltx_Math" alttext="{\mathbb{R}}^{n}" display="inline"><msup><mi>ℝ</mi><mi>n</mi></msup></math> which is symbolized as</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="D_{Y}X" display="block"><mrow><msub><mi>D</mi><mi>Y</mi></msub><mo>⁢</mo><mi>X</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">We can be consider it as a bilinear map</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="D:T({\mathbb{R}}^{n})\times T({\mathbb{R}}^{n})\to T({\mathbb{R}}^{n})." display="block"><mrow><mrow><mi>D</mi><mo>:</mo><mrow><mrow><mrow><mrow><mi>T</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>ℝ</mi><mi>n</mi></msup><mo stretchy="false">)</mo></mrow></mrow><mo>×</mo><mi>T</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>ℝ</mi><mi>n</mi></msup><mo stretchy="false">)</mo></mrow></mrow><mo>→</mo><mrow><mi>T</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>ℝ</mi><mi>n</mi></msup><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="(X,Y)\mapsto D_{X}Y" display="block"><mrow><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><mi>Y</mi><mo stretchy="false">)</mo></mrow><mo>↦</mo><mrow><msub><mi>D</mi><mi>X</mi></msub><mo>⁢</mo><mi>Y</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Further, it is easy to see that for any scalar <math id="p5.m5" class="ltx_Math" alttext="f\colon{\mathbb{R}}^{n}\to{\mathbb{R}}" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><msup><mi>ℝ</mi><mi>n</mi></msup><mo>→</mo><mi>ℝ</mi></mrow></mrow></math></p>
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i1.p1.m1" class="ltx_Math" alttext="D_{fY}X=fD_{Y}X" display="inline"><mrow><mrow><msub><mi>D</mi><mrow><mi>f</mi><mo>⁢</mo><mi>Y</mi></mrow></msub><mo>⁢</mo><mi>X</mi></mrow><mo>=</mo><mrow><mi>f</mi><mo>⁢</mo><msub><mi>D</mi><mi>Y</mi></msub><mo>⁢</mo><mi>X</mi></mrow></mrow></math></p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i2.p1.m1" class="ltx_Math" alttext="D_{Y}(fX)=(Yf)X+fD_{Y}X" display="inline"><mrow><mrow><msub><mi>D</mi><mi>Y</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>f</mi><mo>⁢</mo><mi>X</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>Y</mi><mo>⁢</mo><mi>f</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>X</mi></mrow><mo>+</mo><mrow><mi>f</mi><mo>⁢</mo><msub><mi>D</mi><mi>Y</mi></msub><mo>⁢</mo><mi>X</mi></mrow></mrow></mrow></math></p>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">3.</span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i3.p1.m1" class="ltx_Math" alttext="D_{X}Y-D_{Y}X=[X,Y]" display="inline"><mrow><mrow><mrow><msub><mi>D</mi><mi>X</mi></msub><mo>⁢</mo><mi>Y</mi></mrow><mo>-</mo><mrow><msub><mi>D</mi><mi>Y</mi></msub><mo>⁢</mo><mi>X</mi></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">[</mo><mi>X</mi><mo>,</mo><mi>Y</mi><mo stretchy="false">]</mo></mrow></mrow></math></p>
+</div>
+</li>
+<li id="I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">4.</span> 
+<div id="I1.i4.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i4.p1.m1" class="ltx_Math" alttext="X(Y\cdot Z)=D_{X}Y\cdot Z+X\cdot D_{X}Z" display="inline"><mrow><mrow><mi>X</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>Y</mi><mo>⋅</mo><mi>Z</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mrow><msub><mi>D</mi><mi>X</mi></msub><mo>⁢</mo><mi>Y</mi></mrow><mo>⋅</mo><mi>Z</mi></mrow><mo>+</mo><mrow><mrow><mi>X</mi><mo>⋅</mo><msub><mi>D</mi><mi>X</mi></msub></mrow><mo>⁢</mo><mi>Z</mi></mrow></mrow></mrow></math></p>
+</div>
+</li>
+</ol>
+<p class="ltx_p">Here we have abbreviated (as usual) <math id="p5.m6" class="ltx_Math" alttext="Yf=Y\cdot\nabla F" display="inline"><mrow><mrow><mi>Y</mi><mo>⁢</mo><mi>f</mi></mrow><mo>=</mo><mrow><mi>Y</mi><mo>⋅</mo><mrow><mo>∇</mo><mo>⁡</mo><mi>F</mi></mrow></mrow></mrow></math> and the operation <math id="p5.m7" class="ltx_Math" alttext="[X,Y]" display="inline"><mrow><mo stretchy="false">[</mo><mi>X</mi><mo>,</mo><mi>Y</mi><mo stretchy="false">]</mo></mrow></math> is the Lie bracket.</p>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">This <math id="p6.m1" class="ltx_Math" alttext="D" display="inline"><mi>D</mi></math> is called the <span class="ltx_text ltx_font_bold">standard connection</span> of <math id="p6.m2" class="ltx_Math" alttext="{\mathbb{R}}^{n}" display="inline"><msup><mi>ℝ</mi><mi>n</mi></msup></math>.
+</p>
+</div>
+<div id="p7" class="ltx_para">
+<p class="ltx_p">Now, let <math id="p7.m1" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math> be a n-dimensional differentiable manifold and let <math id="p7.m2" class="ltx_Math" alttext="TM" display="inline"><mrow><mi>T</mi><mo>⁢</mo><mi>M</mi></mrow></math> be its tangent bundle.
+The set of differentiable sections <math id="p7.m3" class="ltx_Math" alttext="\Gamma(M)=\{X\colon M\to TM\}" display="inline"><mrow><mrow><mi mathvariant="normal">Γ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>M</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><mi>X</mi><mo>:</mo><mrow><mi>M</mi><mo>→</mo><mrow><mi>T</mi><mo>⁢</mo><mi>M</mi></mrow></mrow><mo stretchy="false">}</mo></mrow></mrow></math> is a differentiable Lie algebra which is endowed with a differentiable inner product <math id="p7.m4" class="ltx_Math" alttext="g\colon\Gamma(M)\times\Gamma(M)\to{\mathbb{R}}" display="inline"><mrow><mi>g</mi><mo>:</mo><mrow><mrow><mrow><mrow><mi mathvariant="normal">Γ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>M</mi><mo stretchy="false">)</mo></mrow></mrow><mo>×</mo><mi mathvariant="normal">Γ</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>M</mi><mo stretchy="false">)</mo></mrow></mrow><mo>→</mo><mi>ℝ</mi></mrow></mrow></math> via</p>
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="g(X,Y)|_{p}=X(p)\cdot Y(p)" display="block"><mrow><msub><mrow><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><mi>Y</mi><mo stretchy="false">)</mo></mrow></mrow><mo fence="true" stretchy="false">|</mo></mrow><mi>p</mi></msub><mo>=</mo><mrow><mrow><mrow><mi>X</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⋅</mo><mi>Y</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">in each <math id="p7.m5" class="ltx_Math" alttext="T_{p}(M)\equiv{\mathbb{R}}^{n}" display="inline"><mrow><mrow><msub><mi>T</mi><mi>p</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>M</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≡</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow></math>.</p>
+</div>
+<div id="p8" class="ltx_para">
+<p class="ltx_p">It is possible construct a bilinear operator <math id="p8.m1" class="ltx_Math" alttext="\nabla" display="inline"><mo>∇</mo></math></p>
+<table id="S0.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex6.m1" class="ltx_Math" alttext="\nabla\colon\Gamma(M)\times\Gamma(M)\to\Gamma(M)" display="block"><mrow><mo>∇</mo><mo>:</mo><mrow><mrow><mrow><mrow><mi mathvariant="normal">Γ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>M</mi><mo stretchy="false">)</mo></mrow></mrow><mo>×</mo><mi mathvariant="normal">Γ</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>M</mi><mo stretchy="false">)</mo></mrow></mrow><mo>→</mo><mrow><mi mathvariant="normal">Γ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>M</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">compatible with <math id="p8.m2" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math> and which satisfies the following properties</p>
+</div>
+<div id="p9" class="ltx_para">
+<ol id="I2" class="ltx_enumerate">
+<li id="I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I2.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I2.i1.p1.m1" class="ltx_Math" alttext="\nabla_{fY}X=f\nabla_{Y}X" display="inline"><mrow><mrow><msub><mo>∇</mo><mrow><mi>f</mi><mo>⁢</mo><mi>Y</mi></mrow></msub><mo>⁡</mo><mi>X</mi></mrow><mo>=</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><msub><mo>∇</mo><mi>Y</mi></msub><mo>⁡</mo><mi>X</mi></mrow></mrow></mrow></math></p>
+</div>
+</li>
+<li id="I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I2.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="I2.i2.p1.m1" class="ltx_Math" alttext="\nabla_{Y}(fX)=(Yf)X+f\nabla_{Y}X" display="inline"><mrow><mrow><msub><mo>∇</mo><mi>Y</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>f</mi><mo>⁢</mo><mi>X</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>Y</mi><mo>⁢</mo><mi>f</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>X</mi></mrow><mo>+</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><msub><mo>∇</mo><mi>Y</mi></msub><mo>⁡</mo><mi>X</mi></mrow></mrow></mrow></mrow></math></p>
+</div>
+</li>
+<li id="I2.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">3.</span> 
+<div id="I2.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="I2.i3.p1.m1" class="ltx_Math" alttext="\nabla_{X}Y-\nabla_{Y}X=[X,Y]" display="inline"><mrow><mrow><mrow><msub><mo>∇</mo><mi>X</mi></msub><mo>⁡</mo><mi>Y</mi></mrow><mo>-</mo><mrow><msub><mo>∇</mo><mi>Y</mi></msub><mo>⁡</mo><mi>X</mi></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">[</mo><mi>X</mi><mo>,</mo><mi>Y</mi><mo stretchy="false">]</mo></mrow></mrow></math></p>
+</div>
+</li>
+<li id="I2.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">4.</span> 
+<div id="I2.i4.p1" class="ltx_para">
+<p class="ltx_p"><math id="I2.i4.p1.m1" class="ltx_Math" alttext="Xg(Y,Z)=g(\nabla_{X}Y,Z)+g(X,\nabla_{X}Z)" display="inline"><mrow><mrow><mi>X</mi><mo>⁢</mo><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>Y</mi><mo>,</mo><mi>Z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mo>∇</mo><mi>X</mi></msub><mo>⁡</mo><mi>Y</mi></mrow><mo>,</mo><mi>Z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><mrow><msub><mo>∇</mo><mi>X</mi></msub><mo>⁡</mo><mi>Z</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math></p>
+</div>
+</li>
+</ol>
+</div>
+<div id="p10" class="ltx_para">
+<p class="ltx_p">The <span class="ltx_text ltx_font_bold">Fundamental Theorem of Riemannian Geometry</span> establishes that this <math id="p10.m1" class="ltx_Math" alttext="\nabla" display="inline"><mo>∇</mo></math> exists and it is unique,
+and it is called the <span class="ltx_text ltx_font_bold">Levi-Civita connection</span> for the metric <math id="p10.m2" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math> on <math id="p10.m3" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math>.</p>
+</div>
+<div id="p11" class="ltx_para">
+<p class="ltx_p">Now, if one uses a coordinated patch in <math id="p11.m1" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math> one has a set of n-coordinated vector fields <math id="p11.m2" class="ltx_Math" alttext="\partial_{1},..,\partial_{n}" display="inline"><mrow><msub><mo>∂</mo><mn>1</mn></msub><mo>,</mo><mo>.</mo><mo>.</mo><mo>,</mo><msub><mo>∂</mo><mi>n</mi></msub></mrow></math>
+meaning <math id="p11.m3" class="ltx_Math" alttext="\partial_{i}={{\partial}\over{\partial u^{i}}}" display="inline"><mrow><msub><mo>∂</mo><mi>i</mi></msub><mo>=</mo><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>u</mi><mi>i</mi></msup></mrow></mfrac></mrow></math> being <math id="p11.m4" class="ltx_Math" alttext="u^{i}" display="inline"><msup><mi>u</mi><mi>i</mi></msup></math> the coordinate functions.
+These are also dubbed holonomic derivations.</p>
+</div>
+<div id="p12" class="ltx_para">
+<p class="ltx_p">So it makes sense to speak about the derivatives <math id="p12.m1" class="ltx_Math" alttext="\nabla_{\partial_{i}}\partial_{j}" display="inline"><mrow><msub><mo>∇</mo><msub><mo>∂</mo><mi>i</mi></msub></msub><mo>⁡</mo><msub><mo>∂</mo><mi>j</mi></msub></mrow></math>
+and since the <math id="p12.m2" class="ltx_Math" alttext="\partial_{i}" display="inline"><msub><mo>∂</mo><mi>i</mi></msub></math> are tangent which generate at a point <math id="p12.m3" class="ltx_Math" alttext="T_{p}(M)" display="inline"><mrow><msub><mi>T</mi><mi>p</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>M</mi><mo stretchy="false">)</mo></mrow></mrow></math>, then <math id="p12.m4" class="ltx_Math" alttext="\nabla_{\partial_{i}}\partial_{j}" display="inline"><mrow><msub><mo>∇</mo><msub><mo>∂</mo><mi>i</mi></msub></msub><mo>⁡</mo><msub><mo>∂</mo><mi>j</mi></msub></mrow></math>
+is also tangent, so there are <math id="p12.m5" class="ltx_Math" alttext="n\times n" display="inline"><mrow><mi>n</mi><mo>×</mo><mi>n</mi></mrow></math> numbers (functions if one varies position) <math id="p12.m6" class="ltx_Math" alttext="\Gamma^{s}_{ij}" display="inline"><msubsup><mi mathvariant="normal">Γ</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow><mi>s</mi></msubsup></math> which enters
+in the relation</p>
+<table id="S0.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex7.m1" class="ltx_Math" alttext="\nabla_{\partial_{i}}\partial_{j}=\sum_{s}\Gamma^{s}_{ij}\partial_{s}." display="block"><mrow><mrow><mrow><msub><mo>∇</mo><msub><mo>∂</mo><mi>i</mi></msub></msub><mo>⁡</mo><msub><mo>∂</mo><mi>j</mi></msub></mrow><mo>=</mo><mrow><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mi>s</mi></munder><mrow><msubsup><mi mathvariant="normal">Γ</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow><mi>s</mi></msubsup><mo>⁢</mo><msub><mo>∂</mo><mi>s</mi></msub></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">These coefficients <math id="p12.m7" class="ltx_Math" alttext="\Gamma^{s}_{ij}" display="inline"><msubsup><mi mathvariant="normal">Γ</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow><mi>s</mi></msubsup></math> are called <span class="ltx_text ltx_font_bold">Christoffel symbols</span> and an easy calculation shows that</p>
+<table id="S0.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex8.m1" class="ltx_Math" alttext="\Gamma^{k}_{ij}={1\over 2}\sum_{s}g^{ks}[g_{sj,i}+g_{is,j}-g_{ij,s}]" display="block"><mrow><msubsup><mi mathvariant="normal">Γ</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow><mi>k</mi></msubsup><mo>=</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mrow><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mi>s</mi></munder><mrow><msup><mi>g</mi><mrow><mi>k</mi><mo>⁢</mo><mi>s</mi></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mrow><mrow><msub><mi>g</mi><mrow><mrow><mi>s</mi><mo>⁢</mo><mi>j</mi></mrow><mo>,</mo><mi>i</mi></mrow></msub><mo>+</mo><msub><mi>g</mi><mrow><mrow><mi>i</mi><mo>⁢</mo><mi>s</mi></mrow><mo>,</mo><mi>j</mi></mrow></msub></mrow><mo>-</mo><msub><mi>g</mi><mrow><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow><mo>,</mo><mi>s</mi></mrow></msub></mrow><mo stretchy="false">]</mo></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="p12.m8" class="ltx_Math" alttext="g_{ij}=g(\partial_{i},\partial_{j})" display="inline"><mrow><msub><mi>g</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo>=</mo><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mo>∂</mo><mi>i</mi></msub><mo>,</mo><msub><mo>∂</mo><mi>j</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, <math id="p12.m9" class="ltx_Math" alttext="g^{ij}" display="inline"><msup><mi>g</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msup></math> are the entries of the matrix <math id="p12.m10" class="ltx_Math" alttext="[g_{ij}]^{-1}" display="inline"><msup><mrow><mo stretchy="false">[</mo><msub><mi>g</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo stretchy="false">]</mo></mrow><mrow><mo>-</mo><mn>1</mn></mrow></msup></math> and
+<math id="p12.m11" class="ltx_Math" alttext="g_{ij,k}=\partial_{k}(g_{ij})" display="inline"><mrow><msub><mi>g</mi><mrow><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow><mo>,</mo><mi>k</mi></mrow></msub><mo>=</mo><mrow><msub><mo>∂</mo><mi>k</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><msub><mi>g</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+<div id="p13" class="ltx_para">
+<p class="ltx_p">Routinely one can check that under a change of coordinates <math id="p13.m1" class="ltx_Math" alttext="u^{i}\to w^{j}" display="inline"><mrow><msup><mi>u</mi><mi>i</mi></msup><mo>→</mo><msup><mi>w</mi><mi>j</mi></msup></mrow></math> these functions transform as</p>
+<table id="S0.Ex9" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex9.m1" class="ltx_Math" alttext="\bar{\Gamma}^{i}_{kl}={{\partial w^{i}}\over{\partial u^{m}}}{{\partial u^{n}}%
+\over{\partial w^{k}}}{{\partial u^{p}}\over{\partial w^{l}}}\Gamma^{m}_{np}+{%
+{\partial}^{2}u^{p}\over{\partial w^{k}\partial w^{l}}}{{\partial w^{i}}\over{%
+\partial u^{p}}}" display="block"><mrow><msubsup><mover accent="true"><mi mathvariant="normal">Γ</mi><mo stretchy="false">¯</mo></mover><mrow><mi>k</mi><mo>⁢</mo><mi>l</mi></mrow><mi>i</mi></msubsup><mo>=</mo><mrow><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>w</mi><mi>i</mi></msup></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>u</mi><mi>m</mi></msup></mrow></mfrac><mo>⁢</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>u</mi><mi>n</mi></msup></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>w</mi><mi>k</mi></msup></mrow></mfrac><mo>⁢</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>u</mi><mi>p</mi></msup></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>w</mi><mi>l</mi></msup></mrow></mfrac><mo>⁢</mo><msubsup><mi mathvariant="normal">Γ</mi><mrow><mi>n</mi><mo>⁢</mo><mi>p</mi></mrow><mi>m</mi></msubsup></mrow><mo>+</mo><mrow><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><mo>⁡</mo><msup><mi>u</mi><mi>p</mi></msup></mrow><mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>w</mi><mi>k</mi></msup></mrow><mo>⁢</mo><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>w</mi><mi>l</mi></msup></mrow></mrow></mfrac><mo>⁢</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>w</mi><mi>i</mi></msup></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>u</mi><mi>p</mi></msup></mrow></mfrac></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">here we have used Einstein’s sum convention (<math id="p13.m2" class="ltx_Math" alttext="m,n,p" display="inline"><mrow><mi>m</mi><mo>,</mo><mi>n</mi><mo>,</mo><mi>p</mi></mrow></math>-sums) and the term</p>
+<table id="S0.Ex10" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex10.m1" class="ltx_Math" alttext="{{\partial}^{2}u^{p}\over{\partial w^{k}\partial w_{l}}}{{\partial w^{i}}\over%
+{\partial u^{p}}}" display="block"><mrow><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><mo>⁡</mo><msup><mi>u</mi><mi>p</mi></msup></mrow><mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>w</mi><mi>k</mi></msup></mrow><mo>⁢</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>w</mi><mi>l</mi></msub></mrow></mrow></mfrac><mo>⁢</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>w</mi><mi>i</mi></msup></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>u</mi><mi>p</mi></msup></mrow></mfrac></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">shows that the <math id="p13.m3" class="ltx_Math" alttext="\Gamma^{i}_{kl}" display="inline"><msubsup><mi mathvariant="normal">Γ</mi><mrow><mi>k</mi><mo>⁢</mo><mi>l</mi></mrow><mi>i</mi></msubsup></math> are not tensors.</p>
+</div>
+<div id="p14" class="ltx_para">
+<p class="ltx_p">For a proof please see the last part in:
+<span class="ltx_text ltx_font_typewriter">http://planetmath.org/?op=getobj&amp;from=collab&amp;id=64</span>http://planetmath.org/?op=getobj&amp;from=collab&amp;id=64
+</p>
+</div>
+<section id="S0.SS0.SSS0.Px1" class="ltx_paragraph">
+<h2 class="ltx_title ltx_title_paragraph">Connection with base vectors.</h2>
+
+<div id="S0.SS0.SSS0.Px1.p1" class="ltx_para">
+<p class="ltx_p">Let us assume that coordinates <math id="S0.SS0.SSS0.Px1.p1.m1" class="ltx_Math" alttext="u^{i}" display="inline"><msup><mi>u</mi><mi>i</mi></msup></math> are referred to a right-handed orthogonal Cartesian system with attached constant base vectors <math id="S0.SS0.SSS0.Px1.p1.m2" class="ltx_Math" alttext="\mathbf{e}_{i}\equiv\mathbf{e}^{i}" display="inline"><mrow><msub><mi>𝐞</mi><mi>i</mi></msub><mo>≡</mo><msup><mi>𝐞</mi><mi>i</mi></msup></mrow></math> and coordinates <math id="S0.SS0.SSS0.Px1.p1.m3" class="ltx_Math" alttext="w^{j}" display="inline"><msup><mi>w</mi><mi>j</mi></msup></math> referred to a general curvilinear system attached to a local covariant base vectors <math id="S0.SS0.SSS0.Px1.p1.m4" class="ltx_Math" alttext="\mathbf{g}_{j}" display="inline"><msub><mi>𝐠</mi><mi>j</mi></msub></math> and local contravariant base vectors <math id="S0.SS0.SSS0.Px1.p1.m5" class="ltx_Math" alttext="\mathbf{g}^{k}" display="inline"><msup><mi>𝐠</mi><mi>k</mi></msup></math>, both systems embedded in the Euclidean space <math id="S0.SS0.SSS0.Px1.p1.m6" class="ltx_Math" alttext="\mathbb{R}^{n}" display="inline"><msup><mi>ℝ</mi><mi>n</mi></msup></math>. We shall also suppose diffeomorphic the transfomation <math id="S0.SS0.SSS0.Px1.p1.m7" class="ltx_Math" alttext="u^{i}\mapsto w^{j}" display="inline"><mrow><msup><mi>u</mi><mi>i</mi></msup><mo>↦</mo><msup><mi>w</mi><mi>j</mi></msup></mrow></math>. Then, by definition</p>
+<table id="S0.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E1"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E1.m1" class="ltx_Math" alttext="\displaystyle\mathbf{g}_{j}:=\frac{\partial u^{i}}{\partial w^{j}}\mathbf{e}_{%
+i}\&gt;,\qquad\mathbf{g}^{j}:=\frac{\partial w^{j}}{\partial u^{i}}\mathbf{e}^{i}\&gt;," display="inline"><mrow><mrow><mrow><msub><mi>𝐠</mi><mi>j</mi></msub><mo>:=</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>u</mi><mi>i</mi></msup></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>w</mi><mi>j</mi></msup></mrow></mfrac></mstyle><mo>⁢</mo><mpadded width="+2.2pt"><msub><mi>𝐞</mi><mi>i</mi></msub></mpadded></mrow></mrow><mo rspace="22.5pt">,</mo><mrow><msup><mi>𝐠</mi><mi>j</mi></msup><mo>:=</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>w</mi><mi>j</mi></msup></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>u</mi><mi>i</mi></msup></mrow></mfrac></mstyle><mo>⁢</mo><mpadded width="+2.2pt"><msup><mi>𝐞</mi><mi>i</mi></msup></mpadded></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">and its inverses</p>
+<table id="S0.EGx2" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E2"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E2.m1" class="ltx_Math" alttext="\displaystyle\mathbf{e}_{i}=\mathbf{e}^{i}=\frac{\partial u^{i}}{\partial w^{j%
+}}\mathbf{g}^{j}=\frac{\partial w^{j}}{\partial u^{i}}\mathbf{g}_{j}\&gt;." display="inline"><mrow><mrow><msub><mi>𝐞</mi><mi>i</mi></msub><mo>=</mo><msup><mi>𝐞</mi><mi>i</mi></msup><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>u</mi><mi>i</mi></msup></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>w</mi><mi>j</mi></msup></mrow></mfrac></mstyle><mo>⁢</mo><msup><mi>𝐠</mi><mi>j</mi></msup></mrow><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>w</mi><mi>j</mi></msup></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>u</mi><mi>i</mi></msup></mrow></mfrac></mstyle><mo>⁢</mo><mpadded width="+2.2pt"><msub><mi>𝐠</mi><mi>j</mi></msub></mpadded></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Let us consider differentiation of base vectors <math id="S0.SS0.SSS0.Px1.p1.m8" class="ltx_Math" alttext="\mathbf{g}_{j}" display="inline"><msub><mi>𝐠</mi><mi>j</mi></msub></math>, which may be written from (1),(2)</p>
+<table id="S0.EGx3" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex11" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex11.m1" class="ltx_Math" alttext="\displaystyle\frac{\partial\mathbf{g}_{j}}{\partial w^{k}}=\frac{\partial^{2}u%
+^{i}}{\partial w^{j}\partial w^{k}}\mathbf{e}_{i}=\frac{\partial^{2}u^{i}}{%
+\partial w^{j}\partial w^{k}}\frac{\partial u^{i}}{\partial w^{s}}\mathbf{g}^{%
+s}=\frac{\partial^{2}u^{i}}{\partial w^{j}\partial w^{k}}\frac{\partial w^{s}}%
+{\partial u^{i}}\mathbf{g}_{s}\equiv\frac{\partial\mathbf{g}_{k}}{\partial w^{%
+j}}\&gt;," display="inline"><mrow><mrow><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>𝐠</mi><mi>j</mi></msub></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>w</mi><mi>k</mi></msup></mrow></mfrac></mstyle><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><mo>⁡</mo><msup><mi>u</mi><mi>i</mi></msup></mrow><mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>w</mi><mi>j</mi></msup></mrow><mo>⁢</mo><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>w</mi><mi>k</mi></msup></mrow></mrow></mfrac></mstyle><mo>⁢</mo><msub><mi>𝐞</mi><mi>i</mi></msub></mrow><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><mo>⁡</mo><msup><mi>u</mi><mi>i</mi></msup></mrow><mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>w</mi><mi>j</mi></msup></mrow><mo>⁢</mo><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>w</mi><mi>k</mi></msup></mrow></mrow></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>u</mi><mi>i</mi></msup></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>w</mi><mi>s</mi></msup></mrow></mfrac></mstyle><mo>⁢</mo><msup><mi>𝐠</mi><mi>s</mi></msup></mrow><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><mo>⁡</mo><msup><mi>u</mi><mi>i</mi></msup></mrow><mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>w</mi><mi>j</mi></msup></mrow><mo>⁢</mo><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>w</mi><mi>k</mi></msup></mrow></mrow></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>w</mi><mi>s</mi></msup></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>u</mi><mi>i</mi></msup></mrow></mfrac></mstyle><mo>⁢</mo><msub><mi>𝐠</mi><mi>s</mi></msub></mrow><mo>≡</mo><mpadded width="+2.2pt"><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>𝐠</mi><mi>k</mi></msub></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>w</mi><mi>j</mi></msup></mrow></mfrac></mstyle></mpadded></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and using the Christoffel symbols this becomes</p>
+<table id="S0.EGx4" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E3"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E3.m1" class="ltx_Math" alttext="\displaystyle\frac{\partial\mathbf{g}_{j}}{\partial w^{k}}=\Gamma_{jks}\mathbf%
+{g}^{s}=\Gamma^{r}_{jk}\mathbf{g}_{r}\&gt;," display="inline"><mrow><mrow><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>𝐠</mi><mi>j</mi></msub></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>w</mi><mi>k</mi></msup></mrow></mfrac></mstyle><mo>=</mo><mrow><msub><mi mathvariant="normal">Γ</mi><mrow><mi>j</mi><mo>⁢</mo><mi>k</mi><mo>⁢</mo><mi>s</mi></mrow></msub><mo>⁢</mo><msup><mi>𝐠</mi><mi>s</mi></msup></mrow><mo>=</mo><mrow><msubsup><mi mathvariant="normal">Γ</mi><mrow><mi>j</mi><mo>⁢</mo><mi>k</mi></mrow><mi>r</mi></msubsup><mo>⁢</mo><mpadded width="+2.2pt"><msub><mi>𝐠</mi><mi>r</mi></msub></mpadded></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">where</p>
+<table id="S0.EGx5" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E4"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E4.m1" class="ltx_Math" alttext="\displaystyle\Gamma_{jks}=\frac{\partial^{2}u^{i}}{\partial w^{j}\partial w^{k%
+}}\frac{\partial u^{i}}{\partial w^{s}}\&gt;,\qquad\Gamma^{r}_{jk}=g^{rs}\Gamma_{%
+jks}\&gt;." display="inline"><mrow><mrow><mrow><msub><mi mathvariant="normal">Γ</mi><mrow><mi>j</mi><mo>⁢</mo><mi>k</mi><mo>⁢</mo><mi>s</mi></mrow></msub><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><mo>⁡</mo><msup><mi>u</mi><mi>i</mi></msup></mrow><mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>w</mi><mi>j</mi></msup></mrow><mo>⁢</mo><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>w</mi><mi>k</mi></msup></mrow></mrow></mfrac></mstyle><mo>⁢</mo><mpadded width="+2.2pt"><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>u</mi><mi>i</mi></msup></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>w</mi><mi>s</mi></msup></mrow></mfrac></mstyle></mpadded></mrow></mrow><mo rspace="22.5pt">,</mo><mrow><msubsup><mi mathvariant="normal">Γ</mi><mrow><mi>j</mi><mo>⁢</mo><mi>k</mi></mrow><mi>r</mi></msubsup><mo>=</mo><mrow><msup><mi>g</mi><mrow><mi>r</mi><mo>⁢</mo><mi>s</mi></mrow></msup><mo>⁢</mo><mpadded width="+2.2pt"><msub><mi mathvariant="normal">Γ</mi><mrow><mi>j</mi><mo>⁢</mo><mi>k</mi><mo>⁢</mo><mi>s</mi></mrow></msub></mpadded></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Since the transformation of covariant and contravariant metric tensors are given by</p>
+<table id="S0.EGx6" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex12" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex12.m1" class="ltx_Math" alttext="\displaystyle g_{jk}=\frac{\partial u^{i}}{\partial w^{j}}\frac{\partial u^{l}%
+}{\partial w^{k}}\delta_{il}\&gt;,\qquad g^{jk}=\frac{\partial w^{j}}{\partial u^%
+{i}}\frac{\partial w^{k}}{\partial u^{l}}\delta^{il}\&gt;," display="inline"><mrow><mrow><mrow><msub><mi>g</mi><mrow><mi>j</mi><mo>⁢</mo><mi>k</mi></mrow></msub><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>u</mi><mi>i</mi></msup></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>w</mi><mi>j</mi></msup></mrow></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>u</mi><mi>l</mi></msup></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>w</mi><mi>k</mi></msup></mrow></mfrac></mstyle><mo>⁢</mo><mpadded width="+2.2pt"><msub><mi>δ</mi><mrow><mi>i</mi><mo>⁢</mo><mi>l</mi></mrow></msub></mpadded></mrow></mrow><mo rspace="22.5pt">,</mo><mrow><msup><mi>g</mi><mrow><mi>j</mi><mo>⁢</mo><mi>k</mi></mrow></msup><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>w</mi><mi>j</mi></msup></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>u</mi><mi>i</mi></msup></mrow></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>w</mi><mi>k</mi></msup></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>u</mi><mi>l</mi></msup></mrow></mfrac></mstyle><mo>⁢</mo><mpadded width="+2.2pt"><msup><mi>δ</mi><mrow><mi>i</mi><mo>⁢</mo><mi>l</mi></mrow></msup></mpadded></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">is easy to see from here that Christoffel symbol <math id="S0.SS0.SSS0.Px1.p1.m9" class="ltx_Math" alttext="\Gamma_{jks}" display="inline"><msub><mi mathvariant="normal">Γ</mi><mrow><mi>j</mi><mo>⁢</mo><mi>k</mi><mo>⁢</mo><mi>s</mi></mrow></msub></math> enjoy the property</p>
+<table id="S0.EGx7" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E5"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E5.m1" class="ltx_Math" alttext="\displaystyle\Gamma_{jks}=\frac{1}{2}\bigg{(}\frac{\partial g_{js}}{\partial w%
+^{k}}+\frac{\partial g_{ks}}{\partial w^{j}}-\frac{\partial g_{jk}}{\partial w%
+^{s}}\bigg{)}\&gt;\cdot" display="inline"><mrow><msub><mi mathvariant="normal">Γ</mi><mrow><mi>j</mi><mo>⁢</mo><mi>k</mi><mo>⁢</mo><mi>s</mi></mrow></msub><mo>=</mo><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mrow><mo maxsize="210%" minsize="210%">(</mo><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>g</mi><mrow><mi>j</mi><mo>⁢</mo><mi>s</mi></mrow></msub></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>w</mi><mi>k</mi></msup></mrow></mfrac></mstyle><mo>+</mo><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>g</mi><mrow><mi>k</mi><mo>⁢</mo><mi>s</mi></mrow></msub></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>w</mi><mi>j</mi></msup></mrow></mfrac></mstyle><mo>-</mo><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>g</mi><mrow><mi>j</mi><mo>⁢</mo><mi>k</mi></mrow></msub></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>w</mi><mi>s</mi></msup></mrow></mfrac></mstyle><mo maxsize="210%" minsize="210%" rspace="4.7pt">)</mo></mrow><mo>⋅</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">In a similar way we find for the derivative of the contravariant base vectors</p>
+<table id="S0.EGx8" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E6"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E6.m1" class="ltx_Math" alttext="\displaystyle\frac{\partial\mathbf{g}^{j}}{\partial w^{k}}=-\Gamma^{j}_{ks}%
+\mathbf{g}^{s}\&gt;." display="inline"><mrow><mrow><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>𝐠</mi><mi>j</mi></msup></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>w</mi><mi>k</mi></msup></mrow></mfrac></mstyle><mo>=</mo><mrow><mo>-</mo><mrow><msubsup><mi mathvariant="normal">Γ</mi><mrow><mi>k</mi><mo>⁢</mo><mi>s</mi></mrow><mi>j</mi></msubsup><mo>⁢</mo><mpadded width="+2.2pt"><msup><mi>𝐠</mi><mi>s</mi></msup></mpadded></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(6)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Is easy to show the following results:
+</p>
+<table id="S0.EGx9" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex13" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex13.m1" class="ltx_Math" alttext="\displaystyle\Gamma_{jks}=\Gamma_{kjs}=\mathbf{g}_{s}\cdot\frac{\partial%
+\mathbf{g}_{k}}{\partial w^{j}}=\mathbf{g}_{s}\cdot\frac{\partial\mathbf{g}_{j%
+}}{\partial w^{k}}\&gt;," display="inline"><mrow><mrow><msub><mi mathvariant="normal">Γ</mi><mrow><mi>j</mi><mo>⁢</mo><mi>k</mi><mo>⁢</mo><mi>s</mi></mrow></msub><mo>=</mo><msub><mi mathvariant="normal">Γ</mi><mrow><mi>k</mi><mo>⁢</mo><mi>j</mi><mo>⁢</mo><mi>s</mi></mrow></msub><mo>=</mo><mrow><msub><mi>𝐠</mi><mi>s</mi></msub><mo>⋅</mo><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>𝐠</mi><mi>k</mi></msub></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>w</mi><mi>j</mi></msup></mrow></mfrac></mstyle></mrow><mo>=</mo><mrow><msub><mi>𝐠</mi><mi>s</mi></msub><mo>⋅</mo><mpadded width="+2.2pt"><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>𝐠</mi><mi>j</mi></msub></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>w</mi><mi>k</mi></msup></mrow></mfrac></mstyle></mpadded></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S0.EGx10" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex14" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex14.m1" class="ltx_Math" alttext="\displaystyle\Gamma^{r}_{jk}=\Gamma^{r}_{kj}=\mathbf{g}^{r}\cdot\frac{\partial%
+\mathbf{g}_{j}}{\partial w^{k}}=\mathbf{g}^{r}\cdot\frac{\partial\mathbf{g}_{k%
+}}{\partial w^{j}}=-\mathbf{g}_{j}\cdot\frac{\partial\mathbf{g}^{r}}{\partial w%
+^{k}}\&gt;," display="inline"><mrow><mrow><msubsup><mi mathvariant="normal">Γ</mi><mrow><mi>j</mi><mo>⁢</mo><mi>k</mi></mrow><mi>r</mi></msubsup><mo>=</mo><msubsup><mi mathvariant="normal">Γ</mi><mrow><mi>k</mi><mo>⁢</mo><mi>j</mi></mrow><mi>r</mi></msubsup><mo>=</mo><mrow><msup><mi>𝐠</mi><mi>r</mi></msup><mo>⋅</mo><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>𝐠</mi><mi>j</mi></msub></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>w</mi><mi>k</mi></msup></mrow></mfrac></mstyle></mrow><mo>=</mo><mrow><msup><mi>𝐠</mi><mi>r</mi></msup><mo>⋅</mo><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>𝐠</mi><mi>k</mi></msub></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>w</mi><mi>j</mi></msup></mrow></mfrac></mstyle></mrow><mo>=</mo><mrow><mo>-</mo><mrow><msub><mi>𝐠</mi><mi>j</mi></msub><mo>⋅</mo><mpadded width="+2.2pt"><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>𝐠</mi><mi>r</mi></msup></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>w</mi><mi>k</mi></msup></mrow></mfrac></mstyle></mpadded></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S0.EGx11" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex15" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex15.m1" class="ltx_Math" alttext="\displaystyle\Gamma^{i}_{ir}=\frac{1}{2}g^{is}(g_{is,r}+g_{rs,i}-g_{ir,s})=%
+\frac{1}{2}g^{is}g_{is,r}=\frac{1}{2g}\frac{\partial g}{\partial g_{is}}\frac{%
+\partial g_{is}}{\partial w^{r}}=\frac{1}{\sqrt{g}}\frac{\partial\sqrt{g}}{%
+\partial w^{r}}\&gt;," display="inline"><mrow><mrow><msubsup><mi mathvariant="normal">Γ</mi><mrow><mi>i</mi><mo>⁢</mo><mi>r</mi></mrow><mi>i</mi></msubsup><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mo>⁢</mo><msup><mi>g</mi><mrow><mi>i</mi><mo>⁢</mo><mi>s</mi></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><msub><mi>g</mi><mrow><mrow><mi>i</mi><mo>⁢</mo><mi>s</mi></mrow><mo>,</mo><mi>r</mi></mrow></msub><mo>+</mo><msub><mi>g</mi><mrow><mrow><mi>r</mi><mo>⁢</mo><mi>s</mi></mrow><mo>,</mo><mi>i</mi></mrow></msub></mrow><mo>-</mo><msub><mi>g</mi><mrow><mrow><mi>i</mi><mo>⁢</mo><mi>r</mi></mrow><mo>,</mo><mi>s</mi></mrow></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mo>⁢</mo><msup><mi>g</mi><mrow><mi>i</mi><mo>⁢</mo><mi>s</mi></mrow></msup><mo>⁢</mo><msub><mi>g</mi><mrow><mrow><mi>i</mi><mo>⁢</mo><mi>s</mi></mrow><mo>,</mo><mi>r</mi></mrow></msub></mrow><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><mn>2</mn><mo>⁢</mo><mi>g</mi></mrow></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>g</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>g</mi><mrow><mi>i</mi><mo>⁢</mo><mi>s</mi></mrow></msub></mrow></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>g</mi><mrow><mi>i</mi><mo>⁢</mo><mi>s</mi></mrow></msub></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>w</mi><mi>r</mi></msup></mrow></mfrac></mstyle></mrow><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><msqrt><mi>g</mi></msqrt></mfrac></mstyle><mo>⁢</mo><mpadded width="+2.2pt"><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msqrt><mi>g</mi></msqrt></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>w</mi><mi>r</mi></msup></mrow></mfrac></mstyle></mpadded></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S0.EGx12" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex16" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex16.m1" class="ltx_Math" alttext="\displaystyle\Gamma_{jsk}+\Gamma_{ksj}=g_{jk,s}\&gt;," display="inline"><mrow><mrow><mrow><msub><mi mathvariant="normal">Γ</mi><mrow><mi>j</mi><mo>⁢</mo><mi>s</mi><mo>⁢</mo><mi>k</mi></mrow></msub><mo>+</mo><msub><mi mathvariant="normal">Γ</mi><mrow><mi>k</mi><mo>⁢</mo><mi>s</mi><mo>⁢</mo><mi>j</mi></mrow></msub></mrow><mo>=</mo><mpadded width="+2.2pt"><msub><mi>g</mi><mrow><mrow><mi>j</mi><mo>⁢</mo><mi>k</mi></mrow><mo>,</mo><mi>s</mi></mrow></msub></mpadded></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">comma denoting differentiation with respect to the curvilinear coordinates <math id="S0.SS0.SSS0.Px1.p1.m10" class="ltx_Math" alttext="w^{j}" display="inline"><msup><mi>w</mi><mi>j</mi></msup></math> and <math id="S0.SS0.SSS0.Px1.p1.m11" class="ltx_Math" alttext="g=|g_{jk}|" display="inline"><mrow><mi>g</mi><mo>=</mo><mrow><mo stretchy="false">|</mo><msub><mi>g</mi><mrow><mi>j</mi><mo>⁢</mo><mi>k</mi></mrow></msub><mo stretchy="false">|</mo></mrow></mrow></math>. When the coordinate curves are orthogonal we have the following formulae for the Christoffel symbols: <span class="ltx_text ltx_font_bold">(repeated indices are not to be summed)</span></p>
+<table id="S0.EGx13" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex17" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex17.m1" class="ltx_Math" alttext="\displaystyle\Gamma_{jks}=0\&gt;,\qquad\Gamma^{s}_{jk}=0\&gt;,\qquad(j\neq k\neq s%
+\neq j)," display="inline"><mrow><msub><mi mathvariant="normal">Γ</mi><mrow><mi>j</mi><mo>⁢</mo><mi>k</mi><mo>⁢</mo><mi>s</mi></mrow></msub><mo>=</mo><mpadded width="+2.2pt"><mn>0</mn></mpadded><mo rspace="22.5pt">,</mo><msubsup><mi mathvariant="normal">Γ</mi><mrow><mi>j</mi><mo>⁢</mo><mi>k</mi></mrow><mi>s</mi></msubsup><mo>=</mo><mpadded width="+2.2pt"><mn>0</mn></mpadded><mo rspace="22.5pt">,</mo><mrow><mo stretchy="false">(</mo><mi>j</mi><mo>≠</mo><mi>k</mi><mo>≠</mo><mi>s</mi><mo>≠</mo><mi>j</mi><mo stretchy="false">)</mo></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S0.EGx14" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex18" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex18.m1" class="ltx_Math" alttext="\displaystyle\Gamma_{iir}=-\frac{1}{2}\frac{\partial g_{ii}}{\partial w^{r}}\&gt;%
+,\qquad\Gamma^{r}_{ii}=-\frac{1}{2g_{rr}}\frac{\partial g_{ii}}{\partial w^{r}%
+}\&gt;,\qquad(r\neq i)\&gt;," display="inline"><mrow><msub><mi mathvariant="normal">Γ</mi><mrow><mi>i</mi><mo>⁢</mo><mi>i</mi><mo>⁢</mo><mi>r</mi></mrow></msub><mo>=</mo><mo>-</mo><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mpadded width="+2.2pt"><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>g</mi><mrow><mi>i</mi><mo>⁢</mo><mi>i</mi></mrow></msub></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>w</mi><mi>r</mi></msup></mrow></mfrac></mstyle></mpadded><mo rspace="22.5pt">,</mo><msubsup><mi mathvariant="normal">Γ</mi><mrow><mi>i</mi><mo>⁢</mo><mi>i</mi></mrow><mi>r</mi></msubsup><mo>=</mo><mo>-</mo><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><mn>2</mn><mo>⁢</mo><msub><mi>g</mi><mrow><mi>r</mi><mo>⁢</mo><mi>r</mi></mrow></msub></mrow></mfrac></mstyle><mpadded width="+2.2pt"><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>g</mi><mrow><mi>i</mi><mo>⁢</mo><mi>i</mi></mrow></msub></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>w</mi><mi>r</mi></msup></mrow></mfrac></mstyle></mpadded><mo rspace="22.5pt">,</mo><mrow><mo stretchy="false">(</mo><mi>r</mi><mo>≠</mo><mi>i</mi><mo rspace="4.7pt" stretchy="false">)</mo></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S0.EGx15" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex19" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex19.m1" class="ltx_Math" alttext="\displaystyle\Gamma_{iri}=\Gamma_{rii}=\frac{1}{2}\frac{\partial g_{ii}}{%
+\partial w^{r}}\&gt;,\qquad\Gamma^{r}_{ri}=\Gamma^{r}_{ir}=\frac{1}{2g_{rr}}\frac%
+{\partial g_{rr}}{\partial w^{i}}=\frac{1}{2}\frac{\partial\log{g_{rr}}}{%
+\partial w^{i}}\&gt;\cdot" display="inline"><mrow><msub><mi mathvariant="normal">Γ</mi><mrow><mi>i</mi><mo>⁢</mo><mi>r</mi><mo>⁢</mo><mi>i</mi></mrow></msub><mo>=</mo><msub><mi mathvariant="normal">Γ</mi><mrow><mi>r</mi><mo>⁢</mo><mi>i</mi><mo>⁢</mo><mi>i</mi></mrow></msub><mo>=</mo><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mpadded width="+2.2pt"><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>g</mi><mrow><mi>i</mi><mo>⁢</mo><mi>i</mi></mrow></msub></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>w</mi><mi>r</mi></msup></mrow></mfrac></mstyle></mpadded><mo rspace="22.5pt">,</mo><msubsup><mi mathvariant="normal">Γ</mi><mrow><mi>r</mi><mo>⁢</mo><mi>i</mi></mrow><mi>r</mi></msubsup><mo>=</mo><msubsup><mi mathvariant="normal">Γ</mi><mrow><mi>i</mi><mo>⁢</mo><mi>r</mi></mrow><mi>r</mi></msubsup><mo>=</mo><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><mn>2</mn><mo>⁢</mo><msub><mi>g</mi><mrow><mi>r</mi><mo>⁢</mo><mi>r</mi></mrow></msub></mrow></mfrac></mstyle><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>g</mi><mrow><mi>r</mi><mo>⁢</mo><mi>r</mi></mrow></msub></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>w</mi><mi>i</mi></msup></mrow></mfrac></mstyle><mo>=</mo><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mpadded width="+2.2pt"><mstyle displaystyle="true"><mfrac><mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>log</mi></mrow><mo>⁡</mo><msub><mi>g</mi><mrow><mi>r</mi><mo>⁢</mo><mi>r</mi></mrow></msub></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>w</mi><mi>i</mi></msup></mrow></mfrac></mstyle></mpadded><mo>⋅</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t"><span class="ltx_text ltx_font_bold">Title</span></th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t"><span class="ltx_text ltx_font_bold">Christoffel symbols</span></td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l"><span class="ltx_text ltx_font_bold">Canonical name</span></th>
+<td class="ltx_td ltx_align_left ltx_border_r"><span class="ltx_text ltx_font_bold">ChristoffelSymbols</span></td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l"><span class="ltx_text ltx_font_bold">Date of creation</span></th>
+<td class="ltx_td ltx_align_left ltx_border_r"><span class="ltx_text ltx_font_bold">2013-03-22 15:43:52</span></td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l"><span class="ltx_text ltx_font_bold">Last modified on</span></th>
+<td class="ltx_td ltx_align_left ltx_border_r"><span class="ltx_text ltx_font_bold">2013-03-22 15:43:52</span></td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l"><span class="ltx_text ltx_font_bold">Owner</span></th>
+<td class="ltx_td ltx_align_left ltx_border_r"><span class="ltx_text ltx_font_bold">juanman (12619)</span></td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l"><span class="ltx_text ltx_font_bold">Last modified by</span></th>
+<td class="ltx_td ltx_align_left ltx_border_r"><span class="ltx_text ltx_font_bold">juanman (12619)</span></td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l"><span class="ltx_text ltx_font_bold">Numerical id</span></th>
+<td class="ltx_td ltx_align_left ltx_border_r"><span class="ltx_text ltx_font_bold">24</span></td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l"><span class="ltx_text ltx_font_bold">Author</span></th>
+<td class="ltx_td ltx_align_left ltx_border_r"><span class="ltx_text ltx_font_bold">juanman (12619)</span></td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l"><span class="ltx_text ltx_font_bold">Entry type</span></th>
+<td class="ltx_td ltx_align_left ltx_border_r"><span class="ltx_text ltx_font_bold">Definition</span></td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l"><span class="ltx_text ltx_font_bold">Classification</span></th>
+<td class="ltx_td ltx_align_left ltx_border_r"><span class="ltx_text ltx_font_bold">msc 53B20</span></td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l"><span class="ltx_text ltx_font_bold">Classification</span></th>
+<td class="ltx_td ltx_align_left ltx_border_r"><span class="ltx_text ltx_font_bold">msc 53-01</span></td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l"><span class="ltx_text ltx_font_bold">Synonym</span></th>
+<td class="ltx_td ltx_align_left ltx_border_r"><span class="ltx_text ltx_font_bold">connection coefficients</span></td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l"><span class="ltx_text ltx_font_bold">Related topic</span></th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r"><span class="ltx_text ltx_font_bold">Connection</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 22:27:05 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

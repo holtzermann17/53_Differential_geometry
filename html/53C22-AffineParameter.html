@@ -1,0 +1,107 @@
+<!DOCTYPE html><html>
+<head>
+<title>affine parameter</title>
+<!--Generated on Fri Feb  9 22:28:05 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">affine parameter</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">Given a geodesic curve, an <em class="ltx_emph ltx_font_italic">affine parameterization</em> for that curve is a parameterization by a parameter <math id="p1.m1" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math> such that the parametric equations for the curve satisfy the geodesic equation.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Put another way, if one picks a parameterization of a geodesic curve by an arbitrary parameter <math id="p2.m1" class="ltx_Math" alttext="s" display="inline"><mi>s</mi></math> and sets <math id="p2.m2" class="ltx_Math" alttext="u^{\mu}=dx^{\mu}/ds" display="inline"><mrow><msup><mi>u</mi><mi>μ</mi></msup><mo>=</mo><mrow><mrow><mrow><mi>d</mi><mo>⁢</mo><msup><mi>x</mi><mi>μ</mi></msup></mrow><mo>/</mo><mi>d</mi></mrow><mo>⁢</mo><mi>s</mi></mrow></mrow></math>, then we have</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="u^{\mu}\nabla_{\mu}u^{\nu}=f(s)u^{\nu}" display="block"><mrow><mrow><msup><mi>u</mi><mi>μ</mi></msup><mo>⁢</mo><mrow><msub><mo>∇</mo><mi>μ</mi></msub><mo>⁡</mo><msup><mi>u</mi><mi>ν</mi></msup></mrow></mrow><mo>=</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mi>u</mi><mi>ν</mi></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">for some function <math id="p2.m3" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math>. In general, the right hand side of this equation does not equal zero — it is only zero in the special case where <math id="p2.m4" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math> is an affine parameter.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">The reason for the name “affine parameter” is that, if <math id="p3.m1" class="ltx_Math" alttext="t_{1}" display="inline"><msub><mi>t</mi><mn>1</mn></msub></math> and <math id="p3.m2" class="ltx_Math" alttext="t_{2}" display="inline"><msub><mi>t</mi><mn>2</mn></msub></math> are affine parameters for the same geodesic curve, then they are related by an affine transform, i.e. there exist constants <math id="p3.m3" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> and <math id="p3.m4" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> such that</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="t_{1}=at_{2}+b" display="block"><mrow><msub><mi>t</mi><mn>1</mn></msub><mo>=</mo><mrow><mrow><mi>a</mi><mo>⁢</mo><msub><mi>t</mi><mn>2</mn></msub></mrow><mo>+</mo><mi>b</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Conversely, if <math id="p3.m5" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math> is an affine parameter, then <math id="p3.m6" class="ltx_Math" alttext="at+b" display="inline"><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>t</mi></mrow><mo>+</mo><mi>b</mi></mrow></math> is also an affine parameter.
+</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">From this it follows that an affine parameter <math id="p4.m1" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math> is uniquely determined if we specify its value at two points on the geodesic or if we specify both its value and the value of <math id="p4.m2" class="ltx_Math" alttext="dx^{\mu}/dt" display="inline"><mrow><mrow><mrow><mi>d</mi><mo>⁢</mo><msup><mi>x</mi><mi>μ</mi></msup></mrow><mo>/</mo><mi>d</mi></mrow><mo>⁢</mo><mi>t</mi></mrow></math> at a single point of the geodesic.
+</p>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">affine parameter</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">AffineParameter</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 14:35:47</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 14:35:47</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rspuzio (6075)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rspuzio (6075)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">9</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rspuzio (6075)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 53C22</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Defines</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">affinely-parameterized</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 22:28:05 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

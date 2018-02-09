@@ -1,0 +1,149 @@
+<!DOCTYPE html><html>
+<head>
+<title>Hodge star operator</title>
+<!--Generated on Fri Feb  9 22:27:27 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">Hodge star operator</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">Let V be a <math id="p1.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>-dimensional (<math id="p1.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> finite) vector space with inner product <math id="p1.m3" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math>. The <em class="ltx_emph ltx_font_italic">Hodge star operator</em> (denoted by <math id="p1.m4" class="ltx_Math" alttext="\ast" display="inline"><mo>∗</mo></math>) is
+a linear operator mapping <span class="ltx_text ltx_font_typewriter">http://planetmath.org/node/3050<math id="p1.m5" class="ltx_Math" alttext="p" display="inline"><mi mathvariant="normal">p</mi></math></span>-forms on <math id="p1.m6" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> to <math id="p1.m7" class="ltx_Math" alttext="(n-p)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>-</mo><mi>p</mi></mrow><mo stretchy="false">)</mo></mrow></math>-forms, i.e.,</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\ast:\Omega^{p}(V)\to\Omega^{n-p}(V)." display="block"><mrow><mo>∗</mo><mo>:</mo><msup><mi mathvariant="normal">Ω</mi><mi>p</mi></msup><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow><mo>→</mo><msup><mi mathvariant="normal">Ω</mi><mrow><mi>n</mi><mo>-</mo><mi>p</mi></mrow></msup><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">In terms of a basis <math id="p2.m1" class="ltx_Math" alttext="\{e^{1},\ldots,e^{n}\}" display="inline"><mrow><mo stretchy="false">{</mo><msup><mi>e</mi><mn>1</mn></msup><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msup><mi>e</mi><mi>n</mi></msup><mo stretchy="false">}</mo></mrow></math> for <math id="p2.m2" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> and the corresponding dual basis <math id="p2.m3" class="ltx_Math" alttext="\{e_{1},\ldots,e_{n}\}" display="inline"><mrow><mo stretchy="false">{</mo><msub><mi>e</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>e</mi><mi>n</mi></msub><mo stretchy="false">}</mo></mrow></math> for <math id="p2.m4" class="ltx_Math" alttext="V^{*}" display="inline"><msup><mi>V</mi><mo>*</mo></msup></math> (the star used to denote the dual space is not to be confused with the Hodge star!), with the inner product being expressed in terms of components as
+<math id="p2.m5" class="ltx_Math" alttext="g=\sum_{i,j=1}^{n}g_{ij}e^{i}\otimes e^{j}" display="inline"><mrow><mi>g</mi><mo>=</mo><mrow><msubsup><mo largeop="true" symmetric="true">∑</mo><mrow><mrow><mi>i</mi><mo>,</mo><mi>j</mi></mrow><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><mrow><mrow><msub><mi>g</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo>⁢</mo><msup><mi>e</mi><mi>i</mi></msup></mrow><mo>⊗</mo><msup><mi>e</mi><mi>j</mi></msup></mrow></mrow></mrow></math>, the <math id="p2.m6" class="ltx_Math" alttext="\ast" display="inline"><mo>∗</mo></math>-operator
+is defined as the linear operator that maps the basis elements of <math id="p2.m7" class="ltx_Math" alttext="\Omega^{p}(V)" display="inline"><mrow><msup><mi mathvariant="normal">Ω</mi><mi>p</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow></math> as
+</p>
+<table id="S0.EGx1" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex2" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\displaystyle\ast(e^{i_{1}}\wedge\cdots\wedge e^{i_{p}})" display="inline"><mrow><mi></mi><mo>∗</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>e</mi><msub><mi>i</mi><mn>1</mn></msub></msup><mo>∧</mo><mi mathvariant="normal">⋯</mi><mo>∧</mo><msup><mi>e</mi><msub><mi>i</mi><mi>p</mi></msub></msup></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex2.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex2.m3" class="ltx_Math" alttext="\displaystyle\!\!\!\!\frac{\sqrt{|g|}}{(n-p)!}g^{i_{1}l_{1}}\cdots g^{i_{p}l_{%
+p}}\varepsilon_{l_{1}\cdots l_{p}\,l_{p+1}\cdots l_{n}}e^{l_{p+1}}\wedge\cdots%
+\wedge e^{l_{n}}." display="inline"><mrow><mrow><mrow><mpadded lspace="-5pt" width="-5pt"><mstyle displaystyle="true"><mfrac><msqrt><mrow><mo stretchy="false">|</mo><mi>g</mi><mo stretchy="false">|</mo></mrow></msqrt><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>-</mo><mi>p</mi></mrow><mo stretchy="false">)</mo></mrow><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mfrac></mstyle></mpadded><mo>⁢</mo><msup><mi>g</mi><mrow><msub><mi>i</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>l</mi><mn>1</mn></msub></mrow></msup><mo>⁢</mo><mi mathvariant="normal">⋯</mi><mo>⁢</mo><msup><mi>g</mi><mrow><msub><mi>i</mi><mi>p</mi></msub><mo>⁢</mo><msub><mi>l</mi><mi>p</mi></msub></mrow></msup><mo>⁢</mo><msub><mi>ε</mi><mrow><msub><mi>l</mi><mn>1</mn></msub><mo>⁢</mo><mi mathvariant="normal">⋯</mi><mo>⁢</mo><mpadded width="+1.7pt"><msub><mi>l</mi><mi>p</mi></msub></mpadded><mo>⁢</mo><msub><mi>l</mi><mrow><mi>p</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>⁢</mo><mi mathvariant="normal">⋯</mi><mo>⁢</mo><msub><mi>l</mi><mi>n</mi></msub></mrow></msub><mo>⁢</mo><msup><mi>e</mi><msub><mi>l</mi><mrow><mi>p</mi><mo>+</mo><mn>1</mn></mrow></msub></msup></mrow><mo>∧</mo><mi mathvariant="normal">⋯</mi><mo>∧</mo><msup><mi>e</mi><msub><mi>l</mi><mi>n</mi></msub></msup></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Here, <math id="p2.m8" class="ltx_Math" alttext="|g|=\det g_{ij}" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mi>g</mi><mo stretchy="false">|</mo></mrow><mo>=</mo><mrow><mo>det</mo><mo>⁡</mo><msub><mi>g</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub></mrow></mrow></math>, and <math id="p2.m9" class="ltx_Math" alttext="\varepsilon" display="inline"><mi>ε</mi></math> is the Levi-Civita permutation symbol</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">This operator may be defined in a coordinate-free manner by the condition</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="u\wedge*v=g(u,v)\,\mathop{\bf Vol}(g)" display="block"><mrow><mi>u</mi><mo>∧</mo><mo>*</mo><mi>v</mi><mo>=</mo><mi>g</mi><mrow><mo stretchy="false">(</mo><mi>u</mi><mo>,</mo><mi>v</mi><mo rspace="4.2pt" stretchy="false">)</mo></mrow><mo movablelimits="false">𝐕𝐨𝐥</mo><mrow><mo stretchy="false">(</mo><mi>g</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where the notation <math id="p3.m1" class="ltx_Math" alttext="g(u,v)" display="inline"><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>u</mi><mo>,</mo><mi>v</mi><mo stretchy="false">)</mo></mrow></mrow></math> denotes the inner product on <math id="p3.m2" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math>-forms (in coordinates, <math id="p3.m3" class="ltx_Math" alttext="g(u,v)=g_{i_{1}j_{1}}\cdots g_{i_{p}j_{p}}u^{i_{1}\ldots i_{p}}v^{j_{1}\ldots j%
+_{p}}" display="inline"><mrow><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>u</mi><mo>,</mo><mi>v</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>g</mi><mrow><msub><mi>i</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>j</mi><mn>1</mn></msub></mrow></msub><mo>⁢</mo><mi mathvariant="normal">⋯</mi><mo>⁢</mo><msub><mi>g</mi><mrow><msub><mi>i</mi><mi>p</mi></msub><mo>⁢</mo><msub><mi>j</mi><mi>p</mi></msub></mrow></msub><mo>⁢</mo><msup><mi>u</mi><mrow><msub><mi>i</mi><mn>1</mn></msub><mo>⁢</mo><mi mathvariant="normal">…</mi><mo>⁢</mo><msub><mi>i</mi><mi>p</mi></msub></mrow></msup><mo>⁢</mo><msup><mi>v</mi><mrow><msub><mi>j</mi><mn>1</mn></msub><mo>⁢</mo><mi mathvariant="normal">…</mi><mo>⁢</mo><msub><mi>j</mi><mi>p</mi></msub></mrow></msup></mrow></mrow></math>) and <math id="p3.m4" class="ltx_Math" alttext="\mathop{\bf Vol}(g)" display="inline"><mrow><mo>𝐕𝐨𝐥</mo><mrow><mo stretchy="false">(</mo><mi>g</mi><mo stretchy="false">)</mo></mrow></mrow></math> is the unit volume form associated to the metric. (in coordinates, <math id="p3.m5" class="ltx_Math" alttext="\mathop{\bf Vol}(g)=\sqrt{\operatorname{det}(g)}e^{1}\wedge\cdots\wedge e^{n}" display="inline"><mrow><mrow><mo>𝐕𝐨𝐥</mo><mrow><mo stretchy="false">(</mo><mi>g</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><msqrt><mrow><mi>det</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>g</mi><mo stretchy="false">)</mo></mrow></mrow></msqrt><mo>⁢</mo><msup><mi>e</mi><mn>1</mn></msup></mrow><mo>∧</mo><mi mathvariant="normal">⋯</mi><mo>∧</mo><msup><mi>e</mi><mi>n</mi></msup></mrow></mrow></math>)</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">Generally <math id="p4.m1" class="ltx_Math" alttext="\ast\ast=(-1)^{p(n-p)}\operatorname{id}" display="inline"><mrow><mo>∗</mo><mo>∗</mo><mo>=</mo><msup><mrow><mo stretchy="false">(</mo><mo>-</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><mrow><mi>p</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>-</mo><mi>p</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></msup><mi>id</mi></mrow></math>, where <math id="p4.m2" class="ltx_Math" alttext="\operatorname{id}" display="inline"><mi>id</mi></math> is the
+identity operator in <math id="p4.m3" class="ltx_Math" alttext="\Omega^{p}(V)" display="inline"><mrow><msup><mi mathvariant="normal">Ω</mi><mi>p</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow></math>. In three dimensions,
+<math id="p4.m4" class="ltx_Math" alttext="\ast\ast=\operatorname{id}" display="inline"><mrow><mo>∗</mo><mo>∗</mo><mo>=</mo><mi>id</mi></mrow></math> for all <math id="p4.m5" class="ltx_Math" alttext="p=0,\ldots,3" display="inline"><mrow><mi>p</mi><mo>=</mo><mrow><mn>0</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mn>3</mn></mrow></mrow></math>.
+On <math id="p4.m6" class="ltx_Math" alttext="\mathbb{R}^{3}" display="inline"><msup><mi>ℝ</mi><mn>3</mn></msup></math> with Cartesian coordinates, the metric tensor is
+<math id="p4.m7" class="ltx_Math" alttext="g=dx\otimes dx+dy\otimes dy+dz\otimes dz" display="inline"><mrow><mi>g</mi><mo>=</mo><mrow><mrow><mrow><mrow><mi>d</mi><mo>⁢</mo><mi>x</mi></mrow><mo>⊗</mo><mi>d</mi></mrow><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mrow><mrow><mrow><mi>d</mi><mo>⁢</mo><mi>y</mi></mrow><mo>⊗</mo><mi>d</mi></mrow><mo>⁢</mo><mi>y</mi></mrow><mo>+</mo><mrow><mrow><mrow><mi>d</mi><mo>⁢</mo><mi>z</mi></mrow><mo>⊗</mo><mi>d</mi></mrow><mo>⁢</mo><mi>z</mi></mrow></mrow></mrow></math>, and the Hodge
+star operator is</p>
+<table id="S0.EGx2" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex4" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex4.m1" class="ltx_Math" alttext="\displaystyle\ast dx=dy\wedge dz,\ \ \ \ \ \ \ast dy=dz\wedge dx,\ \ \ \ \ \ %
+\ast dz=dx\wedge dy." display="inline"><mrow><mo>∗</mo><mi>d</mi><mi>x</mi><mo>=</mo><mi>d</mi><mi>y</mi><mo>∧</mo><mi>d</mi><mi>z</mi><mo rspace="32.5pt">,</mo><mo>∗</mo><mi>d</mi><mi>y</mi><mo>=</mo><mi>d</mi><mi>z</mi><mo>∧</mo><mi>d</mi><mi>x</mi><mo rspace="32.5pt">,</mo><mo>∗</mo><mi>d</mi><mi>z</mi><mo>=</mo><mi>d</mi><mi>x</mi><mo>∧</mo><mi>d</mi><mi>y</mi><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">The Hodge star operation occurs most frequently in differential geometry in the case where <math id="p5.m1" class="ltx_Math" alttext="M^{n}" display="inline"><msup><mi>M</mi><mi>n</mi></msup></math> is a <math id="p5.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>-dimensional orientable manifold with
+a Riemannian (or pseudo-Riemannian) tensor <math id="p5.m3" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math> and <math id="p5.m4" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> is a cotangent vector space of <math id="p5.m5" class="ltx_Math" alttext="M^{n}" display="inline"><msup><mi>M</mi><mi>n</mi></msup></math>. Also, one can extend this notion to antisymmetric tensor fields by computing Hodge star pointwise.
+</p>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Hodge star operator</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">HodgeStarOperator</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 13:31:41</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 13:31:41</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rspuzio (6075)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rspuzio (6075)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">11</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rspuzio (6075)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 53B21</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Synonym</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Hodge operator</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Synonym</th>
+<td class="ltx_td ltx_align_left ltx_border_r">star operator</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Defines</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">hodge star operator</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 22:27:27 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

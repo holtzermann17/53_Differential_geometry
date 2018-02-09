@@ -1,0 +1,148 @@
+<!DOCTYPE html><html>
+<head>
+<title>Lie derivative (for vector fields)</title>
+<!--Generated on Fri Feb  9 22:17:48 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">Lie derivative (for vector fields)</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Let <math id="p2.m1" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math> be a smooth manifold, and <math id="p2.m2" class="ltx_Math" alttext="X,Y\in\mathcal{T}(M)" display="inline"><mrow><mrow><mi>X</mi><mo>,</mo><mi>Y</mi></mrow><mo>∈</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒯</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>M</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> smooth vector fields
+on <math id="p2.m3" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math>. Let <math id="p2.m4" class="ltx_Math" alttext="\Theta:\mathcal{U}\rightarrow M" display="inline"><mrow><mi mathvariant="normal">Θ</mi><mo>:</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒰</mi><mo>→</mo><mi>M</mi></mrow></mrow></math> be the flow of <math id="p2.m5" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math>, where
+<math id="p2.m6" class="ltx_Math" alttext="\mathcal{U}\subseteq\mathbb{R}\times M" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒰</mi><mo>⊆</mo><mrow><mi>ℝ</mi><mo>×</mo><mi>M</mi></mrow></mrow></math> is an open neighborhood of
+<math id="p2.m7" class="ltx_Math" alttext="\left\{0\right\}\times M" display="inline"><mrow><mrow><mo>{</mo><mn>0</mn><mo>}</mo></mrow><mo>×</mo><mi>M</mi></mrow></math>. We make use of the following notation:</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\mathcal{U}^{p}=\left\{t\in\mathbb{R}\,|\,(t,p)\in\mathcal{U}\right\},\ \ %
+\forall p\in M," display="block"><mrow><mrow><mrow><msup><mi class="ltx_font_mathcaligraphic">𝒰</mi><mi>p</mi></msup><mo>=</mo><mrow><mo>{</mo><mrow><mi>t</mi><mo>∈</mo><mpadded width="+1.7pt"><mi>ℝ</mi></mpadded></mrow><mo rspace="4.2pt" stretchy="false">|</mo><mrow><mrow><mo stretchy="false">(</mo><mi>t</mi><mo>,</mo><mi>p</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi class="ltx_font_mathcaligraphic">𝒰</mi></mrow><mo>}</mo></mrow></mrow><mo rspace="12.5pt">,</mo><mrow><mrow><mo>∀</mo><mi>p</mi></mrow><mo>∈</mo><mi>M</mi></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\mathcal{U}_{t}=\left\{p\in M\,|\,(t,p)\in\mathcal{U}\right\},\ \ \forall t\in%
+\mathbb{R}," display="block"><mrow><mrow><mrow><msub><mi class="ltx_font_mathcaligraphic">𝒰</mi><mi>t</mi></msub><mo>=</mo><mrow><mo>{</mo><mrow><mi>p</mi><mo>∈</mo><mpadded width="+1.7pt"><mi>M</mi></mpadded></mrow><mo rspace="4.2pt" stretchy="false">|</mo><mrow><mrow><mo stretchy="false">(</mo><mi>t</mi><mo>,</mo><mi>p</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi class="ltx_font_mathcaligraphic">𝒰</mi></mrow><mo>}</mo></mrow></mrow><mo rspace="12.5pt">,</mo><mrow><mrow><mo>∀</mo><mi>t</mi></mrow><mo>∈</mo><mi>ℝ</mi></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and we introduce the
+auxiliary maps <math id="p2.m8" class="ltx_Math" alttext="\theta_{t}:\mathcal{U}_{t}\rightarrow M" display="inline"><mrow><msub><mi>θ</mi><mi>t</mi></msub><mo>:</mo><mrow><msub><mi class="ltx_font_mathcaligraphic">𝒰</mi><mi>t</mi></msub><mo>→</mo><mi>M</mi></mrow></mrow></math> and
+<math id="p2.m9" class="ltx_Math" alttext="\theta^{p}:\mathcal{U}^{p}\rightarrow M" display="inline"><mrow><msup><mi>θ</mi><mi>p</mi></msup><mo>:</mo><mrow><msup><mi class="ltx_font_mathcaligraphic">𝒰</mi><mi>p</mi></msup><mo>→</mo><mi>M</mi></mrow></mrow></math> defined as</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="\Theta(t,p)=\theta_{t}(p)=\theta^{p}(t),\ \ \forall(t,p)\in\mathcal{U}." display="block"><mrow><mrow><mrow><mrow><mi mathvariant="normal">Θ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo>,</mo><mi>p</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>θ</mi><mi>t</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msup><mi>θ</mi><mi>p</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo rspace="12.5pt">,</mo><mrow><mrow><mo>∀</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo>,</mo><mi>p</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∈</mo><mi class="ltx_font_mathcaligraphic">𝒰</mi></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">The <em class="ltx_emph ltx_font_italic">Lie derivative</em> of <math id="p3.m1" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math> along <math id="p3.m2" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is the vector field
+<math id="p3.m3" class="ltx_Math" alttext="\mathcal{L}_{X}Y\in\mathcal{T}(M)" display="inline"><mrow><mrow><msub><mi class="ltx_font_mathcaligraphic">ℒ</mi><mi>X</mi></msub><mo>⁢</mo><mi>Y</mi></mrow><mo>∈</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒯</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>M</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> defined by</p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="(\mathcal{L}_{X}Y)_{p}=\left.\frac{d}{dt}\left(d(\theta_{-t})_{\theta_{t}(p)}(%
+Y_{\theta_{t}(p)})\right)\right|_{t=0}=\lim_{t\rightarrow 0}\frac{d(\theta_{-t%
+})_{\theta_{t}(p)}(Y_{\theta_{t}(p)})-Y_{p}}{t},\ \ \forall p\in M," display="block"><mrow><mrow><mrow><msub><mrow><mo stretchy="false">(</mo><mrow><msub><mi class="ltx_font_mathcaligraphic">ℒ</mi><mi>X</mi></msub><mo>⁢</mo><mi>Y</mi></mrow><mo stretchy="false">)</mo></mrow><mi>p</mi></msub><mo>=</mo><msub><mrow><mrow><mfrac><mi>d</mi><mrow><mi>d</mi><mo>⁢</mo><mi>t</mi></mrow></mfrac><mo>⁢</mo><mrow><mo>(</mo><mrow><mi>d</mi><mo>⁢</mo><msub><mrow><mo stretchy="false">(</mo><msub><mi>θ</mi><mrow><mo>-</mo><mi>t</mi></mrow></msub><mo stretchy="false">)</mo></mrow><mrow><msub><mi>θ</mi><mi>t</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo stretchy="false">)</mo></mrow></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>Y</mi><mrow><msub><mi>θ</mi><mi>t</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo stretchy="false">)</mo></mrow></mrow></msub><mo stretchy="false">)</mo></mrow></mrow><mo>)</mo></mrow></mrow><mo fence="true">|</mo></mrow><mrow><mi>t</mi><mo>=</mo><mn>0</mn></mrow></msub><mo>=</mo><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>t</mi><mo>→</mo><mn>0</mn></mrow></munder><mo>⁡</mo><mfrac><mrow><mrow><mi>d</mi><mo>⁢</mo><msub><mrow><mo stretchy="false">(</mo><msub><mi>θ</mi><mrow><mo>-</mo><mi>t</mi></mrow></msub><mo stretchy="false">)</mo></mrow><mrow><msub><mi>θ</mi><mi>t</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo stretchy="false">)</mo></mrow></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>Y</mi><mrow><msub><mi>θ</mi><mi>t</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo stretchy="false">)</mo></mrow></mrow></msub><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><msub><mi>Y</mi><mi>p</mi></msub></mrow><mi>t</mi></mfrac></mrow></mrow><mo rspace="12.5pt">,</mo><mrow><mrow><mo>∀</mo><mi>p</mi></mrow><mo>∈</mo><mi>M</mi></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="p3.m4" class="ltx_Math" alttext="d(\theta_{-t})_{\theta_{t}(p)}\in\mathrm{Hom}(T_{\theta_{t}(p)}M,T_{p}M)" display="inline"><mrow><mrow><mi>d</mi><mo>⁢</mo><msub><mrow><mo stretchy="false">(</mo><msub><mi>θ</mi><mrow><mo>-</mo><mi>t</mi></mrow></msub><mo stretchy="false">)</mo></mrow><mrow><msub><mi>θ</mi><mi>t</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo stretchy="false">)</mo></mrow></mrow></msub></mrow><mo>∈</mo><mrow><mi>Hom</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>T</mi><mrow><msub><mi>θ</mi><mi>t</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo stretchy="false">)</mo></mrow></mrow></msub><mo>⁢</mo><mi>M</mi></mrow><mo>,</mo><mrow><msub><mi>T</mi><mi>p</mi></msub><mo>⁢</mo><mi>M</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math> if the push-forward of <math id="p3.m5" class="ltx_Math" alttext="\theta_{-t}" display="inline"><msub><mi>θ</mi><mrow><mo>-</mo><mi>t</mi></mrow></msub></math>, i.e.</p>
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="d(\theta_{-t})_{\theta_{t}(p)}(v)(f)=v(f\circ\theta_{-t}),\ \ \ \forall v\in T%
+_{\theta_{-t}(p)}M,\ f\in C^{\infty}(p)." display="block"><mrow><mrow><mrow><mrow><mi>d</mi><mo>⁢</mo><msub><mrow><mo stretchy="false">(</mo><msub><mi>θ</mi><mrow><mo>-</mo><mi>t</mi></mrow></msub><mo stretchy="false">)</mo></mrow><mrow><msub><mi>θ</mi><mi>t</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo stretchy="false">)</mo></mrow></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>v</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>f</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>v</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>f</mi><mo>∘</mo><msub><mi>θ</mi><mrow><mo>-</mo><mi>t</mi></mrow></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo rspace="17.5pt">,</mo><mrow><mrow><mrow><mo>∀</mo><mi>v</mi></mrow><mo>∈</mo><mrow><msub><mi>T</mi><mrow><msub><mi>θ</mi><mrow><mo>-</mo><mi>t</mi></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo stretchy="false">)</mo></mrow></mrow></msub><mo>⁢</mo><mi>M</mi></mrow></mrow><mo rspace="7.5pt">,</mo><mrow><mi>f</mi><mo>∈</mo><mrow><msup><mi>C</mi><mi mathvariant="normal">∞</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">The following result is not immediate at all.</p>
+</div>
+<div id="Thmthm1" class="ltx_theorem ltx_theorem_thm">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem">Theorem 1</span></h6>
+<div id="Thmthm1.p1" class="ltx_para">
+<p class="ltx_p"><math id="Thmthm1.p1.m1" class="ltx_Math" alttext="\mathcal{L}_{X}Y=[X,Y]" display="inline"><mrow><mrow><msub><mi class="ltx_font_mathcaligraphic">ℒ</mi><mi>X</mi></msub><mo>⁢</mo><mi>Y</mi></mrow><mo>=</mo><mrow><mo stretchy="false">[</mo><mi>X</mi><mo>,</mo><mi>Y</mi><mo stretchy="false">]</mo></mrow></mrow></math><span class="ltx_text ltx_font_italic">, where <math id="Thmthm1.p1.m2" class="ltx_Math" alttext="[X,Y]=XY-YX" display="inline"><mrow><mrow><mo mathvariant="normal" stretchy="false">[</mo><mi>X</mi><mo mathvariant="normal">,</mo><mi>Y</mi><mo mathvariant="normal" stretchy="false">]</mo></mrow><mo mathvariant="normal">=</mo><mrow><mrow><mi>X</mi><mo mathvariant="italic">⁢</mo><mi>Y</mi></mrow><mo mathvariant="normal">-</mo><mrow><mi>Y</mi><mo mathvariant="italic">⁢</mo><mi>X</mi></mrow></mrow></mrow></math> is the Lie bracket of <math id="Thmthm1.p1.m3" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> and
+<math id="Thmthm1.p1.m4" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math>.</span></p>
+</div>
+</div>
+<div id="p5" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Lie derivative (for vector fields)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">LieDerivativeforVectorFields</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 14:09:59</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 14:09:59</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">matte (1858)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">matte (1858)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">9</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">matte (1858)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 53-00</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Defines</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">Lie derivative</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 22:17:48 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

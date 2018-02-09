@@ -1,0 +1,391 @@
+<!DOCTYPE html><html>
+<head>
+<title>alternate characterization of curl</title>
+<!--Generated on Fri Feb  9 22:18:32 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">alternate characterization of curl</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">Let <math id="p1.m1" class="ltx_Math" alttext="\mathbf{F}" display="inline"><mi>𝐅</mi></math> be a smooth vector field on (an open subset of) <math id="p1.m2" class="ltx_Math" alttext="\mathbb{R}^{3}" display="inline"><msup><mi>ℝ</mi><mn>3</mn></msup></math>.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">We show that <math id="p2.m1" class="ltx_Math" alttext="\operatorname{curl}\mathbf{F}" display="inline"><mrow><mi>curl</mi><mo>⁡</mo><mi>𝐅</mi></mrow></math> defined using the coordinate-free definition given on the parent entry (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/curl</span>)
+is the same as the curl defined
+by <math id="p2.m2" class="ltx_Math" alttext="\nabla\times\mathbf{F}" display="inline"><mrow><mo>∇</mo><mo>×</mo><mi>𝐅</mi></mrow></math> in Cartesian coordinates.</p>
+</div>
+<section id="Sx1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">The case for spherical surfaces</h2>
+
+<div id="Sx1.p1" class="ltx_para">
+<p class="ltx_p">This will be done by directly computing the limit <math id="Sx1.p1.m1" class="ltx_Math" alttext="\mathbf{L}" display="inline"><mi>𝐋</mi></math> of surface
+integrals defining <math id="Sx1.p1.m2" class="ltx_Math" alttext="\operatorname{curl}\mathbf{F}(\mathbf{p})" display="inline"><mrow><mrow><mi>curl</mi><mo>⁡</mo><mi>𝐅</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝐩</mi><mo stretchy="false">)</mo></mrow></mrow></math>,
+using spheres <math id="Sx1.p1.m3" class="ltx_Math" alttext="S^{2}(r,\mathbf{p})" display="inline"><mrow><msup><mi>S</mi><mn>2</mn></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>r</mi><mo>,</mo><mi>𝐩</mi><mo stretchy="false">)</mo></mrow></mrow></math> centered at <math id="Sx1.p1.m4" class="ltx_Math" alttext="\mathbf{p}" display="inline"><mi>𝐩</mi></math> of radius <math id="Sx1.p1.m5" class="ltx_Math" alttext="r" display="inline"><mi>r</mi></math>. The formula is:</p>
+<table id="Sx3.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="Sx1.Ex1" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Sx1.Ex1.m1" class="ltx_Math" alttext="\displaystyle\operatorname{curl}\mathbf{F}(\mathbf{p})=\mathbf{L}" display="inline"><mrow><mrow><mrow><mi>curl</mi><mo>⁡</mo><mi>𝐅</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝐩</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>𝐋</mi></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Sx1.Ex1.m2" class="ltx_Math" alttext="\displaystyle=\lim_{r\to 0}\frac{3}{4\pi r^{3}}\iint_{S^{2}(r,\mathbf{p})}%
+\mathbf{n}\times\mathbf{F}\,dA" display="inline"><mrow><mi></mi><mo>=</mo><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>r</mi><mo>→</mo><mn>0</mn></mrow></munder><mo>⁡</mo><mrow><mstyle displaystyle="true"><mfrac><mn>3</mn><mrow><mn>4</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><msup><mi>r</mi><mn>3</mn></msup></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∬</mo><mrow><msup><mi>S</mi><mn>2</mn></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>r</mi><mo>,</mo><mi>𝐩</mi><mo stretchy="false">)</mo></mrow></mrow></msub></mstyle><mrow><mrow><mi>𝐧</mi><mo>×</mo><mpadded width="+1.7pt"><mi>𝐅</mi></mpadded></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><mi>A</mi></mrow></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="Sx1.Ex2" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Sx1.Ex2.m2" class="ltx_Math" alttext="\displaystyle=\lim_{r\to 0}\frac{3r^{2}}{4\pi r^{3}}\iint_{S^{2}}\mathbf{n}%
+\times\mathbf{F}(r\mathbf{n}+\mathbf{p})\,dA\,," display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>r</mi><mo>→</mo><mn>0</mn></mrow></munder><mo>⁡</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><mn>3</mn><mo>⁢</mo><msup><mi>r</mi><mn>2</mn></msup></mrow><mrow><mn>4</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><msup><mi>r</mi><mn>3</mn></msup></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∬</mo><msup><mi>S</mi><mn>2</mn></msup></msub></mstyle><mrow><mrow><mi>𝐧</mi><mo>×</mo><mi>𝐅</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>r</mi><mo>⁢</mo><mi>𝐧</mi></mrow><mo>+</mo><mi>𝐩</mi></mrow><mo rspace="4.2pt" stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><mpadded width="+1.7pt"><mi>A</mi></mpadded></mrow></mrow></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="Sx1.p1.m6" class="ltx_Math" alttext="\mathbf{n}" display="inline"><mi>𝐧</mi></math> is the outward unit normal to the surface (at each point of the surface), and
+<math id="Sx1.p1.m7" class="ltx_Math" alttext="S^{2}" display="inline"><msup><mi>S</mi><mn>2</mn></msup></math> is the unit sphere at the origin.</p>
+</div>
+<div id="Sx1.p2" class="ltx_para">
+<p class="ltx_p">We simplify the last integral.
+Expanding <math id="Sx1.p2.m1" class="ltx_Math" alttext="\mathbf{F}(r\mathbf{n}+\mathbf{p})" display="inline"><mrow><mi>𝐅</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>r</mi><mo>⁢</mo><mi>𝐧</mi></mrow><mo>+</mo><mi>𝐩</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math>
+in a first-degree Taylor polynomial about <math id="Sx1.p2.m2" class="ltx_Math" alttext="\mathbf{p}" display="inline"><mi>𝐩</mi></math>, we have</p>
+<table id="Sx3.EGx2" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="Sx1.Ex3" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Sx1.Ex3.m1" class="ltx_Math" alttext="\displaystyle\iint_{S^{2}}\mathbf{n}\times\mathbf{F}(r\mathbf{n}+\mathbf{p})\,dA" display="inline"><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∬</mo><msup><mi>S</mi><mn>2</mn></msup></msub></mstyle><mrow><mrow><mi>𝐧</mi><mo>×</mo><mi>𝐅</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>r</mi><mo>⁢</mo><mi>𝐧</mi></mrow><mo>+</mo><mi>𝐩</mi></mrow><mo rspace="4.2pt" stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><mi>A</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Sx1.Ex3.m2" class="ltx_Math" alttext="\displaystyle=\iint_{S^{2}}\mathbf{n}\times\mathbf{F}(\mathbf{p})\,dA" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∬</mo><msup><mi>S</mi><mn>2</mn></msup></msub></mstyle><mrow><mrow><mi>𝐧</mi><mo>×</mo><mi>𝐅</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝐩</mi><mo rspace="4.2pt" stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><mi>A</mi></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="Sx1.Ex4" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Sx1.Ex4.m2" class="ltx_Math" alttext="\displaystyle\quad+\iint_{S^{2}}\mathbf{n}\times\operatorname{D}\mathbf{F}(%
+\mathbf{p})r\mathbf{n}\,dA+\iint_{S^{2}}\mathbf{n}\times o(\lVert r\mathbf{n}%
+\rVert)\,dA\,." display="inline"><mrow><mrow><mi mathvariant="normal"> </mi><mo>+</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∬</mo><msup><mi>S</mi><mn>2</mn></msup></msub></mstyle><mrow><mrow><mi>𝐧</mi><mo>×</mo><mrow><mi mathvariant="normal">D</mi><mo>⁡</mo><mi>𝐅</mi></mrow></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝐩</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>r</mi><mo>⁢</mo><mpadded width="+1.7pt"><mi>𝐧</mi></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>A</mi></mrow></mrow></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∬</mo><msup><mi>S</mi><mn>2</mn></msup></msub></mstyle><mrow><mrow><mi>𝐧</mi><mo>×</mo><mi>o</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mo fence="true" stretchy="false">∥</mo><mrow><mi>r</mi><mo>⁢</mo><mi>𝐧</mi></mrow><mo fence="true" stretchy="false">∥</mo></mrow><mo rspace="4.2pt" stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><mpadded width="+1.7pt"><mi>A</mi></mpadded></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The integral <math id="Sx1.p2.m3" class="ltx_Math" alttext="\iint_{S^{2}}\mathbf{n}\times\mathbf{F}(\mathbf{p})\,dA" display="inline"><mrow><msub><mo largeop="true" symmetric="true">∬</mo><msup><mi>S</mi><mn>2</mn></msup></msub><mrow><mrow><mi>𝐧</mi><mo>×</mo><mi>𝐅</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝐩</mi><mo rspace="4.2pt" stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><mi>A</mi></mrow></mrow></mrow></math>
+vanishes by symmetry of the sphere,
+while</p>
+<table id="Sx3.EGx3" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="Sx1.Ex5" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Sx1.Ex5.m1" class="ltx_Math" alttext="\displaystyle\left\lVert\iint_{S^{2}}\mathbf{n}\times o(\lVert r\mathbf{n}%
+\rVert)\,dA\right\rVert\leq\iint_{S^{2}}\lVert\mathbf{n}\rVert\,o(r)\,dA=o(r)\,." display="inline"><mrow><mrow><mrow><mo fence="true">∥</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∬</mo><msup><mi>S</mi><mn>2</mn></msup></msub></mstyle><mrow><mrow><mi>𝐧</mi><mo>×</mo><mi>o</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mo fence="true" stretchy="false">∥</mo><mrow><mi>r</mi><mo>⁢</mo><mi>𝐧</mi></mrow><mo fence="true" stretchy="false">∥</mo></mrow><mo rspace="4.2pt" stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><mi>A</mi></mrow></mrow></mrow><mo fence="true">∥</mo></mrow><mo>≤</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∬</mo><msup><mi>S</mi><mn>2</mn></msup></msub></mstyle><mrow><mrow><mo fence="true" stretchy="false">∥</mo><mi>𝐧</mi><mo fence="true" rspace="4.2pt" stretchy="false">∥</mo></mrow><mo>⁢</mo><mi>o</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>r</mi><mo rspace="4.2pt" stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><mi>A</mi></mrow></mrow></mrow><mo>=</mo><mrow><mi>o</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>r</mi><mo rspace="4.2pt" stretchy="false">)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Combining these facts, we obtain</p>
+<table id="Sx3.EGx4" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="Sx1.Ex6" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Sx1.Ex6.m1" class="ltx_Math" alttext="\displaystyle\mathbf{L}" display="inline"><mi>𝐋</mi></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Sx1.Ex6.m2" class="ltx_Math" alttext="\displaystyle=\lim_{r\to 0}\left[0+\frac{3}{4\pi r}\iint_{S^{2}}\mathbf{n}%
+\times\operatorname{D}\mathbf{F}(\mathbf{p})r\mathbf{n}\,dA+o(1)\right]" display="inline"><mrow><mi></mi><mo>=</mo><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>r</mi><mo>→</mo><mn>0</mn></mrow></munder><mo>⁡</mo><mrow><mo>[</mo><mrow><mn>0</mn><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mn>3</mn><mrow><mn>4</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi>r</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∬</mo><msup><mi>S</mi><mn>2</mn></msup></msub></mstyle><mrow><mrow><mi>𝐧</mi><mo>×</mo><mrow><mi mathvariant="normal">D</mi><mo>⁡</mo><mi>𝐅</mi></mrow></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝐩</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>r</mi><mo>⁢</mo><mpadded width="+1.7pt"><mi>𝐧</mi></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>A</mi></mrow></mrow></mrow></mrow><mo>+</mo><mrow><mi>o</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>]</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="Sx1.Ex7" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Sx1.Ex7.m2" class="ltx_Math" alttext="\displaystyle=\frac{3}{4\pi}\iint_{S^{2}}\mathbf{n}\times\operatorname{D}%
+\mathbf{F}(\mathbf{p})\mathbf{n}\,dA\,." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mn>3</mn><mrow><mn>4</mn><mo>⁢</mo><mi>π</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∬</mo><msup><mi>S</mi><mn>2</mn></msup></msub></mstyle><mrow><mrow><mi>𝐧</mi><mo>×</mo><mrow><mi mathvariant="normal">D</mi><mo>⁡</mo><mi>𝐅</mi></mrow></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝐩</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mpadded width="+1.7pt"><mi>𝐧</mi></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mpadded width="+1.7pt"><mi>A</mi></mpadded></mrow></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Notice that <math id="Sx1.p2.m4" class="ltx_Math" alttext="\mathbf{L}" display="inline"><mi>𝐋</mi></math> depends only on the derivative of <math id="Sx1.p2.m5" class="ltx_Math" alttext="\mathbf{F}" display="inline"><mi>𝐅</mi></math>
+at <math id="Sx1.p2.m6" class="ltx_Math" alttext="\mathbf{p}" display="inline"><mi>𝐩</mi></math>.</p>
+</div>
+<div id="Sx1.p3" class="ltx_para">
+<p class="ltx_p">We want to evaluate the last integral in Cartesian coordinates.
+Let <math id="Sx1.p3.m1" class="ltx_Math" alttext="\mathbf{e}_{k}" display="inline"><msub><mi>𝐞</mi><mi>k</mi></msub></math> be an orthonormal basis of <math id="Sx1.p3.m2" class="ltx_Math" alttext="\mathbb{R}^{3}" display="inline"><msup><mi>ℝ</mi><mn>3</mn></msup></math>
+oriented positively, and let <math id="Sx1.p3.m3" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> be the matrix of the derivative
+<math id="Sx1.p3.m4" class="ltx_Math" alttext="\operatorname{D}\mathbf{F}(p)" display="inline"><mrow><mrow><mi mathvariant="normal">D</mi><mo>⁡</mo><mi>𝐅</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo stretchy="false">)</mo></mrow></mrow></math> in this basis.
+Then the <math id="Sx1.p3.m5" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math>th coordinate of <math id="Sx1.p3.m6" class="ltx_Math" alttext="\mathbf{L}" display="inline"><mi>𝐋</mi></math> with respect to the
+same basis
+is</p>
+<table id="Sx1.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx1.Ex8.m1" class="ltx_Math" alttext="\left(\iint_{S^{2}}\mathbf{n}\times B\mathbf{n}\,dA\right)\cdot\mathbf{e}_{k}=%
+\iint_{S^{2}}(\mathbf{n}\times B\mathbf{n})\cdot\mathbf{e}_{k}\,dA" display="block"><mrow><mrow><mrow><mo>(</mo><mrow><msub><mo largeop="true" symmetric="true">∬</mo><msup><mi>S</mi><mn>2</mn></msup></msub><mrow><mrow><mi>𝐧</mi><mo>×</mo><mi>B</mi></mrow><mo>⁢</mo><mpadded width="+1.7pt"><mi>𝐧</mi></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>A</mi></mrow></mrow></mrow><mo>)</mo></mrow><mo>⋅</mo><msub><mi>𝐞</mi><mi>k</mi></msub></mrow><mo>=</mo><mrow><msub><mo largeop="true" symmetric="true">∬</mo><msup><mi>S</mi><mn>2</mn></msup></msub><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>𝐧</mi><mo>×</mo><mi>B</mi></mrow><mo>⁢</mo><mi>𝐧</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⋅</mo><mpadded width="+1.7pt"><msub><mi>𝐞</mi><mi>k</mi></msub></mpadded></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><mi>A</mi></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The <math id="Sx1.p3.m7" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math>th coordinate of the integrand is</p>
+<table id="Sx1.Ex9" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx1.Ex9.m1" class="ltx_Math" alttext="(\mathbf{n}\times B\mathbf{n})\cdot\mathbf{e}_{k}=n^{i}\,(B\mathbf{n})^{j}\,%
+\epsilon_{ijk}=n^{i}\,B^{j}_{l}n^{l}\,\epsilon_{ijk}\,," display="block"><mrow><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>𝐧</mi><mo>×</mo><mi>B</mi></mrow><mo>⁢</mo><mi>𝐧</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⋅</mo><msub><mi>𝐞</mi><mi>k</mi></msub></mrow><mo>=</mo><mrow><mpadded width="+1.7pt"><msup><mi>n</mi><mi>i</mi></msup></mpadded><mo>⁢</mo><mpadded width="+1.7pt"><msup><mrow><mo stretchy="false">(</mo><mrow><mi>B</mi><mo>⁢</mo><mi>𝐧</mi></mrow><mo stretchy="false">)</mo></mrow><mi>j</mi></msup></mpadded><mo>⁢</mo><msub><mi>ϵ</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi><mo>⁢</mo><mi>k</mi></mrow></msub></mrow><mo>=</mo><mrow><mpadded width="+1.7pt"><msup><mi>n</mi><mi>i</mi></msup></mpadded><mo>⁢</mo><msubsup><mi>B</mi><mi>l</mi><mi>j</mi></msubsup><mo>⁢</mo><mpadded width="+1.7pt"><msup><mi>n</mi><mi>l</mi></msup></mpadded><mo>⁢</mo><mpadded width="+1.7pt"><msub><mi>ϵ</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi><mo>⁢</mo><mi>k</mi></mrow></msub></mpadded></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where to lessen the writing, we employ
+the Einstein summation convention, along
+with the Levi-Civita permutation symbol <math id="Sx1.p3.m8" class="ltx_Math" alttext="\epsilon_{ijk}" display="inline"><msub><mi>ϵ</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi><mo>⁢</mo><mi>k</mi></mrow></msub></math>, and <math id="Sx1.p3.m9" class="ltx_Math" alttext="B^{j}_{l}" display="inline"><msubsup><mi>B</mi><mi>l</mi><mi>j</mi></msubsup></math>
+denotes the entry at the <math id="Sx1.p3.m10" class="ltx_Math" alttext="j" display="inline"><mi>j</mi></math>th row, <math id="Sx1.p3.m11" class="ltx_Math" alttext="l" display="inline"><mi>l</mi></math>th column of <math id="Sx1.p3.m12" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math>.</p>
+</div>
+<div id="Sx1.p4" class="ltx_para">
+<p class="ltx_p">In the summation above, if a summmand has <math id="Sx1.p4.m1" class="ltx_Math" alttext="i\neq l" display="inline"><mrow><mi>i</mi><mo>≠</mo><mi>l</mi></mrow></math>,
+then the integral of that summand over the sphere is zero, by symmetry.
+This means that in the summation the index <math id="Sx1.p4.m2" class="ltx_Math" alttext="l" display="inline"><mi>l</mi></math> may be set to <math id="Sx1.p4.m3" class="ltx_Math" alttext="i" display="inline"><mi>i</mi></math>,
+and thus</p>
+<table id="Sx1.Ex10" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx1.Ex10.m1" class="ltx_Math" alttext="\left(\iint_{S^{2}}\mathbf{n}\times B\mathbf{n}\,dA\right)\cdot\mathbf{e}_{k}=%
+\iint_{S^{2}}n^{i}B_{i}^{j}n^{i}\epsilon_{ijk}\,dA=B_{i}^{j}\epsilon_{ijk}%
+\iint_{S^{2}}(n^{i})^{2}\,dA\,." display="block"><mrow><mrow><mrow><mrow><mo>(</mo><mrow><msub><mo largeop="true" symmetric="true">∬</mo><msup><mi>S</mi><mn>2</mn></msup></msub><mrow><mrow><mi>𝐧</mi><mo>×</mo><mi>B</mi></mrow><mo>⁢</mo><mpadded width="+1.7pt"><mi>𝐧</mi></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>A</mi></mrow></mrow></mrow><mo>)</mo></mrow><mo>⋅</mo><msub><mi>𝐞</mi><mi>k</mi></msub></mrow><mo>=</mo><mrow><msub><mo largeop="true" symmetric="true">∬</mo><msup><mi>S</mi><mn>2</mn></msup></msub><mrow><msup><mi>n</mi><mi>i</mi></msup><mo>⁢</mo><msubsup><mi>B</mi><mi>i</mi><mi>j</mi></msubsup><mo>⁢</mo><msup><mi>n</mi><mi>i</mi></msup><mo>⁢</mo><mpadded width="+1.7pt"><msub><mi>ϵ</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi><mo>⁢</mo><mi>k</mi></mrow></msub></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>A</mi></mrow></mrow></mrow><mo>=</mo><mrow><msubsup><mi>B</mi><mi>i</mi><mi>j</mi></msubsup><mo>⁢</mo><msub><mi>ϵ</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi><mo>⁢</mo><mi>k</mi></mrow></msub><mo>⁢</mo><mrow><msub><mo largeop="true" symmetric="true">∬</mo><msup><mi>S</mi><mn>2</mn></msup></msub><mrow><mpadded width="+1.7pt"><msup><mrow><mo stretchy="false">(</mo><msup><mi>n</mi><mi>i</mi></msup><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mpadded width="+1.7pt"><mi>A</mi></mpadded></mrow></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Now there is a formula for the evaluation of integrals
+of polynomials over <math id="Sx1.p4.m4" class="ltx_Math" alttext="S^{m-1}\subset\mathbb{R}^{m}" display="inline"><mrow><msup><mi>S</mi><mrow><mi>m</mi><mo>-</mo><mn>1</mn></mrow></msup><mo>⊂</mo><msup><mi>ℝ</mi><mi>m</mi></msup></mrow></math>, in terms of the gamma function;
+in our case (<math id="Sx1.p4.m5" class="ltx_Math" alttext="m=3" display="inline"><mrow><mi>m</mi><mo>=</mo><mn>3</mn></mrow></math>) the formula reads:</p>
+<table id="Sx1.Ex11" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx1.Ex11.m1" class="ltx_Math" alttext="\iint_{S^{2}}(n^{i})^{2}\,dA=\frac{2\Gamma(\frac{3}{2})\,\Gamma(\frac{1}{2})\,%
+\Gamma(\frac{1}{2})}{\Gamma(\frac{3}{2}+\frac{1}{2}+\frac{1}{2})}=\frac{2%
+\Gamma(\frac{3}{2})\,\sqrt{\pi}\,\sqrt{\pi}}{\frac{3}{2}\Gamma(\frac{3}{2})}=%
+\frac{4\pi}{3}\,." display="block"><mrow><mrow><mrow><msub><mo largeop="true" symmetric="true">∬</mo><msup><mi>S</mi><mn>2</mn></msup></msub><mrow><mpadded width="+1.7pt"><msup><mrow><mo stretchy="false">(</mo><msup><mi>n</mi><mi>i</mi></msup><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>A</mi></mrow></mrow></mrow><mo>=</mo><mfrac><mrow><mn>2</mn><mo>⁢</mo><mi mathvariant="normal">Γ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mfrac><mn>3</mn><mn>2</mn></mfrac><mo rspace="4.2pt" stretchy="false">)</mo></mrow><mo>⁢</mo><mi mathvariant="normal">Γ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo rspace="4.2pt" stretchy="false">)</mo></mrow><mo>⁢</mo><mi mathvariant="normal">Γ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo stretchy="false">)</mo></mrow></mrow><mrow><mi mathvariant="normal">Γ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mfrac><mn>3</mn><mn>2</mn></mfrac><mo>+</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>+</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo stretchy="false">)</mo></mrow></mrow></mfrac><mo>=</mo><mfrac><mrow><mn>2</mn><mo>⁢</mo><mi mathvariant="normal">Γ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mfrac><mn>3</mn><mn>2</mn></mfrac><mo rspace="4.2pt" stretchy="false">)</mo></mrow><mo>⁢</mo><mpadded width="+1.7pt"><msqrt><mi>π</mi></msqrt></mpadded><mo>⁢</mo><msqrt><mi>π</mi></msqrt></mrow><mrow><mfrac><mn>3</mn><mn>2</mn></mfrac><mo>⁢</mo><mi mathvariant="normal">Γ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mfrac><mn>3</mn><mn>2</mn></mfrac><mo stretchy="false">)</mo></mrow></mrow></mfrac><mo>=</mo><mpadded width="+1.7pt"><mfrac><mrow><mn>4</mn><mo>⁢</mo><mi>π</mi></mrow><mn>3</mn></mfrac></mpadded></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">(If you do not know this formula, the integral in our case
+can be computed directly using spherical coordinates.)
+Therefore the <math id="Sx1.p4.m6" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math>th component of <math id="Sx1.p4.m7" class="ltx_Math" alttext="\mathbf{L}" display="inline"><mi>𝐋</mi></math> is</p>
+<table id="Sx1.Ex12" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx1.Ex12.m1" class="ltx_Math" alttext="\mathbf{L}\cdot\mathbf{e}_{k}=\frac{3}{4\pi}\,B_{i}^{j}\epsilon_{ijk}\iint_{S^%
+{2}}(n^{i})^{2}\,dA=B_{i}^{j}\epsilon_{ijk}=\left.\frac{\partial F^{j}}{%
+\partial x^{i}}\right|_{\mathbf{p}}\,\epsilon_{ijk}\,." display="block"><mrow><mrow><mrow><mi>𝐋</mi><mo>⋅</mo><msub><mi>𝐞</mi><mi>k</mi></msub></mrow><mo>=</mo><mrow><mpadded width="+1.7pt"><mfrac><mn>3</mn><mrow><mn>4</mn><mo>⁢</mo><mi>π</mi></mrow></mfrac></mpadded><mo>⁢</mo><msubsup><mi>B</mi><mi>i</mi><mi>j</mi></msubsup><mo>⁢</mo><msub><mi>ϵ</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi><mo>⁢</mo><mi>k</mi></mrow></msub><mo>⁢</mo><mrow><msub><mo largeop="true" symmetric="true">∬</mo><msup><mi>S</mi><mn>2</mn></msup></msub><mrow><mpadded width="+1.7pt"><msup><mrow><mo stretchy="false">(</mo><msup><mi>n</mi><mi>i</mi></msup><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>A</mi></mrow></mrow></mrow></mrow><mo>=</mo><mrow><msubsup><mi>B</mi><mi>i</mi><mi>j</mi></msubsup><mo>⁢</mo><msub><mi>ϵ</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi><mo>⁢</mo><mi>k</mi></mrow></msub></mrow><mo>=</mo><mrow><mpadded width="+1.7pt"><msub><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>F</mi><mi>j</mi></msup></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>x</mi><mi>i</mi></msup></mrow></mfrac><mo fence="true">|</mo></mrow><mi>𝐩</mi></msub></mpadded><mo>⁢</mo><mpadded width="+1.7pt"><msub><mi>ϵ</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi><mo>⁢</mo><mi>k</mi></mrow></msub></mpadded></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">But this is just <math id="Sx1.p4.m8" class="ltx_Math" alttext="(\nabla\times\mathbf{F}(\mathbf{p}))\cdot\mathbf{e}_{k}" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mo>∇</mo><mo>×</mo><mi>𝐅</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝐩</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⋅</mo><msub><mi>𝐞</mi><mi>k</mi></msub></mrow></math>.
+</p>
+</div>
+</section>
+<section id="Sx2" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">The case for arbitrary surfaces</h2>
+
+<div id="Sx2.p1" class="ltx_para">
+<p class="ltx_p">Although we have only
+computed</p>
+<table id="Sx2.Ex13" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx2.Ex13.m1" class="ltx_Math" alttext="\mathbf{L}=\operatorname{curl}\mathbf{F}(\mathbf{p})=\lim_{V\to 0}\frac{1}{V}%
+\iint_{S}\mathbf{n}\times\mathbf{F}\,dA" display="block"><mrow><mi>𝐋</mi><mo>=</mo><mrow><mrow><mi>curl</mi><mo>⁡</mo><mi>𝐅</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝐩</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>V</mi><mo>→</mo><mn>0</mn></mrow></munder><mo>⁡</mo><mrow><mfrac><mn>1</mn><mi>V</mi></mfrac><mo>⁢</mo><mrow><msub><mo largeop="true" symmetric="true">∬</mo><mi>S</mi></msub><mrow><mrow><mi>𝐧</mi><mo>×</mo><mpadded width="+1.7pt"><mi>𝐅</mi></mpadded></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><mi>A</mi></mrow></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">only for spheres <math id="Sx2.p1.m1" class="ltx_Math" alttext="S=S^{2}(r,\mathbf{p})" display="inline"><mrow><mi>S</mi><mo>=</mo><mrow><msup><mi>S</mi><mn>2</mn></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>r</mi><mo>,</mo><mi>𝐩</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>,
+this formula holds for arbitrary closed surfaces <math id="Sx2.p1.m2" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> that shrink nicely to <math id="Sx2.p1.m3" class="ltx_Math" alttext="\mathbf{p}" display="inline"><mi>𝐩</mi></math>.
+It is hardly obvious, especially since our computation before depended
+on the symmetry of the sphere extensively.</p>
+</div>
+<div id="Sx2.p2" class="ltx_para">
+<p class="ltx_p">To show the general result,
+consider the triple scalar product
+<math id="Sx2.p2.m1" class="ltx_Math" alttext="(\mathbf{v}\times\mathbf{F})\cdot\mathbf{e}_{k}" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>𝐯</mi><mo>×</mo><mi>𝐅</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⋅</mo><msub><mi>𝐞</mi><mi>k</mi></msub></mrow></math>.
+This is a linear functional in the vector <math id="Sx2.p2.m2" class="ltx_Math" alttext="\mathbf{v}" display="inline"><mi>𝐯</mi></math>,
+so there exists
+a unique vector function <math id="Sx2.p2.m3" class="ltx_Math" alttext="\mathbf{g}_{k}" display="inline"><msub><mi>𝐠</mi><mi>k</mi></msub></math> such that
+<math id="Sx2.p2.m4" class="ltx_Math" alttext="(\mathbf{v}\times\mathbf{F})\cdot\mathbf{e}_{k}=\mathbf{g}_{k}\cdot\mathbf{v}" display="inline"><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>𝐯</mi><mo>×</mo><mi>𝐅</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⋅</mo><msub><mi>𝐞</mi><mi>k</mi></msub></mrow><mo>=</mo><mrow><msub><mi>𝐠</mi><mi>k</mi></msub><mo>⋅</mo><mi>𝐯</mi></mrow></mrow></math> for all <math id="Sx2.p2.m5" class="ltx_Math" alttext="\mathbf{v}\in\mathbb{R}^{3}" display="inline"><mrow><mi>𝐯</mi><mo>∈</mo><msup><mi>ℝ</mi><mn>3</mn></msup></mrow></math>.
+We can find the components of this <math id="Sx2.p2.m6" class="ltx_Math" alttext="\mathbf{g}_{k}" display="inline"><msub><mi>𝐠</mi><mi>k</mi></msub></math> by evaluating the functional
+at <math id="Sx2.p2.m7" class="ltx_Math" alttext="\mathbf{v}=\mathbf{e}_{i}" display="inline"><mrow><mi>𝐯</mi><mo>=</mo><msub><mi>𝐞</mi><mi>i</mi></msub></mrow></math>:</p>
+<table id="Sx2.Ex14" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx2.Ex14.m1" class="ltx_Math" alttext="g_{k}^{i}=\mathbf{g}_{k}\cdot\mathbf{e}_{i}=(\mathbf{e}_{i}\times\mathbf{F})%
+\cdot\mathbf{e}_{k}=\det(\mathbf{e}_{i},\mathbf{F},\mathbf{e}_{k})=F^{j}%
+\epsilon_{ijk}\,." display="block"><mrow><mrow><msubsup><mi>g</mi><mi>k</mi><mi>i</mi></msubsup><mo>=</mo><mrow><msub><mi>𝐠</mi><mi>k</mi></msub><mo>⋅</mo><msub><mi>𝐞</mi><mi>i</mi></msub></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><msub><mi>𝐞</mi><mi>i</mi></msub><mo>×</mo><mi>𝐅</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⋅</mo><msub><mi>𝐞</mi><mi>k</mi></msub></mrow><mo>=</mo><mrow><mo movablelimits="false">det</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><msub><mi>𝐞</mi><mi>i</mi></msub><mo>,</mo><mi>𝐅</mi><mo>,</mo><msub><mi>𝐞</mi><mi>k</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msup><mi>F</mi><mi>j</mi></msup><mo>⁢</mo><mpadded width="+1.7pt"><msub><mi>ϵ</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi><mo>⁢</mo><mi>k</mi></mrow></msub></mpadded></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The reason for considering such expressions is that, putting <math id="Sx2.p2.m8" class="ltx_Math" alttext="\mathbf{v}=\mathbf{n}" display="inline"><mrow><mi>𝐯</mi><mo>=</mo><mi>𝐧</mi></mrow></math>, we have</p>
+<table id="Sx2.Ex15" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx2.Ex15.m1" class="ltx_Math" alttext="\iint_{S}(\mathbf{n}\times\mathbf{F})\cdot\mathbf{e}_{k}\,dA=\iint_{S}\mathbf{%
+g}_{k}\cdot\mathbf{n}\,dA=\iint_{S}\mathbf{g}_{k}\cdot d\mathbf{A}\,." display="block"><mrow><mrow><mrow><msub><mo largeop="true" symmetric="true">∬</mo><mi>S</mi></msub><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>𝐧</mi><mo>×</mo><mi>𝐅</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⋅</mo><mpadded width="+1.7pt"><msub><mi>𝐞</mi><mi>k</mi></msub></mpadded></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><mi>A</mi></mrow></mrow></mrow><mo>=</mo><mrow><msub><mo largeop="true" symmetric="true">∬</mo><mi>S</mi></msub><mrow><mrow><msub><mi>𝐠</mi><mi>k</mi></msub><mo>⋅</mo><mpadded width="+1.7pt"><mi>𝐧</mi></mpadded></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><mi>A</mi></mrow></mrow></mrow><mo>=</mo><mrow><msub><mo largeop="true" symmetric="true">∬</mo><mi>S</mi></msub><mrow><msub><mi>𝐠</mi><mi>k</mi></msub><mo>⋅</mo><mrow><mo>𝑑</mo><mpadded width="+1.7pt"><mi>𝐀</mi></mpadded></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">So we have converted the original integral into an ordinary surface integral.
+And this surface integral can be changed into a volume integral, by using the divergence theorem:</p>
+<table id="Sx2.Ex16" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx2.Ex16.m1" class="ltx_Math" alttext="\iint_{S}\mathbf{g}_{k}\cdot d\mathbf{A}=\iiint_{M}\operatorname{div}\mathbf{g%
+}_{k}\,dV=\iiint_{M}\frac{\partial F^{j}}{\partial x^{i}}\,\epsilon_{ijk}\,dV\,," display="block"><mrow><mrow><mrow><msub><mo largeop="true" symmetric="true">∬</mo><mi>S</mi></msub><mrow><msub><mi>𝐠</mi><mi>k</mi></msub><mo>⋅</mo><mrow><mo>𝑑</mo><mi>𝐀</mi></mrow></mrow></mrow><mo>=</mo><mrow><msub><mo largeop="true" symmetric="true">∭</mo><mi>M</mi></msub><mrow><mi>div</mi><mo>⁡</mo><mrow><mpadded width="+1.7pt"><msub><mi>𝐠</mi><mi>k</mi></msub></mpadded><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>V</mi></mrow></mrow></mrow><mo>=</mo><mrow><msub><mo largeop="true" symmetric="true">∭</mo><mi>M</mi></msub><mrow><mpadded width="+1.7pt"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>F</mi><mi>j</mi></msup></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>x</mi><mi>i</mi></msup></mrow></mfrac></mpadded><mo>⁢</mo><mpadded width="+1.7pt"><msub><mi>ϵ</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi><mo>⁢</mo><mi>k</mi></mrow></msub></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mpadded width="+1.7pt"><mi>V</mi></mpadded></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="Sx2.p2.m9" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math> is the volume whose boundary is <math id="Sx2.p2.m10" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math>.
+Hence</p>
+<table id="Sx3.EGx5" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="Sx2.Ex17" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Sx2.Ex17.m1" class="ltx_Math" alttext="\displaystyle\mathbf{L}\cdot\mathbf{e}_{k}" display="inline"><mrow><mi>𝐋</mi><mo>⋅</mo><msub><mi>𝐞</mi><mi>k</mi></msub></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Sx2.Ex17.m2" class="ltx_Math" alttext="\displaystyle=\lim_{V\to 0}\frac{1}{V}\iint_{S}(\mathbf{n}\times\mathbf{F})%
+\cdot\mathbf{e}_{k}\,dA" display="inline"><mrow><mi></mi><mo>=</mo><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>V</mi><mo>→</mo><mn>0</mn></mrow></munder><mo>⁡</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mi>V</mi></mfrac></mstyle><mo>⁢</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∬</mo><mi>S</mi></msub></mstyle><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>𝐧</mi><mo>×</mo><mi>𝐅</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⋅</mo><mpadded width="+1.7pt"><msub><mi>𝐞</mi><mi>k</mi></msub></mpadded></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><mi>A</mi></mrow></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="Sx2.Ex18" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Sx2.Ex18.m2" class="ltx_Math" alttext="\displaystyle=\lim_{V\to 0}\frac{1}{V}\iiint_{M}\frac{\partial F^{j}}{\partial
+x%
+^{i}}\,\epsilon_{ijk}\,dV" display="inline"><mrow><mi></mi><mo>=</mo><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>V</mi><mo>→</mo><mn>0</mn></mrow></munder><mo>⁡</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mi>V</mi></mfrac></mstyle><mo>⁢</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∭</mo><mi>M</mi></msub></mstyle><mrow><mpadded width="+1.7pt"><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>F</mi><mi>j</mi></msup></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>x</mi><mi>i</mi></msup></mrow></mfrac></mstyle></mpadded><mo>⁢</mo><mpadded width="+1.7pt"><msub><mi>ϵ</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi><mo>⁢</mo><mi>k</mi></mrow></msub></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>V</mi></mrow></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="Sx2.Ex19" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Sx2.Ex19.m2" class="ltx_Math" alttext="\displaystyle=\left.\frac{\partial F^{j}}{\partial x^{i}}\right|_{\mathbf{p}}%
+\,\epsilon_{ijk}=(\nabla\times\mathbf{F}(\mathbf{p}))\cdot\mathbf{e}_{k}\,." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mpadded width="+1.7pt"><msub><mrow><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>F</mi><mi>j</mi></msup></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>x</mi><mi>i</mi></msup></mrow></mfrac></mstyle><mo fence="true">|</mo></mrow><mi>𝐩</mi></msub></mpadded><mo>⁢</mo><msub><mi>ϵ</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi><mo>⁢</mo><mi>k</mi></mrow></msub></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mo>∇</mo><mo>×</mo><mi>𝐅</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝐩</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⋅</mo><mpadded width="+1.7pt"><msub><mi>𝐞</mi><mi>k</mi></msub></mpadded></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</section>
+<section id="Sx3" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">Definition in terms of differential forms</h2>
+
+<div id="Sx3.p1" class="ltx_para">
+<p class="ltx_p">We mention, in passing,
+a computational, yet coordinate-free, alternative to the definition of the curl,
+using differential forms.
+If <math id="Sx3.p1.m1" class="ltx_Math" alttext="\omega" display="inline"><mi>ω</mi></math> is a 1-form on <math id="Sx3.p1.m2" class="ltx_Math" alttext="\mathbb{R}^{3}" display="inline"><msup><mi>ℝ</mi><mn>3</mn></msup></math> such that <math id="Sx3.p1.m3" class="ltx_Math" alttext="\omega(\mathbf{v})=\langle\mathbf{F},\mathbf{v}\rangle" display="inline"><mrow><mrow><mi>ω</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝐯</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">⟨</mo><mi>𝐅</mi><mo>,</mo><mi>𝐯</mi><mo stretchy="false">⟩</mo></mrow></mrow></math>,
+then the curl of <math id="Sx3.p1.m4" class="ltx_Math" alttext="\mathbf{F}" display="inline"><mi>𝐅</mi></math> is defined as the vector function <math id="Sx3.p1.m5" class="ltx_Math" alttext="\mathbf{g}=g^{k}\,e_{k}" display="inline"><mrow><mi>𝐠</mi><mo>=</mo><mrow><mpadded width="+1.7pt"><msup><mi>g</mi><mi>k</mi></msup></mpadded><mo>⁢</mo><msub><mi>e</mi><mi>k</mi></msub></mrow></mrow></math> such that
+</p>
+<table id="Sx3.Ex20" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx3.Ex20.m1" class="ltx_Math" alttext="d\omega(\mathbf{u},\mathbf{v})=\langle\mathbf{g},\mathbf{u}\times\mathbf{v}%
+\rangle\,." display="block"><mrow><mrow><mrow><mi>d</mi><mo>⁢</mo><mi>ω</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝐮</mi><mo>,</mo><mi>𝐯</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">⟨</mo><mi>𝐠</mi><mo>,</mo><mrow><mi>𝐮</mi><mo>×</mo><mi>𝐯</mi></mrow><mo rspace="4.2pt" stretchy="false">⟩</mo></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">In Cartesian coordinates, we have</p>
+<table id="Sx3.EGx6" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="Sx3.Ex21" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Sx3.Ex21.m1" class="ltx_Math" alttext="\displaystyle\omega" display="inline"><mi>ω</mi></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Sx3.Ex21.m2" class="ltx_Math" alttext="\displaystyle=F^{1}\,dx^{1}+F^{2}\,dx^{2}+F^{3}\,dx^{3}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mpadded width="+1.7pt"><msup><mi>F</mi><mn>1</mn></msup></mpadded><mo>⁢</mo><mi>d</mi><mo>⁢</mo><msup><mi>x</mi><mn>1</mn></msup></mrow><mo>+</mo><mrow><mpadded width="+1.7pt"><msup><mi>F</mi><mn>2</mn></msup></mpadded><mo>⁢</mo><mi>d</mi><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow><mo>+</mo><mrow><mpadded width="+1.7pt"><msup><mi>F</mi><mn>3</mn></msup></mpadded><mo>⁢</mo><mi>d</mi><mo>⁢</mo><msup><mi>x</mi><mn>3</mn></msup></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="Sx3.Ex22" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Sx3.Ex22.m1" class="ltx_Math" alttext="\displaystyle d\omega" display="inline"><mrow><mi>d</mi><mo>⁢</mo><mi>ω</mi></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Sx3.Ex22.m2" class="ltx_Math" alttext="\displaystyle=g^{1}\,dx^{2}\wedge dx^{3}+g^{2}\,dx^{3}\wedge\,dx^{1}+g^{3}\,dx%
+^{1}\wedge dx^{2}\,," display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><mrow><mrow><mrow><mrow><mpadded width="+1.7pt"><msup><mi>g</mi><mn>1</mn></msup></mpadded><mo>⁢</mo><mi>d</mi><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow><mo>∧</mo><mrow><mi>d</mi><mo>⁢</mo><msup><mi>x</mi><mn>3</mn></msup></mrow></mrow><mo>+</mo><mrow><mpadded width="+1.7pt"><msup><mi>g</mi><mn>2</mn></msup></mpadded><mo>⁢</mo><mi>d</mi><mo>⁢</mo><msup><mi>x</mi><mn>3</mn></msup></mrow></mrow><mo rspace="4.2pt">∧</mo><mrow><mi>d</mi><mo>⁢</mo><msup><mi>x</mi><mn>1</mn></msup></mrow></mrow><mo>+</mo><mrow><mpadded width="+1.7pt"><msup><mi>g</mi><mn>3</mn></msup></mpadded><mo>⁢</mo><mi>d</mi><mo>⁢</mo><msup><mi>x</mi><mn>1</mn></msup></mrow></mrow><mo>∧</mo><mrow><mi>d</mi><mo>⁢</mo><mpadded width="+1.7pt"><msup><mi>x</mi><mn>2</mn></msup></mpadded></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">If we take the exterior derivative of the first equation for <math id="Sx3.p1.m6" class="ltx_Math" alttext="\omega" display="inline"><mi>ω</mi></math>, and then equate components
+with the second equation for <math id="Sx3.p1.m7" class="ltx_Math" alttext="d\omega" display="inline"><mrow><mi>d</mi><mo>⁢</mo><mi>ω</mi></mrow></math>,
+we find that <math id="Sx3.p1.m8" class="ltx_Math" alttext="g^{k}" display="inline"><msup><mi>g</mi><mi>k</mi></msup></math> = <math id="Sx3.p1.m9" class="ltx_Math" alttext="(\nabla\times\mathbf{F})\cdot\mathbf{e}_{k}" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mo>∇</mo><mo>×</mo><mi>𝐅</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⋅</mo><msub><mi>𝐞</mi><mi>k</mi></msub></mrow></math>,
+so our new definition is equivalent to the others.
+</p>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">alternate characterization of curl</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">AlternateCharacterizationOfCurl</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:29:10</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:29:10</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">stevecheng (10074)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">stevecheng (10074)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">9</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">stevecheng (10074)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Derivation</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 53-01</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">curl</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">nabla</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">FirstOrderOperatorsInRiemannianGeometry</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Curl</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">NablaNabla</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 22:18:32 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

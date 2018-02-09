@@ -1,0 +1,157 @@
+<!DOCTYPE html><html>
+<head>
+<title>Hamilton equations</title>
+<!--Generated on Fri Feb  9 22:28:40 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">Hamilton equations</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">The Hamilton equations are a formulation of the equations of motion in classical mechanics.</p>
+</div>
+<section id="S0.SS0.SSSx1" class="ltx_subsubsection">
+<h2 class="ltx_title ltx_title_subsubsection">Local formulation</h2>
+
+<div id="S0.SS0.SSSx1.p1" class="ltx_para">
+<p class="ltx_p">Suppose <math id="S0.SS0.SSSx1.p1.m1" class="ltx_Math" alttext="U\subseteq\mathbbm{R}^{n}" display="inline"><mrow><mi>U</mi><mo>⊆</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow></math> is an open set, suppose <math id="S0.SS0.SSSx1.p1.m2" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math> is an interval
+(representing time), and <math id="S0.SS0.SSSx1.p1.m3" class="ltx_Math" alttext="H\colon U\times\mathbbm{R}^{n}\times I\to\mathbbm{R}" display="inline"><mrow><mi>H</mi><mo>:</mo><mrow><mrow><mi>U</mi><mo>×</mo><msup><mi>ℝ</mi><mi>n</mi></msup><mo>×</mo><mi>I</mi></mrow><mo>→</mo><mi>ℝ</mi></mrow></mrow></math>
+is a smooth function. Then the equations
+</p>
+<table id="S0.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E1"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E1.m1" class="ltx_Math" alttext="\displaystyle\dot{q}_{j}" display="inline"><msub><mover accent="true"><mi>q</mi><mo>˙</mo></mover><mi>j</mi></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.E1.m2" class="ltx_Math" alttext="\displaystyle=\frac{\partial H}{\partial p_{j}}(q(t),p(t),t)," display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>H</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>p</mi><mi>j</mi></msub></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>q</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mrow><mi>p</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr></tbody>
+<tbody id="S0.E2"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E2.m1" class="ltx_Math" alttext="\displaystyle\dot{p}_{j}" display="inline"><msub><mover accent="true"><mi>p</mi><mo>˙</mo></mover><mi>j</mi></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.E2.m2" class="ltx_Math" alttext="\displaystyle=-\frac{\partial H}{\partial q_{j}}(q(t),p(t),t)," display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mo>-</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>H</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>q</mi><mi>j</mi></msub></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>q</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mrow><mi>p</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">are the <em class="ltx_emph ltx_font_italic">Hamilton equations</em> for the curve</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="(q,p)=(q_{1},\ldots,q_{n},p_{1},\ldots,p_{n})\colon I\to U\times\mathbbm{R}^{n}." display="block"><mrow><mrow><mrow><mrow><mo stretchy="false">(</mo><mi>q</mi><mo>,</mo><mi>p</mi><mo stretchy="false">)</mo></mrow><mo>=</mo><mrow><mo stretchy="false">(</mo><msub><mi>q</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>q</mi><mi>n</mi></msub><mo>,</mo><msub><mi>p</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>p</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>:</mo><mrow><mi>I</mi><mo>→</mo><mrow><mi>U</mi><mo>×</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Such a solution is called a <em class="ltx_emph ltx_font_italic">bicharacteristic</em>, and <math id="S0.SS0.SSSx1.p1.m4" class="ltx_Math" alttext="H" display="inline"><mi>H</mi></math> is
+called a <em class="ltx_emph ltx_font_italic">Hamiltonian function</em>. Here we use classical notation;
+the <math id="S0.SS0.SSSx1.p1.m5" class="ltx_Math" alttext="q_{i}" display="inline"><msub><mi>q</mi><mi>i</mi></msub></math>’s represent the location of the particles,
+the <math id="S0.SS0.SSSx1.p1.m6" class="ltx_Math" alttext="p_{i}" display="inline"><msub><mi>p</mi><mi>i</mi></msub></math>’s represent the momenta of the particles.</p>
+</div>
+</section>
+<section id="S0.SS0.SSSx2" class="ltx_subsubsection">
+<h2 class="ltx_title ltx_title_subsubsection">Global formulation</h2>
+
+<div id="S0.SS0.SSSx2.p1" class="ltx_para">
+<p class="ltx_p">Suppose <math id="S0.SS0.SSSx2.p1.m1" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> is a symplectic manifold with symplectic form <math id="S0.SS0.SSSx2.p1.m2" class="ltx_Math" alttext="\omega" display="inline"><mi>ω</mi></math> and that <math id="S0.SS0.SSSx2.p1.m3" class="ltx_Math" alttext="H\colon P\to\mathbbm{R}" display="inline"><mrow><mi>H</mi><mo>:</mo><mrow><mi>P</mi><mo>→</mo><mi>ℝ</mi></mrow></mrow></math>
+is a smooth function. Then <math id="S0.SS0.SSSx2.p1.m4" class="ltx_Math" alttext="X_{H}" display="inline"><msub><mi>X</mi><mi>H</mi></msub></math>, the Hamiltonian
+vector field corresponding to <math id="S0.SS0.SSSx2.p1.m5" class="ltx_Math" alttext="H" display="inline"><mi>H</mi></math> is determined by</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="dH=\omega(X_{H},\cdot)." display="block"><mrow><mrow><mrow><mi>d</mi><mo>⁢</mo><mi>H</mi></mrow><mo>=</mo><mrow><mi>ω</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>X</mi><mi>H</mi></msub><mo>,</mo><mo>⋅</mo><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The most common case is when <math id="S0.SS0.SSSx2.p1.m6" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> is the cotangent bundle of a manifold <math id="S0.SS0.SSSx2.p1.m7" class="ltx_Math" alttext="Q" display="inline"><mi>Q</mi></math>
+equipped with the canonical symplectic form <math id="S0.SS0.SSSx2.p1.m8" class="ltx_Math" alttext="\omega=-d\alpha" display="inline"><mrow><mi>ω</mi><mo>=</mo><mrow><mo>-</mo><mrow><mi>d</mi><mo>⁢</mo><mi>α</mi></mrow></mrow></mrow></math>,
+where <math id="S0.SS0.SSSx2.p1.m9" class="ltx_Math" alttext="\alpha" display="inline"><mi>α</mi></math> is the Poincaré <math id="S0.SS0.SSSx2.p1.m10" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math>-form (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/Poincare1Form</span>). (Note that other authors may have different sign convention.) Then Hamilton’s equations are the equations for the flow of the vector field <math id="S0.SS0.SSSx2.p1.m11" class="ltx_Math" alttext="X_{H}" display="inline"><msub><mi>X</mi><mi>H</mi></msub></math>. Given a system of coordinates <math id="S0.SS0.SSSx2.p1.m12" class="ltx_Math" alttext="x^{1},\ldots x^{2n}" display="inline"><mrow><msup><mi>x</mi><mn>1</mn></msup><mo>,</mo><mrow><mi mathvariant="normal">…</mi><mo>⁢</mo><msup><mi>x</mi><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow></msup></mrow></mrow></math> on the manifold <math id="S0.SS0.SSSx2.p1.m13" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math>, they can be written as follows:</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="\dot{x}^{i}=(X_{H})^{i}(x_{1},\ldots x_{2n},t)" display="block"><mrow><msup><mover accent="true"><mi>x</mi><mo>˙</mo></mover><mi>i</mi></msup><mo>=</mo><mrow><msup><mrow><mo stretchy="false">(</mo><msub><mi>X</mi><mi>H</mi></msub><mo stretchy="false">)</mo></mrow><mi>i</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><mrow><mi mathvariant="normal">…</mi><mo>⁢</mo><msub><mi>x</mi><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow></msub></mrow><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The relation with the former definition is that in canonical
+local coordinates <math id="S0.SS0.SSSx2.p1.m14" class="ltx_Math" alttext="(q_{i},p_{j})" display="inline"><mrow><mo stretchy="false">(</mo><msub><mi>q</mi><mi>i</mi></msub><mo>,</mo><msub><mi>p</mi><mi>j</mi></msub><mo stretchy="false">)</mo></mrow></math> for <math id="S0.SS0.SSSx2.p1.m15" class="ltx_Math" alttext="T^{\ast}Q" display="inline"><mrow><msup><mi>T</mi><mo>∗</mo></msup><mo>⁢</mo><mi>Q</mi></mrow></math>, the flow of <math id="S0.SS0.SSSx2.p1.m16" class="ltx_Math" alttext="X_{H}" display="inline"><msub><mi>X</mi><mi>H</mi></msub></math>
+is determined by equations (<a href="#S0.E1" title="(1) ‣ Local formulation ‣ Hamilton equations" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1</span></a>)-(<a href="#S0.E2" title="(2) ‣ Local formulation ‣ Hamilton equations" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2</span></a>).</p>
+</div>
+<div id="S0.SS0.SSSx2.p2" class="ltx_para">
+<p class="ltx_p">Also, the following terminology is frequently encountered — the manifold <math id="S0.SS0.SSSx2.p2.m1" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> is known as the phase space, the manifold <math id="S0.SS0.SSSx2.p2.m2" class="ltx_Math" alttext="Q" display="inline"><mi>Q</mi></math> is known as the configuration space, and the product <math id="S0.SS0.SSSx2.p2.m3" class="ltx_Math" alttext="P\times\mathbbm{R}" display="inline"><mrow><mi>P</mi><mo>×</mo><mi>ℝ</mi></mrow></math> is known as state space.
+</p>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Hamilton equations</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">HamiltonEquations</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 14:45:58</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 14:45:58</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">9</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 53D05</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 70H05</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">Quantization</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 22:28:40 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

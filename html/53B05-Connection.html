@@ -1,0 +1,706 @@
+<!DOCTYPE html><html>
+<head>
+<title>connection</title>
+<!--Generated on Fri Feb  9 22:26:51 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">connection</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">Note that this definition has come under new management and is still in the process of being edited and rewritten.</p>
+</div>
+<section id="S0.SS0.SSS0.Px1" class="ltx_paragraph">
+<h2 class="ltx_title ltx_title_paragraph">Intuitive geometric definition</h2>
+
+<div id="S0.SS0.SSS0.Px1.p1" class="ltx_para">
+<p class="ltx_p">The notions of connection, parallel transport, and covariant derivative are closely related so, to prevent confusion, we will begin by explaining these notions intuitively before presenting formal definitions. Moreover, it helps to have a good grasp of the geometric notions involved before studying the more formal definitions.</p>
+</div>
+<div id="S0.SS0.SSS0.Px1.p2" class="ltx_para">
+<p class="ltx_p">In elementary vector analysis, one takes it for granted that vectors can be moved about freely. As long as one takes care not to change the magnitude or the direction of a vector, one can move the basepoint of the vector to any arbitrary location.</p>
+</div>
+<div id="S0.SS0.SSS0.Px1.p3" class="ltx_para">
+<p class="ltx_p">When one graduates to the study of vectors on curved spaces, however, it becomes apparent that one can no longer take this freedom of moving vectors about for granted. As defined, vectors are confined to their basepoint and the basic operations with vectors are only defined for vectors based at the same point.</p>
+</div>
+<div id="S0.SS0.SSS0.Px1.p4" class="ltx_para">
+<p class="ltx_p">To move a vector from one point to another, one needs to specify how this is to be done. A connection is a prescription for moving vectors based at one point of a space to another point. Intuitively speaking, a connection consists of a set of linear transformations which transform vectors based at a particular point into vectors based at infinitesimally nearby points. Unlike in elementary vector analysis where there is only one right way of moving a vector from one point to another, in differential geometry there are many ways of moving vectors around, so one needs to specify which connection one is using before one can move vectors from point to point.</p>
+</div>
+<div id="S0.SS0.SSS0.Px1.p5" class="ltx_para">
+<p class="ltx_p">This act of moving a vector from point to point is called <em class="ltx_emph ltx_font_italic">parallel transport</em> in analogy with the operation of elementary vector analysis which it generalizes. Not only can one speak of transporting a vector to a nearby point using a connection, but one can parallel transport a vector along a curve. To see how that works, imagine a curve as a sequence of points. Using the connection, we can transport a vector based at one point of a curve to the next point on the curve. Then we can use the connection to transport it to the point after that, and so on until we have transported it from one end of the curve to the other.</p>
+</div>
+<div id="S0.SS0.SSS0.Px1.p6" class="ltx_para">
+<p class="ltx_p">At this point, a striking difference between differential geometry and elementary vector analysis shows up. Typically, if we connect two points <math id="S0.SS0.SSS0.Px1.p6.m1" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> and <math id="S0.SS0.SSS0.Px1.p6.m2" class="ltx_Math" alttext="Q" display="inline"><mi>Q</mi></math> by two or more curves and parallel transport a vector based at <math id="S0.SS0.SSS0.Px1.p6.m3" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> to <math id="S0.SS0.SSS0.Px1.p6.m4" class="ltx_Math" alttext="Q" display="inline"><mi>Q</mi></math>, we find that the result depends upon which curve we transported the vector along. In fact, in differential geometry, the definition of a curved space is a space in which there exist two distinct curves with the same endpoints such that parallel transport along one curve is not the same as parallel transport along the other curve.</p>
+</div>
+<div id="S0.SS0.SSS0.Px1.p7" class="ltx_para">
+<p class="ltx_p">Finally, there is the notion of covariant derivative. Suppose that one is given not just a single vector based at a certain point, but a whole vector field, i.e. a vector for each point of the manifold. Then one can try to compute the derivative of this vector field. To compute a derivative of a function, one subtracts the value of the function at a point from the value at a nearby point. But this is not possible for the vector field because we are only allowed to subtract vectors stationed at the same base point. However, we can use our connection to parallel transport the vector at a point to the nearby point, then subtract. This generalization of differentiation involving parallel transport is known as covariant differentiation.</p>
+</div>
+<div id="S0.SS0.SSS0.Px1.p8" class="ltx_para">
+<p class="ltx_p">Obviously, the above definitions leave much to be desired in the way of precision. They are not specific what a space is, how vectors are to be associated to the points of this space, and are based on vague notions of infinitesimally nearby points.</p>
+</div>
+<div id="S0.SS0.SSS0.Px1.p9" class="ltx_para">
+<p class="ltx_p">For the purpose of this article, we shall take our space to be a finite-dimensional manifold. To be sure, some of the definitions to be given apply to more general contexts, such as infinite-dimensional manifolds so one may speak of connections on these spaces as well. However, we shall not pursue this topic here since this exposition is intended to be accessible to newcomers to differential geometry who may not have the necessary background in Hilbert space theory, point set topology, and other subjects.</p>
+</div>
+<div id="S0.SS0.SSS0.Px1.p10" class="ltx_para">
+<p class="ltx_p">The definition of vector bundle makes precise the idea of ”attaching vectors to points”. The reader who is not comfortable with general vector bundles may take this bundle to be the tangent bundle.</p>
+</div>
+<div id="S0.SS0.SSS0.Px1.p11" class="ltx_para">
+<p class="ltx_p">There are about as many ways of framing a rigorous definition of connection as there are ways of formalizing differential geometry. Hence, under the headings below, we shall list various equivalent definitions.</p>
+</div>
+<div id="S0.SS0.SSS0.Px1.p12" class="ltx_para">
+<p class="ltx_p">Before proceeding to these definitions, a few words of warning may be in order. Since the notions of connection, parallel transport, and covariant derivative are so closely related, it is easy to translate propositions involving one of these terms into propositions involving a different one of three terms. In particular, propositions about connections are easily rewritten as propositions about covariant derivatives. In some formalisms, it is easier to define covariant derivative than to define connection. This leads to an abuse of terminology — some authors say things like “the connection <math id="S0.SS0.SSS0.Px1.p12.m1" class="ltx_Math" alttext="\nabla" display="inline"><mo>∇</mo></math>” instead of the more precise statement “the covariant differentiation operator <math id="S0.SS0.SSS0.Px1.p12.m2" class="ltx_Math" alttext="\nabla" display="inline"><mo>∇</mo></math>”. This can be disconcerting to the uninitiated, but once the principle involved has been grasped, this practise is harmless.</p>
+</div>
+</section>
+<section id="S0.SS0.SSS0.Px2" class="ltx_paragraph">
+<h2 class="ltx_title ltx_title_paragraph">Preliminaries.</h2>
+
+<div id="S0.SS0.SSS0.Px2.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S0.SS0.SSS0.Px2.p1.m1" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math> be a smooth, <math id="S0.SS0.SSS0.Px2.p1.m2" class="ltx_Math" alttext="d" display="inline"><mi>d</mi></math>-dimensional differential manifold. Let <math id="S0.SS0.SSS0.Px2.p1.m3" class="ltx_Math" alttext="\mathcal{F}(M)" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">ℱ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>M</mi><mo stretchy="false">)</mo></mrow></mrow></math> denote
+the ring of smooth, real-valued functions on <math id="S0.SS0.SSS0.Px2.p1.m4" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math>, and let <math id="S0.SS0.SSS0.Px2.p1.m5" class="ltx_Math" alttext="\mathcal{X}(M)" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒳</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>M</mi><mo stretchy="false">)</mo></mrow></mrow></math> denote
+the real vector space of smooth vector fields. Let <math id="S0.SS0.SSS0.Px2.p1.m6" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> be a vector bundle over <math id="S0.SS0.SSS0.Px2.p1.m7" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math> whose structure group is the finite-dimensional Lie group <math id="S0.SS0.SSS0.Px2.p1.m8" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> and whose fibers are isomorphic to the <math id="S0.SS0.SSS0.Px2.p1.m9" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>-dimensional vector space <math id="S0.SS0.SSS0.Px2.p1.m10" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>.Let <math id="S0.SS0.SSS0.Px2.p1.m11" class="ltx_Math" alttext="\mathcal{X}(B)" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒳</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow></math> denote the set of sections of <math id="S0.SS0.SSS0.Px2.p1.m12" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math>. Let <math id="S0.SS0.SSS0.Px2.p1.m13" class="ltx_Math" alttext="G^{M}" display="inline"><msup><mi>G</mi><mi>M</mi></msup></math> denote the set of smooth maps from <math id="S0.SS0.SSS0.Px2.p1.m14" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math> to <math id="S0.SS0.SSS0.Px2.p1.m15" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math>; it forms a group under pointwise multiplication. (If <math id="S0.SS0.SSS0.Px2.p1.m16" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> and <math id="S0.SS0.SSS0.Px2.p1.m17" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math> are two functions from <math id="S0.SS0.SSS0.Px2.p1.m18" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math> to <math id="S0.SS0.SSS0.Px2.p1.m19" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math>, then their product is <math id="S0.SS0.SSS0.Px2.p1.m20" class="ltx_Math" alttext="h" display="inline"><mi>h</mi></math> which is defined as <math id="S0.SS0.SSS0.Px2.p1.m21" class="ltx_Math" alttext="h(x)=f(x)g(x)" display="inline"><mrow><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.) Likewise, let <math id="S0.SS0.SSS0.Px2.p1.m22" class="ltx_Math" alttext="A^{M}" display="inline"><msup><mi>A</mi><mi>M</mi></msup></math> denote the set of smooth maps from <math id="S0.SS0.SSS0.Px2.p1.m23" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math> to <math id="S0.SS0.SSS0.Px2.p1.m24" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>.</p>
+</div>
+<div id="S0.SS0.SSS0.Px2.p2" class="ltx_para">
+<p class="ltx_p">For simplicity, we shall assume that <math id="S0.SS0.SSS0.Px2.p2.m1" class="ltx_Math" alttext="G=GL(V)" display="inline"><mrow><mi>G</mi><mo>=</mo><mrow><mi>G</mi><mo>⁢</mo><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> for the time being. After stating the definitions of connection in this case, we shall describe how they can be modified to cover the case where <math id="S0.SS0.SSS0.Px2.p2.m2" class="ltx_Math" alttext="G\subset GL(V)" display="inline"><mrow><mi>G</mi><mo>⊂</mo><mrow><mi>G</mi><mo>⁢</mo><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+<div id="S0.SS0.SSS0.Px2.p3" class="ltx_para">
+<p class="ltx_p">Recall that <math id="S0.SS0.SSS0.Px2.p3.m1" class="ltx_Math" alttext="\mathcal{F}(M)" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">ℱ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>M</mi><mo stretchy="false">)</mo></mrow></mrow></math> both acts and is acted upon by <math id="S0.SS0.SSS0.Px2.p3.m2" class="ltx_Math" alttext="\mathcal{X}(M)" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒳</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>M</mi><mo stretchy="false">)</mo></mrow></mrow></math>. Given a
+function <math id="S0.SS0.SSS0.Px2.p3.m3" class="ltx_Math" alttext="f\in\mathcal{F}(M)" display="inline"><mrow><mi>f</mi><mo>∈</mo><mrow><mi class="ltx_font_mathcaligraphic">ℱ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>M</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> and a vector field <math id="S0.SS0.SSS0.Px2.p3.m4" class="ltx_Math" alttext="X\in\mathcal{X}(M)" display="inline"><mrow><mi>X</mi><mo>∈</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒳</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>M</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> we write
+<math id="S0.SS0.SSS0.Px2.p3.m5" class="ltx_Math" alttext="fX\in\mathcal{X}(M)" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mi>X</mi></mrow><mo>∈</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒳</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>M</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> for the vector field obtained by point-wise multiplying
+values of <math id="S0.SS0.SSS0.Px2.p3.m6" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> by values of <math id="S0.SS0.SSS0.Px2.p3.m7" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math>, and write <math id="S0.SS0.SSS0.Px2.p3.m8" class="ltx_Math" alttext="X(f)\in\mathcal{F}(M)" display="inline"><mrow><mrow><mi>X</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>f</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∈</mo><mrow><mi class="ltx_font_mathcaligraphic">ℱ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>M</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> for the
+function obtained by taking the directional derivative of <math id="S0.SS0.SSS0.Px2.p3.m9" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> with
+respect to <math id="S0.SS0.SSS0.Px2.p3.m10" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math>.</p>
+</div>
+</section>
+<section id="S0.SS0.SSS0.Px3" class="ltx_paragraph">
+<h2 class="ltx_title ltx_title_paragraph">Coordinate definition.</h2>
+
+<div id="S0.SS0.SSS0.Px3.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S0.SS0.SSS0.Px3.p1.m1" class="ltx_Math" alttext="x^{1},\ldots,x^{d}" display="inline"><mrow><msup><mi>x</mi><mn>1</mn></msup><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msup><mi>x</mi><mi>d</mi></msup></mrow></math> be a set of coordinates on some neighborhood of <math id="S0.SS0.SSS0.Px3.p1.m2" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math>. These may be extended to coordinates on a subset of the bundle by augmenting them with coordinates <math id="S0.SS0.SSS0.Px3.p1.m3" class="ltx_Math" alttext="x^{d+1},\ldots,x^{d+n}" display="inline"><mrow><msup><mi>x</mi><mrow><mi>d</mi><mo>+</mo><mn>1</mn></mrow></msup><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msup><mi>x</mi><mrow><mi>d</mi><mo>+</mo><mi>n</mi></mrow></msup></mrow></math> on the fiber. Since the fiber is a vector space, we will demand that the fiber coordinates be linear coordiantes. (This means that the coordinates of the sum of two vectors are the sum of the coordinates of the two vectors and the coordiantes of the scalar multiple of a vector are gotten by multiplying the coordinates of the original vecor by the scalar.) Adopt the convention that Latin indices run from <math id="S0.SS0.SSS0.Px3.p1.m4" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math> to <math id="S0.SS0.SSS0.Px3.p1.m5" class="ltx_Math" alttext="d" display="inline"><mi>d</mi></math> and that Greek indices run from <math id="S0.SS0.SSS0.Px3.p1.m6" class="ltx_Math" alttext="d+1" display="inline"><mrow><mi>d</mi><mo>+</mo><mn>1</mn></mrow></math> to <math id="S0.SS0.SSS0.Px3.p1.m7" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>.</p>
+</div>
+<div id="S0.SS0.SSS0.Px3.p2" class="ltx_para">
+<p class="ltx_p">In these coordinates, a connection will be represented by a three-index field</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="C^{\mu}_{\nu i}(x^{1},\ldots,x^{d})" display="block"><mrow><msubsup><mi>C</mi><mrow><mi>ν</mi><mo>⁢</mo><mi>i</mi></mrow><mi>μ</mi></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mn>1</mn></msup><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msup><mi>x</mi><mi>d</mi></msup><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">on the manifold and the covariant derivative <math id="S0.SS0.SSS0.Px3.p2.m1" class="ltx_Math" alttext="\nabla_{i}S^{\mu}" display="inline"><mrow><msub><mo>∇</mo><mi>i</mi></msub><mo>⁡</mo><msup><mi>S</mi><mi>μ</mi></msup></mrow></math> of a section <math id="S0.SS0.SSS0.Px3.p2.m2" class="ltx_Math" alttext="S^{\mu}\in\mathcal{X}(B)" display="inline"><mrow><msup><mi>S</mi><mi>μ</mi></msup><mo>∈</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒳</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> will be an element of <math id="S0.SS0.SSS0.Px3.p2.m3" class="ltx_Math" alttext="T(M)\otimes B" display="inline"><mrow><mrow><mi>T</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>M</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⊗</mo><mi>B</mi></mrow></math> given by the formula</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\nabla_{i}S^{\mu}=\partial_{i}S+C^{\mu}_{\nu i}S^{\nu}" display="block"><mrow><mrow><msub><mo>∇</mo><mi>i</mi></msub><mo>⁡</mo><msup><mi>S</mi><mi>μ</mi></msup></mrow><mo>=</mo><mrow><mrow><msub><mo>∂</mo><mi>i</mi></msub><mo>⁡</mo><mi>S</mi></mrow><mo>+</mo><mrow><msubsup><mi>C</mi><mrow><mi>ν</mi><mo>⁢</mo><mi>i</mi></mrow><mi>μ</mi></msubsup><mo>⁢</mo><msup><mi>S</mi><mi>ν</mi></msup></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">(Here <math id="S0.SS0.SSS0.Px3.p2.m4" class="ltx_Math" alttext="\partial_{i}" display="inline"><msub><mo>∂</mo><mi>i</mi></msub></math> is short for <math id="S0.SS0.SSS0.Px3.p2.m5" class="ltx_Math" alttext="\partial/\partial x^{i}" display="inline"><mrow><mo>∂</mo><mo>/</mo><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>x</mi><mi>i</mi></msup></mrow></mrow></math> and the summation convention is in force. It might also be worth mentioning that sometimes the covariant derivative is defined with a minus sign instead of a plus sign (on rare occasions mostly occurring in high-energy physics theory, one even sees it defined with an imaginary unit <math id="S0.SS0.SSS0.Px3.p2.m6" class="ltx_Math" alttext="i" display="inline"><mi>i</mi></math>) so one needs to check which sign convention is in use.)</p>
+</div>
+<div id="S0.SS0.SSS0.Px3.p3" class="ltx_para">
+<p class="ltx_p">Before proceeding further, it might be helpful to present a warning. The notation <math id="S0.SS0.SSS0.Px3.p3.m1" class="ltx_Math" alttext="\nabla_{i}T^{\mu}" display="inline"><mrow><msub><mo>∇</mo><mi>i</mi></msub><mo>⁡</mo><msup><mi>T</mi><mi>μ</mi></msup></mrow></math> can lead to some confusion, and this danger
+warrants an extra comment. The symbol <math id="S0.SS0.SSS0.Px3.p3.m2" class="ltx_Math" alttext="\nabla_{i}" display="inline"><msub><mo>∇</mo><mi>i</mi></msub></math> acting on a
+function, is customarily taken to mean the same thing as the
+corresponding partial derivative:</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="\nabla_{i}f=\partial_{x_{i}}(f)=\frac{\partial f}{\partial x^{i}}." display="block"><mrow><mrow><mrow><msub><mo>∇</mo><mi>i</mi></msub><mo>⁡</mo><mi>f</mi></mrow><mo>=</mo><mrow><msub><mo>∂</mo><msub><mi>x</mi><mi>i</mi></msub></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>f</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>f</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>x</mi><mi>i</mi></msup></mrow></mfrac></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Thus, it easy to make the mistake that <math id="S0.SS0.SSS0.Px3.p3.m3" class="ltx_Math" alttext="\nabla_{i}T^{\mu}" display="inline"><mrow><msub><mo>∇</mo><mi>i</mi></msub><mo>⁡</mo><msup><mi>T</mi><mi>μ</mi></msup></mrow></math> is the result of applying an operator <math id="S0.SS0.SSS0.Px3.p3.m4" class="ltx_Math" alttext="\nabla_{i}" display="inline"><msub><mo>∇</mo><mi>i</mi></msub></math> to each component of <math id="S0.SS0.SSS0.Px3.p3.m5" class="ltx_Math" alttext="T^{\mu}" display="inline"><msup><mi>T</mi><mi>μ</mi></msup></math>. As can be seen from the definition, this is not the case. Rather, one should think of <math id="S0.SS0.SSS0.Px3.p3.m6" class="ltx_Math" alttext="\nabla_{i}T^{\mu}" display="inline"><mrow><msub><mo>∇</mo><mi>i</mi></msub><mo>⁡</mo><msup><mi>T</mi><mi>μ</mi></msup></mrow></math> as if is were <math id="S0.SS0.SSS0.Px3.p3.m7" class="ltx_Math" alttext="(\nabla T)_{i}^{\mu}" display="inline"><msubsup><mrow><mo stretchy="false">(</mo><mrow><mo>∇</mo><mo>⁡</mo><mi>T</mi></mrow><mo stretchy="false">)</mo></mrow><mi>i</mi><mi>μ</mi></msubsup></math>, which is to say it denotes the components of a new tensor which was derived from <math id="S0.SS0.SSS0.Px3.p3.m8" class="ltx_Math" alttext="T^{\mu}" display="inline"><msup><mi>T</mi><mi>μ</mi></msup></math> by the operation of covariant differentiation.</p>
+</div>
+<div id="S0.SS0.SSS0.Px3.p4" class="ltx_para">
+<p class="ltx_p">The relation of these formulas to the naive picture is as follows: A connection is supposed to be a collection of linear maps from one tangent space to neighboring tangent space. Given a point <math id="S0.SS0.SSS0.Px3.p4.m1" class="ltx_Math" alttext="p\in M" display="inline"><mrow><mi>p</mi><mo>∈</mo><mi>M</mi></mrow></math>, any vector <math id="S0.SS0.SSS0.Px3.p4.m2" class="ltx_Math" alttext="w^{\mu}" display="inline"><msup><mi>w</mi><mi>μ</mi></msup></math> in the fiber of <math id="S0.SS0.SSS0.Px3.p4.m3" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> above <math id="S0.SS0.SSS0.Px3.p4.m4" class="ltx_Math" alttext="p^{i}" display="inline"><msup><mi>p</mi><mi>i</mi></msup></math> is transformed into the vector <math id="S0.SS0.SSS0.Px3.p4.m5" class="ltx_Math" alttext="w^{\mu}+C^{\mu}_{\nu i}(p)w^{\nu}dx^{i}" display="inline"><mrow><msup><mi>w</mi><mi>μ</mi></msup><mo>+</mo><mrow><msubsup><mi>C</mi><mrow><mi>ν</mi><mo>⁢</mo><mi>i</mi></mrow><mi>μ</mi></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mi>w</mi><mi>ν</mi></msup><mo>⁢</mo><mi>d</mi><mo>⁢</mo><msup><mi>x</mi><mi>i</mi></msup></mrow></mrow></math> in the fiber above the nearby point <math id="S0.SS0.SSS0.Px3.p4.m6" class="ltx_Math" alttext="p^{i}+dx^{i}" display="inline"><mrow><msup><mi>p</mi><mi>i</mi></msup><mo>+</mo><mrow><mi>d</mi><mo>⁢</mo><msup><mi>x</mi><mi>i</mi></msup></mrow></mrow></math>. (In this paragraph, I am using ”<math id="S0.SS0.SSS0.Px3.p4.m7" class="ltx_Math" alttext="dx^{\mu}" display="inline"><mrow><mi>d</mi><mo>⁢</mo><msup><mi>x</mi><mi>μ</mi></msup></mrow></math>” in its naive sense of ”infinitesimal displacement” rather than as a differential form.)
+Likewise, subtracting the value of <math id="S0.SS0.SSS0.Px3.p4.m8" class="ltx_Math" alttext="S^{\mu}(p^{i}+dx^{i})" display="inline"><mrow><msup><mi>S</mi><mi>μ</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>p</mi><mi>i</mi></msup><mo>+</mo><mrow><mi>d</mi><mo>⁢</mo><msup><mi>x</mi><mi>i</mi></msup></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></math> from the parallel-transported value of <math id="S0.SS0.SSS0.Px3.p4.m9" class="ltx_Math" alttext="S^{\mu}(p)" display="inline"><mrow><msup><mi>S</mi><mi>μ</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo stretchy="false">)</mo></mrow></mrow></math> and dividing by <math id="S0.SS0.SSS0.Px3.p4.m10" class="ltx_Math" alttext="dx" display="inline"><mrow><mi>d</mi><mo>⁢</mo><mi>x</mi></mrow></math>, one obtains the formula for covariant derivative.</p>
+</div>
+<div id="S0.SS0.SSS0.Px3.p5" class="ltx_para">
+<p class="ltx_p">In order for a geometrical quantity to be defined properly by a coordinate expression, one must specify how the quantity transforms under change of coordinates. Under a change of coordinates</p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="y^{i}=f^{i}(x^{1},\ldots,x^{d})" display="block"><mrow><msup><mi>y</mi><mi>i</mi></msup><mo>=</mo><mrow><msup><mi>f</mi><mi>i</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mn>1</mn></msup><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msup><mi>x</mi><mi>d</mi></msup><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="y^{\mu}=\Lambda^{\mu}_{\nu}(x^{1},\ldots,x^{d})y^{\nu}" display="block"><mrow><msup><mi>y</mi><mi>μ</mi></msup><mo>=</mo><mrow><msubsup><mi mathvariant="normal">Λ</mi><mi>ν</mi><mi>μ</mi></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mn>1</mn></msup><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msup><mi>x</mi><mi>d</mi></msup><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mi>y</mi><mi>ν</mi></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">the components of the connection transform as follows:</p>
+<table id="S0.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex6.m1" class="ltx_Math" alttext="C^{\mu}_{\nu i}(y)={\partial f^{j}\over\partial f_{i}}\Lambda^{\mu}_{\sigma}(%
+\Lambda^{-1})_{\nu}^{\tau}C^{\sigma}_{\tau j}+(\Lambda^{-1})^{\mu}_{\kappa}{%
+\partial\Lambda^{\kappa}_{\nu}\over\partial x^{j}}" display="block"><mrow><mrow><msubsup><mi>C</mi><mrow><mi>ν</mi><mo>⁢</mo><mi>i</mi></mrow><mi>μ</mi></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>f</mi><mi>j</mi></msup></mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>f</mi><mi>i</mi></msub></mrow></mfrac><mo>⁢</mo><msubsup><mi mathvariant="normal">Λ</mi><mi>σ</mi><mi>μ</mi></msubsup><mo>⁢</mo><msubsup><mrow><mo stretchy="false">(</mo><msup><mi mathvariant="normal">Λ</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo stretchy="false">)</mo></mrow><mi>ν</mi><mi>τ</mi></msubsup><mo>⁢</mo><msubsup><mi>C</mi><mrow><mi>τ</mi><mo>⁢</mo><mi>j</mi></mrow><mi>σ</mi></msubsup></mrow><mo>+</mo><mrow><msubsup><mrow><mo stretchy="false">(</mo><msup><mi mathvariant="normal">Λ</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo stretchy="false">)</mo></mrow><mi>κ</mi><mi>μ</mi></msubsup><mo>⁢</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msubsup><mi mathvariant="normal">Λ</mi><mi>ν</mi><mi>κ</mi></msubsup></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>x</mi><mi>j</mi></msup></mrow></mfrac></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Note that these rules imply that the components of a connection do not transform like the components of a tensor — the term involving the derivatives of <math id="S0.SS0.SSS0.Px3.p5.m1" class="ltx_Math" alttext="\Lambda" display="inline"><mi mathvariant="normal">Λ</mi></math> is not present in the transformation law of a tensor. However, if we have two connections on the same bundle, the difference of these connections will be a tensor because the extra terms cancel.</p>
+</div>
+<div id="S0.SS0.SSS0.Px3.p6" class="ltx_para">
+<p class="ltx_p">The reason for defining the transformation law in this way is so that the covariant derivative <math id="S0.SS0.SSS0.Px3.p6.m1" class="ltx_Math" alttext="\nabla_{i}S^{\mu}" display="inline"><mrow><msub><mo>∇</mo><mi>i</mi></msub><mo>⁡</mo><msup><mi>S</mi><mi>μ</mi></msup></mrow></math> of a section of <math id="S0.SS0.SSS0.Px3.p6.m2" class="ltx_Math" alttext="S^{\mu}\in\mathcal{X}(B)" display="inline"><mrow><msup><mi>S</mi><mi>μ</mi></msup><mo>∈</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒳</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> will transform as an element of <math id="S0.SS0.SSS0.Px3.p6.m3" class="ltx_Math" alttext="T(m)\otimes B" display="inline"><mrow><mrow><mi>T</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>m</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⊗</mo><mi>B</mi></mrow></math> should. Furthermore, as one may check by transforming the various quantites that appear in the equation defining the covariant derivative, this is the only possible transformation law which will make <math id="S0.SS0.SSS0.Px3.p6.m4" class="ltx_Math" alttext="\nabla_{i}S^{\mu}" display="inline"><mrow><msub><mo>∇</mo><mi>i</mi></msub><mo>⁡</mo><msup><mi>S</mi><mi>μ</mi></msup></mrow></math> transform prperly. This property is the origin of the term “covariant derivative” — the covariant derivative maps tensor fields into quantities which transform in the same manner.</p>
+</div>
+</section>
+<section id="S0.SS0.SSS0.Px4" class="ltx_paragraph">
+<h2 class="ltx_title ltx_title_paragraph">Alternative Notations</h2>
+
+<div id="S0.SS0.SSS0.Px4.p1" class="ltx_para">
+<p class="ltx_p">There are many different systems of notations in differential geometry. (Indeed one humorous definition of differential geometry is “The study of invariants under change of notation”!) This section will discuss several notations for connections and covariant derivatives.
+</p>
+</div>
+<div id="S0.SS0.SSS0.Px4.p2" class="ltx_para">
+<p class="ltx_p">It is traditional to represent the components of the covariant derivative like this</p>
+<table id="S0.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex7.m1" class="ltx_Math" alttext="Y^{\mu}_{\;;j}=\nabla_{j}Y^{\mu}" display="block"><mrow><msubsup><mi>Y</mi><mrow><mo lspace="5.3pt">;</mo><mi>j</mi></mrow><mi>μ</mi></msubsup><mo>=</mo><mrow><msub><mo>∇</mo><mi>j</mi></msub><mo>⁡</mo><msup><mi>Y</mi><mi>μ</mi></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">using the semi-colon to indicate that the extra index
+comes from covariant differentiation. Sometimes, as in the theory of embedded surfaces, there are two connections present so a semicolon is used to indicate covariant derivatives with repsect to one connection and a vertical bar or a colon is used to indicate covariant derivatives with respect to the other connection. It might also be worth noting that commas are likewise used to indicate partial derivatives with respect to a given coordinate system. Using this notation, one might write the formula for covariant derivative as</p>
+<table id="S0.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex8.m1" class="ltx_Math" alttext="T^{\mu}_{;i}=T^{\mu}_{,i}+C^{\mu}_{\nu i}T^{\nu}" display="block"><mrow><msubsup><mi>T</mi><mrow><mo>;</mo><mi>i</mi></mrow><mi>μ</mi></msubsup><mo>=</mo><mrow><msubsup><mi>T</mi><mrow><mo>,</mo><mi>i</mi></mrow><mi>μ</mi></msubsup><mo>+</mo><mrow><msubsup><mi>C</mi><mrow><mi>ν</mi><mo>⁢</mo><mi>i</mi></mrow><mi>μ</mi></msubsup><mo>⁢</mo><msup><mi>T</mi><mi>ν</mi></msup></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S0.SS0.SSS0.Px4.p3" class="ltx_para">
+<p class="ltx_p">Also, there are different ways of packaging the information contained in the connection components. One may collect the connection components into <math id="S0.SS0.SSS0.Px4.p3.m1" class="ltx_Math" alttext="d" display="inline"><mi>d</mi></math> matrices <math id="S0.SS0.SSS0.Px4.p3.m2" class="ltx_Math" alttext="A_{i}" display="inline"><msub><mi>A</mi><mi>i</mi></msub></math>:</p>
+<table id="S0.Ex9" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex9.m1" class="ltx_Math" alttext="A_{i}=\begin{pmatrix}C^{d+1}_{d+1\,i}&amp;\cdots&amp;C^{d+1}_{d+n\,i}\cr\vdots&amp;\ddots&amp;%
+\vdots\cr C^{d+n}_{d+1\,i}&amp;\cdots&amp;C^{d+n}_{d+n\,i}\end{pmatrix}" display="block"><mrow><msub><mi>A</mi><mi>i</mi></msub><mo>=</mo><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><msubsup><mi>C</mi><mrow><mi>d</mi><mo>+</mo><mrow><mpadded width="+1.7pt"><mn>1</mn></mpadded><mo>⁢</mo><mi>i</mi></mrow></mrow><mrow><mi>d</mi><mo>+</mo><mn>1</mn></mrow></msubsup></mtd><mtd columnalign="center"><mi mathvariant="normal">⋯</mi></mtd><mtd columnalign="center"><msubsup><mi>C</mi><mrow><mi>d</mi><mo>+</mo><mrow><mpadded width="+1.7pt"><mi>n</mi></mpadded><mo>⁢</mo><mi>i</mi></mrow></mrow><mrow><mi>d</mi><mo>+</mo><mn>1</mn></mrow></msubsup></mtd></mtr><mtr><mtd columnalign="center"><mi mathvariant="normal">⋮</mi></mtd><mtd columnalign="center"><mi mathvariant="normal">⋱</mi></mtd><mtd columnalign="center"><mi mathvariant="normal">⋮</mi></mtd></mtr><mtr><mtd columnalign="center"><msubsup><mi>C</mi><mrow><mi>d</mi><mo>+</mo><mrow><mpadded width="+1.7pt"><mn>1</mn></mpadded><mo>⁢</mo><mi>i</mi></mrow></mrow><mrow><mi>d</mi><mo>+</mo><mi>n</mi></mrow></msubsup></mtd><mtd columnalign="center"><mi mathvariant="normal">⋯</mi></mtd><mtd columnalign="center"><msubsup><mi>C</mi><mrow><mi>d</mi><mo>+</mo><mrow><mpadded width="+1.7pt"><mi>n</mi></mpadded><mo>⁢</mo><mi>i</mi></mrow></mrow><mrow><mi>d</mi><mo>+</mo><mi>n</mi></mrow></msubsup></mtd></mtr></mtable><mo>)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Another common notational device is to collect the connection coefficients into the so-called “connection one-forms”</p>
+<table id="S0.Ex10" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex10.m1" class="ltx_Math" alttext="A^{\mu}_{\nu}=C^{\mu}_{\nu i}dx^{i}" display="block"><mrow><msubsup><mi>A</mi><mi>ν</mi><mi>μ</mi></msubsup><mo>=</mo><mrow><msubsup><mi>C</mi><mrow><mi>ν</mi><mo>⁢</mo><mi>i</mi></mrow><mi>μ</mi></msubsup><mo>⁢</mo><mi>d</mi><mo>⁢</mo><msup><mi>x</mi><mi>i</mi></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">When using this notation, the covariant derivative is written as a generalization <math id="S0.SS0.SSS0.Px4.p3.m3" class="ltx_Math" alttext="D" display="inline"><mi>D</mi></math> of the exterior derivative <math id="S0.SS0.SSS0.Px4.p3.m4" class="ltx_Math" alttext="d" display="inline"><mi>d</mi></math>:</p>
+<table id="S0.Ex11" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex11.m1" class="ltx_Math" alttext="DT^{\mu}=dT^{\mu}+A^{\mu}_{\nu}T^{\nu}" display="block"><mrow><mrow><mi>D</mi><mo>⁢</mo><msup><mi>T</mi><mi>μ</mi></msup></mrow><mo>=</mo><mrow><mrow><mi>d</mi><mo>⁢</mo><msup><mi>T</mi><mi>μ</mi></msup></mrow><mo>+</mo><mrow><msubsup><mi>A</mi><mi>ν</mi><mi>μ</mi></msubsup><mo>⁢</mo><msup><mi>T</mi><mi>ν</mi></msup></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">By combining the two devices and collecting the connection one-forms into a matrix <math id="S0.SS0.SSS0.Px4.p3.m5" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>, one may do away with indices altogether. If one also collects the components <math id="S0.SS0.SSS0.Px4.p3.m6" class="ltx_Math" alttext="T^{\mu}" display="inline"><msup><mi>T</mi><mi>μ</mi></msup></math> into a column vector <math id="S0.SS0.SSS0.Px4.p3.m7" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math>, one may write</p>
+<table id="S0.Ex12" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex12.m1" class="ltx_Math" alttext="DT=dT+AT" display="block"><mrow><mrow><mi>D</mi><mo>⁢</mo><mi>T</mi></mrow><mo>=</mo><mrow><mrow><mi>d</mi><mo>⁢</mo><mi>T</mi></mrow><mo>+</mo><mrow><mi>A</mi><mo>⁢</mo><mi>T</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">A quantity like <math id="S0.SS0.SSS0.Px4.p3.m8" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is often referred to as a matrix-valued one-form.</p>
+</div>
+<div id="S0.SS0.SSS0.Px4.p4" class="ltx_para">
+<p class="ltx_p">Occasionally, one finds connection coefficients with only two indices instead of three. The reason is that the two indices referring to the bundle have been replaced by a single index referring to the Lie algebra. To relate this notation to the one discussed so far, we need to remember that the action of the structure group <math id="S0.SS0.SSS0.Px4.p4.m1" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> on <math id="S0.SS0.SSS0.Px4.p4.m2" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> defines a representation of the Lie algebra <math id="S0.SS0.SSS0.Px4.p4.m3" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> on <math id="S0.SS0.SSS0.Px4.p4.m4" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>, i.e. a map</p>
+<table id="S0.Ex13" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex13.m1" class="ltx_Math" alttext="\rho\colon A\to Hom(V,V)" display="block"><mrow><mi>ρ</mi><mo>:</mo><mrow><mi>A</mi><mo>→</mo><mrow><mi>H</mi><mo>⁢</mo><mi>o</mi><mo>⁢</mo><mi>m</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo>,</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">If we choose linear coordinates <math id="S0.SS0.SSS0.Px4.p4.m5" class="ltx_Math" alttext="y_{1},\ldots,y^{m}" display="inline"><mrow><msub><mi>y</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msup><mi>y</mi><mi>m</mi></msup></mrow></math> on the vector space <math id="S0.SS0.SSS0.Px4.p4.m6" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>, this map may be expressed in components as</p>
+<table id="S0.Ex14" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex14.m1" class="ltx_Math" alttext="(y^{1},\ldots,y^{m})\mapsto t^{\mu}_{\nu I}y^{I}" display="block"><mrow><mrow><mo stretchy="false">(</mo><msup><mi>y</mi><mn>1</mn></msup><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msup><mi>y</mi><mi>m</mi></msup><mo stretchy="false">)</mo></mrow><mo>↦</mo><mrow><msubsup><mi>t</mi><mrow><mi>ν</mi><mo>⁢</mo><mi>I</mi></mrow><mi>μ</mi></msubsup><mo>⁢</mo><msup><mi>y</mi><mi>I</mi></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">(Extend our conventions by agreeing that capital Latin indices run from <math id="S0.SS0.SSS0.Px4.p4.m7" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math> to <math id="S0.SS0.SSS0.Px4.p4.m8" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math>, where <math id="S0.SS0.SSS0.Px4.p4.m9" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> is the dimension of the Lie algebra. In the case we are considering, where <math id="S0.SS0.SSS0.Px4.p4.m10" class="ltx_Math" alttext="G=GL(V)" display="inline"><mrow><mi>G</mi><mo>=</mo><mrow><mi>G</mi><mo>⁢</mo><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, we will have <math id="S0.SS0.SSS0.Px4.p4.m11" class="ltx_Math" alttext="m=n^{2}" display="inline"><mrow><mi>m</mi><mo>=</mo><msup><mi>n</mi><mn>2</mn></msup></mrow></math>.) To the two-index object <math id="S0.SS0.SSS0.Px4.p4.m12" class="ltx_Math" alttext="A^{I}_{i}" display="inline"><msubsup><mi>A</mi><mi>i</mi><mi>I</mi></msubsup></math>, we will associate the three-index object</p>
+<table id="S0.Ex15" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex15.m1" class="ltx_Math" alttext="C^{\mu}_{\nu i}=A^{I}_{i}t^{\mu}_{\nu I}" display="block"><mrow><msubsup><mi>C</mi><mrow><mi>ν</mi><mo>⁢</mo><mi>i</mi></mrow><mi>μ</mi></msubsup><mo>=</mo><mrow><msubsup><mi>A</mi><mi>i</mi><mi>I</mi></msubsup><mo>⁢</mo><msubsup><mi>t</mi><mrow><mi>ν</mi><mo>⁢</mo><mi>I</mi></mrow><mi>μ</mi></msubsup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Therefore, one may also specify a connection in a coordinate system by giving an array indexed by an index referring to the Lie algebra and an index referring to the cotangent space of the manifold. This notation is useful in situations when one wants to emphasize the structure group rather than the manifold or when one is dealing with more than one bundle whose fibers are different representations of the same group.</p>
+</div>
+</section>
+<section id="S0.SS0.SSS0.Px5" class="ltx_paragraph">
+<h2 class="ltx_title ltx_title_paragraph">Definition in terms of one-forms</h2>
+
+<div id="S0.SS0.SSS0.Px5.p1" class="ltx_para">
+<p class="ltx_p">It is worth noting that one can define the connection directly in terms of the curvature one-forms. A noteworthy feature of such definition is that it does not make explicit reference to coordinate systems on the manifold, although it does make use of local neighborhoods. After the discussion of the last section, the relation of this definition to the preceding definition should be clear.</p>
+</div>
+<div id="S0.SS0.SSS0.Px5.p2" class="ltx_para">
+<p class="ltx_p">As in the last section, let <math id="S0.SS0.SSS0.Px5.p2.m1" class="ltx_Math" alttext="\rho\colon G\to Hom(V,V)" display="inline"><mrow><mi>ρ</mi><mo>:</mo><mrow><mi>G</mi><mo>→</mo><mrow><mi>H</mi><mo>⁢</mo><mi>o</mi><mo>⁢</mo><mi>m</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo>,</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math> denote the action of <math id="S0.SS0.SSS0.Px5.p2.m2" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> on <math id="S0.SS0.SSS0.Px5.p2.m3" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>.</p>
+</div>
+<div id="S0.SS0.SSS0.Px5.p3" class="ltx_para">
+<p class="ltx_p">Let <math id="S0.SS0.SSS0.Px5.p3.m1" class="ltx_Math" alttext="(U,\phi)" display="inline"><mrow><mo stretchy="false">(</mo><mi>U</mi><mo>,</mo><mi>ϕ</mi><mo stretchy="false">)</mo></mrow></math> be a local trivialization of the bundle <math id="S0.SS0.SSS0.Px5.p3.m2" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math>. Recall that <math id="S0.SS0.SSS0.Px5.p3.m3" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math> is an open set of <math id="S0.SS0.SSS0.Px5.p3.m4" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math> and that <math id="S0.SS0.SSS0.Px5.p3.m5" class="ltx_Math" alttext="\phi" display="inline"><mi>ϕ</mi></math> is a diffeomorphism between <math id="S0.SS0.SSS0.Px5.p3.m6" class="ltx_Math" alttext="\pi^{-1}(U)\in B" display="inline"><mrow><mrow><msup><mi>π</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>U</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∈</mo><mi>B</mi></mrow></math> and <math id="S0.SS0.SSS0.Px5.p3.m7" class="ltx_Math" alttext="U\times V" display="inline"><mrow><mi>U</mi><mo>×</mo><mi>V</mi></mrow></math>. To every local trivialization, associate an element <math id="S0.SS0.SSS0.Px5.p3.m8" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> of <math id="S0.SS0.SSS0.Px5.p3.m9" class="ltx_Math" alttext="v" display="inline"><mi>v</mi></math>. In order for these elements to define a connection, they must transform properly under changes of local trivialization. Two local trivializations over the same set <math id="S0.SS0.SSS0.Px5.p3.m10" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math> are related by a transition function <math id="S0.SS0.SSS0.Px5.p3.m11" class="ltx_Math" alttext="g\colon U\to G" display="inline"><mrow><mi>g</mi><mo>:</mo><mrow><mi>U</mi><mo>→</mo><mi>G</mi></mrow></mrow></math>. The transformation law of an element <math id="S0.SS0.SSS0.Px5.p3.m12" class="ltx_Math" alttext="A\in T^{*}(U)\times Hom(V,V)" display="inline"><mrow><mi>A</mi><mo>∈</mo><mrow><mrow><mrow><msup><mi>T</mi><mo>*</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>U</mi><mo stretchy="false">)</mo></mrow></mrow><mo>×</mo><mi>H</mi></mrow><mo>⁢</mo><mi>o</mi><mo>⁢</mo><mi>m</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo>,</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> is given by</p>
+<table id="S0.Ex16" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex16.m1" class="ltx_Math" alttext="A^{\prime}=\rho(g)^{-1}A\rho(g)+\rho(g)^{-1}d\rho(g)" display="block"><mrow><msup><mi>A</mi><mo>′</mo></msup><mo>=</mo><mrow><mrow><mi>ρ</mi><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mi>g</mi><mo stretchy="false">)</mo></mrow><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mi>A</mi><mo>⁢</mo><mi>ρ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>g</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi>ρ</mi><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mi>g</mi><mo stretchy="false">)</mo></mrow><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>ρ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>g</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S0.SS0.SSS0.Px5.p4" class="ltx_para">
+<p class="ltx_p">For this definition to be consistent, it must agree with the cocycle condition. The reason for this is that, if it didn’t, one obtain different answers by transforming from one local trivialization to another in two different ways. That it is consistent is easily verified. Using the notation of the entry on fibre bundles,</p>
+<table id="S0.Ex17" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex17.m1" class="ltx_Math" alttext="\rho(g_{ij}g_{jk})^{-1}A\rho(g_{ij}g_{jk})+\rho(g_{ij}g_{jk})^{-1}d\rho(g_{ij}%
+g_{jk})=" display="block"><mrow><mrow><mrow><mi>ρ</mi><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><msub><mi>g</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo>⁢</mo><msub><mi>g</mi><mrow><mi>j</mi><mo>⁢</mo><mi>k</mi></mrow></msub></mrow><mo stretchy="false">)</mo></mrow><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mi>A</mi><mo>⁢</mo><mi>ρ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>g</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo>⁢</mo><msub><mi>g</mi><mrow><mi>j</mi><mo>⁢</mo><mi>k</mi></mrow></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi>ρ</mi><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><msub><mi>g</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo>⁢</mo><msub><mi>g</mi><mrow><mi>j</mi><mo>⁢</mo><mi>k</mi></mrow></msub></mrow><mo stretchy="false">)</mo></mrow><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>ρ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>g</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo>⁢</mo><msub><mi>g</mi><mrow><mi>j</mi><mo>⁢</mo><mi>k</mi></mrow></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mi></mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S0.Ex18" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex18.m1" class="ltx_Math" alttext="\rho(g_{jk})^{-1}\rho(g_{ij})^{-1}A\rho(g_{ij})\rho(g_{jk})+\rho(g_{jk})^{-1}%
+\rho(g_{ij})^{-1}d\big{(}\rho(g_{ij})\rho(g_{jk})\big{)}=" display="block"><mrow><mrow><mrow><mi>ρ</mi><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><msub><mi>g</mi><mrow><mi>j</mi><mo>⁢</mo><mi>k</mi></mrow></msub><mo stretchy="false">)</mo></mrow><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mi>ρ</mi><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><msub><mi>g</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo stretchy="false">)</mo></mrow><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mi>A</mi><mo>⁢</mo><mi>ρ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>g</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>ρ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>g</mi><mrow><mi>j</mi><mo>⁢</mo><mi>k</mi></mrow></msub><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi>ρ</mi><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><msub><mi>g</mi><mrow><mi>j</mi><mo>⁢</mo><mi>k</mi></mrow></msub><mo stretchy="false">)</mo></mrow><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mi>ρ</mi><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><msub><mi>g</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo stretchy="false">)</mo></mrow><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mrow><mo maxsize="120%" minsize="120%">(</mo><mrow><mi>ρ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>g</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>ρ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>g</mi><mrow><mi>j</mi><mo>⁢</mo><mi>k</mi></mrow></msub><mo stretchy="false">)</mo></mrow></mrow><mo maxsize="120%" minsize="120%">)</mo></mrow></mrow></mrow><mo>=</mo><mi></mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S0.Ex19" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex19.m1" class="ltx_Math" alttext="\rho(g_{jk})^{-1}\big{(}\rho(g_{ij})^{-1}A\rho(g_{ij})+\rho(g_{ij})^{-1}d(\rho%
+(g_{ij})\big{)}\rho(g_{jk})+(g_{jk})^{-1}d\rho(g_{jk})" display="block"><mrow><mi>ρ</mi><msup><mrow><mo stretchy="false">(</mo><msub><mi>g</mi><mrow><mi>j</mi><mo>⁢</mo><mi>k</mi></mrow></msub><mo stretchy="false">)</mo></mrow><mrow><mo>-</mo><mn>1</mn></mrow></msup><mrow><mo maxsize="120%" minsize="120%">(</mo><mi>ρ</mi><msup><mrow><mo stretchy="false">(</mo><msub><mi>g</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo stretchy="false">)</mo></mrow><mrow><mo>-</mo><mn>1</mn></mrow></msup><mi>A</mi><mi>ρ</mi><mrow><mo stretchy="false">(</mo><msub><mi>g</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo stretchy="false">)</mo></mrow><mo>+</mo><mi>ρ</mi><msup><mrow><mo stretchy="false">(</mo><msub><mi>g</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo stretchy="false">)</mo></mrow><mrow><mo>-</mo><mn>1</mn></mrow></msup><mi>d</mi><mrow><mo stretchy="false">(</mo><mi>ρ</mi><mrow><mo stretchy="false">(</mo><msub><mi>g</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo stretchy="false">)</mo></mrow><mo maxsize="120%" minsize="120%">)</mo></mrow><mi>ρ</mi><mrow><mo stretchy="false">(</mo><msub><mi>g</mi><mrow><mi>j</mi><mo>⁢</mo><mi>k</mi></mrow></msub><mo stretchy="false">)</mo></mrow><mo>+</mo><msup><mrow><mo stretchy="false">(</mo><msub><mi>g</mi><mrow><mi>j</mi><mo>⁢</mo><mi>k</mi></mrow></msub><mo stretchy="false">)</mo></mrow><mrow><mo>-</mo><mn>1</mn></mrow></msup><mi>d</mi><mi>ρ</mi><mrow><mo stretchy="false">(</mo><msub><mi>g</mi><mrow><mi>j</mi><mo>⁢</mo><mi>k</mi></mrow></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</section>
+<section id="S0.SS0.SSS0.Px6" class="ltx_paragraph">
+<h2 class="ltx_title ltx_title_paragraph">Axiomatic definition of covariant differentiation</h2>
+
+<div id="S0.SS0.SSS0.Px6.p1" class="ltx_para">
+<p class="ltx_p">In this definition, covariant differentiation is characterized axiomatically. As explained in the first section, it is not necessary to augment this with a separate definition of connection, since any statement about connections can be rephrased as a statement about covariant derivatives. An important feature of this definition which sets it apart from the previous two definitions is that it is global — there is no need to chop up the manifold or the bundle into patches, define the connection on each patch, then sew the patches back together again to make a complete manifold.</p>
+</div>
+<div id="S0.SS0.SSS0.Px6.p2" class="ltx_para">
+<p class="ltx_p">A covariant derivative <math id="S0.SS0.SSS0.Px6.p2.m1" class="ltx_Math" alttext="\nabla" display="inline"><mo>∇</mo></math> is a mapping</p>
+<table id="S0.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex20" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex20.m1" class="ltx_Math" alttext="\displaystyle\nabla:\mathcal{X}(M)\times\mathcal{X}(B)" display="inline"><mrow><mo>∇</mo><mo>:</mo><mrow><mrow><mrow><mi class="ltx_font_mathcaligraphic">𝒳</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>M</mi><mo stretchy="false">)</mo></mrow></mrow><mo>×</mo><mi class="ltx_font_mathcaligraphic">𝒳</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex20.m2" class="ltx_Math" alttext="\displaystyle\rightarrow\mathcal{X}(B)" display="inline"><mrow><mi></mi><mo>→</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒳</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex21" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex21.m1" class="ltx_Math" alttext="\displaystyle(X,Y)" display="inline"><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><mi>Y</mi><mo stretchy="false">)</mo></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex21.m2" class="ltx_Math" alttext="\displaystyle\mapsto\nabla_{X}Y,\qquad X\in\mathcal{X}(M),Y\in\mathcal{X}(B)" display="inline"><mrow><mrow><mi></mi><mo>↦</mo><mrow><msub><mo>∇</mo><mi>X</mi></msub><mo>⁡</mo><mi>Y</mi></mrow></mrow><mo rspace="22.5pt">,</mo><mrow><mrow><mi>X</mi><mo>∈</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒳</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>M</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>,</mo><mrow><mi>Y</mi><mo>∈</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒳</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">that for all <math id="S0.SS0.SSS0.Px6.p2.m2" class="ltx_Math" alttext="X,Y\in\mathcal{X}(M)" display="inline"><mrow><mrow><mi>X</mi><mo>,</mo><mi>Y</mi></mrow><mo>∈</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒳</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>M</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, all <math id="S0.SS0.SSS0.Px6.p2.m3" class="ltx_Math" alttext="Z,W\in\mathcal{X}(B)" display="inline"><mrow><mrow><mi>Z</mi><mo>,</mo><mi>W</mi></mrow><mo>∈</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒳</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, all <math id="S0.SS0.SSS0.Px6.p2.m4" class="ltx_Math" alttext="f\in\mathcal{F}(M)" display="inline"><mrow><mi>f</mi><mo>∈</mo><mrow><mi class="ltx_font_mathcaligraphic">ℱ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>M</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, and all <math id="S0.SS0.SSS0.Px6.p2.m5" class="ltx_Math" alttext="\lambda\in A^{H}" display="inline"><mrow><mi>λ</mi><mo>∈</mo><msup><mi>A</mi><mi>H</mi></msup></mrow></math> satisfies</p>
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i1.p1.m1" class="ltx_Math" alttext="\nabla_{X+Y}Z=\nabla_{X}Z+\nabla_{Y}Z" display="inline"><mrow><mrow><msub><mo>∇</mo><mrow><mi>X</mi><mo>+</mo><mi>Y</mi></mrow></msub><mo>⁡</mo><mi>Z</mi></mrow><mo>=</mo><mrow><mrow><msub><mo>∇</mo><mi>X</mi></msub><mo>⁡</mo><mi>Z</mi></mrow><mo>+</mo><mrow><msub><mo>∇</mo><mi>Y</mi></msub><mo>⁡</mo><mi>Z</mi></mrow></mrow></mrow></math></p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i2.p1.m1" class="ltx_Math" alttext="\nabla_{X}(Z+W)=\nabla_{X}Z+\nabla_{X}W" display="inline"><mrow><mrow><msub><mo>∇</mo><mi>X</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>Z</mi><mo>+</mo><mi>W</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><msub><mo>∇</mo><mi>X</mi></msub><mo>⁡</mo><mi>Z</mi></mrow><mo>+</mo><mrow><msub><mo>∇</mo><mi>X</mi></msub><mo>⁡</mo><mi>W</mi></mrow></mrow></mrow></math>
+</p>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">3.</span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i3.p1.m1" class="ltx_Math" alttext="\nabla_{fX}Z=f\,\nabla_{X}Z" display="inline"><mrow><mrow><msub><mo>∇</mo><mrow><mi>f</mi><mo>⁢</mo><mi>X</mi></mrow></msub><mo>⁡</mo><mi>Z</mi></mrow><mo>=</mo><mrow><mpadded width="+1.7pt"><mi>f</mi></mpadded><mo>⁢</mo><mrow><msub><mo>∇</mo><mi>X</mi></msub><mo>⁡</mo><mi>Z</mi></mrow></mrow></mrow></math></p>
+</div>
+</li>
+<li id="I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">4.</span> 
+<div id="I1.i4.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i4.p1.m1" class="ltx_Math" alttext="\nabla_{X}(fZ)=X(f)Z+f\,\nabla_{X}Z" display="inline"><mrow><mrow><msub><mo>∇</mo><mi>X</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>f</mi><mo>⁢</mo><mi>Z</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>X</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>f</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>Z</mi></mrow><mo>+</mo><mrow><mpadded width="+1.7pt"><mi>f</mi></mpadded><mo>⁢</mo><mrow><msub><mo>∇</mo><mi>X</mi></msub><mo>⁡</mo><mi>Z</mi></mrow></mrow></mrow></mrow></math></p>
+</div>
+</li>
+</ol>
+<p class="ltx_p">Note that the lack of tensoriality in the second argument means that a
+connection <span class="ltx_text ltx_font_italic">is not</span> a tensor field.</p>
+</div>
+<div id="S0.SS0.SSS0.Px6.p3" class="ltx_para">
+<p class="ltx_p">Also not that we can regard the connection as a mapping from <math id="S0.SS0.SSS0.Px6.p3.m1" class="ltx_Math" alttext="\mathcal{X}(M)" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒳</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>M</mi><mo stretchy="false">)</mo></mrow></mrow></math>
+to the space of type (1,1) tensor fields, i.e. for <math id="S0.SS0.SSS0.Px6.p3.m2" class="ltx_Math" alttext="Y\in\mathcal{X}(M)" display="inline"><mrow><mi>Y</mi><mo>∈</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒳</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>M</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> the
+object</p>
+<table id="S0.EGx2" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex22" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex22.m1" class="ltx_Math" alttext="\displaystyle\nabla Y:\mathcal{X}(M)" display="inline"><mrow><mrow><mo>∇</mo><mo>⁡</mo><mi>Y</mi></mrow><mo>:</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒳</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>M</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex22.m2" class="ltx_Math" alttext="\displaystyle\rightarrow\mathcal{X}(M)" display="inline"><mrow><mi></mi><mo>→</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒳</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>M</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex23" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex23.m1" class="ltx_Math" alttext="\displaystyle X" display="inline"><mi>X</mi></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex23.m2" class="ltx_Math" alttext="\displaystyle\mapsto\nabla_{\!X}Y,\quad X\in\mathcal{X}(M)" display="inline"><mrow><mrow><mi></mi><mo>↦</mo><mrow><msub><mo>∇</mo><mpadded lspace="-1.7pt" width="-1.7pt"><mi>X</mi></mpadded></msub><mo>⁡</mo><mi>Y</mi></mrow></mrow><mo rspace="12.5pt">,</mo><mrow><mi>X</mi><mo>∈</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒳</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>M</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">is a type
+(1,1) tensor field called the <span class="ltx_text ltx_font_italic">covariant derivative</span> of <math id="S0.SS0.SSS0.Px6.p3.m3" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math>. In
+this capacity <math id="S0.SS0.SSS0.Px6.p3.m4" class="ltx_Math" alttext="\nabla" display="inline"><mo>∇</mo></math> is often called the <span class="ltx_text ltx_font_italic">covariant derivative</span>
+operator.</p>
+</div>
+<div id="S0.SS0.SSS0.Px6.p4" class="ltx_para">
+<p class="ltx_p">Recall that once a system of coordinates is chosen,
+a given vector field <math id="S0.SS0.SSS0.Px6.p4.m1" class="ltx_Math" alttext="Y\in\mathcal{X}(M)" display="inline"><mrow><mi>Y</mi><mo>∈</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒳</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>M</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> is represented by means of its
+components <math id="S0.SS0.SSS0.Px6.p4.m2" class="ltx_Math" alttext="Y^{i}\in\mathcal{F}(U)" display="inline"><mrow><msup><mi>Y</mi><mi>i</mi></msup><mo>∈</mo><mrow><mi class="ltx_font_mathcaligraphic">ℱ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>U</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> according to</p>
+<table id="S0.Ex24" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex24.m1" class="ltx_Math" alttext="Y=Y^{i}\partial_{x_{i}}." display="block"><mrow><mrow><mi>Y</mi><mo>=</mo><mrow><msup><mi>Y</mi><mi>i</mi></msup><mo>⁢</mo><msub><mo>∂</mo><msub><mi>x</mi><mi>i</mi></msub></msub></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The formula for the
+components follows directly from the defining properties of a
+connection and the definition of the Christoffel symbols. To wit:</p>
+<table id="S0.Ex25" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex25.m1" class="ltx_Math" alttext="Y^{i}_{\;;j}=Y^{i}_{\;,j}+\Gamma_{jk}{}^{i}\,Y^{k}" display="block"><mrow><msubsup><mi>Y</mi><mrow><mo lspace="5.3pt">;</mo><mi>j</mi></mrow><mi>i</mi></msubsup><mo>=</mo><mrow><msubsup><mi>Y</mi><mrow><mo lspace="5.3pt">,</mo><mi>j</mi></mrow><mi>i</mi></msubsup><mo>+</mo><mrow><msub><mi mathvariant="normal">Γ</mi><mrow><mi>j</mi><mo>⁢</mo><mi>k</mi></mrow></msub><mo>⁢</mo><mmultiscripts><mi>Y</mi><none></none><mi>k</mi><mprescripts></mprescripts><none></none><mi>i</mi></mmultiscripts></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where the symbol with the comma</p>
+<table id="S0.Ex26" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex26.m1" class="ltx_Math" alttext="Y^{i}_{\;,j}=\partial_{x_{j}}(Y^{i})=\frac{\partial Y^{i}}{\partial x^{j}}" display="block"><mrow><msubsup><mi>Y</mi><mrow><mo lspace="5.3pt">,</mo><mi>j</mi></mrow><mi>i</mi></msubsup><mo>=</mo><mrow><msub><mo>∂</mo><msub><mi>x</mi><mi>j</mi></msub></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><msup><mi>Y</mi><mi>i</mi></msup><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>Y</mi><mi>i</mi></msup></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>x</mi><mi>j</mi></msup></mrow></mfrac></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">denotes a derivate relative to the coordinate frame.</p>
+</div>
+<div id="S0.SS0.SSS0.Px6.p5" class="ltx_para">
+<p class="ltx_p">A related and frequently encountered notation is <math id="S0.SS0.SSS0.Px6.p5.m1" class="ltx_Math" alttext="\nabla_{i}" display="inline"><msub><mo>∇</mo><mi>i</mi></msub></math>, which
+indicates a covariant derivatives in direction <math id="S0.SS0.SSS0.Px6.p5.m2" class="ltx_Math" alttext="\partial_{x_{i}}" display="inline"><msub><mo>∂</mo><msub><mi>x</mi><mi>i</mi></msub></msub></math>, i.e.</p>
+<table id="S0.Ex27" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex27.m1" class="ltx_Math" alttext="\nabla_{i}Y=\nabla_{\!\partial_{x_{i}}}Y,\quad Y\in\mathcal{X}(M)." display="block"><mrow><mrow><mrow><mrow><msub><mo>∇</mo><mi>i</mi></msub><mo>⁡</mo><mi>Y</mi></mrow><mo>=</mo><mrow><msub><mo>∇</mo><msub><mo lspace="0.8pt">∂</mo><msub><mi>x</mi><mi>i</mi></msub></msub></msub><mo>⁡</mo><mi>Y</mi></mrow></mrow><mo rspace="12.5pt">,</mo><mrow><mi>Y</mi><mo>∈</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒳</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>M</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">This notation
+jibes with the point of view that the covariant derivative is a
+certain generalization of the ordinary directional derivative. The
+partials <math id="S0.SS0.SSS0.Px6.p5.m3" class="ltx_Math" alttext="\partial_{x_{i}}" display="inline"><msub><mo>∂</mo><msub><mi>x</mi><mi>i</mi></msub></msub></math> are replaced by the covariant
+<math id="S0.SS0.SSS0.Px6.p5.m4" class="ltx_Math" alttext="\nabla_{i}" display="inline"><msub><mo>∇</mo><mi>i</mi></msub></math>, and the general directional derivative
+<math id="S0.SS0.SSS0.Px6.p5.m5" class="ltx_Math" alttext="V^{i}\partial_{x_{i}}" display="inline"><mrow><msup><mi>V</mi><mi>i</mi></msup><mo>⁢</mo><msub><mo>∂</mo><msub><mi>x</mi><mi>i</mi></msub></msub></mrow></math> relative to a vector-field <math id="S0.SS0.SSS0.Px6.p5.m6" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>, is
+replaced by the covariant derivative operator <math id="S0.SS0.SSS0.Px6.p5.m7" class="ltx_Math" alttext="V^{i}\nabla_{i}." display="inline"><mrow><mrow><msup><mi>V</mi><mi>i</mi></msup><mo>⁢</mo><msub><mo>∇</mo><mi>i</mi></msub></mrow><mo>.</mo></mrow></math></p>
+</div>
+</section>
+<section id="S0.SS0.SSS0.Px7" class="ltx_paragraph">
+<h2 class="ltx_title ltx_title_paragraph">Group compatibility</h2>
+
+<div id="S0.SS0.SSS0.Px7.p1" class="ltx_para">
+<p class="ltx_p">So far, we have been labouring under the assumption that <math id="S0.SS0.SSS0.Px7.p1.m1" class="ltx_Math" alttext="G=GL(V)" display="inline"><mrow><mi>G</mi><mo>=</mo><mrow><mi>G</mi><mo>⁢</mo><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. The time has now come to remove this restriction. To do so, we need to come to grips with the issue of group compatibility. As usual, we shall begin by discussing the problem in intuiutive terms, then formalize our intuition in various formalisms.</p>
+</div>
+<div id="S0.SS0.SSS0.Px7.p2" class="ltx_para">
+<p class="ltx_p">The structure group transforms vectors located at a point into each other whilst the connection transforms transforms vectors based at one point into vectors based at another point. To understand the problem of compatibility, let us focus attention on two nearby points <math id="S0.SS0.SSS0.Px7.p2.m1" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> and <math id="S0.SS0.SSS0.Px7.p2.m2" class="ltx_Math" alttext="Q" display="inline"><mi>Q</mi></math> of the manifold and the fibres above these points.</p>
+</div>
+<div id="S0.SS0.SSS0.Px7.p3" class="ltx_para">
+<p class="ltx_p">There are two ways to transform a vector <math id="S0.SS0.SSS0.Px7.p3.m1" class="ltx_Math" alttext="v\in V_{P}" display="inline"><mrow><mi>v</mi><mo>∈</mo><msub><mi>V</mi><mi>P</mi></msub></mrow></math>. (Since it is crucial to remember that the fibers over different points are distinct vector spaces if one is to order to understand this discussion, we have indexed the copies of <math id="S0.SS0.SSS0.Px7.p3.m2" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> which serve as fibers of the bundle over various points of the manifold with their basepoints. Likewise, we shall index the symbol <math id="S0.SS0.SSS0.Px7.p3.m3" class="ltx_Math" alttext="\rho" display="inline"><mi>ρ</mi></math> with a point of the manifold to indicate the action of the group on vectors based at that point.) The simplest way is to pick an element <math id="S0.SS0.SSS0.Px7.p3.m4" class="ltx_Math" alttext="g\in G" display="inline"><mrow><mi>g</mi><mo>∈</mo><mi>G</mi></mrow></math> and apply the transformation <math id="S0.SS0.SSS0.Px7.p3.m5" class="ltx_Math" alttext="\rho_{P}(g)" display="inline"><mrow><msub><mi>ρ</mi><mi>P</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>g</mi><mo stretchy="false">)</mo></mrow></mrow></math> to <math id="S0.SS0.SSS0.Px7.p3.m6" class="ltx_Math" alttext="v" display="inline"><mi>v</mi></math>. Alternatively, one could first parallel transport <math id="S0.SS0.SSS0.Px7.p3.m7" class="ltx_Math" alttext="v" display="inline"><mi>v</mi></math> to <math id="S0.SS0.SSS0.Px7.p3.m8" class="ltx_Math" alttext="Tv\in V_{Q}" display="inline"><mrow><mrow><mi>T</mi><mo>⁢</mo><mi>v</mi></mrow><mo>∈</mo><msub><mi>V</mi><mi>Q</mi></msub></mrow></math>, apply the transform <math id="S0.SS0.SSS0.Px7.p3.m9" class="ltx_Math" alttext="\rho_{Q}(g)" display="inline"><mrow><msub><mi>ρ</mi><mi>Q</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>g</mi><mo stretchy="false">)</mo></mrow></mrow></math> to the transported vector, then parallel transport the result back to <math id="S0.SS0.SSS0.Px7.p3.m10" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> to obtain <math id="S0.SS0.SSS0.Px7.p3.m11" class="ltx_Math" alttext="T^{-1}\rho_{Q}(g)Tv" display="inline"><mrow><msup><mi>T</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><msub><mi>ρ</mi><mi>Q</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>g</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>T</mi><mo>⁢</mo><mi>v</mi></mrow></math>.</p>
+</div>
+<div id="S0.SS0.SSS0.Px7.p4" class="ltx_para">
+<p class="ltx_p">If the transform <math id="S0.SS0.SSS0.Px7.p4.m1" class="ltx_Math" alttext="T^{-1}\rho_{Q}(g)T" display="inline"><mrow><msup><mi>T</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><msub><mi>ρ</mi><mi>Q</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>g</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>T</mi></mrow></math> does not equal <math id="S0.SS0.SSS0.Px7.p4.m2" class="ltx_Math" alttext="\rho_{P}(g^{\prime})" display="inline"><mrow><msub><mi>ρ</mi><mi>P</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>g</mi><mo>′</mo></msup><mo stretchy="false">)</mo></mrow></mrow></math> for any <math id="S0.SS0.SSS0.Px7.p4.m3" class="ltx_Math" alttext="g^{\prime}\in G" display="inline"><mrow><msup><mi>g</mi><mo>′</mo></msup><mo>∈</mo><mi>G</mi></mrow></math>, we are in trouble. By using the connection, we could generate a transformation of the fiber which is not described by the structure group of the bundle. To avoid this difficulty, we need to demand that the connection is compatible with the group. Group compatibility is the condition that for every map <math id="S0.SS0.SSS0.Px7.p4.m4" class="ltx_Math" alttext="T:V_{P}\to V_{Q}" display="inline"><mrow><mi>T</mi><mo>:</mo><mrow><msub><mi>V</mi><mi>P</mi></msub><mo>→</mo><msub><mi>V</mi><mi>Q</mi></msub></mrow></mrow></math> which parallel transports a vector from a point <math id="S0.SS0.SSS0.Px7.p4.m5" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> to another point <math id="S0.SS0.SSS0.Px7.p4.m6" class="ltx_Math" alttext="Q" display="inline"><mi>Q</mi></math> and for every <math id="S0.SS0.SSS0.Px7.p4.m7" class="ltx_Math" alttext="g\in G" display="inline"><mrow><mi>g</mi><mo>∈</mo><mi>G</mi></mrow></math>, there exists a <math id="S0.SS0.SSS0.Px7.p4.m8" class="ltx_Math" alttext="g^{\prime}\in G" display="inline"><mrow><msup><mi>g</mi><mo>′</mo></msup><mo>∈</mo><mi>G</mi></mrow></math> such that <math id="S0.SS0.SSS0.Px7.p4.m9" class="ltx_Math" alttext="\rho_{P}(g)T=T\rho_{Q}(g^{\prime})" display="inline"><mrow><mrow><msub><mi>ρ</mi><mi>P</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>g</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>T</mi></mrow><mo>=</mo><mrow><mi>T</mi><mo>⁢</mo><msub><mi>ρ</mi><mi>Q</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>g</mi><mo>′</mo></msup><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. In the language of representation theory, we would say that <math id="S0.SS0.SSS0.Px7.p4.m10" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math> intertwines the representations <math id="S0.SS0.SSS0.Px7.p4.m11" class="ltx_Math" alttext="\rho_{P}" display="inline"><msub><mi>ρ</mi><mi>P</mi></msub></math> and <math id="S0.SS0.SSS0.Px7.p4.m12" class="ltx_Math" alttext="\rho_{Q}" display="inline"><msub><mi>ρ</mi><mi>Q</mi></msub></math> of <math id="S0.SS0.SSS0.Px7.p4.m13" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math>.
+</p>
+</div>
+<div id="S0.SS0.SSS0.Px7.p5" class="ltx_para">
+<p class="ltx_p">It is worth noting that, if we transport the vector <math id="S0.SS0.SSS0.Px7.p5.m1" class="ltx_Math" alttext="v" display="inline"><mi>v</mi></math> from <math id="S0.SS0.SSS0.Px7.p5.m2" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> to <math id="S0.SS0.SSS0.Px7.p5.m3" class="ltx_Math" alttext="Q" display="inline"><mi>Q</mi></math> by first transporting it to an intermediate point <math id="S0.SS0.SSS0.Px7.p5.m4" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math>, it is enough to check that the transport from <math id="S0.SS0.SSS0.Px7.p5.m5" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> to <math id="S0.SS0.SSS0.Px7.p5.m6" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> and the transport from <math id="S0.SS0.SSS0.Px7.p5.m7" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> to <math id="S0.SS0.SSS0.Px7.p5.m8" class="ltx_Math" alttext="Q" display="inline"><mi>Q</mi></math> are group compatible since, if they are, it will automatically follow that the transport from <math id="S0.SS0.SSS0.Px7.p5.m9" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> to <math id="S0.SS0.SSS0.Px7.p5.m10" class="ltx_Math" alttext="Q" display="inline"><mi>Q</mi></math> is group compatible. To verify this assertion, let <math id="S0.SS0.SSS0.Px7.p5.m11" class="ltx_Math" alttext="T_{1}" display="inline"><msub><mi>T</mi><mn>1</mn></msub></math> be the matrix which transports vectors from <math id="S0.SS0.SSS0.Px7.p5.m12" class="ltx_Math" alttext="V_{P}" display="inline"><msub><mi>V</mi><mi>P</mi></msub></math> to <math id="S0.SS0.SSS0.Px7.p5.m13" class="ltx_Math" alttext="V_{R}" display="inline"><msub><mi>V</mi><mi>R</mi></msub></math> and let <math id="S0.SS0.SSS0.Px7.p5.m14" class="ltx_Math" alttext="T_{2}" display="inline"><msub><mi>T</mi><mn>2</mn></msub></math> be the matrix which transports vectors from <math id="S0.SS0.SSS0.Px7.p5.m15" class="ltx_Math" alttext="V_{R}" display="inline"><msub><mi>V</mi><mi>R</mi></msub></math> to <math id="S0.SS0.SSS0.Px7.p5.m16" class="ltx_Math" alttext="V_{Q}" display="inline"><msub><mi>V</mi><mi>Q</mi></msub></math>.</p>
+</div>
+<div id="S0.SS0.SSS0.Px7.p6" class="ltx_para">
+<p class="ltx_p"><math id="S0.SS0.SSS0.Px7.p6.m1" class="ltx_Math" alttext="\nabla_{X}(\lambda Z)-\lambda\nabla_{X}Z=\mu Z" display="inline"><mrow><mrow><mrow><msub><mo>∇</mo><mi>X</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>λ</mi><mo>⁢</mo><mi>Z</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>λ</mi><mo>⁢</mo><mrow><msub><mo>∇</mo><mi>X</mi></msub><mo>⁡</mo><mi>Z</mi></mrow></mrow></mrow><mo>=</mo><mrow><mi>μ</mi><mo>⁢</mo><mi>Z</mi></mrow></mrow></math> for some <math id="S0.SS0.SSS0.Px7.p6.m2" class="ltx_Math" alttext="\mu\in A^{M}" display="inline"><mrow><mi>μ</mi><mo>∈</mo><msup><mi>A</mi><mi>M</mi></msup></mrow></math></p>
+</div>
+</section>
+<section id="S0.SS0.SSS0.Px8" class="ltx_paragraph">
+<h2 class="ltx_title ltx_title_paragraph">Related Definitions.</h2>
+
+<div id="S0.SS0.SSS0.Px8.p1" class="ltx_para">
+<p class="ltx_p">The torsion of a connection <math id="S0.SS0.SSS0.Px8.p1.m1" class="ltx_Math" alttext="\nabla" display="inline"><mo>∇</mo></math>
+is a bilinear mapping</p>
+<table id="S0.Ex28" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex28.m1" class="ltx_Math" alttext="T:\mathcal{X}(M)\times\mathcal{X}(M)\rightarrow\mathcal{X}(M)" display="block"><mrow><mi>T</mi><mo>:</mo><mrow><mrow><mrow><mrow><mi class="ltx_font_mathcaligraphic">𝒳</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>M</mi><mo stretchy="false">)</mo></mrow></mrow><mo>×</mo><mi class="ltx_font_mathcaligraphic">𝒳</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>M</mi><mo stretchy="false">)</mo></mrow></mrow><mo>→</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒳</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>M</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">defined by</p>
+<table id="S0.Ex29" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex29.m1" class="ltx_Math" alttext="T(X,Y)=\nabla_{X}(Y)-\nabla_{Y}(X)-[X,Y]," display="block"><mrow><mrow><mrow><mi>T</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><mi>Y</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><msub><mo>∇</mo><mi>X</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>Y</mi><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><msub><mo>∇</mo><mi>Y</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mo stretchy="false">[</mo><mi>X</mi><mo>,</mo><mi>Y</mi><mo stretchy="false">]</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where the last term denotes the Lie bracket of <math id="S0.SS0.SSS0.Px8.p1.m2" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> and <math id="S0.SS0.SSS0.Px8.p1.m3" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math>.</p>
+</div>
+<div id="S0.SS0.SSS0.Px8.p2" class="ltx_para">
+<p class="ltx_p">The curvature of a connection is a tri-linear mapping</p>
+<table id="S0.Ex30" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex30.m1" class="ltx_Math" alttext="R:\mathcal{X}(M)\times\mathcal{X}(M)\times\mathcal{X}(M)\rightarrow\mathcal{X}%
+(M)" display="block"><mrow><mi>R</mi><mo>:</mo><mrow><mrow><mrow><mrow><mrow><mrow><mi class="ltx_font_mathcaligraphic">𝒳</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>M</mi><mo stretchy="false">)</mo></mrow></mrow><mo>×</mo><mi class="ltx_font_mathcaligraphic">𝒳</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>M</mi><mo stretchy="false">)</mo></mrow></mrow><mo>×</mo><mi class="ltx_font_mathcaligraphic">𝒳</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>M</mi><mo stretchy="false">)</mo></mrow></mrow><mo>→</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒳</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>M</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">defined by</p>
+<table id="S0.Ex31" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex31.m1" class="ltx_Math" alttext="R(X,Y,Z)=\nabla_{X}\nabla_{Y}Z-\nabla_{Y}\nabla_{X}Z-\nabla_{[X,Y]}Z,\quad X,Y%
+,Z\in\mathcal{X}(M)." display="block"><mrow><mrow><mrow><mrow><mi>R</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><mi>Y</mi><mo>,</mo><mi>Z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mrow><mrow><msub><mo>∇</mo><mi>X</mi></msub><mo>⁡</mo><msub><mo>∇</mo><mi>Y</mi></msub></mrow><mo>⁡</mo><mi>Z</mi></mrow><mo>-</mo><mrow><mrow><msub><mo>∇</mo><mi>Y</mi></msub><mo>⁡</mo><msub><mo>∇</mo><mi>X</mi></msub></mrow><mo>⁡</mo><mi>Z</mi></mrow><mo>-</mo><mrow><msub><mo>∇</mo><mrow><mo stretchy="false">[</mo><mi>X</mi><mo>,</mo><mi>Y</mi><mo stretchy="false">]</mo></mrow></msub><mo>⁡</mo><mi>Z</mi></mrow></mrow><mo rspace="12.5pt">,</mo><mi>X</mi><mo>,</mo><mi>Y</mi></mrow></mrow><mo>,</mo><mrow><mi>Z</mi><mo>∈</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒳</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>M</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">We note the following facts:</p>
+<ul id="I2" class="ltx_itemize">
+<li id="I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i1.p1" class="ltx_para">
+<p class="ltx_p">The torsion and curvature are tensorial (i.e. <math id="I2.i1.p1.m1" class="ltx_Math" alttext="\mathcal{F}(M)" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">ℱ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>M</mi><mo stretchy="false">)</mo></mrow></mrow></math>-linear) with
+respect to their
+arguments, and therefore define, respectively, a type (1,2) and a
+type (1,3) tensor field on <math id="I2.i1.p1.m2" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math>. This follows from the defining
+properties of a connection and the derivation property of the Lie
+bracket.</p>
+</div>
+</li>
+<li id="I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i2.p1" class="ltx_para">
+<p class="ltx_p">Both the torsion and the curvature are, quite evidently,
+anti-symmetric in their first two arguments.</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="S0.SS0.SSS0.Px8.p3" class="ltx_para">
+<p class="ltx_p">A connection is called <span class="ltx_text ltx_font_italic">torsionless</span> if the corresponding torsion
+tensor vanishes. If the corresponding curvature tensor vanishes, then
+the connection is called <span class="ltx_text ltx_font_italic">flat</span>. A connection that is both
+torsionless and flat is locally Euclidean, meaning that there exist
+local coordinates for which all of the Christoffel symbols vanish.</p>
+</div>
+</section>
+<section id="S0.SS0.SSS0.Px9" class="ltx_paragraph">
+<h2 class="ltx_title ltx_title_paragraph">Notes.</h2>
+
+<div id="S0.SS0.SSS0.Px9.p1" class="ltx_para">
+<p class="ltx_p">The notion of connection is intimately related to the notion of
+parallel transport, and indeed one can regard the former as the
+infinitesimal version of the latter. To put it another way, when we
+integrate a connection we get parallel transport, and when we take the
+derivative of parallel transport we get a connection. Much more on
+this in the parallel transport entry.</p>
+</div>
+<div id="S0.SS0.SSS0.Px9.p2" class="ltx_para">
+<p class="ltx_p">As far as I know, we have Elie Cartan to thank for the word <span class="ltx_text ltx_font_italic">connection</span>. With some trepidation at putting words into the
+master’s mouth, my guess is that Cartan would lodge a protest against
+the definition of <span class="ltx_text ltx_font_italic">connection</span> given above. To Cartan, a connection
+was first and foremost a geometric notion that has to do with various
+ways of <span class="ltx_text ltx_font_italic">connecting</span> nearby tangent spaces of a manifold. Cartan
+might have preferred to refer to <math id="S0.SS0.SSS0.Px9.p2.m1" class="ltx_Math" alttext="\nabla" display="inline"><mo>∇</mo></math> as the covariant derivative
+operator, or at the very least to call <math id="S0.SS0.SSS0.Px9.p2.m2" class="ltx_Math" alttext="\nabla" display="inline"><mo>∇</mo></math> an <span class="ltx_text ltx_font_italic">affine</span>
+connection, in deference to the fact that there exist other types of
+connections (e.g. projective ones). This is no longer the mainstream
+view, and these days, when one wants to speak of such matters, one is
+obliged to use the term <span class="ltx_text ltx_font_italic">Cartan connection.</span></p>
+</div>
+<div id="S0.SS0.SSS0.Px9.p3" class="ltx_para">
+<p class="ltx_p">Indeed, many authors call <math id="S0.SS0.SSS0.Px9.p3.m1" class="ltx_Math" alttext="\nabla" display="inline"><mo>∇</mo></math> an affine connection although they
+never explain the <span class="ltx_text ltx_font_italic">affine</span> part. <span class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">1</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">1</sup>The silence is
+puzzling, and I must confess to wondering about the percentage of
+modern-day geometers who know exactly what is so affine about an
+affine connection. Has blind tradition taken over? Do we say
+“affine connection” because the previous person said “affine
+connection”? The meaning of “affine” is quite clearly explained
+by Cartan in his writings. There you go esteemed “everybody”: one
+more reason to go and read Cartan.</span></span></span> One can also define connections
+and parallel transport in terms of principal fiber bundles. This
+approach is due to Ehresmann. In this generalized setting an affine
+connection is just the type of connection that arises when working
+with a manifold’s frame bundle.</p>
+</div>
+</section>
+<section id="S0.SS0.SSS0.Px10" class="ltx_paragraph">
+<h2 class="ltx_title ltx_title_paragraph">Bibliography.</h2>
+
+<div id="S0.SS0.SSS0.Px10.p1" class="ltx_para">
+<p class="ltx_p">[Exact references coming.]</p>
+</div>
+<div id="S0.SS0.SSS0.Px10.p2" class="ltx_para">
+<p class="ltx_p">Bishop ang Goldberg (1968)</p>
+</div>
+<div id="S0.SS0.SSS0.Px10.p3" class="ltx_para">
+<p class="ltx_p">- Cartan’s book on projective connection.</p>
+</div>
+<div id="S0.SS0.SSS0.Px10.p4" class="ltx_para">
+<p class="ltx_p">- Ehresmann’s seminal mid-century papers.</p>
+</div>
+<div id="S0.SS0.SSS0.Px10.p5" class="ltx_para">
+<p class="ltx_p">- Kobayashi and Nomizu’s books</p>
+</div>
+<div id="S0.SS0.SSS0.Px10.p6" class="ltx_para">
+<p class="ltx_p">Spivak (1965)</p>
+</div>
+<div id="S0.SS0.SSS0.Px10.p7" class="ltx_para">
+<p class="ltx_p">See also the bibliography for differential geometry.
+</p>
+<table class="ltx_tabular ltx_align_right ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_t">Title</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">connection</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Canonical name</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Connection</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Date of creation</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 12:37:10</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified on</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 12:37:10</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Owner</td>
+<td class="ltx_td ltx_align_left ltx_border_r">rspuzio (6075)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified by</td>
+<td class="ltx_td ltx_align_left ltx_border_r">rspuzio (6075)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Numerical id</td>
+<td class="ltx_td ltx_align_left ltx_border_r">43</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Author</td>
+<td class="ltx_td ltx_align_left ltx_border_r">rspuzio (6075)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Entry type</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 53B05</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Christoffel20symbols</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CurvatureOfACircle</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">SphereTheoremFromGlobalDifferentialGeometry</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Geodesic</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">RiemannCurvatureTensor</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">covariant derivative</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">torsion</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">curvature</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">torsionless</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">flat</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">Christoffel symbol</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 22:26:51 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

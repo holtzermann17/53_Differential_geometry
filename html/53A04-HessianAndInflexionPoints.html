@@ -1,0 +1,305 @@
+<!DOCTYPE html><html>
+<head>
+<title>Hessian and inflexion points</title>
+<!--Generated on Fri Feb  9 22:20:49 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">Hessian and inflexion points</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="Thmthm1" class="ltx_theorem ltx_theorem_thm">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Theorem 1</span>.</h6>
+<div id="Thmthm1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Suppose that <math id="Thmthm1.p1.m1" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math> is a curve in the real projective plane
+<math id="Thmthm1.p1.m2" class="ltx_Math" alttext="\mathbb{R}\mathbb{P}^{2}" display="inline"><mrow><mi mathvariant="normal">R</mi><mo mathvariant="italic">⁢</mo><msup><mi mathvariant="normal">P</mi><mn mathvariant="normal">2</mn></msup></mrow></math> given by a homogeneous
+equation <math id="Thmthm1.p1.m3" class="ltx_Math" alttext="F(x,y,z)=0" display="inline"><mrow><mrow><mi>F</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>x</mi><mo mathvariant="normal">,</mo><mi>y</mi><mo mathvariant="normal">,</mo><mi>z</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow><mo mathvariant="normal">=</mo><mn mathvariant="normal">0</mn></mrow></math> of
+degree of homogeneity (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/HomogeneousFunction</span>) <math id="Thmthm1.p1.m4" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>.
+If <math id="Thmthm1.p1.m5" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math> has continuous first derivatives in a neighborhood of
+a point <math id="Thmthm1.p1.m6" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> and the gradient of <math id="Thmthm1.p1.m7" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math> is non-zero at <math id="Thmthm1.p1.m8" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> and <math id="Thmthm1.p1.m9" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math>
+is an inflection point of <math id="Thmthm1.p1.m10" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math>, then <math id="Thmthm1.p1.m11" class="ltx_Math" alttext="H(P)=0" display="inline"><mrow><mrow><mi>H</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>P</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow><mo mathvariant="normal">=</mo><mn mathvariant="normal">0</mn></mrow></math>, where <math id="Thmthm1.p1.m12" class="ltx_Math" alttext="H" display="inline"><mi>H</mi></math> is
+the Hessian determinant:</span></p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="H=\left|\begin{matrix}{\partial^{2}F\over\partial x^{2}}&{\partial^{2}F\over%
+\partial x\partial y}&{\partial^{2}F\over\partial x\partial z}\\
+{\partial^{2}F\over\partial y\partial x}&{\partial^{2}F\over\partial y^{2}}&{%
+\partial^{2}F\over\partial y\partial z}\\
+{\partial^{2}F\over\partial z\partial x}&{\partial^{2}F\over\partial z\partial
+y%
+}&{\partial^{2}F\over\partial z^{2}}\end{matrix}\right|" display="block"><mrow><mi>H</mi><mo>=</mo><mrow><mo>|</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mstyle displaystyle="false"><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><mo>⁡</mo><mi>F</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac></mstyle></mtd><mtd columnalign="center"><mstyle displaystyle="false"><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><mo>⁡</mo><mi>F</mi></mrow><mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>x</mi></mrow><mo>⁢</mo><mrow><mo>∂</mo><mo>⁡</mo><mi>y</mi></mrow></mrow></mfrac></mstyle></mtd><mtd columnalign="center"><mstyle displaystyle="false"><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><mo>⁡</mo><mi>F</mi></mrow><mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>x</mi></mrow><mo>⁢</mo><mrow><mo>∂</mo><mo>⁡</mo><mi>z</mi></mrow></mrow></mfrac></mstyle></mtd></mtr><mtr><mtd columnalign="center"><mstyle displaystyle="false"><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><mo>⁡</mo><mi>F</mi></mrow><mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>y</mi></mrow><mo>⁢</mo><mrow><mo>∂</mo><mo>⁡</mo><mi>x</mi></mrow></mrow></mfrac></mstyle></mtd><mtd columnalign="center"><mstyle displaystyle="false"><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><mo>⁡</mo><mi>F</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>y</mi><mn>2</mn></msup></mrow></mfrac></mstyle></mtd><mtd columnalign="center"><mstyle displaystyle="false"><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><mo>⁡</mo><mi>F</mi></mrow><mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>y</mi></mrow><mo>⁢</mo><mrow><mo>∂</mo><mo>⁡</mo><mi>z</mi></mrow></mrow></mfrac></mstyle></mtd></mtr><mtr><mtd columnalign="center"><mstyle displaystyle="false"><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><mo>⁡</mo><mi>F</mi></mrow><mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>z</mi></mrow><mo>⁢</mo><mrow><mo>∂</mo><mo>⁡</mo><mi>x</mi></mrow></mrow></mfrac></mstyle></mtd><mtd columnalign="center"><mstyle displaystyle="false"><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><mo>⁡</mo><mi>F</mi></mrow><mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>z</mi></mrow><mo>⁢</mo><mrow><mo>∂</mo><mo>⁡</mo><mi>y</mi></mrow></mrow></mfrac></mstyle></mtd><mtd columnalign="center"><mstyle displaystyle="false"><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><mo>⁡</mo><mi>F</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>z</mi><mn>2</mn></msup></mrow></mfrac></mstyle></mtd></mtr></mtable><mo>|</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">We may choose a system <math id="p2.m1" class="ltx_Math" alttext="x,y,z" display="inline"><mrow><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi></mrow></math> of homogenous coordinates
+such that the point <math id="p2.m2" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> lies at <math id="p2.m3" class="ltx_Math" alttext="(0,0,1)" display="inline"><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></math> and the equation
+of the tangent to <math id="p2.m4" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math> at <math id="p2.m5" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> is <math id="p2.m6" class="ltx_Math" alttext="y=0" display="inline"><mrow><mi>y</mi><mo>=</mo><mn>0</mn></mrow></math>. Using the
+implicit function theorem, we may conclude that there
+exists an interval <math id="p2.m7" class="ltx_Math" alttext="(-\epsilon,\epsilon)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mi>ϵ</mi></mrow><mo>,</mo><mi>ϵ</mi><mo stretchy="false">)</mo></mrow></math> and a function
+<math id="p2.m8" class="ltx_Math" alttext="f\colon(-\epsilon,\epsilon)\to\mathbb{R}" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mi>ϵ</mi></mrow><mo>,</mo><mi>ϵ</mi><mo stretchy="false">)</mo></mrow><mo>→</mo><mi>ℝ</mi></mrow></mrow></math> such that
+<math id="p2.m9" class="ltx_Math" alttext="F(t,f(t),1)=0" display="inline"><mrow><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo>,</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math> when <math id="p2.m10" class="ltx_Math" alttext="-\epsilon&lt;t&lt;\epsilon" display="inline"><mrow><mrow><mo>-</mo><mi>ϵ</mi></mrow><mo>&lt;</mo><mi>t</mi><mo>&lt;</mo><mi>ϵ</mi></mrow></math>. In
+other words, the portion of curve near <math id="p2.m11" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> may be described
+in non-homogenous coordinates by <math id="p2.m12" class="ltx_Math" alttext="y=f(x)" display="inline"><mrow><mi>y</mi><mo>=</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. By the way
+the coordinates were chosen, <math id="p2.m13" class="ltx_Math" alttext="f(0)=0" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math> and <math id="p2.m14" class="ltx_Math" alttext="f^{\prime}(0)=0" display="inline"><mrow><mrow><msup><mi>f</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math>.
+Because <math id="p2.m15" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> is an inflection point, we also have <math id="p2.m16" class="ltx_Math" alttext="f^{\prime\prime}(0)=0" display="inline"><mrow><mrow><msup><mi>f</mi><mo>′′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math>.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">Differentiating the equation <math id="p3.m1" class="ltx_Math" alttext="F(t,f(t),1)=0" display="inline"><mrow><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo>,</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math> twice,
+we obtain the following:</p>
+<table id="S0.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex2" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\displaystyle 0={d\over dt}F(t,f(t),1)" display="inline"><mrow><mn>0</mn><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mi>d</mi><mrow><mi>d</mi><mo>⁢</mo><mi>t</mi></mrow></mfrac></mstyle><mo>⁢</mo><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo>,</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex2.m2" class="ltx_Math" alttext="\displaystyle={\partial F\over\partial x}(t,f(t),1)+f^{\prime}(t){\partial F%
+\over\partial y}(t,f(t),1)" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>F</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>x</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo>,</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><msup><mi>f</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>F</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>y</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo>,</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex3" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex3.m1" class="ltx_Math" alttext="\displaystyle 0={d^{2}\over dt^{2}}F(t,f(t),1)" display="inline"><mrow><mn>0</mn><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><msup><mi>d</mi><mn>2</mn></msup><mrow><mi>d</mi><mo>⁢</mo><msup><mi>t</mi><mn>2</mn></msup></mrow></mfrac></mstyle><mo>⁢</mo><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo>,</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex3.m2" class="ltx_Math" alttext="\displaystyle={\partial^{2}F\over\partial x^{2}}(t,f(t),1)+f^{\prime}(t){%
+\partial^{2}F\over\partial x\partial y}(t,f(t),1)" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mstyle displaystyle="true"><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><mo>⁡</mo><mi>F</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo>,</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><msup><mi>f</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><mo>⁡</mo><mi>F</mi></mrow><mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>x</mi></mrow><mo>⁢</mo><mrow><mo>∂</mo><mo>⁡</mo><mi>y</mi></mrow></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo>,</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex4" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex4.m2" class="ltx_Math" alttext="\displaystyle\quad+\left(f^{\prime}(t)\right)^{2}{\partial^{2}F\over\partial y%
+^{2}}(t,f(t),1)+f^{\prime\prime}(t){\partial F\over\partial y}(t,f(t),1)" display="inline"><mrow><mi mathvariant="normal"> </mi><mo>+</mo><mrow><msup><mrow><mo>(</mo><mrow><msup><mi>f</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>)</mo></mrow><mn>2</mn></msup><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><mo>⁡</mo><mi>F</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>y</mi><mn>2</mn></msup></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo>,</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><msup><mi>f</mi><mo>′′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>F</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>y</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo>,</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">We will now put <math id="p3.m2" class="ltx_Math" alttext="t=0" display="inline"><mrow><mi>t</mi><mo>=</mo><mn>0</mn></mrow></math> but, for reasons which will be
+explained later, we do not yet want to make use of the
+fact that <math id="p3.m3" class="ltx_Math" alttext="f^{\prime\prime}(0)=0" display="inline"><mrow><mrow><msup><mi>f</mi><mo>′′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math>:</p>
+<table id="S0.EGx2" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex5" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex5.m1" class="ltx_Math" alttext="\displaystyle{\partial F\over\partial x}(0,0,1)" display="inline"><mrow><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>F</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>x</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex5.m2" class="ltx_Math" alttext="\displaystyle=0" display="inline"><mrow><mi></mi><mo>=</mo><mn>0</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex6" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex6.m1" class="ltx_Math" alttext="\displaystyle{\partial^{2}F\over\partial x^{2}}(0,0,1)" display="inline"><mrow><mstyle displaystyle="true"><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><mo>⁡</mo><mi>F</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex6.m2" class="ltx_Math" alttext="\displaystyle=-f^{\prime\prime}(0){\partial F\over\partial y}(0,0,1)" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mo>-</mo><mrow><msup><mi>f</mi><mo>′′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>F</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>y</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">Since <math id="p4.m1" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math> is homogenous, Euler’s formula holds:</p>
+<table id="S0.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex7.m1" class="ltx_Math" alttext="x{\partial F\over\partial x}+y{\partial F\over\partial y}+z{\partial F\over%
+\partial z}=nF" display="block"><mrow><mrow><mrow><mi>x</mi><mo>⁢</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>F</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>x</mi></mrow></mfrac></mrow><mo>+</mo><mrow><mi>y</mi><mo>⁢</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>F</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>y</mi></mrow></mfrac></mrow><mo>+</mo><mrow><mi>z</mi><mo>⁢</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>F</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>z</mi></mrow></mfrac></mrow></mrow><mo>=</mo><mrow><mi>n</mi><mo>⁢</mo><mi>F</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Taking partial derivatives, we obtain the following:</p>
+<table id="S0.EGx3" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex8" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex8.m1" class="ltx_Math" alttext="\displaystyle x{\partial^{2}F\over\partial x^{2}}+y{\partial^{2}F\over\partial
+x%
+\partial y}+z{\partial^{2}F\over\partial x\partial z}=(n-1){\partial F\over%
+\partial x}" display="inline"><mrow><mrow><mrow><mi>x</mi><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><mo>⁡</mo><mi>F</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac></mstyle></mrow><mo>+</mo><mrow><mi>y</mi><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><mo>⁡</mo><mi>F</mi></mrow><mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>x</mi></mrow><mo>⁢</mo><mrow><mo>∂</mo><mo>⁡</mo><mi>y</mi></mrow></mrow></mfrac></mstyle></mrow><mo>+</mo><mrow><mi>z</mi><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><mo>⁡</mo><mi>F</mi></mrow><mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>x</mi></mrow><mo>⁢</mo><mrow><mo>∂</mo><mo>⁡</mo><mi>z</mi></mrow></mrow></mfrac></mstyle></mrow></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>F</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>x</mi></mrow></mfrac></mstyle></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex9" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex9.m1" class="ltx_Math" alttext="\displaystyle x{\partial^{2}F\over\partial x\partial y}+y{\partial^{2}F\over%
+\partial y^{2}}+z{\partial^{2}F\over\partial y\partial z}=(n-1){\partial F%
+\over\partial y}" display="inline"><mrow><mrow><mrow><mi>x</mi><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><mo>⁡</mo><mi>F</mi></mrow><mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>x</mi></mrow><mo>⁢</mo><mrow><mo>∂</mo><mo>⁡</mo><mi>y</mi></mrow></mrow></mfrac></mstyle></mrow><mo>+</mo><mrow><mi>y</mi><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><mo>⁡</mo><mi>F</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>y</mi><mn>2</mn></msup></mrow></mfrac></mstyle></mrow><mo>+</mo><mrow><mi>z</mi><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><mo>⁡</mo><mi>F</mi></mrow><mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>y</mi></mrow><mo>⁢</mo><mrow><mo>∂</mo><mo>⁡</mo><mi>z</mi></mrow></mrow></mfrac></mstyle></mrow></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>F</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>y</mi></mrow></mfrac></mstyle></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex10" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex10.m1" class="ltx_Math" alttext="\displaystyle x{\partial^{2}F\over\partial x\partial z}+y{\partial^{2}F\over%
+\partial y\partial z}+z{\partial^{2}F\over\partial z^{2}}=(n-1){\partial F%
+\over\partial z}" display="inline"><mrow><mrow><mrow><mi>x</mi><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><mo>⁡</mo><mi>F</mi></mrow><mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>x</mi></mrow><mo>⁢</mo><mrow><mo>∂</mo><mo>⁡</mo><mi>z</mi></mrow></mrow></mfrac></mstyle></mrow><mo>+</mo><mrow><mi>y</mi><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><mo>⁡</mo><mi>F</mi></mrow><mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>y</mi></mrow><mo>⁢</mo><mrow><mo>∂</mo><mo>⁡</mo><mi>z</mi></mrow></mrow></mfrac></mstyle></mrow><mo>+</mo><mrow><mi>z</mi><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><mo>⁡</mo><mi>F</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>z</mi><mn>2</mn></msup></mrow></mfrac></mstyle></mrow></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>F</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>z</mi></mrow></mfrac></mstyle></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Evaluating at <math id="p4.m2" class="ltx_Math" alttext="(0,0,1)" display="inline"><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></math> and making use of the
+equations deduced above, we obtain the following:
+</p>
+<table id="S0.EGx4" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex11" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex11.m1" class="ltx_Math" alttext="\displaystyle{\partial F\over\partial z}(0,0,1)" display="inline"><mrow><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>F</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>z</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex11.m2" class="ltx_Math" alttext="\displaystyle=0" display="inline"><mrow><mi></mi><mo>=</mo><mn>0</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex12" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex12.m1" class="ltx_Math" alttext="\displaystyle{\partial^{2}F\over\partial x\partial z}(0,0,1)" display="inline"><mrow><mstyle displaystyle="true"><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><mo>⁡</mo><mi>F</mi></mrow><mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>x</mi></mrow><mo>⁢</mo><mrow><mo>∂</mo><mo>⁡</mo><mi>z</mi></mrow></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex12.m2" class="ltx_Math" alttext="\displaystyle=0" display="inline"><mrow><mi></mi><mo>=</mo><mn>0</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex13" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex13.m1" class="ltx_Math" alttext="\displaystyle{\partial^{2}F\over\partial y\partial z}(0,0,1)" display="inline"><mrow><mstyle displaystyle="true"><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><mo>⁡</mo><mi>F</mi></mrow><mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>y</mi></mrow><mo>⁢</mo><mrow><mo>∂</mo><mo>⁡</mo><mi>z</mi></mrow></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex13.m2" class="ltx_Math" alttext="\displaystyle=(n-1){\partial F\over\partial y}(0,0,1)" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>F</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>y</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex14" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex14.m1" class="ltx_Math" alttext="\displaystyle{\partial^{2}F\over\partial z^{2}}(0,0,1)" display="inline"><mrow><mstyle displaystyle="true"><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><mo>⁡</mo><mi>F</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>z</mi><mn>2</mn></msup></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex14.m2" class="ltx_Math" alttext="\displaystyle=0" display="inline"><mrow><mi></mi><mo>=</mo><mn>0</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Making use of these facts, we may now evaluate the determinant:</p>
+<table id="S0.EGx5" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex15" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex15.m1" class="ltx_Math" alttext="\displaystyle H(0,0,1)" display="inline"><mrow><mi>H</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex15.m2" class="ltx_Math" alttext="\displaystyle=\left|\begin{matrix}-f^{\prime\prime}(0){\partial F\over\partial
+y%
+}(0,0,1)&{\partial^{2}F\over\partial x\partial y}(0,0,1)&amp;0\\
+{\partial^{2}F\over\partial x\partial y}(0,0,1)&{\partial^{2}F\over\partial^{2%
+}y}(0,0,1)&amp;(n-1){\partial F\over\partial y}(0,0,1)\\
+0&amp;(n-1){\partial F\over\partial y}(0,0,1)&amp;0\end{matrix}\right|" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mo>|</mo><mtable columnspacing="5pt" rowspacing="0pt"><mtr><mtd columnalign="center"><mrow><mo>-</mo><mrow><msup><mi>f</mi><mo>′′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>F</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>y</mi></mrow></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow></mrow></mtd><mtd columnalign="center"><mrow><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><mo>⁡</mo><mi>F</mi></mrow><mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>x</mi></mrow><mo>⁢</mo><mrow><mo>∂</mo><mo>⁡</mo><mi>y</mi></mrow></mrow></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center"><mrow><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><mo>⁡</mo><mi>F</mi></mrow><mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>x</mi></mrow><mo>⁢</mo><mrow><mo>∂</mo><mo>⁡</mo><mi>y</mi></mrow></mrow></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow></mtd><mtd columnalign="center"><mrow><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><mo>⁡</mo><mi>F</mi></mrow><mrow><msup><mo>∂</mo><mn>2</mn></msup><mo>⁡</mo><mi>y</mi></mrow></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow></mtd><mtd columnalign="center"><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>F</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>y</mi></mrow></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>F</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>y</mi></mrow></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr></mtable><mo>|</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex16" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex16.m2" class="ltx_Math" alttext="\displaystyle=(n-1)^{2}\left({\partial F\over\partial y}(0,0,1)\right)^{2}f^{%
+\prime\prime}(0)" display="inline"><mrow><mi></mi><mo>=</mo><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mo>⁢</mo><msup><mrow><mo>(</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>F</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>y</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow><mo>)</mo></mrow><mn>2</mn></msup><mo>⁢</mo><msup><mi>f</mi><mo>′′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Since <math id="p4.m3" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> is an inflection point, <math id="p4.m4" class="ltx_Math" alttext="f^{\prime\prime}(0)=0" display="inline"><mrow><mrow><msup><mi>f</mi><mo>′′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math>, so we
+have <math id="p4.m5" class="ltx_Math" alttext="H(0,0,1)=0" display="inline"><mrow><mrow><mi>H</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math>.
+∎</p>
+</div>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">Actually, we proved slightly more than what was stated.
+Because the gradient is assumed not to vanish at <math id="p5.m1" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math>,
+but <math id="p5.m2" class="ltx_Math" alttext="\partial F/\partial x=0" display="inline"><mrow><mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>F</mi></mrow><mo>/</mo><mrow><mo>∂</mo><mo>⁡</mo><mi>x</mi></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math> and <math id="p5.m3" class="ltx_Math" alttext="\partial F/\partial z=0" display="inline"><mrow><mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>F</mi></mrow><mo>/</mo><mrow><mo>∂</mo><mo>⁡</mo><mi>z</mi></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math> by the way we set up our coordinate
+system, we must have <math id="p5.m4" class="ltx_Math" alttext="\partial F/\partial y\neq 0" display="inline"><mrow><mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>F</mi></mrow><mo>/</mo><mrow><mo>∂</mo><mo>⁡</mo><mi>y</mi></mrow></mrow><mo>≠</mo><mn>0</mn></mrow></math>.
+Thus, we see that, if <math id="p5.m5" class="ltx_Math" alttext="n\neq 1" display="inline"><mrow><mi>n</mi><mo>≠</mo><mn>1</mn></mrow></math>, then <math id="p5.m6" class="ltx_Math" alttext="H(0,0,1)=0" display="inline"><mrow><mrow><mi>H</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math>
+if and only if <math id="p5.m7" class="ltx_Math" alttext="f^{\prime\prime}(0)" display="inline"><mrow><msup><mi>f</mi><mo>′′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow></math>. However, note that this does
+not mean that the Hessian vanishes if and only if <math id="p5.m8" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> is
+an inflection point since the definition of inflection
+point not only requires that <math id="p5.m9" class="ltx_Math" alttext="f^{\prime\prime}(0)=0" display="inline"><mrow><mrow><msup><mi>f</mi><mo>′′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math> but that the
+sign of <math id="p5.m10" class="ltx_Math" alttext="f^{\prime\prime}(t)" display="inline"><mrow><msup><mi>f</mi><mo>′′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math> change as <math id="p5.m11" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math> passes through <math id="p5.m12" class="ltx_Math" alttext="0" display="inline"><mn>0</mn></math>.</p>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">This result is used quite often in algebraic geometry,
+where <math id="p6.m1" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math> is a homogenous polynomial. In such a context,
+it is desirable to keep demonstrations purely
+algebraic and avoid introducing analysis where possible,
+so a variant of this result is preferred. The theorem
+may be restated as follows:</p>
+</div>
+<div id="Thmthm2" class="ltx_theorem ltx_theorem_thm">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Theorem 2</span>.</h6>
+<div id="Thmthm2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Suppose that <math id="Thmthm2.p1.m1" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math> is a curve in the real projective plane
+<math id="Thmthm2.p1.m2" class="ltx_Math" alttext="\mathbb{R}\mathbb{P}^{2}" display="inline"><mrow><mi mathvariant="normal">R</mi><mo mathvariant="italic">⁢</mo><msup><mi mathvariant="normal">P</mi><mn mathvariant="normal">2</mn></msup></mrow></math> given by an equation <math id="Thmthm2.p1.m3" class="ltx_Math" alttext="F(x,y,z)=0" display="inline"><mrow><mrow><mi>F</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>x</mi><mo mathvariant="normal">,</mo><mi>y</mi><mo mathvariant="normal">,</mo><mi>z</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow><mo mathvariant="normal">=</mo><mn mathvariant="normal">0</mn></mrow></math>
+where <math id="Thmthm2.p1.m4" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math> is a homogenous polynomial of degree <math id="Thmthm2.p1.m5" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>.
+If <math id="Thmthm2.p1.m6" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math> is regular at a point <math id="Thmthm2.p1.m7" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> and <math id="Thmthm2.p1.m8" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> is an inflection point
+of <math id="Thmthm2.p1.m9" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math>, then <math id="Thmthm2.p1.m10" class="ltx_Math" alttext="H(P)=0" display="inline"><mrow><mrow><mi>H</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>P</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow><mo mathvariant="normal">=</mo><mn mathvariant="normal">0</mn></mrow></math>, where <math id="Thmthm2.p1.m11" class="ltx_Math" alttext="H" display="inline"><mi>H</mi></math> is the Hessian determinant.</span></p>
+</div>
+</div>
+<div id="p7" class="ltx_para">
+<p class="ltx_p">To make our proof purely algebraic, we replace the use of
+the implicit function theorem to obtain <math id="p7.m1" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> with an expansion
+in a formal power series. As above, we choose our <math id="p7.m2" class="ltx_Math" alttext="x,y,z" display="inline"><mrow><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi></mrow></math>
+coordinates so as to place <math id="p7.m3" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> at <math id="p7.m4" class="ltx_Math" alttext="(0,0,1)" display="inline"><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></math> and make <math id="p7.m5" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math>
+tangent to the line <math id="p7.m6" class="ltx_Math" alttext="y=0" display="inline"><mrow><mi>y</mi><mo>=</mo><mn>0</mn></mrow></math> at <math id="p7.m7" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math>. Then, since <math id="p7.m8" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> is a regular
+point of <math id="p7.m9" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math>, we may parameterize <math id="p7.m10" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math> by a formal power series
+<math id="p7.m11" class="ltx_Math" alttext="f(t)=\sum_{k=0}^{\infty}c_{k}t^{k}" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msubsup><mo largeop="true" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>0</mn></mrow><mi mathvariant="normal">∞</mi></msubsup><mrow><msub><mi>c</mi><mi>k</mi></msub><mo>⁢</mo><msup><mi>t</mi><mi>k</mi></msup></mrow></mrow></mrow></math> such that <math id="p7.m12" class="ltx_Math" alttext="F(t,f(t),1)=0" display="inline"><mrow><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo>,</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math>.
+Then, if we
+define derivatives algebraically (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/DerivativeOfPolynomial</span>),
+we may proceed with the rest of the proof exactly as above.</p>
+</div>
+<div id="p8" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Hessian and inflexion points</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">HessianAndInflexionPoints</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 18:22:26</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 18:22:26</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rspuzio (6075)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rspuzio (6075)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">14</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rspuzio (6075)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Theorem</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 53A04</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 26A51</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 22:20:49 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

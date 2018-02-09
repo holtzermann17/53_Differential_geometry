@@ -1,0 +1,325 @@
+<!DOCTYPE html><html>
+<head>
+<title>curve</title>
+<!--Generated on Fri Feb  9 22:27:41 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">curve</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<section id="Sx1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">Summary.</h2>
+
+<div id="Sx1.p1" class="ltx_para">
+<p class="ltx_p">The term <em class="ltx_emph ltx_font_italic">curve</em> is associated with two closely related notions.
+The first notion is kinematic: a parameterized curve is a function of
+one real variable taking values in some ambient geometric setting.
+This variable can be interpreted as time, in which case the function
+describes the evolution of a moving particle. The second notion is
+geometric; in this sense a curve is an arc, a 1-dimensional subset of
+an ambient space. The two notions are related: the image of a
+parameterized curve describes the trajectory of a moving particle.
+Conversely, a given arc admits multiple parameterizations. A
+trajectory can be traversed by moving particles at different speeds.</p>
+</div>
+<div id="Sx1.p2" class="ltx_para">
+<p class="ltx_p">In algebraic geometry, the term curve is used to describe a
+1-dimensional variety relative to the complex numbers or some other
+ground field. This can be potentially confusing, because a curve over
+the complex numbers refers to an object which, in conventional
+geometry, one would refer to as a surface. In particular, a Riemann
+surface can be regarded as as complex curve.</p>
+</div>
+</section>
+<section id="Sx2" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">Kinematic definition</h2>
+
+<div id="Sx2.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="Sx2.p1.m1" class="ltx_Math" alttext="I\subset\mathbb{R}" display="inline"><mrow><mi>I</mi><mo>⊂</mo><mi>ℝ</mi></mrow></math> be an interval (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/Interval</span>) of the real line. A parameterized
+curve is a continuous mapping <math id="Sx2.p1.m2" class="ltx_Math" alttext="\gamma:I\to X" display="inline"><mrow><mi>γ</mi><mo>:</mo><mrow><mi>I</mi><mo>→</mo><mi>X</mi></mrow></mrow></math> taking values in a
+topological space <math id="Sx2.p1.m3" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math>. We say that <math id="Sx2.p1.m4" class="ltx_Math" alttext="\gamma" display="inline"><mi>γ</mi></math> is a <em class="ltx_emph ltx_font_italic">simple curve</em>
+if it has no self-intersections, that is if the mapping <math id="Sx2.p1.m5" class="ltx_Math" alttext="\gamma" display="inline"><mi>γ</mi></math> is
+injective.</p>
+</div>
+<div id="Sx2.p2" class="ltx_para">
+<p class="ltx_p">We say that <math id="Sx2.p2.m1" class="ltx_Math" alttext="\gamma" display="inline"><mi>γ</mi></math> is a <em class="ltx_emph ltx_font_italic">closed curve</em>, or a
+<em class="ltx_emph ltx_font_italic">loop (<span class="ltx_text ltx_font_typewriter ltx_font_upright">http://planetmath.org/loop</span>)</em> whenever <math id="Sx2.p2.m2" class="ltx_Math" alttext="I=[a,b]" display="inline"><mrow><mi>I</mi><mo>=</mo><mrow><mo stretchy="false">[</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">]</mo></mrow></mrow></math> is a closed
+interval, and the endpoints are mapped to the same value;
+<math id="Sx2.p2.m3" class="ltx_Math" alttext="\gamma(a)=\gamma(b)." display="inline"><mrow><mrow><mrow><mi>γ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>γ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math> Equivalently, a loop may be defined to be a
+continuous mapping <math id="Sx2.p2.m4" class="ltx_Math" alttext="\gamma\colon\mathbb{S}^{1}\to X" display="inline"><mrow><mi>γ</mi><mo>:</mo><mrow><msup><mi>𝕊</mi><mn>1</mn></msup><mo>→</mo><mi>X</mi></mrow></mrow></math> whose domain
+<math id="Sx2.p2.m5" class="ltx_Math" alttext="\mathbb{S}^{1}" display="inline"><msup><mi>𝕊</mi><mn>1</mn></msup></math> is the unit circle. A simple closed curve is often
+called a <em class="ltx_emph ltx_font_italic">Jordan curve</em>.</p>
+</div>
+<div id="Sx2.p3" class="ltx_para">
+<p class="ltx_p">If <math id="Sx2.p3.m1" class="ltx_Math" alttext="X=\mathbb{R}^{2}" display="inline"><mrow><mi>X</mi><mo>=</mo><msup><mi>ℝ</mi><mn>2</mn></msup></mrow></math> then <math id="Sx2.p3.m2" class="ltx_Math" alttext="\gamma" display="inline"><mi>γ</mi></math> is called a <em class="ltx_emph ltx_font_italic">plane curve</em> or <em class="ltx_emph ltx_font_italic">planar curve</em>.</p>
+</div>
+<div id="Sx2.p4" class="ltx_para">
+<p class="ltx_p">A smooth closed curve <math id="Sx2.p4.m1" class="ltx_Math" alttext="\gamma" display="inline"><mi>γ</mi></math> in <math id="Sx2.p4.m2" class="ltx_Math" alttext="\mathbb{R}^{n}" display="inline"><msup><mi>ℝ</mi><mi>n</mi></msup></math> is <em class="ltx_emph ltx_font_italic">locally </em>
+if the local multiplicity of intersection
+of <math id="Sx2.p4.m3" class="ltx_Math" alttext="\gamma" display="inline"><mi>γ</mi></math> with each hyperplane at of each of the intersection points does not
+exceed <math id="Sx2.p4.m4" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>. The <em class="ltx_emph ltx_font_italic">global multiplicity</em> is the sum of the local
+multiplicities.
+A simple smooth curve in <math id="Sx2.p4.m5" class="ltx_Math" alttext="\mathbb{R}^{n}" display="inline"><msup><mi>ℝ</mi><mi>n</mi></msup></math> is called <em class="ltx_emph ltx_font_italic"></em> (or
+<em class="ltx_emph ltx_font_italic">globally </em>) if the global multiplicity
+of its intersection with any affine hyperplane is less than or equal to <math id="Sx2.p4.m6" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>.
+An example of a closed convex curve in <math id="Sx2.p4.m7" class="ltx_Math" alttext="\mathbb{R}^{2n}" display="inline"><msup><mi>ℝ</mi><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow></msup></math> is the normalized
+generalized ellipse:</p>
+<table id="Sx2.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx2.Ex1.m1" class="ltx_Math" alttext="(\sin t,\cos t,\frac{\sin 2t}{2},\frac{\cos 2t}{2},\ldots,\frac{\sin nt}{n},%
+\frac{\cos nt}{n})." display="block"><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>sin</mi><mo>⁡</mo><mi>t</mi></mrow><mo>,</mo><mrow><mi>cos</mi><mo>⁡</mo><mi>t</mi></mrow><mo>,</mo><mfrac><mrow><mi>sin</mi><mo>⁡</mo><mrow><mn>2</mn><mo>⁢</mo><mi>t</mi></mrow></mrow><mn>2</mn></mfrac><mo>,</mo><mfrac><mrow><mi>cos</mi><mo>⁡</mo><mrow><mn>2</mn><mo>⁢</mo><mi>t</mi></mrow></mrow><mn>2</mn></mfrac><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mfrac><mrow><mi>sin</mi><mo>⁡</mo><mrow><mi>n</mi><mo>⁢</mo><mi>t</mi></mrow></mrow><mi>n</mi></mfrac><mo>,</mo><mfrac><mrow><mi>cos</mi><mo>⁡</mo><mrow><mi>n</mi><mo>⁢</mo><mi>t</mi></mrow></mrow><mi>n</mi></mfrac><mo stretchy="false">)</mo></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">In odd dimension there are no closed convex curves.</p>
+</div>
+<div id="Sx2.p5" class="ltx_para">
+<p class="ltx_p">In many instances the ambient space <math id="Sx2.p5.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is a differential manifold, in
+which case we can speak of differentiable curves. Let <math id="Sx2.p5.m2" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math> be an open
+interval, and let <math id="Sx2.p5.m3" class="ltx_Math" alttext="\gamma:I\to X" display="inline"><mrow><mi>γ</mi><mo>:</mo><mrow><mi>I</mi><mo>→</mo><mi>X</mi></mrow></mrow></math> be a differentiable curve. For
+every <math id="Sx2.p5.m4" class="ltx_Math" alttext="t\in I" display="inline"><mrow><mi>t</mi><mo>∈</mo><mi>I</mi></mrow></math> can regard the derivative (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/RelatedRates</span>),
+<math id="Sx2.p5.m5" class="ltx_Math" alttext="\dot{\gamma}(t)" display="inline"><mrow><mover accent="true"><mi>γ</mi><mo>˙</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math>, as the velocity (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/RelatedRates</span>) of a
+moving particle, at time <math id="Sx2.p5.m6" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math>. The velocity <math id="Sx2.p5.m7" class="ltx_Math" alttext="\dot{\gamma}(t)" display="inline"><mrow><mover accent="true"><mi>γ</mi><mo>˙</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math> is a
+tangent vector (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/TangentSpace</span>), which belongs to
+<math id="Sx2.p5.m8" class="ltx_Math" alttext="T_{\gamma(t)}X" display="inline"><mrow><msub><mi>T</mi><mrow><mi>γ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></msub><mo>⁢</mo><mi>X</mi></mrow></math>, the tangent space of the manifold <math id="Sx2.p5.m9" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> at the point
+<math id="Sx2.p5.m10" class="ltx_Math" alttext="\gamma(t)" display="inline"><mrow><mi>γ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math>. We say that a differentiable curve <math id="Sx2.p5.m11" class="ltx_Math" alttext="\gamma(t)" display="inline"><mrow><mi>γ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math> is
+<em class="ltx_emph ltx_font_italic">regular</em>, if its velocity, <math id="Sx2.p5.m12" class="ltx_Math" alttext="\dot{\gamma}(t)" display="inline"><mrow><mover accent="true"><mi>γ</mi><mo>˙</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math>, is non-vanishing
+for all <math id="Sx2.p5.m13" class="ltx_Math" alttext="t\in I" display="inline"><mrow><mi>t</mi><mo>∈</mo><mi>I</mi></mrow></math>.</p>
+</div>
+<div id="Sx2.p6" class="ltx_para">
+<p class="ltx_p">It is also quite common to consider curves that take values in
+<math id="Sx2.p6.m1" class="ltx_Math" alttext="\mathbb{R}^{n}" display="inline"><msup><mi>ℝ</mi><mi>n</mi></msup></math>. In this case, a parameterized curve can be regarded as a
+vector-valued function <math id="Sx2.p6.m2" class="ltx_Math" alttext="\vec{\gamma}:I\to\mathbb{R}^{n}" display="inline"><mrow><mover accent="true"><mi>γ</mi><mo stretchy="false">→</mo></mover><mo>:</mo><mrow><mi>I</mi><mo>→</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow></mrow></math>, that is an
+<math id="Sx2.p6.m3" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>-tuple of functions</p>
+<table id="Sx2.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx2.Ex2.m1" class="ltx_Math" alttext="\vec{\gamma}(t)=\begin{pmatrix}\gamma_{1}(t)\\
+\vdots\\
+\gamma_{n}(t)\end{pmatrix}," display="block"><mrow><mrow><mrow><mover accent="true"><mi>γ</mi><mo stretchy="false">→</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>(</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mrow><msub><mi>γ</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mtd></mtr><mtr><mtd columnalign="center"><mi mathvariant="normal">⋮</mi></mtd></mtr><mtr><mtd columnalign="center"><mrow><msub><mi>γ</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mtd></mtr></mtable><mo>)</mo></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="Sx2.p6.m4" class="ltx_Math" alttext="\gamma_{i}:I\to\mathbb{R}" display="inline"><mrow><msub><mi>γ</mi><mi>i</mi></msub><mo>:</mo><mrow><mi>I</mi><mo>→</mo><mi>ℝ</mi></mrow></mrow></math>, <math id="Sx2.p6.m5" class="ltx_Math" alttext="i=1,\ldots,n" display="inline"><mrow><mi>i</mi><mo>=</mo><mrow><mn>1</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mi>n</mi></mrow></mrow></math> are scalar-valued functions.
+</p>
+</div>
+</section>
+<section id="Sx3" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">Geometric definition.</h2>
+
+<div id="Sx3.p1" class="ltx_para">
+<p class="ltx_p">A (non-singular) curve <math id="Sx3.p1.m1" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math>, equivalently, an arc, is a connected,
+1-dimensional submanifold of a differential manifold <math id="Sx3.p1.m2" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math>. This means
+that for every point <math id="Sx3.p1.m3" class="ltx_Math" alttext="p\in C" display="inline"><mrow><mi>p</mi><mo>∈</mo><mi>C</mi></mrow></math> there exists an open neighbourhood
+<math id="Sx3.p1.m4" class="ltx_Math" alttext="U\subset X" display="inline"><mrow><mi>U</mi><mo>⊂</mo><mi>X</mi></mrow></math> of <math id="Sx3.p1.m5" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> and a chart <math id="Sx3.p1.m6" class="ltx_Math" alttext="\alpha:U\to\mathbb{R}^{n}" display="inline"><mrow><mi>α</mi><mo>:</mo><mrow><mi>U</mi><mo>→</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow></mrow></math> such that</p>
+<table id="Sx3.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx3.Ex3.m1" class="ltx_Math" alttext="\alpha(C\cap U)=\{(t,0,\ldots,0)\in\mathbb{R}^{n}:-\epsilon&lt;t&lt;\epsilon\}" display="block"><mrow><mrow><mi>α</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>C</mi><mo>∩</mo><mi>U</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mrow><mo stretchy="false">(</mo><mi>t</mi><mo>,</mo><mn>0</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow><mo>∈</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow><mo>:</mo><mrow><mrow><mo>-</mo><mi>ϵ</mi></mrow><mo>&lt;</mo><mi>t</mi><mo>&lt;</mo><mi>ϵ</mi></mrow><mo stretchy="false">}</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">for some real <math id="Sx3.p1.m7" class="ltx_Math" alttext="\epsilon&gt;0" display="inline"><mrow><mi>ϵ</mi><mo>&gt;</mo><mn>0</mn></mrow></math>.</p>
+</div>
+<div id="Sx3.p2" class="ltx_para">
+<p class="ltx_p">An alternative, but equivalent definition, describes an arc as the
+image of a regular parameterized curve. To accomplish this, we need
+to define the notion of reparameterization. Let <math id="Sx3.p2.m1" class="ltx_Math" alttext="I_{1},I_{2}\subset\mathbb{R}" display="inline"><mrow><mrow><msub><mi>I</mi><mn>1</mn></msub><mo>,</mo><msub><mi>I</mi><mn>2</mn></msub></mrow><mo>⊂</mo><mi>ℝ</mi></mrow></math> be intervals. A reparameterization is a continuously
+differentiable function</p>
+<table id="Sx3.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx3.Ex4.m1" class="ltx_Math" alttext="s:I_{1}\to I_{2}" display="block"><mrow><mi>s</mi><mo>:</mo><mrow><msub><mi>I</mi><mn>1</mn></msub><mo>→</mo><msub><mi>I</mi><mn>2</mn></msub></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">whose derivative is never vanishing. Thus, <math id="Sx3.p2.m2" class="ltx_Math" alttext="s" display="inline"><mi>s</mi></math> is
+either monotone increasing, or monotone decreasing.
+Two regular, parameterized curves</p>
+<table id="Sx3.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx3.Ex5.m1" class="ltx_Math" alttext="\gamma_{i}:I_{i}\to X,\quad i=1,2" display="block"><mrow><msub><mi>γ</mi><mi>i</mi></msub><mo>:</mo><mrow><mrow><msub><mi>I</mi><mi>i</mi></msub><mo>→</mo><mi>X</mi></mrow><mo rspace="12.5pt">,</mo><mrow><mi>i</mi><mo>=</mo><mrow><mn>1</mn><mo>,</mo><mn>2</mn></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">are said to be related by a reparameterization if there exists a
+reparameterization <math id="Sx3.p2.m3" class="ltx_Math" alttext="s:I_{1}\to I_{2}" display="inline"><mrow><mi>s</mi><mo>:</mo><mrow><msub><mi>I</mi><mn>1</mn></msub><mo>→</mo><msub><mi>I</mi><mn>2</mn></msub></mrow></mrow></math> such that</p>
+<table id="Sx3.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx3.Ex6.m1" class="ltx_Math" alttext="\gamma_{1}=\gamma_{2}\circ s." display="block"><mrow><mrow><msub><mi>γ</mi><mn>1</mn></msub><mo>=</mo><mrow><msub><mi>γ</mi><mn>2</mn></msub><mo>∘</mo><mi>s</mi></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The inverse of a reparameterization
+function is also a reparameterization. Likewise, the composition of
+two parameterizations is again a reparameterization. Thus the
+reparameterization relation between curves, is in fact an
+equivalence relation. An arc can now be defined as an equivalence
+class of regular, simple curves related by reparameterizations. In
+order to exclude pathological embeddings with wild endpoints we also
+impose the condition that the arc, as a subset of <math id="Sx3.p2.m4" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math>, be
+homeomorphic to an open interval.
+</p>
+<table class="ltx_tabular ltx_align_right ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_t">Title</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">curve</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Canonical name</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Curve</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Date of creation</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 12:54:17</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified on</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 12:54:17</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Owner</td>
+<td class="ltx_td ltx_align_left ltx_border_r">rmilson (146)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified by</td>
+<td class="ltx_td ltx_align_left ltx_border_r">rmilson (146)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Numerical id</td>
+<td class="ltx_td ltx_align_left ltx_border_r">28</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Author</td>
+<td class="ltx_td ltx_align_left ltx_border_r">rmilson (146)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Entry type</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 53B25</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 14H50</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 14F35</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 51N05</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">parametrized curve</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">parameterized curve</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">path</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">trajectory</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">FundamentalGroup</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">TangentSpace</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">RealTree</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">closed curve</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Jordan curve</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">regular curve</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">simple closed curve</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">simple curve</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">plane curve</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">planar curve</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">convex curve</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">locally convex curve</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">local multiplicity</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">globally convex</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">global multiplicity</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 22:27:41 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

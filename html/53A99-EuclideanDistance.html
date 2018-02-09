@@ -1,0 +1,164 @@
+<!DOCTYPE html><html>
+<head>
+<title>Euclidean distance</title>
+<!--Generated on Fri Feb  9 22:26:36 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">Euclidean distance</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">If <math id="p1.m1" class="ltx_Math" alttext="u=(x_{1},y_{1})" display="inline"><mrow><mi>u</mi><mo>=</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>y</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow></mrow></math> and <math id="p1.m2" class="ltx_Math" alttext="v=(x_{2},y_{2})" display="inline"><mrow><mi>v</mi><mo>=</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>2</mn></msub><mo>,</mo><msub><mi>y</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></mrow></math> are two points on the plane, their <em class="ltx_emph ltx_font_italic">Euclidean distance</em> is given by</p>
+<table id="S0.E1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E1.m1" class="ltx_Math" alttext="\sqrt{(x_{1}-x_{2})^{2}+(y_{1}-y_{2})^{2}}." display="block"><mrow><msqrt><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><msub><mi>x</mi><mn>1</mn></msub><mo>-</mo><msub><mi>x</mi><mn>2</mn></msub></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mo>+</mo><msup><mrow><mo stretchy="false">(</mo><mrow><msub><mi>y</mi><mn>1</mn></msub><mo>-</mo><msub><mi>y</mi><mn>2</mn></msub></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow></msqrt><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr>
+</table>
+<p class="ltx_p">Geometrically, it’s the length of the segment joining <math id="p1.m3" class="ltx_Math" alttext="u" display="inline"><mi>u</mi></math> and <math id="p1.m4" class="ltx_Math" alttext="v" display="inline"><mi>v</mi></math>, and also the norm of the difference vector (considering <math id="p1.m5" class="ltx_Math" alttext="\mathbbmss{R}^{n}" display="inline"><msup><mi>ℝ</mi><mi>n</mi></msup></math> as vector space).</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">This distance induces a metric (and therefore a topology) on <math id="p2.m1" class="ltx_Math" alttext="\mathbbmss{R}^{2}" display="inline"><msup><mi>ℝ</mi><mn>2</mn></msup></math>, called <em class="ltx_emph ltx_font_italic">Euclidean metric (on <math id="p2.m2" class="ltx_Math" alttext="\mathbbmss{R}^{2}" display="inline"><msup><mi mathvariant="normal">R</mi><mn mathvariant="normal">2</mn></msup></math>)</em> or <em class="ltx_emph ltx_font_italic">standard metric (on <math id="p2.m3" class="ltx_Math" alttext="\mathbbmss{R}^{2})" display="inline"><mrow><msup><mi mathvariant="normal">R</mi><mn mathvariant="normal">2</mn></msup><mo mathvariant="normal" stretchy="false">)</mo></mrow></math></em>. The topology so induced is called <em class="ltx_emph ltx_font_italic">standard topology</em> or <em class="ltx_emph ltx_font_italic">usual topology on <math id="p2.m4" class="ltx_Math" alttext="\mathbbmss{R}^{2}" display="inline"><msup><mi mathvariant="normal">R</mi><mn mathvariant="normal">2</mn></msup></math></em> and one basis can be obtained considering the set of all the open balls.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">If <math id="p3.m1" class="ltx_Math" alttext="a=(x_{1},x_{2},\ldots,x_{n})" display="inline"><mrow><mi>a</mi><mo>=</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>x</mi><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>x</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow></math> and <math id="p3.m2" class="ltx_Math" alttext="b=(y_{1},y_{2},\ldots,y_{n})" display="inline"><mrow><mi>b</mi><mo>=</mo><mrow><mo stretchy="false">(</mo><msub><mi>y</mi><mn>1</mn></msub><mo>,</mo><msub><mi>y</mi><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>y</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow></math>, then formula <a href="#S0.E1" title="(1) ‣ Euclidean distance" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1</span></a> can be generalized to <math id="p3.m3" class="ltx_Math" alttext="\mathbbmss{R}^{n}" display="inline"><msup><mi>ℝ</mi><mi>n</mi></msup></math> by defining the Euclidean distance from <math id="p3.m4" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> to <math id="p3.m5" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> as
+</p>
+<table id="S0.E2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E2.m1" class="ltx_Math" alttext="d(a,b)=\sqrt{(x_{1}-y_{1})^{2}+(x_{2}-y_{2})^{2}+\cdots+(x_{n}-y_{n})^{2}}." display="block"><mrow><mrow><mrow><mi>d</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msqrt><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><msub><mi>x</mi><mn>1</mn></msub><mo>-</mo><msub><mi>y</mi><mn>1</mn></msub></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mo>+</mo><msup><mrow><mo stretchy="false">(</mo><mrow><msub><mi>x</mi><mn>2</mn></msub><mo>-</mo><msub><mi>y</mi><mn>2</mn></msub></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><msup><mrow><mo stretchy="false">(</mo><mrow><msub><mi>x</mi><mi>n</mi></msub><mo>-</mo><msub><mi>y</mi><mi>n</mi></msub></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow></msqrt></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2)</span></td>
+</tr>
+</table>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">Notice that this distance coincides with absolute value when <math id="p4.m1" class="ltx_Math" alttext="n=1" display="inline"><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow></math>.
+Euclidean distance on <math id="p4.m2" class="ltx_Math" alttext="\mathbbmss{R}^{n}" display="inline"><msup><mi>ℝ</mi><mi>n</mi></msup></math> is also a metric (Euclidean or standard metric), and therefore we can give <math id="p4.m3" class="ltx_Math" alttext="\mathbbmss{R}^{n}" display="inline"><msup><mi>ℝ</mi><mi>n</mi></msup></math> a topology, which is called the standard (canonical, usual, etc) topology of <math id="p4.m4" class="ltx_Math" alttext="\mathbbmss{R}^{n}" display="inline"><msup><mi>ℝ</mi><mi>n</mi></msup></math>. The resulting (topological and vectorial) space is known as <em class="ltx_emph ltx_font_italic">Euclidean space</em>.</p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">This can also be done for <math id="p5.m1" class="ltx_Math" alttext="\mathbbmss{C}^{n}" display="inline"><msup><mi>ℂ</mi><mi>n</mi></msup></math> since as set <math id="p5.m2" class="ltx_Math" alttext="\mathbbmss{C}=\mathbbmss{R}^{2}" display="inline"><mrow><mi>ℂ</mi><mo>=</mo><msup><mi>ℝ</mi><mn>2</mn></msup></mrow></math> and thus the metric on <math id="p5.m3" class="ltx_Math" alttext="\mathbbmss{C}" display="inline"><mi>ℂ</mi></math> is the same given to <math id="p5.m4" class="ltx_Math" alttext="\mathbbmss{R}^{2}" display="inline"><msup><mi>ℝ</mi><mn>2</mn></msup></math>, and in general, <math id="p5.m5" class="ltx_Math" alttext="\mathbbmss{C}^{n}" display="inline"><msup><mi>ℂ</mi><mi>n</mi></msup></math> gets the same metric as <math id="p5.m6" class="ltx_Math" alttext="R^{2n}" display="inline"><msup><mi>R</mi><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow></msup></math>.
+</p>
+<table class="ltx_tabular ltx_align_right ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_t">Title</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Euclidean distance</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Canonical name</td>
+<td class="ltx_td ltx_align_left ltx_border_r">EuclideanDistance</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Date of creation</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 12:08:21</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified on</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 12:08:21</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Owner</td>
+<td class="ltx_td ltx_align_left ltx_border_r">drini (3)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified by</td>
+<td class="ltx_td ltx_align_left ltx_border_r">drini (3)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Numerical id</td>
+<td class="ltx_td ltx_align_left ltx_border_r">15</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Author</td>
+<td class="ltx_td ltx_align_left ltx_border_r">drini (3)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Entry type</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 53A99</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 54E35</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Euclidean metric</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">standard metric</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">standard topology</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Euclidean</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">canonical topology</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">usual topology</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Topology</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">BoundedInterval</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">EuclideanVectorSpace</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">DistanceOfNonParallelLines</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">EuclideanVectorSpace2</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Hyperbola2</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">CassiniOval</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 22:26:36 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

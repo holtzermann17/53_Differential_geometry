@@ -1,0 +1,956 @@
+<!DOCTYPE html><html>
+<head>
+<title>differential propositional calculus</title>
+<!--Generated on Fri Feb  9 22:24:33 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">differential propositional calculus</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">A <span class="ltx_text ltx_font_bold">differential propositional calculus</span> is a propositional calculus (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/PropositionalCalculus</span>) extended by a set of terms for describing aspects of change and difference, for example, processes that take place in a universe of discourse or transformations that map a source universe into a target universe.</p>
+</div>
+<div class="ltx_TOC ltx_role_contents">
+<h6>Contents:</h6>
+<ul class="ltx_toclist">
+<li class="ltx_tocentry ltx_tocentry_section"><a href="#S1" title="1 Casual introduction ‣ differential propositional calculus" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1 </span>Casual introduction</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="#S2" title="2 Cactus calculus ‣ differential propositional calculus" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2 </span>Cactus calculus</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section">
+<a href="#S3" title="3 Formal development ‣ differential propositional calculus" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3 </span>Formal development</span></a>
+<ul class="ltx_toclist ltx_toclist_section">
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="#S3.SS1" title="3.1 Elementary notions ‣ 3 Formal development ‣ differential propositional calculus" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3.1 </span>Elementary notions</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="#S3.SS2" title="3.2 Special classes of propositions ‣ 3 Formal development ‣ differential propositional calculus" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3.2 </span>Special classes of propositions</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="#S3.SS3" title="3.3 Differential extensions ‣ 3 Formal development ‣ differential propositional calculus" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3.3 </span>Differential extensions</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<section id="S1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">1 </span>Casual introduction</h2>
+
+<div id="S1.p1" class="ltx_para">
+<p class="ltx_p">Consider the situation represented by the venn diagram in Figure 1.</p>
+</div>
+<div id="S1.p2" class="ltx_para ltx_centering">
+<table class="ltx_tabular ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center"><img src="DifferentialPropositionalCalculus1" id="S1.p2.g1" class="ltx_graphics" alt=""></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center">Figure <math id="S1.p2.m1" class="ltx_Math" alttext="1." display="inline"><mrow><mn>1</mn><mo>.</mo></mrow></math> Local Habitations, And Names</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="S1.p3" class="ltx_para">
+<p class="ltx_p">The area of the rectangle represents a universe of discourse, <math id="S1.p3.m1" class="ltx_Math" alttext="X." display="inline"><mrow><mi>X</mi><mo>.</mo></mrow></math> This might be a population of individuals having various additional properties or it might be a collection of locations that various individuals occupy. The area of the “circle” represents the individuals that have the property <math id="S1.p3.m2" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math> or the locations that fall within the corresponding region <math id="S1.p3.m3" class="ltx_Math" alttext="Q." display="inline"><mrow><mi>Q</mi><mo>.</mo></mrow></math> Four individuals, <math id="S1.p3.m4" class="ltx_Math" alttext="a,b,c,d," display="inline"><mrow><mrow><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo>,</mo><mi>d</mi></mrow><mo>,</mo></mrow></math> are singled out by name. It happens that <math id="S1.p3.m5" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> and <math id="S1.p3.m6" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math> currently reside in region <math id="S1.p3.m7" class="ltx_Math" alttext="Q" display="inline"><mi>Q</mi></math> while <math id="S1.p3.m8" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> and <math id="S1.p3.m9" class="ltx_Math" alttext="d" display="inline"><mi>d</mi></math> do not.</p>
+</div>
+<div id="S1.p4" class="ltx_para">
+<p class="ltx_p">Now consider the situation represented by the venn diagram in Figure 2.</p>
+</div>
+<div id="S1.p5" class="ltx_para ltx_centering">
+<table class="ltx_tabular ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center"><img src="DifferentialPropositionalCalculus2" id="S1.p5.g1" class="ltx_graphics" alt=""></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center">Figure <math id="S1.p5.m1" class="ltx_Math" alttext="2." display="inline"><mrow><mn>2</mn><mo>.</mo></mrow></math> Same Names, Different Habitations</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="S1.p6" class="ltx_para">
+<p class="ltx_p">Figure 2 differs from Figure 1 solely in the circumstance that the object <math id="S1.p6.m1" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math> is outside the region <math id="S1.p6.m2" class="ltx_Math" alttext="Q" display="inline"><mi>Q</mi></math> while the object <math id="S1.p6.m3" class="ltx_Math" alttext="d" display="inline"><mi>d</mi></math> is inside the region <math id="S1.p6.m4" class="ltx_Math" alttext="Q." display="inline"><mrow><mi>Q</mi><mo>.</mo></mrow></math> So far, there is nothing that says that our encountering these Figures in this order is other than purely accidental, but if we interpret the present sequence of frames as a “moving picture” representation of their natural order in a temporal process, then it would be natural to say that <math id="S1.p6.m5" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> and <math id="S1.p6.m6" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> have remained as they were with regard to quality <math id="S1.p6.m7" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math> while <math id="S1.p6.m8" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math> and <math id="S1.p6.m9" class="ltx_Math" alttext="d" display="inline"><mi>d</mi></math> have changed their standings in that respect. In particular, <math id="S1.p6.m10" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math> has moved from the region where <math id="S1.p6.m11" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math> is <span class="ltx_text ltx_markedasmath ltx_font_slanted">true</span> to the region where <math id="S1.p6.m13" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math> is <span class="ltx_text ltx_markedasmath ltx_font_slanted">false</span> while <math id="S1.p6.m15" class="ltx_Math" alttext="d" display="inline"><mi>d</mi></math> has moved from the region where <math id="S1.p6.m16" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math> is <span class="ltx_text ltx_markedasmath ltx_font_slanted">false</span> to the region where <math id="S1.p6.m18" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math> is <math id="S1.p6.m19" class="ltx_Math" alttext="\textsl{true}." display="inline"><mrow><mtext>𝑡𝑟𝑢𝑒</mtext><mo>.</mo></mrow></math></p>
+</div>
+<div id="S1.p7" class="ltx_para">
+<p class="ltx_p">Figure 1<math id="S1.p7.m1" class="ltx_Math" alttext="{}^{\prime}" display="inline"><msup><mi></mi><mo>′</mo></msup></math> reprises the situation shown in Figure 1, but this time interpolates a new quality that is specifically tailored to account for the relation between Figure 1 and Figure 2.</p>
+</div>
+<div id="S1.p8" class="ltx_para ltx_centering">
+<table class="ltx_tabular ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center"><img src="DifferentialPropositionalCalculus3" id="S1.p8.g1" class="ltx_graphics" alt=""></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center">Figure <math id="S1.p8.m1" class="ltx_Math" alttext="1^{\prime}." display="inline"><mrow><msup><mn>1</mn><mo>′</mo></msup><mo>.</mo></mrow></math> Back, To The Future</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="S1.p9" class="ltx_para">
+<p class="ltx_p">This new quality, <math id="S1.p9.m1" class="ltx_Math" alttext="\operatorname{d}q," display="inline"><mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>q</mi></mrow><mo>,</mo></mrow></math> is an example of a <span class="ltx_text ltx_font_italic">differential quality</span>, since its absence or presence qualifies the absence or presence of change occurring in another quality. As with any other quality, it is represented in the venn diagram by means of a “circle” that distinguishes two halves of the universe of discourse, in this case, the portions of <math id="S1.p9.m2" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> outside and inside the region <math id="S1.p9.m3" class="ltx_Math" alttext="\operatorname{d}Q." display="inline"><mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>Q</mi></mrow><mo>.</mo></mrow></math></p>
+</div>
+<div id="S1.p10" class="ltx_para">
+<p class="ltx_p">Figure 1 represents a universe of discourse, <math id="S1.p10.m1" class="ltx_Math" alttext="X," display="inline"><mrow><mi>X</mi><mo>,</mo></mrow></math> together with a basis of discussion, <math id="S1.p10.m2" class="ltx_Math" alttext="\{q\}," display="inline"><mrow><mrow><mo stretchy="false">{</mo><mi>q</mi><mo stretchy="false">}</mo></mrow><mo>,</mo></mrow></math> for expressing propositions about the contents of that universe. Once the quality <math id="S1.p10.m3" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math> is given a name, say, the symbol <math id="S1.p10.m4" class="ltx_Math" alttext='``q"' display="inline"><mrow><mi mathvariant="normal">`</mi><mo>⁢</mo><mi mathvariant="normal">`</mi><mo>⁢</mo><mi>q</mi><mo>⁢</mo><mi mathvariant="normal">"</mi></mrow></math>, we have a basis for a formal language that is specifically cut out for discussing <math id="S1.p10.m5" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> in terms of <math id="S1.p10.m6" class="ltx_Math" alttext="q," display="inline"><mrow><mi>q</mi><mo>,</mo></mrow></math> and this formal language is more formally known as the <span class="ltx_text ltx_font_italic">propositional calculus</span> with alphabet <math id="S1.p10.m7" class="ltx_Math" alttext='\{``q"\}.' display="inline"><mrow><mrow><mo stretchy="false">{</mo><mrow><mi mathvariant="normal">`</mi><mo>⁢</mo><mi mathvariant="normal">`</mi><mo>⁢</mo><mi>q</mi><mo>⁢</mo><mi mathvariant="normal">"</mi></mrow><mo stretchy="false">}</mo></mrow><mo>.</mo></mrow></math></p>
+</div>
+<div id="S1.p11" class="ltx_para">
+<p class="ltx_p">In the context marked by <math id="S1.p11.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> and <math id="S1.p11.m2" class="ltx_Math" alttext="\{q\}" display="inline"><mrow><mo stretchy="false">{</mo><mi>q</mi><mo stretchy="false">}</mo></mrow></math> there are but four different pieces of information that can be expressed in the corresponding propositional calculus, namely, the propositions: <math id="S1.p11.m3" class="ltx_Math" alttext="\textsl{false},\ \lnot q,\ q,\ \textsl{true}." display="inline"><mrow><mrow><mtext>𝑓𝑎𝑙𝑠𝑒</mtext><mo rspace="7.5pt">,</mo><mrow><mi mathvariant="normal">¬</mi><mo>⁢</mo><mi>q</mi></mrow><mo rspace="7.5pt">,</mo><mi>q</mi><mo rspace="7.5pt">,</mo><mtext>𝑡𝑟𝑢𝑒</mtext></mrow><mo>.</mo></mrow></math> Referring to the sample of points in Figure 1, <span class="ltx_text ltx_markedasmath ltx_font_slanted">false</span> holds of no points, <math id="S1.p11.m5" class="ltx_Math" alttext="\lnot q" display="inline"><mrow><mi mathvariant="normal">¬</mi><mo>⁢</mo><mi>q</mi></mrow></math> holds of <math id="S1.p11.m6" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> and <math id="S1.p11.m7" class="ltx_Math" alttext="d" display="inline"><mi>d</mi></math>, <math id="S1.p11.m8" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math> holds of <math id="S1.p11.m9" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> and <math id="S1.p11.m10" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math>, and <span class="ltx_text ltx_markedasmath ltx_font_slanted">true</span> holds of all points in the sample.</p>
+</div>
+<div id="S1.p12" class="ltx_para">
+<p class="ltx_p">Figure <math id="S1.p12.m1" class="ltx_Math" alttext="1^{\prime}" display="inline"><msup><mn>1</mn><mo>′</mo></msup></math> preserves the same universe of discourse and extends the basis of discussion to a set of two qualities, <math id="S1.p12.m2" class="ltx_Math" alttext="\{q,\ \operatorname{d}q\}." display="inline"><mrow><mrow><mo stretchy="false">{</mo><mi>q</mi><mo rspace="7.5pt">,</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>q</mi></mrow><mo stretchy="false">}</mo></mrow><mo>.</mo></mrow></math> In parallel fashion, the initial propositional calculus is extended by means of the enlarged alphabet, <math id="S1.p12.m3" class="ltx_Math" alttext='\{``q",``\operatorname{d}q"\}.' display="inline"><mrow><mrow><mo stretchy="false">{</mo><mrow><mi mathvariant="normal">`</mi><mo>⁢</mo><mi mathvariant="normal">`</mi><mo>⁢</mo><mi>q</mi><mo>⁢</mo><mi mathvariant="normal">"</mi></mrow><mo>,</mo><mrow><mi mathvariant="normal">`</mi><mo>⁢</mo><mi mathvariant="normal">`</mi><mo>⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mrow><mi>q</mi><mo>⁢</mo><mi mathvariant="normal">"</mi></mrow></mrow></mrow><mo stretchy="false">}</mo></mrow><mo>.</mo></mrow></math> Any propositional calculus over two basic propositions allows for the expression of 16 propositions all together. Just by way of salient examples in the present setting, we can pick out the most informative propositions that apply to each of our sample points. Using overlines to express logical negation, these are given as follows:</p>
+</div>
+<div id="S1.p13" class="ltx_para">
+<ul id="I1" class="ltx_itemize">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i1.p1.m1" class="ltx_Math" alttext="\overline{q}\ \overline{\operatorname{d}q}" display="inline"><mrow><mpadded width="+5pt"><mover accent="true"><mi>q</mi><mo>¯</mo></mover></mpadded><mo>⁢</mo><mover accent="true"><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>q</mi></mrow><mo>¯</mo></mover></mrow></math> describes <math id="I1.i1.p1.m2" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math></p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i2.p1.m1" class="ltx_Math" alttext="\overline{q}\ \operatorname{d}q" display="inline"><mrow><mpadded width="+5pt"><mover accent="true"><mi>q</mi><mo>¯</mo></mover></mpadded><mo>⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>q</mi></mrow></mrow></math> describes <math id="I1.i2.p1.m2" class="ltx_Math" alttext="d" display="inline"><mi>d</mi></math></p>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i3.p1.m1" class="ltx_Math" alttext="q\ \overline{\operatorname{d}q}" display="inline"><mrow><mpadded width="+5pt"><mi>q</mi></mpadded><mo>⁢</mo><mover accent="true"><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>q</mi></mrow><mo>¯</mo></mover></mrow></math> describes <math id="I1.i3.p1.m2" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math></p>
+</div>
+</li>
+<li id="I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i4.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i4.p1.m1" class="ltx_Math" alttext="q\ \operatorname{d}q" display="inline"><mrow><mpadded width="+5pt"><mi>q</mi></mpadded><mo>⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>q</mi></mrow></mrow></math> describes <math id="I1.i4.p1.m2" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math></p>
+</div>
+</li>
+</ul>
+</div>
+<div id="S1.p14" class="ltx_para">
+<p class="ltx_p">Table 3 exhibits the rules of inference that give the differential quality <math id="S1.p14.m1" class="ltx_Math" alttext="\operatorname{d}q" display="inline"><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>q</mi></mrow></math> its meaning in practice.</p>
+</div>
+<div id="S1.p15" class="ltx_para ltx_centering">
+<table class="ltx_tabular ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center" colspan="7"><span class="ltx_text ltx_font_bold">Table 3. Differential Inference Rules</span></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center">From</td>
+<td class="ltx_td ltx_align_center"><math id="S1.p15.m1" class="ltx_Math" alttext="\overline{q}" display="inline"><mover accent="true"><mi>q</mi><mo>¯</mo></mover></math></td>
+<td class="ltx_td ltx_align_center">and</td>
+<td class="ltx_td ltx_align_center"><math id="S1.p15.m2" class="ltx_Math" alttext="\overline{\operatorname{d}q}" display="inline"><mover accent="true"><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>q</mi></mrow><mo>¯</mo></mover></math></td>
+<td class="ltx_td ltx_align_center">infer</td>
+<td class="ltx_td ltx_align_center"><math id="S1.p15.m3" class="ltx_Math" alttext="\overline{q}" display="inline"><mover accent="true"><mi>q</mi><mo>¯</mo></mover></math></td>
+<td class="ltx_td ltx_align_center">next.</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center">From</td>
+<td class="ltx_td ltx_align_center"><math id="S1.p15.m4" class="ltx_Math" alttext="\overline{q}" display="inline"><mover accent="true"><mi>q</mi><mo>¯</mo></mover></math></td>
+<td class="ltx_td ltx_align_center">and</td>
+<td class="ltx_td ltx_align_center"><math id="S1.p15.m5" class="ltx_Math" alttext="\operatorname{d}q" display="inline"><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>q</mi></mrow></math></td>
+<td class="ltx_td ltx_align_center">infer</td>
+<td class="ltx_td ltx_align_center"><math id="S1.p15.m6" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math></td>
+<td class="ltx_td ltx_align_center">next.</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center">From</td>
+<td class="ltx_td ltx_align_center"><math id="S1.p15.m7" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math></td>
+<td class="ltx_td ltx_align_center">and</td>
+<td class="ltx_td ltx_align_center"><math id="S1.p15.m8" class="ltx_Math" alttext="\overline{\operatorname{d}q}" display="inline"><mover accent="true"><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>q</mi></mrow><mo>¯</mo></mover></math></td>
+<td class="ltx_td ltx_align_center">infer</td>
+<td class="ltx_td ltx_align_center"><math id="S1.p15.m9" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math></td>
+<td class="ltx_td ltx_align_center">next.</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center">From</td>
+<td class="ltx_td ltx_align_center"><math id="S1.p15.m10" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math></td>
+<td class="ltx_td ltx_align_center">and</td>
+<td class="ltx_td ltx_align_center"><math id="S1.p15.m11" class="ltx_Math" alttext="\operatorname{d}q" display="inline"><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>q</mi></mrow></math></td>
+<td class="ltx_td ltx_align_center">infer</td>
+<td class="ltx_td ltx_align_center"><math id="S1.p15.m12" class="ltx_Math" alttext="\overline{q}" display="inline"><mover accent="true"><mi>q</mi><mo>¯</mo></mover></math></td>
+<td class="ltx_td ltx_align_center">next.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="S2" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">2 </span>Cactus calculus</h2>
+
+<div id="S2.p1" class="ltx_para">
+<p class="ltx_p">Table 4 outlines a syntax for propositional calculus based on two types of logical connectives, both of variable <math id="S2.p1.m1" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math>-ary scope.</p>
+</div>
+<div id="S2.p2" class="ltx_para">
+<ul id="I2" class="ltx_itemize">
+<li id="I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i1.p1" class="ltx_para">
+<p class="ltx_p">A bracketed list of propositional expressions in the form <math id="I2.i1.p1.m1" class="ltx_Math" alttext="(e_{1},e_{2},\ldots,e_{k-1},e_{k})" display="inline"><mrow><mo stretchy="false">(</mo><msub><mi>e</mi><mn>1</mn></msub><mo>,</mo><msub><mi>e</mi><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>e</mi><mrow><mi>k</mi><mo>-</mo><mn>1</mn></mrow></msub><mo>,</mo><msub><mi>e</mi><mi>k</mi></msub><mo stretchy="false">)</mo></mrow></math> indicates that exactly one of the propositions <math id="I2.i1.p1.m2" class="ltx_Math" alttext="e_{1},e_{2},\ldots,e_{k-1},e_{k}" display="inline"><mrow><msub><mi>e</mi><mn>1</mn></msub><mo>,</mo><msub><mi>e</mi><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>e</mi><mrow><mi>k</mi><mo>-</mo><mn>1</mn></mrow></msub><mo>,</mo><msub><mi>e</mi><mi>k</mi></msub></mrow></math> is false.</p>
+</div>
+</li>
+<li id="I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i2.p1" class="ltx_para">
+<p class="ltx_p">A concatenation of propositional expressions in the form <math id="I2.i2.p1.m1" class="ltx_Math" alttext="e_{1}\ e_{2}\ \ldots\ e_{k-1}\ e_{k}" display="inline"><mrow><mpadded width="+5pt"><msub><mi>e</mi><mn>1</mn></msub></mpadded><mo>⁢</mo><mpadded width="+5pt"><msub><mi>e</mi><mn>2</mn></msub></mpadded><mo>⁢</mo><mpadded width="+5pt"><mi mathvariant="normal">…</mi></mpadded><mo>⁢</mo><mpadded width="+5pt"><msub><mi>e</mi><mrow><mi>k</mi><mo>-</mo><mn>1</mn></mrow></msub></mpadded><mo>⁢</mo><msub><mi>e</mi><mi>k</mi></msub></mrow></math> indicates that all of the propositions <math id="I2.i2.p1.m2" class="ltx_Math" alttext="e_{1},e_{2},\ldots,e_{k-1},e_{k}" display="inline"><mrow><msub><mi>e</mi><mn>1</mn></msub><mo>,</mo><msub><mi>e</mi><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>e</mi><mrow><mi>k</mi><mo>-</mo><mn>1</mn></mrow></msub><mo>,</mo><msub><mi>e</mi><mi>k</mi></msub></mrow></math> are true, in other words, that their logical conjunction is true.</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="S2.p3" class="ltx_para ltx_centering">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<thead class="ltx_thead">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_center ltx_th ltx_th_column" colspan="3"><span class="ltx_text ltx_font_bold">Table 4. Syntax and Semantics of a Propositional Calculus</span></th>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_center ltx_th ltx_th_column ltx_border_l ltx_border_r ltx_border_t"><span class="ltx_text ltx_font_bold">Expression</span></th>
+<th class="ltx_td ltx_align_center ltx_th ltx_th_column ltx_border_r ltx_border_t"><span class="ltx_text ltx_font_bold">Interpretation</span></th>
+<th class="ltx_td ltx_align_center ltx_th ltx_th_column ltx_border_r ltx_border_t"><span class="ltx_text ltx_font_bold">Other Notations</span></th>
+</tr>
+</thead>
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_l ltx_border_r ltx_border_t"><math id="S2.p3.m1" class="ltx_Math" alttext="~{}" display="inline"><mi></mi></math></td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t"><math id="S2.p3.m2" class="ltx_Math" alttext="\operatorname{True}" display="inline"><mi>True</mi></math></td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t"><math id="S2.p3.m3" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_l ltx_border_r ltx_border_t"><math id="S2.p3.m4" class="ltx_Math" alttext="(~{})" display="inline"><mrow><mo rspace="5.8pt" stretchy="false">(</mo><mo stretchy="false">)</mo></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t"><math id="S2.p3.m5" class="ltx_Math" alttext="\operatorname{False}" display="inline"><mi>False</mi></math></td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t"><math id="S2.p3.m6" class="ltx_Math" alttext="0" display="inline"><mn>0</mn></math></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_l ltx_border_r ltx_border_t"><math id="S2.p3.m7" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math></td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t"><math id="S2.p3.m8" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math></td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t"><math id="S2.p3.m9" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_l ltx_border_r ltx_border_t"><math id="S2.p3.m10" class="ltx_Math" alttext="(x)" display="inline"><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t"><math id="S2.p3.m11" class="ltx_Math" alttext="\operatorname{Not}\ x" display="inline"><mrow><mpadded width="+5pt"><mi>Not</mi></mpadded><mo>⁡</mo><mi>x</mi></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t"><math id="S2.p3.m12" class="ltx_Math" alttext="\begin{matrix}x^{\prime}\\
+\tilde{x}\\
+\lnot x\\
+\end{matrix}" display="inline"><mtable rowspacing="0pt"><mtr><mtd columnalign="center"><msup><mi>x</mi><mo>′</mo></msup></mtd></mtr><mtr><mtd columnalign="center"><mover accent="true"><mi>x</mi><mo stretchy="false">~</mo></mover></mtd></mtr><mtr><mtd columnalign="center"><mrow><mi mathvariant="normal">¬</mi><mo>⁢</mo><mi>x</mi></mrow></mtd></mtr></mtable></math></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_l ltx_border_r ltx_border_t"><math id="S2.p3.m13" class="ltx_Math" alttext="x\ y\ z" display="inline"><mrow><mpadded width="+5pt"><mi>x</mi></mpadded><mo>⁢</mo><mpadded width="+5pt"><mi>y</mi></mpadded><mo>⁢</mo><mi>z</mi></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t"><math id="S2.p3.m14" class="ltx_Math" alttext="x\ \operatorname{and}\ y\ \operatorname{and}\ z" display="inline"><mrow><mpadded width="+5pt"><mi>x</mi></mpadded><mo>⁢</mo><mrow><mpadded width="+5pt"><mi>and</mi></mpadded><mo>⁡</mo><mrow><mpadded width="+5pt"><mi>y</mi></mpadded><mo>⁢</mo><mrow><mpadded width="+5pt"><mi>and</mi></mpadded><mo>⁡</mo><mi>z</mi></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t"><math id="S2.p3.m15" class="ltx_Math" alttext="x\land y\land z" display="inline"><mrow><mi>x</mi><mo>∧</mo><mi>y</mi><mo>∧</mo><mi>z</mi></mrow></math></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_l ltx_border_r ltx_border_t"><math id="S2.p3.m16" class="ltx_Math" alttext="((x)(y)(z))" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t"><math id="S2.p3.m17" class="ltx_Math" alttext="x\ \operatorname{or}\ y\ \operatorname{or}\ z" display="inline"><mrow><mpadded width="+5pt"><mi>x</mi></mpadded><mo>⁢</mo><mrow><mpadded width="+5pt"><mi>or</mi></mpadded><mo>⁡</mo><mrow><mpadded width="+5pt"><mi>y</mi></mpadded><mo>⁢</mo><mrow><mpadded width="+5pt"><mi>or</mi></mpadded><mo>⁡</mo><mi>z</mi></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t"><math id="S2.p3.m18" class="ltx_Math" alttext="x\lor y\lor z" display="inline"><mrow><mi>x</mi><mo>∨</mo><mi>y</mi><mo>∨</mo><mi>z</mi></mrow></math></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_l ltx_border_r ltx_border_t"><math id="S2.p3.m19" class="ltx_Math" alttext="(x\ (y))" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mpadded width="+5pt"><mi>x</mi></mpadded><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t"><math id="S2.p3.m20" class="ltx_Math" alttext="\begin{matrix}x\ \operatorname{implies}\ y\\
+\operatorname{If}\ x\ \operatorname{then}\ y\\
+\end{matrix}" display="inline"><mtable rowspacing="0pt"><mtr><mtd columnalign="center"><mrow><mpadded width="+5pt"><mi>x</mi></mpadded><mo>⁢</mo><mrow><mpadded width="+5pt"><mi>implies</mi></mpadded><mo>⁡</mo><mi>y</mi></mrow></mrow></mtd></mtr><mtr><mtd columnalign="center"><mrow><mpadded width="+5pt"><mi>If</mi></mpadded><mo>⁡</mo><mrow><mpadded width="+5pt"><mi>x</mi></mpadded><mo>⁢</mo><mrow><mpadded width="+5pt"><mi>then</mi></mpadded><mo>⁡</mo><mi>y</mi></mrow></mrow></mrow></mtd></mtr></mtable></math></td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t"><math id="S2.p3.m21" class="ltx_Math" alttext="x\Rightarrow y" display="inline"><mrow><mi>x</mi><mo>⇒</mo><mi>y</mi></mrow></math></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_l ltx_border_r ltx_border_t"><math id="S2.p3.m22" class="ltx_Math" alttext="(x,y)" display="inline"><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t"><math id="S2.p3.m23" class="ltx_Math" alttext="\begin{matrix}x\ \operatorname{not~{}equal~{}to}\ y\\
+x\ \operatorname{exclusive~{}or}\ y\\
+\end{matrix}" display="inline"><mtable rowspacing="0pt"><mtr><mtd columnalign="center"><mrow><mpadded width="+5pt"><mi>x</mi></mpadded><mo>⁢</mo><mrow><mpadded width="+5pt"><mrow><mpadded width="+3.3pt"><mi>not</mi></mpadded><mo>⁢</mo><mpadded width="+3.3pt"><mi>equal</mi></mpadded><mo>⁢</mo><mi>to</mi></mrow></mpadded><mo>⁡</mo><mi>y</mi></mrow></mrow></mtd></mtr><mtr><mtd columnalign="center"><mrow><mpadded width="+5pt"><mi>x</mi></mpadded><mo>⁢</mo><mrow><mpadded width="+5pt"><mrow><mpadded width="+3.3pt"><mi>exclusive</mi></mpadded><mo>⁢</mo><mi>or</mi></mrow></mpadded><mo>⁡</mo><mi>y</mi></mrow></mrow></mtd></mtr></mtable></math></td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t"><math id="S2.p3.m24" class="ltx_Math" alttext="\begin{matrix}x\neq y\\
+x+y\\
+\end{matrix}" display="inline"><mtable rowspacing="0pt"><mtr><mtd columnalign="center"><mrow><mi>x</mi><mo>≠</mo><mi>y</mi></mrow></mtd></mtr><mtr><mtd columnalign="center"><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow></mtd></mtr></mtable></math></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_l ltx_border_r ltx_border_t"><math id="S2.p3.m25" class="ltx_Math" alttext="((x,y))" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo stretchy="false">)</mo></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t"><math id="S2.p3.m26" class="ltx_Math" alttext="\begin{matrix}x\ \operatorname{is~{}equal~{}to}\ y\\
+x\ \operatorname{if~{}and~{}only~{}if}\ y\\
+\end{matrix}" display="inline"><mtable rowspacing="0pt"><mtr><mtd columnalign="center"><mrow><mpadded width="+5pt"><mi>x</mi></mpadded><mo>⁢</mo><mrow><mpadded width="+5pt"><mrow><mpadded width="+3.3pt"><mi>is</mi></mpadded><mo>⁢</mo><mpadded width="+3.3pt"><mi>equal</mi></mpadded><mo>⁢</mo><mi>to</mi></mrow></mpadded><mo>⁡</mo><mi>y</mi></mrow></mrow></mtd></mtr><mtr><mtd columnalign="center"><mrow><mpadded width="+5pt"><mi>x</mi></mpadded><mo>⁢</mo><mrow><mpadded width="+5pt"><mrow><mpadded width="+3.3pt"><mi>if</mi></mpadded><mo>⁢</mo><mpadded width="+3.3pt"><mi>and</mi></mpadded><mo>⁢</mo><mpadded width="+3.3pt"><mi>only</mi></mpadded><mo>⁢</mo><mi>if</mi></mrow></mpadded><mo>⁡</mo><mi>y</mi></mrow></mrow></mtd></mtr></mtable></math></td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t"><math id="S2.p3.m27" class="ltx_Math" alttext="\begin{matrix}x=y\\
+x\Leftrightarrow y\\
+\end{matrix}" display="inline"><mtable rowspacing="0pt"><mtr><mtd columnalign="center"><mrow><mi>x</mi><mo>=</mo><mi>y</mi></mrow></mtd></mtr><mtr><mtd columnalign="center"><mrow><mi>x</mi><mo>⇔</mo><mi>y</mi></mrow></mtd></mtr></mtable></math></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_l ltx_border_r ltx_border_t"><math id="S2.p3.m28" class="ltx_Math" alttext="(x,y,z)" display="inline"><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t"><math id="S2.p3.m29" class="ltx_Math" alttext="\begin{matrix}\operatorname{Just~{}one~{}of}\\
+x,y,z\\
+\operatorname{is~{}false}.\\
+\end{matrix}" display="inline"><mtable rowspacing="0pt"><mtr><mtd columnalign="center"><mrow><mpadded width="+3.3pt"><mi>Just</mi></mpadded><mo>⁢</mo><mpadded width="+3.3pt"><mi>one</mi></mpadded><mo>⁢</mo><mi>of</mi></mrow></mtd></mtr><mtr><mtd columnalign="center"><mrow><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi></mrow></mtd></mtr><mtr><mtd columnalign="center"><mrow><mrow><mpadded width="+3.3pt"><mi>is</mi></mpadded><mo>⁢</mo><mi>false</mi></mrow><mo>.</mo></mrow></mtd></mtr></mtable></math></td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t"><math id="S2.p3.m30" class="ltx_Math" alttext="\begin{matrix}x^{\prime}y~{}z\\
+\lor\\
+x~{}y^{\prime}z\\
+\lor\\
+x~{}y~{}z^{\prime}\\
+\end{matrix}" display="inline"><mtable rowspacing="0pt"><mtr><mtd columnalign="center"><mrow><msup><mi>x</mi><mo>′</mo></msup><mo>⁢</mo><mpadded width="+3.3pt"><mi>y</mi></mpadded><mo>⁢</mo><mi>z</mi></mrow></mtd></mtr><mtr><mtd columnalign="center"><mo>∨</mo></mtd></mtr><mtr><mtd columnalign="center"><mrow><mpadded width="+3.3pt"><mi>x</mi></mpadded><mo>⁢</mo><msup><mi>y</mi><mo>′</mo></msup><mo>⁢</mo><mi>z</mi></mrow></mtd></mtr><mtr><mtd columnalign="center"><mo>∨</mo></mtd></mtr><mtr><mtd columnalign="center"><mrow><mpadded width="+3.3pt"><mi>x</mi></mpadded><mo>⁢</mo><mpadded width="+3.3pt"><mi>y</mi></mpadded><mo>⁢</mo><msup><mi>z</mi><mo>′</mo></msup></mrow></mtd></mtr></mtable></math></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_l ltx_border_r ltx_border_t"><math id="S2.p3.m31" class="ltx_Math" alttext="((x),(y),(z))" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>,</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>,</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow><mo stretchy="false">)</mo></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t"><math id="S2.p3.m32" class="ltx_Math" alttext="\begin{matrix}\operatorname{Just~{}one~{}of}\\
+x,y,z\\
+\operatorname{is~{}true}.\\
+&amp;\\
+\operatorname{Partition~{}all}\\
+\operatorname{into}\ x,y,z.\\
+\end{matrix}" display="inline"><mtable columnspacing="5pt" rowspacing="0pt"><mtr><mtd columnalign="center"><mrow><mpadded width="+3.3pt"><mi>Just</mi></mpadded><mo>⁢</mo><mpadded width="+3.3pt"><mi>one</mi></mpadded><mo>⁢</mo><mi>of</mi></mrow></mtd></mtr><mtr><mtd columnalign="center"><mrow><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi></mrow></mtd></mtr><mtr><mtd columnalign="center"><mrow><mrow><mpadded width="+3.3pt"><mi>is</mi></mpadded><mo>⁢</mo><mi>true</mi></mrow><mo>.</mo></mrow></mtd></mtr><mtr><mtd columnalign="center"><mi></mi></mtd><mtd columnalign="center"><mi></mi></mtd></mtr><mtr><mtd columnalign="center"><mrow><mpadded width="+3.3pt"><mi>Partition</mi></mpadded><mo>⁢</mo><mi>all</mi></mrow></mtd></mtr><mtr><mtd columnalign="center"><mrow><mrow><mrow><mpadded width="+5pt"><mi>into</mi></mpadded><mo>⁡</mo><mi>x</mi></mrow><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi></mrow><mo>.</mo></mrow></mtd></mtr></mtable></math></td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t"><math id="S2.p3.m33" class="ltx_Math" alttext="\begin{matrix}x~{}y^{\prime}z^{\prime}\\
+\lor\\
+x^{\prime}y~{}z^{\prime}\\
+\lor\\
+x^{\prime}y^{\prime}z\\
+\end{matrix}" display="inline"><mtable rowspacing="0pt"><mtr><mtd columnalign="center"><mrow><mpadded width="+3.3pt"><mi>x</mi></mpadded><mo>⁢</mo><msup><mi>y</mi><mo>′</mo></msup><mo>⁢</mo><msup><mi>z</mi><mo>′</mo></msup></mrow></mtd></mtr><mtr><mtd columnalign="center"><mo>∨</mo></mtd></mtr><mtr><mtd columnalign="center"><mrow><msup><mi>x</mi><mo>′</mo></msup><mo>⁢</mo><mpadded width="+3.3pt"><mi>y</mi></mpadded><mo>⁢</mo><msup><mi>z</mi><mo>′</mo></msup></mrow></mtd></mtr><mtr><mtd columnalign="center"><mo>∨</mo></mtd></mtr><mtr><mtd columnalign="center"><mrow><msup><mi>x</mi><mo>′</mo></msup><mo>⁢</mo><msup><mi>y</mi><mo>′</mo></msup><mo>⁢</mo><mi>z</mi></mrow></mtd></mtr></mtable></math></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_l ltx_border_r ltx_border_t"><math id="S2.p3.m34" class="ltx_Math" alttext="\begin{matrix}((x,y),z)\\
+&amp;\\
+(x,(y,z))\\
+\end{matrix}" display="inline"><mtable columnspacing="5pt" rowspacing="0pt"><mtr><mtd columnalign="center"><mrow><mo stretchy="false">(</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>,</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mtd></mtr><mtr><mtd columnalign="center"><mi></mi></mtd><mtd columnalign="center"><mi></mi></mtd></mtr><mtr><mtd columnalign="center"><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo>,</mo><mi>z</mi><mo stretchy="false">)</mo></mrow><mo stretchy="false">)</mo></mrow></mtd></mtr></mtable></math></td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t"><math id="S2.p3.m35" class="ltx_Math" alttext="\begin{matrix}\operatorname{Oddly~{}many~{}of}\\
+x,y,z\\
+\operatorname{are~{}true}.\\
+\end{matrix}" display="inline"><mtable rowspacing="0pt"><mtr><mtd columnalign="center"><mrow><mpadded width="+3.3pt"><mi>Oddly</mi></mpadded><mo>⁢</mo><mpadded width="+3.3pt"><mi>many</mi></mpadded><mo>⁢</mo><mi>of</mi></mrow></mtd></mtr><mtr><mtd columnalign="center"><mrow><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi></mrow></mtd></mtr><mtr><mtd columnalign="center"><mrow><mrow><mpadded width="+3.3pt"><mi>are</mi></mpadded><mo>⁢</mo><mi>true</mi></mrow><mo>.</mo></mrow></mtd></mtr></mtable></math></td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t"><math id="S2.p3.m36" class="ltx_Math" alttext="\begin{matrix}x+y+z\\
+=\\
+x~{}y~{}z\\
+\lor\\
+x~{}y^{\prime}z^{\prime}\\
+\lor\\
+x^{\prime}y~{}z^{\prime}\\
+\lor\\
+x^{\prime}y^{\prime}z\\
+\end{matrix}" display="inline"><mtable rowspacing="0pt"><mtr><mtd columnalign="center"><mrow><mi>x</mi><mo>+</mo><mi>y</mi><mo>+</mo><mi>z</mi></mrow></mtd></mtr><mtr><mtd columnalign="center"><mo>=</mo></mtd></mtr><mtr><mtd columnalign="center"><mrow><mpadded width="+3.3pt"><mi>x</mi></mpadded><mo>⁢</mo><mpadded width="+3.3pt"><mi>y</mi></mpadded><mo>⁢</mo><mi>z</mi></mrow></mtd></mtr><mtr><mtd columnalign="center"><mo>∨</mo></mtd></mtr><mtr><mtd columnalign="center"><mrow><mpadded width="+3.3pt"><mi>x</mi></mpadded><mo>⁢</mo><msup><mi>y</mi><mo>′</mo></msup><mo>⁢</mo><msup><mi>z</mi><mo>′</mo></msup></mrow></mtd></mtr><mtr><mtd columnalign="center"><mo>∨</mo></mtd></mtr><mtr><mtd columnalign="center"><mrow><msup><mi>x</mi><mo>′</mo></msup><mo>⁢</mo><mpadded width="+3.3pt"><mi>y</mi></mpadded><mo>⁢</mo><msup><mi>z</mi><mo>′</mo></msup></mrow></mtd></mtr><mtr><mtd columnalign="center"><mo>∨</mo></mtd></mtr><mtr><mtd columnalign="center"><mrow><msup><mi>x</mi><mo>′</mo></msup><mo>⁢</mo><msup><mi>y</mi><mo>′</mo></msup><mo>⁢</mo><mi>z</mi></mrow></mtd></mtr></mtable></math></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_b ltx_border_l ltx_border_r ltx_border_t"><math id="S2.p3.m37" class="ltx_Math" alttext="(w,(x),(y),(z))" display="inline"><mrow><mo stretchy="false">(</mo><mi>w</mi><mo>,</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>,</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>,</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow><mo stretchy="false">)</mo></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_border_b ltx_border_r ltx_border_t"><math id="S2.p3.m38" class="ltx_Math" alttext="\begin{matrix}\operatorname{Partition}\ w\\
+\operatorname{into}\ x,y,z.\\
+&amp;\\
+\operatorname{Genus}\ w\ \operatorname{comprises}\\
+\operatorname{species}\ x,y,z.\\
+\end{matrix}" display="inline"><mtable columnspacing="5pt" rowspacing="0pt"><mtr><mtd columnalign="center"><mrow><mpadded width="+5pt"><mi>Partition</mi></mpadded><mo>⁡</mo><mi>w</mi></mrow></mtd></mtr><mtr><mtd columnalign="center"><mrow><mrow><mrow><mpadded width="+5pt"><mi>into</mi></mpadded><mo>⁡</mo><mi>x</mi></mrow><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi></mrow><mo>.</mo></mrow></mtd></mtr><mtr><mtd columnalign="center"><mi></mi></mtd><mtd columnalign="center"><mi></mi></mtd></mtr><mtr><mtd columnalign="center"><mrow><mpadded width="+5pt"><mi>Genus</mi></mpadded><mo>⁡</mo><mrow><mpadded width="+5pt"><mi>w</mi></mpadded><mo>⁢</mo><mi>comprises</mi></mrow></mrow></mtd></mtr><mtr><mtd columnalign="center"><mrow><mrow><mrow><mpadded width="+5pt"><mi>species</mi></mpadded><mo>⁡</mo><mi>x</mi></mrow><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi></mrow><mo>.</mo></mrow></mtd></mtr></mtable></math></td>
+<td class="ltx_td ltx_align_center ltx_border_b ltx_border_r ltx_border_t"><math id="S2.p3.m39" class="ltx_Math" alttext="\begin{matrix}w^{\prime}x^{\prime}y^{\prime}z^{\prime}\\
+\lor\\
+w~{}x~{}y^{\prime}z^{\prime}\\
+\lor\\
+w~{}x^{\prime}y~{}z^{\prime}\\
+\lor\\
+w~{}x^{\prime}y^{\prime}z\\
+\end{matrix}" display="inline"><mtable rowspacing="0pt"><mtr><mtd columnalign="center"><mrow><msup><mi>w</mi><mo>′</mo></msup><mo>⁢</mo><msup><mi>x</mi><mo>′</mo></msup><mo>⁢</mo><msup><mi>y</mi><mo>′</mo></msup><mo>⁢</mo><msup><mi>z</mi><mo>′</mo></msup></mrow></mtd></mtr><mtr><mtd columnalign="center"><mo>∨</mo></mtd></mtr><mtr><mtd columnalign="center"><mrow><mpadded width="+3.3pt"><mi>w</mi></mpadded><mo>⁢</mo><mpadded width="+3.3pt"><mi>x</mi></mpadded><mo>⁢</mo><msup><mi>y</mi><mo>′</mo></msup><mo>⁢</mo><msup><mi>z</mi><mo>′</mo></msup></mrow></mtd></mtr><mtr><mtd columnalign="center"><mo>∨</mo></mtd></mtr><mtr><mtd columnalign="center"><mrow><mpadded width="+3.3pt"><mi>w</mi></mpadded><mo>⁢</mo><msup><mi>x</mi><mo>′</mo></msup><mo>⁢</mo><mpadded width="+3.3pt"><mi>y</mi></mpadded><mo>⁢</mo><msup><mi>z</mi><mo>′</mo></msup></mrow></mtd></mtr><mtr><mtd columnalign="center"><mo>∨</mo></mtd></mtr><mtr><mtd columnalign="center"><mrow><mpadded width="+3.3pt"><mi>w</mi></mpadded><mo>⁢</mo><msup><mi>x</mi><mo>′</mo></msup><mo>⁢</mo><msup><mi>y</mi><mo>′</mo></msup><mo>⁢</mo><mi>z</mi></mrow></mtd></mtr></mtable></math></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="S2.p4" class="ltx_para">
+<p class="ltx_p">All other propositional connectives can be obtained through combinations of these two forms. Strictly speaking, the concatenation form is dispensable in light of the bracket form, but it is convenient to maintain it as an abbreviation of more complicated bracket expressions. The briefest expression for logical truth is the empty word, abstractly denoted <math id="S2.p4.m1" class="ltx_Math" alttext="\varepsilon" display="inline"><mi>ε</mi></math> or <math id="S2.p4.m2" class="ltx_Math" alttext="\lambda" display="inline"><mi>λ</mi></math> in formal languages, where it forms the identity element for concatenation. It can be given visible expression in this context by means of the logically equivalent expression <math id="S2.p4.m3" class="ltx_Math" alttext='``((~{}))",' display="inline"><mrow><mrow><mi mathvariant="normal">`</mi><mo>⁢</mo><mi mathvariant="normal">`</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mo rspace="5.8pt" stretchy="false">(</mo><mo stretchy="false">)</mo></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi mathvariant="normal">"</mi></mrow><mo>,</mo></mrow></math> or, especially if operating in an algebraic context, by a simple <math id="S2.p4.m4" class="ltx_Math" alttext='``1".' display="inline"><mrow><mrow><mi mathvariant="normal">`</mi><mo>⁢</mo><mi mathvariant="normal">`</mi><mo>⁢</mo><mn>1</mn><mo>⁢</mo><mi mathvariant="normal">"</mi></mrow><mo>.</mo></mrow></math> Also when working in an algebraic mode, the plus sign <math id="S2.p4.m5" class="ltx_Math" alttext='``+"' display="inline"><mrow><mrow><mi mathvariant="normal">`</mi><mo>⁢</mo><mi mathvariant="normal">`</mi></mrow><mo>+</mo><mi mathvariant="normal">"</mi></mrow></math> may be used for exclusive disjunction. For example, we have the following paraphrases of algebraic expressions by bracket expressions:</p>
+</div>
+<div id="S2.p5" class="ltx_para">
+<table id="S2.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex1.m1" class="ltx_Math" alttext="x+y\quad=\quad(x,y)" display="block"><mrow><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo mathvariant="italic" separator="true"> </mo><mo>=</mo><mo mathvariant="italic" separator="true"> </mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S2.p6" class="ltx_para">
+<table id="S2.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex2.m1" class="ltx_Math" alttext="x+y+z\quad=\quad((x,y),z)\quad=\quad(x,(y,z))" display="block"><mrow><mrow><mi>x</mi><mo>+</mo><mi>y</mi><mo>+</mo><mi>z</mi></mrow><mo mathvariant="italic" separator="true"> </mo><mo>=</mo><mo mathvariant="italic" separator="true"> </mo><mrow><mo stretchy="false">(</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>,</mo><mi>z</mi><mo stretchy="false">)</mo></mrow><mo mathvariant="italic" separator="true"> </mo><mo>=</mo><mo mathvariant="italic" separator="true"> </mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo>,</mo><mi>z</mi><mo stretchy="false">)</mo></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S2.p7" class="ltx_para">
+<p class="ltx_p">It is important to note that the last expressions are not equivalent to the triple bracket <math id="S2.p7.m1" class="ltx_Math" alttext="(x,y,z)." display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi><mo stretchy="false">)</mo></mrow><mo>.</mo></mrow></math></p>
+</div>
+<div id="S2.p8" class="ltx_para">
+<p class="ltx_p">For more information about this syntax for propositional calculus, see the entries on minimal negation operators (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/MinimalNegationOperator</span>), zeroth order logic (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/ZerothOrderLogic</span>), and Table A1 in Appendix 1 (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/DifferentialPropositionalCalculusAppendices</span>).</p>
+</div>
+</section>
+<section id="S3" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">3 </span>Formal development</h2>
+
+<div id="S3.p1" class="ltx_para">
+<p class="ltx_p">The preceding discussion outlined the ideas leading to the differential extension of propositional logic. The next task is to lay out the concepts and terminology that are needed to describe various orders of differential propositional calculi.</p>
+</div>
+<section id="S3.SS1" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">3.1 </span>Elementary notions</h3>
+
+<div id="S3.SS1.p1" class="ltx_para">
+<p class="ltx_p">Logical description of a universe of discourse begins with a set of logical signs. For the sake of simplicity in a first approach, assume that these logical signs are collected in the form of a finite alphabet, <math id="S3.SS1.p1.m1" class="ltx_Math" alttext='\mathfrak{A}=\{``a_{1}",\ldots,``a_{n}"\}.' display="inline"><mrow><mrow><mi>𝔄</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi mathvariant="normal">`</mi><mo>⁢</mo><mi mathvariant="normal">`</mi><mo>⁢</mo><msub><mi>a</mi><mn>1</mn></msub><mo>⁢</mo><mi mathvariant="normal">"</mi></mrow><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><mi mathvariant="normal">`</mi><mo>⁢</mo><mi mathvariant="normal">`</mi><mo>⁢</mo><msub><mi>a</mi><mi>n</mi></msub><mo>⁢</mo><mi mathvariant="normal">"</mi></mrow><mo stretchy="false">}</mo></mrow></mrow><mo>.</mo></mrow></math> Each of these signs is interpreted as denoting a logical feature, for instance, a property that objects in the universe of discourse may have or a proposition about objects in the universe of discourse. Corresponding to the alphabet <math id="S3.SS1.p1.m2" class="ltx_Math" alttext="\mathfrak{A}" display="inline"><mi>𝔄</mi></math> there is then a set of logical features, <math id="S3.SS1.p1.m3" class="ltx_Math" alttext="\mathcal{A}=\{a_{1},\ldots,a_{n}\}." display="inline"><mrow><mrow><mi class="ltx_font_mathcaligraphic">𝒜</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="false">}</mo></mrow></mrow><mo>.</mo></mrow></math></p>
+</div>
+<div id="S3.SS1.p2" class="ltx_para">
+<p class="ltx_p">A set of logical features, <math id="S3.SS1.p2.m1" class="ltx_Math" alttext="\mathcal{A}=\{a_{1},\ldots,a_{n}\}," display="inline"><mrow><mrow><mi class="ltx_font_mathcaligraphic">𝒜</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="false">}</mo></mrow></mrow><mo>,</mo></mrow></math> affords a basis for generating an <math id="S3.SS1.p2.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>-dimensional universe of discourse, written <math id="S3.SS1.p2.m3" class="ltx_Math" alttext="A^{\circ}=[\mathcal{A}]=[a_{1},\ldots,a_{n}]." display="inline"><mrow><mrow><msup><mi>A</mi><mo>∘</mo></msup><mo>=</mo><mrow><mo stretchy="false">[</mo><mi class="ltx_font_mathcaligraphic">𝒜</mi><mo stretchy="false">]</mo></mrow><mo>=</mo><mrow><mo stretchy="false">[</mo><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="false">]</mo></mrow></mrow><mo>.</mo></mrow></math> It is useful to consider a universe of discourse as a categorical (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/Category</span>) object that incorporates both the set of points <math id="S3.SS1.p2.m4" class="ltx_Math" alttext="A=\langle a_{1},\ldots,a_{n}\rangle" display="inline"><mrow><mi>A</mi><mo>=</mo><mrow><mo stretchy="false">⟨</mo><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="false">⟩</mo></mrow></mrow></math> and the set of propositions <math id="S3.SS1.p2.m5" class="ltx_Math" alttext="A^{\uparrow}=\{f:A\to\mathbb{B}\}" display="inline"><mrow><msup><mi>A</mi><mo>↑</mo></msup><mo>=</mo><mrow><mo stretchy="false">{</mo><mi>f</mi><mo>:</mo><mrow><mi>A</mi><mo>→</mo><mi>𝔹</mi></mrow><mo stretchy="false">}</mo></mrow></mrow></math> that are implicit with the ordinary picture of a venn diagram on <math id="S3.SS1.p2.m6" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> features. Accordingly, the universe of discourse <math id="S3.SS1.p2.m7" class="ltx_Math" alttext="A^{\circ}" display="inline"><msup><mi>A</mi><mo>∘</mo></msup></math> may be regarded as an ordered pair <math id="S3.SS1.p2.m8" class="ltx_Math" alttext="(A,A^{\uparrow})" display="inline"><mrow><mo stretchy="false">(</mo><mi>A</mi><mo>,</mo><msup><mi>A</mi><mo>↑</mo></msup><mo stretchy="false">)</mo></mrow></math> having the type <math id="S3.SS1.p2.m9" class="ltx_Math" alttext="(\mathbb{B}^{n},(\mathbb{B}^{n}\to\mathbb{B}))," display="inline"><mrow><mrow><mo stretchy="false">(</mo><msup><mi>𝔹</mi><mi>n</mi></msup><mo>,</mo><mrow><mo stretchy="false">(</mo><msup><mi>𝔹</mi><mi>n</mi></msup><mo>→</mo><mi>𝔹</mi><mo stretchy="false">)</mo></mrow><mo stretchy="false">)</mo></mrow><mo>,</mo></mrow></math> and this last type designation may be abbreviated as <math id="S3.SS1.p2.m10" class="ltx_Math" alttext="\mathbb{B}^{n}\ +\!\to\mathbb{B}," display="inline"><mrow><mrow><mrow><mpadded width="+5pt"><msup><mi>𝔹</mi><mi>n</mi></msup></mpadded><mo rspace="0.8pt">+</mo></mrow><mo>→</mo><mi>𝔹</mi></mrow><mo>,</mo></mrow></math> or even more succinctly as <math id="S3.SS1.p2.m11" class="ltx_Math" alttext="[\mathbb{B}^{n}]." display="inline"><mrow><mrow><mo stretchy="false">[</mo><msup><mi>𝔹</mi><mi>n</mi></msup><mo stretchy="false">]</mo></mrow><mo>.</mo></mrow></math> For convenience, the data type of a finite set on <math id="S3.SS1.p2.m12" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> elements may be indicated by either one of the equivalent notations, <math id="S3.SS1.p2.m13" class="ltx_Math" alttext="[n]" display="inline"><mrow><mo stretchy="false">[</mo><mi>n</mi><mo stretchy="false">]</mo></mrow></math> or <math id="S3.SS1.p2.m14" class="ltx_Math" alttext="\mathbf{n}." display="inline"><mrow><mi>𝐧</mi><mo>.</mo></mrow></math></p>
+</div>
+<div id="S3.SS1.p3" class="ltx_para">
+<p class="ltx_p">Table 5 summarizes the notations that are needed to describe ordinary propositional calculi in a systematic fashion.</p>
+</div>
+<div id="S3.SS1.p4" class="ltx_para ltx_centering">
+<table class="ltx_tabular ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center" colspan="4"><span class="ltx_text ltx_font_bold">Table 5. Propositional Calculus : Basic Notation</span></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_r ltx_border_t">
+<br class="ltx_break"><span class="ltx_text ltx_font_bold">Symbol</span>
+</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t"><span class="ltx_text ltx_font_bold">Notation</span></td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t"><span class="ltx_text ltx_font_bold">Description</span></td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t"><span class="ltx_text ltx_font_bold">Type</span></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_r ltx_border_t">
+<br class="ltx_break"><math id="S3.SS1.p4.m1" class="ltx_Math" alttext="\mathfrak{A}" display="inline"><mi>𝔄</mi></math>
+</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t"><math id="S3.SS1.p4.m2" class="ltx_Math" alttext='\{``a_{1}",\ldots,``a_{n}"\}' display="inline"><mrow><mo stretchy="false">{</mo><mrow><mi mathvariant="normal">`</mi><mo>⁢</mo><mi mathvariant="normal">`</mi><mo>⁢</mo><msub><mi>a</mi><mn>1</mn></msub><mo>⁢</mo><mi mathvariant="normal">"</mi></mrow><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><mi mathvariant="normal">`</mi><mo>⁢</mo><mi mathvariant="normal">`</mi><mo>⁢</mo><msub><mi>a</mi><mi>n</mi></msub><mo>⁢</mo><mi mathvariant="normal">"</mi></mrow><mo stretchy="false">}</mo></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Alphabet</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t"><math id="S3.SS1.p4.m3" class="ltx_Math" alttext="[n]=\mathbf{n}" display="inline"><mrow><mrow><mo stretchy="false">[</mo><mi>n</mi><mo stretchy="false">]</mo></mrow><mo>=</mo><mi>𝐧</mi></mrow></math></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_r ltx_border_t">
+<br class="ltx_break"><math id="S3.SS1.p4.m4" class="ltx_Math" alttext="\mathcal{A}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒜</mi></math>
+</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t"><math id="S3.SS1.p4.m5" class="ltx_Math" alttext="\{a_{1},\ldots,a_{n}\}" display="inline"><mrow><mo stretchy="false">{</mo><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="false">}</mo></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Basis</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t"><math id="S3.SS1.p4.m6" class="ltx_Math" alttext="[n]=\mathbf{n}" display="inline"><mrow><mrow><mo stretchy="false">[</mo><mi>n</mi><mo stretchy="false">]</mo></mrow><mo>=</mo><mi>𝐧</mi></mrow></math></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_r ltx_border_t">
+<br class="ltx_break"><math id="S3.SS1.p4.m7" class="ltx_Math" alttext="A_{i}" display="inline"><msub><mi>A</mi><mi>i</mi></msub></math>
+</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t"><math id="S3.SS1.p4.m8" class="ltx_Math" alttext="\{\overline{a_{i}},a_{i}\}" display="inline"><mrow><mo stretchy="false">{</mo><mover accent="true"><msub><mi>a</mi><mi>i</mi></msub><mo>¯</mo></mover><mo>,</mo><msub><mi>a</mi><mi>i</mi></msub><mo stretchy="false">}</mo></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Dimension <math id="S3.SS1.p4.m9" class="ltx_Math" alttext="i" display="inline"><mi>i</mi></math>
+</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t"><math id="S3.SS1.p4.m10" class="ltx_Math" alttext="\mathbb{B}" display="inline"><mi>𝔹</mi></math></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_r ltx_border_t">
+<br class="ltx_break"><math id="S3.SS1.p4.m11" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>
+</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t"><math id="S3.SS1.p4.m12" class="ltx_Math" alttext="\langle\mathcal{A}\rangle" display="inline"><mrow><mo stretchy="false">⟨</mo><mi class="ltx_font_mathcaligraphic">𝒜</mi><mo stretchy="false">⟩</mo></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Set of cells,</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t"><math id="S3.SS1.p4.m13" class="ltx_Math" alttext="\mathbb{B}^{n}" display="inline"><msup><mi>𝔹</mi><mi>n</mi></msup></math></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_border_l ltx_border_r"></td>
+<td class="ltx_td ltx_align_left ltx_border_r"><math id="S3.SS1.p4.m14" class="ltx_Math" alttext="\langle a_{1},\ldots,a_{n}\rangle" display="inline"><mrow><mo stretchy="false">⟨</mo><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="false">⟩</mo></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_border_r">coordinate tuples,</td>
+<td class="ltx_td ltx_border_r"></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_border_l ltx_border_r"></td>
+<td class="ltx_td ltx_align_left ltx_border_r"><math id="S3.SS1.p4.m15" class="ltx_Math" alttext="\{(a_{1},\ldots,a_{n})\}" display="inline"><mrow><mo stretchy="false">{</mo><mrow><mo stretchy="false">(</mo><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow><mo stretchy="false">}</mo></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_border_r">points, or vectors</td>
+<td class="ltx_td ltx_border_r"></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_border_l ltx_border_r"></td>
+<td class="ltx_td ltx_align_left ltx_border_r"><math id="S3.SS1.p4.m16" class="ltx_Math" alttext="A_{1}\times\ldots\times A_{n}" display="inline"><mrow><msub><mi>A</mi><mn>1</mn></msub><mo>×</mo><mi mathvariant="normal">…</mi><mo>×</mo><msub><mi>A</mi><mi>n</mi></msub></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_border_r">in the universe</td>
+<td class="ltx_td ltx_border_r"></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_border_l ltx_border_r"></td>
+<td class="ltx_td ltx_align_left ltx_border_r"><math id="S3.SS1.p4.m17" class="ltx_Math" alttext="\textstyle\prod_{i=1}^{n}A_{i}" display="inline"><mrow><msubsup><mo largeop="true" symmetric="true">∏</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><msub><mi>A</mi><mi>i</mi></msub></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_border_r">of discourse</td>
+<td class="ltx_td ltx_border_r"></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_r ltx_border_t">
+<br class="ltx_break"><math id="S3.SS1.p4.m18" class="ltx_Math" alttext="A^{*}" display="inline"><msup><mi>A</mi><mo>*</mo></msup></math>
+</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t"><math id="S3.SS1.p4.m19" class="ltx_Math" alttext="(\operatorname{hom}:A\to\mathbb{B})" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mi>hom</mi><mo>:</mo><mrow><mi>A</mi><mo>→</mo><mi>𝔹</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Linear functions</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t"><math id="S3.SS1.p4.m20" class="ltx_Math" alttext="(\mathbb{B}^{n})^{*}\cong\mathbb{B}^{n}" display="inline"><mrow><msup><mrow><mo stretchy="false">(</mo><msup><mi>𝔹</mi><mi>n</mi></msup><mo stretchy="false">)</mo></mrow><mo>*</mo></msup><mo>≅</mo><msup><mi>𝔹</mi><mi>n</mi></msup></mrow></math></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_r ltx_border_t">
+<br class="ltx_break"><math id="S3.SS1.p4.m21" class="ltx_Math" alttext="A^{\uparrow}" display="inline"><msup><mi>A</mi><mo>↑</mo></msup></math>
+</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t"><math id="S3.SS1.p4.m22" class="ltx_Math" alttext="(A\to\mathbb{B})" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>→</mo><mi>𝔹</mi></mrow><mo stretchy="false">)</mo></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Boolean functions</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t"><math id="S3.SS1.p4.m23" class="ltx_Math" alttext="\mathbb{B}^{n}\to\mathbb{B}" display="inline"><mrow><msup><mi>𝔹</mi><mi>n</mi></msup><mo>→</mo><mi>𝔹</mi></mrow></math></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_r ltx_border_t">
+<br class="ltx_break"><math id="S3.SS1.p4.m24" class="ltx_Math" alttext="A^{\circ}" display="inline"><msup><mi>A</mi><mo>∘</mo></msup></math>
+</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t"><math id="S3.SS1.p4.m25" class="ltx_Math" alttext="[\mathcal{A}]" display="inline"><mrow><mo stretchy="false">[</mo><mi class="ltx_font_mathcaligraphic">𝒜</mi><mo stretchy="false">]</mo></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Universe of discourse</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t"><math id="S3.SS1.p4.m26" class="ltx_Math" alttext="(\mathbb{B}^{n},(\mathbb{B}^{n}\to\mathbb{B}))" display="inline"><mrow><mo stretchy="false">(</mo><msup><mi>𝔹</mi><mi>n</mi></msup><mo>,</mo><mrow><mo stretchy="false">(</mo><msup><mi>𝔹</mi><mi>n</mi></msup><mo>→</mo><mi>𝔹</mi><mo stretchy="false">)</mo></mrow><mo stretchy="false">)</mo></mrow></math></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_border_l ltx_border_r"></td>
+<td class="ltx_td ltx_align_left ltx_border_r"><math id="S3.SS1.p4.m27" class="ltx_Math" alttext="(A,A^{\uparrow})" display="inline"><mrow><mo stretchy="false">(</mo><mi>A</mi><mo>,</mo><msup><mi>A</mi><mo>↑</mo></msup><mo stretchy="false">)</mo></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_border_r">based on the features</td>
+<td class="ltx_td ltx_align_left ltx_border_r"><math id="S3.SS1.p4.m28" class="ltx_Math" alttext="(\mathbb{B}^{n}\ +\!\to\mathbb{B})" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mrow><mpadded width="+5pt"><msup><mi>𝔹</mi><mi>n</mi></msup></mpadded><mo rspace="0.8pt">+</mo></mrow><mo>→</mo><mi>𝔹</mi></mrow><mo stretchy="false">)</mo></mrow></math></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_border_l ltx_border_r"></td>
+<td class="ltx_td ltx_align_left ltx_border_r"><math id="S3.SS1.p4.m29" class="ltx_Math" alttext="(A\ +\!\to\mathbb{B})" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mrow><mpadded width="+5pt"><mi>A</mi></mpadded><mo rspace="0.8pt">+</mo></mrow><mo>→</mo><mi>𝔹</mi></mrow><mo stretchy="false">)</mo></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_border_r"><math id="S3.SS1.p4.m30" class="ltx_Math" alttext="\{a_{1},\ldots,a_{n}\}" display="inline"><mrow><mo stretchy="false">{</mo><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="false">}</mo></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_border_r"><math id="S3.SS1.p4.m31" class="ltx_Math" alttext="[\mathbb{B}^{n}]" display="inline"><mrow><mo stretchy="false">[</mo><msup><mi>𝔹</mi><mi>n</mi></msup><mo stretchy="false">]</mo></mrow></math></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_border_l ltx_border_r"></td>
+<td class="ltx_td ltx_align_left ltx_border_r"><math id="S3.SS1.p4.m32" class="ltx_Math" alttext="(A,(A\to\mathbb{B}))" display="inline"><mrow><mo stretchy="false">(</mo><mi>A</mi><mo>,</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo>→</mo><mi>𝔹</mi><mo stretchy="false">)</mo></mrow><mo stretchy="false">)</mo></mrow></math></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_border_b ltx_border_l ltx_border_r"></td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r"><math id="S3.SS1.p4.m33" class="ltx_Math" alttext="[a_{1},\ldots,a_{n}]" display="inline"><mrow><mo stretchy="false">[</mo><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="false">]</mo></mrow></math></td>
+<td class="ltx_td ltx_border_b ltx_border_r"></td>
+<td class="ltx_td ltx_border_b ltx_border_r"></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="S3.SS2" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">3.2 </span>Special classes of propositions</h3>
+
+<div id="S3.SS2.p1" class="ltx_para">
+<p class="ltx_p">A <span class="ltx_text ltx_font_italic">basic proposition</span>, <span class="ltx_text ltx_font_italic">coordinate proposition</span>, or <span class="ltx_text ltx_font_italic">simple proposition</span> in the universe of discourse <math id="S3.SS2.p1.m1" class="ltx_Math" alttext="[a_{1},\ldots,a_{n}]" display="inline"><mrow><mo stretchy="false">[</mo><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="false">]</mo></mrow></math> is one of the propositions in the set <math id="S3.SS2.p1.m2" class="ltx_Math" alttext="\{a_{1},\ldots,a_{n}\}." display="inline"><mrow><mrow><mo stretchy="false">{</mo><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="false">}</mo></mrow><mo>.</mo></mrow></math></p>
+</div>
+<div id="S3.SS2.p2" class="ltx_para">
+<p class="ltx_p">Among the <math id="S3.SS2.p2.m1" class="ltx_Math" alttext="2^{2^{n}}" display="inline"><msup><mn>2</mn><msup><mn>2</mn><mi>n</mi></msup></msup></math> propositions in <math id="S3.SS2.p2.m2" class="ltx_Math" alttext="[a_{1},\ldots,a_{n}]" display="inline"><mrow><mo stretchy="false">[</mo><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="false">]</mo></mrow></math> are several families of <math id="S3.SS2.p2.m3" class="ltx_Math" alttext="2^{n}" display="inline"><msup><mn>2</mn><mi>n</mi></msup></math> propositions each that take on special forms with respect to the basis <math id="S3.SS2.p2.m4" class="ltx_Math" alttext="\{a_{1},\ldots,a_{n}\}." display="inline"><mrow><mrow><mo stretchy="false">{</mo><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="false">}</mo></mrow><mo>.</mo></mrow></math> Three of these families are especially prominent in the present context, the <span class="ltx_text ltx_font_italic">linear</span>, the <span class="ltx_text ltx_font_italic">positive</span>, and the <span class="ltx_text ltx_font_italic">singular</span> propositions. Each family is naturally parameterized by the coordinate <math id="S3.SS2.p2.m5" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>-tuples in <math id="S3.SS2.p2.m6" class="ltx_Math" alttext="\mathbb{B}^{n}" display="inline"><msup><mi>𝔹</mi><mi>n</mi></msup></math> and falls into <math id="S3.SS2.p2.m7" class="ltx_Math" alttext="n+1" display="inline"><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></math> ranks, with a binomial coefficient <math id="S3.SS2.p2.m8" class="ltx_Math" alttext="\binom{n}{k}" display="inline"><mrow><mo>(</mo><mfrac linethickness="0pt"><mi>n</mi><mi>k</mi></mfrac><mo>)</mo></mrow></math> giving the number of propositions that have rank or weight <math id="S3.SS2.p2.m9" class="ltx_Math" alttext="k." display="inline"><mrow><mi>k</mi><mo>.</mo></mrow></math></p>
+</div>
+<div id="S3.SS2.p3" class="ltx_para">
+<ul id="I3" class="ltx_itemize">
+<li id="I3.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I3.i1.p1" class="ltx_para">
+<p class="ltx_p">The <span class="ltx_text ltx_font_italic">linear propositions</span>, <math id="I3.i1.p1.m1" class="ltx_Math" alttext="\{\ell:\mathbb{B}^{n}\to\mathbb{B}\}=(\mathbb{B}^{n}\xrightarrow{\ell}\mathbb{%
+B})," display="inline"><mrow><mrow><mo stretchy="false">{</mo><mi mathvariant="normal">ℓ</mi><mo>:</mo><msup><mi>𝔹</mi><mi>n</mi></msup><mo>→</mo><mi>𝔹</mi><mo stretchy="false">}</mo></mrow><mo>=</mo><mrow><mo stretchy="false">(</mo><msup><mi>𝔹</mi><mi>n</mi></msup><mover accent="true"><mo>→</mo><mo>ℓ</mo></mover><mi>𝔹</mi><mo stretchy="false">)</mo></mrow><mo>,</mo></mrow></math> may be expressed as sums:</p>
+</div>
+<div id="I3.i1.p2" class="ltx_para">
+<blockquote class="ltx_quote">
+<p class="ltx_p"><math id="I3.i1.p2.m1" class="ltx_Math" alttext="\begin{matrix}\sum_{i=1}^{n}e_{i}&amp;=&amp;e_{1}+\ldots+e_{n}&amp;\operatorname{where}&amp;e_%
+{i}=a_{i}&amp;\operatorname{or}&amp;e_{i}=0&amp;\operatorname{for}\ i=1\ \operatorname{to}%
+\ n.\\
+\end{matrix}" display="inline"><mtable columnspacing="5pt"><mtr><mtd columnalign="center"><mrow><msubsup><mo largeop="true" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><msub><mi>e</mi><mi>i</mi></msub></mrow></mtd><mtd columnalign="center"><mo>=</mo></mtd><mtd columnalign="center"><mrow><msub><mi>e</mi><mn>1</mn></msub><mo>+</mo><mi mathvariant="normal">…</mi><mo>+</mo><msub><mi>e</mi><mi>n</mi></msub></mrow></mtd><mtd columnalign="center"><mi>where</mi></mtd><mtd columnalign="center"><mrow><msub><mi>e</mi><mi>i</mi></msub><mo>=</mo><msub><mi>a</mi><mi>i</mi></msub></mrow></mtd><mtd columnalign="center"><mi>or</mi></mtd><mtd columnalign="center"><mrow><msub><mi>e</mi><mi>i</mi></msub><mo>=</mo><mn>0</mn></mrow></mtd><mtd columnalign="center"><mrow><mrow><mrow><mpadded width="+5pt"><mi>for</mi></mpadded><mo>⁡</mo><mi>i</mi></mrow><mo>=</mo><mrow><mpadded width="+5pt"><mn>1</mn></mpadded><mo>⁢</mo><mrow><mpadded width="+5pt"><mi>to</mi></mpadded><mo>⁡</mo><mi>n</mi></mrow></mrow></mrow><mo>.</mo></mrow></mtd></mtr></mtable></math></p>
+</blockquote>
+</div>
+</li>
+<li id="I3.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I3.i2.p1" class="ltx_para">
+<p class="ltx_p">The <span class="ltx_text ltx_font_italic">positive propositions</span>, <math id="I3.i2.p1.m1" class="ltx_Math" alttext="\{p:\mathbb{B}^{n}\to\mathbb{B}\}=(\mathbb{B}^{n}\xrightarrow{p}\mathbb{B})," display="inline"><mrow><mrow><mo stretchy="false">{</mo><mi>p</mi><mo>:</mo><msup><mi>𝔹</mi><mi>n</mi></msup><mo>→</mo><mi>𝔹</mi><mo stretchy="false">}</mo></mrow><mo>=</mo><mrow><mo stretchy="false">(</mo><msup><mi>𝔹</mi><mi>n</mi></msup><mover accent="true"><mo>→</mo><mo>𝑝</mo></mover><mi>𝔹</mi><mo stretchy="false">)</mo></mrow><mo>,</mo></mrow></math> may be expressed as products:</p>
+</div>
+<div id="I3.i2.p2" class="ltx_para">
+<blockquote class="ltx_quote">
+<p class="ltx_p"><math id="I3.i2.p2.m1" class="ltx_Math" alttext="\begin{matrix}\prod_{i=1}^{n}e_{i}&amp;=&amp;e_{1}\cdot\ldots\cdot e_{n}&amp;\operatorname%
+{where}&amp;e_{i}=a_{i}&amp;\operatorname{or}&amp;e_{i}=1&amp;\operatorname{for}\ i=1\ %
+\operatorname{to}\ n.\\
+\end{matrix}" display="inline"><mtable columnspacing="5pt"><mtr><mtd columnalign="center"><mrow><msubsup><mo largeop="true" symmetric="true">∏</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><msub><mi>e</mi><mi>i</mi></msub></mrow></mtd><mtd columnalign="center"><mo>=</mo></mtd><mtd columnalign="center"><mrow><msub><mi>e</mi><mn>1</mn></msub><mo>⋅</mo><mi mathvariant="normal">…</mi><mo>⋅</mo><msub><mi>e</mi><mi>n</mi></msub></mrow></mtd><mtd columnalign="center"><mi>where</mi></mtd><mtd columnalign="center"><mrow><msub><mi>e</mi><mi>i</mi></msub><mo>=</mo><msub><mi>a</mi><mi>i</mi></msub></mrow></mtd><mtd columnalign="center"><mi>or</mi></mtd><mtd columnalign="center"><mrow><msub><mi>e</mi><mi>i</mi></msub><mo>=</mo><mn>1</mn></mrow></mtd><mtd columnalign="center"><mrow><mrow><mrow><mpadded width="+5pt"><mi>for</mi></mpadded><mo>⁡</mo><mi>i</mi></mrow><mo>=</mo><mrow><mpadded width="+5pt"><mn>1</mn></mpadded><mo>⁢</mo><mrow><mpadded width="+5pt"><mi>to</mi></mpadded><mo>⁡</mo><mi>n</mi></mrow></mrow></mrow><mo>.</mo></mrow></mtd></mtr></mtable></math></p>
+</blockquote>
+</div>
+</li>
+<li id="I3.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I3.i3.p1" class="ltx_para">
+<p class="ltx_p">The <span class="ltx_text ltx_font_italic">singular propositions</span>, <math id="I3.i3.p1.m1" class="ltx_Math" alttext="\{\mathbf{x}:\mathbb{B}^{n}\to\mathbb{B}\}=(\mathbb{B}^{n}\xrightarrow{s}%
+\mathbb{B})," display="inline"><mrow><mrow><mo stretchy="false">{</mo><mi>𝐱</mi><mo>:</mo><msup><mi>𝔹</mi><mi>n</mi></msup><mo>→</mo><mi>𝔹</mi><mo stretchy="false">}</mo></mrow><mo>=</mo><mrow><mo stretchy="false">(</mo><msup><mi>𝔹</mi><mi>n</mi></msup><mover accent="true"><mo>→</mo><mo>𝑠</mo></mover><mi>𝔹</mi><mo stretchy="false">)</mo></mrow><mo>,</mo></mrow></math> may be expressed as products:</p>
+</div>
+<div id="I3.i3.p2" class="ltx_para">
+<blockquote class="ltx_quote">
+<p class="ltx_p"><math id="I3.i3.p2.m1" class="ltx_Math" alttext="\begin{matrix}\prod_{i=1}^{n}e_{i}&amp;=&amp;e_{1}\cdot\ldots\cdot e_{n}&amp;\operatorname%
+{where}&amp;e_{i}=a_{i}&amp;\operatorname{or}&amp;e_{i}=(a_{i})&amp;\operatorname{for}\ i=1\ %
+\operatorname{to}\ n.\\
+\end{matrix}" display="inline"><mtable columnspacing="5pt"><mtr><mtd columnalign="center"><mrow><msubsup><mo largeop="true" symmetric="true">∏</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><msub><mi>e</mi><mi>i</mi></msub></mrow></mtd><mtd columnalign="center"><mo>=</mo></mtd><mtd columnalign="center"><mrow><msub><mi>e</mi><mn>1</mn></msub><mo>⋅</mo><mi mathvariant="normal">…</mi><mo>⋅</mo><msub><mi>e</mi><mi>n</mi></msub></mrow></mtd><mtd columnalign="center"><mi>where</mi></mtd><mtd columnalign="center"><mrow><msub><mi>e</mi><mi>i</mi></msub><mo>=</mo><msub><mi>a</mi><mi>i</mi></msub></mrow></mtd><mtd columnalign="center"><mi>or</mi></mtd><mtd columnalign="center"><mrow><msub><mi>e</mi><mi>i</mi></msub><mo>=</mo><mrow><mo stretchy="false">(</mo><msub><mi>a</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mtd><mtd columnalign="center"><mrow><mrow><mrow><mpadded width="+5pt"><mi>for</mi></mpadded><mo>⁡</mo><mi>i</mi></mrow><mo>=</mo><mrow><mpadded width="+5pt"><mn>1</mn></mpadded><mo>⁢</mo><mrow><mpadded width="+5pt"><mi>to</mi></mpadded><mo>⁡</mo><mi>n</mi></mrow></mrow></mrow><mo>.</mo></mrow></mtd></mtr></mtable></math></p>
+</blockquote>
+</div>
+</li>
+</ul>
+</div>
+<div id="S3.SS2.p4" class="ltx_para">
+<p class="ltx_p">In each case the rank <math id="S3.SS2.p4.m1" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math> ranges from <math id="S3.SS2.p4.m2" class="ltx_Math" alttext="0" display="inline"><mn>0</mn></math> to <math id="S3.SS2.p4.m3" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> and counts the number of positive appearances of the coordinate propositions <math id="S3.SS2.p4.m4" class="ltx_Math" alttext="a_{1},\ldots,a_{n}" display="inline"><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>a</mi><mi>n</mi></msub></mrow></math> in the resulting expression. For example, for <math id="S3.SS2.p4.m5" class="ltx_Math" alttext="n=3," display="inline"><mrow><mrow><mi>n</mi><mo>=</mo><mn>3</mn></mrow><mo>,</mo></mrow></math> the linear proposition of rank <math id="S3.SS2.p4.m6" class="ltx_Math" alttext="0" display="inline"><mn>0</mn></math> is <math id="S3.SS2.p4.m7" class="ltx_Math" alttext="0," display="inline"><mrow><mn>0</mn><mo>,</mo></mrow></math> the positive proposition of rank <math id="S3.SS2.p4.m8" class="ltx_Math" alttext="0" display="inline"><mn>0</mn></math> is <math id="S3.SS2.p4.m9" class="ltx_Math" alttext="1," display="inline"><mrow><mn>1</mn><mo>,</mo></mrow></math> and the singular proposition of rank <math id="S3.SS2.p4.m10" class="ltx_Math" alttext="0" display="inline"><mn>0</mn></math> is <math id="S3.SS2.p4.m11" class="ltx_Math" alttext="(a_{1})(a_{2})(a_{3})." display="inline"><mrow><mrow><mrow><mo stretchy="false">(</mo><msub><mi>a</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>a</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>a</mi><mn>3</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>.</mo></mrow></math></p>
+</div>
+<div id="S3.SS2.p5" class="ltx_para">
+<p class="ltx_p">The basic propositions <math id="S3.SS2.p5.m1" class="ltx_Math" alttext="a_{i}:\mathbb{B}^{n}\to\mathbb{B}" display="inline"><mrow><msub><mi>a</mi><mi>i</mi></msub><mo>:</mo><mrow><msup><mi>𝔹</mi><mi>n</mi></msup><mo>→</mo><mi>𝔹</mi></mrow></mrow></math> are both linear and positive. So these two kinds of propositions, the linear and the positive, may be viewed as two different ways of generalizing the class of basic propositions.</p>
+</div>
+<div id="S3.SS2.p6" class="ltx_para">
+<p class="ltx_p">Finally, it is important to note that all of the above distinctions are relative to the choice of a particular logical basis <math id="S3.SS2.p6.m1" class="ltx_Math" alttext="\mathcal{A}=\{a_{1},\ldots,a_{n}\}." display="inline"><mrow><mrow><mi class="ltx_font_mathcaligraphic">𝒜</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="false">}</mo></mrow></mrow><mo>.</mo></mrow></math> For example, a singular proposition with respect to the basis <math id="S3.SS2.p6.m2" class="ltx_Math" alttext="\mathcal{A}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒜</mi></math> will not remain singular if <math id="S3.SS2.p6.m3" class="ltx_Math" alttext="\mathcal{A}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒜</mi></math> is extended by a number of new and independent features. Even if one keeps to the original set of pairwise options <math id="S3.SS2.p6.m4" class="ltx_Math" alttext="\{a_{i}\}\cup\{(a_{i})\}" display="inline"><mrow><mrow><mo stretchy="false">{</mo><msub><mi>a</mi><mi>i</mi></msub><mo stretchy="false">}</mo></mrow><mo>∪</mo><mrow><mo stretchy="false">{</mo><mrow><mo stretchy="false">(</mo><msub><mi>a</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow><mo stretchy="false">}</mo></mrow></mrow></math> to pick out a new basis, the sets of linear propositions and positive propositions are both determined by the choice of basic propositions, and this whole determination is tantamount to the purely conventional choice of a cell as origin.</p>
+</div>
+</section>
+<section id="S3.SS3" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">3.3 </span>Differential extensions</h3>
+
+<div id="S3.SS3.p1" class="ltx_para">
+<p class="ltx_p">An initial universe of discourse, <math id="S3.SS3.p1.m1" class="ltx_Math" alttext="A^{\circ}" display="inline"><msup><mi>A</mi><mo>∘</mo></msup></math>, supplies the groundwork for any number of further extensions, beginning with the <span class="ltx_text ltx_font_italic">first order differential extension</span>, <math id="S3.SS3.p1.m2" class="ltx_Math" alttext="\operatorname{E}A^{\circ}." display="inline"><mrow><mrow><mi mathvariant="normal">E</mi><mo>⁡</mo><msup><mi>A</mi><mo>∘</mo></msup></mrow><mo>.</mo></mrow></math> The construction of <math id="S3.SS3.p1.m3" class="ltx_Math" alttext="\operatorname{E}A^{\circ}" display="inline"><mrow><mi mathvariant="normal">E</mi><mo>⁡</mo><msup><mi>A</mi><mo>∘</mo></msup></mrow></math> can be described in the following stages:</p>
+</div>
+<div id="S3.SS3.p2" class="ltx_para">
+<ul id="I4" class="ltx_itemize">
+<li id="I4.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I4.i1.p1" class="ltx_para">
+<p class="ltx_p">The initial alphabet, <math id="I4.i1.p1.m1" class="ltx_Math" alttext='\mathfrak{A}=\{``a_{1}",\ldots,``a_{n}"\},' display="inline"><mrow><mrow><mi>𝔄</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi mathvariant="normal">`</mi><mo>⁢</mo><mi mathvariant="normal">`</mi><mo>⁢</mo><msub><mi>a</mi><mn>1</mn></msub><mo>⁢</mo><mi mathvariant="normal">"</mi></mrow><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><mi mathvariant="normal">`</mi><mo>⁢</mo><mi mathvariant="normal">`</mi><mo>⁢</mo><msub><mi>a</mi><mi>n</mi></msub><mo>⁢</mo><mi mathvariant="normal">"</mi></mrow><mo stretchy="false">}</mo></mrow></mrow><mo>,</mo></mrow></math> is extended by a <span class="ltx_text ltx_font_italic">first order differential alphabet</span>, <math id="I4.i1.p1.m2" class="ltx_Math" alttext='\operatorname{d}\mathfrak{A}=\{``\operatorname{d}a_{1}",\ldots,``\operatorname%
+{d}a_{n}"\},' display="inline"><mrow><mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>𝔄</mi></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi mathvariant="normal">`</mi><mo>⁢</mo><mi mathvariant="normal">`</mi><mo>⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>⁢</mo><mi mathvariant="normal">"</mi></mrow></mrow></mrow><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><mi mathvariant="normal">`</mi><mo>⁢</mo><mi mathvariant="normal">`</mi><mo>⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mrow><msub><mi>a</mi><mi>n</mi></msub><mo>⁢</mo><mi mathvariant="normal">"</mi></mrow></mrow></mrow><mo stretchy="false">}</mo></mrow></mrow><mo>,</mo></mrow></math> resulting in a <span class="ltx_text ltx_font_italic">first order extended alphabet</span>, <math id="I4.i1.p1.m3" class="ltx_Math" alttext="\operatorname{E}\mathfrak{A}," display="inline"><mrow><mrow><mi mathvariant="normal">E</mi><mo>⁡</mo><mi>𝔄</mi></mrow><mo>,</mo></mrow></math> defined as follows:</p>
+</div>
+<div id="I4.i1.p2" class="ltx_para">
+<blockquote class="ltx_quote">
+<p class="ltx_p"><math id="I4.i1.p2.m1" class="ltx_Math" alttext='\operatorname{E}\mathfrak{A}=\mathfrak{A}\ \cup\ \operatorname{d}\mathfrak{A}=%
+\{``a_{1}",\ldots,``a_{n}",``\operatorname{d}a_{1}",\ldots,``\operatorname{d}a%
+_{n}"\}.' display="inline"><mrow><mrow><mrow><mi mathvariant="normal">E</mi><mo>⁡</mo><mi>𝔄</mi></mrow><mo>=</mo><mrow><mpadded width="+5pt"><mi>𝔄</mi></mpadded><mo rspace="7.5pt">∪</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>𝔄</mi></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi mathvariant="normal">`</mi><mo>⁢</mo><mi mathvariant="normal">`</mi><mo>⁢</mo><msub><mi>a</mi><mn>1</mn></msub><mo>⁢</mo><mi mathvariant="normal">"</mi></mrow><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><mi mathvariant="normal">`</mi><mo>⁢</mo><mi mathvariant="normal">`</mi><mo>⁢</mo><msub><mi>a</mi><mi>n</mi></msub><mo>⁢</mo><mi mathvariant="normal">"</mi></mrow><mo>,</mo><mrow><mi mathvariant="normal">`</mi><mo>⁢</mo><mi mathvariant="normal">`</mi><mo>⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>⁢</mo><mi mathvariant="normal">"</mi></mrow></mrow></mrow><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><mi mathvariant="normal">`</mi><mo>⁢</mo><mi mathvariant="normal">`</mi><mo>⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mrow><msub><mi>a</mi><mi>n</mi></msub><mo>⁢</mo><mi mathvariant="normal">"</mi></mrow></mrow></mrow><mo stretchy="false">}</mo></mrow></mrow><mo>.</mo></mrow></math></p>
+</blockquote>
+</div>
+</li>
+<li id="I4.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I4.i2.p1" class="ltx_para">
+<p class="ltx_p">The initial basis, <math id="I4.i2.p1.m1" class="ltx_Math" alttext="\mathcal{A}=\{a_{1},\ldots,a_{n}\}," display="inline"><mrow><mrow><mi class="ltx_font_mathcaligraphic">𝒜</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="false">}</mo></mrow></mrow><mo>,</mo></mrow></math> is extended by a <span class="ltx_text ltx_font_italic">first order differential basis</span>, <math id="I4.i2.p1.m2" class="ltx_Math" alttext="\operatorname{d}\mathcal{A}=\{\operatorname{d}a_{1},\ldots,\operatorname{d}a_{%
+n}\}," display="inline"><mrow><mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi class="ltx_font_mathcaligraphic">𝒜</mi></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><msub><mi>a</mi><mn>1</mn></msub></mrow><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><msub><mi>a</mi><mi>n</mi></msub></mrow><mo stretchy="false">}</mo></mrow></mrow><mo>,</mo></mrow></math> resulting in a <span class="ltx_text ltx_font_italic">first order extended basis</span>, <math id="I4.i2.p1.m3" class="ltx_Math" alttext="\operatorname{E}\mathcal{A}," display="inline"><mrow><mrow><mi mathvariant="normal">E</mi><mo>⁡</mo><mi class="ltx_font_mathcaligraphic">𝒜</mi></mrow><mo>,</mo></mrow></math> defined as follows:</p>
+</div>
+<div id="I4.i2.p2" class="ltx_para">
+<blockquote class="ltx_quote">
+<p class="ltx_p"><math id="I4.i2.p2.m1" class="ltx_Math" alttext="\operatorname{E}\mathcal{A}=\mathcal{A}\ \cup\ \operatorname{d}\mathcal{A}=\{a%
+_{1},\ldots,a_{n},\operatorname{d}a_{1},\ldots,\operatorname{d}a_{n}\}." display="inline"><mrow><mrow><mrow><mi mathvariant="normal">E</mi><mo>⁡</mo><mi class="ltx_font_mathcaligraphic">𝒜</mi></mrow><mo>=</mo><mrow><mpadded width="+5pt"><mi class="ltx_font_mathcaligraphic">𝒜</mi></mpadded><mo rspace="7.5pt">∪</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi class="ltx_font_mathcaligraphic">𝒜</mi></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>a</mi><mi>n</mi></msub><mo>,</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><msub><mi>a</mi><mn>1</mn></msub></mrow><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><msub><mi>a</mi><mi>n</mi></msub></mrow><mo stretchy="false">}</mo></mrow></mrow><mo>.</mo></mrow></math></p>
+</blockquote>
+</div>
+</li>
+<li id="I4.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I4.i3.p1" class="ltx_para">
+<p class="ltx_p">The initial space, <math id="I4.i3.p1.m1" class="ltx_Math" alttext="A=\langle a_{1},\ldots,a_{n}\rangle," display="inline"><mrow><mrow><mi>A</mi><mo>=</mo><mrow><mo stretchy="false">⟨</mo><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="false">⟩</mo></mrow></mrow><mo>,</mo></mrow></math> is extended by a <span class="ltx_text ltx_font_italic">first order differential space</span> or <span class="ltx_text ltx_font_italic">tangent space</span>, <math id="I4.i3.p1.m2" class="ltx_Math" alttext="\operatorname{d}A=\langle\operatorname{d}a_{1},\ldots,\operatorname{d}a_{n}\rangle," display="inline"><mrow><mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>A</mi></mrow><mo>=</mo><mrow><mo stretchy="false">⟨</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><msub><mi>a</mi><mn>1</mn></msub></mrow><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><msub><mi>a</mi><mi>n</mi></msub></mrow><mo stretchy="false">⟩</mo></mrow></mrow><mo>,</mo></mrow></math> at each point of <math id="I4.i3.p1.m3" class="ltx_Math" alttext="A," display="inline"><mrow><mi>A</mi><mo>,</mo></mrow></math> resulting in a <span class="ltx_text ltx_font_italic">first order extended space</span> or <span class="ltx_text ltx_font_italic">tangent bundle space</span>, <math id="I4.i3.p1.m4" class="ltx_Math" alttext="\operatorname{E}A," display="inline"><mrow><mrow><mi mathvariant="normal">E</mi><mo>⁡</mo><mi>A</mi></mrow><mo>,</mo></mrow></math> defined as follows:</p>
+</div>
+<div id="I4.i3.p2" class="ltx_para">
+<blockquote class="ltx_quote">
+<p class="ltx_p"><math id="I4.i3.p2.m1" class="ltx_Math" alttext="\operatorname{E}A=A\ \times\ \operatorname{d}A=\langle\operatorname{E}\mathcal%
+{A}\rangle=\langle\mathcal{A}\ \cup\ \operatorname{d}\mathcal{A}\rangle=%
+\langle a_{1},\ldots,a_{n},\operatorname{d}a_{1},\ldots,\operatorname{d}a_{n}\rangle." display="inline"><mrow><mrow><mrow><mi mathvariant="normal">E</mi><mo>⁡</mo><mi>A</mi></mrow><mo>=</mo><mrow><mpadded width="+5pt"><mi>A</mi></mpadded><mo rspace="7.5pt">×</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>A</mi></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">⟨</mo><mrow><mi mathvariant="normal">E</mi><mo>⁡</mo><mi class="ltx_font_mathcaligraphic">𝒜</mi></mrow><mo stretchy="false">⟩</mo></mrow><mo>=</mo><mrow><mo stretchy="false">⟨</mo><mrow><mpadded width="+5pt"><mi class="ltx_font_mathcaligraphic">𝒜</mi></mpadded><mo rspace="7.5pt">∪</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi class="ltx_font_mathcaligraphic">𝒜</mi></mrow></mrow><mo stretchy="false">⟩</mo></mrow><mo>=</mo><mrow><mo stretchy="false">⟨</mo><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>a</mi><mi>n</mi></msub><mo>,</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><msub><mi>a</mi><mn>1</mn></msub></mrow><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><msub><mi>a</mi><mi>n</mi></msub></mrow><mo stretchy="false">⟩</mo></mrow></mrow><mo>.</mo></mrow></math></p>
+</blockquote>
+</div>
+</li>
+<li id="I4.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I4.i4.p1" class="ltx_para">
+<p class="ltx_p">Finally, the initial universe, <math id="I4.i4.p1.m1" class="ltx_Math" alttext="A^{\circ}=[a_{1},\ldots,a_{n}]," display="inline"><mrow><mrow><msup><mi>A</mi><mo>∘</mo></msup><mo>=</mo><mrow><mo stretchy="false">[</mo><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="false">]</mo></mrow></mrow><mo>,</mo></mrow></math> is extended by a <span class="ltx_text ltx_font_italic">first order differential universe</span> or <span class="ltx_text ltx_font_italic">tangent universe</span>, <math id="I4.i4.p1.m2" class="ltx_Math" alttext="\operatorname{d}A^{\circ}=[\operatorname{d}a_{1},\ldots,\operatorname{d}a_{n}]," display="inline"><mrow><mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><msup><mi>A</mi><mo>∘</mo></msup></mrow><mo>=</mo><mrow><mo stretchy="false">[</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><msub><mi>a</mi><mn>1</mn></msub></mrow><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><msub><mi>a</mi><mi>n</mi></msub></mrow><mo stretchy="false">]</mo></mrow></mrow><mo>,</mo></mrow></math> at each point of <math id="I4.i4.p1.m3" class="ltx_Math" alttext="A^{\circ}," display="inline"><mrow><msup><mi>A</mi><mo>∘</mo></msup><mo>,</mo></mrow></math> resulting in a <span class="ltx_text ltx_font_italic">first order extended universe</span> or <span class="ltx_text ltx_font_italic">tangent bundle universe</span>, <math id="I4.i4.p1.m4" class="ltx_Math" alttext="\operatorname{E}A^{\circ}," display="inline"><mrow><mrow><mi mathvariant="normal">E</mi><mo>⁡</mo><msup><mi>A</mi><mo>∘</mo></msup></mrow><mo>,</mo></mrow></math> defined as follows:</p>
+</div>
+<div id="I4.i4.p2" class="ltx_para">
+<blockquote class="ltx_quote">
+<p class="ltx_p"><math id="I4.i4.p2.m1" class="ltx_Math" alttext="\operatorname{E}A^{\circ}=[\operatorname{E}\mathcal{A}]=[\mathcal{A}\ \cup\ %
+\operatorname{d}\mathcal{A}]=[a_{1},\ldots,a_{n},\operatorname{d}a_{1},\ldots,%
+\operatorname{d}a_{n}]." display="inline"><mrow><mrow><mrow><mi mathvariant="normal">E</mi><mo>⁡</mo><msup><mi>A</mi><mo>∘</mo></msup></mrow><mo>=</mo><mrow><mo stretchy="false">[</mo><mrow><mi mathvariant="normal">E</mi><mo>⁡</mo><mi class="ltx_font_mathcaligraphic">𝒜</mi></mrow><mo stretchy="false">]</mo></mrow><mo>=</mo><mrow><mo stretchy="false">[</mo><mrow><mpadded width="+5pt"><mi class="ltx_font_mathcaligraphic">𝒜</mi></mpadded><mo rspace="7.5pt">∪</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi class="ltx_font_mathcaligraphic">𝒜</mi></mrow></mrow><mo stretchy="false">]</mo></mrow><mo>=</mo><mrow><mo stretchy="false">[</mo><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>a</mi><mi>n</mi></msub><mo>,</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><msub><mi>a</mi><mn>1</mn></msub></mrow><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><msub><mi>a</mi><mi>n</mi></msub></mrow><mo stretchy="false">]</mo></mrow></mrow><mo>.</mo></mrow></math></p>
+</blockquote>
+</div>
+<div id="I4.i4.p3" class="ltx_para">
+<p class="ltx_p">This gives <math id="I4.i4.p3.m1" class="ltx_Math" alttext="\operatorname{E}A^{\circ}" display="inline"><mrow><mi mathvariant="normal">E</mi><mo>⁡</mo><msup><mi>A</mi><mo>∘</mo></msup></mrow></math> the type:</p>
+</div>
+<div id="I4.i4.p4" class="ltx_para">
+<blockquote class="ltx_quote">
+<p class="ltx_p"><math id="I4.i4.p4.m1" class="ltx_Math" alttext="[\mathbb{B}^{n}\times\mathbb{D}^{n}]=(\mathbb{B}^{n}\times\mathbb{D}^{n}\ +\!%
+\to\mathbb{B})=(\mathbb{B}^{n}\times\mathbb{D}^{n},\mathbb{B}^{n}\times\mathbb%
+{D}^{n}\to\mathbb{B})." display="inline"><mrow><mrow><mo stretchy="false">[</mo><msup><mi>𝔹</mi><mi>n</mi></msup><mo>×</mo><msup><mi>𝔻</mi><mi>n</mi></msup><mo stretchy="false">]</mo></mrow><mo>=</mo><mrow><mo stretchy="false">(</mo><msup><mi>𝔹</mi><mi>n</mi></msup><mo>×</mo><mpadded width="+5pt"><msup><mi>𝔻</mi><mi>n</mi></msup></mpadded><mo rspace="0.8pt">+</mo><mo>→</mo><mi>𝔹</mi><mo stretchy="false">)</mo></mrow><mo>=</mo><mrow><mo stretchy="false">(</mo><msup><mi>𝔹</mi><mi>n</mi></msup><mo>×</mo><msup><mi>𝔻</mi><mi>n</mi></msup><mo>,</mo><msup><mi>𝔹</mi><mi>n</mi></msup><mo>×</mo><msup><mi>𝔻</mi><mi>n</mi></msup><mo>→</mo><mi>𝔹</mi><mo stretchy="false">)</mo></mrow><mo>.</mo></mrow></math></p>
+</blockquote>
+</div>
+</li>
+</ul>
+</div>
+<div id="S3.SS3.p3" class="ltx_para">
+<p class="ltx_p">A proposition in a differential extension of a universe of discourse is called a <span class="ltx_text ltx_font_italic">differential proposition</span> and forms the analogue of a system of differential equations in ordinary calculus (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/Calculus</span>). With these constructions, the first order extended universe <math id="S3.SS3.p3.m1" class="ltx_Math" alttext="\operatorname{E}A^{\circ}" display="inline"><mrow><mi mathvariant="normal">E</mi><mo>⁡</mo><msup><mi>A</mi><mo>∘</mo></msup></mrow></math> and the first order differential proposition <math id="S3.SS3.p3.m2" class="ltx_Math" alttext="f:\operatorname{E}A\to\mathbb{B}," display="inline"><mrow><mrow><mi>f</mi><mo>:</mo><mrow><mrow><mi mathvariant="normal">E</mi><mo>⁡</mo><mi>A</mi></mrow><mo>→</mo><mi>𝔹</mi></mrow></mrow><mo>,</mo></mrow></math> we have arrived, in concept at least, at the foothills of differential logic.</p>
+</div>
+<div id="S3.SS3.p4" class="ltx_para">
+<p class="ltx_p">Table 6 summarizes the notations that are needed to describe the first order differential extensions of propositional calculi in a systematic manner.</p>
+</div>
+<div id="S3.SS3.p5" class="ltx_para ltx_centering">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<thead class="ltx_thead">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_center ltx_th ltx_th_column" colspan="4"><span class="ltx_text ltx_font_bold">Table 6. Differential Extension : Basic Notation</span></th>
+</tr>
+</thead>
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_r ltx_border_t">
+<br class="ltx_break"><span class="ltx_text ltx_font_bold">Symbol</span>
+</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t"><span class="ltx_text ltx_font_bold">Notation</span></td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t"><span class="ltx_text ltx_font_bold">Description</span></td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t"><span class="ltx_text ltx_font_bold">Type</span></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_r ltx_border_t">
+<br class="ltx_break"><math id="S3.SS3.p5.m1" class="ltx_Math" alttext="\operatorname{d}\mathfrak{A}" display="inline"><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>𝔄</mi></mrow></math>
+</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t"><math id="S3.SS3.p5.m2" class="ltx_Math" alttext='\{``\operatorname{d}a_{1}",\ldots,``\operatorname{d}a_{n}"\}' display="inline"><mrow><mo stretchy="false">{</mo><mrow><mi mathvariant="normal">`</mi><mo>⁢</mo><mi mathvariant="normal">`</mi><mo>⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>⁢</mo><mi mathvariant="normal">"</mi></mrow></mrow></mrow><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><mi mathvariant="normal">`</mi><mo>⁢</mo><mi mathvariant="normal">`</mi><mo>⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mrow><msub><mi>a</mi><mi>n</mi></msub><mo>⁢</mo><mi mathvariant="normal">"</mi></mrow></mrow></mrow><mo stretchy="false">}</mo></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Alphabet of differential symbols</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t"><math id="S3.SS3.p5.m3" class="ltx_Math" alttext="[n]=\mathbf{n}" display="inline"><mrow><mrow><mo stretchy="false">[</mo><mi>n</mi><mo stretchy="false">]</mo></mrow><mo>=</mo><mi>𝐧</mi></mrow></math></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_r ltx_border_t">
+<br class="ltx_break"><math id="S3.SS3.p5.m4" class="ltx_Math" alttext="\operatorname{d}\mathcal{A}" display="inline"><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi class="ltx_font_mathcaligraphic">𝒜</mi></mrow></math>
+</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t"><math id="S3.SS3.p5.m5" class="ltx_Math" alttext="\{\operatorname{d}a_{1},\ldots,\operatorname{d}a_{n}\}" display="inline"><mrow><mo stretchy="false">{</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><msub><mi>a</mi><mn>1</mn></msub></mrow><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><msub><mi>a</mi><mi>n</mi></msub></mrow><mo stretchy="false">}</mo></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Basis of differential features</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t"><math id="S3.SS3.p5.m6" class="ltx_Math" alttext="[n]=\mathbf{n}" display="inline"><mrow><mrow><mo stretchy="false">[</mo><mi>n</mi><mo stretchy="false">]</mo></mrow><mo>=</mo><mi>𝐧</mi></mrow></math></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_r ltx_border_t">
+<br class="ltx_break"><math id="S3.SS3.p5.m7" class="ltx_Math" alttext="\operatorname{d}A_{i}" display="inline"><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><msub><mi>A</mi><mi>i</mi></msub></mrow></math>
+</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t"><math id="S3.SS3.p5.m8" class="ltx_Math" alttext="\{\overline{\operatorname{d}a_{i}},\operatorname{d}a_{i}\}" display="inline"><mrow><mo stretchy="false">{</mo><mover accent="true"><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><msub><mi>a</mi><mi>i</mi></msub></mrow><mo>¯</mo></mover><mo>,</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><msub><mi>a</mi><mi>i</mi></msub></mrow><mo stretchy="false">}</mo></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Differential dimension <math id="S3.SS3.p5.m9" class="ltx_Math" alttext="i" display="inline"><mi>i</mi></math>
+</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t"><math id="S3.SS3.p5.m10" class="ltx_Math" alttext="\mathbb{D}" display="inline"><mi>𝔻</mi></math></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_r ltx_border_t">
+<br class="ltx_break"><math id="S3.SS3.p5.m11" class="ltx_Math" alttext="\operatorname{d}A" display="inline"><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>A</mi></mrow></math>
+</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t"><math id="S3.SS3.p5.m12" class="ltx_Math" alttext="\langle\operatorname{d}\mathcal{A}\rangle" display="inline"><mrow><mo stretchy="false">⟨</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi class="ltx_font_mathcaligraphic">𝒜</mi></mrow><mo stretchy="false">⟩</mo></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Tangent space at a point:</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t"><math id="S3.SS3.p5.m13" class="ltx_Math" alttext="\mathbb{D}^{n}" display="inline"><msup><mi>𝔻</mi><mi>n</mi></msup></math></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_border_l ltx_border_r"></td>
+<td class="ltx_td ltx_align_left ltx_border_r"><math id="S3.SS3.p5.m14" class="ltx_Math" alttext="\langle\operatorname{d}a_{1},\ldots,\operatorname{d}a_{n}\rangle" display="inline"><mrow><mo stretchy="false">⟨</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><msub><mi>a</mi><mn>1</mn></msub></mrow><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><msub><mi>a</mi><mi>n</mi></msub></mrow><mo stretchy="false">⟩</mo></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_border_r">Set of changes,</td>
+<td class="ltx_td ltx_border_r"></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_border_l ltx_border_r"></td>
+<td class="ltx_td ltx_align_left ltx_border_r"><math id="S3.SS3.p5.m15" class="ltx_Math" alttext="\{(\operatorname{d}a_{1},\ldots,\operatorname{d}a_{n})\}" display="inline"><mrow><mo stretchy="false">{</mo><mrow><mo stretchy="false">(</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><msub><mi>a</mi><mn>1</mn></msub></mrow><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><msub><mi>a</mi><mi>n</mi></msub></mrow><mo stretchy="false">)</mo></mrow><mo stretchy="false">}</mo></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_border_r">motions, steps,</td>
+<td class="ltx_td ltx_border_r"></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_border_l ltx_border_r"></td>
+<td class="ltx_td ltx_align_left ltx_border_r"><math id="S3.SS3.p5.m16" class="ltx_Math" alttext="\operatorname{d}A_{1}\times\ldots\times\operatorname{d}A_{n}" display="inline"><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mrow><msub><mi>A</mi><mn>1</mn></msub><mo>×</mo><mi mathvariant="normal">…</mi><mo>×</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><msub><mi>A</mi><mi>n</mi></msub></mrow></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_border_r">tangent vectors</td>
+<td class="ltx_td ltx_border_r"></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_border_l ltx_border_r"></td>
+<td class="ltx_td ltx_align_left ltx_border_r"><math id="S3.SS3.p5.m17" class="ltx_Math" alttext="\textstyle\prod_{i=1}^{n}\operatorname{d}A_{i}" display="inline"><mrow><msubsup><mo largeop="true" symmetric="true">∏</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><msub><mi>A</mi><mi>i</mi></msub></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_border_r">at a point</td>
+<td class="ltx_td ltx_border_r"></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_r ltx_border_t">
+<br class="ltx_break"><math id="S3.SS3.p5.m18" class="ltx_Math" alttext="\operatorname{d}A^{*}" display="inline"><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><msup><mi>A</mi><mo>*</mo></msup></mrow></math>
+</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t"><math id="S3.SS3.p5.m19" class="ltx_Math" alttext="(\operatorname{hom}:\operatorname{d}A\to\mathbb{B})" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mi>hom</mi><mo>:</mo><mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>A</mi></mrow><mo>→</mo><mi>𝔹</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Linear functions on <math id="S3.SS3.p5.m20" class="ltx_Math" alttext="\operatorname{d}A" display="inline"><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>A</mi></mrow></math>
+</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t"><math id="S3.SS3.p5.m21" class="ltx_Math" alttext="(\mathbb{D}^{n})^{*}\cong\mathbb{D}^{n}" display="inline"><mrow><msup><mrow><mo stretchy="false">(</mo><msup><mi>𝔻</mi><mi>n</mi></msup><mo stretchy="false">)</mo></mrow><mo>*</mo></msup><mo>≅</mo><msup><mi>𝔻</mi><mi>n</mi></msup></mrow></math></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_r ltx_border_t">
+<br class="ltx_break"><math id="S3.SS3.p5.m22" class="ltx_Math" alttext="\operatorname{d}A^{\uparrow}" display="inline"><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><msup><mi>A</mi><mo>↑</mo></msup></mrow></math>
+</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t"><math id="S3.SS3.p5.m23" class="ltx_Math" alttext="(\operatorname{d}A\to\mathbb{B})" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>A</mi></mrow><mo>→</mo><mi>𝔹</mi></mrow><mo stretchy="false">)</mo></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Boolean functions on <math id="S3.SS3.p5.m24" class="ltx_Math" alttext="\operatorname{d}A" display="inline"><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>A</mi></mrow></math>
+</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t"><math id="S3.SS3.p5.m25" class="ltx_Math" alttext="\mathbb{D}^{n}\to\mathbb{B}" display="inline"><mrow><msup><mi>𝔻</mi><mi>n</mi></msup><mo>→</mo><mi>𝔹</mi></mrow></math></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_r ltx_border_t">
+<br class="ltx_break"><math id="S3.SS3.p5.m26" class="ltx_Math" alttext="\operatorname{d}A^{\circ}" display="inline"><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><msup><mi>A</mi><mo>∘</mo></msup></mrow></math>
+</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t"><math id="S3.SS3.p5.m27" class="ltx_Math" alttext="[\operatorname{d}\mathcal{A}]" display="inline"><mrow><mo stretchy="false">[</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi class="ltx_font_mathcaligraphic">𝒜</mi></mrow><mo stretchy="false">]</mo></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Tangent universe</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t"><math id="S3.SS3.p5.m28" class="ltx_Math" alttext="(\mathbb{D}^{n},(\mathbb{D}^{n}\to\mathbb{B}))" display="inline"><mrow><mo stretchy="false">(</mo><msup><mi>𝔻</mi><mi>n</mi></msup><mo>,</mo><mrow><mo stretchy="false">(</mo><msup><mi>𝔻</mi><mi>n</mi></msup><mo>→</mo><mi>𝔹</mi><mo stretchy="false">)</mo></mrow><mo stretchy="false">)</mo></mrow></math></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_border_l ltx_border_r"></td>
+<td class="ltx_td ltx_align_left ltx_border_r"><math id="S3.SS3.p5.m29" class="ltx_Math" alttext="(\operatorname{d}A,\operatorname{d}A^{\uparrow})" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>A</mi></mrow><mo>,</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><msup><mi>A</mi><mo>↑</mo></msup></mrow><mo stretchy="false">)</mo></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_border_r">at a point of <math id="S3.SS3.p5.m30" class="ltx_Math" alttext="A^{\circ}," display="inline"><mrow><msup><mi>A</mi><mo>∘</mo></msup><mo>,</mo></mrow></math>
+</td>
+<td class="ltx_td ltx_align_left ltx_border_r"><math id="S3.SS3.p5.m31" class="ltx_Math" alttext="(\mathbb{D}^{n}\ +\!\to\mathbb{B})" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mrow><mpadded width="+5pt"><msup><mi>𝔻</mi><mi>n</mi></msup></mpadded><mo rspace="0.8pt">+</mo></mrow><mo>→</mo><mi>𝔹</mi></mrow><mo stretchy="false">)</mo></mrow></math></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_border_l ltx_border_r"></td>
+<td class="ltx_td ltx_align_left ltx_border_r"><math id="S3.SS3.p5.m32" class="ltx_Math" alttext="(\operatorname{d}A\ +\!\to\mathbb{B})" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mpadded width="+5pt"><mi>A</mi></mpadded></mrow><mo rspace="0.8pt">+</mo></mrow><mo>→</mo><mi>𝔹</mi></mrow><mo stretchy="false">)</mo></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_border_r">based on the</td>
+<td class="ltx_td ltx_align_left ltx_border_r"><math id="S3.SS3.p5.m33" class="ltx_Math" alttext="[\mathbb{D}^{n}]" display="inline"><mrow><mo stretchy="false">[</mo><msup><mi>𝔻</mi><mi>n</mi></msup><mo stretchy="false">]</mo></mrow></math></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_border_l ltx_border_r"></td>
+<td class="ltx_td ltx_align_left ltx_border_r"><math id="S3.SS3.p5.m34" class="ltx_Math" alttext="(\operatorname{d}A,(\operatorname{d}A\to\mathbb{B}))" display="inline"><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">d</mi><mi>A</mi><mo>,</mo><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">d</mi><mi>A</mi><mo>→</mo><mi>𝔹</mi><mo stretchy="false">)</mo></mrow><mo stretchy="false">)</mo></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_border_r">tangent features</td>
+<td class="ltx_td ltx_border_r"></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_border_b ltx_border_l ltx_border_r"></td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r"><math id="S3.SS3.p5.m35" class="ltx_Math" alttext="[\operatorname{d}a_{1},\ldots,\operatorname{d}a_{n}]" display="inline"><mrow><mo stretchy="false">[</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><msub><mi>a</mi><mn>1</mn></msub></mrow><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><msub><mi>a</mi><mi>n</mi></msub></mrow><mo stretchy="false">]</mo></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r"><math id="S3.SS3.p5.m36" class="ltx_Math" alttext="\{\operatorname{d}a_{1},\ldots,\operatorname{d}a_{n}\}" display="inline"><mrow><mo stretchy="false">{</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><msub><mi>a</mi><mn>1</mn></msub></mrow><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><msub><mi>a</mi><mi>n</mi></msub></mrow><mo stretchy="false">}</mo></mrow></math></td>
+<td class="ltx_td ltx_border_b ltx_border_r"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="S3.SS3.p6" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_t">Title</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">differential propositional calculus</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Canonical name</td>
+<td class="ltx_td ltx_align_left ltx_border_r">DifferentialPropositionalCalculus</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Date of creation</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-08-22 21:54:38</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified on</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-08-22 21:54:38</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Owner</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Jon Awbrey (15246)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified by</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Jon Awbrey (15246)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Numerical id</td>
+<td class="ltx_td ltx_align_left ltx_border_r">69</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Author</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Jon Awbrey (15246)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Entry type</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 53A40</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 39A12</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 34G99</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 03B44</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 03B42</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 03B05</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">differential extension of propositional calculus</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Derivation</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">DifferentialField</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">DifferentialGeometry</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">DifferentialLogic</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">FiniteDifference</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">FiniteField</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">MinimalNegationOperator</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">PropositionalCalculus</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">ZerothOrderLogic</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">differential basis</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">differential extension</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">differential feature</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">differential inference</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">differential proposition</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">differential quality</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">differential variable</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">logical transformation</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">source universe</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">target universe</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">tangent universe</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">basic proposition</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 22:24:33 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

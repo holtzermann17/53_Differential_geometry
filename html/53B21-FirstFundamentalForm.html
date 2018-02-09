@@ -1,0 +1,567 @@
+<!DOCTYPE html><html>
+<head>
+<title>first fundamental form</title>
+<!--Generated on Fri Feb  9 22:27:22 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">first fundamental form</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">In classical differential geometry for embedded two-dimensional surfaces <math id="p1.m1" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math> in <math id="p1.m2" class="ltx_Math" alttext="\mathbb{R}^{3}" display="inline"><msup><mi>ℝ</mi><mn>3</mn></msup></math>,
+the Riemannian metric for <math id="p1.m3" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math> induced from the dot product of <math id="p1.m4" class="ltx_Math" alttext="\mathbb{R}^{3}" display="inline"><msup><mi>ℝ</mi><mn>3</mn></msup></math>
+is called the <em class="ltx_emph ltx_font_italic">first fundamental form</em>.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">There are various notations for the first fundamental form;
+a common notation is <math id="p2.m1" class="ltx_Math" alttext="\mathcal{I}" display="inline"><mi class="ltx_font_mathcaligraphic">ℐ</mi></math>,
+for the roman letter one. Thus,</p>
+<table id="S0.E1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E1.m1" class="ltx_Math" alttext="\mathcal{I}(v,w)=v\cdot w" display="block"><mrow><mrow><mi class="ltx_font_mathcaligraphic">ℐ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>v</mi><mo>,</mo><mi>w</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>v</mi><mo>⋅</mo><mi>w</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr>
+</table>
+<p class="ltx_p">for vectors <math id="p2.m2" class="ltx_Math" alttext="v,w\in\mathbb{R}^{3}" display="inline"><mrow><mrow><mi>v</mi><mo>,</mo><mi>w</mi></mrow><mo>∈</mo><msup><mi>ℝ</mi><mn>3</mn></msup></mrow></math>. (We consider the tangent planes of <math id="p2.m3" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math>
+to be two-dimensional subspaces of <math id="p2.m4" class="ltx_Math" alttext="\mathbb{R}^{3}" display="inline"><msup><mi>ℝ</mi><mn>3</mn></msup></math>.)</p>
+</div>
+<section id="Sx1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">Quadratic form representation</h2>
+
+<div id="Sx1.p1" class="ltx_para">
+<p class="ltx_p">Recall, in linear algebra,
+that a symmetric bilinear form <math id="Sx1.p1.m1" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math> over <math id="Sx1.p1.m2" class="ltx_Math" alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math>
+can always be represented by its quadratic form <math id="Sx1.p1.m3" class="ltx_Math" alttext="Q" display="inline"><mi>Q</mi></math>:
+</p>
+<table id="Sx1.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx1.Ex1.m1" class="ltx_Math" alttext="T(u,v)=\frac{1}{2}\bigl{(}Q(u+v)-Q(u)-Q(v)\bigr{)}\,,\quad Q(w)=T(w,w)\,," display="block"><mrow><mrow><mrow><mrow><mi>T</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>u</mi><mo>,</mo><mi>v</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mrow><mo maxsize="120%" minsize="120%">(</mo><mrow><mrow><mi>Q</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>u</mi><mo>+</mo><mi>v</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>Q</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>u</mi><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>Q</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>v</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo maxsize="120%" minsize="120%" rspace="4.2pt">)</mo></mrow></mrow></mrow><mo rspace="12.5pt">,</mo><mrow><mrow><mi>Q</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>w</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>T</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>w</mi><mo>,</mo><mi>w</mi><mo rspace="4.2pt" stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">for any vectors <math id="Sx1.p1.m4" class="ltx_Math" alttext="u" display="inline"><mi>u</mi></math> and <math id="Sx1.p1.m5" class="ltx_Math" alttext="v" display="inline"><mi>v</mi></math>.
+This process may be applied to the first fundamental form,
+and classically, the first fundamental form is expressed as</p>
+<table id="Sx1.E2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx1.E2.m1" class="ltx_Math" alttext="ds^{2}=E\,du^{2}+2F\,dudv+G\,dv^{2}\,." display="block"><mrow><mrow><mrow><mi>d</mi><mo>⁢</mo><msup><mi>s</mi><mn>2</mn></msup></mrow><mo>=</mo><mrow><mrow><mpadded width="+1.7pt"><mi>E</mi></mpadded><mo>⁢</mo><mi>d</mi><mo>⁢</mo><msup><mi>u</mi><mn>2</mn></msup></mrow><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mpadded width="+1.7pt"><mi>F</mi></mpadded><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>u</mi><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>v</mi></mrow><mo>+</mo><mrow><mpadded width="+1.7pt"><mi>G</mi></mpadded><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mpadded width="+1.7pt"><msup><mi>v</mi><mn>2</mn></msup></mpadded></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2)</span></td>
+</tr>
+</table>
+<p class="ltx_p">In modern terminology, (<a href="#Sx1.E2" title="(2) ‣ Quadratic form representation ‣ first fundamental form" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2</span></a>) is the quadratic form that
+represents the bilinear form <math id="Sx1.p1.m6" class="ltx_Math" alttext="\mathcal{I}" display="inline"><mi class="ltx_font_mathcaligraphic">ℐ</mi></math>.
+The use of the letters <math id="Sx1.p1.m7" class="ltx_Math" alttext="E,F,G" display="inline"><mrow><mi>E</mi><mo>,</mo><mi>F</mi><mo>,</mo><mi>G</mi></mrow></math> for the coefficients of the quadratic form
+is traditional, and dates back to Gauss;
+in terms of the metric tensor <math id="Sx1.p1.m8" class="ltx_Math" alttext="g_{ij}" display="inline"><msub><mi>g</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub></math>, these coefficients
+are defined by <math id="Sx1.p1.m9" class="ltx_Math" alttext="E=g_{11}" display="inline"><mrow><mi>E</mi><mo>=</mo><msub><mi>g</mi><mn>11</mn></msub></mrow></math>, <math id="Sx1.p1.m10" class="ltx_Math" alttext="F=g_{12}=g_{21}" display="inline"><mrow><mi>F</mi><mo>=</mo><msub><mi>g</mi><mn>12</mn></msub><mo>=</mo><msub><mi>g</mi><mn>21</mn></msub></mrow></math>, <math id="Sx1.p1.m11" class="ltx_Math" alttext="G=g_{22}" display="inline"><mrow><mi>G</mi><mo>=</mo><msub><mi>g</mi><mn>22</mn></msub></mrow></math>.</p>
+</div>
+<div id="Sx1.p2" class="ltx_para">
+<p class="ltx_p">The letters <math id="Sx1.p2.m1" class="ltx_Math" alttext="u" display="inline"><mi>u</mi></math> and <math id="Sx1.p2.m2" class="ltx_Math" alttext="v" display="inline"><mi>v</mi></math> in (<a href="#Sx1.E2" title="(2) ‣ Quadratic form representation ‣ first fundamental form" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2</span></a>) denote local coordinates on <math id="Sx1.p2.m3" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math>.
+Classically, <math id="Sx1.p2.m4" class="ltx_Math" alttext="du" display="inline"><mrow><mi>d</mi><mo>⁢</mo><mi>u</mi></mrow></math> and <math id="Sx1.p2.m5" class="ltx_Math" alttext="dv" display="inline"><mrow><mi>d</mi><mo>⁢</mo><mi>v</mi></mrow></math> meant “infinitesimally small” changes in <math id="Sx1.p2.m6" class="ltx_Math" alttext="u" display="inline"><mi>u</mi></math> and <math id="Sx1.p2.m7" class="ltx_Math" alttext="v" display="inline"><mi>v</mi></math>,
+but in modern differential geometry, <math id="Sx1.p2.m8" class="ltx_Math" alttext="du" display="inline"><mrow><mi>d</mi><mo>⁢</mo><mi>u</mi></mrow></math> and <math id="Sx1.p2.m9" class="ltx_Math" alttext="dv" display="inline"><mrow><mi>d</mi><mo>⁢</mo><mi>v</mi></mrow></math> have been given a precise
+meaning using differential forms.</p>
+</div>
+<div id="Sx1.p3" class="ltx_para">
+<p class="ltx_p">In tensor notation, (<a href="#Sx1.E2" title="(2) ‣ Quadratic form representation ‣ first fundamental form" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2</span></a>) is written as</p>
+<table id="Sx1.E3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx1.E3.m1" class="ltx_Math" alttext="\mathcal{I}=E\,du\otimes du+F\,du\otimes dv+F\,dv\otimes du+G\,dv\otimes dv\,," display="block"><mrow><mrow><mi class="ltx_font_mathcaligraphic">ℐ</mi><mo>=</mo><mrow><mrow><mrow><mrow><mpadded width="+1.7pt"><mi>E</mi></mpadded><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>u</mi></mrow><mo>⊗</mo><mi>d</mi></mrow><mo>⁢</mo><mi>u</mi></mrow><mo>+</mo><mrow><mrow><mrow><mpadded width="+1.7pt"><mi>F</mi></mpadded><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>u</mi></mrow><mo>⊗</mo><mi>d</mi></mrow><mo>⁢</mo><mi>v</mi></mrow><mo>+</mo><mrow><mrow><mrow><mpadded width="+1.7pt"><mi>F</mi></mpadded><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>v</mi></mrow><mo>⊗</mo><mi>d</mi></mrow><mo>⁢</mo><mi>u</mi></mrow><mo>+</mo><mrow><mrow><mrow><mpadded width="+1.7pt"><mi>G</mi></mpadded><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>v</mi></mrow><mo>⊗</mo><mi>d</mi></mrow><mo>⁢</mo><mpadded width="+1.7pt"><mi>v</mi></mpadded></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3)</span></td>
+</tr>
+</table>
+<p class="ltx_p">Although the tensor notation is more clumsy,
+it allows us to rigorously justify a change of variables, by the rule
+<math id="Sx1.p3.m1" class="ltx_Math" alttext="\alpha^{*}(du\otimes dv)=d(\alpha^{*}u)\otimes d(\alpha^{*}v)" display="inline"><mrow><mrow><msup><mi>α</mi><mo>*</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mrow><mi>d</mi><mo>⁢</mo><mi>u</mi></mrow><mo>⊗</mo><mi>d</mi></mrow><mo>⁢</mo><mi>v</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mrow><mi>d</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>α</mi><mo>*</mo></msup><mo>⁢</mo><mi>u</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>⊗</mo><mi>d</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>α</mi><mo>*</mo></msup><mo>⁢</mo><mi>v</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.
+See the example below.</p>
+</div>
+<div id="Sx1.p4" class="ltx_para">
+<p class="ltx_p">The symbol <math id="Sx1.p4.m1" class="ltx_Math" alttext="ds" display="inline"><mrow><mi>d</mi><mo>⁢</mo><mi>s</mi></mrow></math> in (<a href="#Sx1.E2" title="(2) ‣ Quadratic form representation ‣ first fundamental form" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2</span></a>) alludes
+to</p>
+<table id="Sx1.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx1.Ex2.m1" class="ltx_Math" alttext="ds^{2}=dx^{2}+dy^{2}+dz^{2}\,," display="block"><mrow><mrow><mrow><mi>d</mi><mo>⁢</mo><msup><mi>s</mi><mn>2</mn></msup></mrow><mo>=</mo><mrow><mrow><mi>d</mi><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow><mo>+</mo><mrow><mi>d</mi><mo>⁢</mo><msup><mi>y</mi><mn>2</mn></msup></mrow><mo>+</mo><mrow><mi>d</mi><mo>⁢</mo><mpadded width="+1.7pt"><msup><mi>z</mi><mn>2</mn></msup></mpadded></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">the infinitesimal length of a curve. Compare with the modern notation</p>
+<table id="Sx1.E4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx1.E4.m1" class="ltx_Math" alttext="\mathcal{I}=dx\otimes dx+dy\otimes dy+dz\otimes dz\,." display="block"><mrow><mrow><mi class="ltx_font_mathcaligraphic">ℐ</mi><mo>=</mo><mrow><mrow><mrow><mrow><mi>d</mi><mo>⁢</mo><mi>x</mi></mrow><mo>⊗</mo><mi>d</mi></mrow><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mrow><mrow><mrow><mi>d</mi><mo>⁢</mo><mi>y</mi></mrow><mo>⊗</mo><mi>d</mi></mrow><mo>⁢</mo><mi>y</mi></mrow><mo>+</mo><mrow><mrow><mrow><mi>d</mi><mo>⁢</mo><mi>z</mi></mrow><mo>⊗</mo><mi>d</mi></mrow><mo>⁢</mo><mpadded width="+1.7pt"><mi>z</mi></mpadded></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4)</span></td>
+</tr>
+</table>
+<p class="ltx_p">(This is just an alternate way of writing the definition of <math id="Sx1.p4.m2" class="ltx_Math" alttext="\mathcal{I}" display="inline"><mi class="ltx_font_mathcaligraphic">ℐ</mi></math>:
+the restriction of the dot product on <math id="Sx1.p4.m3" class="ltx_Math" alttext="\mathbb{R}^{3}" display="inline"><msup><mi>ℝ</mi><mn>3</mn></msup></math>.)</p>
+</div>
+</section>
+<section id="Sx2" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">Example: sphere</h2>
+
+<div id="Sx2.p1" class="ltx_para">
+<p class="ltx_p">We illustrate an example: we compute the first fundamental form <math id="Sx2.p1.m1" class="ltx_Math" alttext="\mathcal{I}" display="inline"><mi class="ltx_font_mathcaligraphic">ℐ</mi></math>
+of the sphere <math id="Sx2.p1.m2" class="ltx_Math" alttext="S^{2}" display="inline"><msup><mi>S</mi><mn>2</mn></msup></math> in spherical coordinates (latitude/longitude system).
+We set</p>
+<table id="A0.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="Sx2.Ex3" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Sx2.Ex3.m1" class="ltx_Math" alttext="\displaystyle x" display="inline"><mi>x</mi></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Sx2.Ex3.m2" class="ltx_Math" alttext="\displaystyle=\cos\phi\cos\theta" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mi>cos</mi><mo>⁡</mo><mi>ϕ</mi></mrow><mo>⁢</mo><mrow><mi>cos</mi><mo>⁡</mo><mi>θ</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="Sx2.Ex4" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Sx2.Ex4.m1" class="ltx_Math" alttext="\displaystyle y" display="inline"><mi>y</mi></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Sx2.Ex4.m2" class="ltx_Math" alttext="\displaystyle=\cos\phi\sin\theta" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mi>cos</mi><mo>⁡</mo><mi>ϕ</mi></mrow><mo>⁢</mo><mrow><mi>sin</mi><mo>⁡</mo><mi>θ</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="Sx2.Ex5" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Sx2.Ex5.m1" class="ltx_Math" alttext="\displaystyle z" display="inline"><mi>z</mi></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Sx2.Ex5.m2" class="ltx_Math" alttext="\displaystyle=\sin\phi\,," display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mi>sin</mi><mo>⁡</mo><mpadded width="+1.7pt"><mi>ϕ</mi></mpadded></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and substitute these in (<a href="#Sx1.E4" title="(4) ‣ Quadratic form representation ‣ first fundamental form" class="ltx_ref"><span class="ltx_text ltx_ref_tag">4</span></a>):</p>
+<table id="A0.EGx2" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="Sx2.Ex6" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Sx2.Ex6.m1" class="ltx_Math" alttext="\displaystyle\mathcal{I}" display="inline"><mi class="ltx_font_mathcaligraphic">ℐ</mi></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Sx2.Ex6.m2" class="ltx_Math" alttext="\displaystyle=d(\cos\phi\cos\theta)\otimes d(\cos\phi\cos\theta)+d(\cos\phi%
+\sin\theta)\otimes d(\cos\phi\sin\theta)" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mrow><mrow><mi>d</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>cos</mi><mo>⁡</mo><mi>ϕ</mi></mrow><mo>⁢</mo><mrow><mi>cos</mi><mo>⁡</mo><mi>θ</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>⊗</mo><mi>d</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>cos</mi><mo>⁡</mo><mi>ϕ</mi></mrow><mo>⁢</mo><mrow><mi>cos</mi><mo>⁡</mo><mi>θ</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mrow><mrow><mi>d</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>cos</mi><mo>⁡</mo><mi>ϕ</mi></mrow><mo>⁢</mo><mrow><mi>sin</mi><mo>⁡</mo><mi>θ</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>⊗</mo><mi>d</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>cos</mi><mo>⁡</mo><mi>ϕ</mi></mrow><mo>⁢</mo><mrow><mi>sin</mi><mo>⁡</mo><mi>θ</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="Sx2.Ex7" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Sx2.Ex7.m2" class="ltx_Math" alttext="\displaystyle\quad+d(\sin\phi)\otimes d(\sin\phi)" display="inline"><mrow><mi mathvariant="normal"> </mi><mo>+</mo><mrow><mrow><mrow><mi>d</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>sin</mi><mo>⁡</mo><mi>ϕ</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>⊗</mo><mi>d</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>sin</mi><mo>⁡</mo><mi>ϕ</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="Sx2.Ex8" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Sx2.Ex8.m2" class="ltx_Math" alttext="\displaystyle=(-\sin\phi\cos\theta\,d\phi-\cos\phi\sin\theta\,d\theta)\otimes(%
+-\sin\phi\cos\theta\,d\phi-\cos\phi\sin\theta\,d\theta)" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mo>-</mo><mrow><mrow><mi>sin</mi><mo>⁡</mo><mi>ϕ</mi></mrow><mo>⁢</mo><mrow><mi>cos</mi><mo>⁡</mo><mrow><mpadded width="+1.7pt"><mi>θ</mi></mpadded><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>ϕ</mi></mrow></mrow></mrow></mrow><mo>-</mo><mrow><mrow><mi>cos</mi><mo>⁡</mo><mi>ϕ</mi></mrow><mo>⁢</mo><mrow><mi>sin</mi><mo>⁡</mo><mrow><mpadded width="+1.7pt"><mi>θ</mi></mpadded><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>θ</mi></mrow></mrow></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⊗</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mo>-</mo><mrow><mrow><mi>sin</mi><mo>⁡</mo><mi>ϕ</mi></mrow><mo>⁢</mo><mrow><mi>cos</mi><mo>⁡</mo><mrow><mpadded width="+1.7pt"><mi>θ</mi></mpadded><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>ϕ</mi></mrow></mrow></mrow></mrow><mo>-</mo><mrow><mrow><mi>cos</mi><mo>⁡</mo><mi>ϕ</mi></mrow><mo>⁢</mo><mrow><mi>sin</mi><mo>⁡</mo><mrow><mpadded width="+1.7pt"><mi>θ</mi></mpadded><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>θ</mi></mrow></mrow></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="Sx2.Ex9" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Sx2.Ex9.m2" class="ltx_Math" alttext="\displaystyle\quad+(-\sin\phi\sin\theta\,d\phi+\cos\phi\cos\theta\,d\theta)%
+\otimes(-\sin\phi\sin\theta\,d\phi+\cos\phi\cos\theta\,d\theta)" display="inline"><mrow><mi mathvariant="normal"> </mi><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mo>-</mo><mrow><mrow><mi>sin</mi><mo>⁡</mo><mi>ϕ</mi></mrow><mo>⁢</mo><mrow><mi>sin</mi><mo>⁡</mo><mrow><mpadded width="+1.7pt"><mi>θ</mi></mpadded><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>ϕ</mi></mrow></mrow></mrow></mrow><mo>+</mo><mrow><mrow><mi>cos</mi><mo>⁡</mo><mi>ϕ</mi></mrow><mo>⁢</mo><mrow><mi>cos</mi><mo>⁡</mo><mrow><mpadded width="+1.7pt"><mi>θ</mi></mpadded><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>θ</mi></mrow></mrow></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⊗</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mo>-</mo><mrow><mrow><mi>sin</mi><mo>⁡</mo><mi>ϕ</mi></mrow><mo>⁢</mo><mrow><mi>sin</mi><mo>⁡</mo><mrow><mpadded width="+1.7pt"><mi>θ</mi></mpadded><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>ϕ</mi></mrow></mrow></mrow></mrow><mo>+</mo><mrow><mrow><mi>cos</mi><mo>⁡</mo><mi>ϕ</mi></mrow><mo>⁢</mo><mrow><mi>cos</mi><mo>⁡</mo><mrow><mpadded width="+1.7pt"><mi>θ</mi></mpadded><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>θ</mi></mrow></mrow></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="Sx2.Ex10" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Sx2.Ex10.m2" class="ltx_Math" alttext="\displaystyle\quad+(\cos\phi\,d\phi)\otimes(\cos\phi\,d\phi)" display="inline"><mrow><mi mathvariant="normal"> </mi><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>cos</mi><mo>⁡</mo><mrow><mpadded width="+1.7pt"><mi>ϕ</mi></mpadded><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>ϕ</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⊗</mo><mrow><mo stretchy="false">(</mo><mrow><mi>cos</mi><mo>⁡</mo><mrow><mpadded width="+1.7pt"><mi>ϕ</mi></mpadded><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>ϕ</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="Sx2.Ex11" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Sx2.Ex11.m2" class="ltx_Math" alttext="\displaystyle=(\sin\phi\cos\theta)^{2}\,d\phi\otimes d\phi+(\cos\phi\sin\theta%
+)^{2}\,d\theta\otimes d\theta" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mrow><mrow><mpadded width="+1.7pt"><msup><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>sin</mi><mo>⁡</mo><mi>ϕ</mi></mrow><mo>⁢</mo><mrow><mi>cos</mi><mo>⁡</mo><mi>θ</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mpadded><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>ϕ</mi></mrow><mo>⊗</mo><mi>d</mi></mrow><mo>⁢</mo><mi>ϕ</mi></mrow><mo>+</mo><mrow><mrow><mrow><mpadded width="+1.7pt"><msup><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>cos</mi><mo>⁡</mo><mi>ϕ</mi></mrow><mo>⁢</mo><mrow><mi>sin</mi><mo>⁡</mo><mi>θ</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mpadded><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>θ</mi></mrow><mo>⊗</mo><mi>d</mi></mrow><mo>⁢</mo><mi>θ</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="Sx2.Ex12" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Sx2.Ex12.m2" class="ltx_Math" alttext="\displaystyle\quad+(\sin\phi\sin\theta)^{2}\,d\phi\otimes d\phi+(\cos\phi\cos%
+\theta)^{2}\,d\theta\otimes d\theta" display="inline"><mrow><mi mathvariant="normal"> </mi><mo>+</mo><mrow><mrow><mrow><mpadded width="+1.7pt"><msup><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>sin</mi><mo>⁡</mo><mi>ϕ</mi></mrow><mo>⁢</mo><mrow><mi>sin</mi><mo>⁡</mo><mi>θ</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mpadded><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>ϕ</mi></mrow><mo>⊗</mo><mi>d</mi></mrow><mo>⁢</mo><mi>ϕ</mi></mrow><mo>+</mo><mrow><mrow><mrow><mpadded width="+1.7pt"><msup><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>cos</mi><mo>⁡</mo><mi>ϕ</mi></mrow><mo>⁢</mo><mrow><mi>cos</mi><mo>⁡</mo><mi>θ</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mpadded><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>θ</mi></mrow><mo>⊗</mo><mi>d</mi></mrow><mo>⁢</mo><mi>θ</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="Sx2.Ex13" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Sx2.Ex13.m2" class="ltx_Math" alttext="\displaystyle\quad+(\cos\phi)^{2}\,d\phi\otimes d\phi" display="inline"><mrow><mi mathvariant="normal"> </mi><mo>+</mo><mrow><mrow><mrow><mpadded width="+1.7pt"><msup><mrow><mo stretchy="false">(</mo><mrow><mi>cos</mi><mo>⁡</mo><mi>ϕ</mi></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mpadded><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>ϕ</mi></mrow><mo>⊗</mo><mi>d</mi></mrow><mo>⁢</mo><mi>ϕ</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline"><td class="ltx_eqn_cell ltx_align_left" style="white-space:normal;" colspan="5">(note that the cross terms with <math id="Sx2.Ex14.m1" class="ltx_Math" alttext="d\phi\otimes d\theta" display="inline"><mrow><mrow><mrow><mi>d</mi><mo>⁢</mo><mi>ϕ</mi></mrow><mo>⊗</mo><mi>d</mi></mrow><mo>⁢</mo><mi>θ</mi></mrow></math> and <math id="Sx2.Ex14.m2" class="ltx_Math" alttext="d\theta\otimes d\phi" display="inline"><mrow><mrow><mrow><mi>d</mi><mo>⁢</mo><mi>θ</mi></mrow><mo>⊗</mo><mi>d</mi></mrow><mo>⁢</mo><mi>ϕ</mi></mrow></math> cancel)</td></tr>
+<tr id="Sx2.Ex15" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Sx2.Ex15.m2" class="ltx_Math" alttext="\displaystyle=\sin^{2}\phi\,d\phi\otimes d\phi+\cos^{2}\phi\,d\theta\otimes d%
+\theta+\cos^{2}\phi\,d\phi\otimes d\phi" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><msup><mi>sin</mi><mn>2</mn></msup><mo>⁡</mo><mrow><mrow><mrow><mpadded width="+1.7pt"><mi>ϕ</mi></mpadded><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>ϕ</mi></mrow><mo>⊗</mo><mi>d</mi></mrow><mo>⁢</mo><mi>ϕ</mi></mrow></mrow><mo>+</mo><mrow><msup><mi>cos</mi><mn>2</mn></msup><mo>⁡</mo><mrow><mrow><mrow><mpadded width="+1.7pt"><mi>ϕ</mi></mpadded><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>θ</mi></mrow><mo>⊗</mo><mi>d</mi></mrow><mo>⁢</mo><mi>θ</mi></mrow></mrow><mo>+</mo><mrow><msup><mi>cos</mi><mn>2</mn></msup><mo>⁡</mo><mrow><mrow><mrow><mpadded width="+1.7pt"><mi>ϕ</mi></mpadded><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>ϕ</mi></mrow><mo>⊗</mo><mi>d</mi></mrow><mo>⁢</mo><mi>ϕ</mi></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="Sx2.Ex16" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Sx2.Ex16.m2" class="ltx_Math" alttext="\displaystyle=d\phi\otimes d\phi+\cos^{2}\phi\,d\theta\otimes d\theta\,." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><mrow><mrow><mi>d</mi><mo>⁢</mo><mi>ϕ</mi></mrow><mo>⊗</mo><mi>d</mi></mrow><mo>⁢</mo><mi>ϕ</mi></mrow><mo>+</mo><mrow><msup><mi>cos</mi><mn>2</mn></msup><mo>⁡</mo><mrow><mrow><mrow><mpadded width="+1.7pt"><mi>ϕ</mi></mpadded><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>θ</mi></mrow><mo>⊗</mo><mi>d</mi></mrow><mo>⁢</mo><mpadded width="+1.7pt"><mi>θ</mi></mpadded></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Of course this was a very cumbersome calculation; the writing would be simplified
+if we had just dropped the <math id="Sx2.p1.m3" class="ltx_Math" alttext="\otimes" display="inline"><mo>⊗</mo></math> signs and wrote <math id="Sx2.p1.m4" class="ltx_Math" alttext="d\phi^{2}" display="inline"><mrow><mi>d</mi><mo>⁢</mo><msup><mi>ϕ</mi><mn>2</mn></msup></mrow></math> for <math id="Sx2.p1.m5" class="ltx_Math" alttext="d\phi\otimes d\phi" display="inline"><mrow><mrow><mrow><mi>d</mi><mo>⁢</mo><mi>ϕ</mi></mrow><mo>⊗</mo><mi>d</mi></mrow><mo>⁢</mo><mi>ϕ</mi></mrow></math>, etc.
+And even then the calculation would be more organized if we computed
+the coefficients <math id="Sx2.p1.m6" class="ltx_Math" alttext="g_{ij}" display="inline"><msub><mi>g</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub></math> directly.
+We only show this kind calculation in order to justify
+what exactly
+is meant by
+the classical expression</p>
+<table id="Sx2.Ex17" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx2.Ex17.m1" class="ltx_Math" alttext="d\phi^{2}+\cos^{2}\phi\,d\theta^{2}" display="block"><mrow><mrow><mi>d</mi><mo>⁢</mo><msup><mi>ϕ</mi><mn>2</mn></msup></mrow><mo>+</mo><mrow><msup><mi>cos</mi><mn>2</mn></msup><mo>⁡</mo><mrow><mpadded width="+1.7pt"><mi>ϕ</mi></mpadded><mo>⁢</mo><mi>d</mi><mo>⁢</mo><msup><mi>θ</mi><mn>2</mn></msup></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">for the first fundamental form of the sphere.</p>
+</div>
+</section>
+<section id="Sx3" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">Use of first fundamental form to compute lengths and areas</h2>
+
+<div id="Sx3.p1" class="ltx_para">
+<p class="ltx_p">The first fundamental form is related to the area form.
+If</p>
+<table id="Sx3.Ex18" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx3.Ex18.m1" class="ltx_Math" alttext="ds^{2}=E\,du^{2}+2F\,dudv+G\,dv^{2}" display="block"><mrow><mrow><mi>d</mi><mo>⁢</mo><msup><mi>s</mi><mn>2</mn></msup></mrow><mo>=</mo><mrow><mrow><mpadded width="+1.7pt"><mi>E</mi></mpadded><mo>⁢</mo><mi>d</mi><mo>⁢</mo><msup><mi>u</mi><mn>2</mn></msup></mrow><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mpadded width="+1.7pt"><mi>F</mi></mpadded><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>u</mi><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>v</mi></mrow><mo>+</mo><mrow><mpadded width="+1.7pt"><mi>G</mi></mpadded><mo>⁢</mo><mi>d</mi><mo>⁢</mo><msup><mi>v</mi><mn>2</mn></msup></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">then</p>
+<table id="Sx3.Ex19" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx3.Ex19.m1" class="ltx_Math" alttext="dA=\sqrt{EG-F^{2}}\&gt;du\wedge dv" display="block"><mrow><mrow><mi>d</mi><mo>⁢</mo><mi>A</mi></mrow><mo>=</mo><mrow><mrow><mpadded width="+2.2pt"><msqrt><mrow><mrow><mi>E</mi><mo>⁢</mo><mi>G</mi></mrow><mo>-</mo><msup><mi>F</mi><mn>2</mn></msup></mrow></msqrt></mpadded><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>u</mi></mrow><mo>∧</mo><mrow><mi>d</mi><mo>⁢</mo><mi>v</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">is the area form.
+For the sphere, this
+is</p>
+<table id="Sx3.Ex20" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx3.Ex20.m1" class="ltx_Math" alttext="dA=\sqrt{\cos^{2}\phi-0}\&gt;d\phi\wedge d\theta=\cos\phi\&gt;d\phi\wedge d\theta\,," display="block"><mrow><mrow><mrow><mi>d</mi><mo>⁢</mo><mi>A</mi></mrow><mo>=</mo><mrow><mrow><mpadded width="+2.2pt"><msqrt><mrow><mrow><msup><mi>cos</mi><mn>2</mn></msup><mo>⁡</mo><mi>ϕ</mi></mrow><mo>-</mo><mn>0</mn></mrow></msqrt></mpadded><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>ϕ</mi></mrow><mo>∧</mo><mrow><mi>d</mi><mo>⁢</mo><mi>θ</mi></mrow></mrow><mo>=</mo><mrow><mrow><mi>cos</mi><mo>⁡</mo><mrow><mpadded width="+2.2pt"><mi>ϕ</mi></mpadded><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>ϕ</mi></mrow></mrow><mo>∧</mo><mrow><mi>d</mi><mo>⁢</mo><mpadded width="+1.7pt"><mi>θ</mi></mpadded></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">which is just the formula given in calculus for evaluating
+surface integrals on the sphere using spherical coordinates.</p>
+</div>
+<div id="Sx3.p2" class="ltx_para">
+<p class="ltx_p">The first fundamental form itself may be used to find the
+length <math id="Sx3.p2.m1" class="ltx_Math" alttext="s" display="inline"><mi>s</mi></math> of a curve <math id="Sx3.p2.m2" class="ltx_Math" alttext="\gamma" display="inline"><mi>γ</mi></math> on a surface <math id="Sx3.p2.m3" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math>,
+when <math id="Sx3.p2.m4" class="ltx_Math" alttext="\gamma" display="inline"><mi>γ</mi></math> is parameterized by local coordinates:</p>
+<table id="A0.EGx3" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="Sx3.Ex21" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Sx3.Ex21.m1" class="ltx_Math" alttext="\displaystyle s" display="inline"><mi>s</mi></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Sx3.Ex21.m2" class="ltx_Math" alttext="\displaystyle=\int_{\gamma}ds=\int_{\gamma}\sqrt{ds^{2}}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><mi>γ</mi></msub></mstyle><mrow><mo>𝑑</mo><mi>s</mi></mrow></mrow><mo>=</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><mi>γ</mi></msub></mstyle><msqrt><mrow><mi>d</mi><mo>⁢</mo><msup><mi>s</mi><mn>2</mn></msup></mrow></msqrt></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="Sx3.Ex22" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Sx3.Ex22.m2" class="ltx_Math" alttext="\displaystyle=\int_{\gamma}\sqrt{E\,du^{2}+2F\,dudv+G\,dv^{2}}\,,\quad\gamma(t%
+)=(u,v)\,," display="inline"><mrow><mrow><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><mi>γ</mi></msub></mstyle><mpadded width="+1.7pt"><msqrt><mrow><mrow><mpadded width="+1.7pt"><mi>E</mi></mpadded><mo>⁢</mo><mi>d</mi><mo>⁢</mo><msup><mi>u</mi><mn>2</mn></msup></mrow><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mpadded width="+1.7pt"><mi>F</mi></mpadded><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>u</mi><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>v</mi></mrow><mo>+</mo><mrow><mpadded width="+1.7pt"><mi>G</mi></mpadded><mo>⁢</mo><mi>d</mi><mo>⁢</mo><msup><mi>v</mi><mn>2</mn></msup></mrow></mrow></msqrt></mpadded></mrow></mrow><mo rspace="12.5pt">,</mo><mrow><mrow><mi>γ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">(</mo><mi>u</mi><mo>,</mo><mi>v</mi><mo rspace="4.2pt" stretchy="false">)</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="Sx3.Ex23" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Sx3.Ex23.m2" class="ltx_Math" alttext="\displaystyle=\int_{a}^{b}\sqrt{E\,\left(\frac{du}{dt}\right)^{2}+2F\,\frac{du%
+}{dt}\frac{dv}{dt}+G\,\left(\frac{dv}{dt}\right)^{2}}\,dt\,." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><msubsup><mo largeop="true" symmetric="true">∫</mo><mi>a</mi><mi>b</mi></msubsup></mstyle><mrow><mpadded width="+1.7pt"><msqrt><mrow><mrow><mpadded width="+1.7pt"><mi>E</mi></mpadded><mo>⁢</mo><msup><mrow><mo>(</mo><mstyle displaystyle="true"><mfrac><mrow><mi>d</mi><mo>⁢</mo><mi>u</mi></mrow><mrow><mi>d</mi><mo>⁢</mo><mi>t</mi></mrow></mfrac></mstyle><mo>)</mo></mrow><mn>2</mn></msup></mrow><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mpadded width="+1.7pt"><mi>F</mi></mpadded><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mi>d</mi><mo>⁢</mo><mi>u</mi></mrow><mrow><mi>d</mi><mo>⁢</mo><mi>t</mi></mrow></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mi>d</mi><mo>⁢</mo><mi>v</mi></mrow><mrow><mi>d</mi><mo>⁢</mo><mi>t</mi></mrow></mfrac></mstyle></mrow><mo>+</mo><mrow><mpadded width="+1.7pt"><mi>G</mi></mpadded><mo>⁢</mo><msup><mrow><mo>(</mo><mstyle displaystyle="true"><mfrac><mrow><mi>d</mi><mo>⁢</mo><mi>v</mi></mrow><mrow><mi>d</mi><mo>⁢</mo><mi>t</mi></mrow></mfrac></mstyle><mo>)</mo></mrow><mn>2</mn></msup></mrow></mrow></msqrt></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mpadded width="+1.7pt"><mi>t</mi></mpadded></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Although in practice it is probably easier to directly use
+cartesian coordinates, rather
+than the above expressions, to compute the length of <math id="Sx3.p2.m5" class="ltx_Math" alttext="\gamma" display="inline"><mi>γ</mi></math>,
+the first fundamental form plays an essential role in the
+theoretical investigation of the lengths
+of curves on a surface.</p>
+</div>
+</section>
+<section id="Sx4" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">Example: plane and cylinder</h2>
+
+<div id="Sx4.p1" class="ltx_para">
+<p class="ltx_p">For the plane <math id="Sx4.p1.m1" class="ltx_Math" alttext="\mathbb{R}^{2}\subset\mathbb{R}^{3}" display="inline"><mrow><msup><mi>ℝ</mi><mn>2</mn></msup><mo>⊂</mo><msup><mi>ℝ</mi><mn>3</mn></msup></mrow></math> with <math id="Sx4.p1.m2" class="ltx_Math" alttext="z=0" display="inline"><mrow><mi>z</mi><mo>=</mo><mn>0</mn></mrow></math>,
+the first fundamental form is just</p>
+<table id="Sx4.E5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx4.E5.m1" class="ltx_Math" alttext="ds^{2}=dx^{2}+dy^{2}\,." display="block"><mrow><mrow><mrow><mi>d</mi><mo>⁢</mo><msup><mi>s</mi><mn>2</mn></msup></mrow><mo>=</mo><mrow><mrow><mi>d</mi><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow><mo>+</mo><mrow><mi>d</mi><mo>⁢</mo><mpadded width="+1.7pt"><msup><mi>y</mi><mn>2</mn></msup></mpadded></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5)</span></td>
+</tr>
+</table>
+</div>
+<div id="Sx4.p2" class="ltx_para">
+<p class="ltx_p">For the cylinder with the coordinates</p>
+<table id="A0.EGx4" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="Sx4.Ex24" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Sx4.Ex24.m1" class="ltx_Math" alttext="\displaystyle x" display="inline"><mi>x</mi></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Sx4.Ex24.m2" class="ltx_Math" alttext="\displaystyle=\cos u" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mi>cos</mi><mo>⁡</mo><mi>u</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="Sx4.Ex25" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Sx4.Ex25.m1" class="ltx_Math" alttext="\displaystyle y" display="inline"><mi>y</mi></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Sx4.Ex25.m2" class="ltx_Math" alttext="\displaystyle=\sin u" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mi>sin</mi><mo>⁡</mo><mi>u</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="Sx4.Ex26" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Sx4.Ex26.m1" class="ltx_Math" alttext="\displaystyle z" display="inline"><mi>z</mi></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Sx4.Ex26.m2" class="ltx_Math" alttext="\displaystyle=v" display="inline"><mrow><mi></mi><mo>=</mo><mi>v</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">the first fundamental form is</p>
+<table id="Sx4.E6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx4.E6.m1" class="ltx_Math" alttext="ds^{2}=du^{2}+dv^{2}\,." display="block"><mrow><mrow><mrow><mi>d</mi><mo>⁢</mo><msup><mi>s</mi><mn>2</mn></msup></mrow><mo>=</mo><mrow><mrow><mi>d</mi><mo>⁢</mo><msup><mi>u</mi><mn>2</mn></msup></mrow><mo>+</mo><mrow><mi>d</mi><mo>⁢</mo><mpadded width="+1.7pt"><msup><mi>v</mi><mn>2</mn></msup></mpadded></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(6)</span></td>
+</tr>
+</table>
+</div>
+</section>
+<section id="Sx5" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">Relation with isometric maps</h2>
+
+<div id="Sx5.p1" class="ltx_para">
+<p class="ltx_p">Notice that <math id="Sx5.p1.m1" class="ltx_Math" alttext="\eqref{cylinder}" display="inline"><mrow><mi>(</mi><mo>⁢</mo><mtext mathvariant="italic"><a href="#Sx4.E6" title="(6) ‣ Example: plane and cylinder ‣ first fundamental form" class="ltx_ref ltx_font_italic"><span class="ltx_text ltx_ref_tag">6</span></a></mtext><mo>⁢</mo><mi>)</mi></mrow></math> looks the same as (<a href="#Sx4.E5" title="(5) ‣ Example: plane and cylinder ‣ first fundamental form" class="ltx_ref"><span class="ltx_text ltx_ref_tag">5</span></a>) after renaming the variables.
+This is evidence that the plane and cylinder should be locally isometric:
+a flat sheet can be rolled into a cylinder.
+An isometry between two surfaces, by definition, preserves the metric on the
+two surfaces, so an isometry preserves the first fundamental form.</p>
+</div>
+<div id="Sx5.p2" class="ltx_para">
+<p class="ltx_p">Of course, (<a href="#Sx4.E5" title="(5) ‣ Example: plane and cylinder ‣ first fundamental form" class="ltx_ref"><span class="ltx_text ltx_ref_tag">5</span></a>) and (<a href="#Sx4.E6" title="(6) ‣ Example: plane and cylinder ‣ first fundamental form" class="ltx_ref"><span class="ltx_text ltx_ref_tag">6</span></a>) are expressions
+of the first fundamental form in local coordinates of two different surfaces,
+so it makes no sense to say they are equal. But it is not hard to see that:</p>
+</div>
+<div id="Sx5.p3" class="ltx_para">
+<p class="ltx_p">Suppose <math id="Sx5.p3.m1" class="ltx_Math" alttext="\Phi\colon M\to N" display="inline"><mrow><mi mathvariant="normal">Φ</mi><mo>:</mo><mrow><mi>M</mi><mo>→</mo><mi>N</mi></mrow></mrow></math> is an isometry of two surfaces,
+and <math id="Sx5.p3.m2" class="ltx_Math" alttext="u,v" display="inline"><mrow><mi>u</mi><mo>,</mo><mi>v</mi></mrow></math> are coordinates on <math id="Sx5.p3.m3" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math>.
+If we use the coordinates <math id="Sx5.p3.m4" class="ltx_Math" alttext="u^{\prime}=u\circ\Phi^{-1}" display="inline"><mrow><msup><mi>u</mi><mo>′</mo></msup><mo>=</mo><mrow><mi>u</mi><mo>∘</mo><msup><mi mathvariant="normal">Φ</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow></mrow></math>
+and <math id="Sx5.p3.m5" class="ltx_Math" alttext="v^{\prime}=v\circ\Phi^{-1}" display="inline"><mrow><msup><mi>v</mi><mo>′</mo></msup><mo>=</mo><mrow><mi>v</mi><mo>∘</mo><msup><mi mathvariant="normal">Φ</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow></mrow></math>
+on <math id="Sx5.p3.m6" class="ltx_Math" alttext="N" display="inline"><mi>N</mi></math>, then
+the first fundamental form of <math id="Sx5.p3.m7" class="ltx_Math" alttext="N" display="inline"><mi>N</mi></math> is obtained
+by taking the first fundamental form of <math id="Sx5.p3.m8" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math> and renaming <math id="Sx5.p3.m9" class="ltx_Math" alttext="u,v" display="inline"><mrow><mi>u</mi><mo>,</mo><mi>v</mi></mrow></math> to <math id="Sx5.p3.m10" class="ltx_Math" alttext="u^{\prime},v^{\prime}" display="inline"><mrow><msup><mi>u</mi><mo>′</mo></msup><mo>,</mo><msup><mi>v</mi><mo>′</mo></msup></mrow></math>.</p>
+</div>
+</section>
+<section id="Sx6" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">Relation with conformal, equiareal maps</h2>
+
+<div id="Sx6.p1" class="ltx_para">
+<p class="ltx_p">There is also a notion of a conformal mapping:
+a diffeomorphism <math id="Sx6.p1.m1" class="ltx_Math" alttext="\Phi\colon M\to N" display="inline"><mrow><mi mathvariant="normal">Φ</mi><mo>:</mo><mrow><mi>M</mi><mo>→</mo><mi>N</mi></mrow></mrow></math> is called <em class="ltx_emph ltx_font_italic">conformal</em>
+if <math id="Sx6.p1.m2" class="ltx_Math" alttext="\Phi" display="inline"><mi mathvariant="normal">Φ</mi></math> preserves the first fundamental form up to a non-zero constant
+of proportionality. (The proportion may vary at each point of <math id="Sx6.p1.m3" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math> and <math id="Sx6.p1.m4" class="ltx_Math" alttext="N" display="inline"><mi>N</mi></math>.)
+It may be verified that this is the same as saying that <math id="Sx6.p1.m5" class="ltx_Math" alttext="\Phi" display="inline"><mi mathvariant="normal">Φ</mi></math> preserves the
+angles of intersecting tangent vectors.</p>
+</div>
+<div id="Sx6.p2" class="ltx_para">
+<p class="ltx_p">For example, the stereographic projection from the sphere to the plane
+is conformal.</p>
+</div>
+<div id="Sx6.p3" class="ltx_para">
+<p class="ltx_p">Yet another notion is that of an equiareal mapping:
+a diffeomorphism <math id="Sx6.p3.m1" class="ltx_Math" alttext="\Phi\colon M\to N" display="inline"><mrow><mi mathvariant="normal">Φ</mi><mo>:</mo><mrow><mi>M</mi><mo>→</mo><mi>N</mi></mrow></mrow></math> is called <em class="ltx_emph ltx_font_italic">equiareal</em>
+if <math id="Sx6.p3.m2" class="ltx_Math" alttext="\Phi" display="inline"><mi mathvariant="normal">Φ</mi></math> preserves preserves areas of all subregions of the surfaces.
+This amounts to saying that the quantity
+<math id="Sx6.p3.m3" class="ltx_Math" alttext="\sqrt{EG-F^{2}}" display="inline"><msqrt><mrow><mrow><mi>E</mi><mo>⁢</mo><mi>G</mi></mrow><mo>-</mo><msup><mi>F</mi><mn>2</mn></msup></mrow></msqrt></math> is invariant under <math id="Sx6.p3.m4" class="ltx_Math" alttext="\Phi" display="inline"><mi mathvariant="normal">Φ</mi></math>
+(provided we rename the variables as explained above).
+</p>
+</div>
+<div id="Sx6.p4" class="ltx_para">
+<p class="ltx_p">For example, the projection of the sphere to the cylinder wrapping it
+is equiareal. This fact was used by Archimedes to show the sphere of radius <math id="Sx6.p4.m1" class="ltx_Math" alttext="r" display="inline"><mi>r</mi></math>
+has area <math id="Sx6.p4.m2" class="ltx_Math" alttext="4\pi r^{2}" display="inline"><mrow><mn>4</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><msup><mi>r</mi><mn>2</mn></msup></mrow></math>, because the cylinder that wraps it
+also has area <math id="Sx6.p4.m3" class="ltx_Math" alttext="4\pi r^{2}" display="inline"><mrow><mn>4</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><msup><mi>r</mi><mn>2</mn></msup></mrow></math>.</p>
+</div>
+<div id="Sx6.p5" class="ltx_para">
+<p class="ltx_p">If <math id="Sx6.p5.m1" class="ltx_Math" alttext="\Phi" display="inline"><mi mathvariant="normal">Φ</mi></math> is both conformal and equiareal, then it is an isometry.
+As a well-known example, a sphere is not isometric to the plane,
+not even locally,
+so we cannot draw maps of the Earth that preserve
+both directions and relative proportion of lands.
+We must give up at least one of these properties:
+e.g. the Mercator projection preserves direction only;
+maps with Mercator look “strange” the first time one sees them,
+because such maps do not preserve area.</p>
+</div>
+</section>
+<section id="Sx7" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">Relation with Gaussian curvature</h2>
+
+<div id="Sx7.p1" class="ltx_para">
+<p class="ltx_p">There is a formula for the Gaussian curvature <math id="Sx7.p1.m1" class="ltx_Math" alttext="K(p)" display="inline"><mrow><mi>K</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo stretchy="false">)</mo></mrow></mrow></math> at a point on a surface:</p>
+<table id="Sx7.Ex27" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx7.Ex27.m1" class="ltx_Math" alttext="K=\frac{\left\lvert\begin{matrix}-\frac{1}{2}E_{vv}+F_{uv}-\frac{1}{2}G_{uu}&amp;%
+\frac{1}{2}E_{u}&amp;F_{u}-\frac{1}{2}E_{v}\\
+F_{v}-\frac{1}{2}G_{u}&amp;E&amp;F\\
+\frac{1}{2}G_{v}&amp;F&amp;G\end{matrix}\right\rvert-\left\lvert\begin{matrix}0&amp;\frac{%
+1}{2}E_{v}&amp;\frac{1}{2}G_{u}\\
+\frac{1}{2}E_{v}&amp;E&amp;F\\
+\frac{1}{2}G_{u}&amp;F&amp;G\end{matrix}\right\rvert}{(EG-F^{2})^{2}}" display="block"><mrow><mi>K</mi><mo>=</mo><mfrac><mrow><mrow><mo fence="true">|</mo><mtable columnspacing="5pt" rowspacing="0pt"><mtr><mtd columnalign="center"><mrow><mrow><mrow><mo>-</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><msub><mi>E</mi><mrow><mi>v</mi><mo>⁢</mo><mi>v</mi></mrow></msub></mrow></mrow><mo>+</mo><msub><mi>F</mi><mrow><mi>u</mi><mo>⁢</mo><mi>v</mi></mrow></msub></mrow><mo>-</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><msub><mi>G</mi><mrow><mi>u</mi><mo>⁢</mo><mi>u</mi></mrow></msub></mrow></mrow></mtd><mtd columnalign="center"><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><msub><mi>E</mi><mi>u</mi></msub></mrow></mtd><mtd columnalign="center"><mrow><msub><mi>F</mi><mi>u</mi></msub><mo>-</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><msub><mi>E</mi><mi>v</mi></msub></mrow></mrow></mtd></mtr><mtr><mtd columnalign="center"><mrow><msub><mi>F</mi><mi>v</mi></msub><mo>-</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><msub><mi>G</mi><mi>u</mi></msub></mrow></mrow></mtd><mtd columnalign="center"><mi>E</mi></mtd><mtd columnalign="center"><mi>F</mi></mtd></mtr><mtr><mtd columnalign="center"><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><msub><mi>G</mi><mi>v</mi></msub></mrow></mtd><mtd columnalign="center"><mi>F</mi></mtd><mtd columnalign="center"><mi>G</mi></mtd></mtr></mtable><mo fence="true">|</mo></mrow><mo>-</mo><mrow><mo fence="true">|</mo><mtable columnspacing="5pt" rowspacing="0pt"><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><msub><mi>E</mi><mi>v</mi></msub></mrow></mtd><mtd columnalign="center"><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><msub><mi>G</mi><mi>u</mi></msub></mrow></mtd></mtr><mtr><mtd columnalign="center"><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><msub><mi>E</mi><mi>v</mi></msub></mrow></mtd><mtd columnalign="center"><mi>E</mi></mtd><mtd columnalign="center"><mi>F</mi></mtd></mtr><mtr><mtd columnalign="center"><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><msub><mi>G</mi><mi>u</mi></msub></mrow></mtd><mtd columnalign="center"><mi>F</mi></mtd><mtd columnalign="center"><mi>G</mi></mtd></mtr></mtable><mo fence="true">|</mo></mrow></mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>E</mi><mo>⁢</mo><mi>G</mi></mrow><mo>-</mo><msup><mi>F</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mfrac></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where the bars denote the determinant, and
+the subscripts denote partial derivatives.</p>
+</div>
+<div id="Sx7.p2" class="ltx_para">
+<p class="ltx_p">This formula is known as Brioschi’s formula;
+Brioschi had stated it without proof in 1854, and later
+it was calculated by Gauss.</p>
+</div>
+<div id="Sx7.p3" class="ltx_para">
+<p class="ltx_p">The immediate corollary of this strange formula is:</p>
+</div>
+<div id="Thmthm1" class="ltx_theorem ltx_theorem_thm">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Theorem 1</span> (Theorema Egregium).</h6>
+<div id="Thmthm1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">The Gaussian curvature of a surface is unchanged under isometries
+(because it only depends on the first fundamental form).</span></p>
+</div>
+</div>
+<div id="Sx7.p4" class="ltx_para">
+<p class="ltx_p">This theorem is not obvious, since the usual definitions
+of the Gaussian curvature
+are not invariant
+(they depend on the particular embedding of the surface in <math id="Sx7.p4.m1" class="ltx_Math" alttext="\mathbb{R}^{3}" display="inline"><msup><mi>ℝ</mi><mn>3</mn></msup></math>).</p>
+</div>
+</section>
+<section id="bib" class="ltx_bibliography">
+<h2 class="ltx_title ltx_title_bibliography">References</h2>
+
+<ul class="ltx_biblist">
+      
+<li id="bib.bib1" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">1</span>
+        
+<span class="ltx_bibblock">
+Michael Spivak. <span class="ltx_text ltx_font_italic">A Comprehensive Introduction to Differential Geometry</span>, volumes I and II.
+Publish or Perish, 1979.
+
+</span>
+      </li>
+      
+<li id="bib.bib2" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">2</span>
+        
+<span class="ltx_bibblock">
+Andrew Pressley. <span class="ltx_text ltx_font_italic">Elementary Differential Geometry</span>. Springer-Verlag, 2003.
+
+</span>
+      </li>
+    
+</ul>
+</section>
+<div id="p3" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">first fundamental form</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">FirstFundamentalForm</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:28:38</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:28:38</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">stevecheng (10074)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">stevecheng (10074)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">7</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">stevecheng (10074)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 53B21</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 53B20</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">SecondFundamentalForm</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">TiltCurve</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 22:27:22 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

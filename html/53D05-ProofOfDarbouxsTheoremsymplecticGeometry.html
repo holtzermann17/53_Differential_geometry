@@ -1,0 +1,192 @@
+<!DOCTYPE html><html>
+<head>
+<title>proof of Darboux’s theorem (symplectic geometry)</title>
+<!--Generated on Fri Feb  9 22:28:59 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">proof of Darboux’s theorem (symplectic geometry)</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">We first observe that it suffices to prove the theorem for symplectic
+forms defined on an open neighbourhood of <math id="p1.m1" class="ltx_Math" alttext="0\in\mathbb{R}^{2n}" display="inline"><mrow><mn>0</mn><mo>∈</mo><msup><mi>ℝ</mi><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow></msup></mrow></math>.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Indeed, if we have a symplectic manifold <math id="p2.m1" class="ltx_Math" alttext="(M,\eta)" display="inline"><mrow><mo stretchy="false">(</mo><mi>M</mi><mo>,</mo><mi>η</mi><mo stretchy="false">)</mo></mrow></math>, and a point
+<math id="p2.m2" class="ltx_Math" alttext="x_{0}" display="inline"><msub><mi>x</mi><mn>0</mn></msub></math>, we can take a (smooth) coordinate chart about <math id="p2.m3" class="ltx_Math" alttext="x_{0}" display="inline"><msub><mi>x</mi><mn>0</mn></msub></math>. We can then
+use the coordinate function to push <math id="p2.m4" class="ltx_Math" alttext="\eta" display="inline"><mi>η</mi></math> forward to a symplectic form
+<math id="p2.m5" class="ltx_Math" alttext="\omega" display="inline"><mi>ω</mi></math> on a neighbourhood of <math id="p2.m6" class="ltx_Math" alttext="0" display="inline"><mn>0</mn></math> in <math id="p2.m7" class="ltx_Math" alttext="\mathbb{R}^{2n}" display="inline"><msup><mi>ℝ</mi><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow></msup></math>. If the result holds on <math id="p2.m8" class="ltx_Math" alttext="\mathbb{R}^{2n}" display="inline"><msup><mi>ℝ</mi><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow></msup></math>,
+we can compose the coordinate chart with the resulting symplectomorphism to
+get the theorem in general.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">Let <math id="p3.m1" class="ltx_Math" alttext="\omega_{0}=\sum_{i=1}^{n}dx_{i}\wedge dy_{i}" display="inline"><mrow><msub><mi>ω</mi><mn>0</mn></msub><mo>=</mo><mrow><mrow><msubsup><mo largeop="true" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><mrow><mi>d</mi><mo>⁢</mo><msub><mi>x</mi><mi>i</mi></msub></mrow></mrow><mo>∧</mo><mrow><mi>d</mi><mo>⁢</mo><msub><mi>y</mi><mi>i</mi></msub></mrow></mrow></mrow></math>. Our goal is then to find a (local) diffeomorphism <math id="p3.m2" class="ltx_Math" alttext="\Psi" display="inline"><mi mathvariant="normal">Ψ</mi></math> so that <math id="p3.m3" class="ltx_Math" alttext="\Psi(0)=0" display="inline"><mrow><mrow><mi mathvariant="normal">Ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math> and <math id="p3.m4" class="ltx_Math" alttext="\Psi^{*}\omega_{0}=\omega" display="inline"><mrow><mrow><msup><mi mathvariant="normal">Ψ</mi><mo>*</mo></msup><mo>⁢</mo><msub><mi>ω</mi><mn>0</mn></msub></mrow><mo>=</mo><mi>ω</mi></mrow></math>.</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">Now, we recall that <math id="p4.m1" class="ltx_Math" alttext="\omega" display="inline"><mi>ω</mi></math> is a non–degenerate two–form. Thus, on
+<math id="p4.m2" class="ltx_Math" alttext="T_{0}\mathbb{R}^{2n}" display="inline"><mrow><msub><mi>T</mi><mn>0</mn></msub><mo>⁢</mo><msup><mi>ℝ</mi><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow></msup></mrow></math>, it is a non–degenerate anti–symmetric bilinear form. By a linear change of basis, it can be put in the standard form. So, we
+may assume that <math id="p4.m3" class="ltx_Math" alttext="\omega(0)=\omega_{0}(0)" display="inline"><mrow><mrow><mi>ω</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>ω</mi><mn>0</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">We will now proceed by the “Moser trick”. Our goal is to find a
+diffeomorphism <math id="p5.m1" class="ltx_Math" alttext="\Psi" display="inline"><mi mathvariant="normal">Ψ</mi></math> so that <math id="p5.m2" class="ltx_Math" alttext="\Psi(0)=0" display="inline"><mrow><mrow><mi mathvariant="normal">Ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math> and <math id="p5.m3" class="ltx_Math" alttext="\Psi^{*}\omega=\omega_{0}" display="inline"><mrow><mrow><msup><mi mathvariant="normal">Ψ</mi><mo>*</mo></msup><mo>⁢</mo><mi>ω</mi></mrow><mo>=</mo><msub><mi>ω</mi><mn>0</mn></msub></mrow></math>.
+We will obtain this diffeomorphism as the time–<math id="p5.m4" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math> map of the
+flow of an ordinary differential equation. We will see this as the
+result of a deformation of <math id="p5.m5" class="ltx_Math" alttext="\omega_{0}" display="inline"><msub><mi>ω</mi><mn>0</mn></msub></math>.</p>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">Let <math id="p6.m1" class="ltx_Math" alttext="\omega_{t}=t\omega_{0}+(1-t)\omega" display="inline"><mrow><msub><mi>ω</mi><mi>t</mi></msub><mo>=</mo><mrow><mrow><mi>t</mi><mo>⁢</mo><msub><mi>ω</mi><mn>0</mn></msub></mrow><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><mi>t</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>ω</mi></mrow></mrow></mrow></math>.
+Let <math id="p6.m2" class="ltx_Math" alttext="\Psi_{t}" display="inline"><msub><mi mathvariant="normal">Ψ</mi><mi>t</mi></msub></math> be the time <math id="p6.m3" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math> map of the differential equation</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\frac{d}{dt}\Psi_{t}(x)=X_{t}(\Psi_{t}(x))" display="block"><mrow><mrow><mfrac><mi>d</mi><mrow><mi>d</mi><mo>⁢</mo><mi>t</mi></mrow></mfrac><mo>⁢</mo><msub><mi mathvariant="normal">Ψ</mi><mi>t</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>X</mi><mi>t</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi mathvariant="normal">Ψ</mi><mi>t</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">in which <math id="p6.m4" class="ltx_Math" alttext="X_{t}" display="inline"><msub><mi>X</mi><mi>t</mi></msub></math> is a vector field determined by a condition to be stated later.</p>
+</div>
+<div id="p7" class="ltx_para">
+<p class="ltx_p">We will make the ansatz</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\Psi_{t}^{*}\omega=\omega_{t}." display="block"><mrow><mrow><mrow><msubsup><mi mathvariant="normal">Ψ</mi><mi>t</mi><mo>*</mo></msubsup><mo>⁢</mo><mi>ω</mi></mrow><mo>=</mo><msub><mi>ω</mi><mi>t</mi></msub></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p8" class="ltx_para">
+<p class="ltx_p">Now, we differentiate this :</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="0=\frac{d}{dt}\Psi_{t}^{*}\omega_{t}=\Psi_{t}^{*}(L_{X_{t}}\omega_{t}+\frac{d}%
+{dt}\omega_{t})." display="block"><mrow><mrow><mn>0</mn><mo>=</mo><mrow><mfrac><mi>d</mi><mrow><mi>d</mi><mo>⁢</mo><mi>t</mi></mrow></mfrac><mo>⁢</mo><msubsup><mi mathvariant="normal">Ψ</mi><mi>t</mi><mo>*</mo></msubsup><mo>⁢</mo><msub><mi>ω</mi><mi>t</mi></msub></mrow><mo>=</mo><mrow><msubsup><mi mathvariant="normal">Ψ</mi><mi>t</mi><mo>*</mo></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><msub><mi>L</mi><msub><mi>X</mi><mi>t</mi></msub></msub><mo>⁢</mo><msub><mi>ω</mi><mi>t</mi></msub></mrow><mo>+</mo><mrow><mfrac><mi>d</mi><mrow><mi>d</mi><mo>⁢</mo><mi>t</mi></mrow></mfrac><mo>⁢</mo><msub><mi>ω</mi><mi>t</mi></msub></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p9" class="ltx_para">
+<p class="ltx_p">(<math id="p9.m1" class="ltx_Math" alttext="L_{X_{t}}\omega_{t}" display="inline"><mrow><msub><mi>L</mi><msub><mi>X</mi><mi>t</mi></msub></msub><mo>⁢</mo><msub><mi>ω</mi><mi>t</mi></msub></mrow></math> denotes the Lie derivative of <math id="p9.m2" class="ltx_Math" alttext="\omega_{t}" display="inline"><msub><mi>ω</mi><mi>t</mi></msub></math> with respect
+to the vector field <math id="p9.m3" class="ltx_Math" alttext="X_{t}" display="inline"><msub><mi>X</mi><mi>t</mi></msub></math>.)</p>
+</div>
+<div id="p10" class="ltx_para">
+<p class="ltx_p">By applying Cartan’s identity and recalling that <math id="p10.m1" class="ltx_Math" alttext="\omega" display="inline"><mi>ω</mi></math> is closed, we
+obtain :</p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="0=\Psi_{t}^{*}(d\iota_{X_{t}}\omega_{t}+\omega-\omega_{0})" display="block"><mrow><mn>0</mn><mo>=</mo><mrow><msubsup><mi mathvariant="normal">Ψ</mi><mi>t</mi><mo>*</mo></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mrow><mi>d</mi><mo>⁢</mo><msub><mi>ι</mi><msub><mi>X</mi><mi>t</mi></msub></msub><mo>⁢</mo><msub><mi>ω</mi><mi>t</mi></msub></mrow><mo>+</mo><mi>ω</mi></mrow><mo>-</mo><msub><mi>ω</mi><mn>0</mn></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p11" class="ltx_para">
+<p class="ltx_p">Now, <math id="p11.m1" class="ltx_Math" alttext="\omega-\omega_{0}" display="inline"><mrow><mi>ω</mi><mo>-</mo><msub><mi>ω</mi><mn>0</mn></msub></mrow></math> is closed, and hence, by Poincaré’s Lemma,
+locally exact. So, we can write <math id="p11.m2" class="ltx_Math" alttext="\omega-\omega_{0}=-d\lambda" display="inline"><mrow><mrow><mi>ω</mi><mo>-</mo><msub><mi>ω</mi><mn>0</mn></msub></mrow><mo>=</mo><mrow><mo>-</mo><mrow><mi>d</mi><mo>⁢</mo><mi>λ</mi></mrow></mrow></mrow></math>.</p>
+</div>
+<div id="p12" class="ltx_para">
+<p class="ltx_p">Thus</p>
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="0=\Psi_{t}^{*}(d(i_{X_{t}}\omega_{t}-\lambda))" display="block"><mrow><mn>0</mn><mo>=</mo><mrow><msubsup><mi mathvariant="normal">Ψ</mi><mi>t</mi><mo>*</mo></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>d</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><msub><mi>i</mi><msub><mi>X</mi><mi>t</mi></msub></msub><mo>⁢</mo><msub><mi>ω</mi><mi>t</mi></msub></mrow><mo>-</mo><mi>λ</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p13" class="ltx_para">
+<p class="ltx_p">We want to require then</p>
+<table id="S0.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex6.m1" class="ltx_Math" alttext="i_{X_{t}}\omega_{t}=\lambda." display="block"><mrow><mrow><mrow><msub><mi>i</mi><msub><mi>X</mi><mi>t</mi></msub></msub><mo>⁢</mo><msub><mi>ω</mi><mi>t</mi></msub></mrow><mo>=</mo><mi>λ</mi></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Now, we observe that
+<math id="p13.m1" class="ltx_Math" alttext="\omega_{0}=\omega" display="inline"><mrow><msub><mi>ω</mi><mn>0</mn></msub><mo>=</mo><mi>ω</mi></mrow></math> at <math id="p13.m2" class="ltx_Math" alttext="0" display="inline"><mn>0</mn></math>, so <math id="p13.m3" class="ltx_Math" alttext="\omega_{t}=\omega_{0}" display="inline"><mrow><msub><mi>ω</mi><mi>t</mi></msub><mo>=</mo><msub><mi>ω</mi><mn>0</mn></msub></mrow></math> at <math id="p13.m4" class="ltx_Math" alttext="0" display="inline"><mn>0</mn></math>. Then, as
+<math id="p13.m5" class="ltx_Math" alttext="\omega_{0}" display="inline"><msub><mi>ω</mi><mn>0</mn></msub></math> is non–degenerate, <math id="p13.m6" class="ltx_Math" alttext="\omega_{t}" display="inline"><msub><mi>ω</mi><mi>t</mi></msub></math> will be non–degenerate on an
+open neighbourhood of <math id="p13.m7" class="ltx_Math" alttext="0" display="inline"><mn>0</mn></math>. Thus, on this neighbourhood, we may use this to
+define <math id="p13.m8" class="ltx_Math" alttext="X_{t}" display="inline"><msub><mi>X</mi><mi>t</mi></msub></math> (uniquely!).</p>
+</div>
+<div id="p14" class="ltx_para">
+<p class="ltx_p">We also observe that <math id="p14.m1" class="ltx_Math" alttext="X_{t}(0)=0" display="inline"><mrow><mrow><msub><mi>X</mi><mi>t</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math>. Thus, by choosing a sufficiently
+small neighbourhood of <math id="p14.m2" class="ltx_Math" alttext="0" display="inline"><mn>0</mn></math>, the flow of <math id="p14.m3" class="ltx_Math" alttext="X_{t}" display="inline"><msub><mi>X</mi><mi>t</mi></msub></math> will be defined for time
+greater than <math id="p14.m4" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math>.</p>
+</div>
+<div id="p15" class="ltx_para">
+<p class="ltx_p">All that remains now is to check that this resulting flow has the desired
+properties. This follows merely by reading our  of the ODE,
+backwards.
+</p>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">proof of Darboux’s theorem (symplectic geometry)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">ProofOfDarbouxsTheoremsymplecticGeometry</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 14:09:55</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 14:09:55</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rspuzio (6075)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rspuzio (6075)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">8</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rspuzio (6075)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Proof</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 53D05</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 22:28:59 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

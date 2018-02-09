@@ -1,0 +1,184 @@
+<!DOCTYPE html><html>
+<head>
+<title>Serret-Frenet equations in ℝ^2</title>
+<!--Generated on Fri Feb  9 22:22:27 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">Serret-Frenet equations in <math id="m1" class="ltx_Math" alttext="\mathbb{R}^{2}" display="inline"><msup><mi>ℝ</mi><mn>2</mn></msup></math>
+</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">Given a plane curve, we may associate to each point on the curve an
+orthonormal basis consisting of the unit normal tangent vector and
+the unit normal. In general, different points will have different
+bases associated to them, so we may ask how the basis depends upon
+the choice of point. The Serret-Frenet equations answer this
+question by relating the rte of change of the basis vectors to
+the curvature of the curve.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Suppose <math id="p2.m1" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math> is an open interval and <math id="p2.m2" class="ltx_Math" alttext="c\colon I\to\mathbbmss{R}^{2}" display="inline"><mrow><mi>c</mi><mo>:</mo><mrow><mi>I</mi><mo>→</mo><msup><mi>ℝ</mi><mn>2</mn></msup></mrow></mrow></math> is a twice
+continuously differentiable curve such that <math id="p2.m3" class="ltx_Math" alttext="\|c^{\prime}\|=1" display="inline"><mrow><mrow><mo>∥</mo><msup><mi>c</mi><mo>′</mo></msup><mo>∥</mo></mrow><mo>=</mo><mn>1</mn></mrow></math>.
+Let us then
+define the <em class="ltx_emph ltx_font_italic">tangent vector</em> and <em class="ltx_emph ltx_font_italic">normal vector</em> as</p>
+<table id="S0.EGx1" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex1" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\displaystyle\mathbf{T}" display="inline"><mi>𝐓</mi></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex1.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex1.m3" class="ltx_Math" alttext="\displaystyle c^{\prime}," display="inline"><mrow><msup><mi>c</mi><mo>′</mo></msup><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex2" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\displaystyle\mathbf{N}" display="inline"><mi>𝐍</mi></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex2.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex2.m3" class="ltx_Math" alttext="\displaystyle J\cdot\mathbf{T}," display="inline"><mrow><mrow><mi>J</mi><mo>⋅</mo><mi>𝐓</mi></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="p2.m4" class="ltx_Math" alttext="J=\begin{pmatrix}0&amp;-1\\
+1&amp;0\end{pmatrix}" display="inline"><mrow><mi>J</mi><mo>=</mo><mrow><mo>(</mo><mtable columnspacing="5pt" rowspacing="0pt"><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mrow><mo>-</mo><mn>1</mn></mrow></mtd></mtr><mtr><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr></mtable><mo>)</mo></mrow></mrow></math> is the
+rotational matrix that rotates the plane <math id="p2.m5" class="ltx_Math" alttext="90" display="inline"><mn>90</mn></math> degrees counterclockwise.</p>
+</div>
+<section id="S0.SS0.SSSx1" class="ltx_subsubsection">
+<h2 class="ltx_title ltx_title_subsubsection">Curvature</h2>
+
+<div id="S0.SS0.SSSx1.p1" class="ltx_para">
+<p class="ltx_p">Differentiating <math id="S0.SS0.SSSx1.p1.m1" class="ltx_Math" alttext="\langle c^{\prime},c^{\prime}\rangle=1" display="inline"><mrow><mrow><mo stretchy="false">⟨</mo><msup><mi>c</mi><mo>′</mo></msup><mo>,</mo><msup><mi>c</mi><mo>′</mo></msup><mo stretchy="false">⟩</mo></mrow><mo>=</mo><mn>1</mn></mrow></math> yields
+<math id="S0.SS0.SSSx1.p1.m2" class="ltx_Math" alttext="\langle\mathbf{T}^{\prime},\mathbf{T}\rangle=0" display="inline"><mrow><mrow><mo stretchy="false">⟨</mo><msup><mi>𝐓</mi><mo>′</mo></msup><mo>,</mo><mi>𝐓</mi><mo stretchy="false">⟩</mo></mrow><mo>=</mo><mn>0</mn></mrow></math>,
+so <math id="S0.SS0.SSSx1.p1.m3" class="ltx_Math" alttext="\mathbf{T}^{\prime}" display="inline"><msup><mi>𝐓</mi><mo>′</mo></msup></math> is in the orthogonal complement of <math id="S0.SS0.SSSx1.p1.m4" class="ltx_Math" alttext="\mathbf{T}" display="inline"><mi>𝐓</mi></math>,
+which is <math id="S0.SS0.SSSx1.p1.m5" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math>-dimensional. Since <math id="S0.SS0.SSSx1.p1.m6" class="ltx_Math" alttext="J\cdot\mathbf{T}" display="inline"><mrow><mi>J</mi><mo>⋅</mo><mi>𝐓</mi></mrow></math> is also in
+the orthogonal complement,
+it follows that there exists a function <math id="S0.SS0.SSSx1.p1.m7" class="ltx_Math" alttext="\kappa\colon I\to\mathbbmss{R}" display="inline"><mrow><mi>κ</mi><mo>:</mo><mrow><mi>I</mi><mo>→</mo><mi>ℝ</mi></mrow></mrow></math> such that</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="\mathbf{T}^{\prime}=\kappa J\cdot\mathbf{T}." display="block"><mrow><mrow><msup><mi>𝐓</mi><mo>′</mo></msup><mo>=</mo><mrow><mrow><mi>κ</mi><mo>⁢</mo><mi>J</mi></mrow><mo>⋅</mo><mi>𝐓</mi></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Furthermore, <math id="S0.SS0.SSSx1.p1.m8" class="ltx_Math" alttext="\kappa" display="inline"><mi>κ</mi></math> is uniquely determined by this equation.
+We define this unique <math id="S0.SS0.SSSx1.p1.m9" class="ltx_Math" alttext="\kappa" display="inline"><mi>κ</mi></math> to
+be the <em class="ltx_emph ltx_font_italic">curvature</em> of <math id="S0.SS0.SSSx1.p1.m10" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math>. Explicitly,</p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="\kappa=\langle\mathbf{T}^{\prime},J\cdot\mathbf{T}\rangle." display="block"><mrow><mrow><mi>κ</mi><mo>=</mo><mrow><mo stretchy="false">⟨</mo><msup><mi>𝐓</mi><mo>′</mo></msup><mo>,</mo><mrow><mi>J</mi><mo>⋅</mo><mi>𝐓</mi></mrow><mo stretchy="false">⟩</mo></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</section>
+<section id="S0.SS0.SSSx2" class="ltx_subsubsection">
+<h2 class="ltx_title ltx_title_subsubsection">Serret-Frenet equations</h2>
+
+<div id="S0.SS0.SSSx2.p1" class="ltx_para">
+<p class="ltx_p">By the definition of curvature</p>
+<table id="S0.EGx2" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex5" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex5.m1" class="ltx_Math" alttext="\displaystyle\mathbf{T}^{\prime}" display="inline"><msup><mi>𝐓</mi><mo>′</mo></msup></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex5.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex5.m3" class="ltx_Math" alttext="\displaystyle\kappa J\cdot\mathbf{T}=\kappa\mathbf{N}" display="inline"><mrow><mrow><mrow><mi>κ</mi><mo>⁢</mo><mi>J</mi></mrow><mo>⋅</mo><mi>𝐓</mi></mrow><mo>=</mo><mrow><mi>κ</mi><mo>⁢</mo><mi>𝐍</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and so</p>
+<table id="S0.EGx3" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex6" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex6.m1" class="ltx_Math" alttext="\displaystyle\mathbf{N}^{\prime}" display="inline"><msup><mi>𝐍</mi><mo>′</mo></msup></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex6.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex6.m3" class="ltx_Math" alttext="\displaystyle J\cdot\mathbf{T}^{\prime}=\kappa J\mathbf{N}=-\kappa\mathbf{T}" display="inline"><mrow><mrow><mi>J</mi><mo>⋅</mo><msup><mi>𝐓</mi><mo>′</mo></msup></mrow><mo>=</mo><mrow><mi>κ</mi><mo>⁢</mo><mi>J</mi><mo>⁢</mo><mi>𝐍</mi></mrow><mo>=</mo><mrow><mo>-</mo><mrow><mi>κ</mi><mo>⁢</mo><mi>𝐓</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">since <math id="S0.SS0.SSSx2.p1.m1" class="ltx_Math" alttext="J^{2}=-\operatorname{I}" display="inline"><mrow><msup><mi>J</mi><mn>2</mn></msup><mo>=</mo><mrow><mo>-</mo><mi mathvariant="normal">I</mi></mrow></mrow></math>. These are the <em class="ltx_emph ltx_font_italic">Serret-Frenet</em>
+equations</p>
+<table id="S0.EGx4" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex7" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex7.m1" class="ltx_Math" alttext="\displaystyle\begin{pmatrix}\mathbf{T}\\
+\mathbf{N}\end{pmatrix}^{\prime}=\begin{pmatrix}0&amp;\kappa\\
+-\kappa&amp;0\end{pmatrix}\begin{pmatrix}\mathbf{T}\\
+\mathbf{N}\end{pmatrix}." display="inline"><mrow><mrow><msup><mrow><mo>(</mo><mtable rowspacing="0pt"><mtr><mtd columnalign="center"><mi>𝐓</mi></mtd></mtr><mtr><mtd columnalign="center"><mi>𝐍</mi></mtd></mtr></mtable><mo>)</mo></mrow><mo>′</mo></msup><mo>=</mo><mrow><mrow><mo>(</mo><mtable columnspacing="5pt" rowspacing="0pt"><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mi>κ</mi></mtd></mtr><mtr><mtd columnalign="center"><mrow><mo>-</mo><mi>κ</mi></mrow></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr></mtable><mo>)</mo></mrow><mo>⁢</mo><mrow><mo>(</mo><mtable rowspacing="0pt"><mtr><mtd columnalign="center"><mi>𝐓</mi></mtd></mtr><mtr><mtd columnalign="center"><mi>𝐍</mi></mtd></mtr></mtable><mo>)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Serret-Frenet equations in <math id="S0.SS0.SSSx2.p1.m2" class="ltx_Math" alttext="\mathbb{R}^{2}" display="inline"><msup><mi>ℝ</mi><mn>2</mn></msup></math>
+</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">SerretFrenetEquationsInmathbbR2</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:16:57</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:16:57</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rspuzio (6075)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rspuzio (6075)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">8</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rspuzio (6075)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 53A04</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">SerretFrenetFormulas</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 22:22:27 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>
